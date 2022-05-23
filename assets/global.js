@@ -283,6 +283,7 @@ Shopify.CountryProvinceSelector.prototype = {
   }
 };
 
+
 class MenuDrawer extends HTMLElement {
   constructor() {
     super();
@@ -327,6 +328,7 @@ class MenuDrawer extends HTMLElement {
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
     } else {
       setTimeout(() => {
+        this.mainDetailsToggle.classList.remove('menu-closing');
         detailsElement.classList.add('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
@@ -337,6 +339,7 @@ class MenuDrawer extends HTMLElement {
 
   openMenuDrawer(summaryElement) {
     setTimeout(() => {
+      this.mainDetailsToggle.classList.remove('menu-closing');
       this.mainDetailsToggle.classList.add('menu-opening');
     });
     summaryElement.setAttribute('aria-expanded', true);
@@ -348,6 +351,8 @@ class MenuDrawer extends HTMLElement {
     if (event === undefined) return;
 
     this.mainDetailsToggle.classList.remove('menu-opening');
+    this.mainDetailsToggle.classList.add('menu-closing');
+    
     this.mainDetailsToggle.querySelectorAll('details').forEach(details => {
       details.removeAttribute('open');
       details.classList.remove('menu-opening');
@@ -372,12 +377,12 @@ class MenuDrawer extends HTMLElement {
   }
 
   closeSubmenu(detailsElement) {
-    const parentMenuElement = detailsElement.closest('.submenu-open');
-    parentMenuElement && parentMenuElement.classList.remove('submenu-open');
-    detailsElement.classList.remove('menu-opening');
-    detailsElement.querySelector('summary').setAttribute('aria-expanded', false);
-    removeTrapFocus(detailsElement.querySelector('summary'));
-    this.closeAnimation(detailsElement);
+    // const parentMenuElement = detailsElement.closest('.submenu-open');
+    // parentMenuElement && parentMenuElement.classList.remove('submenu-open');
+    // detailsElement.classList.remove('menu-opening');
+    // detailsElement.querySelector('summary').setAttribute('aria-expanded', false);
+    // removeTrapFocus(detailsElement.querySelector('summary'));
+    // this.closeAnimation(detailsElement);
   }
 
   closeAnimation(detailsElement) {
@@ -406,33 +411,6 @@ class MenuDrawer extends HTMLElement {
 
 customElements.define('menu-drawer', MenuDrawer);
 
-class HeaderDrawer extends MenuDrawer {
-  constructor() {
-    super();
-  }
-
-  openMenuDrawer(summaryElement) {
-    this.header = this.header || document.getElementById('shopify-section-header');
-    this.borderOffset = this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
-    document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
-    this.header.classList.add('menu-open');
-
-    setTimeout(() => {
-      this.mainDetailsToggle.classList.add('menu-opening');
-    });
-
-    summaryElement.setAttribute('aria-expanded', true);
-    trapFocus(this.mainDetailsToggle, summaryElement);
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
-  }
-
-  closeMenuDrawer(event, elementToFocus) {
-    super.closeMenuDrawer(event, elementToFocus);
-    this.header.classList.remove('menu-open');
-  }
-}
-
-customElements.define('header-drawer', HeaderDrawer);
 
 class ModalDialog extends HTMLElement {
   constructor() {
