@@ -42,14 +42,14 @@
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu list-menu" role="list">
+                  <ul class="menu-drawer__menu" role="list">
                     {%- for link in section.settings.menu.links -%}
                       <li>
                         {%- if link.links != blank -%}
                         <p class="menu-drawer__menu-item list-menu__item " id="{{ link.title | escape }}"> 
                           {{ link.title | escape }}
                         </p>
-                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1" aria-labelledby="{{ link.title | escape }}">
+                        <ul class="menu-drawer__menu__list" role="list" tabindex="-1" aria-labelledby="{{ link.title | escape }}">
                           {%- for childlink in link.links -%}
                             <li>
                               {%- if childlink.links == blank -%}
@@ -57,27 +57,18 @@
                                   {{ childlink.title | escape }}
                                 </a>
                               {%- else -%}
-                                <details>
-                                  <summary class="menu-drawer__menu-item  list-menu__item focus-inset">
-                                    {{ childlink.title | escape }}
-                                    {% render 'icon-arrow' %}
-                                  </summary>
-                                  <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu motion-reduce">
-                                    <button class="menu-drawer__close-button  focus-inset" aria-expanded="true">
-                                      {% render 'icon-arrow' %}
-                                      {{ childlink.title | escape }}
-                                    </button>
-                                    <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                      {%- for grandchildlink in childlink.links -%}
-                                        <li>
-                                          <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item  menu-drawer__menu-subitem focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                            {{ grandchildlink.title | escape }}
-                                          </a>
-                                        </li>
-                                      {%- endfor -%}
-                                    </ul>
-                                  </div>
-                                </details>
+                                <p class="menu-drawer__menu-item menu-drawer__menu-subitem" id="{{ childlink.title  | escape }}"> 
+                                  {{ childlink.title | escape }}
+                                </p>
+                                <ul class="menu-drawer__menu__list menu-drawer__menu__child-list" role="list" tabindex="-1"  aria-labelledby="{{ childlink.title  | escape }}">
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li>
+                                      <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item  menu-drawer__menu-child-item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {{ grandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
                               {%- endif -%}
                             </li>
                           {%- endfor -%}
@@ -91,6 +82,7 @@
                     {%- endfor -%}
                   </ul>
                 </nav>
+
                 <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account  focus-inset h5">
@@ -352,10 +344,26 @@
   "class": "section-header",
   "settings": [
     {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
-      "label": "t:sections.header.settings.menu.label"
+      "label": "Main Menu"
+    },
+    {
+      "type": "collection_list",
+      "id": "featured-collections",
+      "label": "Featured Collections",
+      "limit": 2
+    },
+    {
+      "type": "link_list",
+      "id": "footer-menu",
+      "default": "main-menu",
+      "label": "Mobile Nav Footer Menu"
     },
     {
       "type": "checkbox",
