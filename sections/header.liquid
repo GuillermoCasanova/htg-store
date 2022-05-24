@@ -57,10 +57,10 @@
                                   {{ childlink.title | escape }}
                                 </a>
                               {%- else -%}
-                                <div class="menu-drawer__menu-item menu-drawer__menu-subitem" id="{{ childlink.title  | escape }}"> 
+                                <div class="menu-drawer__menu-item menu-drawer__menu-subitem" id="{{ childlink.title | escape }}"> 
                                   {{ childlink.title | escape }}
                                 </div>
-                                <ul class="menu-drawer__menu__list menu-drawer__menu__child-list" role="list" tabindex="-1"  aria-labelledby="{{ childlink.title  | escape }}">
+                                <ul class="menu-drawer__menu__list menu-drawer__menu__child-list" role="list" tabindex="-1"  aria-labelledby="{{ childlink.title | escape }}">
                                   {%- for grandchildlink in childlink.links -%}
                                     <li>
                                       <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item  menu-drawer__menu-child-item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
@@ -91,28 +91,36 @@
                         </a>
                       </li>
                       {%endfor%}
-                    <div>
                       
-                      <ul>
+                      <ul class="menu-drawer__utility-links__contact">
 
                         {%if section.settings.general_email %}
                         <li>
-                            <a href="mailto:{{section.setttings.general_email}}" tile="Contact us about general inquiries">
-                              {{section.setttings.general_email}}
-                            </a>
+                          <div class="utility-links__contact__email">
+                              <span class="email__label">
+                                General <span class="visually-hidden">Inquiries</span>
+                              </span>
+                              <a href="mailto:{{section.settings.general_email}}" tile="Contact us about general inquiries">
+                                {{section.settings.general_email}}
+                              </a>
+                          </div>
                         </li>
                         {%endif%}
 
                         {%if section.settings.orders_email %}
                         <li>
-                          <a href="mailto:{{section.setttings.orders_email}}" tile="Contact us about your order">
-                          {{section.setttings.orders_email}}
-                          </a>
+                          <div class="utility-links__contact__email">
+                            <span class="email__label">
+                              Orders <span class="visually-hidden">Inquiries</span>
+                            </span>
+                            <a href="mailto:{{section.settings.orders_email}}" tile="Contact us about your order">
+                            {{section.settings.orders_email}}
+                            </a>
+                          </div>
                         </li>
                         {%endif%}
                         
                       </ul>
-                    </div>
                 </div>
               </div>
             </div>

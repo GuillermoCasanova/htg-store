@@ -310,6 +310,7 @@ main {
 
 
 
+
 /*------------------------------------*\
     #Headlines
 \*------------------------------------*/
@@ -380,6 +381,7 @@ p {
 
 
 
+
 /*------------------------------------*\
     #PaddingAndMarginsLevels
 \*------------------------------------*/
@@ -413,6 +415,8 @@ p {
 
 
 
+
+
 /*------------------------------------*\
     #Sections
 \*------------------------------------*/
@@ -426,6 +430,8 @@ section {
     padding-bottom: calc(var(--level7) * 2);
   }
 }
+
+
 
 
 
@@ -533,35 +539,6 @@ html.no-js .no-js-hidden {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 750px) {
-  .page-width {
-    padding: 0 5rem;
-  }
-
-  .page-width--narrow {
-    padding: 0 9rem;
-  }
-
-  .page-width-desktop {
-    padding: 0;
-  }
-
-  .page-width-tablet {
-    padding: 0 5rem;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .page-width--narrow {
-    max-width: 72.6rem;
-    padding: 0;
-  }
-
-  .page-width-desktop {
-    max-width: var(--page-width);
-    padding: 0 5rem;
-  }
-}
 
 .isolate {
   position: relative;
