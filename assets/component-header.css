@@ -150,7 +150,7 @@ sticky-header {
     z-index: 1;
 }
 
-@media screen and (min-width: 975px) {
+@media screen and (min-width: 900px) {
     header-drawer {
         display: none;
     }
@@ -649,18 +649,40 @@ header-drawer .menu-drawer__utility-links {
 
 .header-menu-drawer__featured-collections-container {
     padding-right: var(--level6);
+    max-width: 40rem;
 }
 
 .header-featured-collections li:last-child .header-featured-collections__collection {
     margin-bottom: var(--level7);
 }
 
+.header-featured-collections {
+    display: grid;
+}
+
+@media screen and (min-width: 600px) {
+    .header-featured-collections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--level7);
+    }
+}
+
 
 .header-featured-collections__collection {
     display: block;
     margin-bottom: var(--level9);
-    max-width: 19rem;
+    max-width: 16rem;
 }
+
+@media screen and (min-width: 600px) {
+    .header-featured-collections__collection {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
 
 .header-featured-collection__inner {
     display: block;
