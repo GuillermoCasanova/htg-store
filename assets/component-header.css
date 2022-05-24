@@ -478,8 +478,7 @@ header-drawer .menu-drawer__navigation-container {
     height: 100%;
 }
 
-header-drawer .menu-drawer__navigation,
-header-drawer .menu-drawer__utility-links {
+header-drawer .menu-drawer__navigation {
     padding-left: var(--level6);
 }
 
@@ -518,7 +517,8 @@ header-drawer .menu-drawer__menu-item {
     margin-bottom: var(--level3);
 }
 
-header-drawer a.menu-drawer__menu-item:hover {
+header-drawer a.menu-drawer__menu-item:hover,
+header-drawer a.menu-drawer__menu-item:focus {
     text-decoration: underline;
 }
 
@@ -595,10 +595,20 @@ header-drawer .menu-drawer__menu-child-item {
 }
 
 
+
+
+
+/*------------------------------------*\
+    #Utility Links
+\*------------------------------------*/
+
+
 header-drawer .menu-drawer__utility-links {
     border-top: 1px solid rgb(var(--color-base-text));
     padding-top: var(--level6);
     padding-bottom: var(--level8);
+    margin-left: calc(var(--level6) * -1);
+    padding-left: var(--level6);
 }
 
 .menu-drawer__utility-links__contact {
@@ -615,7 +625,6 @@ header-drawer .menu-drawer__utility-links {
 .utility-links__contact__email .email__label {
     text-transform: uppercase;
     margin-right: var(--level1);
-
 }
 
 
@@ -629,6 +638,136 @@ header-drawer .menu-drawer__utility-links {
     color: rgba(var(--color-base-text));
     text-decoration: underline;
 }
+
+
+
+
+
+/*------------------------------------*\
+    #Featured Collections
+\*------------------------------------*/
+
+.header-menu-drawer__featured-collections-container {
+    padding-right: var(--level6);
+}
+
+.header-featured-collections li:last-child .header-featured-collections__collection {
+    margin-bottom: var(--level7);
+}
+
+
+.header-featured-collections__collection {
+    display: block;
+    margin-bottom: var(--level9);
+    max-width: 19rem;
+}
+
+.header-featured-collection__inner {
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+
+    .header-featured-collection__inner:hover .header-featured-collection__image,
+    .header-featured-collection__inner:focus .header-featured-collection__image {
+        transform: scale(1.05) translateY(-5px);
+    }
+}
+
+@media (hover: none) {
+
+    .header-featured-collection__inner:active .header-featured-collection__image,
+    .header-featured-collection__inner:focus .header-featured-collection__image {
+        transform: scale(1.05) translateY(-5px);
+    }
+}
+
+.header-featured-collection__title {
+    display: block;
+    color: rgb(var(--color-base-text));
+    text-decoration: none;
+    font-size: var(--h3);
+    text-transform: uppercase;
+}
+
+.header-featured-collection__image-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-featured-collection__image {
+    padding-bottom: 85%;
+    width: 100%;
+    position: relative;
+    transition: all .2s ease;
+}
+
+.header-featured-collection__image img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/*------------------------------------*\
+    #Search
+\*------------------------------------*/
+
+/* section-announcement-bar */
+#shopify-section-announcement-bar {
+    z-index: 4;
+    position: relative;
+}
+
+.announcement-bar {
+    border-bottom: 0.1rem solid rgba(var(--color-base-text), 0.08);
+    color: rgb(var(--color-base-text));
+    background-color: rgb(var(--color-base-background-1));
+}
+
+.announcement-bar__link {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+.announcement-bar__link:hover {
+    color: rgb(var(--color-base-text));
+}
+
+.announcement-bar__link .icon-arrow {
+    display: inline-block;
+    pointer-events: none;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+    margin-bottom: 0.2rem;
+}
+
+.announcement-bar__link .announcement-bar__message {
+    padding: 0;
+}
+
+.announcement-bar__message {
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 0;
+    letter-spacing: 0.1rem;
+}
+
 
 
 
