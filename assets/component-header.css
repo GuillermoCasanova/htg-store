@@ -47,6 +47,11 @@ sticky-header {
     }
 }
 
+.header-wrapper {
+    width: 100%;
+}
+
+
 .header {
     display: grid;
     grid-template-areas: 'menu  heading cart-drawer';
@@ -608,6 +613,8 @@ header-drawer .menu-drawer__utility-links {
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    justify-content: space-between;
+    max-width: 15rem;
 }
 
 

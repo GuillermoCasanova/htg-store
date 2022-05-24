@@ -252,7 +252,7 @@ main {
 /*LARGE-UP*/
 @media screen and (min-width: 930px) {
   :root {
-    font-size: .8rem;
+    font-size: .9rem;
   }
 }
 
@@ -260,14 +260,14 @@ main {
 /*LARGE-UP*/
 @media screen and (min-width: 1000px) {
   :root {
-    font-size: .8rem;
+    font-size: .9rem;
   }
 }
 
 /*X-LARGE-UP*/
 @media screen and (min-width: 1300px) {
   :root {
-    font-size: .8rem;
+    font-size: .9rem;
   }
 }
 

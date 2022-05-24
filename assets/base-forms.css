@@ -321,12 +321,6 @@ margin-bottom: rem-calc($level7 + $level2);
 
 }
 
-@media screen and (min-width: 768px) {
-    .custom-field label {
-        top: -12px;
-    }
-}
-
 
 
 
