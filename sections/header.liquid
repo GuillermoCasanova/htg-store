@@ -46,9 +46,9 @@
                     {%- for link in section.settings.menu.links -%}
                       <li>
                         {%- if link.links != blank -%}
-                        <p class="menu-drawer__menu-item list-menu__item " id="{{ link.title | escape }}"> 
+                        <div class="menu-drawer__menu-item  " id="{{ link.title | escape }}"> 
                           {{ link.title | escape }}
-                        </p>
+                        </div>
                         <ul class="menu-drawer__menu__list" role="list" tabindex="-1" aria-labelledby="{{ link.title | escape }}">
                           {%- for childlink in link.links -%}
                             <li>
@@ -57,9 +57,9 @@
                                   {{ childlink.title | escape }}
                                 </a>
                               {%- else -%}
-                                <p class="menu-drawer__menu-item menu-drawer__menu-subitem" id="{{ childlink.title  | escape }}"> 
+                                <div class="menu-drawer__menu-item menu-drawer__menu-subitem" id="{{ childlink.title  | escape }}"> 
                                   {{ childlink.title | escape }}
-                                </p>
+                                </div>
                                 <ul class="menu-drawer__menu__list menu-drawer__menu__child-list" role="list" tabindex="-1"  aria-labelledby="{{ childlink.title  | escape }}">
                                   {%- for grandchildlink in childlink.links -%}
                                     <li>
@@ -74,7 +74,7 @@
                           {%- endfor -%}
                         </ul>
                         {%- else -%}
-                        <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item  focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                        <a href="{{ link.url }}" class="menu-drawer__menu-item  menu-drawer__menu-item--no-children   focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                           {{ link.title | escape }}
                         </a>
                         {%- endif -%}

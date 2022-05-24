@@ -27,6 +27,7 @@ th,
 td {
   margin: 0;
   padding: 0;
+  line-height: var(--line-height-normal);
 }
 
 li,
@@ -145,12 +146,12 @@ main {
 \*------------------------------------*/
 
 :root {
-  --level1: .25rem;
+  --level1: .5rem;
   --level2: .75rem;
   --level3: 1rem;
-  --level4: 1.5rem;
-  --level5: 2rem;
-  --level6: 2.5rem;
+  --level4: 1.25rem;
+  --level5: 1.5rem;
+  --level6: 2rem;
   --level7: 3rem;
   --level8: 3.5rem;
   --level9: 4rem;
@@ -166,18 +167,26 @@ main {
 \*------------------------------------*/
 
 @font-face {
-  font-family: 'telegrafregular';
-  src: url('./telegraf-regular-webfont.woff2') format('woff2'),
-    url('./telegraf-regular-webfont.woff') format('woff');
+  font-family: 'NimbusSansDOT-ReguCond';
+  src: url('./NimbusSansDOT-ReguCond.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+
 @font-face {
-  font-family: 'telegrafbold';
-  src: url('./telegraf-bold.woff2') format('woff2'),
-    url('./telegraf-bold.woff') format('woff');
+  font-family: 'NimbusSansDOT-ReguCondItal';
+  src: url('./NimbusSansDOT-ReguCondItal.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Caxton_Light';
+  src: url('./Caxton_Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -185,24 +194,24 @@ main {
 
 
 :root {
-  --primary-font-family: 'Space Mono', 'Courier New', Courier, monospace;
-  --secondary-font-family: 'telegrafregular', 'Space Mono', 'Courier New', Courier, monospace;
-  --tertiary-font-family: 'telegrafbold', 'Space Mono', 'Courier New', Courier, monospace;
+  --primary-font-family: 'NimbusSansDOT-ReguCond', 'Helvetica', 'sans-serif';
+  --secondary-font-family: 'NimbusSansDOT-ReguCondItal', 'Helvetica', 'sans-serif';
+  --tertiary-font-family: 'Caxton_Light', 'Times', 'Times New Roman', serif;
   --letter-spacing-1: 1.5px;
   --letter-spacing-2: 1px;
   --letter-spacing-3: 3px;
   --letter-spacing-4: 5px;
-  --kilo: 3.002rem;
-  --h1: 2.436rem;
-  --h2: 1.903rem;
-  --h3: 1.513rem;
-  --h4: 1.20rem;
-  --h5: 1.10rem;
-  --h6: 1rem;
-  --normal: .95em;
+  --kilo: 3.815rem;
+  --h1: 3.052rem;
+  --h2: 2.441rem;
+  --h3: 1.953rem;
+  --h4: 1.563rem;
+  --h5: 1.25rem;
+  --h6: 1.25rem;
+  --normal: 1.05rem;
   --micro: .85rem;
   --mini: .78rem;
-  --line-height: 1;
+  --line-height-normal: 1.25;
   --line-height-double: 1.5;
 }
 
@@ -214,28 +223,28 @@ main {
 \*------------------------------------*/
 
 :root {
-  font-size: .8rem;
+  font-size: .85rem;
 }
 
 
 /*X-SMALL*/
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 260px) {
   :root {
-    font-size: .8rem;
+    font-size: .9rem;
   }
 }
 
 /*SMALL-UP*/
 @media screen and (min-width: 370px) {
   :root {
-    font-size: .85rem;
+    font-size: 1rem;
   }
 }
 
 /*MEDIUM-UP*/
 @media screen and (min-width: 700px) {
   :root {
-    font-size: .85rem;
+    font-size: 1rem;
   }
 }
 
@@ -515,8 +524,8 @@ html.no-js .no-js-hidden {
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding-left: var(--level2);
-  padding-right: var(--level2);
+  padding-left: var(--level3);
+  padding-right: var(--level3);
 }
 
 .page-width-desktop {
