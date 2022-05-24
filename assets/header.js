@@ -133,6 +133,7 @@ customElements.define('cart-toggle', CartToggle);
 
 
 
+
 class MenuDropdown extends HTMLElement {
   constructor() {
     super(); 
@@ -193,6 +194,3 @@ class MenuDropdown extends HTMLElement {
 }
 
 customElements.define('menu-dropdown', MenuDropdown);
-
-
-

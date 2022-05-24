@@ -13,7 +13,6 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
@@ -23,7 +22,6 @@
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header page-width">
     <div class="header-drawer-blocker">
-    
     </div>
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
@@ -179,6 +177,96 @@
       </h1>
     {%- endif -%}
 
+    {%- if section.settings.menu != blank -%}
+      <nav class="header__menu">
+        <ul class="header__menu__list-menu " role="list">
+          {%- for link in section.settings.menu.links -%}
+            <li>
+              {%- if link.links != blank -%}
+                <menu-dropdown>
+                  <button class="header__menu-item  focus-inset" id="#{{ link.title | escape }}" aria-expanded="false">
+                    <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                  </button>
+
+                  {%assign title = link.title | escape %}
+
+                  <div class="header__submenu  {%if title == 'Shop'%}header__submenu--shop{%endif%} page-width" role="region" aria-hidden="true"  aria-labelledby="{{ link.title | escape }}">
+                    <ol class="header__submenu__list-menu   motion-reduce" >
+                      {%- for childlink in link.links -%}
+                        <li>
+                          {%- if childlink.links == blank -%}
+                            <a href="{{ childlink.url }}" class="header__submenu__list-item    focus-inset {% if childlink.current %} header__submenu__list-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                              {{ childlink.title | escape }}
+                            </a>
+                          {%- else -%}
+                            <div class="header__submenu__list-item  focus-inset" id="{{ childlink.title | escape }}">
+                              {{ childlink.title | escape }}
+                            </div>
+                            <div class="header__childmenu">
+                              <ul  class="header__submenu__list-menu  header__childmenu__list-menu" aria-describedby="{{ childlink.title | escape }}">
+                                {%- for grandchildlink in childlink.links -%}
+                                  <li>
+                                    <a href="{{ grandchildlink.url }}" class="header__submenu__list-item  header__childmenu__list-item focus-inset {% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                          </div>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ol>
+
+                    <div class="header__submenu__featured-collections">
+                      <ul class="header-featured-collections" aria-label="Featured Collections">
+                        {%- for collection in section.settings.featured-collections -%}
+                          <li>
+                            <div class="header-featured-collections__collection">
+                              <a href="{{ collection.url }}" class="header-featured-collection__inner" {% if link.current %} aria-current="page"{% endif %}>
+                              
+                                <span class="header-featured-collection__title">
+                                  {{ collection.title }}
+                                </span>
+      
+                                <div class="header-featured-collection__image-container">
+                                  {% if collection.image %}
+                                  <div class="header-featured-collection__image">
+                                    <img
+                                      srcset="{% if collection.image.width >= 288 %}{{ collection.image | img_url: '288x' }} 288w,{% endif %}
+                                              {% if collection.image.width >= 576 %}{{ collection.image | img_url: '576x' }} 576w,{% endif %}
+                                              {% if collection.image.width >= 550 %}{{ collection.image | img_url: '550x' }} 550w,{% endif %}
+                                              {% if collection.image.width >= 1100 %}{{ collection.image | img_url: '1100x' }} 1100w{% endif %}"
+                                      src="{{ collection.image | img_url: '550x550' }}"
+                                      sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((50vw / 2), calc(100vw - 6rem)"
+                                      loading="lazy"
+                                      width="500"
+                                      height="{{ 500 | divided_by: collection.image.aspect_ratio | ceil }}"
+                                      role="presentation"
+                                      alt="{{ collection.title | escape }}">
+                                      {%endif%}
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </li>
+                          {%endfor%}
+                      </ul>
+                    </div>
+
+                  </div>
+                </menu-dropdown>
+            
+              {%- else -%}
+                <a href="{{ link.url }}" class=" header__menu-item  focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
