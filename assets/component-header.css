@@ -424,18 +424,18 @@ header-drawer .menu-drawer {
 }
 
 
-.header-menu-drawer-container.menu-opening .header-drawer-menu {
+.header-menu-drawer-container.menu-opening .header-menu-drawer {
     animation: headerDrawerOpen .2s ease forwards;
     pointer-events: all;
 }
 
-.header-menu-drawer-container.menu-closing .header-drawer-menu {
+.header-menu-drawer-container.menu-closing .header-menu-drawer {
     animation: headerDrawerClose .2s ease forwards;
     pointer-events: all;
 }
 
 
-.js .header-drawer-menu {
+.js .header-menu-drawer {
     opacity: 0;
     pointer-events: none;
     height: calc(var(--viewport-height, 102vh) - (var(--header-bottom-position, 100%)));
@@ -480,7 +480,8 @@ header-drawer .menu-drawer__navigation-container {
     height: 100%;
 }
 
-header-drawer .menu-drawer__navigation {
+header-drawer .menu-drawer__navigation,
+header-drawer .menu-drawer__utility-links {
     padding-left: var(--level6);
 }
 
@@ -488,6 +489,13 @@ header-drawer .menu-drawer__inner-submenu {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+
+header-drawer .menu-drawer__utility-links {
+    border-top: 1px solid rgb(var(--color-base-text));
+    padding-top: var(--level5);
+    padding-bottom: var(--level5);
 }
 
 /*TODO STYLE PER NO JS WAY*/
@@ -523,7 +531,13 @@ header-drawer a.menu-drawer__menu-item:hover {
 }
 
 header-drawer .menu-drawer__menu-item.menu-drawer__menu-item--no-children {
-    margin-bottom: var(--level6);
+    margin-bottom: var(--level5);
+    display: block;
+}
+
+
+header-drawer .menu-drawer__menu-item.menu-drawer__menu-item--utility-link {
+    margin-bottom: var(--level2);
     display: block;
 }
 
@@ -587,6 +601,7 @@ header-drawer .menu-drawer__menu-child-item {
     margin-bottom: var(--level1);
     display: inline-block;
 }
+
 
 
 
