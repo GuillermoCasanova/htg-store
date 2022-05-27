@@ -1,0 +1,67 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+
+<section>
+
+    <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+        <div class="loading-overlay gradient"></div>
+
+        <ul id="product-grid" data-id="{{ section.id }}">
+          {%- for product in section.settings.product_list -%}
+            {% assign lazy_load = false %}
+            {%- if forloop.index > 2 -%}
+              {%- assign lazy_load = true -%}
+            {%- endif -%}
+            <li class="grid__item">
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: section.settings.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: section.settings.show_vendor,
+                show_rating: section.settings.show_rating,
+                lazy_load: lazy_load,
+                show_quick_add: section.settings.enable_quick_add,
+                section_id: section.id
+              %}
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+        {%- endif -%}
+      </div>
+
+</section>
+
+
+{%schema%}
+{
+    "name": "Collection Preview",
+    "settings": [
+        {
+            "type": "text",
+            "id": "collection_name",
+            "label": "Collection Name"
+        },
+        {
+            "type": "product_list",
+            "id": "product_list",
+            "label": "Collection Products",
+            "limit": 8
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Preview",
+            "settings": {
+                "collection_name": "Collection Name"
+            }
+        }
+    ],
+    "templates": ["collection"]
+ }
+{%endschema%}
