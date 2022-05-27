@@ -1,15 +1,28 @@
 {
-    "sections": {
-        "banner": {
-            "type": "main-collection-banner",
-            "settings": {
-                "show_collection_description": true,
-                "show_collection_image": false,
-                "color_scheme": "background-1"
-            }
-        }
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
     },
-    "order": [
-        "banner"
-    ]
+    "1653675292ee58c106": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Inner City",
+        "product_list": [
+          "1988-icon-denim-jacket-bone",
+          "1988-icon-denim-button-up-indigo",
+          "1988-icon-denim-pant-bone",
+          "1988-icon-denim-pant-black"
+        ]
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "1653675292ee58c106"
+  ]
 }
