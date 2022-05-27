@@ -92,7 +92,7 @@
                 {%- if block.settings.heading != blank -%}
                   <h2 class="footer-block__heading  footer-block__heading--contact " id="{{- block.settings.heading | escape -}}">{{- block.settings.heading | escape -}}</h2>
                 {%- endif -%}
-                <ul class="footer__block__contact  utility-links__contact" aria-describedby="{{- block.settings.heading | escape -}}">
+                <ul class="footer__block__contact" aria-describedby="{{- block.settings.heading | escape -}}">
                   {%if block.settings.general_email %}
                   <li>
                     <div class="utility-links__contact__email">
