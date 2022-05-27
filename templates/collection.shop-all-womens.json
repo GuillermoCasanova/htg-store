@@ -19,10 +19,23 @@
           "1988-icon-denim-pant-black"
         ]
       }
+    },
+    "1653675322c6e1e849": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Concrete Jungle",
+        "product_list": [
+          "baldwin-long-short-black",
+          "century-camp-button-up-black",
+          "century-camp-button-up-cream-polkadot",
+          "baldwin-long-short-cream"
+        ]
+      }
     }
   },
   "order": [
     "banner",
-    "1653675292ee58c106"
+    "1653675292ee58c106",
+    "1653675322c6e1e849"
   ]
 }
