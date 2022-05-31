@@ -8,7 +8,8 @@
     "1653675292ee58c106": {
       "type": "collection-preview",
       "settings": {
-        "collection": "inner-city-love",
+        "collection_name": "Inner City",
+        "collection": "inner-city-love-womens",
         "product_list": [
           "1988-icon-denim-jacket-bone",
           "1988-icon-denim-button-up-indigo",
@@ -23,7 +24,8 @@
     "1653675322c6e1e849": {
       "type": "collection-preview",
       "settings": {
-        "collection": "concrete-jungle-market",
+        "collection_name": "Concrete Jungle",
+        "collection": "concrete-jungle-women-market",
         "product_list": [
           "baldwin-long-short-black",
           "century-camp-button-up-black",
