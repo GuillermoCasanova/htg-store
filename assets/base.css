@@ -415,7 +415,7 @@ section {
   padding-bottom: var(--level7);
 }
 
-@media only screen and (min-width: 975px) {
+@media only screen and (min-width: 930px) {
   section {
     padding-bottom: calc(var(--level7) * 2);
   }
@@ -441,7 +441,7 @@ section {
   }
 }
 
-@media screen and (min-width: 975px) {
+@media screen and (min-width: 930px) {
   .overflow-hidden-tablet {
     overflow: auto;
   }
@@ -460,7 +460,7 @@ section {
   display: none;
 }
 
-@media only screen and (min-width: 975px) {
+@media only screen and (min-width: 930px) {
   .show-for-large-up {
     display: block;
   }
@@ -471,7 +471,7 @@ section {
   display: block;
 }
 
-@media only screen and (min-width: 975px) {
+@media only screen and (min-width: 930px) {
   .hide-for-large-up {
     display: none;
   }
@@ -505,6 +505,15 @@ section {
   padding-right: var(--level3);
 }
 
+@media screen and (min-width: 360px) {
+  .page-width {
+    padding-left: var(--level5);
+    padding-right: var(--level5);
+  }
+}
+
+
+
 @media screen and (min-width: 930px) {
   .page-width {
     padding-left: var(--level10);
@@ -513,6 +522,34 @@ section {
 }
 
 
+
+
+
+
+/*------------------------------------*\
+    #Product Grid
+\*------------------------------------*/
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: var(--level5);
+}
+
+@media screen and (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media screen and (min-width: 930px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
 
 
@@ -972,7 +1009,7 @@ summary::-webkit-details-marker {
 }
 
 /* component-grid */
-.grid {
+/* .grid {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
@@ -1179,7 +1216,7 @@ summary::-webkit-details-marker {
   .grid--1-col-tablet-down.grid--peek .grid__item {
     width: calc(100% - var(--grid-desktop-horizontal-spacing) - 3rem);
   }
-}
+} */
 
 /* component-media */
 .media {
@@ -2088,16 +2125,6 @@ details[open] .modal-overlay::after {
   @media screen and (min-width: 749px) {
     .grid--peek .grid__item {
       padding-left: var(--grid-mobile-horizontal-spacing);
-    }
-  }
-
-  .product-grid .grid__item {
-    padding-bottom: var(--grid-mobile-vertical-spacing);
-  }
-
-  @media screen and (min-width: 750px) {
-    .product-grid .grid__item {
-      padding-bottom: var(--grid-desktop-vertical-spacing);
     }
   }
 }

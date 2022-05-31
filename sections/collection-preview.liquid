@@ -20,7 +20,7 @@
       </div>
       <div class="collection-preview__products-container">
         <ul id="product-grid" data-id="{{ section.id }}" class="
-          collection-preview__products grid product-grid  ">
+          collection-preview__products product-grid  ">
           {%- for product in section.settings.product_list -%}
             {% assign lazy_load = false %}
             {%- if forloop.index > 2 -%}
