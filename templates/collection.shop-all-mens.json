@@ -3,13 +3,39 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "background-1"
+      }
+    },
+    "16540387627dd6a3af": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Concrete Jungle",
+        "collection": "concrete-jungle-mens",
+        "product_list": [
+          "baldwin-long-short-cream",
+          "century-camp-button-up-green-polkadot",
+          "century-camp-button-up-peach",
+          "inner-city-cinema-t-shirt-blonde",
+          "compton-short-black",
+          "concrete-jungle-t-shirt-black",
+          "century-camp-button-up-cream-polkadot",
+          "fairfax-twill-pant-black"
+        ]
+      }
+    },
+    "165403876742214c90": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "",
+        "collection": "",
+        "product_list": [
+
+        ]
       }
     }
   },
   "order": [
-    "banner"
+    "banner",
+    "16540387627dd6a3af",
+    "165403876742214c90"
   ]
 }
