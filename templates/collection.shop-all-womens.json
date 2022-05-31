@@ -5,22 +5,6 @@
       "settings": {
       }
     },
-    "1653675292ee58c106": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Inner City",
-        "collection": "inner-city-love-womens",
-        "product_list": [
-          "1988-icon-denim-jacket-bone",
-          "1988-icon-denim-button-up-indigo",
-          "1988-icon-denim-pant-bone",
-          "1988-icon-denim-pant-black",
-          "1988-icon-denim-pant-indigo",
-          "alive-cap-green",
-          "alive-l-s-t-shirt-cream"
-        ]
-      }
-    },
     "1653675322c6e1e849": {
       "type": "collection-preview",
       "settings": {
@@ -37,11 +21,28 @@
           "womens-htg-pack-t-shirt-hickory"
         ]
       }
+    },
+    "1653675292ee58c106": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Inner City",
+        "collection": "inner-city-love-womens",
+        "product_list": [
+          "htg-womens-knit-top-terra-cotta",
+          "htg-unisex-cardigan-terra-cotta",
+          "htg-womens-knit-pant-long-beach-navy",
+          "womens-inner-city-ringer-top-athletic-grey",
+          "womens-inner-city-ringer-top-bone",
+          "womens-nomad-hoodie-green",
+          "womens-nostalgia-flannel-top-blue",
+          "womens-nomad-pant-green"
+        ]
+      }
     }
   },
   "order": [
     "banner",
-    "1653675292ee58c106",
-    "1653675322c6e1e849"
+    "1653675322c6e1e849",
+    "1653675292ee58c106"
   ]
 }
