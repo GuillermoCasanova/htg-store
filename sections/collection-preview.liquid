@@ -2,14 +2,25 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-preview.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.enable_quick_add -%}
+  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 
-<section>
-
-    <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
-        <div class="loading-overlay gradient"></div>
-
-        <ul id="product-grid" data-id="{{ section.id }}">
+<section class="collection-preview">
+    <div class="collection-preview__inner page-width">
+      <div class="collection-preview__header">
+        <h2 class="collection-preview__header__headline">
+            {{section.settings.collection.title}}
+        </h2>
+      </div>
+      <div class="collection-preview__products-container">
+        <ul id="product-grid" data-id="{{ section.id }}" class="
+          collection-preview__products grid product-grid  ">
           {%- for product in section.settings.product_list -%}
             {% assign lazy_load = false %}
             {%- if forloop.index > 2 -%}
@@ -29,12 +40,8 @@
             </li>
           {%- endfor -%}
         </ul>
-
-        {%- if paginate.pages > 1 -%}
-          {% render 'pagination', paginate: paginate, anchor: '' %}
-        {%- endif -%}
       </div>
-
+    </div>
 </section>
 
 
@@ -43,9 +50,9 @@
     "name": "Collection Preview",
     "settings": [
         {
-            "type": "text",
-            "id": "collection_name",
-            "label": "Collection Name"
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
         },
         {
             "type": "product_list",
@@ -58,7 +65,7 @@
         {
             "name": "Collection Preview",
             "settings": {
-                "collection_name": "Collection Name"
+                "collection": "Collection"
             }
         }
     ],

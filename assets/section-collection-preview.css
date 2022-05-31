@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #Collection Preview 
+\*------------------------------------*/
+
+.collection-preview__header {
+    border-bottom: 2px solid rgb(var(--color-base-text));
+    margin-bottom: var(--level6);
+}
+
+.collection-preview__header__headline {
+    font-family: var(--tertiary-font-family);
+    font-size: var(--h5);
+}
