@@ -11,31 +11,20 @@
         "collection_name": "Concrete Jungle",
         "collection": "concrete-jungle-kids-market",
         "product_list": [
-
-        ]
-      }
-    },
-    "1653675292ee58c106": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Inner City",
-        "collection": "inner-city-love-womens",
-        "product_list": [
-          "htg-womens-knit-top-terra-cotta",
-          "htg-unisex-cardigan-terra-cotta",
-          "htg-womens-knit-pant-long-beach-navy",
-          "womens-inner-city-ringer-top-athletic-grey",
-          "womens-inner-city-ringer-top-bone",
-          "womens-nomad-hoodie-green",
-          "womens-nostalgia-flannel-top-blue",
-          "womens-nomad-pant-green"
+          "kids-cinema-t-shirt-black",
+          "kids-compton-short-hickory",
+          "kids-concrete-jungle-t-shirt-black",
+          "kids-hawthorne-jacket-cream",
+          "kids-hawthorne-pant-cream",
+          "kids-htg-pack-t-shirt-peach",
+          "kids-concrete-jungle-t-shirt-peach",
+          "kids-inglewood-trouser-pant-hickory"
         ]
       }
     }
   },
   "order": [
     "banner",
-    "1653675322c6e1e849",
-    "1653675292ee58c106"
+    "1653675322c6e1e849"
   ]
 }
