@@ -3,15 +3,12 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "background-1"
       }
     },
     "1653675292ee58c106": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Inner City",
+        "collection": "inner-city-love",
         "product_list": [
           "1988-icon-denim-jacket-bone",
           "1988-icon-denim-button-up-indigo",
@@ -23,7 +20,7 @@
     "1653675322c6e1e849": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Concrete Jungle",
+        "collection": "concrete-jungle-market",
         "product_list": [
           "baldwin-long-short-black",
           "century-camp-button-up-black",
