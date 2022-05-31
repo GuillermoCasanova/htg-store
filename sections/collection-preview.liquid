@@ -15,7 +15,7 @@
     <div class="collection-preview__inner page-width">
       <div class="collection-preview__header">
         <h2 class="collection-preview__header__headline">
-            {{section.settings.collection.title}}
+            {{ section.settings.collection_name }}
         </h2>
       </div>
       <div class="collection-preview__products-container">
@@ -41,34 +41,50 @@
           {%- endfor -%}
         </ul>
       </div>
+      {% if section.settings.collection %}
+        <div>
+            <a title="Shop the {{ section.settings.collection.title }} collection" rel="internal" href="{{ section.settings.collection.url }}">
+              Shop Full Collection
+            </a>
+        </div>
+      {% endif %}
     </div>
 </section>
 
 
-{%schema%}
+{% schema %}
 {
-    "name": "Collection Preview",
-    "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Collection"
-        },
-        {
-            "type": "product_list",
-            "id": "product_list",
-            "label": "Collection Products",
-            "limit": 8
-        }
-    ],
-    "presets": [
-        {
-            "name": "Collection Preview",
-            "settings": {
-                "collection": "Collection"
-            }
-        }
-    ],
-    "templates": ["collection"]
- }
-{%endschema%}
+  "name": "Collection Preview",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection_name",
+      "label": "Collection Name",
+      "description": "The collection name that appears above the products."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "description": "The collection 'Shop Full Collection' link will go to."
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Collection Products",
+      "limit": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Preview",
+      "settings": {
+        "collection": "Collection"
+      }
+    }
+  ],
+  "templates": [
+    "collection"
+  ]
+}
+{% endschema %}

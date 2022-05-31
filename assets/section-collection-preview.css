@@ -3,11 +3,37 @@
 \*------------------------------------*/
 
 .collection-preview__header {
-    border-bottom: 2px solid rgb(var(--color-base-text));
-    margin-bottom: var(--level6);
+    border-bottom: 1px solid rgb(var(--color-base-text));
+    margin-bottom: var(--level4);
 }
+
+
+
+@media only screen and (min-width: 600px) {
+    .collection-preview__header {
+        margin-bottom: var(--level5);
+    }
+}
+
+
+@media only screen and (min-width: 975px) {
+    .collection-preview__header {
+        margin-bottom: var(--level6);
+    }
+}
+
+
+
+
+
 
 .collection-preview__header__headline {
     font-family: var(--tertiary-font-family);
     font-size: var(--h5);
+}
+
+@media only screen and (min-width: 975px) {
+    .collection-preview__header__headline {
+        margin-bottom: var(--level6);
+    }
 }
