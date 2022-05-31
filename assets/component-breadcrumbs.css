@@ -1,0 +1,51 @@
+/*------------------------------------*\
+  #Breadcrumbs
+\*------------------------------------*/
+
+
+.breadcrumbs {
+  width: 100%;
+  margin-bottom: var(--level7);
+}
+
+@media screen and (min-width: 930px) {
+  .breadcrumbs {
+    margin-bottom: calc(var(--level10) + var(--level1));
+  }
+}
+
+.breadcrumbs__inner {
+  display: flex;
+}
+
+
+.breadcrumbs__inner li:last-child a:after {
+  content: "";
+}
+
+.breadcrumbs__inner a {
+  color: rgb(var(--base-color-text));
+  text-decoration: none;
+  margin-right: var(--level2);
+  display: block;
+  position: relative;
+  font-size: var(--micro)
+}
+
+.breadcrumbs__inner a:hover,
+.breadcrumbs__inner a:focus {
+  text-decoration: underline;
+}
+
+
+@media screen and (min-width: 930px) {
+  .breadcrumbs__inner a {
+    font-size: var(--normal);
+  }
+}
+
+.breadcrumbs__inner a:after {
+  content: "/";
+  position: absolute;
+  right: -.5rem;
+}

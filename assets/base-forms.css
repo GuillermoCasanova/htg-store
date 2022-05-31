@@ -333,3 +333,13 @@ button {
     text-transform: uppercase;
     line-height: 1;
 }
+
+.styled-link {
+    text-transform: uppercase;
+    color: rgb(var(--color-base-text));
+}
+
+.styled-link:hover,
+.styled-link:focus {
+    text-decoration: none;
+}

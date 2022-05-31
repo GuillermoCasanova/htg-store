@@ -497,6 +497,15 @@ section {
     #Grid
 \*------------------------------------*/
 
+.content-for-layout {
+  padding-top: var(--level6);
+}
+
+@media screen and (min-width: 930px) {
+  .content-for-layout {
+    padding-top: var(--level7);
+  }
+}
 
 .page-width {
   max-width: var(--page-width);
