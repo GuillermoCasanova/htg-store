@@ -2,31 +2,46 @@
     "sections": {
         "banner": {
             "type": "main-collection-banner",
+            "settings": {}
+        },
+        "16540387627dd6a3af": {
+            "type": "collection-preview",
             "settings": {
-                "show_collection_description": true,
-                "show_collection_image": false,
-                "color_scheme": "background-1"
+                "collection_name": "Concrete Jungle",
+                "collection": "concrete-jungle-mens",
+                "product_list": [
+                    "baldwin-long-short-cream",
+                    "century-camp-button-up-green-polkadot",
+                    "century-camp-button-up-peach",
+                    "inner-city-cinema-t-shirt-blonde",
+                    "compton-short-black",
+                    "concrete-jungle-t-shirt-black",
+                    "century-camp-button-up-cream-polkadot",
+                    "fairfax-twill-pant-black"
+                ]
             }
         },
-        "product-grid": {
-            "type": "main-collection-product-grid",
+        "165403876742214c90": {
+            "type": "collection-preview",
             "settings": {
-                "products_per_page": 16,
-                "columns_desktop": 4,
-                "image_ratio": "adapt",
-                "show_secondary_image": false,
-                "show_vendor": false,
-                "show_rating": false,
-                "enable_filtering": true,
-                "enable_sorting": true,
-                "columns_mobile": "2",
-                "padding_top": 36,
-                "padding_bottom": 36
+                "collection_name": "Inner City",
+                "collection": "inner-city-love-mens-1",
+                "product_list": [
+                    "jazz-checkered-short-melon",
+                    "jazz-checkered-short-black",
+                    "inner-city-love-t-shirt-black-1",
+                    "inner-city-love-cap-sage",
+                    "1988-icon-denim-pant-black",
+                    "1988-icon-denim-pant-indigo",
+                    "luther-cargo-pant-clay",
+                    "inner-city-love-t-shirt-terra-cotta"
+                ]
             }
         }
     },
     "order": [
         "banner",
-        "product-grid"
+        "16540387627dd6a3af",
+        "165403876742214c90"
     ]
 }
