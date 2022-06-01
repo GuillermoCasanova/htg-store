@@ -20,7 +20,8 @@
 
 
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header class="header page-width">
+  <header class="header ">
+    <div class="header__inner  page-width">
     <div class="header-drawer-blocker">
     </div>
     {%- if section.settings.menu != blank -%}
@@ -95,24 +96,24 @@
                                 {% if collection.image %}
                                 <div class="header-featured-collection__image">
                                   <img
-                                    srcset="{% if collection.image.width >= 288 %}{{ collection.image | img_url: '288x' }} 288w,{% endif %}
-                                            {% if collection.image.width >= 576 %}{{ collection.image | img_url: '576x' }} 576w,{% endif %}
-                                            {% if collection.image.width >= 550 %}{{ collection.image | img_url: '550x' }} 550w,{% endif %}
-                                            {% if collection.image.width >= 1100 %}{{ collection.image | img_url: '1100x' }} 1100w{% endif %}"
-                                    src="{{ collection.image | img_url: '550x550' }}"
+                                    srcset="{% if collection.image.width >= 288 %}{{ collection.image | image_url: width: 288 }} 288w,{% endif %}
+                                            {% if collection.image.width >= 576 %}{{ collection.image | image_url: width: 576 }} 576w,{% endif %}
+                                            {% if collection.image.width >= 550 %}{{ collection.image | image_url: width: 550 }} 550w,{% endif %}
+                                            {% if collection.image.width >= 1100 %}{{ collection.image | image_url: width: 1100 }} 1100w{% endif %}"
+                                    src="{{ collection.image | image_url: width: 550, height: 550 }}"
                                     sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((50vw / 2), calc(100vw - 6rem)"
                                     loading="lazy"
                                     width="500"
                                     height="{{ 500 | divided_by: collection.image.aspect_ratio | ceil }}"
                                     role="presentation"
                                     alt="{{ collection.title | escape }}">
-                                    {%endif%}
+                                    {% endif %}
                                 </div>
                               </div>
                             </a>
                           </div>
                         </li>
-                        {%endfor%}
+                        {% endfor %}
                     </ul>
                   </div>
   
@@ -124,35 +125,35 @@
                             {{ link.title | escape }}
                           </a>
                         </li>
-                        {%endfor%}
+                        {% endfor %}
                     </ul>
                     <ul class="menu-drawer__utility-links__contact">
   
-                      {%if section.settings.general_email %}
+                      {% if section.settings.general_email %}
                       <li>
                         <div class="utility-links__contact__email">
                             <span class="email__label">
                               General <span class="visually-hidden">Inquiries</span>
                             </span>
-                            <a href="mailto:{{section.settings.general_email}}" tile="Contact us about general inquiries">
-                              {{section.settings.general_email}}
+                            <a href="mailto:{{ section.settings.general_email }}" tile="Contact us about general inquiries">
+                              {{ section.settings.general_email }}
                             </a>
                         </div>
                       </li>
-                      {%endif%}
+                      {% endif %}
   
-                      {%if section.settings.orders_email %}
+                      {% if section.settings.orders_email %}
                       <li>
                         <div class="utility-links__contact__email">
                           <span class="email__label">
                             Orders <span class="visually-hidden">Inquiries</span>
                           </span>
-                          <a href="mailto:{{section.settings.orders_email}}" tile="Contact us about your order">
-                          {{section.settings.orders_email}}
+                          <a href="mailto:{{ section.settings.orders_email }}" tile="Contact us about your order">
+                          {{ section.settings.orders_email }}
                           </a>
                         </div>
                       </li>
-                      {%endif%}
+                      {% endif %}
                       
                     </ul>
                   </div>
@@ -167,6 +168,8 @@
 
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
+    {%else%}
+    <div class="header__heading">
     {%- endif -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           <svg class="header__logo" title="Honor The Gift" focusable="false">
@@ -175,6 +178,8 @@
         </a>
     {%- if request.page_type == 'index' -%}
       </h1>
+    {%else%}
+    </div>
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
@@ -188,72 +193,73 @@
                     <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                   </button>
 
-                  {%assign title = link.title | escape %}
+                  {% assign title = link.title | escape %}
 
-                  <div class="header__submenu  {%if title == 'Shop'%}header__submenu--shop{%endif%} page-width" role="region" aria-hidden="true"  aria-labelledby="{{ link.title | escape }}">
-                    <ol class="header__submenu__list-menu   motion-reduce" >
-                      {%- for childlink in link.links -%}
-                        <li>
-                          {%- if childlink.links == blank -%}
-                            <a href="{{ childlink.url }}" class="header__submenu__list-item    focus-inset {% if childlink.current %} header__submenu__list-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                              {{ childlink.title | escape }}
-                            </a>
-                          {%- else -%}
-                            <div class="header__submenu__list-item  focus-inset" id="{{ childlink.title | escape }}">
-                              {{ childlink.title | escape }}
-                            </div>
-                            <div class="header__childmenu">
-                              <ul  class="header__submenu__list-menu  header__childmenu__list-menu" aria-describedby="{{ childlink.title | escape }}">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a href="{{ grandchildlink.url }}" class="header__submenu__list-item  header__childmenu__list-item focus-inset {% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                          </div>
-                          {%- endif -%}
-                        </li>
-                      {%- endfor -%}
-                    </ol>
-
-                    <div class="header__submenu__featured-collections">
-                      <ul class="header-featured-collections" aria-label="Featured Collections">
-                        {%- for collection in section.settings.featured-collections -%}
+                  <div class="header__submenu  {% if title == 'Shop' %}header__submenu--shop{% endif %} " role="region" aria-hidden="true"  aria-labelledby="{{ link.title | escape }}">
+                    <div class="header__submenu__inner  page-width">
+                      <ol class="header__submenu__list-menu   motion-reduce" >
+                        {%- for childlink in link.links -%}
                           <li>
-                            <div class="header-featured-collections__collection">
-                              <a href="{{ collection.url }}" class="header-featured-collection__inner" {% if link.current %} aria-current="page"{% endif %}>
-                              
-                                <span class="header-featured-collection__title">
-                                  {{ collection.title }}
-                                </span>
-      
-                                <div class="header-featured-collection__image-container">
-                                  {% if collection.image %}
-                                  <div class="header-featured-collection__image">
-                                    <img
-                                      srcset="{% if collection.image.width >= 288 %}{{ collection.image | img_url: '288x' }} 288w,{% endif %}
-                                              {% if collection.image.width >= 576 %}{{ collection.image | img_url: '576x' }} 576w,{% endif %}
-                                              {% if collection.image.width >= 550 %}{{ collection.image | img_url: '550x' }} 550w,{% endif %}
-                                              {% if collection.image.width >= 1100 %}{{ collection.image | img_url: '1100x' }} 1100w{% endif %}"
-                                      src="{{ collection.image | img_url: '550x550' }}"
-                                      sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((50vw / 2), calc(100vw - 6rem)"
-                                      loading="lazy"
-                                      width="500"
-                                      height="{{ 500 | divided_by: collection.image.aspect_ratio | ceil }}"
-                                      role="presentation"
-                                      alt="{{ collection.title | escape }}">
-                                      {%endif%}
-                                  </div>
-                                </div>
+                            {%- if childlink.links == blank -%}
+                              <a href="{{ childlink.url }}" class="header__submenu__list-item    focus-inset {% if childlink.current %} header__submenu__list-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                {{ childlink.title | escape }}
                               </a>
+                            {%- else -%}
+                              <div class="header__submenu__list-item  focus-inset" id="{{ childlink.title | escape }}">
+                                {{ childlink.title | escape }}
+                              </div>
+                              <div class="header__childmenu">
+                                <ul  class="header__submenu__list-menu  header__childmenu__list-menu" aria-describedby="{{ childlink.title | escape }}">
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li>
+                                      <a href="{{ grandchildlink.url }}" class="header__submenu__list-item  header__childmenu__list-item focus-inset {% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {{ grandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
                             </div>
+                            {%- endif -%}
                           </li>
-                          {%endfor%}
-                      </ul>
-                    </div>
+                        {%- endfor -%}
+                      </ol>
 
+                      <div class="header__submenu__featured-collections">
+                        <ul class="header-featured-collections" aria-label="Featured Collections">
+                          {%- for collection in section.settings.featured-collections -%}
+                            <li>
+                              <div class="header-featured-collections__collection">
+                                <a href="{{ collection.url }}" class="header-featured-collection__inner" {% if link.current %} aria-current="page"{% endif %}>
+                                
+                                  <span class="header-featured-collection__title">
+                                    {{ collection.title }}
+                                  </span>
+        
+                                  <div class="header-featured-collection__image-container">
+                                    {% if collection.image %}
+                                    <div class="header-featured-collection__image">
+                                      <img
+                                        srcset="{% if collection.image.width >= 288 %}{{ collection.image | image_url: width: 288 }} 288w,{% endif %}
+                                                {% if collection.image.width >= 576 %}{{ collection.image | image_url: width: 576 }} 576w,{% endif %}
+                                                {% if collection.image.width >= 550 %}{{ collection.image | image_url: width: 550 }} 550w,{% endif %}
+                                                {% if collection.image.width >= 1100 %}{{ collection.image | image_url: width: 1100 }} 1100w{% endif %}"
+                                        src="{{ collection.image | image_url: width: 550, height: 550 }}"
+                                        sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((50vw / 2), calc(100vw - 6rem)"
+                                        loading="lazy"
+                                        width="500"
+                                        height="{{ 500 | divided_by: collection.image.aspect_ratio | ceil }}"
+                                        role="presentation"
+                                        alt="{{ collection.title | escape }}">
+                                        {% endif %}
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </menu-dropdown>
             
@@ -267,6 +273,8 @@
         </ul>
       </nav>
     {%- endif -%}
+  </div>
+
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
@@ -455,15 +463,15 @@
       "content": "Contact Emails"
     },
     {
-      "type": "text", 
-      "id": "general_email", 
-      "label": "General Inquiries Email", 
+      "type": "text",
+      "id": "general_email",
+      "label": "General Inquiries Email",
       "default": "info@honorthegift.co"
     },
     {
-      "type": "text", 
-      "id": "orders_email", 
-      "label": "Order Inquiries Email", 
+      "type": "text",
+      "id": "orders_email",
+      "label": "Order Inquiries Email",
       "default": "help@honorthegift.co"
     },
     {

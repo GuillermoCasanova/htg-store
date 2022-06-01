@@ -53,20 +53,23 @@ sticky-header {
 
 
 .header {
+    transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    border-bottom: 1px solid rgb(var(--color-base-text));
+}
+
+.header__inner {
+    padding-top: var(--level1);
+    padding-bottom: var(--level1);
     display: grid;
     grid-template-areas: 'menu  heading cart-drawer';
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-between;
     align-items: center;
-    transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    padding-top: var(--level1);
-    padding-bottom: var(--level1);
-    border-bottom: 1px solid rgb(var(--color-base-text));
 }
 
 @media screen and (min-width: 930px) {
-    .header {
+    .header__inner {
         grid-template-columns: 2fr 1fr 2fr;
         padding-top: var(--level3);
         padding-bottom: var(--level3);
@@ -1023,16 +1026,22 @@ details[open]>.search-modal {
         max-width: none;
         position: absolute;
         left: 0;
-        display: flex;
-        flex-direction: row;
         border-top: 1px solid rgb(var(--color-base-text));
         border-bottom: 1px solid rgb(var(--color-base-text));
-        padding-top: var(--level3);
-        padding-bottom: var(--level3);
         z-index: 0;
     }
 
-    .header__submenu--shop {
+    .header__submenu__inner {
+        flex-direction: row;
+        display: flex;
+        padding-top: var(--level3);
+        padding-bottom: var(--level3);
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__submenu--shop .header__submenu__inner {
         display: grid;
         grid-template-columns: 1.75fr 1fr;
         grid-template-areas: 'menu collections';
@@ -1040,9 +1049,9 @@ details[open]>.search-modal {
 
     .header__submenu--shop .header__submenu__featured-collections {
         width: 100%;
-        max-width: 20rem;
+        max-width: 33rem;
         grid-area: collections;
-        min-width: 34rem;
+        min-width: 14rem;
         padding-top: var(--level1)
     }
 
@@ -1076,7 +1085,7 @@ details[open]>.search-modal {
         padding-left: 0;
         padding-bottom: 0;
         text-transform: uppercase;
-        margin-right: var(--level6);
+        margin-right: var(--level7);
         padding-right: var(--level1);
         padding-top: var(--level2);
         font-size: var(--h4);

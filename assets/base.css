@@ -275,7 +275,7 @@ main {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-    font-size: .92rem;
+    font-size: 1rem;
   }
 }
 
@@ -508,7 +508,7 @@ section {
 }
 
 .page-width {
-  max-width: var(--page-width);
+  max-width: 105rem;
   margin: 0 auto;
   padding-left: var(--level3);
   padding-right: var(--level3);
@@ -525,8 +525,8 @@ section {
 
 @media screen and (min-width: 930px) {
   .page-width {
-    padding-left: var(--level10);
-    padding-right: var(--level10);
+    padding-left: var(--level8);
+    padding-right: var(--level8);
   }
 }
 
