@@ -8,7 +8,7 @@
     <div class="collection-header__text-wrapper">
       <h1 class="collection-header__title  visually-hidden ">
         <span >{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
+        {{ collection.title | escape }} {{ current_tags[0] }}
       </h1>
     </div>
   </div>

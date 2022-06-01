@@ -2,7 +2,20 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "settings": {}
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
       "settings": {
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
       }
     },
     "16540387627dd6a3af": {
@@ -42,6 +55,7 @@
   },
   "order": [
     "banner",
+    "product-grid",
     "16540387627dd6a3af",
     "165403876742214c90"
   ]
