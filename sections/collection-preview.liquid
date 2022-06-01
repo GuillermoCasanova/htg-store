@@ -12,47 +12,51 @@
 {%- endif -%}
 
 
-<section class="collection-preview">
-    <div class="collection-preview__inner page-width">
-      <div class="collection-preview__header">
-        <h2 class="collection-preview__header__headline">
-            {{ section.settings.collection_name }}
-        </h2>
-      </div>
-      <div class="collection-preview__products-container">
-        <ul id="product-grid" data-id="{{ section.id }}" class="
-          collection-preview__products">
-          {%- for product in section.settings.product_list -%}
-            {% assign lazy_load = false %}
-            {%- if forloop.index > 2 -%}
-              {%- assign lazy_load = true -%}
-            {%- endif -%}
-            <li class="grid__item">
-              {% render 'card-product',
-                card_product: product,
-                media_aspect_ratio: section.settings.image_ratio,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_rating: section.settings.show_rating,
-                lazy_load: lazy_load,
-                show_quick_add: section.settings.enable_quick_add,
-                section_id: section.id
-              %}
-            </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-      {% if section.settings.collection %}
-        <div class="collection-preview__footer">
-            <a title="Shop the {{ section.settings.collection.title }} collection" 
-              rel="internal" href="{{ section.settings.collection.url }}"
-              class="collection-preview__footer__cta  styled-link">
-              Shop Full Collection
-            </a>
+{% comment %}Only appears if there are no active tags present.{% endcomment %}
+{% if current_tags[0] == null %}
+  <section class="collection-preview">
+    
+      <div class="collection-preview__inner page-width">
+        <div class="collection-preview__header">
+          <h2 class="collection-preview__header__headline">
+              {{ section.settings.collection_name }}
+          </h2>
         </div>
-      {% endif %}
-    </div>
-</section>
+        <div class="collection-preview__products-container">
+          <ul id="product-grid" data-id="{{ section.id }}" class="
+            collection-preview__products">
+            {%- for product in section.settings.product_list -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+                {%- assign lazy_load = true -%}
+              {%- endif -%}
+              <li class="grid__item">
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  lazy_load: lazy_load,
+                  show_quick_add: section.settings.enable_quick_add,
+                  section_id: section.id
+                %}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        {% if section.settings.collection %}
+          <div class="collection-preview__footer">
+              <a title="Shop the {{ section.settings.collection.title }} collection" 
+                rel="internal" href="{{ section.settings.collection_link }}"
+                class="collection-preview__footer__cta  styled-link">
+                Shop Full Collection
+              </a>
+          </div>
+        {% endif %}
+      </div>
+  </section>
+{% endif %}
 
 
 {% schema %}
@@ -70,6 +74,12 @@
       "id": "collection",
       "label": "Collection",
       "info": "The collection 'Shop Full Collection' link will go to."
+    },
+    {
+      "type": "url",
+      "id": "collection_link",
+      "label": "Collection URL",
+      "info": "The URL for the collection. Example: <name_of_collection>/womens"
     },
     {
       "type": "product_list",
