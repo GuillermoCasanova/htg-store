@@ -26,7 +26,7 @@
   }
 {%- endstyle -%}
 
-{% if section.settings.child_collection and current_tags[0] != null %}
+{% if current_tags[0] != null and section.settings.child_collection %}
   <div class="section-{{ section.id }}-padding">
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
