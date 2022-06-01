@@ -47,8 +47,8 @@
         </div>
         {% if section.settings.collection %}
           <div class="collection-preview__footer">
-              <a title="Shop the {{ section.settings.collection.title }} collection" 
-                rel="internal" href="{{ section.settings.collection_link }}"
+              <a title="Shop the {{ section.settings.collection_name }} collection" 
+                rel="internal" href="{{ section.settings.collection_url }}"
                 class="collection-preview__footer__cta  styled-link">
                 Shop Full Collection
               </a>
@@ -70,16 +70,10 @@
       "info": "The collection name that appears above the products."
     },
     {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection",
-      "info": "The collection 'Shop Full Collection' link will go to."
-    },
-    {
       "type": "url",
-      "id": "collection_link",
-      "label": "Collection URL",
-      "info": "The URL for the collection. Example: <name_of_collection>/womens"
+      "id": "collection_url",
+      "label": "Collection URL w/ Tag",
+      "info": "The URL for the collection filtered by a tag (mens, womens, etc.). IE: /collections/shop-all-womens/<name-of-collection>"
     },
     {
       "type": "product_list",
@@ -92,7 +86,7 @@
     {
       "name": "Collection Preview",
       "settings": {
-        "collection": "Collection"
+        "collection_name": "Collection Name"
       }
     }
   ],
