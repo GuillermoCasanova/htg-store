@@ -40,12 +40,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: var(--level5);
+    column-gap: var(--level4);
 }
 
 @media screen and (min-width: 700px) {
     .collection-preview__products {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: var(--level3);
     }
 }
 

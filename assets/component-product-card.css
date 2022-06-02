@@ -34,26 +34,37 @@
   transition: all .2s ease;
 }
 
-
-
 .product-card__information {
   display: flex;
+  justify-content: space-between;
 }
 
 .product-card__heading {
   text-transform: capitalize;
   font-size: var(--micro);
+  padding-right: var(--level1);
 }
 
-.product-card__price-information {
-  text-transform: capitalize;
-  font-size: var(--micro);
+@media only screen and (min-width: 930px) {
+  .product-card__heading {
+    font-size: var(--normal);
+    max-width: 9.5rem;
+  }
 }
+
+
 
 .product-card__price {
   text-transform: capitalize;
   font-size: var(--micro);
 }
+
+@media only screen and (min-width: 930px) {
+  .product-card__price {
+    font-size: var(--normal);
+  }
+}
+
 
 
 .card--media .card__inner .card__content {
