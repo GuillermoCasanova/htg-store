@@ -36,34 +36,25 @@
 
 
 
-
-.card-information {
-  text-align: var(--card-text-alignment);
+.product-card__information {
+  display: flex;
 }
 
-.card__media,
-.card .media {
-  bottom: 0;
-  position: absolute;
-  top: 0;
+.product-card__heading {
+  text-transform: capitalize;
+  font-size: var(--micro);
 }
 
-.card .media {
-  width: 100%;
+.product-card__price-information {
+  text-transform: capitalize;
+  font-size: var(--micro);
 }
 
-.card__media {
-  margin: var(--card-image-padding);
-  width: calc(100% - 2 * var(--card-image-padding));
+.product-card__price {
+  text-transform: capitalize;
+  font-size: var(--micro);
 }
 
-.card--standard .card__media {
-  margin: var(--card-image-padding);
-}
-
-.card__inner {
-  width: 100%;
-}
 
 .card--media .card__inner .card__content {
   padding: calc(var(--card-image-padding) + 1rem);

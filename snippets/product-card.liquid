@@ -8,7 +8,7 @@
     - section_id: {String} The ID of the section that contains this card.
 
     Usage:
-    {% render 'card-product', show_quick_add: section.settings.enable_quick_add %}
+    {% render 'product-card', show_quick_add: section.settings.enable_quick_add %}
 {% endcomment %}
 
 
@@ -71,9 +71,9 @@
               {{ card_product.title | escape }}
           </h3>
           {% endif %}
-          <div class="product-card-information">
-            <span class="caption-large light">{{ block.settings.description | escape }}</span>
-            {% render 'price', product: card_product, price_class: '' %}
+
+          <div class="product-card__price-info">
+            {% render 'price', product: card_product, price_class: 'product-card__price' %}
           </div>
         </div>
   
