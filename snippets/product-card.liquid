@@ -13,9 +13,18 @@
 
 
 <div class="product-card-wrapper underline-links-hover">
-    <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ card_product.url }}" class="product-card">
+    <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ card_product.url }}" class="product-card  {% if card_product.available == false %} product-card--sold-out {% endif %}">
       <div class="product-card__inner">
           <div class="product-card__media">
+
+            <div class="product-card__badge">
+              {%- if card_product.available == false -%}
+                <span class="product-card__badge__text--sold-out">{{ 'products.product.sold_out' | t }}</span>
+              {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+                <span class="product-card__badge__text--on-sale">{{ 'products.product.on_sale' | t }}</span>
+              {%- endif -%}
+            </div>
+
             <div class="media media--square">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
@@ -79,7 +88,7 @@
           </div>
         </div>
   
-        {%- if show_quick_add -%}
+        {%- if show_quick_add and card_product.available == true -%}
           <div class="quick-add">
             {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
             {%- if card_product.has_only_default_variant -%}
@@ -145,13 +154,6 @@
           </div>
         {%- endif -%}
   
-        <div class="card__badge {{ settings.badge_position }}">
-          {%- if card_product.available == false -%}
-            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
-          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
-          {%- endif -%}
-        </div>
       </div>
     </a>
   </div>

@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    #Price
+\*------------------------------------*/
+
 .price {
   font-size: var(--normal);
   color: rgb(var(--color-foreground));
@@ -33,6 +37,17 @@
     margin-bottom: 0;
   }
 }
+
+
+/*------------------------------------*\
+    #Price States
+\*------------------------------------*/
+
+.price--sold-out {
+  color: rgb(var(--color-base-link));
+}
+
+
 
 .price--large {
   font-size: 1.6rem;

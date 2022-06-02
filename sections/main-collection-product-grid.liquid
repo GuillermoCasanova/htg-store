@@ -72,7 +72,6 @@
               grid product-grid">
               {%- for product in collection.products -%}
                 <li class="grid__item">
-                  {{- section.settings.enable_quick_add -}}
                   {% render 'product-card',
                     heading_level: 'h2',
                     card_product: product,
