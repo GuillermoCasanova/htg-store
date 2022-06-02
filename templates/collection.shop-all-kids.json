@@ -19,6 +19,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
+        "collection_url": "",
         "product_list": [
           "kids-cinema-t-shirt-black",
           "kids-compton-short-hickory",
@@ -28,7 +29,8 @@
           "kids-htg-pack-t-shirt-peach",
           "kids-concrete-jungle-t-shirt-peach",
           "kids-inglewood-trouser-pant-hickory"
-        ]
+        ],
+        "enable_quick_add": true
       }
     }
   },
