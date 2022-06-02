@@ -2,8 +2,7 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "settings": {
-      }
+      "settings": {}
     },
     "product-grid": {
       "type": "main-collection-product-grid",
@@ -12,6 +11,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "heading_level": "h3",
         "enable_quick_add": false,
         "enable_filtering": true,
         "filter_type": "horizontal",

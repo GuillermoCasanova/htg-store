@@ -32,12 +32,8 @@
               {%- endif -%}
               <li class="grid__item">
                 {% render 'card-product',
+                  heading_level: 'h3',
                   card_product: product,
-                  media_aspect_ratio: section.settings.image_ratio,
-                  show_secondary_image: section.settings.show_secondary_image,
-                  show_vendor: section.settings.show_vendor,
-                  show_rating: section.settings.show_rating,
-                  lazy_load: lazy_load,
                   show_quick_add: section.settings.enable_quick_add,
                   section_id: section.id
                 %}
@@ -64,6 +60,10 @@
   "name": "Collection Preview",
   "settings": [
     {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
       "type": "text",
       "id": "collection_name",
       "label": "Collection Name",
@@ -80,6 +80,16 @@
       "id": "product_list",
       "label": "Collection Products",
       "limit": 8
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
     }
   ],
   "presets": [

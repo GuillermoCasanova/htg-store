@@ -14,6 +14,11 @@ class FacetFiltersForm extends HTMLElement {
     if (facetWrapper) facetWrapper.addEventListener('keyup', onKeyUpEscape);
   }
 
+
+  static getCollectionProducts() {
+
+  }
+  
   static setListeners() {
     const onHistoryChange = (event) => {
       const searchParams = event.state ? event.state.searchParams : FacetFiltersForm.searchParamsInitial;
@@ -21,7 +26,23 @@ class FacetFiltersForm extends HTMLElement {
       FacetFiltersForm.renderPage(searchParams, null, false);
     }
     window.addEventListener('popstate', onHistoryChange);
+
+    let collectionId =  document.querySelector('[data-collection-id]').dataset.collectionId;
+    
+    async function load() {
+      console.log('calling');
+      const response = await fetch('/collections/'+ collectionId + '?view=shop-all-womens.json');
+      const products  = await response.json(); 
+      return products;
+    }
+
+    load().then(products => {
+      console.log(products)
+    }); 
+    FacetFiltersForm.getCollectionProducts();
+
   }
+
 
   static toggleActiveFacets(disable = true) {
     document.querySelectorAll('.js-facet-remove').forEach((element) => {
@@ -124,14 +145,12 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderAdditionalElements(html) {
-    const mobileElementSelectors = ['.mobile-facets__open', '.mobile-facets__count', '.sorting'];
+    // const mobileElementSelectors = ['.mobile-facets__open', '.mobile-facets__count', '.sorting'];
 
-    mobileElementSelectors.forEach((selector) => {
-      if (!html.querySelector(selector)) return;
-      document.querySelector(selector).innerHTML = html.querySelector(selector).innerHTML;
-    });
-
-    document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+    // mobileElementSelectors.forEach((selector) => {
+    //   if (!html.querySelector(selector)) return;
+    //   document.querySelector(selector).innerHTML = html.querySelector(selector).innerHTML;
+    // });
   }
 
   static renderCounts(source, target) {
