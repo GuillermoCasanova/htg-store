@@ -84,7 +84,6 @@ label {
     font-family: var(--primary-font-family);
     letter-spacing: 1px;
     transition: all .4s cubic-bezier(0.22, 1, 0.36, 1);
-    pointer-events: none;
     /* @include h5(); */
 }
 

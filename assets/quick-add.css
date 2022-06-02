@@ -1,12 +1,34 @@
+/*------------------------------------*\
+    #Quick Add
+\*------------------------------------*/
+
 .quick-add {
   position: relative;
   grid-row-start: 4;
   margin: 0 0 1rem;
   z-index: 1;
+  bottom: 0;
 }
 
 .card--card .quick-add {
   margin: 0 1.3rem 1rem;
+}
+
+.product-card .quick-add-button-container {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+}
+
+.quick-add-button {
+  background-color: #fff;
+  border: 1px solid rgb(var(--color-base-text));
+  padding-top: var(--level2);
+  padding-bottom: var(--level1);
+  line-height: 1;
+  width: 100%;
+  font-size: var(--h5);
 }
 
 .quick-add-modal {
@@ -74,7 +96,7 @@
   height: 100%;
 }
 
-.quick-add-modal__content-info > * {
+.quick-add-modal__content-info>* {
   height: auto;
   margin: 0 auto;
   max-width: 100%;
@@ -90,8 +112,8 @@
   .quick-add-modal__content {
     bottom: 3.2rem;
   }
-  
-  .quick-add-modal__content-info > * {
+
+  .quick-add-modal__content-info>* {
     max-height: 100%;
   }
 }
@@ -170,16 +192,16 @@ quick-add-modal .page-width {
   padding: 0;
 }
 
-quick-add-modal .product__title > h1 {
+quick-add-modal .product__title>h1 {
   display: none;
 }
 
-quick-add-modal .product__title > a {
+quick-add-modal .product__title>a {
   display: block;
   text-decoration: none;
 }
 
-quick-add-modal .product__title > a:hover {
+quick-add-modal .product__title>a:hover {
   color: rgb(var(--color-foreground));
   text-decoration: underline;
   text-underline-offset: 0.2rem;

@@ -7,6 +7,7 @@
   height: 100%;
   position: relative;
   text-decoration: none;
+  z-index: 0;
 }
 
 .product-card {
@@ -56,6 +57,8 @@
 .product-card__information {
   display: flex;
   justify-content: space-between;
+  color: rgb(var(--color-base-text));
+  text-decoration: none;
 }
 
 .product-card__heading {
