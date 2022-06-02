@@ -2,17 +2,13 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "settings": {}
+      "settings": {
+      }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "heading_level": "h3",
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
@@ -33,7 +29,8 @@
           "womens-jungle-camp-button-up-crimson",
           "womens-hollywood-pant-hickory",
           "womens-htg-pack-t-shirt-hickory"
-        ]
+        ],
+        "enable_quick_add": true
       }
     },
     "1653675292ee58c106": {
@@ -50,7 +47,8 @@
           "womens-nomad-hoodie-green",
           "womens-nostalgia-flannel-top-blue",
           "womens-nomad-pant-green"
-        ]
+        ],
+        "enable_quick_add": false
       }
     }
   },

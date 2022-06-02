@@ -2,15 +2,12 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "settings": {}
+      "settings": {
+      }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
         "enable_quick_add": false,
         "enable_filtering": true,
         "filter_type": "horizontal",
@@ -22,7 +19,6 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection": "concrete-jungle-mens",
         "product_list": [
           "baldwin-long-short-cream",
           "century-camp-button-up-green-polkadot",
@@ -39,7 +35,6 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City",
-        "collection": "inner-city-love-mens-1",
         "product_list": [
           "jazz-checkered-short-melon",
           "jazz-checkered-short-black",
