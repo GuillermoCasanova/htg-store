@@ -106,9 +106,6 @@ summary::before {
   position: fixed;
 }
 
-[aria-hidden="true"] {
-  pointer-events: none;
-}
 
 main {
   min-height: calc(70vw - 300px);
@@ -161,7 +158,6 @@ main {
 
 
 
-
 /*------------------------------------*\
     #Typography
 \*------------------------------------*/
@@ -208,8 +204,8 @@ main {
   --h4: 1.563rem;
   --h5: 1.25rem;
   --h6: 1.25rem;
-  --normal: 1.05rem;
-  --micro: .85rem;
+  --normal: 1.15rem;
+  --micro: 1rem;
   --mini: .78rem;
   --line-height-normal: 1.25;
   --line-height-double: 1.5;

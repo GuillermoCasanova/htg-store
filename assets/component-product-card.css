@@ -37,9 +37,7 @@
   z-index: 1;
 }
 
-.product-card__media img {
-  transition: all .2s ease;
-}
+.product-card__media img {}
 
 .product-card.product-card--sold-out {
   color: rgba(var(--color-base-link));
@@ -87,6 +85,8 @@
 
 
 
+
+
 /*------------------------------------*\
     #Product Card Badge
 \*------------------------------------*/
@@ -99,6 +99,7 @@
   top: var(--level1);
   left: var(--level1);
   z-index: 3;
+  letter-spacing: 2px;
 }
 
 @media only screen and (min-width: 930px) {
@@ -112,6 +113,10 @@
 .product-card__badge__text--sold-out {
   color: #fa0000;
 }
+
+
+
+
 
 .card__badge {
   align-self: flex-end;

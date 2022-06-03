@@ -45,7 +45,7 @@
 
 @media screen and (min-width: 700px) {
     .collection-preview__products {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         column-gap: var(--level3);
     }
 }
@@ -57,6 +57,11 @@
     }
 }
 
+@media screen and (min-width: 1681px) {
+    .collection-preview__products {
+        column-gap: var(--level4);
+    }
+}
 
 
 
