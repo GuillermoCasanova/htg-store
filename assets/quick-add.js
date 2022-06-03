@@ -99,6 +99,7 @@ class QuickAddColorPicker extends HTMLElement {
   onVariantChange() {
       this.updateVariantData();
       this.updateVariantInput(); 
+      this.updateImages(); 
   }
 
   setCurrentColor() {
@@ -154,12 +155,12 @@ class QuickAddColorPicker extends HTMLElement {
   }
 
   updateImages() {
-      let productObj = JSON.parse(this.currentColor.dataset.product); 
-      let images = productObj.media; 
-      let imagesTemplate = ``;
+      let currentColor = this.getCurrentColor(); 
+      let productObj = JSON.parse(currentColor.dataset.product); 
+      let images = productObj.media.splice(0, 2); 
+      let imagesContainer =  document.querySelector(`[data-product-images][data-section="${this.dataset.section}"]`); 
 
-      
-      function createImageObj(pSource, pAlt, pIndex) {
+      function createImageObj(pSource, pAlt, pWidth, pIndex) {
           let imageTemplate = ``; 
           let index = pIndex + 1;
 
@@ -172,26 +173,29 @@ class QuickAddColorPicker extends HTMLElement {
 
 
           imageTemplate = `
-             <li class="slide  swiper-slide"  data-product-images-slideshow-slide data-images-scroller-image data-product-images-modal-open data-id="${index}">
-                  <div class="product-images-slideshow__image-container">
-                  <picture>
-                      <source srcset="${processImageSrc(pSource, '1050x')}"  media="(min-width: 1300px)">
-                        <source srcset="${processImageSrc(pSource, '1000x')}"  media="(min-width: 975px)">
-                      <source srcset="${processImageSrc(pSource, '900x')}"  media="(min-width: 750px)">
-                      <img src="${processImageSrc(pSource, '800x')}" alt=""${pAlt}" height="1000" loading="lazy">
-                      </picture>
-                  </div>
-            </li> 
+                <img
+                srcset="${processImageSrc(pSource, '165x')} 165w,
+                        ${processImageSrc(pSource, '360x')} 360w,
+                        ${processImageSrc(pSource, '533x')} 533w,
+                        ${processImageSrc(pSource, '720x')} 720w,
+                        ${processImageSrc(pSource, '940x')} 940w,
+                        ${processImageSrc(pSource, '1066x')} 1066w,
+                        ${processImageSrc(pSource, '1066x')} ${pWidth}w"
+                src="${processImageSrc(pSource, '533x')}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="${pAlt}"
+                aria-hidden="true"
+                width="1000"
+                height="1000"
+              >
           `; 
 
-          document.querySelector('product-images-slideshow').appendSlide(imageTemplate); 
-          document.querySelector('product-images-scroller').appendSlide(imageTemplate, index); 
+          imagesContainer.innerHTML +=(imageTemplate);
 
        }
               
       function clearImages() {
-          document.querySelector('product-images-slideshow').removeSlides();
-          document.querySelector('product-images-scroller').removeSlides(); 
+        imagesContainer.innerHTML = ""; 
       }
 
       clearImages() 
@@ -201,12 +205,6 @@ class QuickAddColorPicker extends HTMLElement {
               createImageObj(image.src, '', index);
           }
       });
-
-      let updateEvent = new Event("images-updated", {
-          bubbles: true
-      }); 
-
-      document.dispatchEvent(updateEvent); 
 
   }
 
