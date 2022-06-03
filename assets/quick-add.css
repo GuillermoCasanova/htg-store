@@ -5,6 +5,7 @@
 .product-card-wrapper:hover .quick-add-form,
 .product-card-wrapper:hover .quick-add-button {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .quick-add-form {
@@ -40,9 +41,14 @@
 
 .product-card .quick-add-button-container {
   position: absolute;
-  bottom: 0;
   z-index: 3;
-  width: 100%;
+  width: 94%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: auto;
+  bottom: var(--level1);
 }
 
 .quick-add-button {
@@ -57,6 +63,8 @@
   color: rgb(var(--color-base-text));
   font-size: var(--normal);
   opacity: 0;
+  transform: translateY(100%);
+  transition: all .2s ease;
 }
 
 .quick-add-button:hover,
@@ -200,8 +208,10 @@
 }
 
 
-.quick-add-variants__option label:hover {
+.quick-add-variants__option label:hover,
+.quick-add-variants__option label:hover:after {
   cursor: pointer;
+  opacity: 1;
 }
 
 .quick-add-variants__option input {
