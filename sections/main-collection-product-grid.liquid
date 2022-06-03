@@ -52,7 +52,7 @@
       </aside>
 
       <div class="product-grid-container" id="ProductGridContainer">
-        {%- paginate collection.products by section.settings.products_per_page -%}
+        {%- paginate collection.products by 32 -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
     
@@ -71,7 +71,11 @@
             </ul>
           </div>
           {% if paginate.next %}
-            <a href="{{ paginate.next.url }}">Loading More</a>
+            <load-more-collection-products>
+              <div style="text-align: center; margin-top: 60px; font-size: 2rem;">
+                <button class="button">Loading More</button>
+              </div>
+            <load-more-collection-products>
           {% endif %}
         {%- endpaginate -%}
       </div>

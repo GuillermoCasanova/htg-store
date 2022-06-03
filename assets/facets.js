@@ -29,16 +29,72 @@ class FacetFiltersForm extends HTMLElement {
 
     let collectionId =  document.querySelector('[data-collection-id]').dataset.collectionId;
     
-    async function load() {
+    function getCollectionProducts() {
       console.log('calling');
-      const response = await fetch('/collections/'+ collectionId + '?view=shop-all-womens.json');
-      const products  = await response.json(); 
-      return products;
+     return fetch('/apps/proxy-test/collectionProducts/?' +  new URLSearchParams({
+        handle: 'men',
+        lastProduct: "",
+        quantity: 64
+      }).toString(), {
+                method: 'GET',
+                headers: {
+                  "content-type":  "application/json; charset=utf-8"
+                }
+      }
+            );
+            
     }
 
-    load().then(products => {
-      console.log(products)
+    getCollectionProducts()
+    .then(res => res.json()).then(response => {
+
+      console.log(response); 
+
+      function contGettingProducts(response) {
+        if(pRes.collectionByHandle.products.pageInfo.hasNextPage) {
+          let allProducts = pRes.collectionByHandle.products.edges;
+          let lastProduct = allProducts[allProducts.length -1].cursor; 
+           getAllProducts(pCollectionHandle, lastProduct)
+        } else {
+          that.setFilterQuantities(that.collection.products);
+        }
+      }
+
+      // if(response.errors) {
+      //   res.errors.forEach(function(error) {
+      //     if(error.message == "Throttled") {
+      //       setTimeout(function() {
+      //         if(prevResponse !== null) {
+      //           contGettingProducts(prevResponse.data); 
+      //         } else {
+      //           getAllProducts(collectionHandle); 
+      //         }
+      //       }, 1000); 
+      //     }
+      //   }); 
+      // } else {
+      //   let newProductsArray = that.collection.products.concat(res.data.collectionByHandle.products.edges); 
+      //   that.collection.products = that.getPublishedProducts(newProductsArray); 
+      //   that.filterState.productsShowing =  that.collection.products;    
+
+      //   contGettingProducts(res.data);
+      //   that.displayProducts(that.collection.products, that.getCurrentPage()); 
+      //   prevResponse = res; 
+      // }
     }); 
+
+
+
+//   fetch('/apps/proxy/products/', {
+//     method: 'GET',
+//     headers: {
+//       "content-type":  "application/json; charset=utf-8"
+//     }
+// }).then((res)=> console.log(res));
+
+
+
+
     FacetFiltersForm.getCollectionProducts();
 
   }
