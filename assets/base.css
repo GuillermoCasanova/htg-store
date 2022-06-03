@@ -293,15 +293,15 @@ main {
 
 
 ::selection {
-  background-color: white;
+  background-color: rgb(var(--color-base-background-2));
   color: black;
 }
 
 ::-moz-selection {
-
-  background-color: white;
+  background-color: rgb(var(--color-base-background-2));
   color: black;
 }
+
 
 
 
@@ -519,6 +519,11 @@ h4:empty,
 h5:empty,
 h6:empty {
   display: none;
+}
+
+[aria-disabled='true'] {
+  pointer-events: none;
+  cursor: normal;
 }
 
 
@@ -1279,17 +1284,14 @@ summary::-webkit-details-marker {
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-base-text), var(--shadow-opacity));
 }
 
-.button,
 .shopify-challenge__button,
 .customer button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border: 0;
-  padding: 0 3rem;
   cursor: pointer;
   font: inherit;
-  font-size: 1.5rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;

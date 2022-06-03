@@ -747,6 +747,10 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
+  
+    if(this.setSoldOutOptions) {
+      this.setSoldOutOptions()
+    }
 
     if (!this.currentVariant) { 
       this.toggleAddButton(true, '', true);
@@ -823,8 +827,10 @@ class VariantSelects extends HTMLElement {
     const section = this.closest('section');
     if (!section) return;
 
-    const productForm = section.querySelector('product-form');
-    if (productForm) productForm.handleErrorMessage();
+    if(section.querySelector('product-form')) {
+      const productForm = section.querySelector('product-form');
+      if (productForm) productForm.handleErrorMessage();
+    }
   }
 
   renderProductInfo() {
@@ -862,13 +868,15 @@ class VariantSelects extends HTMLElement {
   }
 
   setUnavailable() {
-    const button = document.getElementById(`product-form-${this.dataset.section}`);
-    const addButton = button.querySelector('[name="add"]');
-    const addButtonText = button.querySelector('[name="add"] > span');
-    const price = document.getElementById(`price-${this.dataset.section}`);
-    if (!addButton) return;
-    addButtonText.textContent = window.variantStrings.unavailable;
-    if (price) price.classList.add('visibility-hidden');
+    if(document.getElementById(`product-form-${this.dataset.section}`)) {
+      const button = document.getElementById(`product-form-${this.dataset.section}`);
+      const addButton = button.querySelector('[name="add"]');
+      const addButtonText = button.querySelector('[name="add"] > span');
+      const price = document.getElementById(`price-${this.dataset.section}`);
+      if (!addButton) return;
+      addButtonText.textContent = window.variantStrings.unavailable;
+      if (price) price.classList.add('visibility-hidden');
+    }
   }
 
   getVariantData() {
@@ -882,98 +890,50 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
+    this.setSoldOutOptions();
   }
 
 
-  // setUpEvents() {
-
-  //       let currentOption = this.querySelector("[data-current-option").textContent; 
-
-  //       function showOption(pColor) {
-  //           let colorContainer = document.querySelector('[data-current-option]'); 
-  //           colorContainer.textContent = pColor.replace(/[\n\r]+|[\s]{2,}/g, '') 
-  //       }
-    
-  //       this.querySelectorAll('[data-option-label]').forEach((element) => {
-     
-  //           element.addEventListener('click', (event)  =>{
-  //             let name = event.target.dataset.optionName; 
-  //             currentOption = name;
-  //             showOption(name)
-  //           })
-
-  //           element.addEventListener('mouseenter', (event)  =>{
-  //             let name = event.target.dataset.optionName; 
-  //             showOption(name)
-  //         })
-          
-
-  //           element.addEventListener('mouseleave', (event)  =>{
-  //               showOption(currentOption)
-  //           })
-  //       }); 
-
-
-  //       this.querySelectorAll('input[type="radio"]').forEach((element) => {
-
-
-  //         element.addEventListener('focus', (event)  =>{
-  //             let name = event.target.value; 
-  //             showOption(name)
-  //             console.log(name); 
-  //         });
-          
-        
-  //         element.addEventListener('blur', (event)  =>{
-  //             showOption(currentOption)
-  //         });
-  //       }); 
-
-  //       this.onVariantChange();
-  // }
-
-
-
-  // setSoldOutOptions(resetOptions = false) {
+  setSoldOutOptions(resetOptions = false) {
    
-  //   let data = {
-  //      productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML),
-  //      selectedVariant: this.getCurrentVariant()
-  //    }; 
+    let data = {
+       productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML),
+       selectedVariant: this.currentVariant
+     }; 
 
  
-  //    let selectors = {
-  //      primaryOptions: '[data-primary-option]',
-  //      secondaryOptions: '[data-secondary-option]'
-  //    };
+     let selectors = {
+       primaryOptions: '[data-primary-option]',
+       secondaryOptions: '[data-secondary-option]'
+     };
  
-  //    let allProductVariants = data.productVariants;
-  //    let sizeOptions = [];
+     let allProductVariants = data.productVariants;
+     let sizeOptions = [];
 
-  //     this.querySelectorAll('input').forEach(function(elem) {
-  //       sizeOptions.push(elem); 
-  //       elem.classList.remove('is-sold-out'); 
-  //       elem.disabled = false;
-  //       elem.setAttribute('aria-disabled', false);
-  //     }); 
+      this.querySelectorAll('input').forEach(function(elem) {
+        sizeOptions.push(elem); 
+        elem.parentElement.classList.remove('is-sold-out'); 
+        elem.disabled = false;
+        elem.setAttribute('aria-disabled', false);
+      }); 
 
-  //     for(var i = 0; i < allProductVariants.length; i++) {
+      for(var i = 0; i < allProductVariants.length; i++) {
 
-  //       if(allProductVariants[i].available == false) {
+        if(allProductVariants[i].available == false) {
 
-  //         sizeOptions.forEach((elem) => {
-  //           if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
-  //             elem.classList.add('is-sold-out'); 
-  //             elem.disabled = true;
-  //             elem.checked = false; 
-  //             elem.setAttribute('aria-disabled', true);
-  //           }
-  //         })
+          sizeOptions.forEach((elem) => {
+            if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
+              elem.parentElement.classList.add('is-sold-out'); 
+              elem.disabled = true;
+              elem.checked = false; 
+              elem.setAttribute('aria-disabled', true);
+            }
+          })
 
-  //       }
+        }
 
-  //     }
-  //  }
+      }
+   }
 
 
   updateOptions() {

@@ -331,6 +331,7 @@ margin-bottom: rem-calc($level7 + $level2);
 button {
     text-transform: uppercase;
     line-height: 1;
+    text-align: center;
 }
 
 .styled-link {
