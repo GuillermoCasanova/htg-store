@@ -8,7 +8,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
@@ -19,6 +19,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
+        "collection_url": "",
         "product_list": [
           "baldwin-long-short-cream",
           "century-camp-button-up-green-polkadot",
@@ -28,13 +29,15 @@
           "concrete-jungle-t-shirt-black",
           "century-camp-button-up-cream-polkadot",
           "fairfax-twill-pant-black"
-        ]
+        ],
+        "enable_quick_add": true
       }
     },
     "165403876742214c90": {
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City",
+        "collection_url": "",
         "product_list": [
           "jazz-checkered-short-melon",
           "jazz-checkered-short-black",
@@ -44,7 +47,8 @@
           "1988-icon-denim-pant-indigo",
           "luther-cargo-pant-clay",
           "inner-city-love-t-shirt-terra-cotta"
-        ]
+        ],
+        "enable_quick_add": true
       }
     }
   },
