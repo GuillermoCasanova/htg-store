@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .footer {
+  margin-top: var(--level8);
   background-color: rgb(var(--color-base-background-2));
   border-top: 1px solid rgb(var(--color-base-text));
 }

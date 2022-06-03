@@ -237,3 +237,20 @@ class QuickAddColorPicker extends HTMLElement {
 if (!customElements.get('quick-add-color-picker')) {
   customElements.define('quick-add-color-picker', QuickAddColorPicker)
 }
+
+
+class QuickAddButton extends HTMLElement {
+  constructor() {
+    super();
+    this.querySelector('button').addEventListener('click', this.addToCart.bind(this));
+  }
+
+  addToCart() {
+    const quickAddForm = document.querySelector(`#quick-add-form-${this.dataset.section}`);
+    quickAddForm.dispatchEvent(new Event('submit'));
+  }
+}
+
+if (!customElements.get('quick-add-button')) {
+  customElements.define('quick-add-button', QuickAddButton)
+}

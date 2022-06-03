@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 930px) {
   .breadcrumbs {
-    margin-bottom: calc(var(--level10) + var(--level1));
+    margin-bottom: var(--level10);
   }
 }
 

@@ -27,9 +27,11 @@
 
             {%- if show_quick_add -%}
               <div class="quick-add-button-container">
-                <button type="submit" class="button  quick-add-button" tabindex="-1" aria-hidden="true">
-                  Quick Add +
-                </button>
+                <quick-add-button data-section="{{ section.id }}-{{ card_product.id }}">
+                  <button type="submit" class="button  quick-add-button" tabindex="-1" aria-hidden="true">
+                    Quick Add +
+                  </button>
+                </quick-add-button>
               </div>
             {%- endif -%}
 
@@ -103,7 +105,7 @@
       {%- assign product_form_id =  "quick-add-form-" | append: section.id | append: "-" | append: card_product.id -%}
       <div class="quick-add-form__inner">
         {%- if card_product.has_only_default_variant -%}
-          <product-form class="quick-add-form  " data-cart-type="{{ settings.cart_type }}">
+          <product-form class="quick-add-form" data-cart-type="{{ settings.cart_type }}">
             <div class="quick-add-form__error-message-wrapper" data-error-message-wrapper role="alert" hidden>
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
                 <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -123,8 +125,7 @@
                   aria-hidden="true"
                   tabindex="-1"
                   class="quick-add-form__submit button button--full-width"
-                  {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                >
+                  {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
                     <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
