@@ -71,11 +71,11 @@
             </ul>
           </div>
           {% if paginate.next %}
-            <load-more-collection-products>
-              <div style="text-align: center; margin-top: 60px; font-size: 2rem;">
-                <button class="button">Loading More</button>
+            <load-more-products-button>
+              <div class="load-more-products-button-container">
+                <button class="button button--primary  button--medium load-more-products-button" aria-label="Load more products in collection">Load More</button>
               </div>
-            <load-more-collection-products>
+            <load-more-products-button>
           {% endif %}
         {%- endpaginate -%}
       </div>

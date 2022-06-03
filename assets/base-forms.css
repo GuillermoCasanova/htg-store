@@ -332,11 +332,32 @@ button {
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
+    position: relative;
 }
 
+
+.button,
 .styled-link {
     text-transform: uppercase;
     color: rgb(var(--color-base-text));
+}
+
+.button--primary {
+    background-color: rgb(var(--color-base-background-2));
+    border: 2px solid rgb(var(--color-base-text));
+    border-radius: 0;
+}
+
+.load-more-products-button button {
+    max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(var(--color-base-text));
+}
+
+.button--medium {
+    padding-top: var(--level1);
+    padding-bottom: var(--level1);
 }
 
 .styled-link:hover,
