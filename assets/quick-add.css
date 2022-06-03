@@ -31,6 +31,22 @@
   font-size: var(--h5);
 }
 
+
+
+
+
+/*------------------------------------*\
+    #Product Form 
+\*------------------------------------*/
+
+
+.quick-add-form {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: red;
+}
+
 .quick-add-modal {
   box-sizing: border-box;
   opacity: 0;

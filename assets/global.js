@@ -158,6 +158,10 @@ class QuantityInput extends HTMLElement {
 
 customElements.define('quantity-input', QuantityInput);
 
+/*
+ * Commonly Used JS Functions
+ *
+ */
 function debounce(fn, wait) {
   let t;
   return (...args) => {
@@ -172,6 +176,16 @@ function fetchConfig(type = 'json') {
     headers: { 'Content-Type': 'application/json', 'Accept': `application/${type}` }
   };
 }
+
+const serializeForm = form => {
+  const obj = {};
+  const formData = new FormData(form);
+  for (const key of formData.keys()) {
+    obj[key] = formData.get(key);
+  }
+  return JSON.stringify(obj);
+};
+
 
 /*
  * Shopify Common JS
@@ -734,7 +748,7 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
 
-    if (!this.currentVariant) {
+    if (!this.currentVariant) { 
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
     } else {
@@ -783,7 +797,9 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantInput() {
-    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
+    console.log('uPDATE INPUT!');
+    console.log(this.currentVariant.id); 
+    const productForms = document.querySelectorAll(`#quick-add-form-${this.dataset.section}, #product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
     productForms.forEach((productForm) => {
       const input = productForm.querySelector('input[name="id"]');
       input.value = this.currentVariant.id;
@@ -856,7 +872,7 @@ class VariantSelects extends HTMLElement {
   }
 
   getVariantData() {
-    this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+    this.variantData = this.variantData === JSON.parse(this.querySelector('[type="application/json"]').textContent) ? this.variantData :  JSON.parse(this.querySelector('[type="application/json"]').textContent);
     return this.variantData;
   }
 }
@@ -868,11 +884,124 @@ class VariantRadios extends VariantSelects {
     super();
   }
 
+
+  // setUpEvents() {
+
+  //       let currentOption = this.querySelector("[data-current-option").textContent; 
+
+  //       function showOption(pColor) {
+  //           let colorContainer = document.querySelector('[data-current-option]'); 
+  //           colorContainer.textContent = pColor.replace(/[\n\r]+|[\s]{2,}/g, '') 
+  //       }
+    
+  //       this.querySelectorAll('[data-option-label]').forEach((element) => {
+     
+  //           element.addEventListener('click', (event)  =>{
+  //             let name = event.target.dataset.optionName; 
+  //             currentOption = name;
+  //             showOption(name)
+  //           })
+
+  //           element.addEventListener('mouseenter', (event)  =>{
+  //             let name = event.target.dataset.optionName; 
+  //             showOption(name)
+  //         })
+          
+
+  //           element.addEventListener('mouseleave', (event)  =>{
+  //               showOption(currentOption)
+  //           })
+  //       }); 
+
+
+  //       this.querySelectorAll('input[type="radio"]').forEach((element) => {
+
+
+  //         element.addEventListener('focus', (event)  =>{
+  //             let name = event.target.value; 
+  //             showOption(name)
+  //             console.log(name); 
+  //         });
+          
+        
+  //         element.addEventListener('blur', (event)  =>{
+  //             showOption(currentOption)
+  //         });
+  //       }); 
+
+  //       this.onVariantChange();
+  // }
+
+
+
+  // setSoldOutOptions(resetOptions = false) {
+   
+  //   let data = {
+  //      productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML),
+  //      selectedVariant: this.getCurrentVariant()
+  //    }; 
+
+ 
+  //    let selectors = {
+  //      primaryOptions: '[data-primary-option]',
+  //      secondaryOptions: '[data-secondary-option]'
+  //    };
+ 
+  //    let allProductVariants = data.productVariants;
+  //    let sizeOptions = [];
+
+  //     this.querySelectorAll('input').forEach(function(elem) {
+  //       sizeOptions.push(elem); 
+  //       elem.classList.remove('is-sold-out'); 
+  //       elem.disabled = false;
+  //       elem.setAttribute('aria-disabled', false);
+  //     }); 
+
+  //     for(var i = 0; i < allProductVariants.length; i++) {
+
+  //       if(allProductVariants[i].available == false) {
+
+  //         sizeOptions.forEach((elem) => {
+  //           if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
+  //             elem.classList.add('is-sold-out'); 
+  //             elem.disabled = true;
+  //             elem.checked = false; 
+  //             elem.setAttribute('aria-disabled', true);
+  //           }
+  //         })
+
+  //       }
+
+  //     }
+  //  }
+
+
   updateOptions() {
     const fieldsets = Array.from(this.querySelectorAll('fieldset'));
+
     this.options = fieldsets.map((fieldset) => {
-      return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
+      
+      let array = Array.from(fieldset.querySelectorAll('input'));
+      let checkedValue = null; 
+
+      //
+      // Checks to see if there is a valid checked radio, if not, it checks the first valid one it can find and returns that option
+      //
+      if(array.find((radio) => radio.checked) !== undefined) {
+        checkedValue = array.find((radio) => radio.checked).value
+      } else {
+        array.some((radio) => {
+          if(radio.disabled == false) {
+            radio.checked = true; 
+            checkedValue = radio.value; 
+            return true
+          }
+        });
+       }
+
+       return checkedValue; 
     });
+
   }
 }
 

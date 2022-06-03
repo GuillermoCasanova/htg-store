@@ -13,7 +13,7 @@
 
 
 <div class="product-card-wrapper underline-links-hover">
-    <div class="product-card  {% if card_product.available == false %} product-card--sold-out {% endif %}">
+    <div data-product-card  data-section="{{ section.id }}-{{ card_product.id }}" class="product-card  {% if card_product.available == false %} product-card--sold-out {% endif %}">
       <div class="product-card__inner">
           <div class="product-card__media">
 
@@ -100,7 +100,7 @@
   
     {%- if show_quick_add and card_product.available == true -%}
      <div class="quick-add no-js-hidden">
-      {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
+      {%- assign product_form_id =  "quick-add-form-" | append: section.id | append: "-" | append: card_product.id -%}
       <div class="quick-add__button-container">
         {%- if card_product.has_only_default_variant -%}
           <form>
@@ -109,88 +109,148 @@
               </button>
           </form>
         {%else%}
-          <form>
-            <div>
+            <quick-add-color-picker data-section="{{ section.id }}-{{ card_product.id }}">
               {% for collection in card_product.collections %}
 
-                {%assign collectionName = collection.title | downcase | handleize -%}
-                {%assign productName = card_product.title | downcase | split: "-" -%}
-                {%assign productNameHandle = productName[0] | handleize%}
+                {% assign collectionName = collection.title | downcase | handleize -%}
+                {% assign productName = card_product.title | downcase | split: "-" -%}
+                {% assign productNameHandle = productName[0] | handleize %}
 
-                {% if productNameHandle == collectionName and card_product.metafields.color_swatch.name %}
-                {%assign activeCollection = collection %}
-                <div class="custom-color-picker  x-product-form__input">
-                  <fieldset>
-                  <legend  class="custom-color-picker__current-color visually-hidden" >
-                    <span class="custom-color-picker__current-color__label">Available colors for {{productName[0]}}:</span>
-                  </legend>
-                  <span class="custom-color-picker__colors">
-                    {% for product in activeCollection.products %}
-                        <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
-                            
-                              <input type="radio" 
-                                 id="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}"
-                                name="color" 
-                                value="{{ value | escape }}"
-                                title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                                data-color-option
-                                data-product="{{ product | json | escape }}"
-                                data-color-name="{{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}" 
-                                data-product-title="{{ product.title }}" 
-                                data-handle="{{ product.handle }}"
-                                data-product-description="{{ product.description | escape }}"
-                                data-product-url="{{ product.url }}"
-                                data-product-id="{{ product.id }}"
-                                data-product-first-variant="{{ product.selected_variant.id }}"
-                                data-swatch="{{ product.metafields.color_swatch.name }}"
-                                class="custom-color-picker__input"
-                                >
-                                <label class="custom-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                                  <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
-                                    x
-                                  </span>
-                                  <span class="custom-color-picker__label__ring">
-                                    
-                                  </span>
-                                </label>
-                              </span>
-                    {% endfor %}
-                    </span>
-                </fieldset>
-                </div> 
-                {%   endif   %}
+                {%- if productNameHandle == collectionName and card_product.metafields.color_swatch.name -%}
+                  {% assign activeCollection = collection %}
+                  <div class="custom-color-picker  x-product-form__input">
+                    <fieldset>
+                      <legend  class="custom-color-picker__current-color visually-hidden" >
+                        <span class="custom-color-picker__current-color__label">Available colors for {{ productName[0] }}:</span>
+                      </legend>
+                      <span class="custom-color-picker__colors">
+                        {% for product in activeCollection.products %}
+                          <span class="custom-color-picker__color {% if product.handle == card_product.handle %}is-selected{% endif %}">
+                                {{ product.metafields.color_swatch.name }}
+                                {{ card_product.metafields.color_swatch.name }}
+                                <input type="radio" 
+                                  {% if card_product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
+                                  id="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}"
+                                  name="color" 
+                                  form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                                  value="{{ product.metafields.color_swatch.name | escape }}"
+                                  title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                  data-color-option
+                                  data-product="{{ product | json | escape }}"
+                                  data-color-name="{{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}" 
+                                  data-product-title="{{ product.title }}" 
+                                  data-handle="{{ product.handle }}"
+                                  data-product-url="{{ product.url }}"
+                                  data-product-id="{{ product.id }}"
+                                  data-product-first-variant="{{ product.selected_variant.id }}"
+                                  data-swatch="{{ product.metafields.color_swatch.name }}"
+                                  class="custom-color-picker__input"
+                                  >
+                              <label class="custom-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+                                  {{ product.metafields.color_swatch.name }}
+                                </span>
+                                <span class="custom-color-picker__label__ring">
+                                </span>
+                              </label>
+                          </span>
+                        {% endfor %}
+                      </span>
+                    </fieldset>
+                  </div> 
+                {%- endif -%}
  
               {% endfor %}
-            </div>
-            <div>
-              <div data-section="{{ section.id }}" data-url="{{ card_product.url }}">
-                {%- for option in card_product.options_with_values -%}
-                    <fieldset class="js product-form__input">
-                      <legend class="form__label visually-hidden">{{ option.name }}</legend>
-                      {%- for value in option.values -%}
-                        <input type="radio" id="{{ section.id }}-{{ card_product.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                              name="{{ option.name }}"
-                              value="{{ value | escape }}"
-                              form="{{ product_form_id }}"
-                              {% if option.selected_value == value %}checked{% endif %}
-                        >
-                        <label for="{{ section.id }}-{{ card_product.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                          {{ value }}
-                        </label>
-                      {%- endfor -%}
-                    </fieldset>
-                {%- endfor -%}
-                <script type="application/json">
-                  {{ card_product.variants | json }}
-                </script>
+            </quick-add-color-picker>
+            <variant-radios data-update-url="false" class="no-js-hidden" data-section="{{ section.id }}-{{ card_product.id }}" data-url="{{ card_product.url }}">
+              {%- for option in card_product.options_with_values -%}
+                <div class="js product-form__input">
+                  <fieldset >
+                    <legend class="form__label">
+                      <span class="form__label__text">
+                        {{ option.name }}: 
+                      </span>
+                    <span class="form__current-option-label" role="presentation" data-current-option aria-hidden="true">
+                        {{ option.selected_value }}
+                    </span>
+                  </legend>
+                    {%- for value in option.values -%}
+                      <input type="radio" id="{{ section.id }}-{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                            name="{{ option.name }}"
+                            value="{{ value | escape }}"
+                            form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                            {% if option.selected_value == value %}checked{% endif %}
+                      >
+                      <label for="{{ section.id }}-{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}" data-option-label data-option-name="{{ value | escape }}">
+                        {{ value }}
+                      </label>
+                    {%- endfor -%}
+                  </fieldset>
+                </div>
+              {%- endfor -%}
+              <script type="application/json">
+                {{ card_product.variants | json }}
+              </script>
+            </variant-radios>
+            <noscript>
+              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                <label class="form__label" for="Variants-{{ section.id }}-{{ card_product.id }}">{{ 'products.product.product_variants' | t }}</label>
+                <div class="select">
+                  <select name="id" id="Variants-{{ section.id }}-{{ card_product.id }}" class="select__select" form="quick-add-form-{{ section.id }}-{{ card_product.id }}">
+                    {%- for variant in card_product.variants -%}
+                      <option
+                        {% if variant == card_product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                        {% if variant.available == false %}disabled{% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
               </div>
-            </div>
-            
-            <button type="submit" class="visually-hidden" tabindex="-1">
-              Submit
-            </button>
-          </form>
-         
+            </noscript>
+            <product-form class="quick-add-form" data-cart-type="{{ settings.cart_type }}">
+              <div class="quick-add-form__error-message-wrapper" data-error-message-wrapper role="alert" hidden>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                  <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                  <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                  <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                  <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                </svg>
+                <span class="quick-add-form__error-message" data-error-message></span>
+              </div>
+`              {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" 
+                       id="active-product-id-{{ section.id }}-{{ card_product.id }}" disabled >
+                <div class="quick-add-form__buttons">
+                  <button
+                    type="submit"
+                    name="add"
+                    class="quick-add-form__submit button button--full-width"
+                    {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                  >
+                      <span>
+                        {%- if card_product.selected_or_first_available_variant.available -%}
+                          {{ 'products.product.add_to_cart' | t }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
+                      </span>
+                      <div class="loading-overlay__spinner hidden">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </div>
+                  </button>
+                  {%- if block.settings.show_dynamic_checkout -%}
+                    {{ form | payment_button }}
+                  {%- endif -%}
+                </div>
+              {%- endform -%}
+            </product-form>
         {%- endif -%}
       </div>
     </div>

@@ -1,24 +1,17 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-card.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-collection-preview.css' | asset_url }}" media="print" onload="this.media='all'">
 
-{%- if section.settings.enable_quick_add -%}
-  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
-
-
 {% comment %}Only appears if there are no active tags present.{% endcomment %}
 {% if current_tags[0] == null %}
+
   <section class="collection-preview">
     
       <div class="collection-preview__inner page-width">
         <div class="collection-preview__header">
-          <h2 class="collection-preview__header__headline">
+          <h2 class="collection-ppreview__header__headline">
               {{ section.settings.collection_name }}
           </h2>
         </div>
