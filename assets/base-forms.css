@@ -348,6 +348,13 @@ button {
     border-radius: 0;
 }
 
+.load-more-products-button-container {
+    max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: var(--level8);
+}
+
 .load-more-products-button button {
     max-width: 20rem;
     margin-right: auto;
@@ -356,7 +363,7 @@ button {
 }
 
 .button--medium {
-    padding-top: var(--level1);
+    padding-top: var(--level2);
     padding-bottom: var(--level1);
 }
 

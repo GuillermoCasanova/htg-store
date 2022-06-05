@@ -14,6 +14,10 @@
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+<script src="{{ 'ajaxinate.js' | asset_url }}" defer="defer"></script>
+
+
+
 {% comment %} {%- liquid
   if section.settings.child_collection == true and current_tags[0] != null
     assign show = true
@@ -51,37 +55,52 @@
         {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
       </aside>
 
-      <div class="product-grid-container" id="ProductGridContainer">
-        {%- paginate collection.products by 32 -%}
-          <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
-            <div class="loading-overlay gradient"></div>
-    
-            <ul id="product-grid" data-id="{{ section.id }}" class="
-              grid product-grid">
-              {%- for product in collection.products -%}
-                <li class="grid__item">
-                  {% render 'product-card',
-                    heading_level: 'h2',
-                    card_product: product,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
-                  %}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-          {% if paginate.next %}
-            <load-more-products-button>
-              <div class="load-more-products-button-container">
-                <button class="button button--primary  button--medium load-more-products-button" aria-label="Load more products in collection">Load More</button>
-              </div>
-            <load-more-products-button>
-          {% endif %}
-        {%- endpaginate -%}
-      </div>
+      {% assign paginationNum = 10 %}
+      <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}">
+        <div class="product-grid-container" id="ProductGridContainer">
+            <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+              <div class="loading-overlay gradient"></div>
+      
+              <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
+                grid product-grid EndlessScroll">
+                {% paginate collection.products by paginationNum %}
+                  {%- for product in collection.products -%}
+                    <li class="grid__item">
+                      {% render 'product-card',
+                        heading_level: 'h2',
+                        card_product: product,
+                        show_quick_add: section.settings.enable_quick_add,
+                        section_id: section.id
+                      %}
+                    </li>
+                  {%- endfor -%}
+                {% endpaginate %}
+                
+                {% paginate collection.products by 1000 %}
+                  {%- for product in collection.products -%}
+                  <script type="application/json" id="collection-products">
+                    {{ collection.products | json }}
+                  </script>
+                {%- endfor -%}
+                {% endpaginate %}
+
+              </ul>
+            </div>
+            {% if collection.products.length > paginationNum %}
+              <script src="{{ 'load-more-products-button.js' | asset_url }}" defer="defer"></script>
+              <load-more-products-button data-paginate-by="{{ paginationNum }}"  data-collection-total="{{ collection.products.length }}">
+                <div class="load-more-products-button-container">
+                  <button class="button button--primary  button--medium load-more-products-button" aria-label="Load more products in collection">Load More</button>
+                </div>
+              <load-more-products-button>
+            {% endif %}
+        </div>
+      </collection-grid>
     </div>
   </div>
 {% endif %}
+
+
 
 {% schema %}
 {

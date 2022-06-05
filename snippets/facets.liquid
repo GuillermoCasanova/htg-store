@@ -24,12 +24,6 @@
   endif
 -%}
 
-{{ results.title }}
-{{ current_tags }}
-{%- for filter in results.filters -%}
-  x
-  {{ filter.label }}
-{%- endfor -%}
 
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
 
