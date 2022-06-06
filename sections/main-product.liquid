@@ -21,7 +21,7 @@
 <div class="page-width">
   {% render 'breadcrumbs' %}
 </div>
-<div class="product">
+<div class="product" data-product-container data-section="{{ section.id }}">
 
 
   <product-images-slideshow class="product__media-wrapper large--one-half text-center  product-images product-images--mobile">
@@ -76,68 +76,63 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'custom_color_picker' -%}
-                <custom-color-picker class="hide-for-large-up">
-                {% for collection in product.collections %}
-            
-                  {% assign collectionName = collection.title | downcase | handleize -%}
-                  {% assign productName = product.title | downcase | split: "-" -%}
-                  {% assign productNameHandle = productName[0] | handleize %}
-            
-                  {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
-                    {% assign activeCollection = collection %}
-                    <div class="custom-color-picker  x-product-form__input">
-                      <fieldset>
-                        <legend  class="custom-color-picker__current-color" >
-                            <span class="custom-color-picker__current-color__label">Color:</span>
-                                <span   data-color-container aria-hidden="true">
-                                    {% for product in collection.products %}
-                                      {% if product.handle == activeProduct.handle %}
-                                        {% for image in product.images %}
-                                          {% if image.alt contains 'swatch' %}
-                                            {{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}
-                                          {% endif %}
-                                        {% endfor %}
-                                      {%  endif  %}
-                                  {%  endfor  %}
-                                </span>
-                        </legend>
-                        <span class="custom-color-picker__colors">
-                          {% for product in activeCollection.products %}
-                            <span class="custom-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
-                                  <input type="radio" 
-                                    {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
-                                    id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
-                                    name="color" 
-                                    form="quick-add-form-{{ section.id }}-{{ product.id }}"
-                                    value="{{ product.metafields.color_swatch.name | escape }}"
-                                    title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                                    data-color-option
-                                    data-product="{{ product | json | escape }}"
-                                    data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
-                                    data-product-title="{{ product.title }}" 
-                                    data-handle="{{ product.handle }}"
-                                    data-product-url="{{ product.url }}"
-                                    data-product-id="{{ product.id }}"
-                                    data-product-first-variant="{{ product.selected_variant.id }}"
-                                    data-swatch="{{ product.metafields.color_swatch.name }}"
-                                    class="custom-color-picker__input"
-                                    >
-                                <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                                  <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
-            
+                <custom-color-picker class="hide-for-large-up" data-section="{{ section.id }}">
+                  {% for collection in product.collections %}
+    
+                    {% assign activeProduct = product %}
+                    {% assign collectionName = collection.title | downcase | handleize -%}
+                    {% assign productName = product.title | downcase | split: "-" -%}
+                    {% assign productNameHandle = productName[0] | handleize %}
+              
+                    {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
+                      {% assign activeCollection = collection %}
+                      <div class="custom-color-picker  x-product-form__input">
+                        <fieldset>
+                          <legend  class="custom-color-picker__current-color" >
+                              <span class="custom-color-picker__current-color__label"><span class="visually-hidden">
+                              Toggle</span>Color:</span>
+                                  <span   data-color-container aria-hidden="true">
+                                     {% for product in activeCollection.products %}
+                                        {% if product.handle == activeProduct.handle %}
+                                          {{ activeProduct.metafields.color_swatch.name }}
+                                        {% endif %}
+                                      {% endfor %}
                                   </span>
-                                  <span class="custom-color-picker__label__ring">
-                                  </span>
-                                </label>
-                            </span>
-                          {% endfor %}
-                        </span>
-                      </fieldset>
-                    </div> 
-                  {%- endif -%}
-                {% endfor %}
-              </custom-color-picker>
-
+                          </legend>
+                          <span class="custom-color-picker__colors">
+                            {% for product in activeCollection.products %}
+                              <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
+                                    <input type="radio" 
+                                      id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
+                                      name="color" 
+                                      value="{{ product.metafields.color_swatch.name | escape }}"
+                                      title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                      data-color-option
+                                      data-product="{{ product | json | escape }}"
+                                      data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
+                                      data-product-title="{{ product.title }}" 
+                                      data-handle="{{ product.handle }}"
+                                      data-product-url="{{ product.url }}"
+                                      data-product-id="{{ product.id }}"
+                                      data-product-first-variant="{{ product.selected_variant.id }}"
+                                      data-swatch="{{ product.metafields.color_swatch.name }}"
+                                      class="custom-color-picker__input"
+                                      >
+                                  <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                    <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+              
+                                    </span>
+                                    <span class="custom-color-picker__label__ring">
+                                    </span>
+                                  </label>
+                              </span>
+                            {% endfor %}
+                          </span>
+                        </fieldset>
+                      </div> 
+                    {%- endif -%}
+                  {% endfor %}
+                </custom-color-picker>
               
               {%- when 'text' -%}
                 <div class="product__text">
@@ -214,7 +209,7 @@
             
               {%- when 'variant_picker' -%}
                 {%- unless product.has_only_default_variant -%}
-                    <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                     <variant-radios class="no-js-hidden  show-for-large-up" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                       {%- for option in product.options_with_values -%}
                         <div class="js product-form__input">
                           {% if option.name == 'Size' %}
@@ -248,7 +243,33 @@
                       <script type="application/json">
                         {{ product.variants | json }}
                       </script>
-                    </variant-radios>
+                    </variant-radios> 
+                    
+                    <variant-selects class="no-js-hidden  hide-for-large-up" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
+                      {%- for option in product.options_with_values -%}
+                        <div class="product-form__input product-form__input--dropdown">
+                          <label  for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                            {{ option.name }}
+                          </label>
+                            <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                              class="select__select"
+                              name="options[{{ option.name | escape }}]"
+                              form="{{ product_form_id }}"
+                            > 
+                              {%- for value in option.values -%}
+                                <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                                  {{ value }}
+                                </option>
+                              {%- endfor -%}
+                            </select>
+                            {% render 'icon-caret' %}
+                        </div>
+                      {%- endfor -%}
+  
+                      <script type="application/json">
+                        {{ product.variants | json }}
+                      </script>
+                    </variant-selects>
                 {%- endunless -%}
                 <noscript>
                   <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
@@ -274,7 +295,8 @@
               {%- when 'custom_color_picker' -%}
               <custom-color-picker class="show-for-large-up">
               {% for collection in product.collections %}
-          
+
+                {% assign activeProduct = product %}
                 {% assign collectionName = collection.title | downcase | handleize -%}
                 {% assign productName = product.title | downcase | split: "-" -%}
                 {% assign productNameHandle = productName[0] | handleize %}
@@ -284,27 +306,23 @@
                   <div class="custom-color-picker  x-product-form__input">
                     <fieldset>
                       <legend  class="custom-color-picker__current-color" >
-                          <span class="custom-color-picker__current-color__label">Color:</span>
+                          <span class="custom-color-picker__current-color__label"><span class="visually-hidden">
+                          Toggle</span>Color:</span>
                               <span   data-color-container aria-hidden="true">
-                                  {% for product in collection.products %}
-                                    {% if product.handle == activeProduct.handle %}
-                                      {% for image in product.images %}
-                                        {% if image.alt contains 'swatch' %}
-                                          {{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}
-                                        {% endif %}
-                                      {% endfor %}
-                                    {%  endif  %}
-                                {%  endfor  %}
+                                 {% for product in activeCollection.products %}
+                                    {% if product.metafields.color_swatch.name == activeProduct.metafields.color_swatch.name %}
+                                      {{ activeProduct.metafields.color_swatch.name }}
+                                    {% endif %}
+                                  {% endfor %}
                               </span>
                       </legend>
                       <span class="custom-color-picker__colors">
                         {% for product in activeCollection.products %}
-                          <span class="custom-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
+                          <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
                                 <input type="radio" 
                                   {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
                                   id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
                                   name="color" 
-                                  form="quick-add-form-{{ section.id }}-{{ product.id }}"
                                   value="{{ product.metafields.color_swatch.name | escape }}"
                                   title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
                                   data-color-option
@@ -335,8 +353,8 @@
             </custom-color-picker>
 
               {%- when 'buy_buttons' -%}
-                <div {{ block.shopify_attributes }}>
-                  <product-form class="product-form">
+                <div  class="product-form" {{ block.shopify_attributes }}>
+                  <product-form>
                     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-active-product-id>
                       <div class="product-form__buttons">
@@ -344,7 +362,7 @@
                           type="submit"
                           name="add"
                           class="product-form__submit button button--full-width 
-                                  button--primary button--medium
+                                  button--secondary 
                             {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                         {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                         >
@@ -357,12 +375,7 @@
                       </div>
                     {%- endform -%}
                   </product-form>
-
-
                 </div>
-
-
-
               {%- endcase -%}
             {%- endfor -%}
           </div>

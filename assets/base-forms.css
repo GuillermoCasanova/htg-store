@@ -345,9 +345,16 @@ button {
 
 .button--primary {
     background-color: rgb(var(--color-base-background-2));
-    border: 2px solid rgb(var(--color-base-text));
+    border: 1px solid rgb(var(--color-base-text));
     border-radius: 0;
 }
+
+.button--secondary {
+    background-color: #fff;
+    border: 1px solid rgb(var(--color-base-text));
+    border-radius: 0;
+}
+
 
 .load-more-products-button-container {
     max-width: 20rem;

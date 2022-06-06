@@ -10,10 +10,10 @@ class CustomColorPicker extends HTMLElement {
 
     onVariantChange() {
         
-        this.updateActiveColorLabel(this.getSelectedColor().dataset.colorName); 
+        this.updateActiveColorLabel(this.getCurrentColor().dataset.colorName); 
         this.updateURL(); 
         this.updateImages();
-        this.updateProductId(); 
+        this.updateVariantData(); 
         this.updateDescription() 
     }
 
@@ -35,7 +35,7 @@ class CustomColorPicker extends HTMLElement {
         });  
     }
 
-    getSelectedColor() { 
+    getCurrentColor() { 
         let that = this; 
         this.querySelectorAll('[data-color-option]').forEach((elem) => {
             if(elem.checked) {
@@ -46,25 +46,70 @@ class CustomColorPicker extends HTMLElement {
         return this.currentColor; 
     }; 
 
-    updateProductId() {
-        document.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 
+    
 
-        document.querySelectorAll('variant-radios').forEach((elem) => {
-             elem.dataset.url = this.getSelectedColor().dataset.productUrl;
+    updateVariantData() {
+        const currentColor = this.getCurrentColor(); 
+        let sectionId = this.dataset.section; 
+        console.log(sectionId); 
+        let productContainer = document.querySelector(`[data-product-container][data-section="${sectionId}"]`); 
+
+        if(productContainer.querySelectorAll('variant-radios').length > 0) {
+    
+            productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
+                if( elem.querySelector('[type="application/json"]')) {
+                    let e = elem.querySelector('[type="application/json"]');
+                    e.parentElement.removeChild(e); 
+                }
+                let newScript = document.createElement('script');
+                newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
+                newScript.type = "application/json";
+                elem.appendChild(newScript); 
+                elem.dispatchEvent(new Event('change'));
+            }); 
+        }
+
+        if(productContainer.querySelectorAll('variant-selects').length > 0) {
+          
+             productContainer.querySelectorAll('variant-selects').forEach((elem) => {
+                 elem.dataset.url = this.getCurrentColor().dataset.productUrl;
 
                 if( elem.querySelector('[type="application/json"]')) {
                     let e = elem.querySelector('[type="application/json"]');
                     e.parentElement.removeChild(e); 
                 }
 
-            let newScript = document.createElement('script');
-            newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(this.currentColor.dataset.product).variants);  
-            newScript.type = "application/json";
-            elem.appendChild(newScript); 
-            elem.onVariantChange(true);
-        }); 
+                 let newScript = document.createElement('script');
+                 newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
+                 newScript.type = "application/json";
+                 elem.appendChild(newScript); 
+                 elem.dispatchEvent(new Event('change'));
+             });
 
+        }
 
+   
+        // productContainer.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 
+
+        // console.log(productContainer.querySelector('[data-active-product-id]').value); 
+
+        // if(productContainer.querySelectorAll('variant-radios').length > 0) {
+            
+        //     productContainer.querySelectorAll('variant-radios').forEach((elem) => {
+        //         elem.dataset.url = this.getCurrentColor().dataset.productUrl;
+
+        //             if( elem.querySelector('[type="application/json"]')) {
+        //                 let e = elem.querySelector('[type="application/json"]');
+        //                 e.parentElement.removeChild(e); 
+        //             }
+
+        //         let newScript = document.createElement('script');
+        //         newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(this.currentColor.dataset.product).variants);  
+        //         newScript.type = "application/json";
+        //         elem.appendChild(newScript); 
+        //         elem.onVariantChange(true);
+        //     }); 
+        // }
     }
 
     updateImages() {
@@ -143,7 +188,7 @@ class CustomColorPicker extends HTMLElement {
                     showColor(name)
                 })
                 element.addEventListener('mouseleave', (event) => {
-                    showColor(this.getSelectedColor().dataset.colorName)
+                    showColor(this.getCurrentColor().dataset.colorName)
                 })
             }); 
         
