@@ -36,13 +36,11 @@
             "show_dynamic_checkout": true
           }
         },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
+        "34366f39-86f7-4ae7-841a-74111be1f772": {
+          "type": "text",
           "settings": {
-            "heading": "Shipping & Returns",
-            "content": "",
-            "page": "",
-            "icon": "truck"
+            "text": "*Ships within 2-3 business days. Due to Covid-19, you may experience delays outside of our control.",
+            "text_style": "body"
           }
         },
         "description": {
@@ -93,7 +91,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "collapsible-row-1",
+        "34366f39-86f7-4ae7-841a-74111be1f772",
         "description",
         "collapsible-row-2",
         "collapsible-row-0",
@@ -101,7 +99,7 @@
         "share"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "enable_video_looping": false
       }
     },
