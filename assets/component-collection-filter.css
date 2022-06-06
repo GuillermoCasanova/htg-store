@@ -39,10 +39,14 @@
     font-size: var(--h5);
 }
 
-.collection-filters__options button:hover {
+.collection-filters__options button:hover,
+.collection-filters__options button:focus,
+.collection-filters__options button[aria-expanded="true"] {
     cursor: pointer;
-    text-decoration: underline;
+    color: #fff;
+    background-color: black;
 }
+
 
 .collection-filters__filtering-forms__forms {
     position: relative;

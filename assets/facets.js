@@ -23,7 +23,13 @@ class CollectionFilters extends HTMLElement {
     }
 
     this.querySelectorAll('[data-filter-toggle]').forEach(toggle => {
-        toggle.addEventListener('click', this.toggleFilterOption.bind(this), [toggle.id])
+        toggle.addEventListener('click', (event)=> {
+          if(event.target.getAttribute('aria-expanded') == 'true') {
+            this.closeFilterOptions(); 
+            return
+          }
+          this.toggleFilterOption(event); 
+        }); 
     });
 
 
@@ -50,10 +56,6 @@ class CollectionFilters extends HTMLElement {
 
     this.querySelectorAll('[data-filter-form]').forEach(form => {
       form.setAttribute('aria-hidden', true);
-
-      console.log(form.getAttribute('aria-labelledby'))
-      console.log(filterToOpenId);
-
       if(form.getAttribute('aria-labelledby') === filterToOpenId) {
         form.setAttribute('aria-hidden', false); 
       }
@@ -64,6 +66,10 @@ class CollectionFilters extends HTMLElement {
   closeFilterOptions() {
     this.querySelectorAll('[data-filter-form]').forEach(form => {
       form.setAttribute('aria-hidden', true);
+    });
+
+    this.querySelectorAll('[data-filter-toggle]').forEach(form => {
+      form.setAttribute('aria-expanded', false);
     });
   }
 

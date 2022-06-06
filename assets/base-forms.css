@@ -336,6 +336,9 @@ button {
     width: 100%;
 }
 
+button:hover {
+    cursor: pointer;
+}
 
 .button,
 .styled-link {
@@ -349,11 +352,24 @@ button {
     border-radius: 0;
 }
 
+.button--primary:hover,
+.button--primary:focus {
+    background-color: black;
+    color: #fff;
+}
+
 .button--secondary {
     background-color: #fff;
     border: 1px solid rgb(var(--color-base-text));
     border-radius: 0;
 }
+
+.button--secondary:hover,
+.button--secondary:focus {
+    background-color: black;
+    color: #fff;
+}
+
 
 
 .load-more-products-button-container {
