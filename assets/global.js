@@ -743,14 +743,13 @@ class VariantSelects extends HTMLElement {
 
   onVariantChange() {
 
-    this.setSoldOutOptions()
     this.updateOptions();
-    this.updateMasterId();
-    this.updatePickupAvailability();
-    this.removeErrorMessage();
+    this.updateMasterVariantId();
+    this.setSoldOutOptions()
+
+    //this.removeErrorMessage();
 
     if (!this.currentVariant || this.currentVariant.available == false) { 
-      this.setChosenOption(false); 
     } else {
       // this.updateMedia();
       // this.updateURL();
@@ -759,7 +758,6 @@ class VariantSelects extends HTMLElement {
       this.setChosenOption(); 
     }
 
-    this.toggleAddButton();
 
   }
 
@@ -772,8 +770,7 @@ class VariantSelects extends HTMLElement {
   setSoldOutOptions(resetOptions = false) {
    
     let data = {
-       productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML),
-       selectedVariant: this.currentVariant
+       productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
      }; 
 
  
@@ -784,8 +781,26 @@ class VariantSelects extends HTMLElement {
  
      let allProductVariants = data.productVariants;
 
+
+     console.log(this.currentVariant); 
+
+     //let isFullySoldOut = false;
+    //  if(this.tagName.toLowerCase() === 'variant-radios') {
+    //    if(!this.currentVariant || this.currentVariant.available == false) {
+ 
+    //    }
+    //  }
+ 
+   
+    //  if(this.tagName.toLowerCase() === 'variant-selects') {
+    //    if(!this.currentVariant || this.currentVariant.available == false) {
+ 
+    //    }
+    //  }
+
      if(this.tagName.toLowerCase() === 'variant-radios') {
         let sizeOptions = [];
+        
         this.querySelectorAll('input').forEach(function(elem) {
           sizeOptions.push(elem); 
           elem.parentElement.classList.remove('is-sold-out'); 
@@ -819,21 +834,36 @@ class VariantSelects extends HTMLElement {
         });
 
         for(var i = 0; i < allProductVariants.length; i++) {
-
           if(allProductVariants[i].available == false) {
-
             sizeOptions.forEach((elem) => {
               if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
                 elem.disabled = true;
                 elem.checked = false; 
               } 
             })
-          }
+          } 
         }
+
+
+        if(!this.currentVariant.available) {
+          if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
+            this.toggleAddButton('sold-out', true);
+            this.setChosenOption(false); 
+          } 
+
+          if(this.querySelector('select').querySelectorAll("option:not([disabled])").length > 0) {
+            this.toggleAddButton('variant-sold-out', true);
+            this.setChosenOption(); 
+          }
+        } else {
+          this.setChosenOption(); 
+          this.toggleAddButton(false, false);
+        }
+
       } 
    }
 
-  updateMasterId() {
+  updateMasterVariantId() {
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
         return this.options[index] === option;
@@ -896,58 +926,45 @@ class VariantSelects extends HTMLElement {
     }
   }
 
-  renderProductInfo() {
-    // fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
-    //   .then((response) => response.text())
-    //   .then((responseText) => {
-    //     const html = new DOMParser().parseFromString(responseText, 'text/html')
-    //     const destination = document.getElementById(`price-${this.dataset.section}`);
-    //     const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-    //     if (source && destination) destination.innerHTML = source.innerHTML;
-
-    //     const price = document.getElementById(`price-${this.dataset.section}`);
-
-    //     if (price) price.classList.remove('visibility-hidden');
-    //   });
-
+  toggleSelect(pDisableButton) {
+    let disable = pDisableButton; 
+    const productForm = document.getElementById(`product-form-${this.dataset.section}`);
+    
+    if(this.tagName.toLowerCase() == 'variant-selects') {
+      if(disable) {
+        this.querySelector('select').setAttribute('disabled', true);
+        this.querySelector('[data-select-container]').setAttribute('disabled', true);
+      } else {
+        this.querySelector('select').removeAttribute('disabled');
+        this.querySelector('[data-select-container]').removeAttribute('disabled');
+      }
+    } 
   }
 
-  toggleAddButton() {
-
+  toggleAddButton(pSoldOutStatus, pDisableButton) {
 
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
-    let disable = false; 
+    let disable = pDisableButton; 
     if (!productForm) return;
-
-
-    if(this.tagName.toLowerCase() === 'variant-radios') {
-      if(!this.currentVariant || this.currentVariant.available == false) {
-        disable = true; 
-      }
-    }
-
-  
-    if(this.tagName.toLowerCase() === 'variant-selects') {
-      if(!this.currentVariant || this.currentVariant.available == false) {
-        disable = true; 
-      }
-
-      console.log('selects');
-    }
-
-
-    
+        
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
-
 
     if (!addButton) return;
 
     if (disable) {
-      addButton.setAttribute('disabled', 'disabled');
-      addButtonText.textContent = window.variantStrings.soldOut;
+      addButton.setAttribute('disabled', true);
+      if(pSoldOutStatus === 'sold-out') {
+        addButtonText.textContent = window.variantStrings.soldOut;
+        this.toggleSelect(true);
+      }
+      if(pSoldOutStatus === 'variant-sold-out') {
+        addButtonText.textContent = window.variantStrings.currentOptionSoldOut;
+        this.toggleSelect(false);
+      }
     } else {
       addButton.removeAttribute('disabled');
+      this.toggleSelect(false);
       addButtonText.textContent = window.variantStrings.addToCart;
     }
 
@@ -985,6 +1002,22 @@ class VariantRadios extends VariantSelects {
   }
 
 
+  // this.toggleAddButton();
+
+
+  // let isFullySoldOut = false;
+  // if(this.tagName.toLowerCase() === 'variant-radios') {
+  //   if(!this.currentVariant || this.currentVariant.available == false) {
+
+  //   }
+  // }
+
+
+  // if(this.tagName.toLowerCase() === 'variant-selects') {
+  //   if(!this.currentVariant || this.currentVariant.available == false) {
+
+  //   }
+  // }
 
 
   updateOptions() {

@@ -428,12 +428,20 @@ variant-selects {
   padding-right: 1.25rem;
 }
 
+.product-form__input--dropdown label .dropdown-label-current-option {
+  margin-left: .25rem;
+}
+
 .product-form__input--dropdown select {
   width: 100%;
   height: 100%;
   top: 0;
   position: absolute;
   opacity: 0;
+}
+
+.product-form__input--dropdown[disabled] {
+  opacity: .35;
 }
 
 .product-form__input--dropdown svg {
@@ -445,6 +453,7 @@ variant-selects {
   margin: auto;
   right: 1.5rem;
   padding-bottom: .25rem;
+  pointer-events: none;
 }
 
 .product-form__input--dropdown select:hover {
@@ -497,7 +506,7 @@ variant-selects {
 
 
 /*------------------------------------*\
-    #Product Submit BUtton
+    #Product Submit Button
 \*------------------------------------*/
 
 
@@ -528,7 +537,7 @@ variant-selects {
 .product-form__submit__text {}
 
 .product-form__submit[disabled] {
-  opacity: .4;
+  opacity: .35;
 }
 
 .product-form__submit[disabled]+.shopify-payment-button {
