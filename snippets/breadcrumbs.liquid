@@ -2,7 +2,7 @@
 
     {% assign t = template | split: '.' | first %}
     
-<nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+<nav class="breadcrumbs {% if template contains 'product' %}breadcrumbs--product-page {% endif %}" role="navigation" aria-label="breadcrumbs">
     <ol class="breadcrumbs__inner">
     <li>
         <a href="/" title="Home">Home</a>

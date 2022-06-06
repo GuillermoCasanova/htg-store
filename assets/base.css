@@ -498,12 +498,12 @@ h6:empty {
     #Grid
 \*------------------------------------*/
 
-.content-for-layout {
+.master-padding-top {
   padding-top: var(--level6);
 }
 
 @media screen and (min-width: 930px) {
-  .content-for-layout {
+  .master-padding-top {
     padding-top: var(--level7);
   }
 }
