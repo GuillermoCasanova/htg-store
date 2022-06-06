@@ -263,6 +263,7 @@ class CollectionFilters extends HTMLElement {
   }
 
   clearFilters() {
+    this.closeFilterOptions(); 
 
     this.filterBy = {
       color: [], 

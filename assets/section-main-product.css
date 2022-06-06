@@ -78,7 +78,7 @@
 }
 
 .product-images-slideshow {
-  padding-bottom: 106% !important;
+  padding-bottom: 100% !important;
   position: relative;
   background: white;
   overflow: hidden;
@@ -110,7 +110,7 @@
 
 .product-images-slideshow__image-container {
   position: relative;
-  padding-bottom: 106%;
+  padding-bottom: 100%;
 }
 
 .product-images-slideshow__image-container img {
