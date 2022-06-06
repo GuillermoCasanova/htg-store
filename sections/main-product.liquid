@@ -53,10 +53,7 @@
         {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
-        {%- when 'text' -%}
-          <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
-            {{- block.settings.text -}}
-          </p>
+       
         {%- when 'title' -%}
           <h1 class="product__title" {{ block.shopify_attributes }}>
             {{ product.title | escape }}
@@ -71,227 +68,314 @@
               {{ form | payment_terms }}
             {%- endform -%}
           </div> {% endcomment %}
-        {%- when 'description' -%}
-          {%- if product.description != blank -%}
-            <div class="show-for-large-up">
-              <h2 class="product__description-headline">
-                Details
-              </h2>
-              <div class="product__description rte" data-product-description-container>
-                {{ product.description }}
-              </div>
-            </div>
-          {%- endif -%}
-        {%- when 'collapsible_tab' -%}
-          <div class="product__accordion accordion" {{ block.shopify_attributes }}>
-            <details>
-              <summary>
-                <div class="summary__title">
-                  {% render 'icon-accordion', icon: block.settings.icon %}
-                  <h2 class="h4 accordion__title">
-                    {{ block.settings.heading | default: block.settings.page.title }}
-                  </h2>
-                </div>
-                {% render 'icon-caret' %}
-              </summary>
-              <div class="accordion__content rte">
-                {{ block.settings.content }}
-                {{ block.settings.page.content }}
-              </div>
-            </details>
-          </div>
-        {%- when 'quantity_selector' -%}
-          <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
-            <label class="form__label" for="Quantity-{{ section.id }}">
-              {{ 'products.product.quantity.label' | t }}
-            </label>
-            <quantity-input class="quantity">
-              <button class="quantity__button no-js-hidden" name="minus" type="button">
-                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-                {% render 'icon-minus' %}
-              </button>
-              <input class="quantity__input"
-                  type="number"
-                  name="quantity"
-                  id="Quantity-{{ section.id }}"
-                  min="1"
-                  value="1"
-                  form="product-form-{{ section.id }}"
-                >
-              <button class="quantity__button no-js-hidden" name="plus" type="button">
-                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-                {% render 'icon-plus' %}
-              </button>
-            </quantity-input>
-          </div>
-      
-        {%- when 'variant_picker' -%}
-          {%- unless product.has_only_default_variant -%}
-              <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-                {%- for option in product.options_with_values -%}
-                  <div class="js product-form__input">
-                    {% if option.name == 'Size' %}
-                    <button git aria-label="Open Size Guide Modal" aria-expanded="false" size-chart-modal-open class="size-chart-button">
-                      Size Guide
-                    </button>
-                    {% endif %}
-                    <fieldset >
-                      <legend class="form__label">
-                        <span class="form__label__text">
-                          {{ option.name }}: 
-                        </span>
-                        <span class="form__current-option-label" role="presentation" data-current-option aria-hidden="true">
-                          {{ option.selected_value }}
-                      </span>
-                    </legend>
-                      {%- for value in option.values -%}
-                        <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
-                              name="{{ option.name }}"
-                              value="{{ value | escape }}"
-                              form="product-form-{{ section.id }}"
-                              {% if option.selected_value == value %}checked{% endif %}
-                        >
-                        <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" data-option-label data-option-name="{{ value | escape }}">
-                          {{ value }}
-                        </label>
-                      {%- endfor -%}
-                    </fieldset>
-                  </div>
-                {%- endfor -%}
-                <script type="application/json">
-                  {{ product.variants | json }}
-                </script>
-              </variant-radios>
-          {%- endunless -%}
-          <noscript>
-            <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-              <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
-              <div class="select">
-                <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
-                  {%- for variant in product.variants -%}
-                    <option
-                      {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
-                      {% if variant.available == false %}disabled{% endif %}
-                      value="{{ variant.id }}"
-                    >
-                      {{ variant.title }}
-                      {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                      - {{ variant.price | money | strip_html }}
-                    </option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-            </div>
-          </noscript>
-        {%- when 'custom_color_picker' -%}
-        <custom-color-picker>
-        {% for collection in product.collections %}
-    
-          {% assign collectionName = collection.title | downcase | handleize -%}
-          {% assign productName = product.title | downcase | split: "-" -%}
-          {% assign productNameHandle = productName[0] | handleize %}
-    
-          {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
-            {% assign activeCollection = collection %}
-            <div class="custom-color-picker  x-product-form__input">
-              <fieldset>
-                <legend  class="custom-color-picker__current-color" >
-                    <span class="custom-color-picker__current-color__label">Color:</span>
-                        <span   data-color-container aria-hidden="true">
-                            {% for product in collection.products %}
-                              {% if product.handle == activeProduct.handle %}
-                                {% for image in product.images %}
-                                  {% if image.alt contains 'swatch' %}
-                                    {{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}
-                                  {% endif %}
-                                {% endfor %}
-                              {%  endif  %}
-                          {%  endfor  %}
-                        </span>
-                </legend>
-                <span class="custom-color-picker__colors">
-                  {% for product in activeCollection.products %}
-                    <span class="custom-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
-                          <input type="radio" 
-                            {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
-                            id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
-                            name="color" 
-                            form="quick-add-form-{{ section.id }}-{{ product.id }}"
-                            value="{{ product.metafields.color_swatch.name | escape }}"
-                            title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                            data-color-option
-                            data-product="{{ product | json | escape }}"
-                            data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
-                            data-product-title="{{ product.title }}" 
-                            data-handle="{{ product.handle }}"
-                            data-product-url="{{ product.url }}"
-                            data-product-id="{{ product.id }}"
-                            data-product-first-variant="{{ product.selected_variant.id }}"
-                            data-swatch="{{ product.metafields.color_swatch.name }}"
-                            class="custom-color-picker__input"
-                            >
-                        <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                          <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
-    
-                          </span>
-                          <span class="custom-color-picker__label__ring">
-                          </span>
-                        </label>
-                    </span>
-                  {% endfor %}
-                </span>
-              </fieldset>
-            </div> 
-          {%- endif -%}
-        {% endfor %}
-      </custom-color-picker>
-    
-
-
-        {%- when 'buy_buttons' -%}
-          <div {{ block.shopify_attributes }}>
-            <product-form class="product-form">
-              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-active-product-id>
-                <div class="product-form__buttons">
-                  <button
-                    type="submit"
-                    name="add"
-                    class="product-form__submit button button--full-width 
-                            button--primary button--medium
-                      {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                  {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                  >
-                    <span class="product-form__submit__icon" aria-hidden="true" role="presentation" data-add-cart-button-icon>
-                      {%- render 'icon-cart' -%}
-                    </span>
-
-                    <span class="product-form__submit__text" data-soldout-text hidden>
-                        {{ 'products.product.sold_out' | t }}
-                    </span>
-
-                    <span class="product-form__submit__text" data-available-text>
-                        {{ 'products.product.add_to_cart' | t }}
-                    </span>
-
-
-                  </button>
-                  {%- if block.settings.show_dynamic_checkout -%}
-                    {{ form | payment_button }}
-                  {%- endif -%}
-                </div>
-              {%- endform -%}
-            </product-form>
-
-
-          </div>
-
-          <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-
-
         {%- endcase -%}
-      {%- endfor -%}
+      {%endfor%}
+      <div class="product__content">
+
+        <div class="product__content__information">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'custom_color_picker' -%}
+                <custom-color-picker class="hide-for-large-up">
+                {% for collection in product.collections %}
+            
+                  {% assign collectionName = collection.title | downcase | handleize -%}
+                  {% assign productName = product.title | downcase | split: "-" -%}
+                  {% assign productNameHandle = productName[0] | handleize %}
+            
+                  {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
+                    {% assign activeCollection = collection %}
+                    <div class="custom-color-picker  x-product-form__input">
+                      <fieldset>
+                        <legend  class="custom-color-picker__current-color" >
+                            <span class="custom-color-picker__current-color__label">Color:</span>
+                                <span   data-color-container aria-hidden="true">
+                                    {% for product in collection.products %}
+                                      {% if product.handle == activeProduct.handle %}
+                                        {% for image in product.images %}
+                                          {% if image.alt contains 'swatch' %}
+                                            {{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}
+                                          {% endif %}
+                                        {% endfor %}
+                                      {%  endif  %}
+                                  {%  endfor  %}
+                                </span>
+                        </legend>
+                        <span class="custom-color-picker__colors">
+                          {% for product in activeCollection.products %}
+                            <span class="custom-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
+                                  <input type="radio" 
+                                    {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
+                                    id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
+                                    name="color" 
+                                    form="quick-add-form-{{ section.id }}-{{ product.id }}"
+                                    value="{{ product.metafields.color_swatch.name | escape }}"
+                                    title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                    data-color-option
+                                    data-product="{{ product | json | escape }}"
+                                    data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
+                                    data-product-title="{{ product.title }}" 
+                                    data-handle="{{ product.handle }}"
+                                    data-product-url="{{ product.url }}"
+                                    data-product-id="{{ product.id }}"
+                                    data-product-first-variant="{{ product.selected_variant.id }}"
+                                    data-swatch="{{ product.metafields.color_swatch.name }}"
+                                    class="custom-color-picker__input"
+                                    >
+                                <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                  <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+            
+                                  </span>
+                                  <span class="custom-color-picker__label__ring">
+                                  </span>
+                                </label>
+                            </span>
+                          {% endfor %}
+                        </span>
+                      </fieldset>
+                    </div> 
+                  {%- endif -%}
+                {% endfor %}
+              </custom-color-picker>
+
+              
+              {%- when 'text' -%}
+                <div class="product__text">
+                  <p class="" {{ block.shopify_attributes }}>
+                    {{- block.settings.text -}}
+                  </p>
+                </div>
+            {%- when 'description' -%}
+              {%- if product.description != blank -%}
+                <div class="product__accordion accordion  product-information" {{ block.shopify_attributes }}>
+                  <details>
+                    <summary>
+                      <div class="summary__title">
+                        <h2 class="h4 accordion__title">
+                          Description
+                        </h2>
+                      </div>
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div class="accordion__content rte">
+                      {{ product.description }}
+                    </div>
+                  </details>
+                </div>
+              {%- endif -%}
+            {%- when 'collapsible_tab' -%}
+              <div class="product__accordion accordion  product-information" {{ block.shopify_attributes }}>
+                <details>
+                  <summary>
+                    <div class="summary__title">
+                      <h2 class="h4 accordion__title">
+                        {{ block.settings.heading | default: block.settings.page.title }}
+                      </h2>
+                    </div>
+                    {% render 'icon-caret' %}
+                  </summary>
+                  <div class="accordion__content rte">
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
+                  </div>
+                </details>
+              </div>
+            {%- endcase -%}
+            {%endfor%}
+        </div>
+
+        <div class="product__content__form">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+              {%- when 'quantity_selector' -%}
+                <div class="product-form__input product-form__input--quantity" {{ block.shopify_attributes }}>
+                  <label class="form__label" for="Quantity-{{ section.id }}">
+                    {{ 'products.product.quantity.label' | t }}
+                  </label>
+                  <quantity-input class="quantity">
+                    <button class="quantity__button no-js-hidden" name="minus" type="button">
+                      <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                      {% render 'icon-minus' %}
+                    </button>
+                    <input class="quantity__input"
+                        type="number"
+                        name="quantity"
+                        id="Quantity-{{ section.id }}"
+                        min="1"
+                        value="1"
+                        form="product-form-{{ section.id }}"
+                      >
+                    <button class="quantity__button no-js-hidden" name="plus" type="button">
+                      <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                      {% render 'icon-plus' %}
+                    </button>
+                  </quantity-input>
+                </div>
+            
+              {%- when 'variant_picker' -%}
+                {%- unless product.has_only_default_variant -%}
+                    <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+                      {%- for option in product.options_with_values -%}
+                        <div class="js product-form__input">
+                          {% if option.name == 'Size' %}
+                          <button git aria-label="Open Size Guide Modal" aria-expanded="false" size-chart-modal-open class="size-chart-button">
+                            Size Guide
+                          </button>
+                          {% endif %}
+                          <fieldset >
+                            <legend class="form__label">
+                              <span class="form__label__text">
+                                {{ option.name }}: 
+                              </span>
+                              <span class="form__current-option-label" role="presentation" data-current-option aria-hidden="true">
+                                {{ option.selected_value }}
+                            </span>
+                          </legend>
+                            {%- for value in option.values -%}
+                              <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                                    name="{{ option.name }}"
+                                    value="{{ value | escape }}"
+                                    form="product-form-{{ section.id }}"
+                                    {% if option.selected_value == value %}checked{% endif %}
+                              >
+                              <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" data-option-label data-option-name="{{ value | escape }}">
+                                {{ value }}
+                              </label>
+                            {%- endfor -%}
+                          </fieldset>
+                        </div>
+                      {%- endfor -%}
+                      <script type="application/json">
+                        {{ product.variants | json }}
+                      </script>
+                    </variant-radios>
+                {%- endunless -%}
+                <noscript>
+                  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                    <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+                    <div class="select">
+                      <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                        {%- for variant in product.variants -%}
+                          <option
+                            {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                            {% if variant.available == false %}disabled{% endif %}
+                            value="{{ variant.id }}"
+                          >
+                            {{ variant.title }}
+                            {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                            - {{ variant.price | money | strip_html }}
+                          </option>
+                        {%- endfor -%}
+                      </select>
+                      {% render 'icon-caret' %}
+                    </div>
+                  </div>
+                </noscript>
+              {%- when 'custom_color_picker' -%}
+              <custom-color-picker class="show-for-large-up">
+              {% for collection in product.collections %}
+          
+                {% assign collectionName = collection.title | downcase | handleize -%}
+                {% assign productName = product.title | downcase | split: "-" -%}
+                {% assign productNameHandle = productName[0] | handleize %}
+          
+                {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
+                  {% assign activeCollection = collection %}
+                  <div class="custom-color-picker  x-product-form__input">
+                    <fieldset>
+                      <legend  class="custom-color-picker__current-color" >
+                          <span class="custom-color-picker__current-color__label">Color:</span>
+                              <span   data-color-container aria-hidden="true">
+                                  {% for product in collection.products %}
+                                    {% if product.handle == activeProduct.handle %}
+                                      {% for image in product.images %}
+                                        {% if image.alt contains 'swatch' %}
+                                          {{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}
+                                        {% endif %}
+                                      {% endfor %}
+                                    {%  endif  %}
+                                {%  endfor  %}
+                              </span>
+                      </legend>
+                      <span class="custom-color-picker__colors">
+                        {% for product in activeCollection.products %}
+                          <span class="custom-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
+                                <input type="radio" 
+                                  {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
+                                  id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
+                                  name="color" 
+                                  form="quick-add-form-{{ section.id }}-{{ product.id }}"
+                                  value="{{ product.metafields.color_swatch.name | escape }}"
+                                  title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                  data-color-option
+                                  data-product="{{ product | json | escape }}"
+                                  data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
+                                  data-product-title="{{ product.title }}" 
+                                  data-handle="{{ product.handle }}"
+                                  data-product-url="{{ product.url }}"
+                                  data-product-id="{{ product.id }}"
+                                  data-product-first-variant="{{ product.selected_variant.id }}"
+                                  data-swatch="{{ product.metafields.color_swatch.name }}"
+                                  class="custom-color-picker__input"
+                                  >
+                              <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+          
+                                </span>
+                                <span class="custom-color-picker__label__ring">
+                                </span>
+                              </label>
+                          </span>
+                        {% endfor %}
+                      </span>
+                    </fieldset>
+                  </div> 
+                {%- endif -%}
+              {% endfor %}
+            </custom-color-picker>
+
+              {%- when 'buy_buttons' -%}
+                <div {{ block.shopify_attributes }}>
+                  <product-form class="product-form">
+                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-active-product-id>
+                      <div class="product-form__buttons">
+                        <button
+                          type="submit"
+                          name="add"
+                          class="product-form__submit button button--full-width 
+                                  button--primary button--medium
+                            {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        >
+                          <span class="product-form__submit__icon" aria-hidden="true" role="presentation" data-add-cart-button-icon>
+                            {%- render 'icon-cart' -%}
+                          </span>
+
+                          <span class="product-form__submit__text" data-soldout-text hidden>
+                              {{ 'products.product.sold_out' | t }}
+                          </span>
+
+                          <span class="product-form__submit__text" data-available-text>
+                              {{ 'products.product.add_to_cart' | t }}
+                          </span>
+
+
+                        </button>
+                       
+                      </div>
+                    {%- endform -%}
+                  </product-form>
+
+
+                </div>
+
+
+
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
       </div>
     </div>
   </div>

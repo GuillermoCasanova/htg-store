@@ -513,6 +513,7 @@ h6:empty {
   margin: 0 auto;
   padding-left: var(--level3);
   padding-right: var(--level3);
+  display: block;
 }
 
 @media screen and (min-width: 360px) {
