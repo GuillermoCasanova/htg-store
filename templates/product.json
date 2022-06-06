@@ -51,7 +51,7 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "Size and Fit",
             "content": "",
             "page": "",
             "icon": "ruler"
@@ -106,7 +106,7 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Recommended Products",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
