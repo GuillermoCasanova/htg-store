@@ -13,6 +13,12 @@
           "settings": {
           }
         },
+        "2f3960ff-85ae-4b71-99c9-35ac93e5e287": {
+          "type": "custom_color_picker",
+          "settings": {
+            "picker_label": ""
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -83,6 +89,7 @@
       "block_order": [
         "title",
         "price",
+        "2f3960ff-85ae-4b71-99c9-35ac93e5e287",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
