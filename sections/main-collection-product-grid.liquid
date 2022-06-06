@@ -2,10 +2,10 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-card.css' | asset_url | stylesheet_tag }}
-
-<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+{{ 'component-collection-filter.css' | asset_url | stylesheet_tag }}
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
 <script src="{{ 'quick-add-color-picker.js' | asset_url }}" defer="defer"></script>
 
 {%- if section.settings.enable_quick_add -%}

@@ -15,89 +15,91 @@
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
   if results.url
-    assign results_url = results.url
   else
-    assign terms = results.terms | escape
   endif
 -%}
 
 
 <collection-filters>
-  <div class="">
-    <h2>
-      Filter and Sort Products
+    <h2 class="visually-hidden">
+      Sort and Filter Products
     </h2>
     <div>
-      <div class="">
-        <div class="">
-
-          <button  type="button" aria-expanded="false" id="sort-by">
+      <div class="collection-filters">
+        <div class="collection-filters__options">
+          <button  type="button" aria-expanded="false" id="sort-by" data-filter-toggle>
             Sort By
           </button>
 
-          <div role="region" aria-hidden="true" aria-labelledby="sort-by">
-            {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
-            <select name="sort_by" class="" id="SortBy" data-filter>
-                <option value="" selected="selected">
-                  High to Low
-                </option>
-                <option value="" selected="selected">
-                  Low to High
-                </option>
-                <option value="" selected="selected">
-                  Best Seller
-                </option>
-                <option value="" selected="selected">
-                  Newest
-                </option>
-              </select>
-          </div>
-
-        </div>
-
-        <div class="facet-filters__field">
-    
-          <button  type="button" aria-expanded="false" id="filter-by">
+          <button  type="button" aria-expanded="false" id="filter-by" data-filter-toggle>
             Filter By
           </button>
           
-          <div role="region" aria-hidden="true" aria-labelledby="filter-by" >
+        </div>
+        <div class="collection-filters__filtering-forms">
+          <div role="region" data-filter-form aria-hidden="true" aria-labelledby="sort-by" class="collection-filters__filtering-forms__form">
+            <div class="collection-filters__filtering-forms__form__inner">
+              <select name="sort_by" class="" id="SortBy" data-filter>
+                  <option value="" selected="selected">
+                    High to Low
+                  </option>
+                  <option value="" selected="selected">
+                    Low to High
+                  </option>
+                  <option value="" selected="selected">
+                    Best Seller
+                  </option>
+                  <option value="" selected="selected">
+                    Newest
+                  </option>
+                </select>
+              </div>
+          </div>
+          <div role="region" data-filter-form aria-hidden="true" aria-labelledby="filter-by"  class="collection-filters__filtering-forms__form">
 
-            <fieldset data-size-filters>
-              <legend class="visually-hidden">
-                Size
-              </legend>
-            </fieldset>
+            <div class="collection-filters__filtering-forms__form__inner">
+            
+              <fieldset class="filter-field-set">
+                <legend class="filter-field-set__legend">
+                  Size
+                </legend>
+                <div  class="filter-sizes" data-size-filters >
+                </div>
+              </fieldset>
 
-            <fieldset data-color-filters>
-              <legend class="visually-hidden">
-                Color
-              </legend>
-             
-            </fieldset>
+              <fieldset class="filter-field-set">
+                <legend class="filter-field-set__legend">
+                  Color
+                </legend>
+                <div  class="filter-colors" data-color-filters>
+                </div>
+              
+              </fieldset>
+            </div>
 
             {% comment %} <fieldset data-color-filters>
               <legend class="visually-hidden">
                 Toggle Availability
               </legend>
-             
+            
               <label for="availability-filter">
                 Hide Sold Out Items
               </label>
               <input type="checkbox" value="hide-sold-out-products" name="Hide sold out items" id="availability-filter" data-filter data-availability-filter>
             </fieldset> {% endcomment %}
+            <div class="filtering-forms__actions">
+            
+              <button type="button" aria-label="Filter products by selected filters" data-activate-filters>
+                See Results
+              </button>
+
+              <button type="button" aria-label="Clear selected filters and view all products" data-clear-filters>
+                Clear All
+              </button>
+            </div>
 
           </div>
-
-          <button type="button" aria-label="Filter products by selected filters" data-activate-filters>
-            See Results
-          </button>
-
-          <button type="button" aria-label="Clear selected filters and view all products" data-clear-filters>
-            Clear All
-          </button>
         </div>
       </div>
     </div>
-  </div>
 </collection-filters>

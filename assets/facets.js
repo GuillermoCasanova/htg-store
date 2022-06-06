@@ -22,12 +22,50 @@ class CollectionFilters extends HTMLElement {
       this.querySelector('[data-clear-filters]').addEventListener('click', this.clearFilters.bind(this)); 
     }
 
+    this.querySelectorAll('[data-filter-toggle]').forEach(toggle => {
+        toggle.addEventListener('click', this.toggleFilterOption.bind(this), [toggle.id])
+    });
+
+
+    //I'm using "click" but it works with any event
+    document.addEventListener('click', (event) => {
+      var isClickInside = this.contains(event.target);
+      if (!isClickInside) {
+        this.closeFilterOptions(); 
+      }
+    });
+
   }
 
-  filterProducts(pProductsArray, pFilters) {
+  toggleFilterOption(pFilterToOpen) {
+
+    let filterToOpenId = pFilterToOpen.target.id; 
+
+    this.querySelectorAll('[data-filter-toggle]').forEach(toggle => {
+      toggle.setAttribute('aria-expanded', false);
+      if(toggle.id === filterToOpenId) {
+        toggle.setAttribute('aria-expanded', true); 
+      }
+    });
+
+    this.querySelectorAll('[data-filter-form]').forEach(form => {
+      form.setAttribute('aria-hidden', true);
+
+      console.log(form.getAttribute('aria-labelledby'))
+      console.log(filterToOpenId);
+
+      if(form.getAttribute('aria-labelledby') === filterToOpenId) {
+        form.setAttribute('aria-hidden', false); 
+      }
+    });
 
   }
 
+  closeFilterOptions() {
+    this.querySelectorAll('[data-filter-form]').forEach(form => {
+      form.setAttribute('aria-hidden', true);
+    });
+  }
 
   sortproducts(pProductsArray, pSortBy) {
 
@@ -74,34 +112,44 @@ class CollectionFilters extends HTMLElement {
 
     this.colorFilters.forEach(color => {
         this.querySelector(colorFilterContainer).insertAdjacentHTML( 'beforeend', `
-        <label for="${color}">
-          ${color.replace('filter-color:', "")}
-        </label> 
+        <div class="filter-color" data-color="${color}">
         <input type="checkbox" 
         id="${color}"
         name="color" 
         form="filter-sort-form"
         value="${color}"
-        class="quick-add-color-picker__input"
+        class="filter-color__input"
         data-filter
         data-color-filter
-        >`);
+        >
+        <label class="filter-color__label" for="${color}">
+          <span class="visually-hidden">${color.replace('filter-color:', "")}</span>
+          <div class="filter-color__label__swatch" data-color="${color}">
+          </div>
+        </label> 
+      </div>`);
     }); 
 
     this.sizeFilters.forEach(size => {
       this.querySelector(sizeFilterContainer).insertAdjacentHTML( 'beforeend', `
-      <label for="${size}">
-        ${size}
+
+      <div class="filter-size">
+        <input type="checkbox" 
+        id="${size}"
+        name="size" 
+        form="filter-sort-form"
+        value="${size}"
+        class="quick-add-color-picker__input"
+        data-filter
+        data-size-filter
+        >
+        <label class="filter-size__label" for="${size}">
+        <div class="filter-size__label__box">
+          ${size}
+        </div>
       </label> 
-      <input type="checkbox" 
-      id="${size}"
-      name="size" 
-      form="filter-sort-form"
-      value="${size}"
-      class="quick-add-color-picker__input"
-      data-filter
-      data-size-filter
-      >`);
+      </div>
+        `);
     })
 
   }
@@ -115,6 +163,8 @@ class CollectionFilters extends HTMLElement {
       sizes: [], 
       hide_sold_out: false
     }; 
+
+    this.closeFilterOptions(); 
 
     if( this.querySelectorAll(filterId + ':checked').length <= 0) {
         return
@@ -213,6 +263,7 @@ class CollectionFilters extends HTMLElement {
   }
 
   clearFilters() {
+
     this.filterBy = {
       color: [], 
       sizes: [], 
@@ -235,7 +286,6 @@ class CollectionFilters extends HTMLElement {
     window.history.replaceState(null, null, url); 
 
     document.querySelector('collection-grid').resetCollectionGrid()
-    console.log('TELL COLLECTION GRID TO RESET');
   }
 }
 
