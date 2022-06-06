@@ -7,6 +7,13 @@ class loadMoreProductsButton extends HTMLElement {
         if(this.querySelector('button')) {
             this.querySelector('button').addEventListener('click', this.loadMoreProducts.bind(this))
         }
+
+        if(document.querySelector('collection-grid')) {
+            let CollectionProducs = document.querySelector('collection-grid'); 
+            if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
+                this.style.display = 'none';
+            }
+        }
     }
 
 
@@ -17,7 +24,11 @@ class loadMoreProductsButton extends HTMLElement {
 
         let CollectionProducs = document.querySelector('collection-grid'); 
         CollectionProducs.renderMoreProducts(parseInt(this.dataset.paginateBy));
+        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
+            this.style.display = 'none';
+        }
 
+        // IF NO MORE PRODUCTS, HIDE BUTTON
         if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
             this.style.display = 'none';
         }

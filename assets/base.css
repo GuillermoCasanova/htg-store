@@ -369,41 +369,6 @@ p {
 
 
 /*------------------------------------*\
-    #PaddingAndMarginsLevels
-\*------------------------------------*/
-
-.button--primary {
-  font-size: 1.1rem;
-  border: 1px solid white;
-  background: black;
-  color: #fff;
-  text-decoration: none;
-}
-
-
-.button--medium {
-  width: 100%;
-  padding: var(--level3);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  outline: none;
-  border-radius: 69px;
-  font-size: 1rem;
-  transition: all var(--duration-default) ease;
-}
-
-.button--primary:hover,
-.button--primary:focus {
-  cursor: pointer;
-  background-color: #fff;
-  color: black;
-}
-
-
-
-
-
-/*------------------------------------*\
     #Sections
 \*------------------------------------*/
 

@@ -5,7 +5,10 @@ class CollectionGrid extends HTMLElement {
       super(); 
       this.totalProducts = [];
       this.totalProductsShowing = [];
-      this.getProductsFromJson(); 
+      this.section = 1; 
+      this.getProductsFromJson(this.dataset.paginateBy); 
+      this.setUpPagination(this.dataset.paginateBy); 
+     window.history.replaceState(null, null, null);
   }
 
   fetchProducts(pNumToLoad, pHandleOrTag, pLastProduct) {
@@ -48,26 +51,46 @@ class CollectionGrid extends HTMLElement {
       });
   }
 
-  getProductsFromJson() {
-    this.totalProducts = JSON.parse(this.querySelector('[id="collection-products"]').textContent)
-    this.totalProductsShowing = this.totalProducts.slice(0, this.dataset.paginateBy); 
- 
-    // fetch('/products/inner-city-cinema-t-shirt-blonde?variant=39898892566607')
-    // .then((response) => response.text())
-    // .then((responseText) => {
-    //   console.log(responseText);
-    // });
-  
+  getProductsFromJson(pNumToStartFrom) {
+
+    const productContainerId = '[data-product-json]';
+    const queryString = window.location.search; 
+    let startFromProduct = pNumToStartFrom;
+    let productsToShow = this.dataset.paginateBy ; 
+    
+    if(queryString) {
+      let urlParams = new URLSearchParams(queryString);
+      if(parseInt(urlParams.get('section')) > 1) {
+        this.section = parseInt(urlParams.get('section'));
+        productsToShow = this.dataset.paginateBy * urlParams.get('section')
+      }
+    }
+
+    this.querySelectorAll(productContainerId).forEach((element)=> {
+      this.totalProducts.push(JSON.parse(element.textContent))
+      this.totalProductsShowing = this.totalProducts.slice(0, productsToShow);
+    });
   }
+
+  setUpPagination(pNumToStartFrom) {
+    window.history.replaceState(null, null, null);
+    let productsToHide = this.querySelectorAll(`.grid__item:nth-child(${this.totalProductsShowing.length}) ~ *`);
+
+    productsToHide.forEach(elem => {
+      elem.style.display = 'none';
+    });
+  } 
+
 
   renderMoreProducts(pNumToShowMore) {
      let productsToAdd = this.totalProducts.slice(this.totalProductsShowing.length, this.totalProductsShowing.length + pNumToShowMore);
-     console.log(productsToAdd); 
      this.totalProductsShowing = [...this.totalProductsShowing, ...productsToAdd]
 
-     console.log(this.totalProductsShowing); 
-     console.log("NOW SHOWING " + this.totalProductsShowing.length);
+     productsToAdd.forEach((productJSON)=> {
+        this.querySelector(`[data-product-id="${productJSON.id}"]`).style.display = 'block';
+     });
 
+     window.history.replaceState({page: this.section}, '', '?section=' + (this.section += 1));
   }
 
   filterProducts() {
@@ -76,8 +99,11 @@ class CollectionGrid extends HTMLElement {
 
 
   getProductsRendered() {
-    console.log(this.totalProductsShowing); 
     return this.totalProductsShowing; 
+  }
+
+  renderProductFromTemplate() {
+
   }
 }
 

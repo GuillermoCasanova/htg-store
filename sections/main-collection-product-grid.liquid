@@ -55,7 +55,7 @@
         {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
       </aside>
 
-      {% assign paginationNum = 10 %}
+      {% assign paginationNum = 12 %}
       <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}">
         <div class="product-grid-container" id="ProductGridContainer">
             <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
@@ -63,27 +63,19 @@
       
               <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
                 grid product-grid EndlessScroll">
-                {% paginate collection.products by paginationNum %}
+                {% paginate collection.products by 1000 %}
                   {%- for product in collection.products -%}
-                    <li class="grid__item">
+                    <li class="grid__item" data-product-id="{{ product.id }}">
                       {% render 'product-card',
                         heading_level: 'h2',
                         card_product: product,
                         show_quick_add: section.settings.enable_quick_add,
                         section_id: section.id
                       %}
+                
                     </li>
                   {%- endfor -%}
                 {% endpaginate %}
-                
-                {% paginate collection.products by 1000 %}
-                  {%- for product in collection.products -%}
-                  <script type="application/json" id="collection-products">
-                    {{ collection.products | json }}
-                  </script>
-                {%- endfor -%}
-                {% endpaginate %}
-
               </ul>
             </div>
             {% if collection.products.length > paginationNum %}
