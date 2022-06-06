@@ -65,12 +65,12 @@
           <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
             {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
           </div>
-          <div {{ block.shopify_attributes }}>
+          {% comment %} <div {{ block.shopify_attributes }}>
             {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
               {{ form | payment_terms }}
             {%- endform -%}
-          </div>
+          </div> {% endcomment %}
         {%- when 'description' -%}
           {%- if product.description != blank -%}
             <div class="show-for-large-up">
@@ -186,55 +186,67 @@
           </noscript>
         {%- when 'custom_color_picker' -%}
         <custom-color-picker>
-          {% for collection in product.collections %}
-
-            {% assign collectionName = collection.title | downcase | handleize -%}
-            {% assign productName = product.title | downcase | split: "-" -%}
-            {% assign productNameHandle = productName[0] | handleize %}
-
-            {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
-              {% assign activeCollection = collection %}
-              <div class="quick-add-color-picker  x-product-form__input">
-                <fieldset>
-                  <legend  class="quick-add-color-picker__current-color visually-hidden" >
-                    <span class="quick-add-color-picker__current-color__label">Available colors for {{ productName[0] }}:</span>
-                  </legend>
-                  <span class="quick-add-color-picker__colors">
-                    {% for product in activeCollection.products %}
-                      <span class="quick-add-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
-                            <input type="radio" 
-                              {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
-                              id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
-                              name="color" 
-                              form="quick-add-form-{{ section.id }}-{{ product.id }}"
-                              value="{{ product.metafields.color_swatch.name | escape }}"
-                              title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                              data-color-option
-                              data-product="{{ product | json | escape }}"
-                              data-color-name="{{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}" 
-                              data-product-title="{{ product.title }}" 
-                              data-handle="{{ product.handle }}"
-                              data-product-url="{{ product.url }}"
-                              data-product-id="{{ product.id }}"
-                              data-product-first-variant="{{ product.selected_variant.id }}"
-                              data-swatch="{{ product.metafields.color_swatch.name }}"
-                              class="quick-add-color-picker__input"
-                              >
-                          <label class="quick-add-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                            <span class="quick-add-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
-
-                            </span>
-                            <span class="quick-add-color-picker__label__ring">
-                            </span>
-                          </label>
-                      </span>
-                    {% endfor %}
-                  </span>
-                </fieldset>
-              </div> 
-            {%- endif -%}
-          {% endfor %}
-        </custom-color-picker>
+        {% for collection in product.collections %}
+    
+          {% assign collectionName = collection.title | downcase | handleize -%}
+          {% assign productName = product.title | downcase | split: "-" -%}
+          {% assign productNameHandle = productName[0] | handleize %}
+    
+          {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
+            {% assign activeCollection = collection %}
+            <div class="custom-color-picker  x-product-form__input">
+              <fieldset>
+                <legend  class="custom-color-picker__current-color" >
+                    <span class="custom-color-picker__current-color__label">Color:</span>
+                        <span   data-color-container aria-hidden="true">
+                            {% for product in collection.products %}
+                              {% if product.handle == activeProduct.handle %}
+                                {% for image in product.images %}
+                                  {% if image.alt contains 'swatch' %}
+                                    {{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}
+                                  {% endif %}
+                                {% endfor %}
+                              {%  endif  %}
+                          {%  endfor  %}
+                        </span>
+                </legend>
+                <span class="custom-color-picker__colors">
+                  {% for product in activeCollection.products %}
+                    <span class="custom-color-picker__color {% if product.handle == product.handle %}is-selected{% endif %}">
+                          <input type="radio" 
+                            {% if product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
+                            id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
+                            name="color" 
+                            form="quick-add-form-{{ section.id }}-{{ product.id }}"
+                            value="{{ product.metafields.color_swatch.name | escape }}"
+                            title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                            data-color-option
+                            data-product="{{ product | json | escape }}"
+                            data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
+                            data-product-title="{{ product.title }}" 
+                            data-handle="{{ product.handle }}"
+                            data-product-url="{{ product.url }}"
+                            data-product-id="{{ product.id }}"
+                            data-product-first-variant="{{ product.selected_variant.id }}"
+                            data-swatch="{{ product.metafields.color_swatch.name }}"
+                            class="custom-color-picker__input"
+                            >
+                        <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                          <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+    
+                          </span>
+                          <span class="custom-color-picker__label__ring">
+                          </span>
+                        </label>
+                    </span>
+                  {% endfor %}
+                </span>
+              </fieldset>
+            </div> 
+          {%- endif -%}
+        {% endfor %}
+      </custom-color-picker>
+    
 
 
         {%- when 'buy_buttons' -%}

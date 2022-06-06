@@ -44,12 +44,6 @@ class CustomColorPicker extends HTMLElement {
         }); 
 
         return this.currentColor; 
-        
-        // .find((variant) => {
-        //     return !variant.options.map((option, index) => {
-        //       return this.options[index] === option;
-        //     }).includes(false);
-        //   });
     }; 
 
     updateProductId() {
@@ -105,13 +99,11 @@ class CustomColorPicker extends HTMLElement {
             `; 
 
             document.querySelector('product-images-slideshow').appendSlide(imageTemplate); 
-            document.querySelector('product-images-scroller').appendSlide(imageTemplate, index); 
 
          }
                 
         function clearImages() {
             document.querySelector('product-images-slideshow').removeSlides();
-            document.querySelector('product-images-scroller').removeSlides(); 
         }
 
         clearImages() 
