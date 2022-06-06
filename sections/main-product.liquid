@@ -157,7 +157,7 @@
                       </div>
                       {% render 'icon-caret' %}
                     </summary>
-                    <div class="accordion__content rte">
+                    <div class="accordion__content rte" data-product-description-container>
                       {{ product.description }}
                     </div>
                   </details>
@@ -348,18 +348,9 @@
                             {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                         {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                         >
-                          <span class="product-form__submit__icon" aria-hidden="true" role="presentation" data-add-cart-button-icon>
-                            {%- render 'icon-cart' -%}
+                          <span class="product-form__submit__text">
+                             Add to Cart
                           </span>
-
-                          <span class="product-form__submit__text" data-soldout-text hidden>
-                              {{ 'products.product.sold_out' | t }}
-                          </span>
-
-                          <span class="product-form__submit__text" data-available-text>
-                              {{ 'products.product.add_to_cart' | t }}
-                          </span>
-
 
                         </button>
                        

@@ -742,19 +742,19 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange() {
+
+    if(this.setSoldOutOptions) {
+      this.setSoldOutOptions()
+    }
+
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
-  
-    if(this.setSoldOutOptions) {
-      this.setSoldOutOptions()
-    }
 
     if (!this.currentVariant) { 
-      this.toggleAddButton(true, '', true);
-      this.setUnavailable();
+      this.toggleAddButton(true, window.variantStrings.soldOut, true);
     } else {
       this.updateMedia();
       this.updateURL();
@@ -852,8 +852,11 @@ class VariantSelects extends HTMLElement {
   toggleAddButton(disable = true, text, modifyClass = true) {
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
+
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
+
+
     if (!addButton) return;
 
     if (disable) {
@@ -868,15 +871,10 @@ class VariantSelects extends HTMLElement {
   }
 
   setUnavailable() {
-    if(document.getElementById(`product-form-${this.dataset.section}`)) {
-      const button = document.getElementById(`product-form-${this.dataset.section}`);
-      const addButton = button.querySelector('[name="add"]');
-      const addButtonText = button.querySelector('[name="add"] > span');
-      const price = document.getElementById(`price-${this.dataset.section}`);
-      if (!addButton) return;
-      addButtonText.textContent = window.variantStrings.unavailable;
-      if (price) price.classList.add('visibility-hidden');
-    }
+    const addButton = document.getElementById(`product-form-${this.dataset.section}`)?.querySelector('[name="add"]');
+    if (!addButton) return;
+    addButton.textContent = window.variantStrings.soldOut;
+    document.getElementById(`price-${this.dataset.section}`)?.classList.add('visibility-hidden');
   }
 
   getVariantData() {
