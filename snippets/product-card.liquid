@@ -39,7 +39,7 @@
               </div>
             {%- endif -%}
 
-            <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ card_product.url }}" class="media media--square" data-product-images  data-section="{{ section.id }}-{{ card_product.id }}"> 
+            <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ product_collection.url }}/products/{{ card_product.handle }}" class="media media--square" data-product-images  data-section="{{ section.id }}-{{ card_product.id }}"> 
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
@@ -84,7 +84,7 @@
       </div>
   
       <div class="product-card__content">
-        <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ card_product.url }}" tabindex="-1" class="product-card__information">
+        <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ product_collection.url }}/products/{{ card_product.handle }}" tabindex="-1" class="product-card__information">
             {% if heading_level == 'h2' %}
           <h2 class="product-card__heading" id="title-{{ section_id }}-{{ card_product.id }}">
               {{ card_product.title | escape }}
