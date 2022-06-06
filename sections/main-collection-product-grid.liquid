@@ -14,9 +14,6 @@
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<script src="{{ 'ajaxinate.js' | asset_url }}" defer="defer"></script>
-
-
 
 {% comment %} {%- liquid
   if section.settings.child_collection == true and current_tags[0] != null
@@ -50,9 +47,11 @@
     <div>
      
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
-        {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
+        {% render 'facets', results: collection.products %}
       </aside>
 
       {% assign paginationNum = 12 %}
@@ -67,7 +66,7 @@
                   {%- for product in collection.products -%}
                     <li class="grid__item" data-product-id="{{ product.id }}">
                       {% render 'product-card',
-                        heading_level: 'h2',
+                        heading_level: 'h3',
                         card_product: product,
                         show_quick_add: section.settings.enable_quick_add,
                         section_id: section.id

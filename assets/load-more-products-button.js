@@ -7,7 +7,8 @@ class loadMoreProductsButton extends HTMLElement {
         if(this.querySelector('button')) {
             this.querySelector('button').addEventListener('click', this.loadMoreProducts.bind(this))
         }
-
+        
+        // IF NO MORE PRODUCTS, HIDE BUTTON
         if(document.querySelector('collection-grid')) {
             let CollectionProducs = document.querySelector('collection-grid'); 
             if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
@@ -16,7 +17,14 @@ class loadMoreProductsButton extends HTMLElement {
         }
     }
 
-
+    hide() {
+        this.style.display = 'none';
+    }
+    
+    reset() {
+        this.style.display = 'block';
+    }
+    
     loadMoreProducts() {
         let collectionHandle = this.dataset.collectionHandle;
         let collectionCount = this.dataset.collectionCount;
@@ -24,6 +32,7 @@ class loadMoreProductsButton extends HTMLElement {
 
         let CollectionProducs = document.querySelector('collection-grid'); 
         CollectionProducs.renderMoreProducts(parseInt(this.dataset.paginateBy));
+        
         if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
             this.style.display = 'none';
         }
