@@ -17,7 +17,6 @@ details[open] .summary__title {
   border-bottom: 0;
 }
 
-
 .accordion .summary__title+.icon-caret {
   height: calc(var(--font-heading-scale) * 0.6rem);
 }
@@ -41,6 +40,14 @@ details[open] .summary__title {
   text-transform: uppercase;
   font-size: var(--h6);
   padding-left: var(--level3);
+}
+
+@media only screen and (min-width: 930px) {
+  .accordion__title {
+    font-size: var(--normal);
+    padding-top: var(--level2);
+    padding-bottom: var(--level2);
+  }
 }
 
 .accordion .icon-accordion {
