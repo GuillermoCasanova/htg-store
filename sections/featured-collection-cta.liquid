@@ -1,0 +1,128 @@
+{{ 'section-featured-collection-cta.css' | asset_url | stylesheet_tag }}
+
+  <div class="featured-collection-cta-section__inner page-width">
+    <div class="featured-collection-cta-section__collection">
+        <div class="featured-collection-cta-section__images__image-container">
+          <div class="featured-collection-cta-section__images__image">
+            <img
+              srcset="{%- if section.settings.left-image.width >= 165 -%}{{ section.settings.left-image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.left-image.width >= 360 -%}{{ section.settings.left-image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.left-image.width >= 533 -%}{{ section.settings.left-image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if section.settings.left-image.width >= 720 -%}{{ section.settings.left-image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if section.settings.left-image.width >= 940 -%}{{ section.settings.left-image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if section.settings.left-image.width >= 1066 -%}{{ section.settings.left-image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ section.settings.left-image | image_url }} {{ section.settings.left-image.width }}w"
+              src="{{ section.settings.left-image | image_url: width: 533 }}"
+              sizes="(min-width: 600px) 50vw, 100vw"
+              alt="{{ section.settings.left-image.alt | escape }}"
+              class="motion-reduce"
+              aria-hidden="true"
+              loading="lazy"
+              width="{{ section.settings.left-image.width }}"
+              height="{{ section.settings.left-image.height }}"
+            >
+          </div>
+        </div>
+        <div>
+            <a href=" {{ section.settings.left-cta-url }}" rel="internal" title="{{ section.settings.left-cta-text }} {{ section.settings.collection-name }}">
+                {{ section.settings.left-cta-text }}
+            </a>
+        </div>
+    </div>
+    <div class="featured-collection-cta-section__collection">
+        <div class="featured-collection-cta-section__images__image-container">
+          <div class="featured-collection-cta-section__images__image">
+            <img
+              srcset="{%- if section.settings.right-image.width >= 165 -%}{{ section.settings.right-image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 360 -%}{{ section.settings.right-image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 533 -%}{{ section.settings.right-image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 720 -%}{{ section.settings.right-image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 940 -%}{{ section.settings.right-image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 1066 -%}{{ section.settings.right-image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ section.settings.right-image | image_url }} {{ section.settings.right-image.width }}w"
+              src="{{ section.settings.right-image | image_url: width: 533 }}"
+              sizes="(min-width: 600px) 50vw, 100vw"
+              alt="{{ section.settings.right-image.alt | escape }}"
+              class="motion-reduce"
+              aria-hidden="true"
+              loading="lazy"
+              width="{{ section.settings.right-image.width }}"
+              height="{{ section.settings.right-image.height }}"
+            >
+          </div>
+        </div>
+        <div>
+            <a href=" {{ section.settings.right-cta-url }}" rel="internal" title="{{ section.settings.right-cta-text }} {{ section.settings.collection-name }}">
+                {{ section.settings.right-cta-text }}
+            </a>
+        </div>
+    </div>
+  </div>  
+
+{% schema %}
+{
+  "name": "Featured Collection CTA",
+  "tag": "section",
+  "class": "featured-collection-cta-section",
+  "templates": [
+    "index",
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection Information"
+    },
+    {
+      "type": "text",
+      "id": "collection-name",
+      "label": "The customer facing name being used for this collection."
+    },
+    {
+      "type": "header",
+      "content": "Left Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "left-image",
+      "label": "CTA Text"
+    },
+    {
+      "type": "text",
+      "id": "left-cta-text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "url",
+      "id": "left-cta-url",
+      "label": "CTA URL",
+      "info": "The url the cta goes to, these should be written by hand if we're wanting to take customers to a filtered version of a collection. Example: /collections/concrete-jungle/mens or /collections/inner-city-love/womens/"
+    },
+    {
+      "type": "header",
+      "content": "Right Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "right-image",
+      "label": "CTA Text"
+    },
+    {
+      "type": "text",
+      "id": "right-cta-text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "url",
+      "id": "right-cta-url",
+      "label": "CTA URL",
+      "info": "The url the cta goes to, these should be written by hand if we're wanting to take customers to a filtered version of a collection. Example: /collections/concrete-jungle/mens or /collections/inner-city-love/womens/"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection CTA"
+    }
+  ]
+}
+{% endschema %}
