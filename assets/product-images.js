@@ -135,7 +135,7 @@ class ProductImagesSlideshow extends HTMLElement {
             this.slideshow.destroy(true, true); 
         }
         if(pToDestroy == 'thumbs' && this.slideshowThumbs) {
-            document.querySelector(this.selectors.thumbanils).classList.remove('swiper');
+            document.querySelector(this.selectors.thumbnails).classList.remove('swiper');
             document.querySelector(this.selectors.thumbnailsWrapper).classList.remove('swiper-wrapper');
             this.slideshowThumbs.detachEvents(); 
             this.slideshowThumbs.destroy(true, true); 
