@@ -739,23 +739,20 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
+    this.onVariantChange();
   }
 
   onVariantChange() {
-
     this.updateOptions();
     this.updateMasterVariantId();
     this.setSoldOutOptions()
     this.updateVariantInput();
     this.setChosenOption(); 
-
   }
-
 
   updateOptions() {
-    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+      this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
-
 
   setSoldOutOptions(resetOptions = false) {
    
@@ -763,105 +760,47 @@ class VariantSelects extends HTMLElement {
        productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
      }; 
 
- 
-     let selectors = {
-       primaryOptions: '[data-primary-option]',
-       secondaryOptions: '[data-secondary-option]'
-     };
- 
      let allProductVariants = data.productVariants;
-
-     if(this.tagName.toLowerCase() === 'variant-radios') {
-        let sizeOptions = [];
-        
-        this.querySelectorAll('input').forEach(function(elem) {
-          sizeOptions.push(elem); 
-          elem.parentElement.classList.remove('is-sold-out'); 
-          elem.disabled = false;
-          elem.setAttribute('aria-disabled', false);
-        }); 
-
-        for(var i = 0; i < allProductVariants.length; i++) {
-
-          if(allProductVariants[i].available == false) {
-
-            sizeOptions.forEach((elem) => {
-              if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
-                elem.parentElement.classList.add('is-sold-out'); 
-                elem.disabled = true;
-                elem.checked = false; 
-                elem.setAttribute('aria-disabled', true);
-              }
-            })
-
-          }
-        }
-
-        if(!this.currentVariant.available) {
-          if(this.querySelectorAll("radio:not([disabled])").length === 0) {
-            this.toggleAddButton('sold-out', true);
-            this.setChosenOption(false); 
-          } 
-
-          if(this.querySelectorAll("radio:not([disabled])").length > 0) {
-            this.toggleAddButton('variant-sold-out', true);
-            this.setChosenOption(); 
-          }
-        } else {
-          this.setChosenOption(); 
-          this.toggleAddButton(false, false);
-        }
-
-      } 
-    
-      if(this.tagName.toLowerCase() === 'variant-selects') {
         let sizeOptions = [];
 
-        this.querySelector('select').querySelectorAll("option").forEach(elem => {
-          elem.disabled = false;
-          sizeOptions.push(elem); 
-        });
+      this.querySelector('select').querySelectorAll("option").forEach(elem => {
+        elem.disabled = false;
+        sizeOptions.push(elem); 
+      });
 
-        for(var i = 0; i < allProductVariants.length; i++) {
-          if(allProductVariants[i].available == false) {
-            sizeOptions.forEach((elem) => {
-              if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
-                elem.disabled = true;
-                elem.checked = false; 
-              } 
-            })
-          } 
-        }
+      for(var i = 0; i < allProductVariants.length; i++) {
+        if(allProductVariants[i].available == false) {
+          sizeOptions.forEach((elem) => {
+            if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
+              elem.disabled = true;
+              elem.checked = false; 
+            } 
+          })
+        } 
+      }
 
+      if(!this.currentVariant.available) {
+        if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
+          this.toggleAddButton('sold-out', true);
+          this.setChosenOption(false); 
+        } 
 
-        console.log(this.currentVariant); 
-
-        if(!this.currentVariant.available) {
-          if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
-            this.toggleAddButton('sold-out', true);
-            this.setChosenOption(false); 
-          } 
-
-          if(this.querySelector('select').querySelectorAll("option:not([disabled])").length > 0) {
-            this.toggleAddButton('variant-sold-out', true);
-            this.setChosenOption(); 
-          }
-        } else {
+        if(this.querySelector('select').querySelectorAll("option:not([disabled])").length > 0) {
+          this.toggleAddButton('variant-sold-out', true);
           this.setChosenOption(); 
-          this.toggleAddButton(false, false);
         }
-
-      } 
+      } else {
+        this.setChosenOption(); 
+        this.toggleAddButton(false, false);
+      }
    }
 
   updateMasterVariantId() {
-    console.log(this.tagName + 'UPDATE VARIANT MASTER');
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
         return this.options[index] === option;
       }).includes(false);
     });
-    console.log(this.currentVariant); 
   }
 
   updateURL() {
@@ -922,7 +861,6 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(pSoldOutStatus, pDisableButton) {
-
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     let disable = pDisableButton; 
     if (!productForm) return;
@@ -978,6 +916,73 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
+    //this.setUpEvents();
+  }
+
+  updateOptions() {
+
+    if(this.querySelectorAll('input[type="radio"]:checked').length > 0) {
+      this.options = Array.from(this.querySelectorAll('input[type="radio"]:checked'), (input) => input.value);
+    } else {
+      this.options = Array.from(this.querySelectorAll('input[type="radio"]'), (input) => input.value);
+    }
+  }
+
+  updateMasterVariantId() {
+    this.currentVariant = this.getVariantData().find((variant) => {
+        return !variant.options.map((option, index) => {
+          return this.options[index] === option;
+        }).includes(false);
+    });
+  }
+
+  getVariantData() {
+    this.variantData = this.variantData === JSON.parse(this.querySelector('[type="application/json"]').textContent) ? this.variantData :  JSON.parse(this.querySelector('[type="application/json"]').textContent);
+    return this.variantData;
+  }
+
+  setSoldOutOptions() {
+    let data = {
+      productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
+    }; 
+
+    let allProductVariants = data.productVariants;
+
+       let sizeOptions = [];
+       
+       this.querySelectorAll('input').forEach(function(elem) {
+         sizeOptions.push(elem); 
+         elem.parentElement.classList.remove('is-sold-out'); 
+         elem.disabled = false;
+         elem.setAttribute('aria-disabled', false);
+       }); 
+
+       for(var i = 0; i < allProductVariants.length; i++) {
+         if(allProductVariants[i].available == false) {
+           sizeOptions.forEach((elem) => {
+
+             if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
+               elem.parentElement.classList.add('is-sold-out'); 
+               elem.disabled = true;
+               elem.setAttribute('aria-disabled', true);
+             }
+           })
+         }
+       }
+
+     
+       if(!this.currentVariant.available) {
+         if(this.querySelectorAll("input[type='radio']:not([disabled])").length === 0) {
+           this.toggleAddButton('sold-out', true);
+         } 
+
+         if(this.querySelectorAll("input[type='radio']:not([disabled])").length > 0) {
+           console.log('variant sold out')
+           this.toggleAddButton('variant-sold-out', true);
+         }
+       } else {
+         this.toggleAddButton(false, false);
+       }
   }
 
   setUpEvents() {
@@ -1021,36 +1026,8 @@ class VariantRadios extends VariantSelects {
       });
     }); 
 
-    this.onVariantChange();
 }
 
-  updateOptions() {
-    const fieldsets = Array.from(this.querySelectorAll('fieldset'));
-
-    this.options = fieldsets.map((fieldset) => {
-      
-      let array = Array.from(fieldset.querySelectorAll('input'));
-      let checkedValue = null; 
-
-      //
-      // Checks to see if there is a valid checked radio, if not, it checks the first valid one it can find and returns that option
-      //
-      if(array.find((radio) => radio.checked) !== undefined) {
-        checkedValue = array.find((radio) => radio.checked).value
-      } else {
-        array.some((radio) => {
-          if(radio.disabled == false) {
-            radio.checked = true; 
-            checkedValue = radio.value; 
-            return true
-          }
-        });
-       }
-
-       return checkedValue; 
-    });
-
-  }
 }
 
 customElements.define('variant-radios', VariantRadios);
