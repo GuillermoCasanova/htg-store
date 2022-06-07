@@ -1,9 +1,9 @@
 {{ 'section-featured-collection-cta.css' | asset_url | stylesheet_tag }}
 
-  <div class="featured-collection-cta-section__inner page-width">
-    <div class="featured-collection-cta-section__collection">
-        <div class="featured-collection-cta-section__images__image-container">
-          <div class="featured-collection-cta-section__images__image">
+  <div class="featured-collection-cta-section__inner">
+    <a href=" {{ section.settings.left-cta-url }}" rel="internal" title="{{ section.settings.left-cta-text }} {{ section.settings.collection-name }}" class="featured-collection-cta-section__collection">
+        <div class="featured-collection-cta-section__collection__image-container">
+          <div class="featured-collection-cta-section__collection__image">
             <img
               srcset="{%- if section.settings.left-image.width >= 165 -%}{{ section.settings.left-image | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if section.settings.left-image.width >= 360 -%}{{ section.settings.left-image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -16,22 +16,20 @@
               sizes="(min-width: 600px) 50vw, 100vw"
               alt="{{ section.settings.left-image.alt | escape }}"
               class="motion-reduce"
-              aria-hidden="true"
               loading="lazy"
               width="{{ section.settings.left-image.width }}"
               height="{{ section.settings.left-image.height }}"
             >
           </div>
         </div>
-        <div>
-            <a href=" {{ section.settings.left-cta-url }}" rel="internal" title="{{ section.settings.left-cta-text }} {{ section.settings.collection-name }}">
-                {{ section.settings.left-cta-text }}
-            </a>
+        <div class="featured-collection-cta-section__collection__text">
+            {{ section.settings.left-cta-text }}
         </div>
-    </div>
-    <div class="featured-collection-cta-section__collection">
-        <div class="featured-collection-cta-section__images__image-container">
-          <div class="featured-collection-cta-section__images__image">
+    </a>
+    
+    <a href=" {{ section.settings.right-cta-url }}" rel="internal" title="{{ section.settings.right-cta-text }} {{ section.settings.collection-name }}" class="featured-collection-cta-section__collection">
+        <div class="featured-collection-cta-section__collection__image-container">
+          <div class="featured-collection-cta-section__collection__image">
             <img
               srcset="{%- if section.settings.right-image.width >= 165 -%}{{ section.settings.right-image | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if section.settings.right-image.width >= 360 -%}{{ section.settings.right-image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -44,20 +42,17 @@
               sizes="(min-width: 600px) 50vw, 100vw"
               alt="{{ section.settings.right-image.alt | escape }}"
               class="motion-reduce"
-              aria-hidden="true"
               loading="lazy"
               width="{{ section.settings.right-image.width }}"
               height="{{ section.settings.right-image.height }}"
             >
           </div>
         </div>
-        <div>
-            <a href=" {{ section.settings.right-cta-url }}" rel="internal" title="{{ section.settings.right-cta-text }} {{ section.settings.collection-name }}">
-                {{ section.settings.right-cta-text }}
-            </a>
+        <div  class="featured-collection-cta-section__collection__text">
+            {{ section.settings.right-cta-text }}
         </div>
     </div>
-  </div>  
+    </a>  
 
 {% schema %}
 {

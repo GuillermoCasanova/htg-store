@@ -24,7 +24,6 @@ if (!customElements.get('product-form')) {
   
     onSubmitHandler(evt) {
       evt.preventDefault();
-      this.cartNotification.setActiveElement(document.activeElement);
       
       const submitButton = this.querySelector('[type="submit"]');
   
@@ -42,13 +41,12 @@ if (!customElements.get('product-form')) {
         .then((response) => response.json())
         .then((parsedState) => {
           console.log(parsedState);
-         // this.cartNotification.open(true);
         })
         .catch((e) => {
           console.error(e);
         })
         .finally(() => {
-          console.log('finally!');
+          document.querySelector('cart-off-canvas').open(true);
           submitButton.classList.remove('loading');
           submitButton.removeAttribute('disabled');
         });
