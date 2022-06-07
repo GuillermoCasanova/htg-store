@@ -18,9 +18,56 @@
         "cta-url": "",
         "cta-url-text": ""
       }
+    },
+    "1654645496c068b051": {
+      "type": "featured-collection",
+      "blocks": {
+        "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
+          "type": "collection_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook14.png"
+          }
+        },
+        "121024ea-b182-4533-a61e-42f1675396ae": {
+          "type": "collection_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook24_1.png"
+          }
+        },
+        "605a9d86-4767-43aa-9955-7230fbc1c293": {
+          "type": "collection_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook32_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1fdfaba-4310-4665-86e8-ecc41592a16e",
+        "121024ea-b182-4533-a61e-42f1675396ae",
+        "605a9d86-4767-43aa-9955-7230fbc1c293"
+      ],
+      "settings": {
+        "heading": "The Concrete Jungle - Spring 2022 Collection",
+        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet consectetur odio orci rhoncus at consectetur. Semper diam morbi elementum urna, lobortis. Amet habitant augue tellus porttitor eget praesent neque.<\/p>",
+        "cta-url": "shopify:\/\/pages\/concrete-jungle-collection"
+      }
+    },
+    "165464550697d6e482": {
+      "type": "featured-collection-cta",
+      "settings": {
+        "collection-name": "Concrete Jungle",
+        "left-image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook14_1.png",
+        "left-cta-text": "Shop Mens",
+        "left-cta-url": "\/collections\/concrete-jungle\/mens",
+        "right-image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook6_1.png",
+        "right-cta-text": "Shop Womens",
+        "right-cta-url": "\/collections\/concrete-jungle\/womens"
+      }
     }
   },
   "order": [
-    "image_banner"
+    "image_banner",
+    "1654645496c068b051",
+    "165464550697d6e482"
   ]
 }
