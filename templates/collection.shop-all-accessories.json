@@ -19,16 +19,16 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection_url": "",
+        "collection_url": "shopify:\/\/collections\/concrete-jungle-accessories",
         "product_list": [
-          "baldwin-long-short-cream",
-          "century-camp-button-up-green-polkadot",
-          "century-camp-button-up-peach",
-          "inner-city-cinema-t-shirt-blonde",
-          "compton-short-black",
-          "concrete-jungle-t-shirt-black",
-          "century-camp-button-up-cream-polkadot",
-          "fairfax-twill-pant-black"
+          "htg-inner-city-necklace",
+          "htg-sport-necklace",
+          "htg-crest-necklace",
+          "iron-peace-cap-stone",
+          "htg®-pack-cap-cream",
+          "noble-sock-cream-1",
+          "noble-sock-hickory",
+          "noble-sock-stone"
         ],
         "enable_quick_add": true
       }
@@ -36,17 +36,35 @@
     "165403876742214c90": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Inner City",
-        "collection_url": "",
+        "collection_name": "Inner City Love",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-accessories",
         "product_list": [
-          "jazz-checkered-short-melon",
-          "jazz-checkered-short-black",
-          "inner-city-love-t-shirt-black-1",
-          "inner-city-love-cap-sage",
-          "1988-icon-denim-pant-black",
-          "1988-icon-denim-pant-indigo",
-          "luther-cargo-pant-clay",
-          "inner-city-love-t-shirt-terra-cotta"
+          "htg-weathered-cap-black",
+          "inner-city-love-cap-cream",
+          "houndstooth-cap-cream",
+          "htg-marvin-beanie-terra-cotta",
+          "htg®-weathered-sock-cream",
+          "htg-weathered-sock-terra-cotta",
+          "htg-select-heavyweight-sock-black",
+          "htg-select-heavyweight-sock-cream"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654618029729ec813": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Free-Fall",
+        "collection_url": "shopify:\/\/collections\/free-fall-accessories",
+        "product_list": [
+          "base-tote-bag-black",
+          "base-tote-bag-desert",
+          "airborne-cap-camo",
+          "airborne-cap-army",
+          "airborne-sock-black",
+          "airborne-sock-army",
+          "uniform-sock-bone",
+          "uniform-sock-camo"
         ],
         "enable_quick_add": true
       }
@@ -56,6 +74,7 @@
     "banner",
     "product-grid",
     "16540387627dd6a3af",
-    "165403876742214c90"
+    "165403876742214c90",
+    "1654618029729ec813"
   ]
 }
