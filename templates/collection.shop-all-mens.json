@@ -44,28 +44,10 @@
         "enable_quick_add": true
       }
     },
-    "165403876742214c90": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Inner City Love",
-        "collection_url": "",
-        "product_list": [
-          "jazz-checkered-short-melon",
-          "jazz-checkered-short-black",
-          "inner-city-love-t-shirt-black-1",
-          "inner-city-love-cap-sage",
-          "1988-icon-denim-pant-black",
-          "1988-icon-denim-pant-indigo",
-          "luther-cargo-pant-clay",
-          "inner-city-love-t-shirt-terra-cotta"
-        ],
-        "enable_quick_add": true
-      }
-    },
     "1654614390e8e5413f": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Inner City Love II",
+        "collection_name": "Inner City Love Vol. II",
         "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-men",
         "product_list": [
           "inner-city-love-t-shirt-terra-cotta",
@@ -76,6 +58,24 @@
           "htg-unisex-cardigan-charcoal",
           "coltrane-cargo-pant-coyote",
           "1988-icon-denim-pant-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "165403876742214c90": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Inner City Love Vol. I",
+        "collection_url": "",
+        "product_list": [
+          "jazz-checkered-short-melon",
+          "jazz-checkered-short-black",
+          "inner-city-love-t-shirt-black-1",
+          "inner-city-love-cap-sage",
+          "1988-icon-denim-pant-black",
+          "1988-icon-denim-pant-indigo",
+          "luther-cargo-pant-clay",
+          "inner-city-love-t-shirt-terra-cotta"
         ],
         "enable_quick_add": true
       }
@@ -122,8 +122,8 @@
     "product-grid",
     "1654614072e4a2b52f",
     "16540387627dd6a3af",
-    "165403876742214c90",
     "1654614390e8e5413f",
+    "165403876742214c90",
     "1654614804d002ed47",
     "1654615044eadf777e"
   ]

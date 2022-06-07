@@ -32,11 +32,54 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "165461637915913a64": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Inner City Love, Vol I",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-kids",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654616390eb010a1b": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Inner City Love, Vol. II",
+        "collection_url": "",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16546165111365823c": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Free-Fall",
+        "collection_url": "shopify:\/\/collections\/freefall-kids",
+        "product_list": [
+          "kids-worldwide-t-shirt-orange",
+          "kids-iron-peace-t-shirt-bone",
+          "kids-squadron-camp-button-up-sky",
+          "kids-squadron-camp-button-up-army",
+          "kids-airborne-jacket-desert",
+          "kids-airborne-pullover-hoodie-ath-grey",
+          "kids-airborne-sweatpant-ath-grey",
+          "kids-zero-gravity-pant-black"
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "1653675322c6e1e849"
+    "1653675322c6e1e849",
+    "165461637915913a64",
+    "1654616390eb010a1b",
+    "16546165111365823c"
   ]
 }

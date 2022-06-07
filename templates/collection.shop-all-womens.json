@@ -44,20 +44,56 @@
         "enable_quick_add": true
       }
     },
+    "1654616107f8647e02": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Inner City Love, Vol. II",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-womens",
+        "product_list": [
+          "htg-womens-knit-top-terra-cotta",
+          "htg-womens-knit-pant-terra-cotta",
+          "htg-unisex-cardigan-terra-cotta",
+          "womens-pattern-sweater-terra-cotta",
+          "htg-womens-knit-top-long-beach-navy",
+          "htg-womens-knit-pant-long-beach-navy",
+          "htg-unisex-cardigan-long-beach-navy",
+          "womens-pattern-sweater-long-beach-navy"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1653675292ee58c106": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Inner City Love Vol. 1",
-        "collection_url": "\/collections\/shop-all-womens\/inner-city-love",
+        "collection_name": "Inner City Love Vol. I",
+        "collection_url": "",
         "product_list": [
-          "htg-womens-knit-top-terra-cotta",
-          "htg-unisex-cardigan-terra-cotta",
-          "htg-womens-knit-pant-long-beach-navy",
           "womens-inner-city-ringer-top-athletic-grey",
-          "womens-inner-city-ringer-top-bone",
+          "womens-inner-city-ringer-top-black",
+          "womens-sinners-saints-ringer-top-mustard",
+          "womens-sinners-saints-ringer-top-brown",
           "womens-nomad-hoodie-green",
+          "womens-nomad-pant-green",
           "womens-nostalgia-flannel-top-blue",
-          "womens-nomad-pant-green"
+          "womens-nostalgia-pant-blue"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16546162643d494cbe": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Free-Fall",
+        "collection_url": "shopify:\/\/collections\/freefall-womens",
+        "product_list": [
+          "womens-command-top-orange",
+          "womens-command-short-orange",
+          "womens-command-body-suit-orange",
+          "womens-command-pant-orange",
+          "womens-command-top-cinnamon",
+          "womens-command-short-cinnamon",
+          "womens-command-body-suit-cinnamon",
+          "womens-command-pant-cinnamon"
         ],
         "enable_quick_add": true
       }
@@ -68,6 +104,8 @@
     "product-grid",
     "165461434128f6b9a3",
     "1653675322c6e1e849",
-    "1653675292ee58c106"
+    "1654616107f8647e02",
+    "1653675292ee58c106",
+    "16546162643d494cbe"
   ]
 }
