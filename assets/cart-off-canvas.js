@@ -12,6 +12,7 @@ class CartOffCanvas extends HTMLElement {
       this.overlay = this.querySelector('[data-cart-nofication-overlay]');
       this.cartToggle = document.querySelector('cart-toggle'); 
       this.cartFooter = this.querySelector('[data-cart-footer]'); 
+      this.cartOrderDetails = this.querySelector('[data-cart-order-details]');
   
       this.openCartMessage = this.querySelector('[data-open-cart-message]');
       this.addedItemMessage = this.querySelector('[data-added-item-message]');
@@ -38,6 +39,8 @@ class CartOffCanvas extends HTMLElement {
         this.showLatestCart();
         this.overlay.classList.add('is-visible');
       }
+
+      this.open(); 
     }
     
     showAddedItemMessage() {
@@ -261,27 +264,29 @@ class CartOffCanvas extends HTMLElement {
         let total = new Shopify.currency().formatMoney(parsedState.total_price);
         let formAction = this.querySelector('[data-cart-footer]').dataset.formAction; 
         let checkoutText = this.querySelector('[data-cart-footer]').dataset.checkoutText; 
-  
+
+        let orderDetailsTemplate = `
+          <div data-cart-notification-totals class="cart-nofication__totals">
+              <h3 class="cart-nofication__totals__subtotal">Total</h3>
+              <p class="cart-nofication__totals__subtotal-value" data-cart-subtotal>
+              ${total}
+              </p>
+          </div>`;
   
         let cartFooterTemplate = `
-        <div data-cart-notification-totals class="cart-nofication__totals">
-            <h3 class="cart-nofication__totals__subtotal">Subtotal</h3>
-            <p class="cart-nofication__totals__subtotal-value" data-cart-subtotal>
-            ${total}
-            </p>
-        </div>
-        <div class="cart-notification__links">
-          <form action="${formAction}" method="post" id="cart">
-            <button class="button button--primary button--full-width" name="checkout" form="cart">
-              ${checkoutText}
-            </button>
-          </form>
-        </div>`;
+          <div class="cart-notification__links">
+            <form action="${formAction}" method="post" id="cart">
+              <button class="button button--primary button--full-width" name="checkout" form="cart">
+                ${checkoutText}
+              </button>
+            </form>
+          </div>`;
         
   
         if(products.length <= 0) {
           this.showEmptyCartState();
         } else {
+          this.cartOrderDetails.innerHTML = orderDetailsTemplate; 
           this.productsContainer.innerHTML = productList; 
           this.cartFooter.innerHTML = cartFooterTemplate; 
           this.resetCartState(); 
@@ -381,6 +386,9 @@ class CartOffCanvas extends HTMLElement {
           let productIndex =  pProduct.line; 
           let prod_contents = pProduct; 
           
+          // </p>
+          // <p class="cart-notification__product__info__variant"> 
+          
           return  `
           <li>
               <div class="cart-notification__product">
@@ -396,9 +404,8 @@ class CartOffCanvas extends HTMLElement {
                     <h3 class="cart-notification__product__info__title">
                       ${pProduct.name}
                     </h3>
-                    <p class="cart-notification__product__info__variant"> 
+                   
                       ${variantTemplate(prod_contents)}
-                    </p>
                       <p class="cart-notification__product__info__price">
                          ${pProduct.subtotal}
                       </p>

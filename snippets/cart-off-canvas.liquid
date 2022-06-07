@@ -1,17 +1,14 @@
 <cart-off-canvas role="dialog">
     <div class="cart-notification-wrapper page-width" role="document">
-      <div id="cart-notification" class="cart-notification focus-inset"
+      <div id="cart-notification" class="cart-notification focus-inset "
            data-cart>
   
            <div class="cart-notification__inner">
           
             <div class="cart-notification__header" data-cart-header>
-              <h2 class="cart-notification__heading caption-large">
-                <span  aria-hidden="true">
-                  Your Bag
-                </span>
-                <span class="visually-hidden"  data-open-cart-message>
-                  Your Cart
+              <h2 class="cart-notification__heading">
+                <span  data-open-cart-message>
+                  Order Summary
                 </span>
                 <span class="visually-hidden"  data-added-item-message hidden aria-hidden="true">
                   {{ 'general.cart.item_added' | t }}
@@ -28,6 +25,10 @@
   
                 </span>
               </button>
+            </div>
+
+            <div class="cart-notification__order-details" data-cart-order-details>
+            
             </div>
   
             <div id="cart-notification-product" class="cart-notification-product">
