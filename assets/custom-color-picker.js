@@ -53,42 +53,36 @@ class CustomColorPicker extends HTMLElement {
         let sectionId = this.dataset.section; 
         let productContainer = document.querySelector(`[data-product-container][data-section="${sectionId}"]`); 
 
-        if(productContainer.querySelectorAll('variant-radios').length > 0) {
+
+        productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
+            if( elem.querySelector('[type="application/json"]')) {
+                let e = elem.querySelector('[type="application/json"]');
+                e.parentElement.removeChild(e); 
+            }
+            let newScript = document.createElement('script');
+            newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
+            newScript.type = "application/json";
+            elem.appendChild(newScript); 
+            elem.dispatchEvent(new Event('change'));
+        }); 
     
-            productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
-                if( elem.querySelector('[type="application/json"]')) {
-                    let e = elem.querySelector('[type="application/json"]');
-                    e.parentElement.removeChild(e); 
-                }
+        
+            productContainer.querySelectorAll(`variant-selects[data-section="${this.dataset.section}"]`).forEach((elem) => {
+                elem.dataset.url = this.getCurrentColor().dataset.productUrl;
+
+            if( elem.querySelector('[type="application/json"]')) {
+                let e = elem.querySelector('[type="application/json"]');
+                e.parentElement.removeChild(e); 
+            }
+
                 let newScript = document.createElement('script');
                 newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
                 newScript.type = "application/json";
                 elem.appendChild(newScript); 
                 elem.dispatchEvent(new Event('change'));
-            }); 
-        }
+            });
 
-        if(productContainer.querySelectorAll('variant-selects').length > 0) {
-          
-             productContainer.querySelectorAll('variant-selects').forEach((elem) => {
-                 elem.dataset.url = this.getCurrentColor().dataset.productUrl;
-
-                if( elem.querySelector('[type="application/json"]')) {
-                    let e = elem.querySelector('[type="application/json"]');
-                    e.parentElement.removeChild(e); 
-                }
-
-                 let newScript = document.createElement('script');
-                 newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
-                 newScript.type = "application/json";
-                 elem.appendChild(newScript); 
-                 elem.dispatchEvent(new Event('change'));
-             });
-
-        }
-
-   
-        // productContainer.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 
+            // productContainer.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 
 
         // console.log(productContainer.querySelector('[data-active-product-id]').value); 
 
@@ -137,11 +131,11 @@ class CustomColorPicker extends HTMLElement {
                                     ${processImageSrc(pSource, '360x')} 360w,
                                     ${processImageSrc(pSource, '533x')} 533w,
                                     ${processImageSrc(pSource, '720x')} 720w,
-                                    ${processImageSrc(pSource, '940xx')} 940w,
+                                    ${processImageSrc(pSource, '940x')} 940w,
                                     ${processImageSrc(pSource, '1066x')} 1066w,
                                     ${processImageSrc(pSource, '2000x')} 2000w"
                             src="${processImageSrc(pSource, '533x')}"
-                            sizes="(min-width: 1200px) 50vw, (min-width: 930px) 100vw-60vw, 100vw"
+                            sizes="(min-width: 1200px) 50vw, (min-width: 930px) 40vw, 100vw"
                             alt="${pAlt}"
                             aria-hidden="true"
                             width="1000"

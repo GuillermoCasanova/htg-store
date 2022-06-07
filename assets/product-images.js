@@ -133,12 +133,14 @@ class ProductImagesSlideshow extends HTMLElement {
             document.querySelector(this.selectors.slideshowWrapper).classList.remove('swiper-wrapper');
             this.slideshow.detachEvents(); 
             this.slideshow.destroy(true, true); 
+            this.slideshow = null; 
         }
         if(pToDestroy == 'thumbs' && this.slideshowThumbs) {
             document.querySelector(this.selectors.thumbnails).classList.remove('swiper');
             document.querySelector(this.selectors.thumbnailsWrapper).classList.remove('swiper-wrapper');
             this.slideshowThumbs.detachEvents(); 
             this.slideshowThumbs.destroy(true, true); 
+            this.slideshowThumbs = null; 
         }
     }
 }

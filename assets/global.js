@@ -746,18 +746,8 @@ class VariantSelects extends HTMLElement {
     this.updateOptions();
     this.updateMasterVariantId();
     this.setSoldOutOptions()
-
-    //this.removeErrorMessage();
-
-    if (!this.currentVariant || this.currentVariant.available == false) { 
-    } else {
-      // this.updateMedia();
-      // this.updateURL();
-      this.updateVariantInput();
-      //this.updateShareUrl();
-      this.setChosenOption(); 
-    }
-
+    this.updateVariantInput();
+    this.setChosenOption(); 
 
   }
 
@@ -806,6 +796,22 @@ class VariantSelects extends HTMLElement {
 
           }
         }
+
+        if(!this.currentVariant.available) {
+          if(this.querySelectorAll("radio:not([disabled])").length === 0) {
+            this.toggleAddButton('sold-out', true);
+            this.setChosenOption(false); 
+          } 
+
+          if(this.querySelectorAll("radio:not([disabled])").length > 0) {
+            this.toggleAddButton('variant-sold-out', true);
+            this.setChosenOption(); 
+          }
+        } else {
+          this.setChosenOption(); 
+          this.toggleAddButton(false, false);
+        }
+
       } 
     
       if(this.tagName.toLowerCase() === 'variant-selects') {
@@ -828,6 +834,8 @@ class VariantSelects extends HTMLElement {
         }
 
 
+        console.log(this.currentVariant); 
+
         if(!this.currentVariant.available) {
           if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
             this.toggleAddButton('sold-out', true);
@@ -847,24 +855,13 @@ class VariantSelects extends HTMLElement {
    }
 
   updateMasterVariantId() {
+    console.log(this.tagName + 'UPDATE VARIANT MASTER');
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
         return this.options[index] === option;
       }).includes(false);
     });
-  }
-
-  updateMedia() {
-    if (!this.currentVariant) return;
-    if (!this.currentVariant.featured_media) return;
-
-    const mediaGallery = document.getElementById(`MediaGallery-${this.dataset.section}`);
-    mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
-
-    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    modalContent.prepend(newMediaModal);
+    console.log(this.currentVariant); 
   }
 
   updateURL() {
@@ -981,8 +978,51 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
-    this.setSoldOutOptions();
   }
+
+  setUpEvents() {
+
+    let currentOption = this.querySelector("[data-current-option").textContent; 
+
+    function showOption(pColor) {
+        let colorContainer = document.querySelector('[data-current-option]'); 
+        colorContainer.textContent = pColor.replace(/[\n\r]+|[\s]{2,}/g, '') 
+    }
+
+    this.querySelectorAll('[data-option-label]').forEach((element) => {
+ 
+        element.addEventListener('click', (event)  =>{
+          let name = event.target.dataset.optionName; 
+          currentOption = name;
+          showOption(name)
+        })
+
+        element.addEventListener('mouseenter', (event)  =>{
+          let name = event.target.dataset.optionName; 
+          showOption(name)
+      })
+      
+
+        element.addEventListener('mouseleave', (event)  =>{
+            showOption(currentOption)
+        })
+    }); 
+
+
+    this.querySelectorAll('input[type="radio"]').forEach((element) => {
+      element.addEventListener('focus', (event)  =>{
+          let name = event.target.value; 
+          showOption(name)
+      });
+      
+    
+      element.addEventListener('blur', (event)  =>{
+          showOption(currentOption)
+      });
+    }); 
+
+    this.onVariantChange();
+}
 
   updateOptions() {
     const fieldsets = Array.from(this.querySelectorAll('fieldset'));
@@ -1014,3 +1054,8 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('variant-radios').setUpEvents(); 
+}); 
