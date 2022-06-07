@@ -1,0 +1,66 @@
+<cart-off-canvas role="dialog">
+    <div class="cart-notification-wrapper page-width" role="document">
+      <div id="cart-notification" class="cart-notification focus-inset"
+           data-cart>
+  
+           <div class="cart-notification__inner">
+          
+            <div class="cart-notification__header" data-cart-header>
+              <h2 class="cart-notification__heading caption-large">
+                <span  aria-hidden="true">
+                  Your Bag
+                </span>
+                <span class="visually-hidden"  data-open-cart-message>
+                  Your Cart
+                </span>
+                <span class="visually-hidden"  data-added-item-message hidden aria-hidden="true">
+                  {{ 'general.cart.item_added' | t }}
+                </span>
+              </h2>
+              <button type="button" class="cart-notification__close modal__close-button link link--text focus-inset">
+                <span class="visually-hidden">
+                  {{ 'accessibility.close' | t }} Cart
+                </span>
+                <span class="icon-close" aria-hidden="true">
+                  
+                </span>
+                <span class="icon-ring">
+  
+                </span>
+              </button>
+            </div>
+  
+            <div id="cart-notification-product" class="cart-notification-product">
+            
+            </div>
+  
+            <div class="cart-notification__footer" data-cart-footer  data-form-action="{{ routes.cart_url }}" data-checkout-text="{{ 'sections.cart.checkout' | t }}">
+  
+            
+            </div>
+        </div>
+  
+        <div class="cart-notification__empty-state">
+          <p>
+            Your Bag is Empty
+          </p>
+        </div>
+  
+        <button type="button" class="cart-notification__close modal__close-button link link--text visually-hidden">
+          <span class="visually-hidden">
+            {{ 'accessibility.close' | t }} Cart
+          </span>
+        </button>
+      </div>
+    </div>
+  
+    <div class="cart-notification-overlay" data-cart-nofication-overlay>
+    </div>
+  </cart-off-canvas>
+  
+  {% style %}
+    .cart-notification {
+       display: none;
+    }
+  {% endstyle %}
+  

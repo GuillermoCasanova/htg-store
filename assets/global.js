@@ -298,6 +298,140 @@ Shopify.CountryProvinceSelector.prototype = {
 };
 
 
+Shopify.utils = function() {}
+
+Shopify.utils.prototype = {
+
+    /**
+     * Return an object from an array of objects that matches the provided key and value
+     *
+     * @param {array} array - Array of objects
+     * @param {string} key - Key to match the value against
+     * @param {string} value - Value to get match of
+     */
+     findInstance: function(array, key, value) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i][key] === value) {
+          return array[i];
+        }
+      }
+    },
+  
+    /**
+     * Remove an object from an array of objects by matching the provided key and value
+     *
+     * @param {array} array - Array of objects
+     * @param {string} key - Key to match the value against
+     * @param {string} value - Value to get match of
+     */
+     removeInstance: function(array, key, value) {
+      var i = array.length;
+      while(i--) {
+        if (array[i][key] === value) {
+          array.splice(i, 1);
+          break;
+        }
+      }
+  
+      return array;
+    },
+  
+    /**
+     * _.compact from lodash
+     * Remove empty/false items from array
+     * Source: https://github.com/lodash/lodash/blob/master/compact.js
+     *
+     * @param {array} array
+     */
+    compact: function(array) {
+      var index = -1;
+      var length = array == null ? 0 : array.length;
+      var resIndex = 0;
+      var result = [];
+  
+      while (++index < length) {
+        var value = array[index];
+        if (value) {
+          result[resIndex++] = value;
+        }
+      }
+      return result;
+    },
+  
+    /**
+     * _.defaultTo from lodash
+     * Checks `value` to determine whether a default value should be returned in
+     * its place. The `defaultValue` is returned if `value` is `NaN`, `null`,
+     * or `undefined`.
+     * Source: https://github.com/lodash/lodash/blob/master/defaultTo.js
+     *
+     * @param {*} value - Value to check
+     * @param {*} defaultValue - Default value
+     * @returns {*} - Returns the resolved value
+     */
+    defaultTo: function(value, defaultValue) {
+      return (value == null || value !== value) ? defaultValue : value
+    }
+}
+
+
+Shopify.currency = function() {}
+
+Shopify.currency.prototype = {
+  formatMoney: function(cents, format) {
+ 
+    var moneyFormat = '${{amount}}';
+
+    if (typeof cents === 'string') {
+      cents = cents.replace('.', '');
+    }
+
+    var value = '';
+    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+    var formatString = (format || moneyFormat);
+
+    function formatWithDelimiters(number, precision, thousands, decimal) {
+      precision = new Shopify.utils().defaultTo(precision, 2);
+      thousands = new Shopify.utils().defaultTo(thousands, ',');
+      decimal = new Shopify.utils().defaultTo(decimal, '.');
+
+      if (isNaN(number) || number == null) {
+        return 0;
+      }
+
+      number = (number / 100.0).toFixed(precision);
+
+      var parts = number.split('.');
+      var dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
+      var centsAmount = parts[1] ? (decimal + parts[1]) : '';
+
+      return dollarsAmount + centsAmount;
+    }
+    
+
+    switch (formatString.match(placeholderRegex)[1]) {
+      case 'amount':
+        value = formatWithDelimiters(cents, 2);
+        break;
+      case 'amount_no_decimals':
+        value = formatWithDelimiters(cents, 0);
+        break;
+      case 'amount_with_space_separator':
+        value = formatWithDelimiters(cents, 2, ' ', '.');
+        break;
+      case 'amount_no_decimals_with_comma_separator':
+        value = formatWithDelimiters(cents, 0, ',', '.');
+        break;
+      case 'amount_no_decimals_with_space_separator':
+        value = formatWithDelimiters(cents, 0, ' ');
+        break;
+    }
+
+    return formatString.replace(placeholderRegex, value);
+}
+}
+
+
 class MenuDrawer extends HTMLElement {
   constructor() {
     super();

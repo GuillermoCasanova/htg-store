@@ -1,7 +1,4 @@
 
-
-
-
 class CartOffCanvas extends HTMLElement {
     constructor() {
       super();
@@ -74,7 +71,7 @@ class CartOffCanvas extends HTMLElement {
   
       document.body.addEventListener('click', this.onBodyClick);
       //document.body.classList.add('overflow-hidden-tablet');
-      document.querySelector('header').classList.add('menu-is-open'); 
+      //document.querySelector('header').classList.add('menu-is-open'); 
       this.overlay.classList.add('is-visible');
       this.showLatestCart();
     }
@@ -102,8 +99,9 @@ class CartOffCanvas extends HTMLElement {
     }
   
     showLatestCart() {
-  
-      fetch(`${routes.cart_get_url}`)
+      console.log(window.routes.cart_url); 
+
+      fetch(window.Shopify.routes.root + `${routes.cart_get_url}`)
       .then((response) => {
         return response.text();
       })
@@ -126,6 +124,8 @@ class CartOffCanvas extends HTMLElement {
         sections: this.getSectionsToRender().map((section) => section.section),
         sections_url: window.location.pathname
       });
+
+      console.log(line);
   
       fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
         .then((response) => {
@@ -539,4 +539,25 @@ class CartOffCanvas extends HTMLElement {
   
   customElements.define('cart-off-canvas', CartOffCanvas);
   
+
+
+class CartRemoveButton extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener('click', (event) => {
+      event.preventDefault();
+      if(this.closest('cart-items')) {
+        this.closest('cart-items').updateQuantity(this.dataset.index, 0);
+      } 
+
+      if(this.closest('cart-off-canvas')) {
+        this.closest('cart-off-canvas').updateQuantity(this.dataset.index, 0);
+      }
+    });
+  }
+
+}
+
+customElements.define('cart-remove-button', CartRemoveButton);
+   
   

@@ -54,19 +54,20 @@ class CustomColorPicker extends HTMLElement {
         let productContainer = document.querySelector(`[data-product-container][data-section="${sectionId}"]`); 
 
 
-        productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
-            if( elem.querySelector('[type="application/json"]')) {
-                let e = elem.querySelector('[type="application/json"]');
-                e.parentElement.removeChild(e); 
-            }
-            let newScript = document.createElement('script');
-            newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
-            newScript.type = "application/json";
-            elem.appendChild(newScript); 
-            elem.dispatchEvent(new Event('change'));
-        }); 
-    
+            
+            productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
+                if( elem.querySelector('[type="application/json"]')) {
+                    let e = elem.querySelector('[type="application/json"]');
+                    e.parentElement.removeChild(e); 
+                }
+                let newScript = document.createElement('script');
+                newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
+                newScript.type = "application/json";
+                elem.appendChild(newScript); 
+                elem.dispatchEvent(new Event('change'));
+            }); 
         
+            
             productContainer.querySelectorAll(`variant-selects[data-section="${this.dataset.section}"]`).forEach((elem) => {
                 elem.dataset.url = this.getCurrentColor().dataset.productUrl;
 

@@ -85,7 +85,7 @@ class HeaderDrawer  extends MenuDrawer {
 class CartToggle extends HTMLElement {
   constructor() {
     super(); 
-    this.cartNotification = document.querySelector('cart-notification');
+    this.cartNotification = document.querySelector('cart-off-canvas');
     this.cartCount = this.querySelector('[data-cart-count]');
     this.cartCountAria = this.querySelector('[data-cart-count-aria]');
     this.setUpEvents(); 
@@ -109,6 +109,7 @@ class CartToggle extends HTMLElement {
       event.currentTarget.classList.add('is-open');
       
         this.cartNotification.open(); 
+        
         document.querySelector('header-drawer').switchToCartToggle(); 
     
         // fetch('/cart.js', { 
