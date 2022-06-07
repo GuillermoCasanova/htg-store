@@ -5,14 +5,13 @@
 
 .image-banner-container {
   padding-bottom: 0;
+  margin-bottom: 0;
   background-color: rgb(var(--color-base-background-2));
-  margin-bottom: var(--level7);
 }
 
 .image-banner {
   position: relative;
   width: 100%;
-  margin-bottom: var(--level2);
   padding-bottom: 56.8%;
 }
 
@@ -20,20 +19,6 @@
 .image-banner a:focus .image-banner__cta {
   opacity: 1;
 }
-
-@media screen and (min-width: 1000px) {
-  .image-banner {
-    margin-bottom: var(--level3);
-  }
-}
-
-
-@media screen and (min-width: 1400px) {
-  .image-banner {
-    margin-bottom: 0;
-  }
-}
-
 
 @keyframes fade-in-from-bottom {
   0% {
