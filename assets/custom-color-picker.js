@@ -130,7 +130,7 @@ class CustomColorPicker extends HTMLElement {
 
             if(pImageType === 'slide') {
                 imageTemplate = `
-                <li class="slide swiper-slide"  data-product-images-slideshow-slide data-images-scroller-image data-product-images-modal-open data-id="${index}">
+                <li class="slide swiper-slide"  data-product-images-slideshow-slide  data-product-images-modal-open data-id="${index}">
                 <div class="product-images-slideshow__image-container">
                             <img
                             srcset="${processImageSrc(pSource, '155x')} 165w,
@@ -150,7 +150,9 @@ class CustomColorPicker extends HTMLElement {
                     </div>
                 </li> 
                 `; 
-            } else {
+            } 
+            
+            if(pImageType === 'thumbnail'){
                 imageTemplate = `
                 <li class="slide swiper-slide product-images-slideshow-thumbs__thumbnail-container"  data-product-images-slideshow-thumb   data-id="${index}">
                     <div class="product-images-slideshow-thumbs__thumbnail" role="button"  aria-label="Go to image ${index}" >
@@ -179,17 +181,16 @@ class CustomColorPicker extends HTMLElement {
 
         clearImages() 
 
-        images.forEach((image, index)=> {
-            document.querySelector('product-images-slideshow').appendSlide(createImageObj(image.src, '', index, 'slide')); 
-        });
-
-
         if(document.querySelector('product-images-slideshow').checkForThumbnailsActive()) {
             images.forEach((image, index)=> {
                 document.querySelector('product-images-slideshow').appendThumb(createImageObj(image.src, '', index, 'thumbnail')); 
             });
         }
-    
+
+        images.forEach((image, index)=> {
+            document.querySelector('product-images-slideshow').appendSlide(createImageObj(image.src, '', index, 'slide')); 
+        });
+
 
         let updateEvent = new Event("images-updated", {
             bubbles: true
