@@ -17,7 +17,6 @@ class CartOffCanvas extends HTMLElement {
       this.openCartMessage = this.querySelector('[data-open-cart-message]');
       this.addedItemMessage = this.querySelector('[data-added-item-message]');
   
-      
       document.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
   
       this.querySelectorAll('button[type="button"]').forEach((closeButton) =>
@@ -40,7 +39,6 @@ class CartOffCanvas extends HTMLElement {
         this.overlay.classList.add('is-visible');
       }
 
-      this.open(); 
     }
     
     showAddedItemMessage() {
