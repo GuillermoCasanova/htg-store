@@ -48,7 +48,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
-        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-womens",
+        "collection_url": "\/collections\/shop-all-womens\/inner-city-love-vol-ii-womens",
         "product_list": [
           "htg-womens-knit-top-terra-cotta",
           "htg-womens-knit-pant-terra-cotta",
@@ -66,7 +66,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love Vol. I",
-        "collection_url": "",
+        "collection_url": "\/collections\/shop-all-womens\/inner-city-love-vol-i-womens",
         "product_list": [
           "womens-inner-city-ringer-top-athletic-grey",
           "womens-inner-city-ringer-top-black",
@@ -84,7 +84,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Free-Fall",
-        "collection_url": "shopify:\/\/collections\/freefall-womens",
+        "collection_url": "\/collections\/shop-all-womens\/freefall-womens",
         "product_list": [
           "womens-command-top-orange",
           "womens-command-short-orange",

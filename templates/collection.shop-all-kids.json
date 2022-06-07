@@ -37,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
-        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii",
+        "collection_url": "\/collections\/shop-all-kids\/inner-city-love-vol-ii",
         "product_list": [
           "kids-inner-city-love-t-shirt-long-beach-navy",
           "kids-smokey-stripe-t-shirt-navy",
@@ -55,7 +55,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love, Vol I",
-        "collection_url": "shopify:\/\/collections\/inner-city-love-kids",
+        "collection_url": "\/collections\/shop-all-kids\/inner-city-love-kids",
         "product_list": [
           "kids-higher-power-t-shirt-smoke",
           "kids-spiritual-warefare-t-shirt-white",
@@ -73,7 +73,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Free-Fall",
-        "collection_url": "shopify:\/\/collections\/freefall-kids",
+        "collection_url": "\/collections\/shop-all-kids\/freefall-kids",
         "product_list": [
           "kids-worldwide-t-shirt-orange",
           "kids-iron-peace-t-shirt-bone",
