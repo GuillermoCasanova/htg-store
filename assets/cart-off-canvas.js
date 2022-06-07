@@ -18,7 +18,7 @@ class CartOffCanvas extends HTMLElement {
       this.addedItemMessage = this.querySelector('[data-added-item-message]');
   
       
-      this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
+      this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close().bind(this));
   
       this.querySelectorAll('button[type="button"]').forEach((closeButton) =>
         closeButton.addEventListener('click', this.close.bind(this))
@@ -91,7 +91,7 @@ class CartOffCanvas extends HTMLElement {
     
       document.body.removeEventListener('click', this.onBodyClick);
       document.body.classList.remove('overflow-hidden-tablet');
-      this.headerDrawer.close(); 
+      //this.headerDrawer.close(); 
       document.querySelector('header').classList.remove('menu-is-open'); 
       this.overlay.classList.remove('is-visible');
     }
@@ -388,7 +388,7 @@ class CartOffCanvas extends HTMLElement {
           
           // </p>
           // <p class="cart-notification__product__info__variant"> 
-          
+
           return  `
           <li>
               <div class="cart-notification__product">
