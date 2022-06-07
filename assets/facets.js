@@ -340,31 +340,39 @@ class CollectionGrid extends HTMLElement {
     // url.search = params; 
     window.history.replaceState(null, null, null); 
 
-    let productsToHide = this.querySelectorAll(`.grid__item:nth-child(${pNumToStartFrom}) ~ *`);
-
-    productsToHide.forEach(elem => {
-      elem.style.display = 'none';
-    });
-
     if(pFiltered) {
+      console.log(this.totalFilteredProducts.length);
+      console.log(parseInt(this.dataset.paginateBy));
+
+      if(this.totalFilteredProducts.length>= parseInt(this.dataset.paginateBy)) {
+        document.querySelector('load-more-products-button').style.display = 'none';
+      }
+
       if(this.totalFilteredProducts.length <= pNumToStartFrom) {
         document.querySelector('load-more-products-button').style.display = 'none';
       }
     } else {
+
+      let productsToHide = this.querySelectorAll(`.grid__item:nth-child(${pNumToStartFrom}) ~ *`);
+
+      productsToHide.forEach(elem => {
+        elem.style.display = 'none';
+      });
+
       if(this.totalProducts.length <= pNumToStartFrom) {
         document.querySelector('load-more-products-button').style.display = 'none';
       }
     }
-
   } 
 
 
   renderMoreProducts(pNumToShowMore) {
+    console.log(pNumToShowMore); 
      let productsToAdd = this.totalProducts.slice(this.totalProductsShowing.length, this.totalProductsShowing.length + pNumToShowMore);
      this.totalProductsShowing = [...this.totalProductsShowing, ...productsToAdd]
-
-     productsToAdd.forEach((productJSON)=> {
-        this.querySelector(`[data-product-id="${productJSON.id}"]`).style.display = 'block';
+     this.totalProductsShowing.forEach((productJSON)=> {
+       console.log(productJSON);
+        this.querySelector(`.grid__item[data-product-id="${productJSON.id}"]`).style.display = 'block';
      });
 
      window.history.replaceState({page: this.section}, '', '?section=' + (this.section += 1));
@@ -376,15 +384,20 @@ class CollectionGrid extends HTMLElement {
     this.totalProductsShowing = pProductsToShow.slice(0, this.paginateBy);
 
     let products = this.querySelectorAll(`.grid__item`);
-
+    
     products.forEach(product => {
       product.style.display = 'none';
     });
 
 
     products.forEach(product => {
-        if(this.totalProductsShowing .some(e => e.id === parseInt(product.dataset.productId))) {
+
+      if(this.totalFilteredProducts.some(e => e.id == parseInt(product.dataset.productId))) {
+          console.log('SHOW');
+          console.log(product);
           product.style.display = 'block'; 
+        } else {
+          product.style.display = 'none'; 
         }
     }); 
 

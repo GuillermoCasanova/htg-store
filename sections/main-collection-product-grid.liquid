@@ -61,7 +61,7 @@
               <div class="loading-overlay gradient"></div>
       
               <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
-                grid product-grid EndlessScroll">
+                grid product-grid">
                 {% paginate collection.products by 1000 %}
                   {%- for product in collection.products -%}
                     <li class="grid__item" data-product-id="{{ product.id }}">

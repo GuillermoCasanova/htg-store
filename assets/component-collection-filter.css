@@ -257,7 +257,7 @@
 }
 
 .filter-color__label__swatch[data-color="filter-color:yellow"] {
-    background-color: #EBC186;
+    background-color: #f3d36a;
 }
 
 .filter-color__label__swatch[data-color="filter-color:red"] {
@@ -279,6 +279,10 @@
 
 .filter-color__label__swatch[data-color="filter-color:purple"] {
     background-color: purple;
+}
+
+.filter-color__label__swatch[data-color="filter-color:orange"] {
+    background-color: rgb(220, 158, 45);
 }
 
 
