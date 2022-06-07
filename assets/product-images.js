@@ -117,6 +117,16 @@ class ProductImagesSlideshow extends HTMLElement {
         }
     }
 
+    appendThumb(pSlide) {
+        if(this.slideshowThumbs) {
+            this.slideshowThumbs.appendSlide(pSlide); 
+        }
+    }
+
+    checkForThumbnailsActive() {
+        return this.slideshowThumbs
+    }
+
     destroy(pToDestroy) {
         if(pToDestroy == 'slideshow'  && this.slideshow) {
             document.querySelector(this.selectors.slideshow).classList.remove('swiper');

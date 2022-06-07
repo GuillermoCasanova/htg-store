@@ -117,7 +117,7 @@ class CustomColorPicker extends HTMLElement {
         let imagesTemplate = ``;
 
         
-        function createImageObj(pSource, pAlt, pIndex) {
+        function createImageObj(pSource, pAlt, pIndex, pImageType) {
             let imageTemplate = ``; 
             let index = pIndex + 1;
 
@@ -128,22 +128,49 @@ class CustomColorPicker extends HTMLElement {
                 return imageSrc;
             }
 
-
-            imageTemplate = `
-               <li class="slide  swiper-slide"  data-product-images-slideshow-slide data-images-scroller-image data-product-images-modal-open data-id="${index}">
-                    <div class="product-images-slideshow__image-container">
-                    <picture>
-                        <source srcset="${processImageSrc(pSource, '1050x')}"  media="(min-width: 1300px)">
-                          <source srcset="${processImageSrc(pSource, '1000x')}"  media="(min-width: 975px)">
-                        <source srcset="${processImageSrc(pSource, '900x')}"  media="(min-width: 750px)">
-                        <img src="${processImageSrc(pSource, '800x')}" alt=""${pAlt}" height="1000" loading="lazy">
-                        </picture>
+            if(pImageType === 'slide') {
+                imageTemplate = `
+                <li class="slide swiper-slide"  data-product-images-slideshow-slide data-images-scroller-image data-product-images-modal-open data-id="${index}">
+                <div class="product-images-slideshow__image-container">
+                            <img
+                            srcset="${processImageSrc(pSource, '155x')} 165w,
+                                    ${processImageSrc(pSource, '360x')} 360w,
+                                    ${processImageSrc(pSource, '533x')} 533w,
+                                    ${processImageSrc(pSource, '720x')} 720w,
+                                    ${processImageSrc(pSource, '940xx')} 940w,
+                                    ${processImageSrc(pSource, '1066x')} 1066w,
+                                    ${processImageSrc(pSource, '2000x')} 2000w"
+                            src="${processImageSrc(pSource, '533x')}"
+                            sizes="(min-width: 1200px) 50vw, (min-width: 930px) 100vw-60vw, 100vw"
+                            alt="${pAlt}"
+                            aria-hidden="true"
+                            width="1000"
+                            height="1000"
+                        >
                     </div>
-              </li> 
-            `; 
+                </li> 
+                `; 
+            } else {
+                imageTemplate = `
+                <li class="slide swiper-slide product-images-slideshow-thumbs__thumbnail-container"  data-product-images-slideshow-thumb   data-id="${index}">
+                    <div class="product-images-slideshow-thumbs__thumbnail" role="button"  aria-label="Go to image ${index}" >
+                            <img
+                            srcset="${processImageSrc(pSource, '155x')} 165w,
+                                    ${processImageSrc(pSource, '360x')} 360w,
+                                    ${processImageSrc(pSource, '533x')} 533w"
+                            src="${processImageSrc(pSource, '533x')}"
+                            sizes="(min-width: 930px) 15vw, 25vw"
+                            alt="${pAlt}"
+                            aria-hidden="true"
+                            width="500"
+                            height="500"
+                        >
+                    </div>
+                </li> 
+                `;     
+            }
 
-            document.querySelector('product-images-slideshow').appendSlide(imageTemplate); 
-
+            return imageTemplate; 
          }
                 
         function clearImages() {
@@ -153,10 +180,16 @@ class CustomColorPicker extends HTMLElement {
         clearImages() 
 
         images.forEach((image, index)=> {
-            if(image.alt === null || image.alt.indexOf('swatch_') == -1) {
-                createImageObj(image.src, '', index);
-            }
+            document.querySelector('product-images-slideshow').appendSlide(createImageObj(image.src, '', index, 'slide')); 
         });
+
+
+        if(document.querySelector('product-images-slideshow').checkForThumbnailsActive()) {
+            images.forEach((image, index)=> {
+                document.querySelector('product-images-slideshow').appendThumb(createImageObj(image.src, '', index, 'thumbnail')); 
+            });
+        }
+    
 
         let updateEvent = new Event("images-updated", {
             bubbles: true
