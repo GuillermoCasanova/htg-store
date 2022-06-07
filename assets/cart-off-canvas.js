@@ -18,7 +18,7 @@ class CartOffCanvas extends HTMLElement {
       this.addedItemMessage = this.querySelector('[data-added-item-message]');
   
       
-      this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close().bind(this));
+      document.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
   
       this.querySelectorAll('button[type="button"]').forEach((closeButton) =>
         closeButton.addEventListener('click', this.close.bind(this))
