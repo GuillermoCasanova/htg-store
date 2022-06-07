@@ -28,9 +28,7 @@
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "heading"
       ],
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0970ab2c697742d1911752337a13d431.mp4",
