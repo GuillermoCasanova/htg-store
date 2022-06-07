@@ -66,7 +66,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love Vol. I",
-        "collection_url": "",
+        "collection_url": "\/collections\/shop-all-mens\/inner-city-love-mens-1",
         "product_list": [
           "jazz-checkered-short-melon",
           "jazz-checkered-short-black",
@@ -84,7 +84,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "City Of Angels",
-        "collection_url": "shopify:\/\/collections\/city-of-angels",
+        "collection_url": "\/collections\/shop-all-mens\/city-of-angels",
         "product_list": [
           "greetings-t-shirt-brick",
           "swap-meet-t-shirt-rust",
