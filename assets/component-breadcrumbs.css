@@ -19,6 +19,13 @@
   display: none;
 }
 
+@media screen and (min-width: 930px) {
+  .breadcrumbs--product-page {
+    display: block;
+    margin-bottom: calc(var(--level7));
+  }
+}
+
 .breadcrumbs__inner {
   display: flex;
 }
@@ -44,9 +51,7 @@
 
 
 @media screen and (min-width: 930px) {
-  .breadcrumbs__inner a {
-    font-size: var(--normal);
-  }
+  .breadcrumbs__inner a {}
 }
 
 .breadcrumbs__inner a:after {

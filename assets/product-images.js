@@ -10,17 +10,86 @@ class ProductImagesSlideshow extends HTMLElement {
             slideshow: '[data-product-images-slideshow]', 
             slideshowWrapper: '[data-product-images-slideshow-wrapper]',
             slides: '[data-product-images-slideshow-slide]',
+            thumbnails: '[data-product-images-slideshow-thumbs]',
+            thumbnailsWrapper: '[data-product-images-slideshow-thumbs-wrapper]',
+            thumbnailSlides: '[data-product-images-slideshow-thumb]',
             pagination: '[data-product-images-slideshow-pagination]',
             paginationWrapper: '[data-product-images-slideshow-pagination-wrapper]',
             paginationThumbs: '[data-product-images-slideshow-pagination-thumb]'
         }
 
+        this.mediaQueries = {
+            largeUp: window.matchMedia('(min-width: 930px)')
+        }
+        
         this.init(); 
-
-        console.log(this.selectors);
     }
   
     init() {
+        this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
+        this.handleLargeUp(this.mediaQueries.largeUp); 
+    } 
+    
+    handleLargeUp(pEvent) {
+        let slideshowProps = {}; 
+
+        if(pEvent.matches) {
+            console.log('RE INIT');
+            document.querySelector(this.selectors.thumbnails).classList.add('swiper'); 
+            document.querySelector(this.selectors.thumbnails).querySelector(this.selectors.thumbnailsWrapper).classList.add('swiper-wrapper');
+            document.querySelector(this.selectors.thumbnails).querySelectorAll(this.selectors.thumbnailSlides).forEach(element => {
+                element.classList.add('swiper-slide');
+            });
+
+            this.slideshowThumbs = new Swiper(this.querySelector(this.selectors.thumbnails), {
+                spaceBetween: 14,
+                slidesPerView: 4,
+                direction: 'horizontal',
+                loop: false
+            });
+
+        } else {
+            this.destroy('thumbs'); 
+        }
+
+
+        if(pEvent.matches) {
+            slideshowProps =  {
+                direction: 'horizontal', 
+                loop: true,
+                loopedSlides: 6,
+                preventInteractionOnTransition: true,
+                pagination: {
+                    el: this.selectors.pagination,
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<button aria-label="Slide to product image ' + (index + 1) + '" class="' + className + '"><span class="visually-hidden">' + 'Slide to product image ' + (index + 1) + "</span></button>";
+                    }
+                },
+                thumbs: {
+                    swiper: this.slideshowThumbs
+                }
+            }
+        } else {
+            slideshowProps = {
+                direction: 'horizontal', 
+                loop: true,
+                loopedSlides: 6,
+                preventInteractionOnTransition: true,
+                pagination: {
+                    el: this.selectors.pagination,
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<button aria-label="Slide to product image ' + (index + 1) + '" class="' + className + '"><span class="visually-hidden">' + 'Slide to product image ' + (index + 1) + "</span></button>";
+                    }
+                }
+            }
+        }
+
+        if(this.slideshow) {
+            this.destroy('slideshow'); 
+        }
+        
         const slideshowElem = document.querySelector(this.selectors.slideshow); 
         const that = this; 
         slideshowElem.classList.add('swiper'); 
@@ -29,48 +98,7 @@ class ProductImagesSlideshow extends HTMLElement {
             element.classList.add('swiper-slide');
         });
 
-        this.slideshow = new Swiper(this.querySelector(this.selectors.slideshow), {
-            direction: 'horizontal', 
-            loop: true,
-            loopedSlides: 6,
-            preventInteractionOnTransition: true,
-            pagination: {
-                el: this.selectors.pagination,
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<button aria-label="Slide to product image ' + (index + 1) + '" class="' + className + '"><span class="visually-hidden">' + 'Slide to product image ' + (index + 1) + "</span></button>";
-                }
-            },
-            zoom: {
-                maxRatio: 1.5
-            },
-            thumbs: {
-                swiper:  that.pagination
-            }
-           
-        });
-
-        console.log(this.slideshow); 
-    } 
-    initPagination() {
-        const paginationElem = document.querySelector(this.selectors.pagination); 
-        // paginationElem.classList.add('swiper'); 
-        // paginationElem.querySelector(this.selectors.paginationWrapper).classList.add('swiper-wrapper');
-        // paginationElem.querySelectorAll(this.selectors.paginationThumbs).forEach(element => {
-        //     element.classList.add('swiper-slide');
-        // });
-
-        // let className = "swiper-bullet"; 
-
-        // this.pagination = new Swiper(this.selectors.slideshow, {
-           
-        //     breakpoints: {
-        //         1000: {
-        //             enabled: false
-        //         }
-        //     }
-        // });
-
+        this.slideshow = new Swiper(this.querySelector(this.selectors.slideshow), slideshowProps);
     }
 
     appendSlide(pSlide) {
@@ -83,20 +111,24 @@ class ProductImagesSlideshow extends HTMLElement {
         if(this.slideshow) {
             this.slideshow.removeAllSlides(); 
         }
+
+        if(this.slideshowThumbs) {
+            this.slideshowThumbs.removeAllSlides(); 
+        }
     }
 
-    destroy() {
-        if(this.slideshow) {
+    destroy(pToDestroy) {
+        if(pToDestroy == 'slideshow'  && this.slideshow) {
             document.querySelector(this.selectors.slideshow).classList.remove('swiper');
             document.querySelector(this.selectors.slideshowWrapper).classList.remove('swiper-wrapper');
             this.slideshow.detachEvents(); 
             this.slideshow.destroy(true, true); 
         }
-        if(this.pagination) {
-            document.querySelector(this.selectors.pagination).classList.remove('swiper');
-            document.querySelector(this.selectors.paginationWrapper).classList.remove('swiper-wrapper');
-            this.pagination.detachEvents(); 
-            this.pagination.destroy(true, true); 
+        if(pToDestroy == 'thumbs' && this.slideshowThumbs) {
+            document.querySelector(this.selectors.thumbanils).classList.remove('swiper');
+            document.querySelector(this.selectors.thumbnailsWrapper).classList.remove('swiper-wrapper');
+            this.slideshowThumbs.detachEvents(); 
+            this.slideshowThumbs.destroy(true, true); 
         }
     }
 }

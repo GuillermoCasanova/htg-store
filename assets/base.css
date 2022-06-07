@@ -502,6 +502,10 @@ h6:empty {
   padding-top: var(--level6);
 }
 
+.master-padding-top--product-page {
+  padding-top: 0;
+}
+
 @media screen and (min-width: 930px) {
   .master-padding-top {
     padding-top: var(--level7);

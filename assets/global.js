@@ -781,23 +781,6 @@ class VariantSelects extends HTMLElement {
  
      let allProductVariants = data.productVariants;
 
-
-     console.log(this.currentVariant); 
-
-     //let isFullySoldOut = false;
-    //  if(this.tagName.toLowerCase() === 'variant-radios') {
-    //    if(!this.currentVariant || this.currentVariant.available == false) {
- 
-    //    }
-    //  }
- 
-   
-    //  if(this.tagName.toLowerCase() === 'variant-selects') {
-    //    if(!this.currentVariant || this.currentVariant.available == false) {
- 
-    //    }
-    //  }
-
      if(this.tagName.toLowerCase() === 'variant-radios') {
         let sizeOptions = [];
         
@@ -1000,25 +983,6 @@ class VariantRadios extends VariantSelects {
     super();
     this.setSoldOutOptions();
   }
-
-
-  // this.toggleAddButton();
-
-
-  // let isFullySoldOut = false;
-  // if(this.tagName.toLowerCase() === 'variant-radios') {
-  //   if(!this.currentVariant || this.currentVariant.available == false) {
-
-  //   }
-  // }
-
-
-  // if(this.tagName.toLowerCase() === 'variant-selects') {
-  //   if(!this.currentVariant || this.currentVariant.available == false) {
-
-  //   }
-  // }
-
 
   updateOptions() {
     const fieldsets = Array.from(this.querySelectorAll('fieldset'));

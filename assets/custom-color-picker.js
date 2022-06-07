@@ -51,7 +51,6 @@ class CustomColorPicker extends HTMLElement {
     updateVariantData() {
         const currentColor = this.getCurrentColor(); 
         let sectionId = this.dataset.section; 
-        console.log(sectionId); 
         let productContainer = document.querySelector(`[data-product-container][data-section="${sectionId}"]`); 
 
         if(productContainer.querySelectorAll('variant-radios').length > 0) {

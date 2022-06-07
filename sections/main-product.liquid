@@ -18,9 +18,10 @@
   {{ "accessibility.skip_to_product_info" | t }}
 </a>
 
-<div class="page-width">
+<div class="page-width master-padding-top  {% if template contains 'product' %}master-padding-top--product-page {% endif %}">
   {% render 'breadcrumbs' %}
 </div>
+
 <div class="product" data-product-container data-section="{{ section.id }}">
 
 
@@ -31,10 +32,24 @@
         {% unless image.alt contains 'swatch' %}
         <li class="slide"  data-product-images-slideshow-slide data-images-scroller-image data-product-images-modal-open data-id="{{ forloop.index }}">
           <div class="product-images-slideshow__image-container">
-            <picture>
-              <source srcset="{{ image.src | image_url: width: 900 }}"  media="(min-width: 750px)">
-                <img src="{{ image.src | image_url: width: 800 }}" alt="{{ image.alt | escape }}" width="100" height="500" loading="lazy">
-              </picture>
+
+            <img
+              srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ image | image_url }} {{ image.width }}w"
+              src="{{ image | image_url: width: 533 }}"
+              sizes="(min-width: 1200px) 50vw, (min-width: 930px) 100vw-60vw, 100vw"
+              alt="{{ image.alt | escape }}"
+              class="motion-reduce"
+              aria-hidden="true"
+              loading="lazy"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+            >
           </div>
         </li>
         {% endunless %}
@@ -42,6 +57,36 @@
       </ul> 
       <div  data-product-images-slideshow-pagination class="product-images-slideshow__pagination product-images-slideshow__pagination--mobile">
       </div>
+    </div>
+
+    <div data-product-images-slideshow-thumbs class="product-images-slideshow-thumbs  show-for-large-up" >
+      <ul  class="slides" data-product-images-slideshow-thumbs-wrapper>
+        {% for image in product.images %}
+          {% unless image.alt contains 'swatch' %}
+          <li class="slide product-images-slideshow-thumbs__thumbnail-container"  data-product-images-slideshow-thumb data-images-scroller-image  data-id="{{ forloop.index }}">
+            <div class="product-images-slideshow-thumbs__thumbnail" role="button"  aria-label="Go to image {{ forloop.index }}" >
+              <img
+                srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ image | image_url }} {{ image.width }}w"
+                src="{{ image | image_url: width: 533 }}"
+                sizes="(min-width: 930px) 15vw, 25vw"
+                alt="{{ image.alt | escape }}"
+                class="motion-reduce"
+                aria-hidden="true"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+              >
+            </div>
+          </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
     </div>
   </product-images-slideshow>
 
