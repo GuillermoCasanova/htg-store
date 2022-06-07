@@ -15,6 +15,17 @@
         "child_collection": true
       }
     },
+    "165461434128f6b9a3": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "The Coast",
+        "collection_url": "\/collections\/shop-all-womens\/the-coast",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1653675322c6e1e849": {
       "type": "collection-preview",
       "settings": {
@@ -55,6 +66,7 @@
   "order": [
     "banner",
     "product-grid",
+    "165461434128f6b9a3",
     "1653675322c6e1e849",
     "1653675292ee58c106"
   ]
