@@ -7,9 +7,6 @@
     z-index: 1;
 }
 
-.cart-notification-wrapper .cart-notification {
-    display: block;
-}
 
 .cart-notification {
     background-color: rgb(var(--color-background));
