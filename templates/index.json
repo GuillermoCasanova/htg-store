@@ -63,11 +63,22 @@
         "right-cta-text": "Shop Womens",
         "right-cta-url": "\/collections\/concrete-jungle\/womens"
       }
+    },
+    "1654659992853b6cdb": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "For The Inner City",
+        "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
+        "section-cta-url": "",
+        "right-image": "shopify:\/\/shop_images\/Mask_group.png",
+        "section-alignment": "flipped"
+      }
     }
   },
   "order": [
     "image_banner",
     "1654645496c068b051",
-    "165464550697d6e482"
+    "165464550697d6e482",
+    "1654659992853b6cdb"
   ]
 }
