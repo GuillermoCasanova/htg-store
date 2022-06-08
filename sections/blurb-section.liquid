@@ -35,6 +35,13 @@
         <div>
             {{ section.settings.body }}
         </div>
+
+        {% if section.settings.section-cta-url != blank %}
+        <a href="{{ section.settings.section-cta-url }}">
+            {{ section.settings.section-cta-text }}
+        </a>
+        {% endif %}
+        
     </div>
 {% schema %}
 {
@@ -63,12 +70,14 @@
     {
       "type": "url",
       "id": "section-cta-url",
-      "label": "CTA URL",
+      "label": "CTA URL (Optional)",
       "info": "The url the cta goes to. Can be written by hand or any predefined link in the site."
     },
     {
-      "type": "header",
-      "content": "Image"
+      "type": "text",
+      "id": "section-cta-label",
+      "label": "CTA Label",
+      "info": "Label for the CTA. Only appears if CTA URL is set."
     },
     {
       "type": "image_picker",

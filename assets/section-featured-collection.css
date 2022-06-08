@@ -64,8 +64,9 @@
 
 @media screen and (min-width: 930px) {
     .featured-collection-section__copy__body {
-        max-width: 50rem;
-        margin-bottom: var(--level9);
+        max-width: 60rem;
+        margin-bottom: var(--level10);
+        font-size: var(--h5);
     }
 }
 
@@ -81,7 +82,7 @@
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 930px) {
     .featured-collection-section__copy__cta {
         margin-bottom: var(--level9);
     }
@@ -111,8 +112,8 @@
 
 @media screen and (min-width: 930px) {
     .featured-collection-section__images {
-        column-gap: var(--level5);
-        max-width: 72rem;
+        column-gap: var(--level7);
+        max-width: 97rem;
     }
 }
 
