@@ -12,6 +12,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "d16da307-5df6-49f0-9814-e0f8eba8b9b0": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "The Coast",
+            "thumbnail": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_dragged.jpg",
+            "lookbook_url": ""
+          }
+        },
         "26d62055-b885-478c-83f6-90a390c47e5c": {
           "type": "archival-collection",
           "settings": {
@@ -19,18 +27,11 @@
             "thumbnail": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
             "lookbook_url": "shopify:\/\/pages\/concrete-jungle-collection"
           }
-        },
-        "d16da307-5df6-49f0-9814-e0f8eba8b9b0": {
-          "type": "archival-collection",
-          "settings": {
-            "collection_name": "The Coast",
-            "lookbook_url": ""
-          }
         }
       },
       "block_order": [
-        "26d62055-b885-478c-83f6-90a390c47e5c",
-        "d16da307-5df6-49f0-9814-e0f8eba8b9b0"
+        "d16da307-5df6-49f0-9814-e0f8eba8b9b0",
+        "26d62055-b885-478c-83f6-90a390c47e5c"
       ],
       "settings": {
         "heading": "Collections"
