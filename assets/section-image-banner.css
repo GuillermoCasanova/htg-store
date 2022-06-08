@@ -15,10 +15,19 @@
   padding-bottom: 56.8%;
 }
 
+
+@media screen and (min-width: 930px) {
+  .image-banner {
+    padding-bottom: 40%;
+  }
+}
+
+
 .image-banner a:hover .image-banner__cta,
 .image-banner a:focus .image-banner__cta {
   opacity: 1;
 }
+
 
 @keyframes fade-in-from-bottom {
   0% {

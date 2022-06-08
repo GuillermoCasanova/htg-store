@@ -108,15 +108,24 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 930px) {
     .featured-collection-section__images {
         column-gap: var(--level5);
+        max-width: 68rem;
     }
 }
+
 
 .featured-collection-section__images__image {
     position: relative;
     padding-bottom: 140%;
+}
+
+
+@media screen and (min-width: 600px) {
+    .featured-collection-section__images__image {
+        padding-bottom: 155%;
+    }
 }
 
 .featured-collection-section__images .featured-collection-section__images__image-container:first-child {
