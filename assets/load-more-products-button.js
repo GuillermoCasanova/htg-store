@@ -7,14 +7,10 @@ class loadMoreProductsButton extends HTMLElement {
         if(this.querySelector('button')) {
             this.querySelector('button').addEventListener('click', this.loadMoreProducts.bind(this))
         }
-        
-        // IF NO MORE PRODUCTS, HIDE BUTTON
-        if(document.querySelector('collection-grid')) {
-            let CollectionProducs = document.querySelector('collection-grid'); 
-            if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
-                this.style.display = 'none';
-            }
-        }
+
+        this.collectionTotal = 0; 
+        this.totalProducts = []; 
+        this.setCollectionTotal(); 
     }
 
     hide() {
@@ -23,6 +19,22 @@ class loadMoreProductsButton extends HTMLElement {
     
     reset() {
         this.style.display = 'block';
+    }
+
+    setCollectionTotal() {
+        const productContainerId = '[data-product-json]';
+
+        document.querySelectorAll(productContainerId).forEach((element)=> {
+          this.totalProducts.push(JSON.parse(element.textContent))
+        });
+
+        // IF NO MORE PRODUCTS, HIDE BUTTON
+        if(document.querySelector('collection-grid')) {
+            let CollectionProducs = document.querySelector('collection-grid'); 
+            if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
+                this.style.display = 'none';
+            }
+        }
     }
     
     loadMoreProducts() {
@@ -33,12 +45,15 @@ class loadMoreProductsButton extends HTMLElement {
         let CollectionProducs = document.querySelector('collection-grid'); 
         CollectionProducs.renderMoreProducts(parseInt(this.dataset.paginateBy));
         
-        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
+        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
             this.style.display = 'none';
         }
 
         // IF NO MORE PRODUCTS, HIDE BUTTON
-        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.dataset.collectionTotal)) {
+        console.log(CollectionProducs.getProductsRendered().length);
+        console.log(this.totalProducts.length); 
+
+        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
             this.style.display = 'none';
         }
     }

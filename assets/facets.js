@@ -335,6 +335,7 @@ class CollectionGrid extends HTMLElement {
       this.totalProducts.push(JSON.parse(element.textContent))
       this.totalProductsShowing = this.totalProducts.slice(0, productsToShow);
     });
+
   }
 
   setUpPagination(pNumToStartFrom, pFiltered) {
@@ -345,9 +346,6 @@ class CollectionGrid extends HTMLElement {
     window.history.replaceState(null, null, null); 
 
     if(pFiltered) {
-      console.log(this.totalFilteredProducts.length);
-      console.log(parseInt(this.dataset.paginateBy));
-
       if(this.totalFilteredProducts.length>= parseInt(this.dataset.paginateBy)) {
         document.querySelector('load-more-products-button').style.display = 'none';
       }
@@ -371,11 +369,9 @@ class CollectionGrid extends HTMLElement {
 
 
   renderMoreProducts(pNumToShowMore) {
-    console.log(pNumToShowMore); 
      let productsToAdd = this.totalProducts.slice(this.totalProductsShowing.length, this.totalProductsShowing.length + pNumToShowMore);
      this.totalProductsShowing = [...this.totalProductsShowing, ...productsToAdd]
      this.totalProductsShowing.forEach((productJSON)=> {
-       console.log(productJSON);
         this.querySelector(`.grid__item[data-product-id="${productJSON.id}"]`).style.display = 'block';
      });
 
@@ -397,8 +393,6 @@ class CollectionGrid extends HTMLElement {
     products.forEach(product => {
 
       if(this.totalFilteredProducts.some(e => e.id == parseInt(product.dataset.productId))) {
-          console.log('SHOW');
-          console.log(product);
           product.style.display = 'block'; 
         } else {
           product.style.display = 'none'; 
