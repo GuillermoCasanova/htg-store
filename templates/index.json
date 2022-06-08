@@ -56,10 +56,10 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Concrete Jungle",
-        "left-image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook14_1.png",
+        "left-image": "shopify:\/\/shop_images\/HTG.jpg",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "\/collections\/concrete-jungle\/mens",
-        "right-image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook6_1.png",
+        "right-image": "shopify:\/\/shop_images\/HTG__8.jpg",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "\/collections\/concrete-jungle\/womens"
       }
