@@ -696,7 +696,9 @@ variant-selects {
 }
 
 
-.product-form__submit__text {}
+.product-form__submit__text {
+  color: black !important;
+}
 
 .product-form__submit[disabled] {
   opacity: .35;
