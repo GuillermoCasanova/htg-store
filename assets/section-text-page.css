@@ -1,0 +1,10 @@
+.text-page__header {
+    width: 100%;
+    text-align: center;
+    padding-top: var(--level8);
+    padding-bottom: var(--level8);
+}
+
+.text-page__header__heading {
+    font-family: var(--tertiary-font-family);
+}

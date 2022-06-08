@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "header": {
+            "type": "main-page"
+        },
+        "main": {
+            "type": "stockists-lists"
+        }
+    },
+    "order": [
+        "header",
+        "main"
+    ]
+}

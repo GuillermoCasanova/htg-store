@@ -1,0 +1,51 @@
+
+{% style %}
+    .stockists-lists {
+        text-align: center
+    }
+
+{% endstyle %}
+
+<div class="stockists-lists">
+    lists
+</div>
+
+
+{% schema %}
+{
+  "name": "Stockists Lists",
+  "tag": "section",
+  "class": "stockists-lists  page-width",
+  "settings": [
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.page.settings.page.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stockist-list",
+      "name": "Stockist List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "country_region",
+          "label": "Countru or region"
+        },
+        {
+          "type": "html",
+          "id": "store_list",
+          "label": "List of stores",
+          "info": "List of stores, eachs store must be wrapped in a <li></li> tags to represent a list."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stockists Lists"
+    }
+  ]
+}
+{% endschema %}

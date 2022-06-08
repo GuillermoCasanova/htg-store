@@ -280,7 +280,7 @@ main {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-    font-size: .95rem;
+    font-size: 1rem;
   }
 }
 
@@ -522,7 +522,7 @@ h6:empty {
 }
 
 .page-width {
-  max-width: 105rem;
+  max-width: 107rem;
   margin: 0 auto;
   padding-left: var(--level3);
   padding-right: var(--level3);

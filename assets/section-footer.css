@@ -31,7 +31,7 @@
       'badge badge badge badge'
       'links links newsletter newsletter';
     column-gap: var(--level8);
-    max-width: 82rem;
+    max-width: 94rem;
     padding-left: var(--level9);
     padding-right: var(--level9);
     padding-top: calc(var(--level10) + var(--level3));
