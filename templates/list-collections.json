@@ -3,8 +3,9 @@
     "header": {
       "type": "header-list-collections",
       "settings": {
-        "heading": "",
-        "body": "",
+        "heading": "The Coast",
+        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet consectetur odio orci rhoncus at consectetur. Semper diam morbi elementum urna, lobortis. Amet habitant augue tellus porttitor eget praesent neque.<\/p>",
+        "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_dragged.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
