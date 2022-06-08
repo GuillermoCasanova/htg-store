@@ -220,6 +220,17 @@ cart-toggle {
     flex-direction: row;
 }
 
+cart-toggle.hide-for-large-up {
+    display: Flex;
+}
+
+@media only screen and (min-width: 930px) {
+    cart-toggle.hide-for-large-up {
+        display: none;
+    }
+}
+
+
 .header__icon--cart {
     width: 4rem;
     height: 3rem;
@@ -1025,7 +1036,7 @@ details[open]>.search-modal {
 
 @media screen and (min-width: 930px) {
 
-    .header__menu-item:hover span:after,
+    .header__actions-menuspan:after,
     .header__menu-item:focus span:after {
         width: 100%;
     }
@@ -1045,15 +1056,19 @@ details[open]>.search-modal {
     #Header Action Menus
 \*------------------------------------*/
 
-.header__actions-menu {
-    display: flex;
-    width: 100%;
-    max-width: 87%;
-    margin-right: 0;
-    min-width: 26rem;
-    grid-area: cart-drawer;
-    justify-self: flex-end;
-    position: relative;
+@media only screen and (min-width: 930px) {
+
+    .header__actions-menu {
+        display: flex;
+        width: 100%;
+        max-width: 87%;
+        margin-right: 0;
+        min-width: 26rem;
+        grid-area: cart-drawer;
+        justify-self: flex-end;
+        position: relative;
+    }
+
 }
 
 
