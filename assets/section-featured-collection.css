@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 930px) {
     .featured-collection-section {
-        padding-bottom: var(--level9);
+        padding-bottom: var(--level10);
     }
 }
 
@@ -22,7 +22,7 @@
 
 @media screen and (min-width: 930px) {
     .featured-collection-section__inner {
-        padding-top: var(--level10);
+        padding-top: calc(var(--level10) + var(--level2));
     }
 }
 
@@ -42,7 +42,8 @@
 @media screen and (min-width: 930px) {
     .featured-collection-section__copy__heading {
         max-width: 100%;
-        margin-bottom: var(--level8);
+        margin-bottom: var(--level9);
+        font-size: var(--h2);
     }
 }
 
@@ -64,7 +65,7 @@
 @media screen and (min-width: 930px) {
     .featured-collection-section__copy__body {
         max-width: 50rem;
-        margin-bottom: var(--level7);
+        margin-bottom: var(--level9);
     }
 }
 
@@ -111,7 +112,7 @@
 @media screen and (min-width: 930px) {
     .featured-collection-section__images {
         column-gap: var(--level5);
-        max-width: 68rem;
+        max-width: 72rem;
     }
 }
 
