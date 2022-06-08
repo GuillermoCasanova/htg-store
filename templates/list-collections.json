@@ -3,11 +3,29 @@
     "header": {
       "type": "header-list-collections",
       "settings": {
+        "heading": "",
+        "body": "",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1"
       }
     },
     "main": {
       "type": "main-list-collections",
+      "blocks": {
+        "26d62055-b885-478c-83f6-90a390c47e5c": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "The Concrete Jungle",
+            "thumbnail": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
+            "lookbook_url": "shopify:\/\/pages\/concrete-jungle-collection"
+          }
+        }
+      },
+      "block_order": [
+        "26d62055-b885-478c-83f6-90a390c47e5c"
+      ],
       "settings": {
+        "heading": "Collections"
       }
     }
   },
