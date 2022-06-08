@@ -3,11 +3,26 @@
     "header": {
       "type": "main-page",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "main": {
       "type": "stockists-lists",
+      "blocks": {
+        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "United States",
+            "store_list": "<li>1032 Space,Oklahoma City, OK<\/li>\n<li> Alumni, Brooklyn, NY<\/li>\n<li>Bodega, Massachusetts, BO<\/li>\n<li>Commonwealth, Virginia Beach, VA<\/li>\n<li>Corporate\/Status Ii Llc,Indianapolis, IN<\/li>\n<li>Heir Llc, Orlando, FL<\/li>"
+          }
+        }
+      },
+      "block_order": [
+        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3"
+      ],
       "settings": {
+        "page": ""
       }
     }
   },
