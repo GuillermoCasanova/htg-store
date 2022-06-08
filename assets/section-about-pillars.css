@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    #Section About Pillars
+\*------------------------------------*/
+
+.about-pillars {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgb(var(--color-base-background-2));
+}

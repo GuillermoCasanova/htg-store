@@ -1,0 +1,66 @@
+{{ 'section-about-pillars.css' | asset_url | stylesheet_tag }}
+
+<div class="about-header__inner">
+    {{ section.settings.heading_1 }}
+    {{ section.settings.body_1 }}
+
+
+    {{ section.settings.heading_2 }}
+    {{ section.settings.body_2 }}
+
+    {{ section.settings.heading_3 }}
+    {{ section.settings.body_3 }}
+</div>
+
+
+{% schema %}
+{
+  "name": "About Pillars",
+  "tag": "section",
+  "class": "about-pillars",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pillars"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Pillar 1 Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "body_1",
+      "label": "Pillar 1 Body"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Pillar 2 Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "body_2",
+      "label": "Pillar 2 Body"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Pillar 3 Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "body_3",
+      "label": "Pillar 3 Body"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Pillars"
+    }
+  ]
+}
+{% endschema %}
