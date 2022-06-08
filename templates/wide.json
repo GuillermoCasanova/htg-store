@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "introduction": {
+            "type": "about-introduction"
+        },
+        "pillars": {
+            "type": "about-introduction"
+        }
+    },
+    "order": [
+        "about-introduction",
+        "blurb-three-columns"
+    ]
+}
