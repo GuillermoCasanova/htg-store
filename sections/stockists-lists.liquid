@@ -13,6 +13,15 @@
       .stockists-lists {
         grid-template-columns: 1fr 1fr;
         text-align: left;
+        column-gap: var(--level3);
+      }
+    }
+
+    @media only screen and (min-width: 930px) {
+      .stockists-lists {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: var(--level10);
+        transform: translateX(5rem);
       }
     }
 
