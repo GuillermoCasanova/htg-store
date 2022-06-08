@@ -7,7 +7,15 @@
 {% endstyle %}
 
 <div class="stockists-lists">
-    lists
+  {% for block in section.blocks %}
+  <h2>
+    {{ block.country_region }}
+  </h2>
+  <ul class="stockist-list">
+      {{ block.store_list }}
+  </ul>
+  {% endfor %}
+
 </div>
 
 
