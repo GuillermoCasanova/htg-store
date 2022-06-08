@@ -280,11 +280,46 @@
           </ul>
         </nav>
       {%- endif -%}
+
+      <nav class="header__actions-menu  show-for-large-up">
+        <ul class="header__menu__list-menu " role="list">
+          <li>
+            <button  class=" header__menu-item  focus-inset">
+              <span >Search</span>
+            </button>
+          </li>
+          <li>
+            <a href="/account/login" class=" header__menu-item  focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+              <span {%- if link.current %} class="header__active-menu-item"{% endif %}>Account</span>
+            </a>
+
+          </li>
+          <li>
+            <cart-toggle data-toggle-type="text">
+              <button  class="header__icon header__icon--cart  focus-inset" id="cart-icon-bubble" data-cart-toggle aria-expanded="false">
+                {%- render 'icon-cart' -%}
+                <span class="visually-hidden" class="header__icon--cart__text" data-cart-toggle-text>My Bag</span>
+                  <div class="cart-count-bubble">
+                    {%- if cart.item_count < 100 -%}
+                      <span aria-hidden="true" data-cart-count>
+                        {{ cart.item_count }}
+                      </span>
+                    {%- endif -%}
+                    <span class="visually-hidden" data-cart-count-aria>
+                      {%- if cart.item_count > 0 -%}
+                       {{ 'sections.header.cart_count' | t: count: cart.item_count }}
+                      {%- endif -%}
+                    </span>
+                  </div>
+              </button>
+            </cart-toggle></li>
+        </ul>
+      </nav>
       
-      <cart-toggle>
+      <cart-toggle class="hide-for-large-up" data-toggle-type="text">
         <button  class="header__icon header__icon--cart  focus-inset" id="cart-icon-bubble" data-cart-toggle aria-expanded="false">
           {%- render 'icon-cart' -%}
-          <span class="visually-hidden">Cart</span>
+          <span class="visually-hidden header__icon--cart__text" data-cart-toggle-text>My Bag</span>
             <div class="cart-count-bubble">
               {%- if cart.item_count < 100 -%}
                 <span aria-hidden="true" data-cart-count>

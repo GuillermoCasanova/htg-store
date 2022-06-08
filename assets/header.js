@@ -89,11 +89,29 @@ class CartToggle extends HTMLElement {
     this.cartCount = this.querySelector('[data-cart-count]');
     this.cartCountAria = this.querySelector('[data-cart-count-aria]');
     this.setUpEvents(); 
+    this.setUpToggleType();
   }
   
   updateToggleQty(pCart) {
    this.cartCount.textContent = pCart.item_count; 
    this.cartCountAria.textContent = pCart.item_count > 1 ? `${pCart.item_count} Items` : `${pCart.item_count} Item`;
+  } 
+
+  setUpToggleType() {
+    let type = this.dataset.toggleType; 
+    let icon = this.querySelector('svg');
+    let text = this.querySelector('[data-cart-toggle-text]');
+    let button = this.querySelector('button'); 
+
+    if(type === 'text') {
+      icon.style.display = 'none';
+      text.classList.remove('visually-hidden');
+      button.classList.add('header__icon--cart--text');
+    }
+
+    if(type === 'icon') {
+      text.style.display = 'none';
+    }
   }
 
   setUpEvents() {
@@ -111,21 +129,6 @@ class CartToggle extends HTMLElement {
         this.cartNotification.open(); 
         
         document.querySelector('header-drawer').switchToCartToggle(); 
-    
-        // fetch('/cart.js', { 
-        //   method: 'GET',
-        //   headers: {
-        //   'Content-Type': 'application/json'
-        //   }
-        //   })
-        //   .then((response) => response.json())
-        //   .then((parsedState) => {
-        //     this.cartNotification.renderContents(parsedState);
-        //   })
-        //   .catch((e) => {
-        //     console.error(e);
-        //   });
-
     })
   }
 }

@@ -227,6 +227,7 @@ cart-toggle {
     top: -.15rem;
 }
 
+
 .header__icon svg {
     width: 100%;
     height: 100%;
@@ -251,6 +252,32 @@ cart-toggle {
     transition: all var(--duration-default) ease-in-out;
     margin-right: calc(-1 * var(--level3));
 }
+
+
+.header__icon--cart--text {
+    width: auto;
+    height: auto;
+    top: 0;
+    padding: var(--level3);
+    text-decoration: none;
+    list-style: none;
+    color: rgb(var(--color-base-text));
+    transition: all var(--duration-default) ease 0s;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-bottom: var(--level1);
+    font-size: var(--h4);
+    display: inline-block;
+}
+
+
+.header__icon--cart--text:hover,
+.header__icon--cart--text:focus {
+    text-decoration: underline;
+}
+
 
 /* 
 .header__icon--cart.is-open {
@@ -292,6 +319,13 @@ cart-toggle {
     }
 }
 
+
+.header__icon--cart--text .cart-count-bubble {
+    right: -.25rem;
+    bottom: 0;
+    top: .25rem;
+    margin-right: 0;
+}
 
 /* @media screen and (max-width: 989px) {
     menu-drawer ~ .header__icons .header__icon--account {
@@ -960,8 +994,8 @@ details[open]>.search-modal {
         z-index: 1;
     }
 
-    .header__menu-item:hover {
-        cursor: pointer;
+    .header__menu-item:hover,
+    .header__menu-item:focus {
         text-decoration: underline;
     }
 
@@ -1006,6 +1040,21 @@ details[open]>.search-modal {
 
 
 
+
+/*------------------------------------*\
+    #Header Action Menus
+\*------------------------------------*/
+
+.header__actions-menu {
+    display: flex;
+    width: 100%;
+    max-width: 87%;
+    margin-right: 0;
+    min-width: 26rem;
+    grid-area: cart-drawer;
+    justify-self: flex-end;
+    position: relative;
+}
 
 
 
