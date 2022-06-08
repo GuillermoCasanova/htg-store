@@ -1,8 +1,8 @@
-{{ 'section-blurb-section.css' | asset_url | stylesheet_tag }}
+{{ 'section-header-list-collections.css' | asset_url | stylesheet_tag }}
 
-<div class="blurb-section__inner">
-    <div class="blurb-section__image-container">
-        <div class="blurb-section__image">
+<div class="header-list-collections__inner">
+    <div class="header-list-collections__image-container">
+        <div class="header-list-collections__image">
             <img
                 srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -21,20 +21,20 @@
             >
         </div>
     </div>
-    <div class="blurb-section__copy">
-        <div class="blurb-section__copy__inner">
-            <h2 class="blurb-section__copy__heading">
+    <div class="header-list-collections__copy">
+        <div class="header-list-collections__copy__inner">
+            <h2 class="header-list-collections__copy__heading">
                 {{ section.settings.heading }}
             </h2>
             
-            <div class="blurb-section__copy__body">
+            <div class="header-list-collections__copy__body">
                 {{ section.settings.body }}
             </div>
 
-            {% if section.settings.section_cta_url != blank %}
-            <div  class="blurb-section__copy__body__cta">
-                <a href="{{ section.settings.section_cta_url }}">
-                    {{ section.settings.section_cta_text }}
+            {% if section.settings.collection_lookbook_url != blank %}
+            <div  class="header-list-collections__copy__body__cta">
+                <a href="{{ section.settings.collection_lookbook_url }}">
+                    View Collection
                 </a>
             </div>
             {% endif %}
@@ -66,9 +66,14 @@
       "label": "Section Body"
     },
     {
+      "type": "url",
+      "id": "collection_lookbook_url",
+      "label": "Featured Collection Lookbook Url"
+    },
+    {
       "type": "image_picker",
       "id": "image",
-      "label": "Section Image"
+      "label": "Featured Collection Image"
     },
     {
       "type": "header",
