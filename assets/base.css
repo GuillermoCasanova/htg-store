@@ -246,6 +246,14 @@ main {
   }
 }
 
+/*SMALL-UP*/
+@media screen and (min-width: 500px) {
+  :root {
+    font-size: .9rem;
+  }
+}
+
+
 /*MEDIUM-UP*/
 @media screen and (min-width: 700px) {
   :root {

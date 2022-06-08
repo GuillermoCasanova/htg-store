@@ -1,21 +1,68 @@
 
 {% style %}
     .stockists-lists {
-        text-align: center
+        text-align: center;
+        display: grid;
+        width: 100%;
+        max-width: 70rem;
+        margin-right: auto; 
+        margin-left: auto; 
+    }
+
+    @media only screen and (min-width: 600px) {
+      .stockists-lists {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+      }
+    }
+
+
+    .stockist-list {
+      width: 100%; 
+    }
+
+    .stockist-list h2 {
+      font-family: var(--tertiary-font-family);
+      font-size: var(--h4);
+      margin-bottom: var(--level6);
+    }
+
+
+    @media only screen and (min-width: 600px) {
+      .stockist-list h2 {
+        font-size: var(--h3);
+      }
+    }
+
+
+    .stockist-list ul {
+      margin-bottom: var(--level10);
+    }
+
+    .stockist-list li {
+      margin-bottom: var(--level2);
+      font-size: var(--normal);
+    }
+
+    @media only screen and (min-width: 600px) {
+      .stockist-list li {
+        font-size: var(--h6);
+      }
     }
 
 {% endstyle %}
 
 <div class="stockists-lists">
   {% for block in section.blocks %}
-  <h2>
-    {{ block.country_region }}
-  </h2>
-  <ul class="stockist-list">
-      {{ block.store_list }}
-  </ul>
+  <div class="stockist-list">
+    <h2>
+      {{ block.settings.country_region }}
+    </h2>
+    <ul>
+        {{ block.settings.store_list }}
+    </ul>
+  </div>
   {% endfor %}
-
 </div>
 
 
@@ -23,7 +70,7 @@
 {
   "name": "Stockists Lists",
   "tag": "section",
-  "class": "stockists-lists  page-width",
+  "class": "stockists-list page-width",
   "settings": [
     {
       "type": "page",
