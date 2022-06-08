@@ -51,6 +51,13 @@
             "country_region": "Japan",
             "store_list": "<li>Nubian, Ibaraki<\/li>"
           }
+        },
+        "13d2bca3-e9b2-4d86-ac0f-9e44a071b891": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Korea",
+            "store_list": "<li>Boontheshop, Seoul<\/li>"
+          }
         }
       },
       "block_order": [
@@ -59,7 +66,8 @@
         "82909324-575c-4e42-a3f4-686fff95663f",
         "3d6b906b-3027-4bb3-8d3e-d16286ae302d",
         "2e38cb20-ed69-4ea5-952b-1b240211b86b",
-        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a"
+        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a",
+        "13d2bca3-e9b2-4d86-ac0f-9e44a071b891"
       ],
       "settings": {
         "page": ""
