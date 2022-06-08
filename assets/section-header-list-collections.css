@@ -3,10 +3,19 @@
     padding-bottom: 0;
 }
 
+@media screen and (min-width:700px) {
+    .header-list-collections {
+        margin-top: -3rem;
+
+    }
+}
+
+
 
 @media screen and (min-width:700px) {
     .header-list-collections__inner {
         display: flex;
+        flex-direction: row-reverse;
     }
 }
 
@@ -29,19 +38,28 @@
 .header-list-collections__image {
     padding-bottom: 115%;
     position: relative;
+    overflow: hidden;
 }
 
 @media screen and (min-width:700px) {
     .header-list-collections__image {
         padding-bottom: 140%;
+        border-bottom: 1px solid rgb(var(--color-base-text));
     }
 }
 
 @media screen and (min-width:930px) {
     .header-list-collections__image {
-        padding-bottom: 100%;
+        padding-bottom: 120%;
     }
 }
+
+@media screen and (min-width:1300px) {
+    .header-list-collections__image {
+        padding-bottom: 105%;
+    }
+}
+
 
 
 
@@ -58,10 +76,15 @@
 
 @media screen and (min-width:700px) {
     .header-list-collections__image img {
-        height: 120%;
+        height: 105%;
     }
 }
 
+@media screen and (min-width:930px) {
+    .header-list-collections__image img {
+        object-position: bottom;
+    }
+}
 
 
 .header-list-collections__copy {
@@ -74,6 +97,12 @@
     .header-list-collections__copy {
         width: 50vw;
         border-left: 1px solid rgb(var(--color-base-text));
+    }
+}
+
+@media screen and (min-width:930px) {
+    .header-list-collections__copy {
+        width: 55vw;
     }
 }
 
@@ -95,6 +124,14 @@
     }
 }
 
+@media screen and (min-width:930px) {
+    .header-list-collections__copy__inner {
+        padding-bottom: var(--level10);
+    }
+}
+
+
+
 .header-list-collections__copy__heading {
     font-family: var(--tertiary-font-family);
     font-size: var(--h3);
@@ -113,10 +150,9 @@
 
 @media screen and (min-width:930px) {
     .header-list-collections__copy__heading {
-        font-size: var(--h3);
+        font-size: var(--h1);
     }
 }
-
 
 
 .header-list-collections__copy__body {
@@ -136,13 +172,13 @@
 @media screen and (min-width:930px) {
     .header-list-collections__copy__body {
         font-size: var(--h6);
-        max-width: 32rem;
+        max-width: 26rem;
     }
 }
 
 @media screen and (min-width: 1600px) {
     .header-list-collections__copy__body {
         font-size: var(--h4);
-        max-width: 25em;
+        max-width: 28rem;
     }
 }

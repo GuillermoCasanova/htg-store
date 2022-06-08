@@ -4,11 +4,32 @@
   <ul class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
     {% for block in section.blocks %}
       <li>
-        <div class="archival-collections__collection-thumb">
-          <img src="{{ block.settings.thumbnail }}" alt="{{ block.settings.collection_name }}" loading="lazy">
-          <a href="{{ block.settings.lookbook_url }}" rel="internal">
-          View Collection
-          </a>
+        <div class="archival-collection-thumb">
+          <div class="archival-collection-thumb__image-container">
+            <div class="archival-collection-thumb__image">
+              <img
+                srcset="{%- if block.settings.thumbnail.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if block.settings.thumbnail.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if block.settings.thumbnail.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if block.settings.thumbnail.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if block.settings.thumbnail.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {{ image | image_url }} {{ block.settings.thumbnail.width }}w"
+                src="{{ image | image_url: width: 533 }}"
+                sizes="(min-width: 930px) 30vw, 50vw"
+                alt="{{ block.settings.thumbnail.alt | escape }}"
+                class="motion-reduce"
+                aria-hidden="true"
+                loading="lazy"
+                width="{{ block.settings.thumbnail.width }}"
+                height="{{ block.settings.thumbnail.height }}"
+              >
+            </div>
+          </div>
+          <div class="archival-collection-thumb__name">
+            <a href="{{ block.settings.lookbook_url }}" rel="internal">
+            View Collection
+            </a>
+        </div>
       </div>
       </li>
     {% endfor %}
