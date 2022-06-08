@@ -23,11 +23,27 @@
             "country_region": "Australia",
             "store_list": "<li>Cabinet Noir, Perth<\/li>"
           }
+        },
+        "82909324-575c-4e42-a3f4-686fff95663f": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Canada",
+            "store_list": "<li>Cntrbnd, Toronto<\/li>\n<li>The Webster, Toronto<\/li>"
+          }
+        },
+        "3d6b906b-3027-4bb3-8d3e-d16286ae302d": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "United Kingdom",
+            "store_list": "<li>Selfridges, Birmingham<\/li>"
+          }
         }
       },
       "block_order": [
         "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3",
-        "ecac2876-664e-498e-9208-4e4d0b2eb610"
+        "ecac2876-664e-498e-9208-4e4d0b2eb610",
+        "82909324-575c-4e42-a3f4-686fff95663f",
+        "3d6b906b-3027-4bb3-8d3e-d16286ae302d"
       ],
       "settings": {
         "page": ""
