@@ -251,7 +251,7 @@
 }
 
 .filter-color__label__swatch[data-color="filter-color:blue"] {
-    background-color: #A4B;
+    background-color: rgb(70, 84, 194);
 }
 
 .filter-color__label__swatch[data-color="filter-color:green"] {

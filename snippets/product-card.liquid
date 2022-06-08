@@ -166,33 +166,35 @@
                       </legend>
                       <span class="quick-add-color-picker__colors">
                         {% for product in activeCollection.products %}
-                          <span class="quick-add-color-picker__color {% if product.handle == card_product.handle %}is-selected{% endif %}">
-                                <input type="radio" 
-                                  {% if card_product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
-                                  id="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}"
-                                  name="color" 
-                                  form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
-                                  value="{{ product.metafields.color_swatch.name | escape }}"
-                                  title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                                  data-color-option
-                                  data-product="{{ product | json | escape }}"
-                                  data-color-name="{{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}" 
-                                  data-product-title="{{ product.title }}" 
-                                  data-handle="{{ product.handle }}"
-                                  data-product-url="{{ product.url }}"
-                                  data-product-id="{{ product.id }}"
-                                  data-product-first-variant="{{ product.selected_variant.id }}"
-                                  data-swatch="{{ product.metafields.color_swatch.name }}"
-                                  class="quick-add-color-picker__input"
-                                  >
-                              <label class="quick-add-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                                <span class="quick-add-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+                          {% if product.metafields.color_swatch.name != blank and product.metafields.color_swatch.hex_color != blank %}
+                            <span class="quick-add-color-picker__color {% if product.handle == card_product.handle %}is-selected{% endif %}">
+                                  <input type="radio" 
+                                    {% if card_product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
+                                    id="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}"
+                                    name="color" 
+                                    form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                                    value="{{ product.metafields.color_swatch.name | escape }}"
+                                    title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                    data-color-option
+                                    data-product="{{ product | json | escape }}"
+                                    data-color-name="{{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}" 
+                                    data-product-title="{{ product.title }}" 
+                                    data-handle="{{ product.handle }}"
+                                    data-product-url="{{ product.url }}"
+                                    data-product-id="{{ product.id }}"
+                                    data-product-first-variant="{{ product.selected_variant.id }}"
+                                    data-swatch="{{ product.metafields.color_swatch.name }}"
+                                    class="quick-add-color-picker__input"
+                                    >
+                                <label class="quick-add-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                  <span class="quick-add-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
 
-                                </span>
-                                <span class="quick-add-color-picker__label__ring">
-                                </span>
-                              </label>
-                          </span>
+                                  </span>
+                                  <span class="quick-add-color-picker__label__ring">
+                                  </span>
+                                </label>
+                            </span>
+                          {%    endif    %}
                         {% endfor %}
                       </span>
                     </fieldset>
