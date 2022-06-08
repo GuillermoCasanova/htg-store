@@ -37,13 +37,29 @@
             "country_region": "United Kingdom",
             "store_list": "<li>Selfridges, Birmingham<\/li>"
           }
+        },
+        "2e38cb20-ed69-4ea5-952b-1b240211b86b": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Italy",
+            "store_list": "<li>Dejavu, Modena<\/li>\n<li>Luisa Via Roma, Campi Bisenzio<\/li>"
+          }
+        },
+        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Japan",
+            "store_list": "<li>Nubian, Ibaraki<\/li>"
+          }
         }
       },
       "block_order": [
         "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3",
         "ecac2876-664e-498e-9208-4e4d0b2eb610",
         "82909324-575c-4e42-a3f4-686fff95663f",
-        "3d6b906b-3027-4bb3-8d3e-d16286ae302d"
+        "3d6b906b-3027-4bb3-8d3e-d16286ae302d",
+        "2e38cb20-ed69-4ea5-952b-1b240211b86b",
+        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a"
       ],
       "settings": {
         "page": ""
