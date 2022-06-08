@@ -122,7 +122,7 @@
     
                     {% assign activeProduct = product %}
                     {% assign collectionName = collection.title | downcase | handleize -%}
-                    {% assign productName = product.title | downcase | split: "-" -%}
+                    {% assign productName = product.title | downcase | split: " - " -%}
                     {% assign productNameHandle = productName[0] | handleize %}
               
                     {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}
@@ -338,7 +338,7 @@
     
                     {% assign activeProduct = product %}
                     {% assign collectionName = collection.title | downcase | handleize -%}
-                    {% assign productName = product.title | downcase | split: "-" -%}
+                    {% assign productName = product.title | downcase | split: " - " -%}
                     {% assign productNameHandle = productName[0] | handleize %}
               
                     {%- if productNameHandle == collectionName and product.metafields.color_swatch.name -%}

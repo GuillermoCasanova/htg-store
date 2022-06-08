@@ -1,3 +1,11 @@
+/*------------------------------------*\
+    #Collection Template
+\*------------------------------------*/
+
+.product-grid-container {
+  margin-bottom: calc(var(--level10) + var(--level10));
+}
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;
@@ -44,7 +52,7 @@
   }
 }
 
-.collection__description > * {
+.collection__description>* {
   margin: 0;
 }
 

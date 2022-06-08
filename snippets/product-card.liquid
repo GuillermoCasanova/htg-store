@@ -154,7 +154,7 @@
               {% for collection in card_product.collections %}
 
                 {% assign collectionName = collection.title | downcase | handleize -%}
-                {% assign productName = card_product.title | downcase | split: "-" -%}
+                {% assign productName = card_product.title | downcase | split: " - " -%}
                 {% assign productNameHandle = productName[0] | handleize %}
 
                 {%- if productNameHandle == collectionName and card_product.metafields.color_swatch.name -%}
