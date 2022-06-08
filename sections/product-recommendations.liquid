@@ -25,8 +25,7 @@
     }
   }
 {%- endstyle -%}
-{% comment %} 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+
   <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
     {% if recommendations.performed and recommendations.products_count > 0 %}
       <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
@@ -44,7 +43,6 @@
       </ul>
     {% endif %}
   </product-recommendations>
-</div> {% endcomment %}
 
 {% javascript %}
   class ProductRecommendations extends HTMLElement {

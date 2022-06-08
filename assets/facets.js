@@ -136,6 +136,10 @@ class CollectionFilters extends HTMLElement {
       </div>`);
     }); 
 
+    if(this.colorFilters.length === 0) {
+      this.querySelector('[data-filter-id="color"]').style.display = 'none'; 
+    }
+
     this.sizeFilters.forEach(size => {
       this.querySelector(sizeFilterContainer).insertAdjacentHTML( 'beforeend', `
 
