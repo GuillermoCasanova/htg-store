@@ -84,13 +84,20 @@
 
 @media screen and (min-width: 930px) {
     .featured-collection-section__copy__cta {
-        margin-bottom: var(--level9);
+        margin-bottom: var(--level10);
     }
 }
 
 .featured-collection-section__copy__cta a {
     font-size: var(--h5);
 }
+
+@media screen and (min-width: 930px) {
+    .featured-collection-section__copy__cta a {
+        font-size: var(--h4);
+    }
+}
+
 
 .featured-collection-section__images {
     width: 100%;

@@ -226,14 +226,14 @@ main {
 /*X-SMALL*/
 @media screen and (min-width: 260px) {
   :root {
-    font-size: .9rem;
+    font-size: .8rem;
   }
 }
 
 /*SMALL-UP*/
 @media screen and (min-width: 370px) {
   :root {
-    font-size: .9rem;
+    font-size: .85rem;
   }
 }
 
