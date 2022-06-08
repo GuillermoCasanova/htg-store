@@ -1,14 +1,14 @@
 {
     "sections": {
-        "introduction": {
-            "type": "about-introduction"
-        },
-        "pillars": {
-            "type": "about-introduction"
+        "main": {
+            "type": "main-page",
+            "settings": {
+                "padding_top": 28,
+                "padding_bottom": 28
+            }
         }
     },
     "order": [
-        "about-introduction",
-        "blurb-three-columns"
+        "main"
     ]
 }
