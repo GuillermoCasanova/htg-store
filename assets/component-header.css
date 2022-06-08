@@ -999,15 +999,30 @@ details[open]>.search-modal {
         display: inline-block;
     }
 
+    .header__menu-item span {
+        position: relative;
+    }
+
+    .header__menu-item span:after {
+        height: 2px;
+        width: 100%;
+        content: " ";
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+    }
+
     .header__menu-item {
         position: relative;
         position: relative;
         z-index: 1;
     }
 
-    .header__menu-item:hover,
-    .header__menu-item:focus {
-        text-decoration: underline;
+    .header__menu-item:hover span:after,
+    .header__menu-item:focus span:after {
+        opacity: 1;
     }
 
 }
