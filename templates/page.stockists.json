@@ -17,25 +17,18 @@
             "store_list": "<li>Nordstrom<\/li>"
           }
         },
-        "ecac2876-664e-498e-9208-4e4d0b2eb610": {
-          "type": "stockist-list",
-          "settings": {
-            "country_region": "Australia",
-            "store_list": "<li>Cabinet Noir, Perth<\/li>"
-          }
-        },
-        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3": {
-          "type": "stockist-list",
-          "settings": {
-            "country_region": "United States",
-            "store_list": "<li>Union, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>\n<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>1032 Space, OK<\/li>\n<li>Next, OH<\/li>\n<li>Commonwealth, VA<\/li>"
-          }
-        },
         "3d6b906b-3027-4bb3-8d3e-d16286ae302d": {
           "type": "stockist-list",
           "settings": {
             "country_region": "United Kingdom",
             "store_list": "<li>Selfridges, Birmingham<\/li>"
+          }
+        },
+        "ecac2876-664e-498e-9208-4e4d0b2eb610": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Australia",
+            "store_list": "<li>Cabinet Noir, Perth<\/li>"
           }
         },
         "2e38cb20-ed69-4ea5-952b-1b240211b86b": {
@@ -45,18 +38,18 @@
             "store_list": "<li>Dejavu, Modena<\/li>\n<li>Luisa Via Roma, Campi Bisenzio<\/li>"
           }
         },
-        "82909324-575c-4e42-a3f4-686fff95663f": {
-          "type": "stockist-list",
-          "settings": {
-            "country_region": "Canada",
-            "store_list": "<li>Cntrbnd, Toronto<\/li>\n<li>The Webster, Toronto<\/li>"
-          }
-        },
         "afefe22e-c8fe-4f6b-b875-b0f1fd7d9e39": {
           "type": "stockist-list",
           "settings": {
             "country_region": "Taiwan",
             "store_list": "<li>Juice Taiwan, Taipei City<\/li>"
+          }
+        },
+        "82909324-575c-4e42-a3f4-686fff95663f": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Canada",
+            "store_list": "<li>Cntrbnd, Toronto<\/li>\n<li>The Webster, Toronto<\/li>"
           }
         },
         "13d2bca3-e9b2-4d86-ac0f-9e44a071b891": {
@@ -72,18 +65,33 @@
             "country_region": "Japan",
             "store_list": "<li>Nubian, Ibaraki<\/li>"
           }
+        },
+        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "United States",
+            "store_list": "<li>Union, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>"
+          }
+        },
+        "a01dccf3-b5cd-4765-9b25-63a7ae9ab885": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "United States",
+            "store_list": "<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>1032 Space, OK<\/li>\n<li>Next, OH<\/li>\n<li>Commonwealth, VA<\/li>"
+          }
         }
       },
       "block_order": [
         "3c87f196-d4b9-48e8-8412-3931ffbc5431",
-        "ecac2876-664e-498e-9208-4e4d0b2eb610",
-        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3",
         "3d6b906b-3027-4bb3-8d3e-d16286ae302d",
+        "ecac2876-664e-498e-9208-4e4d0b2eb610",
         "2e38cb20-ed69-4ea5-952b-1b240211b86b",
-        "82909324-575c-4e42-a3f4-686fff95663f",
         "afefe22e-c8fe-4f6b-b875-b0f1fd7d9e39",
+        "82909324-575c-4e42-a3f4-686fff95663f",
         "13d2bca3-e9b2-4d86-ac0f-9e44a071b891",
-        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a"
+        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a",
+        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3",
+        "a01dccf3-b5cd-4765-9b25-63a7ae9ab885"
       ],
       "settings": {
         "page": ""
