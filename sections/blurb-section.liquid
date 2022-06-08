@@ -1,0 +1,105 @@
+{{ 'section-featured-collection-cta.css' | asset_url | stylesheet_tag }}
+
+  <div class="featured-collection-cta-section__inner">
+        <div class="featured-collection-cta-section__collection__image-container">
+          <div class="featured-collection-cta-section__collection__image">
+            <img
+              srcset="{%- if section.settings.right-image.width >= 165 -%}{{ section.settings.right-image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 360 -%}{{ section.settings.right-image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 533 -%}{{ section.settings.right-image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 720 -%}{{ section.settings.right-image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 940 -%}{{ section.settings.right-image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if section.settings.right-image.width >= 1066 -%}{{ section.settings.right-image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ section.settings.right-image | image_url }} {{ section.settings.right-image.width }}w"
+              src="{{ section.settings.right-image | image_url: width: 533 }}"
+              sizes="(min-width: 600px) 50vw, 100vw"
+              alt="{{ section.settings.right-image.alt | escape }}"
+              class="motion-reduce"
+              loading="lazy"
+              width="{{ section.settings.right-image.width }}"
+              height="{{ section.settings.right-image.height }}"
+            >
+          </div>
+        </div>
+        <div  class="featured-collection-cta-section__collection__text">
+            <span>{{ section.settings.right-cta-text }}</span>
+        </div>
+    </div>
+
+    <div>
+
+        <h2>
+            {{ section.settings.heading }}
+        </h2>
+        
+        <div>
+            {{ section.settings.body }}
+        </div>
+    </div>
+{% schema %}
+{
+  "name": "Blurb Section",
+  "tag": "section",
+  "class": "blurb-section",
+  "templates": [
+    "index",
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Copy"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Section Body"
+    },
+    {
+      "type": "url",
+      "id": "section-cta-url",
+      "label": "CTA URL",
+      "info": "The url the cta goes to. Can be written by hand or any predefined link in the site."
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right-image",
+      "label": "CTA Text"
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "radio",
+      "id": "section-alignment",
+      "label": "Section Order on Desktop",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Image on Left"
+        },
+        {
+          "value": "flipped",
+          "label": "Image on Right"
+        }
+      ],
+      "default": "normal"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blurb Section"
+    }
+  ]
+}
+{% endschema %}
