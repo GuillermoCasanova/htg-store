@@ -1,14 +1,13 @@
 {
   "sections": {
     "header": {
-      "type": "header-list-collections"
+      "type": "header-list-collections",
+      "settings": {
+      }
     },
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square"
       }
     }
   },

@@ -19,9 +19,16 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "The Coast",
-        "collection_url": "\/collections\/shop-all-mens\/the-coast",
+        "collection_url": "\/collections\/mens\/the-coast",
         "product_list": [
-          "rosecrans-knit-bone"
+          "rosecrans-knit-bone",
+          "century-camp-button-up-pacific-blue",
+          "honor-peace-t-shirt-black",
+          "la-tank-black",
+          "neighborhood-pocket-tee-long-beach-blue",
+          "outside-t-shirt-black",
+          "studio-crewneck-bone",
+          "studio-short-grey"
         ],
         "enable_quick_add": true
       }
