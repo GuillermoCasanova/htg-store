@@ -107,7 +107,7 @@
 }
 
 .about-header__copy__inner {
-    padding: var(--level6);
+    padding: var(--level7);
     padding-top: var(--level9);
     padding-bottom: var(--level5);
 }
@@ -162,7 +162,7 @@
     margin-bottom: var(--level9);
     margin-right: auto;
     margin-left: auto;
-    max-width: 35rem;
+    max-width: 30rem;
 }
 
 @media screen and (min-width:700px) {

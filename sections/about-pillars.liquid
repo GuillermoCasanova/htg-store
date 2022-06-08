@@ -1,15 +1,36 @@
 {{ 'section-about-pillars.css' | asset_url | stylesheet_tag }}
 
-<div class="about-header__inner">
-    {{ section.settings.heading_1 }}
-    {{ section.settings.body_1 }}
-
-
-    {{ section.settings.heading_2 }}
-    {{ section.settings.body_2 }}
-
-    {{ section.settings.heading_3 }}
-    {{ section.settings.body_3 }}
+<div class="about-pillars__inner">
+    <div class="about-pillars__pillar">
+        <div class="about-pillars__pillar__copy">
+            <h2 class="about-pillars__pillar__copy__heading">
+            {{ section.settings.heading_1 }}
+            </h2>
+            <div class="about-pillars__pillar__copy__body">
+                {{ section.settings.body_1 }}
+            </div>
+        </div>
+    </div>
+    <div class="about-pillars__pillar">
+        <div class="about-pillars__pillar__copy">
+            <h2 class="about-pillars__pillar__copy__heading">
+            {{ section.settings.heading_2 }}
+            </h2>
+            <div class="about-pillars__pillar__copy__body">
+                {{ section.settings.body_2 }}
+            </div>
+        </div>
+    </div>
+    <div class="about-pillars__pillar">
+        <div class="about-pillars__pillar__copy">
+            <h2 class="about-pillars__pillar__copy__heading">
+            {{ section.settings.heading_3 }}
+            </h2>
+            <div class="about-pillars__pillar__copy__body">
+                {{ section.settings.body_3 }}
+            </div>
+        </div>
+    </div>
 </div>
 
 
