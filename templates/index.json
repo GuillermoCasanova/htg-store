@@ -58,10 +58,10 @@
         "collection-name": "Concrete Jungle",
         "left-image": "shopify:\/\/shop_images\/HTG.jpg",
         "left-cta-text": "Shop Mens",
-        "left-cta-url": "\/collections\/concrete-jungle\/mens",
+        "left-cta-url": "\/collections\/mens\/",
         "right-image": "shopify:\/\/shop_images\/HTG__8.jpg",
         "right-cta-text": "Shop Womens",
-        "right-cta-url": "\/collections\/concrete-jungle\/womens"
+        "right-cta-url": "\/collections\/womens\/"
       }
     },
     "1654659992853b6cdb": {
