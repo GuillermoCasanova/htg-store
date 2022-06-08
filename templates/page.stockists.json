@@ -1,14 +1,18 @@
 {
-    "sections": {
-        "header": {
-            "type": "main-page"
-        },
-        "main": {
-            "type": "stockists-lists"
-        }
+  "sections": {
+    "header": {
+      "type": "main-page",
+      "settings": {
+      }
     },
-    "order": [
-        "header",
-        "main"
-    ]
+    "main": {
+      "type": "stockists-lists",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
 }
