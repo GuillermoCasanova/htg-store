@@ -6,9 +6,50 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1654813444fcbcd438": {
+      "type": "about-header",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "body": "",
+        "section-alignment": "normal"
+      }
+    },
+    "16548135044f834bde": {
+      "type": "rich-text",
+      "blocks": {
+        "1654813504b65723f2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What if my order is not correct?<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1654813504b65723f2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every so often mistakes do happen but we will do our best to fix it. If you notice a mistake with your order, please contact help@honorthegift.co and we will look into it. Please include your order number at all times when emailing us.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1654813504b65723f2-0",
+        "1654813504b65723f2-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1654813444fcbcd438",
+    "16548135044f834bde"
   ]
 }
