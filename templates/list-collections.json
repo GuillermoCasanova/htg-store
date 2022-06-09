@@ -78,6 +78,13 @@
             "collection_name": "Free-Fall",
             "lookbook_url": ""
           }
+        },
+        "221788e1-17ca-4b5c-96a6-3d24e340e360": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Free-Fall Women",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -89,7 +96,8 @@
         "91af92db-e317-40cb-bc57-c83ff68cdf68",
         "9168c99b-4b47-4bd3-8717-623789b118cf",
         "13f5ebd8-900a-405f-abaa-6c4f51973857",
-        "9b56abc0-1fe4-4fcf-af95-41e13047531f"
+        "9b56abc0-1fe4-4fcf-af95-41e13047531f",
+        "221788e1-17ca-4b5c-96a6-3d24e340e360"
       ],
       "settings": {
         "heading": "Collections"
