@@ -64,6 +64,20 @@
             "collection_name": "City of Angels",
             "lookbook_url": ""
           }
+        },
+        "13f5ebd8-900a-405f-abaa-6c4f51973857": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "",
+            "lookbook_url": ""
+          }
+        },
+        "9b56abc0-1fe4-4fcf-af95-41e13047531f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Free-Fall",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -73,7 +87,9 @@
         "7b09a8ed-db9b-4714-8e5f-8032711d05d6",
         "83f6043e-d579-4d4b-b5ed-47f55c201fd3",
         "91af92db-e317-40cb-bc57-c83ff68cdf68",
-        "9168c99b-4b47-4bd3-8717-623789b118cf"
+        "9168c99b-4b47-4bd3-8717-623789b118cf",
+        "13f5ebd8-900a-405f-abaa-6c4f51973857",
+        "9b56abc0-1fe4-4fcf-af95-41e13047531f"
       ],
       "settings": {
         "heading": "Collections"
