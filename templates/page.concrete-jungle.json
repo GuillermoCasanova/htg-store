@@ -53,11 +53,32 @@
         "section": "Collection Preview",
         "collection": "concrete-jungle"
       }
+    },
+    "165479687868697dbe": {
+      "type": "image-banner",
+      "blocks": {
+        "1654796878b5552f42-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1654796878b5552f42-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook15_70fc1475-d375-4c86-85a9-fdcad2141e6f_1.png",
+        "video": "",
+        "cta-url": "",
+        "cta-url-text": ""
+      }
     }
   },
   "order": [
     "header",
     "16547967139d0d9446",
-    "1654796652c1f897d9"
+    "1654796652c1f897d9",
+    "165479687868697dbe"
   ]
 }
