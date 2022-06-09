@@ -45,16 +45,22 @@
             "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.12_PM.png"
           }
         },
+        "c71dcb3a-0095-47ea-adcd-f12aa46615fd": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.18_PM_51a0424c-c119-4ecc-b2cf-17e54a1a258d.png"
+          }
+        },
         "38abe9cd-0ffc-4b11-99bf-329118e07093": {
           "type": "slideshow_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook14.png"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.24_PM.png"
           }
         },
         "e009326d-d5d2-4e32-bafe-b9dd8080d569": {
           "type": "slideshow_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook24_1.png"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.32_PM.png"
           }
         },
         "b14b79c7-4336-40f2-8365-1b112d88860f": {
@@ -81,25 +87,19 @@
           "type": "slideshow_slide",
           "settings": {
           }
-        },
-        "c71dcb3a-0095-47ea-adcd-f12aa46615fd": {
-          "type": "slideshow_slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.18_PM_51a0424c-c119-4ecc-b2cf-17e54a1a258d.png"
-          }
         }
       },
       "block_order": [
         "bc18d259-3065-420b-a241-572194cd7f59",
         "7e46cf5b-95fe-4e04-b1ca-c8987472303f",
+        "c71dcb3a-0095-47ea-adcd-f12aa46615fd",
         "38abe9cd-0ffc-4b11-99bf-329118e07093",
         "e009326d-d5d2-4e32-bafe-b9dd8080d569",
         "b14b79c7-4336-40f2-8365-1b112d88860f",
         "ecd3be55-eff5-4a58-a77d-733c13f1a10d",
         "aba391c1-1198-46b6-91ca-0418015b827f",
         "05e8fb0a-49d4-4c28-ba7f-1ed7fc4d68b8",
-        "27c25819-52fe-4afc-9685-0103fb556208",
-        "c71dcb3a-0095-47ea-adcd-f12aa46615fd"
+        "27c25819-52fe-4afc-9685-0103fb556208"
       ],
       "settings": {
         "name": ""
