@@ -50,6 +50,13 @@
             "collection_name": "Inner City Love",
             "lookbook_url": ""
           }
+        },
+        "91af92db-e317-40cb-bc57-c83ff68cdf68": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Inner City Love Kids",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -57,7 +64,8 @@
         "26d62055-b885-478c-83f6-90a390c47e5c",
         "7d15d527-5092-4c5e-ba9d-6bc32d4044fc",
         "7b09a8ed-db9b-4714-8e5f-8032711d05d6",
-        "83f6043e-d579-4d4b-b5ed-47f55c201fd3"
+        "83f6043e-d579-4d4b-b5ed-47f55c201fd3",
+        "91af92db-e317-40cb-bc57-c83ff68cdf68"
       ],
       "settings": {
         "heading": "Collections"
