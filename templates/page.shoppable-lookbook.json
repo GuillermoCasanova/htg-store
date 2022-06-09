@@ -2,9 +2,9 @@
     "sections": {
         "header": {
             "type": "image-banner"
-        },
-        "order": [
-            "header"
-        ]
-    }
+        }
+    },
+    "order": [
+        "header"
+    ]
 }
