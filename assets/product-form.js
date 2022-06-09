@@ -3,7 +3,7 @@ if (!customElements.get('product-form')) {
   customElements.define('product-form', class ProductForm extends HTMLElement {
     constructor() {
       super();   
-  
+      
       this.form = this.querySelector('form');
       this.form.querySelector('[name=id]').disabled = false;
       this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
@@ -23,14 +23,15 @@ if (!customElements.get('product-form')) {
     }
   
     onSubmitHandler(evt) {
-      evt.preventDefault();
+      evt.preventDefault(); 
+
+      console.log(evt);
       
       const submitButton = this.querySelector('[type="submit"]');
   
       submitButton.setAttribute('disabled', true);
       submitButton.classList.add('loading');
   
-      console.log(this.form);
       const body = JSON.stringify({
         ...JSON.parse(serializeForm(this.form))
         // sections: this.cartNotification.getSectionsToRender().map((section) => section.id),

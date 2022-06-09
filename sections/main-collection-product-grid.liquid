@@ -6,11 +6,9 @@
 
 <script src="{{ 'quick-add-color-picker.js' | asset_url }}" defer="defer"></script>
 
-{%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 
 
 {% comment %} {%- liquid
