@@ -113,6 +113,13 @@
             "collection_name": "Collection 002 Public",
             "lookbook_url": ""
           }
+        },
+        "9ec38332-cc04-42de-81ac-c0f9a716759f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Collection 002 Private",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -129,7 +136,8 @@
         "4b75fef8-d4a4-44b9-bd49-142246ba6f9e",
         "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd",
         "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e",
-        "6edc349f-1fba-48c2-8215-7d31487b9dd9"
+        "6edc349f-1fba-48c2-8215-7d31487b9dd9",
+        "9ec38332-cc04-42de-81ac-c0f9a716759f"
       ],
       "settings": {
         "heading": "Collections"
