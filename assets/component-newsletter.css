@@ -15,7 +15,7 @@
 }
 
 
-@media only screen and (min-width: 930px) {
+@media only screen and (min-width: 600px) {
   .newsletter-form {
     margin-right: 0;
     right: 0;

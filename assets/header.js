@@ -148,11 +148,20 @@ class SearchToggle extends HTMLElement {
     this.setUpEvents(); 
 
     document.addEventListener('click', (event) => {
-      var isClickInside = this.contains(event.target);
-      if (!isClickInside) {
+      
+      var isClickInside = document.querySelector('[data-search-modal]').contains(event.target);
+      var isToggleButton = this.contains(event.target); 
+
+      if (!isClickInside && !isToggleButton) {
         this.closeSearch(); 
       }
     });
+  }
+
+  setUpCloseEvents() {    
+    document.addEventListener('keyup', (evt) => {
+      evt.code === 'Escape' && this.closeSearch()
+    }, { once: true });
   }
 
   closeSearch() {
@@ -176,6 +185,7 @@ class SearchToggle extends HTMLElement {
         document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
       }
       else {
+        this.setUpCloseEvents();
         document.querySelector('[data-search-modal]').setAttribute('aria-hidden', false);
       }
     }); 
@@ -246,3 +256,4 @@ class MenuDropdown extends HTMLElement {
 }
 
 customElements.define('menu-dropdown', MenuDropdown);
+

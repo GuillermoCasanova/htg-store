@@ -226,16 +226,7 @@
                     elem.style.removeProperty("height");
                   });
 
-                  document.querySelector('[data-size-chart]').querySelectorAll('p').forEach(function(elem) {
-                    let newHTML = elem.innerHTML.replace(/ /g,'').replace(/&nbsp;/g,'');
-                    elem.innerHTML = newHTML
-                  });
-
-                  document.querySelector('[data-size-chart]').querySelectorAll('span').forEach(function(elem) {
-                    let newHTML = elem.innerHTML.replace(/ /g,'').replace(/&nbsp;/g,'');
-                    elem.innerHTML = newHTML
-                  });
-
+               
                   document.querySelector('[data-size-chart]').querySelectorAll('div').forEach(function(elem) {
                     elem.remove(); 
                   });
