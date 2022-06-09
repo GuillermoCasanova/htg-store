@@ -138,31 +138,33 @@
                           </legend>
                           <span class="custom-color-picker__colors">
                             {% for product in activeCollection.products %}
-                              <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
-                                    <input type="radio" 
-                                      id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
-                                      name="color" 
-                                      value="{{ product.metafields.color_swatch.name | escape }}"
-                                      title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                                      data-color-option
-                                      data-product="{{ product | json | escape }}"
-                                      data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
-                                      data-product-title="{{ product.title }}" 
-                                      data-handle="{{ product.handle }}"
-                                      data-product-url="{{ product.url }}"
-                                      data-product-id="{{ product.id }}"
-                                      data-product-first-variant="{{ product.selected_variant.id }}"
-                                      data-swatch="{{ product.metafields.color_swatch.name }}"
-                                      class="custom-color-picker__input"
-                                      >
-                                  <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                                    <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
-              
-                                    </span>
-                                    <span class="custom-color-picker__label__ring">
-                                    </span>
-                                  </label>
-                              </span>
+                              {% if product.metafields.color_swatch.name != blank and product.metafields.color_swatch.hex_color != blank %}
+                                <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
+                                      <input type="radio" 
+                                        id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
+                                        name="color" 
+                                        value="{{ product.metafields.color_swatch.name | escape }}"
+                                        title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                        data-color-option
+                                        data-product="{{ product | json | escape }}"
+                                        data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
+                                        data-product-title="{{ product.title }}" 
+                                        data-handle="{{ product.handle }}"
+                                        data-product-url="{{ product.url }}"
+                                        data-product-id="{{ product.id }}"
+                                        data-product-first-variant="{{ product.selected_variant.id }}"
+                                        data-swatch="{{ product.metafields.color_swatch.name }}"
+                                        class="custom-color-picker__input"
+                                        >
+                                    <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                      <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+                
+                                      </span>
+                                      <span class="custom-color-picker__label__ring">
+                                      </span>
+                                    </label>
+                                </span>
+                              {%endif%}
                             {% endfor %}
                           </span>
                         </fieldset>
@@ -375,31 +377,33 @@
                           </legend>
                           <span class="custom-color-picker__colors">
                             {% for product in activeCollection.products %}
-                              <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
-                                    <input type="radio" 
-                                      id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
-                                      name="color" 
-                                      value="{{ product.metafields.color_swatch.name | escape }}"
-                                      title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
-                                      data-color-option
-                                      data-product="{{ product | json | escape }}"
-                                      data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
-                                      data-product-title="{{ product.title }}" 
-                                      data-handle="{{ product.handle }}"
-                                      data-product-url="{{ product.url }}"
-                                      data-product-id="{{ product.id }}"
-                                      data-product-first-variant="{{ product.selected_variant.id }}"
-                                      data-swatch="{{ product.metafields.color_swatch.name }}"
-                                      class="custom-color-picker__input"
-                                      >
-                                  <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
-                                    <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
-              
-                                    </span>
-                                    <span class="custom-color-picker__label__ring">
-                                    </span>
-                                  </label>
-                              </span>
+                              {% if product.metafields.color_swatch.name != blank and product.metafields.color_swatch.hex_color != blank %}
+                                <span class="custom-color-picker__color {% if product.handle == activeProduct.handle %}is-selected{% endif %}">
+                                      <input type="radio" 
+                                        id="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}"
+                                        name="color" 
+                                        value="{{ product.metafields.color_swatch.name | escape }}"
+                                        title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                        data-color-option
+                                        data-product="{{ product | json | escape }}"
+                                        data-color-name="{{ product.metafields.color_swatch.name | escape }}" 
+                                        data-product-title="{{ product.title }}" 
+                                        data-handle="{{ product.handle }}"
+                                        data-product-url="{{ product.url }}"
+                                        data-product-id="{{ product.id }}"
+                                        data-product-first-variant="{{ product.selected_variant.id }}"
+                                        data-swatch="{{ product.metafields.color_swatch.name }}"
+                                        class="custom-color-picker__input"
+                                        >
+                                    <label class="custom-color-picker__label" for="{{ section.id }}-{{ product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                      <span class="custom-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+                
+                                      </span>
+                                      <span class="custom-color-picker__label__ring">
+                                      </span>
+                                    </label>
+                                </span>
+                              {%  endif  %}
                             {% endfor %}
                           </span>
                         </fieldset>

@@ -793,6 +793,12 @@ variant-selects {
   z-index: 0;
 }
 
+.custom-color-picker__label:hover .custom-color-picker__label__swatch,
+.custom-color-picker__label:focus .custom-color-picker__label__swatch {
+  border: 2px solid black;
+}
+
+
 .custom-color-picker__color input:checked+label .custom-color-picker__label__swatch {
   border: 1.5px solid rgb(var(--color-base-text));
 }

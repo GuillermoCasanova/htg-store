@@ -7,11 +7,9 @@
 
 <script src="{{ 'quick-add-color-picker.js' | asset_url }}" defer="defer"></script>
 
-{%- if section.settings.enable_quick_add -%}
-  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 {{ 'component-facets.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
@@ -85,7 +83,7 @@
                   {% render 'product-card',
                     heading_level: 'h3',
                     card_product: product,
-                    show_quick_add: section.settings.enable_quick_add,
+                    show_quick_add: true,
                     section_id: section.id
                     product_collection: collection
                   %}
