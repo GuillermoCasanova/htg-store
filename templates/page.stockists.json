@@ -72,13 +72,6 @@
             "country_region": "United States",
             "store_list": "<li>Union, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>"
           }
-        },
-        "a01dccf3-b5cd-4765-9b25-63a7ae9ab885": {
-          "type": "stockist-list",
-          "settings": {
-            "country_region": "United States",
-            "store_list": "<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>1032 Space, OK<\/li>\n<li>Next, OH<\/li>\n<li>Commonwealth, VA<\/li>"
-          }
         }
       },
       "block_order": [
@@ -90,8 +83,7 @@
         "82909324-575c-4e42-a3f4-686fff95663f",
         "13d2bca3-e9b2-4d86-ac0f-9e44a071b891",
         "ac060ff3-43f4-4a1d-ae47-89dcd51be56a",
-        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3",
-        "a01dccf3-b5cd-4765-9b25-63a7ae9ab885"
+        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3"
       ],
       "settings": {
         "page": ""
