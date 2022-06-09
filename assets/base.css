@@ -565,21 +565,29 @@ h6:empty {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  column-gap: var(--level5);
+  grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
+  column-gap: var(--level4);
+  width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .product-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+    column-gap: var(--level3);
   }
 }
 
 
 @media screen and (min-width: 900px) {
   .product-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1681px) {
+  .product-grid {
+    column-gap: var(--level4);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

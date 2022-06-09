@@ -3,6 +3,8 @@ class PredictiveSearch extends HTMLElement {
     super();
     this.cachedResults = {};
     this.input = this.querySelector('input[type="search"]');
+
+   
     this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
     this.isOpen = false;
 
@@ -21,6 +23,7 @@ class PredictiveSearch extends HTMLElement {
     this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.addEventListener('keyup', this.onKeyup.bind(this));
     this.addEventListener('keydown', this.onKeydown.bind(this));
+
   }
 
   getQuery() {
@@ -223,6 +226,7 @@ class PredictiveSearch extends HTMLElement {
 
     this.isOpen = false;
   }
+
 }
 
 customElements.define('predictive-search', PredictiveSearch);

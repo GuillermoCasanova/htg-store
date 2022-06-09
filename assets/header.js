@@ -118,6 +118,7 @@ class CartToggle extends HTMLElement {
   }
 
   setUpEvents() {
+
     this.querySelector('[data-cart-toggle]').addEventListener('click', (event) => {
       event.preventDefault();
 
@@ -137,6 +138,51 @@ class CartToggle extends HTMLElement {
 }
 
 customElements.define('cart-toggle', CartToggle);
+
+
+
+class SearchToggle extends HTMLElement {
+  constructor() {
+    super(); 
+    this.button = this.querySelector('button');
+    this.setUpEvents(); 
+    document.addEventListener('click', (event) => {
+      var isClickInside = this.contains(event.target);
+      if (!isClickInside) {
+        this.closeSearch(); 
+      }
+    });
+  }
+
+  closeSearch() {
+    this.button.setAttribute('aria-expanded', false); 
+    this.button.blur();
+    document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+  }
+
+  setUpEvents() {
+
+    this.button.addEventListener('click', (event) => {
+      if(this.button.getAttribute('aria-expanded') == 'false') {
+        this.button.setAttribute('aria-expanded', true); 
+      } else {
+        this.button.setAttribute('aria-expanded', false); 
+      }     
+
+      this.button.blur();
+
+      if(document.querySelector('[data-search-modal]').getAttribute('aria-hidden') == 'false') {
+        document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+      }
+      else {
+        document.querySelector('[data-search-modal]').setAttribute('aria-hidden', false);
+      }
+    }); 
+  }
+
+}
+
+customElements.define('search-toggle', SearchToggle);
 
 
 
