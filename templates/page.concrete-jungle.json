@@ -2,11 +2,11 @@
   "sections": {
     "header": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
         "video": "",
-        "cta-url": "",
-        "cta-url-text": ""
+        "cta-url": ""
       }
     },
     "16547967139d0d9446": {
@@ -50,7 +50,7 @@
     "1654796652c1f897d9": {
       "type": "lookbook-collection-display",
       "settings": {
-        "section": "Collection Preview",
+        "heading": "Collection Preview",
         "collection": "concrete-jungle"
       }
     },
@@ -70,8 +70,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook15_70fc1475-d375-4c86-85a9-fdcad2141e6f_1.png",
         "video": "",
-        "cta-url": "",
-        "cta-url-text": ""
+        "cta-url": ""
       }
     }
   },
