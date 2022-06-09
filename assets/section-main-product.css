@@ -695,9 +695,14 @@ variant-selects {
   margin-right: var(--level3);
 }
 
+.product-form__submit:hover .product-form__submit__text,
+.product-form__submit:focus .product-form__submit__text {
+  color: #fff;
+}
+
 
 .product-form__submit__text {
-  color: black !important;
+  color: rgb(var(--color-base-text));
 }
 
 .product-form__submit[disabled] {

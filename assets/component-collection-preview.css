@@ -11,12 +11,12 @@
 
 @media only screen and (min-width: 600px) {
     .collection-preview__header {
-        margin-bottom: var(--level5);
+        margin-bottom: var(--level6);
     }
 }
 
 
-@media only screen and (min-width: 975px) {
+@media only screen and (min-width: 930px) {
     .collection-preview__header {
         margin-bottom: var(--level6);
     }
@@ -25,27 +25,35 @@
 
 .collection-preview__header__headline {
     font-family: var(--tertiary-font-family);
-    font-size: var(--h5);
+    font-size: var(--h3);
 }
 
 @media only screen and (min-width: 930px) {
     .collection-preview__header__headline {
         margin-bottom: var(--level4);
-        font-size: var(--h4);
     }
 }
 
 
+@media only screen and (min-width: 1600px) {
+    .collection-preview__header__headline {
+        margin-bottom: var(--level4);
+        font-size: var(--h3);
+    }
+}
+
+
+
 .collection-preview__products {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
     column-gap: var(--level4);
+    width: 100%;
 }
 
 @media screen and (min-width: 700px) {
     .collection-preview__products {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
         column-gap: var(--level3);
     }
 }
@@ -53,13 +61,14 @@
 
 @media screen and (min-width: 900px) {
     .collection-preview__products {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
 @media screen and (min-width: 1681px) {
     .collection-preview__products {
         column-gap: var(--level4);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
@@ -79,6 +88,15 @@
     }
 }
 
+@media only screen and (min-width: 930px) {
+    .collection-preview__footer {
+        padding-top: 0;
+        margin-bottom: var(--level6);
+        margin-top: calc(var(--level4) * -1);
+    }
+}
+
+
 
 .collection-preview__footer__cta {
     font-size: var(--normal);
@@ -86,12 +104,12 @@
 
 @media only screen and (min-width: 600px) {
     .collection-preview__footer__cta {
-        font-size: var(--h6);
+        font-size: var(--h4);
     }
 }
 
 @media only screen and (min-width: 930px) {
     .collection-preview__footer__cta {
-        font-size: var(--h4);
+        font-size: var(--h3);
     }
 }
