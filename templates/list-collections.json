@@ -36,12 +36,20 @@
             "collection_name": "Jordan x HTG",
             "lookbook_url": "shopify:\/\/pages\/jordan-x-htg"
           }
+        },
+        "7b09a8ed-db9b-4714-8e5f-8032711d05d6": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Inner City Love Vol. II",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
         "d16da307-5df6-49f0-9814-e0f8eba8b9b0",
         "26d62055-b885-478c-83f6-90a390c47e5c",
-        "7d15d527-5092-4c5e-ba9d-6bc32d4044fc"
+        "7d15d527-5092-4c5e-ba9d-6bc32d4044fc",
+        "7b09a8ed-db9b-4714-8e5f-8032711d05d6"
       ],
       "settings": {
         "heading": "Collections"
