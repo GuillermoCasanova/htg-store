@@ -41,6 +41,7 @@
           "type": "archival-collection",
           "settings": {
             "collection_name": "Inner City Love Vol. II",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.12.21_PM.png",
             "lookbook_url": ""
           }
         },
@@ -48,6 +49,7 @@
           "type": "archival-collection",
           "settings": {
             "collection_name": "Inner City Love",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.12.15_PM.png",
             "lookbook_url": ""
           }
         },
