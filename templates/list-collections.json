@@ -111,6 +111,7 @@
           "type": "archival-collection",
           "settings": {
             "collection_name": "Collection 002 Public",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.09.47_PM.png",
             "lookbook_url": ""
           }
         },
