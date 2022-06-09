@@ -2,7 +2,17 @@
   "sections": {
     "header": {
       "type": "image-banner",
-      "disabled": true,
+      "blocks": {
+        "a1ec63f7-c01a-4f29-b741-a0b5debf7ba0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "a1ec63f7-c01a-4f29-b741-a0b5debf7ba0"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
         "video": "",

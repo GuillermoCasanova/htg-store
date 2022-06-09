@@ -29,11 +29,19 @@
             "thumbnail": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
             "lookbook_url": "shopify:\/\/pages\/concrete-jungle-collection"
           }
+        },
+        "7d15d527-5092-4c5e-ba9d-6bc32d4044fc": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Jordan x HTG",
+            "lookbook_url": "shopify:\/\/pages\/jordan-x-htg"
+          }
         }
       },
       "block_order": [
         "d16da307-5df6-49f0-9814-e0f8eba8b9b0",
-        "26d62055-b885-478c-83f6-90a390c47e5c"
+        "26d62055-b885-478c-83f6-90a390c47e5c",
+        "7d15d527-5092-4c5e-ba9d-6bc32d4044fc"
       ],
       "settings": {
         "heading": "Collections"
