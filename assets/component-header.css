@@ -998,8 +998,7 @@ header-drawer .menu-drawer__utility-links {
 @media only screen and (min-width: 930px) {
 
     .header__submenu {
-        transition: opacity var(--duration-default) ease,
-            transform var(--duration-default) ease;
+        transition: all var(--duration-default) cubic-bezier(0.16, 1, 0.3, 1);
         background-color: rgb(var(--color-base-background-1));
         width: 100vw;
         max-width: none;
@@ -1042,14 +1041,14 @@ header-drawer .menu-drawer__utility-links {
     .header__submenu[aria-hidden="true"] {
         opacity: 0;
         pointer-events: none;
-        animation: headerDrawerClose .2s ease forwards;
+        animation: headerDrawerClose .2s ease-in-out forwards;
     }
 
     .header__submenu[aria-hidden="false"] {
         opacity: 1;
         pointer-events: all;
         top: 5.05rem;
-        animation: headerDrawerOpen .2s ease forwards;
+        animation: headerDrawerOpen .4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     .header__submenu__list-menu {

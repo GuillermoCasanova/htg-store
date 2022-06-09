@@ -1,0 +1,76 @@
+{{ 'lookbook-display-grid.css' | asset_url | stylesheet_tag }}
+
+{% assign collection = section.settings.collection %}
+
+<div class="lookbook-display-grid__inner page-width"> 
+    <div>
+        <h2 class="lookbook-display-grid__heading">
+            {{ section.settings.heading }}
+        </h2>
+    </div>
+
+    {% assign products = collection.products %}
+    <div class="lookbook-collection-grid__products">
+        {% for product in products  limit: 16 %}
+            <div class="lookbook-collection-grid__product-container">
+                <a href="{{ collection.url }}/products/{{ product.handle }}" rel="internal" title="Shop the {{ product.title }} from the {{ collection.title }} collection" class="lookbook-collection-grid__product">
+                    <img
+                        srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                        {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                        {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                        {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                        {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+                        src="{{ product.featured_media | image_url: width: 533 }}"
+                        sizes="(min-width: 930px) 25vw, (min-width: 600px) 30vw, 50vw"
+                        alt="{{ product.featured_media.alt | escape }}"
+                        class="motion-reduce"
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="{{ product.featured_media.width }}"
+                        height="{{ product.featured_media.height }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="lookbook-display-grid__cta">
+    
+        <a href="{{ collection.url }}" rel="internal" class="styled-link">
+            Shop Full Collection ({{ collection.all_products_count }})
+        </a>
+    </div>
+
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Lookbook Prod Grid",
+  "tag": "section",
+  "class": "lookbook-display-grid",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Heading",
+      "id": "section"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "The collection products will pull from"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Prod Grid"
+    }
+  ]
+}
+{% endschema %}
