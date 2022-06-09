@@ -4,9 +4,10 @@
       "type": "blurb-section",
       "settings": {
         "heading": "Jordan x HTG®",
-        "body": "",
+        "body": "<p>ddddd<\/p>",
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.58.51_PM.png",
         "section-alignment": "flipped",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-3"
       }
     },
     "header": {
