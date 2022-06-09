@@ -7,6 +7,7 @@ class HeaderDrawer  extends MenuDrawer {
     
     closeDrawer() {
         this.changeToggleText('menu', 'closed');
+        this.header = this.header || document.getElementById('shopify-section-header');
         document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
         document.querySelector('header').classList.remove('menu-is-open'); 
         document.documentElement.style.removeProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
@@ -48,7 +49,9 @@ class HeaderDrawer  extends MenuDrawer {
         //     document.querySelector('[data-cart-toggle]').classList.remove('is-open');
         //     return
         // }
-      return
+
+        console.log('toggle me');
+        
         if(this.headerDrawerMenuContainer.hasAttribute('open')) {
             this.closeDrawer();
         } else {
@@ -158,8 +161,6 @@ class MenuDropdown extends HTMLElement {
 
   onKeyUp(event) {
     if(event.code.toUpperCase() !== 'ESCAPE') return;
-
-
     const toggleElement = this.querySelector("button[aria-expanded='true']");
     if (!toggleElement) return;
 

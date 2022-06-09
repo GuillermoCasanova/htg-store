@@ -29,9 +29,10 @@
 
       {%- if section.settings.menu != blank -%}
         <header-drawer data-breakpoint="tablet">
-          <details id="Details-menu-drawer-container" class="header-menu-drawer-container  menu-opening" data-menu-drawer-container open>
+          <details id="Details-menu-drawer-container" class="header-menu-drawer-container" data-menu-drawer-container>
             <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
                     aria-label="{{ 'sections.header.menu' | t }}"
+                    aria-expanded="false"
                     data-header-drawer-toggle>
               <span  class="header__icon__inner">
 
@@ -65,7 +66,7 @@
                                     autocapitalize="off"
                                     spellcheck="false"
                                 >
-                                <label class="search__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
+                                <label data-search-input-label  class="search__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
                                 <input type="hidden" name="options[prefix]" value="last">
                                 <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
                                   <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">

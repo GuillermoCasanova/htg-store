@@ -16,6 +16,7 @@ class PredictiveSearch extends HTMLElement {
     this.input.addEventListener('input', debounce((event) => {
       this.onChange(event);
     }, 300).bind(this));
+
     this.input.addEventListener('focus', this.onFocus.bind(this));
     this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.addEventListener('keyup', this.onKeyup.bind(this));
@@ -42,6 +43,9 @@ class PredictiveSearch extends HTMLElement {
   }
 
   onFocus() {
+
+    this.classList.add('is-focused'); 
+
     const searchTerm = this.getQuery();
 
     if (!searchTerm.length) return;
@@ -54,6 +58,14 @@ class PredictiveSearch extends HTMLElement {
   }
 
   onFocusOut() {
+    const searchTerm = this.getQuery();
+
+    if(!searchTerm.length) {
+      this.classList.remove('is-focused'); 
+      console.log('CLOSE');
+      this.close(true);
+    }
+    
     setTimeout(() => {
       if (!this.contains(document.activeElement)) this.close();
     })
@@ -120,7 +132,6 @@ class PredictiveSearch extends HTMLElement {
   }
 
   getSearchResults(searchTerm) {
-    console.log(searchTerm);
     const queryKey = searchTerm.replace(" ", "-").toLowerCase();
     this.setLiveRegionLoadingState();
 
@@ -129,7 +140,7 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=4&section_id=predictive-search`)
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=10&section_id=predictive-search`)
       .then((response) => {
         if (!response.ok) {
           var error = new Error(response.status);
@@ -197,6 +208,8 @@ class PredictiveSearch extends HTMLElement {
       this.input.value = '';
       this.removeAttribute('results');
     }
+
+    document.querySelector('[data-predictive-search-results]').remove(); 
 
     const selected = this.querySelector('[aria-selected="true"]');
 

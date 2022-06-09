@@ -616,20 +616,20 @@ header-drawer .menu-drawer__close-button:hover {
 header-drawer .menu-drawer__menu-subitem {
     text-transform: capitalize;
     font-family: var(--primary-font-family);
-    font-size: var(--h5);
+    font-size: var(--h4);
     text-transform: uppercase;
     margin-bottom: var(--level2);
 }
 
 
 header-drawer .menu-drawer__menu__child-list {
-    margin-bottom: var(--level6);
+    margin-bottom: var(--level4);
 }
 
 header-drawer .menu-drawer__menu-child-item {
     font-size: var(--normal);
     text-transform: capitalize;
-    margin-bottom: var(--level1);
+    margin-bottom: var(--level2);
     display: inline-block;
 }
 
