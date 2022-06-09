@@ -3,6 +3,7 @@ class CollectionFilters extends HTMLElement {
   constructor() {
     super();
     this.totalProducts = []; 
+    this.totalSortedProducts = []; 
     this.getProductsFromJson(); 
     this.pullColorFilters(); 
     this.pullSizeFilters(); 
@@ -32,8 +33,11 @@ class CollectionFilters extends HTMLElement {
         }); 
     });
 
+    if(this.querySelector('[data-filters]')) {
+      this.querySelector('[data-filters]').addEventListener('change', this.sortproducts.bind(this)); 
+    }
+  
 
-    //I'm using "click" but it works with any event
     document.addEventListener('click', (event) => {
       var isClickInside = this.contains(event.target);
       if (!isClickInside) {
@@ -71,10 +75,41 @@ class CollectionFilters extends HTMLElement {
     this.querySelectorAll('[data-filter-toggle]').forEach(form => {
       form.setAttribute('aria-expanded', false);
     });
+  
+    // this.querySelectorAll('[data-sort-toggle]').forEach(form => {
+    //   form.setAttribute('aria-expanded', false);
+    // });
   }
 
   sortproducts(pProductsArray, pSortBy) {
 
+    let sortingType = event.target.value
+    const url = `${window.location.pathname}?sort_by=${sortingType}&?section_id=main-collection-product-grid`;
+
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
+        let orderedArray  = []; 
+        
+        resultsMarkup.querySelectorAll('[data-product-json]').forEach((element)=> {
+          orderedArray.push(JSON.parse(element.textContent))
+        });
+        
+        document.querySelector('collection-grid').renderFilteredProducts(orderedArray);
+        this.closeFilterOptions();
+      })
+      .catch((error) => {
+        this.closeFilterOptions();
+        throw error;
+      });
   }
   
   getProductsFromJson() {
@@ -84,6 +119,7 @@ class CollectionFilters extends HTMLElement {
     collectionGrid.querySelectorAll(productContainerId).forEach((element)=> {
       this.totalProducts.push(JSON.parse(element.textContent))
     });
+    console.log(this.totalProducts);
   }
 
   pullColorFilters() {
@@ -380,16 +416,33 @@ class CollectionGrid extends HTMLElement {
 
 
   renderFilteredProducts(pProductsToShow) {
+
+
     this.totalFilteredProducts = pProductsToShow; 
     this.totalProductsShowing = pProductsToShow.slice(0, this.paginateBy);
 
     let products = this.querySelectorAll(`.grid__item`);
+    let idOrders =  []
     
+    pProductsToShow.forEach((elem) => { 
+      idOrders.push(parseInt(elem.id)); 
+    }); 
+
+    console.log(idOrders); 
+    let sortedProducts = _.sortBy(products, function(item){
+      console.log(item.dataset.productId);
+      return idOrders.indexOf(parseInt(item.dataset.productId)); 
+    });
+
+    sortedProducts.forEach(el => {
+        el.parentNode.appendChild(el);
+    });
+
     products.forEach(product => {
       product.style.display = 'none';
     });
 
-
+  
     products.forEach(product => {
 
       if(this.totalFilteredProducts.some(e => e.id == parseInt(product.dataset.productId))) {

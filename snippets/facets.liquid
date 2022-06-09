@@ -20,7 +20,7 @@
 -%}
 
 
-<collection-filters>
+<collection-filters data-section-id="{{ section.id }}">
     <h2 class="visually-hidden">
       Sort and Filter Products
     </h2>
@@ -39,22 +39,23 @@
         <div class="collection-filters__filtering-forms">
           <div role="region" data-filter-form aria-hidden="true" aria-labelledby="sort-by" class="collection-filters__filtering-forms__form">
             <div class="collection-filters__filtering-forms__form__inner">
-              <select name="sort_by" class="" id="SortBy" data-filter>
-                  <option value="" selected="selected">
+              <select name="sort_by" class="" id="SortBy" data-filters>
+                  <option value="price-descending">
                     High to Low
                   </option>
-                  <option value="" selected="selected">
+                  <option value="price-ascending">
                     Low to High
                   </option>
-                  <option value="" selected="selected">
+                  <option value="best-seller">
                     Best Seller
                   </option>
-                  <option value="" selected="selected">
+                  <option value="created-descending" selected="selected">
                     Newest
                   </option>
                 </select>
               </div>
           </div>
+          
           <div role="region" data-filter-form aria-hidden="true" aria-labelledby="filter-by"  class="collection-filters__filtering-forms__form">
 
             <div class="collection-filters__filtering-forms__form__inner">
