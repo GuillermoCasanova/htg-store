@@ -165,24 +165,33 @@
         "601170c6-571e-4da6-9097-6e7321060e54": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook28.jpg"
           }
         },
         "5935efb5-2b66-4b42-9a6c-964ae83917d3": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook29.jpg"
           }
         },
         "5aafd809-1d1f-42b2-9067-27146b4a8d3f": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook30.jpg"
           }
         },
         "f8f1d5b3-4efb-4149-a21b-2efd812cca8e": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook31.jpg"
           }
         },
         "b47fe1ab-ff09-464b-86fb-87544162f37d": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "31b6d9ab-54f6-4fbd-bf13-8eebd466c4ed": {
           "type": "slideshow_slide",
           "settings": {
           }
@@ -218,7 +227,8 @@
         "5935efb5-2b66-4b42-9a6c-964ae83917d3",
         "5aafd809-1d1f-42b2-9067-27146b4a8d3f",
         "f8f1d5b3-4efb-4149-a21b-2efd812cca8e",
-        "b47fe1ab-ff09-464b-86fb-87544162f37d"
+        "b47fe1ab-ff09-464b-86fb-87544162f37d",
+        "31b6d9ab-54f6-4fbd-bf13-8eebd466c4ed"
       ],
       "settings": {
         "name": ""
