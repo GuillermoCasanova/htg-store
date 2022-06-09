@@ -85,6 +85,20 @@
             "collection_name": "Free-Fall Women",
             "lookbook_url": ""
           }
+        },
+        "4b75fef8-d4a4-44b9-bd49-142246ba6f9e": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Free-Fall Kids",
+            "lookbook_url": ""
+          }
+        },
+        "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -97,7 +111,9 @@
         "9168c99b-4b47-4bd3-8717-623789b118cf",
         "13f5ebd8-900a-405f-abaa-6c4f51973857",
         "9b56abc0-1fe4-4fcf-af95-41e13047531f",
-        "221788e1-17ca-4b5c-96a6-3d24e340e360"
+        "221788e1-17ca-4b5c-96a6-3d24e340e360",
+        "4b75fef8-d4a4-44b9-bd49-142246ba6f9e",
+        "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd"
       ],
       "settings": {
         "heading": "Collections"
