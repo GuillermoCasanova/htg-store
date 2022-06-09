@@ -7,79 +7,28 @@
         "padding_bottom": 28
       }
     },
-    "1654813444fcbcd438": {
-      "type": "about-header",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "body": "",
-        "section-alignment": "normal"
-      }
-    },
-    "16548135044f834bde": {
-      "type": "rich-text",
+    "1654813635d36f0e01": {
+      "type": "stockists-lists",
       "blocks": {
-        "1654813504b65723f2-0": {
-          "type": "heading",
+        "beaba274-fe64-49f5-b87a-1f76fd3ea829": {
+          "type": "stockist-list",
+          "disabled": true,
           "settings": {
-            "heading": "<p>What if my order is not correct?<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "1654813504b65723f2-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Every so often mistakes do happen but we will do our best to fix it. If you notice a mistake with your order, please contact help@honorthegift.co and we will look into it. Please include your order number at all times when emailing us.<\/p>"
-          }
-        },
-        "3a7a8532-35d3-40d3-b428-ec2816456be4": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>How do I create an Honor The Gift account?<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "cb6a34f0-966d-413c-bc5e-61bd9b82b7e3": {
-          "type": "text",
-          "settings": {
-            "text": "<p>It's easy to set up an account. During checkout, you'll have the opportunity to provide account details.<\/p>"
-          }
-        },
-        "cf205c93-8bfa-400b-9ae4-33ee45ebc328": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>What are the perks of having an Honor The Gift account?<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "a795b343-f664-4710-b899-c38021e5394c": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Having a Honor The Gift account lets you save payment and shipping information which helps you check out faster! And don’t forget to sign up for our newsletter. We’ll send you special offers, gift ideas and first look at new arrivals.<\/p>"
+            "country_region": "",
+            "store_list": "GENERAL QUESTIONS\n\nDid Russell Westbrook create Honor the Gift?\nYes, Honor The Gift was founded by Russell Westbrook who acts as the creative director of the brand. \n \nHow do Honor The Gift items fit?\nT-Shirts\nT-Shirts fit true to size. If you typically wear a Large, order a large. \nFleece\nCrewnecks and Hoodies fit true to size with a little extra room which is how we like it, but if you like it snug order a size down. \nShorts\nS - 30 Waist M - 32 Waist L - 34 Waist XL - 36 Waist\n \nAre there any plans of re-releasing past collections\/items?\nTypically we don’t re-release anything. We are always working towards the future and making sure each release is special. If it sold out it most likely isn’t coming back. That being said follow our Instagram or sign up for our newsletter to know all release announcements.\n \nI have a question. Who can I contact?\nWe are open Monday to Friday between 10AM-6PM PST and closed during all national holidays. [E] help@honorthegift.co\nMost emails will responded to within 24-48 hours but please allow us more time during busy periods.\n \nDo you ship International?\nYes we do offer shipping worldwide. For more information read out shipping &amp; returns section provided in the footer.\n \nWhere is Honor The Gift’s product produced?\nAll our current offering is developed and manufactured in Los Angeles, California. As we continue to develop our product range we will expand our manufacturing. \n \nWhere can I find Honor The Gift in retailers?\nWe currently do not sell to any retailers other than our online shop. However, we’ll occasionally have special projects with specific retailers which will be indicated in our press releases.\n \nWhat forms of payment do you accept?\nWe accept VISA, MasterCard, American Express, Discover and Paypal.\n \nWhat is sales tax?\nAs a national retailer, Honor The Gift is required to charge applicable state and local sales tax on orders shipped to states where we have a physical presence. Below are the states, which we charge sales tax: CA.\n \nHow do I know my order was received?\nOnce you’ve completed your online order, you will receive an order confirmation email. Please check this to ensure all your details are correct. If any details for incorrect, please contact us immediately at help@honorthegift.co If you don’t receive an order confirmation email from us within 24 hours, please check your junk folder.\n \nCan I change my order once placed?\nPlease email help@honorthegift.co and we’ll do our best to make sure you are accommodated.\n "
           }
         }
       },
       "block_order": [
-        "1654813504b65723f2-0",
-        "1654813504b65723f2-1",
-        "3a7a8532-35d3-40d3-b428-ec2816456be4",
-        "cb6a34f0-966d-413c-bc5e-61bd9b82b7e3",
-        "cf205c93-8bfa-400b-9ae4-33ee45ebc328",
-        "a795b343-f664-4710-b899-c38021e5394c"
+        "beaba274-fe64-49f5-b87a-1f76fd3ea829"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "page": "faq"
       }
     }
   },
   "order": [
     "main",
-    "1654813444fcbcd438",
-    "16548135044f834bde"
+    "1654813635d36f0e01"
   ]
 }
