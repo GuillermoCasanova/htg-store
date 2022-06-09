@@ -1,7 +1,17 @@
 {
   "sections": {
+    "1654811846108992c8": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Jordan x HTG®",
+        "body": "",
+        "section-alignment": "flipped",
+        "copy-bg-color": "background-1"
+      }
+    },
     "header": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "a1ec63f7-c01a-4f29-b741-a0b5debf7ba0": {
           "type": "heading",
@@ -85,6 +95,7 @@
     }
   },
   "order": [
+    "1654811846108992c8",
     "header",
     "16547967139d0d9446",
     "1654796652c1f897d9",
