@@ -1,5 +1,23 @@
 {
   "sections": {
+    "165479687868697dbe": {
+      "type": "image-banner",
+      "blocks": {
+        "1654796878b5552f42-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1654796878b5552f42-0"
+      ],
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0013\/1111\/3328\/files\/HO21_JD_BB_Revolution_LTCC_RWestbrook_TCooper_WN5_Hero_AV_60sec_3648x1800.mp4?v=1654813185",
+        "cta-url": ""
+      }
+    },
     "1654811846108992c8": {
       "type": "blurb-section",
       "settings": {
@@ -130,32 +148,13 @@
         "heading": "Collection Preview",
         "collection": "jordan-x-htg"
       }
-    },
-    "165479687868697dbe": {
-      "type": "image-banner",
-      "blocks": {
-        "1654796878b5552f42-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner"
-          }
-        }
-      },
-      "block_order": [
-        "1654796878b5552f42-0"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook15_70fc1475-d375-4c86-85a9-fdcad2141e6f_1.png",
-        "video": "",
-        "cta-url": ""
-      }
     }
   },
   "order": [
+    "165479687868697dbe",
     "1654811846108992c8",
     "header",
     "16547967139d0d9446",
-    "1654796652c1f897d9",
-    "165479687868697dbe"
+    "1654796652c1f897d9"
   ]
 }
