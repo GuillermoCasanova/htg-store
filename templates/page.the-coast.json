@@ -139,11 +139,31 @@
         "heading": "Collection Preview",
         "collection": "the-coast"
       }
+    },
+    "16548107583c9fa91f": {
+      "type": "image-banner",
+      "blocks": {
+        "1654810758d9a280d8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1654810758d9a280d8-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.40.01_PM.png",
+        "video": "",
+        "cta-url": ""
+      }
     }
   },
   "order": [
     "header",
     "1654796817af88f8a4",
-    "165479684445e66e94"
+    "165479684445e66e94",
+    "16548107583c9fa91f"
   ]
 }
