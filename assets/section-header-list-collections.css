@@ -11,7 +11,6 @@
 }
 
 
-
 @media screen and (min-width:700px) {
     .header-list-collections__inner {
         display: flex;
@@ -151,13 +150,14 @@
 @media screen and (min-width:930px) {
     .header-list-collections__copy__heading {
         font-size: var(--h1);
+        margin-bottom: var(--level10);
     }
 }
 
 
 .header-list-collections__copy__body {
     font-size: var(--normal);
-    margin-bottom: var(--level9);
+    margin-bottom: var(--level6);
     max-width: 30rem;
     margin-right: auto;
     margin-left: auto;
@@ -179,6 +179,23 @@
 @media screen and (min-width: 1600px) {
     .header-list-collections__copy__body {
         font-size: var(--h4);
-        max-width: 28rem;
+        max-width: 30rem;
+    }
+}
+
+.header-list-collections__copy__body__cta {
+    margin-bottom: var(--level9);
+}
+
+@media screen and (min-width:930px) {
+    .header-list-collections__copy__body__cta {
+        font-size: var(--h6);
+    }
+}
+
+
+@media screen and (min-width:930px) {
+    .header-list-collections__copy__body__cta {
+        font-size: var(--h4);
     }
 }
