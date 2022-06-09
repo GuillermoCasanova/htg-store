@@ -87,6 +87,7 @@
         "2e7c002b-583d-457f-9f0b-814db5abac24": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook15_3797e7ce-5f25-4d56-8c28-9bd5b374666a.jpg"
           }
         },
         "61183897-2813-4fd3-b0e9-2badfcd79c46": {
@@ -95,6 +96,31 @@
           }
         },
         "b8a96883-6103-4f52-98ac-a429e5f8d8e6": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "d6e6e0b9-c1bc-4e68-97e1-fc8ce5f7501e": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "c5c3f57f-d5e1-4153-bb45-b86c929d042b": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "028ac49d-9d15-49e4-802b-e353a3b5a25a": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "868cb249-6c6b-475d-8232-a614082dd04b": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "70dae5dd-2885-462a-907d-a2aa14be05e7": {
           "type": "slideshow_slide",
           "settings": {
           }
@@ -115,7 +141,12 @@
         "e4b24de2-d652-4f95-b434-b29f71c9c3c1",
         "2e7c002b-583d-457f-9f0b-814db5abac24",
         "61183897-2813-4fd3-b0e9-2badfcd79c46",
-        "b8a96883-6103-4f52-98ac-a429e5f8d8e6"
+        "b8a96883-6103-4f52-98ac-a429e5f8d8e6",
+        "d6e6e0b9-c1bc-4e68-97e1-fc8ce5f7501e",
+        "c5c3f57f-d5e1-4153-bb45-b86c929d042b",
+        "028ac49d-9d15-49e4-802b-e353a3b5a25a",
+        "868cb249-6c6b-475d-8232-a614082dd04b",
+        "70dae5dd-2885-462a-907d-a2aa14be05e7"
       ],
       "settings": {
         "name": ""
