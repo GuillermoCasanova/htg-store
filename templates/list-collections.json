@@ -99,6 +99,13 @@
             "collection_name": "Gasoline",
             "lookbook_url": ""
           }
+        },
+        "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Art Department",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -113,7 +120,8 @@
         "9b56abc0-1fe4-4fcf-af95-41e13047531f",
         "221788e1-17ca-4b5c-96a6-3d24e340e360",
         "4b75fef8-d4a4-44b9-bd49-142246ba6f9e",
-        "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd"
+        "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd",
+        "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e"
       ],
       "settings": {
         "heading": "Collections"
