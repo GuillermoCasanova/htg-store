@@ -129,6 +129,43 @@
         "70dae5dd-2885-462a-907d-a2aa14be05e7": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook22.jpg"
+          }
+        },
+        "52f82f48-be85-400a-91ba-1b6842dff517": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG-SS22_-_CONCRETE_JUNGLE_Lookbook23_cc5be3ef-4b6c-49a9-bd3c-eec1c4511250.jpg"
+          }
+        },
+        "01ab0324-0957-4827-ab6e-e37e8e8d7ecb": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "3e68ebdd-1cd4-4074-955c-3be865a95810": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "d5ddb19a-d4be-4239-aa92-11fe9577ba11": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "6957d801-cde0-444a-bca5-497024ce16fe": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "601170c6-571e-4da6-9097-6e7321060e54": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "5935efb5-2b66-4b42-9a6c-964ae83917d3": {
+          "type": "slideshow_slide",
+          "settings": {
           }
         }
       },
@@ -152,7 +189,14 @@
         "c5c3f57f-d5e1-4153-bb45-b86c929d042b",
         "028ac49d-9d15-49e4-802b-e353a3b5a25a",
         "868cb249-6c6b-475d-8232-a614082dd04b",
-        "70dae5dd-2885-462a-907d-a2aa14be05e7"
+        "70dae5dd-2885-462a-907d-a2aa14be05e7",
+        "52f82f48-be85-400a-91ba-1b6842dff517",
+        "01ab0324-0957-4827-ab6e-e37e8e8d7ecb",
+        "3e68ebdd-1cd4-4074-955c-3be865a95810",
+        "d5ddb19a-d4be-4239-aa92-11fe9577ba11",
+        "6957d801-cde0-444a-bca5-497024ce16fe",
+        "601170c6-571e-4da6-9097-6e7321060e54",
+        "5935efb5-2b66-4b42-9a6c-964ae83917d3"
       ],
       "settings": {
         "name": ""
