@@ -41,7 +41,8 @@
   margin-right: var(--level2);
   display: block;
   position: relative;
-  font-size: var(--micro) text-transform: capitalize;
+  font-size: var(--normal);
+  text-transform: capitalize;
 }
 
 .breadcrumbs__inner a:hover,
