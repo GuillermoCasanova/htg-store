@@ -106,6 +106,13 @@
             "collection_name": "Art Department",
             "lookbook_url": ""
           }
+        },
+        "6edc349f-1fba-48c2-8215-7d31487b9dd9": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Collection 002 Public",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -121,7 +128,8 @@
         "221788e1-17ca-4b5c-96a6-3d24e340e360",
         "4b75fef8-d4a4-44b9-bd49-142246ba6f9e",
         "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd",
-        "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e"
+        "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e",
+        "6edc349f-1fba-48c2-8215-7d31487b9dd9"
       ],
       "settings": {
         "heading": "Collections"
