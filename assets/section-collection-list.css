@@ -44,6 +44,17 @@
   }
 }
 
+.archival-collection-thumb {
+  margin-bottom: var(--level8);
+}
+
+@media only screen and (min-width: 930px) {
+  .archival-collection-thumb {
+    margin-bottom: var(--level10);
+  }
+}
+
+
 .archival-collection-thumb__image-container {
   width: 100%;
   margin-bottom: var(--level5);
@@ -77,6 +88,7 @@
 
 .archival-collection-thumb__info__name {
   font-family: var(--tertiary-font-family);
+  margin-bottom: var(--level1);
 }
 
 @media only screen and (min-width: 930px) {
