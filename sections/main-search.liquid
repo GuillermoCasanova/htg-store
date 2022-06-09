@@ -25,7 +25,7 @@
 -%}
 
 
-<div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
+<div class="template-search master-padding-top {% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
   <div class="template-search__header page-width center">
     {%- if search.performed -%}
       <h1 class="h2">{{ 'templates.search.title' | t }}</h1>
@@ -46,13 +46,15 @@
 
 
 
-{{ 'component-facets.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+  {%- if search.results.size != 0 -%}
+  {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
-<aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
-  {% render 'facets', results: collection.products %}
-</aside>
+  <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
+    {% render 'facets', results: collection.products %}
+  </aside>
+  {%- endif -%}
 
 {% assign paginationNum = 12 %}
 {%- if search.performed -%}
