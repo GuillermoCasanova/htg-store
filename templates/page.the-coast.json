@@ -50,6 +50,18 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_6.jpg"
           }
+        },
+        "d17c27c7-b888-4d65-9088-2347f4951397": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_7_aa23942c-f1b2-4a2f-b17b-7a6bfc2111c5.jpg"
+          }
+        },
+        "bea3b7ac-2f04-4094-906f-5dfc5424f3e0": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_8.jpg"
+          }
         }
       },
       "block_order": [
@@ -57,7 +69,9 @@
         "5d5a8458-eadf-4041-a40c-ee4c51824407",
         "ea071cd9-1c06-45fe-a471-a8ebf6703f6f",
         "74af1a43-ace8-4f52-afd4-c61db3587d1c",
-        "f4984e78-c1e0-44aa-8c19-4a5d11ca6e5d"
+        "f4984e78-c1e0-44aa-8c19-4a5d11ca6e5d",
+        "d17c27c7-b888-4d65-9088-2347f4951397",
+        "bea3b7ac-2f04-4094-906f-5dfc5424f3e0"
       ],
       "settings": {
         "name": ""
