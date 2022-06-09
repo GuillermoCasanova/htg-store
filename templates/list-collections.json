@@ -97,6 +97,7 @@
           "type": "archival-collection",
           "settings": {
             "collection_name": "Gasoline",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.11.04_PM.png",
             "lookbook_url": ""
           }
         },
@@ -104,6 +105,7 @@
           "type": "archival-collection",
           "settings": {
             "collection_name": "Art Department",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.10.23_PM.png",
             "lookbook_url": ""
           }
         },
