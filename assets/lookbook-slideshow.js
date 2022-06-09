@@ -5,12 +5,12 @@ class LookbookSlideshow extends HTMLElement {
     constructor() {
         super(); 
         this.selectors = {
-            slideshow: '[data-product-images-slideshow]', 
-            slideshowWrapper: '[data-product-images-slideshow-wrapper]',
-            slides: '[data-product-images-slideshow-slide]',
-            pagination: '[data-product-images-slideshow-pagination]',
-            paginationWrapper: '[data-product-images-slideshow-pagination-wrapper]',
-            paginationThumbs: '[data-product-images-slideshow-pagination-thumb]'
+            slideshow: '[data-lookbook-images-slideshow]', 
+            slideshowWrapper: '[data-lookbook-images-slideshow-wrapper]',
+            slides: '[data-lookbook-images-slideshow-slide]',
+            pagination: '[data-lookbook-images-slideshow-pagination]',
+            paginationWrapper: '[data-lookbook-images-slideshow-pagination-wrapper]',
+            paginationThumbs: '[data-lookbook-images-slideshow-pagination-thumb]'
         }
 
         this.mediaQueries = {
@@ -29,16 +29,23 @@ class LookbookSlideshow extends HTMLElement {
     handleLargeUp(pEvent) {
         let slideshowProps = {}; 
 
+        console.log('INIT SLIDESHOW');
+
         slideshowProps = {
             direction: 'horizontal', 
             loop: true,
-            loopedSlides: 6,
             preventInteractionOnTransition: true,
             pagination: {
                 el: this.selectors.pagination,
                 clickable: true,
                 renderBullet: function (index, className) {
                     return '<button aria-label="Slide to product image ' + (index + 1) + '" class="' + className + '"><span class="visually-hidden">' + 'Slide to product image ' + (index + 1) + "</span></button>";
+                }
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    grabCursor: true
                 }
             }
         }

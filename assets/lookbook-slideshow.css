@@ -5,16 +5,23 @@
 .lookbook-slideshow-container {
     margin-bottom: 0;
     padding-bottom: 0;
+    background-color: rgb(var(--color-base-background-2));
 }
 
 .lookbook-slideshow {
-    padding-bottom: 110%;
+    padding-bottom: 120%;
     position: relative;
 }
 
 @media screen and (min-width: 600px) {
     .lookbook-slideshow {
-        padding-bottom: 62%;
+        padding-bottom: 80%;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    .lookbook-slideshow {
+        padding-bottom: 50%;
     }
 }
 
@@ -37,6 +44,29 @@
     }
 }
 
+.lookbook-slideshow__inner.swiper-wrapper {
+    overflow: visible;
+    display: flex;
+    height: 92%;
+    margin-left: -3rem;
+}
+
+@media screen and (min-width: 600px) {
+    .lookbook-slideshow__inner.swiper-wrapper {
+        height: 94%;
+        margin-left: -4rem;
+    }
+}
+
+
+@media screen and (min-width: 930px) {
+    .lookbook-slideshow__inner.swiper-wrapper {
+        height: 100%;
+        margin-left: 0;
+    }
+}
+
+
 .lookbook-slideshow__slide {
     width: 100%;
 }
@@ -51,4 +81,41 @@
     width: 100%;
     object-fit: cover;
     height: 100%;
+}
+
+.lookbook-slideshow__pagination {
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    bottom: 0 !important;
+    padding-top: var(--level3);
+    padding-bottom: var(--level3);
+    background-color: #fff;
+    justify-content: center;
+}
+
+/* 
+.product-images-slideshow__pagination {
+    width: 100%;
+    padding-bottom: var(--level2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+  } */
+
+.lookbook-slideshow__pagination .swiper-pagination-bullet {
+    border: 1.5px solid black;
+    width: .5rem;
+    height: .5rem;
+    opacity: 1;
+    margin: .2rem !important;
+    transition: all .2s ease;
+}
+
+.lookbook-slideshow__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    transform: scale(.7);
+    background-color: transparent;
 }

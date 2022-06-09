@@ -25,7 +25,7 @@
       <ul class="slides  product-images-slideshow__inner"  data-product-images-slideshow-wrapper>
       {% for image in product.images %}
         {% unless image.alt contains 'swatch' %}
-        <li class="slide"  data-product-images-slideshow-slide data-images-scroller-image data-product-images-modal-open data-id="{{ forloop.index }}">
+        <li class="slide"  data-product-images-slideshow-slide  data-product-images-modal-open data-id="{{ forloop.index }}">
           <div class="product-images-slideshow__image-container">
 
             <img
