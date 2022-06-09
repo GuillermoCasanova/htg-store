@@ -103,7 +103,7 @@ class CollectionFilters extends HTMLElement {
           orderedArray.push(JSON.parse(element.textContent))
         });
         
-        document.querySelector('collection-grid').renderFilteredProducts(orderedArray);
+        document.querySelector('collection-grid').renderFilteredProducts([], orderedArray, true);
         this.closeFilterOptions();
       })
       .catch((error) => {
@@ -289,23 +289,6 @@ class CollectionFilters extends HTMLElement {
       return options; 
     }
 
-    // function getColorParamsFromArray(pColorParamsArray) {
-    //   let queryString = ''; 
-
-    //   pColorParamsArray.forEach((value, index) => {
-    //     let color = value.replace('filter-color:', ""); 
-
-    //     if(index >= pColorParamsArray.length) {
-    //         queryString += color; 
-    //     } else {
-    //       queryString += (color + '&'); 
-    //     }
-    //   });
-
-    //   console.log(queryString); 
-    //   return queryString;
-    // }
-
   }
 
   clearFilters() {
@@ -379,6 +362,9 @@ class CollectionGrid extends HTMLElement {
     // let params = new URLSearchParams(url.search); 
     // params.delete('section');
     // url.search = params; 
+
+    let indexToStartFrom = parseInt(pNumToStartFrom); 
+
     window.history.replaceState(null, null, null); 
 
     if(pFiltered) {
@@ -386,18 +372,26 @@ class CollectionGrid extends HTMLElement {
         document.querySelector('load-more-products-button').style.display = 'none';
       }
 
-      if(this.totalFilteredProducts.length <= pNumToStartFrom) {
+      if(this.totalFilteredProducts.length <= indexToStartFrom) {
         document.querySelector('load-more-products-button').style.display = 'none';
       }
     } else {
 
-      let productsToHide = this.querySelectorAll(`.grid__item:nth-child(${pNumToStartFrom}) ~ *`);
+      let productsToHide = this.querySelectorAll(`.grid__item:nth-child(${indexToStartFrom}) ~ *`);
+
+      console.log(indexToStartFrom);
+      console.log(productsToHide); 
+      console.log(this.totalProducts.length)
+
+      this.querySelectorAll('.grid__item').forEach(elem => {
+        elem.style.display = 'block';
+      });
 
       productsToHide.forEach(elem => {
         elem.style.display = 'none';
       });
 
-      if(this.totalProducts.length <= pNumToStartFrom) {
+      if(this.totalProducts.length <= indexToStartFrom) {
         document.querySelector('load-more-products-button').style.display = 'none';
       }
     }
@@ -415,44 +409,69 @@ class CollectionGrid extends HTMLElement {
   }
 
 
-  renderFilteredProducts(pProductsToShow) {
-
-
-    this.totalFilteredProducts = pProductsToShow; 
-    this.totalProductsShowing = pProductsToShow.slice(0, this.paginateBy);
+  renderFilteredProducts(pProductsToShow, pOrderArray, pSorting) {
 
     let products = this.querySelectorAll(`.grid__item`);
-    let idOrders =  []
-    
-    pProductsToShow.forEach((elem) => { 
-      idOrders.push(parseInt(elem.id)); 
-    }); 
 
-    console.log(idOrders); 
-    let sortedProducts = _.sortBy(products, function(item){
-      console.log(item.dataset.productId);
-      return idOrders.indexOf(parseInt(item.dataset.productId)); 
-    });
+    if(pSorting && pProductsToShow.length === 0) {
+      let idOrders =  []
+      let productsToShow = this.totalFilteredProducts.length  > 0 ? this.totalFilteredProducts : false  || pOrderArray
 
-    sortedProducts.forEach(el => {
-        el.parentNode.appendChild(el);
-    });
+      productsToShow.forEach((elem) => { 
+        idOrders.push(parseInt(elem.id)); 
+      }); 
 
-    products.forEach(product => {
-      product.style.display = 'none';
-    });
+      this.totalSortedProducts = pOrderArray; 
 
-  
-    products.forEach(product => {
+      let sortedProducts = _.sortBy(products, function(item){
+        return idOrders.indexOf(parseInt(item.dataset.productId)); 
+      });
 
-      if(this.totalFilteredProducts.some(e => e.id == parseInt(product.dataset.productId))) {
-          product.style.display = 'block'; 
-        } else {
-          product.style.display = 'none'; 
-        }
-    }); 
+      this.totalProductsShowing = this.totalProducts.slice(0, this.paginateBy);
 
-    this.setUpPagination(this.dataset.paginateBy, true); 
+      sortedProducts.forEach(el => {
+          el.parentNode.appendChild(el);
+      });
+      
+      this.setUpPagination(this.dataset.paginateBy, false); 
+
+    } else {
+
+      this.totalFilteredProducts = pProductsToShow; 
+      this.totalProductsShowing = pProductsToShow.slice(0, this.paginateBy);
+
+      if(this.totalSortedProducts && this.totalSortedProducts.length > 0) {
+        
+        let idOrders  = [];
+
+        this.totalSortedProducts.forEach((elem) => { 
+          idOrders.push(parseInt(elem.id)); 
+        }); 
+
+        this.totalFilteredProducts = _.sortBy(this.totalFilteredProducts, function(item) {
+            return idOrders.indexOf(item.id)
+        });   
+      }
+      
+
+        products.forEach(product => {
+          product.style.display = 'none';
+        });
+      
+        products.forEach(product => {
+
+          if(this.totalFilteredProducts.some(e => e.id == parseInt(product.dataset.productId))) {
+              product.style.display = 'block'; 
+            } else {
+              product.style.display = 'none'; 
+            }
+        }); 
+
+      this.setUpPagination(this.dataset.paginateBy, true); 
+
+
+    }
+
 
   }
 
