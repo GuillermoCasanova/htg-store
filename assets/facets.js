@@ -421,7 +421,7 @@ class CollectionGrid extends HTMLElement {
         idOrders.push(parseInt(elem.id)); 
       }); 
 
-      this.totalSortedProducts = pOrderArray; 
+      this.totalProducts = pOrderArray; 
 
       let sortedProducts = _.sortBy(products, function(item){
         return idOrders.indexOf(parseInt(item.dataset.productId)); 
@@ -440,11 +440,11 @@ class CollectionGrid extends HTMLElement {
       this.totalFilteredProducts = pProductsToShow; 
       this.totalProductsShowing = pProductsToShow.slice(0, this.paginateBy);
 
-      if(this.totalSortedProducts && this.totalSortedProducts.length > 0) {
+      if(this.totalProducts) {
         
         let idOrders  = [];
 
-        this.totalSortedProducts.forEach((elem) => { 
+        this.totalProducts.forEach((elem) => { 
           idOrders.push(parseInt(elem.id)); 
         }); 
 
