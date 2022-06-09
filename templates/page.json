@@ -31,11 +31,26 @@
           "settings": {
             "text": "<p>Every so often mistakes do happen but we will do our best to fix it. If you notice a mistake with your order, please contact help@honorthegift.co and we will look into it. Please include your order number at all times when emailing us.<\/p>"
           }
+        },
+        "3a7a8532-35d3-40d3-b428-ec2816456be4": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>How do I create an Honor The Gift account?<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "cb6a34f0-966d-413c-bc5e-61bd9b82b7e3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It's easy to set up an account. During checkout, you'll have the opportunity to provide account details.<\/p>"
+          }
         }
       },
       "block_order": [
         "1654813504b65723f2-0",
-        "1654813504b65723f2-1"
+        "1654813504b65723f2-1",
+        "3a7a8532-35d3-40d3-b428-ec2816456be4",
+        "cb6a34f0-966d-413c-bc5e-61bd9b82b7e3"
       ],
       "settings": {
         "desktop_content_position": "center",
