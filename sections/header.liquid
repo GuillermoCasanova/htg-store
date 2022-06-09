@@ -1,26 +1,22 @@
 
 <link rel="stylesheet" href="{{ 'component-header.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
-
-
-
-{%- if settings.predictive_search_enabled -%}
-  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
-{%- endif -%}
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-product-card.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-cart-off-canvas.css' | asset_url | stylesheet_tag }}
+{{ 'component-predictive-search.css' | asset_url | stylesheet_tag }}
 
-
-<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'cart-off-canvas.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+
 
 
 
@@ -33,7 +29,7 @@
 
       {%- if section.settings.menu != blank -%}
         <header-drawer data-breakpoint="tablet">
-          <details id="Details-menu-drawer-container" class="header-menu-drawer-container" data-menu-drawer-container>
+          <details id="Details-menu-drawer-container" class="header-menu-drawer-container  menu-opening" data-menu-drawer-container open>
             <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
                     aria-label="{{ 'sections.header.menu' | t }}"
                     data-header-drawer-toggle>
@@ -47,6 +43,55 @@
             <aside class="menu-drawer  header-menu-drawer motion-reduce"  tabindex="-1" data-header-drawer-menu>
               <div class="menu-drawer__inner-container">
                 <div class="menu-drawer__navigation-container">
+                  <div class="menu-drawer-search">
+                    <div class="search-modal" aria-label="{{ 'general.search.search' | t }}">
+                      <div class="search-modal__content" tabindex="-1">
+                          <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+                            <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                              <div class="search__input-container  page-width">
+                                <input class="search__input"
+                                  id="Search-In-Modal-1"
+                                  type="search"
+                                  name="q"
+                                  value=""
+                                    role="combobox"
+                                    aria-expanded="false"
+                                    aria-owns="predictive-search-results-list"
+                                    aria-controls="predictive-search-results-list"
+                                    aria-haspopup="listbox"
+                                    aria-autocomplete="list"
+                                    autocorrect="off"
+                                    autocomplete="off"
+                                    autocapitalize="off"
+                                    spellcheck="false"
+                                >
+                                <label class="search__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
+                                <input type="hidden" name="options[prefix]" value="last">
+                                <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                                  <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-search">
+                                  </svg>
+                                </button>
+                              </div>
+                                <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                  <div class="predictive-search__loading-state">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                            </form>
+                          </predictive-search>
+
+                        {% comment %} <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                          <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                            <use href="#icon-close">
+                          </svg>
+                        </button> } {% endcomment %}
+                      </div>
+                    </div>
+                  </div>
                   <nav class="menu-drawer__navigation">
                     <ul class="menu-drawer__menu" role="list">
                       {%- for link in section.settings.menu.links -%}

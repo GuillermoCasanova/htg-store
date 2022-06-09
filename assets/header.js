@@ -48,7 +48,7 @@ class HeaderDrawer  extends MenuDrawer {
         //     document.querySelector('[data-cart-toggle]').classList.remove('is-open');
         //     return
         // }
-
+      return
         if(this.headerDrawerMenuContainer.hasAttribute('open')) {
             this.closeDrawer();
         } else {

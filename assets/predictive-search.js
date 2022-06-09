@@ -120,6 +120,7 @@ class PredictiveSearch extends HTMLElement {
   }
 
   getSearchResults(searchTerm) {
+    console.log(searchTerm);
     const queryKey = searchTerm.replace(" ", "-").toLowerCase();
     this.setLiveRegionLoadingState();
 
