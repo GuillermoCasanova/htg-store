@@ -146,6 +146,7 @@ class SearchToggle extends HTMLElement {
     super(); 
     this.button = this.querySelector('button');
     this.setUpEvents(); 
+
     document.addEventListener('click', (event) => {
       var isClickInside = this.contains(event.target);
       if (!isClickInside) {

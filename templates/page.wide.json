@@ -1,6 +1,6 @@
 {
   "sections": {
-    "about-header": {
+    "header": {
       "type": "about-header",
       "settings": {
         "heading": "Honor The Gift",
@@ -9,7 +9,7 @@
         "section-alignment": "normal"
       }
     },
-    "about-pillars": {
+    "pillars": {
       "type": "about-pillars",
       "settings": {
         "heading_1": "For The Inner City",
@@ -22,7 +22,7 @@
     }
   },
   "order": [
-    "about-header",
-    "about-pillars"
+    "header",
+    "pillars"
   ]
 }
