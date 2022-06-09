@@ -86,6 +86,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_12.jpg"
           }
+        },
+        "07035f81-7e00-4982-9c76-53ea7594ec27": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_13.jpg"
+          }
         }
       },
       "block_order": [
@@ -99,7 +105,8 @@
         "defd47e5-884b-4523-bc16-4d6e6742abf4",
         "9514496f-cda2-4c79-b1af-99cb1689165c",
         "bbe9a27a-2eca-43ba-a3fd-e77af88dd896",
-        "716fc14b-3268-43af-a824-de4c77ca99d6"
+        "716fc14b-3268-43af-a824-de4c77ca99d6",
+        "07035f81-7e00-4982-9c76-53ea7594ec27"
       ],
       "settings": {
         "name": ""
