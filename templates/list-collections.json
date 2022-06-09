@@ -57,6 +57,13 @@
             "collection_name": "Inner City Love Kids",
             "lookbook_url": ""
           }
+        },
+        "9168c99b-4b47-4bd3-8717-623789b118cf": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "City of Angels",
+            "lookbook_url": ""
+          }
         }
       },
       "block_order": [
@@ -65,7 +72,8 @@
         "7d15d527-5092-4c5e-ba9d-6bc32d4044fc",
         "7b09a8ed-db9b-4714-8e5f-8032711d05d6",
         "83f6043e-d579-4d4b-b5ed-47f55c201fd3",
-        "91af92db-e317-40cb-bc57-c83ff68cdf68"
+        "91af92db-e317-40cb-bc57-c83ff68cdf68",
+        "9168c99b-4b47-4bd3-8717-623789b118cf"
       ],
       "settings": {
         "heading": "Collections"
