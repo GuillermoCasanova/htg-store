@@ -44,13 +44,28 @@
           "settings": {
             "text": "<p>It's easy to set up an account. During checkout, you'll have the opportunity to provide account details.<\/p>"
           }
+        },
+        "cf205c93-8bfa-400b-9ae4-33ee45ebc328": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What are the perks of having an Honor The Gift account?<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "a795b343-f664-4710-b899-c38021e5394c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Having a Honor The Gift account lets you save payment and shipping information which helps you check out faster! And don’t forget to sign up for our newsletter. We’ll send you special offers, gift ideas and first look at new arrivals.<\/p>"
+          }
         }
       },
       "block_order": [
         "1654813504b65723f2-0",
         "1654813504b65723f2-1",
         "3a7a8532-35d3-40d3-b428-ec2816456be4",
-        "cb6a34f0-966d-413c-bc5e-61bd9b82b7e3"
+        "cb6a34f0-966d-413c-bc5e-61bd9b82b7e3",
+        "cf205c93-8bfa-400b-9ae4-33ee45ebc328",
+        "a795b343-f664-4710-b899-c38021e5394c"
       ],
       "settings": {
         "desktop_content_position": "center",
