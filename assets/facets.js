@@ -2,6 +2,8 @@
 class CollectionFilters extends HTMLElement {
   constructor() {
     super();
+
+    this.style.opacity = 0;
     this.totalProducts = []; 
     this.totalSortedProducts = []; 
     this.getProductsFromJson(); 
@@ -45,7 +47,6 @@ class CollectionFilters extends HTMLElement {
       }
     });
 
-    this.style.opacity = 0;
 
   }
 
