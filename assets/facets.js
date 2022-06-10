@@ -45,6 +45,8 @@ class CollectionFilters extends HTMLElement {
       }
     });
 
+    this.style.opacity = 0;
+
   }
 
   toggleFilterOption(pFilterToOpen) {
@@ -295,6 +297,8 @@ class CollectionFilters extends HTMLElement {
       });
       return options; 
     }
+
+    this.style.opacity = 1;
 
   }
 
