@@ -48,8 +48,7 @@ class CustomColorPicker extends HTMLElement {
         return this.currentColor; 
     }; 
 
-    
-
+  
     updateVariantData() {
         const currentColor = this.getCurrentColor(); 
         let sectionId = this.dataset.section; 
