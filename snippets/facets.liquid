@@ -39,21 +39,50 @@
         <div class="collection-filters__filtering-forms">
           <div role="region" data-filter-form aria-hidden="true" aria-labelledby="sort-by" class="collection-filters__filtering-forms__form">
             <div class="collection-filters__filtering-forms__form__inner">
-              <select name="sort_by" class="" id="SortBy" data-filters>
-                  <option value="price-descending">
-                    High to Low
-                  </option>
-                  <option value="price-ascending">
-                    Low to High
-                  </option>
-                  <option value="best-seller">
-                    Best Seller
-                  </option>
-                  <option value="created-descending" selected="selected">
-                    Newest
-                  </option>
-                </select>
-              </div>
+              <fieldset class="filter-field-set">
+                <legend class="filter-field-set__legend visually-hidden">
+                  Sorting Options
+                </legend>
+                <div  class="sort-options" data-sort-options>
+                  <div class="sort-option">
+                      <input type="radio"
+                        name="sort_by"
+                        id="price-descending"
+                        value="price-descending" >
+                      <label for="price-descending" data-option-label data-option-name="{{ value | escape }}">
+                        High to Low, Price
+                      </label>
+                  </div>
+                  <div class="sort-option">
+                      <input type="radio"
+                        name="sort_by"
+                        id="price-asencing"
+                        value="price-ascending" >
+                      <label for="price-ascending">
+                        Low to Low, Price
+                      </label>
+                  </div>
+                  <div class="sort-option">
+                      <input type="radio"
+                        name="sort_by"
+                        id="best-seller"
+                        value="best-seller" >
+                      <label for="price-ascending">
+                        Best Sellers
+                      </label>
+                  </div>
+                  <div class="sort-option">
+                      <input type="radio"
+                        name="sort_by"
+                        id="created-descending"
+                        value="created-descending" >
+                      <label for="created-descending">
+                        Newest
+                      </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
           </div>
           
           <div role="region" data-filter-form aria-hidden="true" aria-labelledby="filter-by"  class="collection-filters__filtering-forms__form">

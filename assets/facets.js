@@ -33,8 +33,8 @@ class CollectionFilters extends HTMLElement {
         }); 
     });
 
-    if(this.querySelector('[data-filters]')) {
-      this.querySelector('[data-filters]').addEventListener('change', this.sortproducts.bind(this)); 
+    if(this.querySelector('[data-sort-options')) {
+      this.querySelector('[data-sort-options]').addEventListener('change', this.sortproducts.bind(this)); 
     }
   
 
@@ -85,6 +85,14 @@ class CollectionFilters extends HTMLElement {
 
     let sortingType = event.target.value
     const url = `${window.location.pathname}?sort_by=${sortingType}&?section_id=main-collection-product-grid`;
+    const queryUrl = new URL(window.location.href); 
+    let params = new URLSearchParams(url.search); 
+
+
+    params.delete('section');
+    queryUrl.search = `?sort_by=${sortingType}` + params; 
+
+    window.history.replaceState(null, null, queryUrl); 
 
     fetch(url)
       .then((response) => {
