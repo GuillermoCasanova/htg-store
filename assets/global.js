@@ -951,10 +951,6 @@ class VariantSelects extends HTMLElement {
   
   toggleAddButton(pSoldOutStatus, pDisableButton, pQuickAddButton) {
 
-    console.log(pSoldOutStatus); 
-    console.log(pQuickAddButton)
-
-      
     let productForm =  document.getElementById(`product-form-${this.dataset.section}`);
 
     if(document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`)) {
@@ -1099,44 +1095,48 @@ class VariantRadios extends VariantSelects {
 
   setUpEvents() {
 
-    let currentOption = this.querySelector("[data-current-option]").textContent; 
+    if(this.querySelector("[data-current-option]")) {
 
-    function showOption(pColor) {
-        let colorContainer = document.querySelector('[data-current-option]'); 
-        colorContainer.textContent = pColor.replace(/[\n\r]+|[\s]{2,}/g, '') 
+      let currentOption = this.querySelector("[data-current-option]").textContent; 
+
+      function showOption(pColor) {
+          let colorContainer = document.querySelector('[data-current-option]'); 
+          colorContainer.textContent = pColor.replace(/[\n\r]+|[\s]{2,}/g, '') 
+      }
+
+      this.querySelectorAll('[data-option-label]').forEach((element) => {
+  
+          element.addEventListener('click', (event)  =>{
+            let name = event.target.dataset.optionName; 
+            currentOption = name;
+            showOption(name)
+          })
+
+          element.addEventListener('mouseenter', (event)  =>{
+            let name = event.target.dataset.optionName; 
+            showOption(name)
+        })
+        
+
+          element.addEventListener('mouseleave', (event)  =>{
+              showOption(currentOption)
+          })
+      }); 
+
+
+      this.querySelectorAll('input[type="radio"]').forEach((element) => {
+        element.addEventListener('focus', (event)  =>{
+            let name = event.target.value; 
+            showOption(name)
+        });
+        
+      
+        element.addEventListener('blur', (event)  =>{
+            showOption(currentOption)
+        });
+      }); 
     }
 
-    this.querySelectorAll('[data-option-label]').forEach((element) => {
- 
-        element.addEventListener('click', (event)  =>{
-          let name = event.target.dataset.optionName; 
-          currentOption = name;
-          showOption(name)
-        })
-
-        element.addEventListener('mouseenter', (event)  =>{
-          let name = event.target.dataset.optionName; 
-          showOption(name)
-      })
-      
-
-        element.addEventListener('mouseleave', (event)  =>{
-            showOption(currentOption)
-        })
-    }); 
-
-
-    this.querySelectorAll('input[type="radio"]').forEach((element) => {
-      element.addEventListener('focus', (event)  =>{
-          let name = event.target.value; 
-          showOption(name)
-      });
-      
-    
-      element.addEventListener('blur', (event)  =>{
-          showOption(currentOption)
-      });
-    }); 
 
 }
 
