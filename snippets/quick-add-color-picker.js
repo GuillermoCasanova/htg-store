@@ -51,9 +51,7 @@ class QuickAddColorPicker extends HTMLElement {
         let sectionId = this.dataset.section; 
         let productContainer = document.querySelector(`[data-product-card][data-section="${sectionId}"]`); 
 
-        console.log('hey!');
         productContainer.querySelectorAll('variant-radios').forEach((elem) => {
-            console.log(elem); 
              elem.dataset.url = this.getSelectedColor().dataset.productUrl;
 
                 if( elem.querySelector('[type="application/json"]')) {

@@ -413,9 +413,33 @@
                 </custom-color-picker>
               {%- when 'buy_buttons' -%}
                 <div  class="product-form" {{ block.shopify_attributes }}>
-                  <product-form>
+                  <product-form class="hide-for-large-up">
                     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-active-product-id>
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-active-product-id data-mobile class="hide-for-large-up">
+
+                      <div class="product-form__buttons">
+                        <button
+                          type="submit"
+                          name="add"
+                          class="product-form__submit button button--full-width 
+                                  button--secondary 
+                            {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        >
+                          <span class="product-form__submit__text">
+                             Add to Cart
+                          </span>
+
+                        </button>
+                       
+                      </div>
+                    {%- endform -%}
+                  </product-form>
+
+                  <product-form class="show-for-large-up" data-section="{{ section.id }}" data-desktop >
+                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-active-product-id  data-desktop class="show-for-large-up">
+
                       <div class="product-form__buttons">
                         <button
                           type="submit"

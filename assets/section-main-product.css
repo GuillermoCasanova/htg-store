@@ -624,9 +624,11 @@ variant-selects {
   color: #fff;
 }
 
-.product-form__variant-options__option input[type='radio']:disabled {
+.product-form__variant-options__option input[type='radio']:disabled,
+.product-form__variant-options__option input[type='radio']:disabled+label {
   pointer-events: none;
 }
+
 
 .product-form__variant-options__option input[type='radio']:disabled+label {
   opacity: .3;

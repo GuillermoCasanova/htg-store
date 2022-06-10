@@ -270,7 +270,7 @@
               </div>
 `              {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" 
-                       id="active-product-id-{{ section.id }}-{{ card_product.id }}" disabled >
+                       id="active-product-id-{{ section.id }}-{{ card_product.id }}" disabled data-desktop>
                 <div class="quick-add-form__buttons">
                   <button
                     type="submit"

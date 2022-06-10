@@ -168,8 +168,6 @@ class CartOffCanvas extends HTMLElement {
         requires_shipping: parsedState.requires_shipping
       };
   
-      console.log('render contents');
-      
       document.querySelector('.cart-notification-product').innerHTML = ""; 
   
       let allProducts = []; 
@@ -260,8 +258,6 @@ class CartOffCanvas extends HTMLElement {
         let formAction = this.querySelector('[data-cart-footer]').dataset.formAction; 
         let checkoutText = this.querySelector('[data-cart-footer]').dataset.checkoutText; 
 
-        console.log(total); 
-        
         let orderDetailsTemplate = `
           <div data-cart-notification-totals class="cart-nofication__totals">
               <h3 class="cart-nofication__totals__subtotal">Total</h3>
