@@ -5,6 +5,17 @@
       "settings": {
       }
     },
+    "1654840710199c5d75": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "The Coast",
+        "collection_url": "shopify:\/\/collections\/accessories-the-coast",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -72,6 +83,7 @@
   },
   "order": [
     "banner",
+    "1654840710199c5d75",
     "product-grid",
     "16540387627dd6a3af",
     "165403876742214c90",
