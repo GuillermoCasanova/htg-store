@@ -1099,7 +1099,7 @@ class VariantRadios extends VariantSelects {
 
   setUpEvents() {
 
-    let currentOption = this.querySelector("[data-current-option").textContent; 
+    let currentOption = this.querySelector("[data-current-option]").textContent; 
 
     function showOption(pColor) {
         let colorContainer = document.querySelector('[data-current-option]'); 
