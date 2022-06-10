@@ -4,12 +4,10 @@
 {{ 'component-product-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-collection-filter.css' | asset_url | stylesheet_tag }}
 
-<script src="{{ 'quick-add-color-picker.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quick-add-color-picker.js' | asset_url }}" defer="defer"></script>
 
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
+ 
   {% style %}
     .quick-add-form{
       opacity: 0;
@@ -49,8 +47,6 @@
     <div>
      
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-      <script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
-      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
         {% render 'facets', results: collection.products %}
@@ -94,6 +90,11 @@
   </div>
 {% endif %}
 
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
 
 {% schema %}
