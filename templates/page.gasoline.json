@@ -65,6 +65,7 @@
     },
     "16548349028bafd863": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Gasoline Collection",
         "collection": "gasoline"
