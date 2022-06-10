@@ -951,18 +951,18 @@ class VariantSelects extends HTMLElement {
   
   toggleAddButton(pSoldOutStatus, pDisableButton, pQuickAddButton) {
 
-    let productForm = false; 
+    console.log(pSoldOutStatus); 
+    console.log(pQuickAddButton)
 
-    if(pQuickAddButton) {
-       productForm = document.querySelector(`product-form[data-section="${this.dataset.section}"]`);
-       let quickAddButton = document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`).querySelector('quick-add-button').querySelector('button');
-       let quickAddButtonText = document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`).querySelector('quick-add-button').querySelector('span');
-       this.toggleQuickAddButton(pSoldOutStatus, pDisableButton, quickAddButton, quickAddButtonText);
-       return
+      
+    let productForm =  document.getElementById(`product-form-${this.dataset.section}`);
+
+    if(document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`)) {
+      let quickAddButton = document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`).querySelector('quick-add-button').querySelector('button');
+      let quickAddButtonText = document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`).querySelector('quick-add-button').querySelector('span');
+      this.toggleQuickAddButton(pSoldOutStatus, pDisableButton, quickAddButton, quickAddButtonText);
     }
-    else {
-      productForm = document.getElementById(`product-form-${this.dataset.section}`);
-    }
+
 
     let disable = pDisableButton; 
     if (!productForm) return;
@@ -1072,6 +1072,8 @@ class VariantRadios extends VariantSelects {
          }
        }
 
+       console.log(this);
+       console.log(this.dataset.isQuickAdd);
      
        if(!this.currentVariant.available) {
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length === 0) {

@@ -25,13 +25,13 @@ if (!customElements.get('product-form')) {
     onSubmitHandler(evt) {
       evt.preventDefault(); 
 
-      console.log(evt);
-      
       const submitButton = this.querySelector('[type="submit"]');
   
       submitButton.setAttribute('disabled', true);
       submitButton.classList.add('loading');
-  
+      
+      console.log(this.form); 
+      
       const body = JSON.stringify({
         ...JSON.parse(serializeForm(this.form))
         // sections: this.cartNotification.getSectionsToRender().map((section) => section.id),
