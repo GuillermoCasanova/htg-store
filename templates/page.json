@@ -28,24 +28,34 @@
     "1654831691f837e11a": {
       "type": "lookbook-slideshow",
       "blocks": {
+        "c78ac321-a9ea-4772-90d9-9e9a32aadaad": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_1.jpg"
+          }
+        },
         "2f0e2cd7-c1cc-4399-a288-d15be32dbfa9": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_2_c521fa4a-cea1-4573-a1c5-a9227e7df1c6.jpg"
           }
         },
         "a84fd1e9-20c1-4244-8258-13a1a6a9c724": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_3_5b4ada14-b4ae-43d8-9b34-bb5001f4f914.jpg"
           }
         },
         "e84da736-82b5-4274-a579-a786872a710f": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_5_914d187e-633f-4efc-8b38-70d04334e6ac.jpg"
           }
         },
         "33223de3-9c0c-48b4-b91c-5f0c3110869c": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_7_233750db-cab5-4c99-9d55-e5bb3b4ed5fc.jpg"
           }
         },
         "1999e54c-c896-4c7f-a13a-b295dc7f0ba3": {
@@ -72,14 +82,10 @@
           "type": "slideshow_slide",
           "settings": {
           }
-        },
-        "c78ac321-a9ea-4772-90d9-9e9a32aadaad": {
-          "type": "slideshow_slide",
-          "settings": {
-          }
         }
       },
       "block_order": [
+        "c78ac321-a9ea-4772-90d9-9e9a32aadaad",
         "2f0e2cd7-c1cc-4399-a288-d15be32dbfa9",
         "a84fd1e9-20c1-4244-8258-13a1a6a9c724",
         "e84da736-82b5-4274-a579-a786872a710f",
@@ -88,8 +94,7 @@
         "12e910fe-6ddf-44c8-b7bd-691f0d4fb7c2",
         "f6d46cea-daa7-4da6-82cf-d65e682660f1",
         "03f1b904-de63-4ce2-903c-d2f82391a521",
-        "92b1f9bf-e99c-4e23-914e-fdf88471d36a",
-        "c78ac321-a9ea-4772-90d9-9e9a32aadaad"
+        "92b1f9bf-e99c-4e23-914e-fdf88471d36a"
       ],
       "settings": {
         "name": ""
