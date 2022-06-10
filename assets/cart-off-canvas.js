@@ -263,6 +263,8 @@ class CartOffCanvas extends HTMLElement {
         let formAction = this.querySelector('[data-cart-footer]').dataset.formAction; 
         let checkoutText = this.querySelector('[data-cart-footer]').dataset.checkoutText; 
 
+        console.log(total); 
+        
         let orderDetailsTemplate = `
           <div data-cart-notification-totals class="cart-nofication__totals">
               <h3 class="cart-nofication__totals__subtotal">Total</h3>
@@ -282,6 +284,7 @@ class CartOffCanvas extends HTMLElement {
         
   
         if(products.length <= 0) {
+          this.cartOrderDetails.innerHTML = orderDetailsTemplate; 
           this.showEmptyCartState();
         } else {
           this.cartOrderDetails.innerHTML = orderDetailsTemplate; 
