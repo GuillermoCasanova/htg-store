@@ -23,6 +23,7 @@
     width: 100%;
     border-bottom: 1px solid rgb(var(--color-base-text));
     overflow: hidden;
+    background-color: rgb(var(--color-base-background-3));
 }
 
 
@@ -95,7 +96,7 @@
 @media screen and (min-width:700px) {
     .header-list-collections__copy {
         width: 50vw;
-        border-left: 1px solid rgb(var(--color-base-text));
+        border-right: 1px solid rgb(var(--color-base-text));
     }
 }
 

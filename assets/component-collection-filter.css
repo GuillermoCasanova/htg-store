@@ -29,6 +29,7 @@
     display: flex;
     z-index: 1;
     position: relative;
+    color: rgb(var(--color-base-text));
 }
 
 .collection-filters__options button {
@@ -135,6 +136,10 @@
     flex-wrap: wrap;
 }
 
+width: 2.75rem;
+height: 2.75rem;
+margin-right: var(--level2);
+
 .filter-size {
     position: relative;
     display: block;
@@ -146,9 +151,9 @@
 
 @media only screen and (min-width: 600px) {
     .filter-size {
-        width: 2.5rem;
+        width: 2.75rem;
         height: 2.75rem;
-        margin-right: var(--level3);
+        margin-right: var(--level2);
     }
 }
 

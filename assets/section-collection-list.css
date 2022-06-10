@@ -61,6 +61,7 @@
   overflow: hidden;
   position: relative;
   display: block;
+  background-color: rgb(var(--color-base-background-2));
 }
 
 .archival-collection-thumb__image-container:hover .archival-collection-thumb__image img,

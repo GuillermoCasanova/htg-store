@@ -1145,6 +1145,18 @@ class VariantRadios extends VariantSelects {
 customElements.define('variant-radios', VariantRadios);
 
 
+
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('variant-radios').setUpEvents(); 
 }); 
+
+
+
+function enableLazyImgAnimations() {
+  document.querySelectorAll('img').forEach((elem) => 
+  elem.addEventListener('load', (event) => {
+      event.target.classList.add('loaded');
+  }, {once: true}));
+}
+
+enableLazyImgAnimations(); 
