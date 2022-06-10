@@ -62,11 +62,19 @@
       "settings": {
         "name": ""
       }
+    },
+    "16548349028bafd863": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Gasoline Collection",
+        "collection": "gasoline"
+      }
     }
   },
   "order": [
     "header",
     "1654834686181ef19e",
-    "16548348014bff1e15"
+    "16548348014bff1e15",
+    "16548349028bafd863"
   ]
 }
