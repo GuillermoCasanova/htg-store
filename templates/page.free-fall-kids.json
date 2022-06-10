@@ -17,10 +17,25 @@
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
+    },
+    "1654834084b96cac90": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Free-Fall Kids",
+        "collection": "freefall-kids"
+      }
+    },
+    "16548341100606a808": {
+      "type": "lookbook-slideshow",
+      "settings": {
+        "name": ""
+      }
     }
   },
   "order": [
     "header",
-    "1654834013ccb0ad8f"
+    "1654834013ccb0ad8f",
+    "1654834084b96cac90",
+    "16548341100606a808"
   ]
 }
