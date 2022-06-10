@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   border-bottom: 1px solid rgb(var(--color-base-text));
-  margin-bottom: var(--level10);
+  margin-bottom: var(--level3);
 }
 
 
@@ -34,6 +34,10 @@
   border-top: 1px solid rgb(var(--color-base-text));
   opacity: 0;
   transform: translateY(-100%);
+}
+
+.search-modal[aria-hidden="false"] {
+  transform: translateY(0);
 }
 
 .search-modal__content {

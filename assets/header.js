@@ -94,6 +94,7 @@ class CartToggle extends HTMLElement {
     this.cartCountBubble = this.querySelector('[data-cart-count-bubble]'); 
     this.setUpEvents(); 
     this.setUpToggleType();
+
   }
   
   updateToggleQty(pCart) {
@@ -117,6 +118,26 @@ class CartToggle extends HTMLElement {
       icon.style.display = 'none';
       text.classList.remove('visually-hidden');
       button.classList.add('header__icon--cart--text');
+
+      document.addEventListener('click', (event) => {
+
+        console.log(this);
+        console.log(event.target); 
+        event.stopPropagation();
+        event.preventDefault();
+
+        var isClickInside = this.cartNotification.contains(event.target);
+        var isToggleButton = this.contains(event.target); 
+
+        console.log(isClickInside);
+        console.log(isToggleButton); 
+
+        if (isClickInside && !isToggleButton) {
+          this.cartNotification.close(); 
+        }
+      
+
+      });
     }
 
     if(type === 'icon') {
@@ -156,6 +177,7 @@ class SearchToggle extends HTMLElement {
 
     document.addEventListener('click', (event) => {
       
+      console.log('hello');
       var isClickInside = document.querySelector('[data-search-modal]').contains(event.target);
       var isToggleButton = this.contains(event.target); 
 

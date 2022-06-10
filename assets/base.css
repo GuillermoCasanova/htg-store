@@ -452,6 +452,7 @@ section {
 @media only screen and (min-width: 930px) {
   .hide-for-large-up {
     display: none;
+    pointer-events: none;
   }
 }
 

@@ -65,7 +65,6 @@ class PredictiveSearch extends HTMLElement {
 
     if(!searchTerm.length) {
       this.classList.remove('is-focused'); 
-      console.log('CLOSE');
       this.close(true);
     }
     
