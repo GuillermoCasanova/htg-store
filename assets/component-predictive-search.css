@@ -27,6 +27,7 @@
   right: 0;
   top: 5.15rem;
   transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(-100%);
 }
 
 .search-modal[aria-hidden="true"] {
