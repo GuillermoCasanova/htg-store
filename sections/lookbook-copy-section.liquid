@@ -1,22 +1,22 @@
 
 
 <div class="lookbook-copy-section__inner" style="
-    {%if section.settings.copy_bg_color == 'background-1'%}
+    {% if section.settings.copy_bg_color == 'background-1' %}
         background-color: rgb(var(--color-base-background-1))
-    {%endif%}
-    {%if section.settings.copy_bg_color == 'background-2'%}
+    {% endif %}
+    {% if section.settings.copy_bg_color == 'background-2' %}
         background-color: rgb(var(--color-base-background-2))
-    {%endif%}
-    {%if section.settings.copy_bg_color == 'background-3'%}
+    {% endif %}
+    {% if section.settings.copy_bg_color == 'background-3' %}
         background-color: rgb(var(--color-base-background-2))
-    {%endif%}
+    {% endif %}
     ">
     <div class="page-width">
         <h2>
-            {{section.settings.heading}}
+            {{ section.settings.heading }}
         </h2>
         <div>
-            {{section.settings.body}}
+            {{ section.settings.body }}
         </div>
     </div>
 </div>
@@ -37,31 +37,31 @@
       "id": "heading"
     },
     {
-        "type": "text",
-        "label": "Section Body",
-        "id": "body"
+      "type": "richtext",
+      "label": "Section Body",
+      "id": "body"
     },
     {
-        "type": "select",
-        "id": "bg_color",
-        "label": "Copy Background Color",
-        "info": "Pulled from Theme Settings > Background Colors",
-        "options": [
-          {
-            "value": "background-1",
-            "label": "Bakground 1"
-          },
-          {
-            "value": "background-2",
-            "label": "Bakground 2"
-          },
-          {
-            "value": "background-3",
-            "label": "Bakground 3"
-          }
-        ],
-        "default": "background-1"
-      }
+      "type": "select",
+      "id": "bg_color",
+      "label": "Copy Background Color",
+      "info": "Pulled from Theme Settings > Background Colors",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Bakground 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Bakground 2"
+        },
+        {
+          "value": "background-3",
+          "label": "Bakground 3"
+        }
+      ],
+      "default": "background-1"
+    }
   ],
   "presets": [
     {
