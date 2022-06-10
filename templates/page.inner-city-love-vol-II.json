@@ -2,8 +2,19 @@
   "sections": {
     "header": {
       "type": "image-banner",
+      "blocks": {
+        "58868662-a1d3-453b-9284-8e7a90162638": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "58868662-a1d3-453b-9284-8e7a90162638"
+      ],
       "settings": {
-        "video": "",
+        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0013\/1111\/3328\/files\/HTG_WEB_Widescreen_Updated_Audio.mp4?v=1654837700",
         "cta-url": ""
       }
     },
