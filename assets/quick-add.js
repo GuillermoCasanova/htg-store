@@ -152,39 +152,11 @@ class QuickAddButton extends HTMLElement {
     super();
     this.querySelector('button').addEventListener('click', this.addToCart.bind(this));
     this.variantRadios =  document.querySelector(`variant-radios[data-section="${this.dataset.section}"]`); 
-    this.variantRadios.addEventListener('change', () => {
-      console.log('hello');
-    })
   }
 
   addToCart() {
     const quickAddForm = document.querySelector(`#quick-add-form-${this.dataset.section}`);
     quickAddForm.dispatchEvent(new Event('submit'));
-  }
-
-  toggleAddButton(pSoldOutStatus, pDisableButton) {
-    let disable = pDisableButton; 
-
-    const addButton = this.querySelector('[name="add"]');
-    const addButtonText = this.querySelector('[name="add"] > span');
-
-    if (!addButton) return;
-
-    if (disable) {
-      console.log('hello!');
-      console.log(pSoldOutStatus);
-      addButton.setAttribute('disabled', true);
-      if(pSoldOutStatus === 'sold-out') {
-        addButtonText.textContent = window.variantStrings.soldOut;
-      }
-      if(pSoldOutStatus === 'variant-sold-out') {
-        addButtonText.textContent = window.variantStrings.currentOptionSoldOut;
-      }
-    } else {
-      addButton.removeAttribute('disabled');
-      addButtonText.textContent = window.variantStrings.addToCart;
-    }
-
   }
 }
 

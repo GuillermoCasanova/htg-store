@@ -49,10 +49,6 @@ class loadMoreProductsButton extends HTMLElement {
             this.style.display = 'none';
         }
 
-        // IF NO MORE PRODUCTS, HIDE BUTTON
-        console.log(CollectionProducs.getProductsRendered().length);
-        console.log(this.totalProducts.length); 
-
         if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
             this.style.display = 'none';
         }

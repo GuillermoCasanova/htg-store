@@ -44,7 +44,7 @@
       {{ page.title | escape }}
     </h1>
   </div>
-  {% if page.content != blank %}
+  {% if page.content != blank and section.settings.hide_body != false %}
   <div class="rte text-page__body">
     {{ page.content }}
   </div>
@@ -80,6 +80,11 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "radio",
+      "id": "hide_body",
+      "label": "Hide main page body?"
     }
   ]
 }

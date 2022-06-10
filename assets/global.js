@@ -1045,14 +1045,23 @@ class VariantRadios extends VariantSelects {
      
        if(!this.currentVariant.available) {
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length === 0) {
+           if(this.dataset.isQuickAdd) {
+             console.log('QUICK ADD CHANGE')
+           }
            this.toggleAddButton('sold-out', true);
          } 
 
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length > 0) {
            console.log('variant sold out')
+           if(this.dataset.isQuickAdd) {
+            console.log('QUICK ADD CHANGE')
+          }
            this.toggleAddButton('variant-sold-out', true);
          }
        } else {
+        if(this.dataset.isQuickAdd) {
+          console.log('QUICK ADD CHANGE')
+        }
          this.toggleAddButton(false, false);
        }
   }
