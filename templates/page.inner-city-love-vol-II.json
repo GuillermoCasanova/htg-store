@@ -165,12 +165,32 @@
       "settings": {
         "name": ""
       }
+    },
+    "1654827047ce940832": {
+      "type": "image-banner",
+      "blocks": {
+        "1654827046615d34c7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1654827046615d34c7-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.10.36_PM.png",
+        "video": "",
+        "cta-url": ""
+      }
     }
   },
   "order": [
     "header",
     "1654824418fc9b5b00",
     "165482651724db58c9",
-    "1654826807d275b950"
+    "1654826807d275b950",
+    "1654827047ce940832"
   ]
 }
