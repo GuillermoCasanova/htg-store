@@ -2,11 +2,25 @@
   "sections": {
     "header": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "1654836472effa8de8": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Art Department",
+        "body": "",
+        "image": "shopify:\/\/shop_images\/01HTG_ArtDept_Web_16ac6a8c-ca51-412a-bfb9-18e2d56082ef.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1"
       }
     }
   },
   "order": [
-    "header"
+    "header",
+    "1654836472effa8de8"
   ]
 }
