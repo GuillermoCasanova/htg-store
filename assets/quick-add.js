@@ -9,7 +9,6 @@ class QuickAddColorPicker extends HTMLElement {
 
   onVariantChange() {
       this.updateVariantData();
-      this.updateVariantInput(); 
       this.updateImages(); 
   }
 
@@ -31,28 +30,14 @@ class QuickAddColorPicker extends HTMLElement {
       }); 
 
       return this.currentColor; 
-      
-      // .find((variant) => {
-      //     return !variant.options.map((option, index) => {
-      //       return this.options[index] === option;
-      //     }).includes(false);
-      //   });
   }; 
-
-  updateVariantInput() {
-    const productForms = document.querySelectorAll(`#quick-add-form-${this.dataset.section}`);
-    const currentColor = this.getCurrentColor(); 
-
-    productForms.forEach((productForm) => {
-      const input = productForm.querySelector('input[name="id"]');
-      input.value = JSON.parse(currentColor.dataset.product).variants[0].id;
-    });
-  }
 
   updateVariantData() {
     const currentColor = this.getCurrentColor(); 
+    let sectionId = this.dataset.section; 
+    let productContainer = document.querySelector(`[data-product-card-wrapper][data-section="${sectionId}"]`); 
 
-    document.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
+    productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
         if( elem.querySelector('[type="application/json"]')) {
             let e = elem.querySelector('[type="application/json"]');
             e.parentElement.removeChild(e); 

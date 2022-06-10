@@ -53,7 +53,6 @@ class CustomColorPicker extends HTMLElement {
         let sectionId = this.dataset.section; 
         let productContainer = document.querySelector(`[data-product-container][data-section="${sectionId}"]`); 
 
-
             
             productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
                 if( elem.querySelector('[type="application/json"]')) {
@@ -80,7 +79,7 @@ class CustomColorPicker extends HTMLElement {
                 newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
                 newScript.type = "application/json";
                 elem.appendChild(newScript); 
-                elem.dispatchEvent(new Event('change'));
+            elem.dispatchEvent(new Event('change'));
             });
 
             // productContainer.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 

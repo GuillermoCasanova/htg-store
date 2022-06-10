@@ -13,7 +13,7 @@ class QuickAddColorPicker extends HTMLElement {
         this.updateActiveColorLabel(this.getSelectedColor().dataset.colorName); 
         this.updateURL(); 
         this.updateImages();
-        this.updateProductId(); 
+        this.updateVariantData(); 
         this.updateDescription() 
     }
 
@@ -46,10 +46,14 @@ class QuickAddColorPicker extends HTMLElement {
         return this.currentColor; 
     }; 
 
-    updateProductId() {
-        document.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 
+    updateVariantData() {
 
-        document.querySelectorAll('variant-radios').forEach((elem) => {
+        let sectionId = this.dataset.section; 
+        let productContainer = document.querySelector(`[data-product-card][data-section="${sectionId}"]`); 
+
+        console.log('hey!');
+        productContainer.querySelectorAll('variant-radios').forEach((elem) => {
+            console.log(elem); 
              elem.dataset.url = this.getSelectedColor().dataset.productUrl;
 
                 if( elem.querySelector('[type="application/json"]')) {
@@ -61,7 +65,7 @@ class QuickAddColorPicker extends HTMLElement {
             newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(this.currentColor.dataset.product).variants);  
             newScript.type = "application/json";
             elem.appendChild(newScript); 
-            elem.onVariantChange(true);
+            elem.dispatchEvent(new Event('change'));
         }); 
 
 

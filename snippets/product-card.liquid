@@ -12,7 +12,7 @@
 {% endcomment %}
 
 
-<div class="product-card-wrapper underline-links-hover">
+<div class="product-card-wrapper underline-links-hover" data-product-card-wrapper data-section="{{ section.id }}-{{ card_product.id }}">
     <script type="text/json" data-product-json>
       {{ card_product | json }}
     </script> 

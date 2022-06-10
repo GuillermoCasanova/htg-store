@@ -80,7 +80,6 @@ class CartOffCanvas extends HTMLElement {
     close() {
       this.notification.classList.remove('is-active');
       this.notification.classList.add('is-hidden');
-      console.log('close!!!');
   
       this.notification.addEventListener('transitionend', () => {
         removeTrapFocus(this.notification);
@@ -100,7 +99,6 @@ class CartOffCanvas extends HTMLElement {
     }
   
     showLatestCart() {
-      console.log(window.routes.cart_url); 
 
       fetch(window.Shopify.routes.root + `${routes.cart_get_url}`)
       .then((response) => {
@@ -126,7 +124,6 @@ class CartOffCanvas extends HTMLElement {
         sections_url: window.location.pathname
       });
 
-      console.log(line);
   
       fetch(`${routes.cart_change_url}`, {...fetchConfig(), ...{ body }})
         .then((response) => {
@@ -359,7 +356,6 @@ class CartOffCanvas extends HTMLElement {
       
                               product_contents.discounts.forEach(function(discount) {
                                 discounts = discounts + `<li>${discount.title}</li>`; 
-                                console.log(discounts); 
                               }); 
                               
                               return discounts;
