@@ -80,6 +80,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.36.32_PM.png"
           }
+        },
+        "9d3d282c-cd04-4e5b-95aa-574478fdec1d": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.37.08_PM.png"
+          }
         }
       },
       "block_order": [
@@ -92,7 +98,8 @@
         "4dc19129-2f0c-4eae-abd7-e978c9123ff2",
         "4680fe4e-2ea2-4a95-94d7-c74a0fa5ce68",
         "5f348b1b-340a-4180-9550-e68079ad2367",
-        "a48f93c6-bfdf-451f-ab59-25c3e1792218"
+        "a48f93c6-bfdf-451f-ab59-25c3e1792218",
+        "9d3d282c-cd04-4e5b-95aa-574478fdec1d"
       ],
       "settings": {
         "name": ""
