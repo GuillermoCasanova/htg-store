@@ -71,7 +71,7 @@ class CartOffCanvas extends HTMLElement {
       }, { once: true });
   
       document.body.addEventListener('click', this.onBodyClick);
-      //document.body.classList.add('overflow-hidden-tablet');
+      document.body.classList.add('overflow-hidden-tablet');
       //document.querySelector('header').classList.add('menu-is-open'); 
       this.overlay.classList.add('is-visible');
       this.showLatestCart();

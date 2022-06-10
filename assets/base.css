@@ -413,7 +413,7 @@ section {
   overflow: hidden;
 }
 
-@media screen and (min-width: 750px) {
+/* @media screen and (min-width: 750px) {
   .overflow-hidden-mobile {
     overflow: auto;
   }
@@ -423,7 +423,7 @@ section {
   .overflow-hidden-tablet {
     overflow: auto;
   }
-}
+} */
 
 
 
