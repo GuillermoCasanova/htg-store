@@ -17,10 +17,18 @@
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
+    },
+    "165483660394afd58b": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Art Department",
+        "collection": "art-department"
+      }
     }
   },
   "order": [
     "header",
-    "1654836472effa8de8"
+    "1654836472effa8de8",
+    "165483660394afd58b"
   ]
 }
