@@ -7,6 +7,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: var(--level8);
+    width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
