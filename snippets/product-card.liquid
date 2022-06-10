@@ -204,7 +204,7 @@
               {% endfor %}
             </quick-add-color-picker>
 
-            <variant-radios data-update-url="false" class="no-js-hidden" data-section="{{ section.id }}-{{ card_product.id }}" data-url="{{ card_product.url }}">
+            <variant-radios data-update-url="false" data-is-quick-add="true" class="no-js-hidden" data-section="{{ section.id }}-{{ card_product.id }}" data-url="{{ card_product.url }}">
               {%- for option in card_product.options_with_values -%}
                 <div class="quick-add-variants">
                   <fieldset >
