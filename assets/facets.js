@@ -207,6 +207,8 @@ class CollectionFilters extends HTMLElement {
         `);
     })
 
+    this.style.opacity = 1;
+
   }
 
   filterProducts() {
@@ -298,7 +300,7 @@ class CollectionFilters extends HTMLElement {
       return options; 
     }
 
-    this.style.opacity = 1;
+
 
   }
 
