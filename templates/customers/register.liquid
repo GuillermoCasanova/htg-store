@@ -35,33 +35,31 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-    <div class="field">      
+    <custom-input-wrapper  class="custom-field">      
       <input
         type="text"
         name="customer[first_name]"
         id="RegisterForm-FirstName"
         {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
         autocomplete="given-name"
-        placeholder="{{ 'customer.register.first_name' | t }}"
       >
       <label for="RegisterForm-FirstName">
         {{ 'customer.register.first_name' | t }}
       </label>
-    </div>
-    <div class="field">
+    </custom-input-wrapper>
+    <custom-input-wrapper  class="custom-field">
       <input
         type="text"
         name="customer[last_name]"
         id="RegisterForm-LastName"
         {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
         autocomplete="family-name"
-        placeholder="{{ 'customer.register.last_name' | t }}"
       >
       <label for="RegisterForm-LastName">
         {{ 'customer.register.last_name' | t }}
       </label>
-    </div>
-    <div class="field">      
+    </custom-input-wrapper>
+    <custom-input-wrapper  class="custom-field">      
       <input
         type="email"
         name="customer[email]"
@@ -75,12 +73,11 @@
           aria-invalid="true"
           aria-describedby="RegisterForm-email-error"
         {% endif %}
-        placeholder="{{ 'customer.register.email' | t }}"
       >
       <label for="RegisterForm-email">
         {{ 'customer.register.email' | t }}
       </label>
-    </div>
+    </custom-input-wrapper>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
         <svg aria-hidden="true" focusable="false" role="presentation">
@@ -89,7 +86,7 @@
         {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
       </span>
     {%- endif -%}
-    <div class="field">     
+    <custom-input-wrapper  class="custom-field">     
       <input
         type="password"
         name="customer[password]"
@@ -99,12 +96,11 @@
           aria-invalid="true"
           aria-describedby="RegisterForm-password-error"
         {% endif %}
-        placeholder="{{ 'customer.register.password' | t }}"
       >
       <label for="RegisterForm-password">
         {{ 'customer.register.password' | t }}
       </label>
-    </div>
+    </custom-input-wrapper>
     {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
         <svg aria-hidden="true" focusable="false" role="presentation">
@@ -113,7 +109,7 @@
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
-    <button>
+    <button class="button  button--primary  button--large">
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}

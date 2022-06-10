@@ -94,7 +94,7 @@
         {{ form.errors | default_errors }}
       {%- endif -%}
 
-      <div class="custom-field">        
+      <custom-input-wrapper class="custom-field">        
         <input
           type="email"
           name="customer[email]"
@@ -109,10 +109,10 @@
         <label for="CustomerEmail">
           {{ 'customer.login_page.email' | t }}
         </label>
-      </div>
+      </custom-input-wrapper>
 
       {%- if form.password_needed -%}
-        <div class="custom-field">          
+        <custom-input-wrapper class="custom-field">          
           <input
             type="password"
             value=""
@@ -126,7 +126,7 @@
           <label for="CustomerPassword">
             {{ 'customer.login_page.password' | t }}
           </label>
-        </div>
+        </custom-input-wrapper>
       {%- endif -%}
 
       <button class="button  button--primary  button--large" aria-label="Sign in to your account" >
