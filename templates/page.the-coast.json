@@ -18,6 +18,14 @@
         "cta-url": "shopify:\/\/collections\/the-coast"
       }
     },
+    "16548371436e789c43": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "The Coast – Summer 2022",
+        "body": "<p>Honor The Gift® Summer 2022 delivery continues the story of Russell Westbrook’s homage to Los Angeles. The Pacific Ocean acts as the lead inspiration defining this summer collection. A blue color palette and carefree California influence, breezes through this stripped back simple, yet refined range of raw edged knits, graphic tees and a cut and sew linen summer kit. Neighborhoods that surround the waters are reminiscent of driving down the coast.<\/p>",
+        "bg_color": "background-1"
+      }
+    },
     "1654796817af88f8a4": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -162,6 +170,7 @@
   },
   "order": [
     "header",
+    "16548371436e789c43",
     "1654796817af88f8a4",
     "165479684445e66e94",
     "16548107583c9fa91f"
