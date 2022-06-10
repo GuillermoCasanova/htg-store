@@ -44,7 +44,7 @@
       {{ page.title | escape }}
     </h1>
   </div>
-  {% if page.content != blank and section.settings.hide_body != false %}
+  {% if page.content != blank and section.settings.hide_body != 'false' %}
   <div class="rte text-page__body">
     {{ page.content }}
   </div>
@@ -84,7 +84,17 @@
     {
       "type": "radio",
       "id": "hide_body",
-      "label": "Hide main page body?"
+      "label": "Hide main page body?",
+      "options": [
+        {
+          "value": "true",
+          "label": "Yes"
+        },
+        {
+          "value": "false",
+          "label": "No"
+        }
+      ]
     }
   ]
 }
