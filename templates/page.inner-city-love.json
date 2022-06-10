@@ -18,18 +18,42 @@
         "copy-bg-color": "background-1"
       }
     },
-    "1654827303c344d63e": {
-      "type": "featured-collection",
+    "1654827638dfcac03e": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "816e9292-fcce-4d08-9229-4e53afa0a2ac": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.20.59_PM.png"
+          }
+        },
+        "fc9f08c0-b6ca-4347-b1c0-debfdcf431d0": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.21.08_PM.png"
+          }
+        }
+      },
+      "block_order": [
+        "816e9292-fcce-4d08-9229-4e53afa0a2ac",
+        "fc9f08c0-b6ca-4347-b1c0-debfdcf431d0"
+      ],
+      "settings": {
+        "name": ""
+      }
+    },
+    "1654827586937e2c77": {
+      "type": "lookbook-collection-display",
       "settings": {
         "heading": "Inner City Love",
-        "body": "",
-        "cta-url": "shopify:\/\/collections\/inner-city-love-mens"
+        "collection": "inner-city-love"
       }
     }
   },
   "order": [
     "header",
     "1654827301b006b537",
-    "1654827303c344d63e"
+    "1654827638dfcac03e",
+    "1654827586937e2c77"
   ]
 }
