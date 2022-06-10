@@ -38,10 +38,8 @@ class CustomColorPicker extends HTMLElement {
     getCurrentColor() { 
         let that = this; 
         this.querySelectorAll('[data-color-option]').forEach((elem) => {
-            console.dir(elem)
             if(elem.checked) {
                 this.currentColor = elem; 
-                console.log(this.currentColor); 
             }
         }); 
 
@@ -218,8 +216,6 @@ class CustomColorPicker extends HTMLElement {
                     showColor(name)
                 })
                 element.addEventListener('mouseleave', (event) => {
-                    console.log(this.getCurrentColor());
-
                     showColor(this.getCurrentColor().dataset.colorName)
                 })
             }); 

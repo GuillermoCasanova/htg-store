@@ -2,10 +2,13 @@
     #Quick Add
 \*------------------------------------*/
 
-.product-card-wrapper:hover .quick-add-form,
-.product-card-wrapper:hover .quick-add-button {
-  opacity: 1;
-  transform: translateY(0);
+@media (hover: hover) {
+
+  .product-card-wrapper:hover .quick-add-form,
+  .product-card-wrapper:hover .quick-add-button {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .quick-add-form {
@@ -67,11 +70,14 @@
   transition: all .2s ease;
 }
 
-.quick-add-button:hover,
-.quick-add-button:focus {
-  background-color: black;
-  color: #fff;
-  cursor: pointer;
+@media (hover: hover) {
+
+  .quick-add-button:hover,
+  .quick-add-button:focus {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 600px) {
