@@ -304,7 +304,7 @@
                       </script>
                     </variant-radios> 
                     
-                    <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
+                    <variant-selects class="no-js-hidden hide-for-large-up" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
                       {%- for option in product.options_with_values -%}
                         <div class="product-form__input product-form__input--dropdown" data-select-container>
                           <label  for="Option-{{ section.id }}-{{ forloop.index0 }}">
