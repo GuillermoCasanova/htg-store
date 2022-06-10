@@ -2,11 +2,25 @@
   "sections": {
     "header": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "1654834013ccb0ad8f": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Free-Fall Kids",
+        "body": "",
+        "image": "shopify:\/\/shop_images\/HTG_Kids_c2ea3841-718f-472f-82e0-83636361a2a1.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1"
       }
     }
   },
   "order": [
-    "header"
+    "header",
+    "1654834013ccb0ad8f"
   ]
 }
