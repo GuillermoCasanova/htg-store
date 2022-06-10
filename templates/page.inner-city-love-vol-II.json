@@ -134,10 +134,18 @@
       "settings": {
         "name": "Inner City Love II"
       }
+    },
+    "165482651724db58c9": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Inner City Love Vol. II",
+        "collection": ""
+      }
     }
   },
   "order": [
     "header",
-    "1654824418fc9b5b00"
+    "1654824418fc9b5b00",
+    "165482651724db58c9"
   ]
 }
