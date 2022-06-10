@@ -2,13 +2,25 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "16548304317ba76720": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "City of Angels",
+        "body": "<p>“City of Angels” celebrates the rich textures of Los Angeles. Using the City of Angels swap meet culture as the inspiration to inform the capsule. Bold graphics and worn down washes tell an authentic story of Russell’s childhood spent at the Slauson swap meet.<\/p>",
+        "image": "shopify:\/\/shop_images\/HTG_S21_0_c0b695f1-ae05-4172-9613-e3e97ec34e06.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16548304317ba76720"
   ]
 }
