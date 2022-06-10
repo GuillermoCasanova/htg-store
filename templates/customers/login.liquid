@@ -1,10 +1,21 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'base-forms.css' | asset_url | stylesheet_tag }}
+{{ 'component-breadcrumbs.css' | asset_url | stylesheet_tag }}
 
+
+<div class="page-width master-padding-top">
+  {% render 'breadcrumbs' %}
+</div>
  
+
 <div class="customer login">
-  <h1 id="recover" tabindex="-1">
-    {{ 'customer.recover_password.title' | t }}
-  </h1>
+
+  <div class="headline">
+    <h1 id="recover" tabindex="-1">
+      {{ 'customer.recover_password.title' | t }}
+    </h1>
+
+
   <div>
     <p>
       {{ 'customer.recover_password.subtext' | t }}
@@ -53,10 +64,10 @@
     {%- endform -%}
   </div>
 
-  <h1 id="login" tabindex="-1">
-    {{ 'customer.login_page.title' | t }}
-  </h1>
-  l
+    <h1 id="login" tabindex="-1">
+      {{ 'customer.login_page.title' | t }}
+    </h1>
+
   <div>
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>
@@ -83,7 +94,7 @@
         {{ form.errors | default_errors }}
       {%- endif -%}
 
-      <div class="field">        
+      <div class="custom-field">        
         <input
           type="email"
           name="customer[email]"
@@ -94,7 +105,6 @@
           {% if form.errors contains 'form' %}
             aria-invalid="true"
           {% endif %}
-          placeholder="{{ 'customer.login_page.email' | t }}"
         >
         <label for="CustomerEmail">
           {{ 'customer.login_page.email' | t }}
@@ -102,7 +112,7 @@
       </div>
 
       {%- if form.password_needed -%}
-        <div class="field">          
+        <div class="custom-field">          
           <input
             type="password"
             value=""
@@ -112,26 +122,29 @@
             {% if form.errors contains 'form' %}
               aria-invalid="true"
             {% endif %}
-            placeholder="{{ 'customer.login_page.password' | t }}"
           >
           <label for="CustomerPassword">
             {{ 'customer.login_page.password' | t }}
           </label>
         </div>
-
-        <a href="#recover">
-          {{ 'customer.login_page.forgot_password' | t }}
-        </a>
       {%- endif -%}
 
-      <button>
+      <button class="button  button--primary  button--large" aria-label="Sign in to your account" >
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+      <div class="login-footer">
       
+        <a href="{{ routes.account_register_url }}" class="styled-link">
+          {{ 'customer.login_page.create_account' | t }}
+        </a>
+        
+        <a href="#recover" class="styled-link">
+          {{ 'customer.login_page.forgot_password' | t }}
+        </a>
+  
+      </div>
+    
     {%- endform -%}
   </div>
   
@@ -141,7 +154,7 @@
       <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
 
       {%- form 'guest_login' -%}
-        <button>
+        <button class="button  button--primary  button--medium">
           {{ 'customer.login_page.guest_continue' | t }}
         </button>
       {%- endform -%}

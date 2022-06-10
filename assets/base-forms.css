@@ -242,7 +242,6 @@ margin-bottom: rem-calc($level7 + $level2);
 
 
 
-
 /*------------------------------------*\
     #Default Fields
 \*------------------------------------*/
@@ -277,6 +276,7 @@ margin-bottom: rem-calc($level7 + $level2);
     position: relative;
     display: block;
     width: 100%;
+    margin-bottom: var(--level3)
 }
 
 .custom-field label {
@@ -285,14 +285,20 @@ margin-bottom: rem-calc($level7 + $level2);
     pointer-events: none;
     transition: all .4s cubic-bezier(0.22, 1, 0.36, 1);
     margin-bottom: 0;
+    font-size: var(--h6);
 }
 
 .custom-field.is-active label {
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateY(-3px);
 }
 
-.custom-field input {}
+.custom-field input {
+    padding-top: var(--level2);
+    padding-bottom: var(--level2);
+    padding-left: var(--level2);
+    font-size: var(--h6);
+}
 
 .custom-field input:active,
 .custom-field input:focus {
@@ -389,6 +395,12 @@ button:hover {
 .button--medium {
     padding-top: var(--level2);
     padding-bottom: var(--level1);
+}
+
+.button--large {
+    padding-top: var(--level3);
+    padding-bottom: var(--level2);
+    font-size: var(--normal);
 }
 
 .styled-link:hover,

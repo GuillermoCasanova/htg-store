@@ -1,13 +1,108 @@
+/*------------------------------------*\
+    #Customer Pages
+\*------------------------------------*/
+
+
 h1 {
   font-family: var(--tertiary-font-family);
 }
 
+
+/*------------------------------------*\
+    #Login, Password 
+\*------------------------------------*/
+
 .customer:not(.account):not(.order) {
   margin: 6rem auto 9rem;
   max-width: 33.4rem;
-  padding: 0 1.5rem;
   text-align: center;
+  padding-left: var(--level5);
+  padding-right: var(--level5);
 }
+
+
+/* Login */
+.login .field+a {
+  margin-top: 1rem;
+}
+
+.login p {
+  margin: 1.5rem 0;
+}
+
+.login h3 {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: calc(var(--font-heading-scale) * 1.6rem);
+}
+
+.login button {
+  margin-bottom: var(--level3);
+}
+
+.login-footer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+@media screen and (min-width: 600px) {
+  .login-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.login-footer a {
+  font-size: var(--micro);
+  display: block;
+  margin-bottom: var(--level2);
+}
+
+#recover,
+#recover+div {
+  display: none;
+}
+
+#recover:target {
+  display: block;
+}
+
+#recover:target+div {
+  display: block;
+}
+
+#recover:target~#login,
+#recover:target~#login+div {
+  display: none;
+}
+
+#recover,
+#login {
+  scroll-margin-top: 20rem;
+}
+
+#recover {
+  margin-bottom: 0;
+}
+
+.activate button[name='decline'],
+.addresses li>button,
+.addresses form button[type] {
+  background-color: rgba(var(--color-background), var(--alpha-button-background));
+  color: rgb(var(--color-link));
+}
+
+@media only screen and (min-width: 750px) {
+  .activate button[name='decline'] {
+    margin-top: inherit;
+    margin-left: 1rem;
+  }
+}
+
+
+
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
@@ -19,9 +114,6 @@ h1 {
   margin-top: 4rem;
 }
 
-.customer button {
-  margin: 4rem 0 1.5rem;
-}
 
 .customer ul {
   line-height: calc(1 + 0.6 / var(--font-body-scale));
@@ -331,76 +423,6 @@ h1 {
   background-color: currentColor;
 }
 
-/* Login */
-.login a {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.login a[href='#recover'] {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.login .field+a {
-  margin-top: 1rem;
-}
-
-.login p {
-  margin: 1.5rem 0;
-}
-
-.login h3 {
-  margin-top: 1.5rem;
-  text-align: left;
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
-}
-
-#customer_login_guest button {
-  margin-top: 0;
-}
-
-#recover,
-#recover+div {
-  display: none;
-}
-
-#recover:target {
-  display: block;
-}
-
-#recover:target+div {
-  display: block;
-}
-
-#recover:target~#login,
-#recover:target~#login+div {
-  display: none;
-}
-
-#recover,
-#login {
-  scroll-margin-top: 20rem;
-}
-
-#recover {
-  margin-bottom: 0;
-}
-
-.activate button[name='decline'],
-.addresses li>button,
-.addresses form button[type] {
-  background-color: rgba(var(--color-background), var(--alpha-button-background));
-  color: rgb(var(--color-link));
-}
-
-@media only screen and (min-width: 750px) {
-  .activate button[name='decline'] {
-    margin-top: inherit;
-    margin-left: 1rem;
-  }
-}
 
 /* Account/Order */
 :is(.account, .order) {
