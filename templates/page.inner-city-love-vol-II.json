@@ -144,17 +144,18 @@
     },
     "1654826807d275b950": {
       "type": "lookbook-slideshow",
+      "disabled": true,
       "blocks": {
         "3cc80787-e28e-44c1-acaa-c88d64eaebf5": {
           "type": "slideshow_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.07.17_PM.png"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.11.36_PM_6a9a5af1-a884-46eb-a622-ebb78550c4a0.png"
           }
         },
         "98c1d0a1-e789-45ba-84a8-6387d31a274b": {
           "type": "slideshow_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.07.48_PM.png"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.11.23_PM.png"
           }
         }
       },
@@ -165,32 +166,12 @@
       "settings": {
         "name": ""
       }
-    },
-    "1654827047ce940832": {
-      "type": "image-banner",
-      "blocks": {
-        "1654827046615d34c7-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner"
-          }
-        }
-      },
-      "block_order": [
-        "1654827046615d34c7-0"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.10.36_PM.png",
-        "video": "",
-        "cta-url": ""
-      }
     }
   },
   "order": [
     "header",
     "1654824418fc9b5b00",
     "165482651724db58c9",
-    "1654826807d275b950",
-    "1654827047ce940832"
+    "1654826807d275b950"
   ]
 }
