@@ -201,6 +201,8 @@
 
 
 
+
+
 /*------------------------------------*\
     #Filter Colors
 \*------------------------------------*/
@@ -296,4 +298,53 @@
 
 .filter-color input:checked+.filter-color__label .filter-color__label__swatch {
     border: 2px solid rgb(var(--color-base-text));
+}
+
+
+.sort-options {
+    padding-top: var(--level1);
+}
+
+.sort-option {
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: var(--level1);
+}
+
+.sort-option label {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+@media screen and (min-width: 930px) {
+    .sort-option label {
+        font-size: var(--normal);
+    }
+}
+
+.sort-option label:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.sort-option input {
+    width: 100%;
+}
+
+.sort-option input:checked+label {
+    text-decoration: underline;
+}
+
+.sort-option input:checked+label {
+    text-decoration: underline;
+}
+
+.sort-option label:hover {}
+
+.sort-option input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
 }

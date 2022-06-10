@@ -143,6 +143,6 @@
 @media screen and (min-width: 1600px) {
     .blurb-section__copy__body {
         font-size: var(--h4);
-        max-width: 25em;
+        max-width: 27em;
     }
 }
