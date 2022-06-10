@@ -17,10 +17,88 @@
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
+    },
+    "1654829774a526c9a8": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Inner City Love Kids",
+        "collection": "inner-city-love-kids"
+      }
+    },
+    "1654829817392f0748": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "2c41890a-1aed-4973-bbc6-78a160f305d4": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01_070c83c5-3f11-46a4-9591-3d695c9e471f.jpg"
+          }
+        },
+        "6ab9a7de-90e0-427c-b3bf-5a4a7cc2e995": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/02_34e7e232-29f0-4aa3-833a-0cbb9f2fb3fb.jpg"
+          }
+        },
+        "6cf640d6-05f9-4a03-84e7-1feba6a8ca63": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/03_5a4caaf7-d838-487d-b1dd-c55da3d12537.jpg"
+          }
+        },
+        "eeb6e60f-59f3-4589-a808-d39706aa13a6": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04.jpg"
+          }
+        },
+        "9ed189aa-096a-44ee-9553-7df98e0fe765": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/05.jpg"
+          }
+        },
+        "6784f05b-a42c-48ea-8e92-bea33af40fad": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "40c57d64-b8ed-45c7-b95c-41b7e2f237db": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "8fed37cb-f26e-406b-95a9-781ac34d6cb2": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "1755f883-e778-4489-b731-b506e35530fd": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "2c41890a-1aed-4973-bbc6-78a160f305d4",
+        "6ab9a7de-90e0-427c-b3bf-5a4a7cc2e995",
+        "6cf640d6-05f9-4a03-84e7-1feba6a8ca63",
+        "eeb6e60f-59f3-4589-a808-d39706aa13a6",
+        "9ed189aa-096a-44ee-9553-7df98e0fe765",
+        "6784f05b-a42c-48ea-8e92-bea33af40fad",
+        "40c57d64-b8ed-45c7-b95c-41b7e2f237db",
+        "8fed37cb-f26e-406b-95a9-781ac34d6cb2",
+        "1755f883-e778-4489-b731-b506e35530fd"
+      ],
+      "settings": {
+        "name": ""
+      }
     }
   },
   "order": [
     "header",
-    "1654829527ce874a8d"
+    "1654829527ce874a8d",
+    "1654829774a526c9a8",
+    "1654829817392f0748"
   ]
 }
