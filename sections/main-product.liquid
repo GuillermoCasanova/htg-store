@@ -304,7 +304,31 @@
                       </script>
                     </variant-radios> 
                     
-                    
+                    <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
+                      {%- for option in product.options_with_values -%}
+                        <div class="product-form__input product-form__input--dropdown" data-select-container>
+                          <label  for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                            {{ option.name }} <span data-option-text aria-hidden="true" class="dropdown-label-current-option"></span>
+                          </label>
+                            <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                              class="select__select"
+                              name="options[{{ option.name | escape }}]"
+                              form="{{ product_form_id }}"
+                            > 
+                              {%- for value in option.values -%}
+                                <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                                  {{ value }}
+                                </option>
+                              {%- endfor -%}
+                            </select>
+                            {% render 'icon-caret' %}
+                        </div>
+                      {%- endfor -%}
+  
+                      <script type="application/json">
+                        {{ product.variants | json }}
+                      </script>
+                    </variant-selects>
                 {%- endunless -%}
                 <noscript>
                   <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
