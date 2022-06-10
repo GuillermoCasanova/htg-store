@@ -22,53 +22,6 @@ class QuickAddColorPicker extends HTMLElement {
       });  
   }
 
-  setSoldOutOptions() {
-    let data = {
-      productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
-    }; 
-
-    let allProductVariants = data.productVariants;
-
-       let sizeOptions = [];
-       
-       this.querySelectorAll('input').forEach(function(elem) {
-         sizeOptions.push(elem); 
-         elem.parentElement.classList.remove('is-sold-out'); 
-         elem.disabled = false;
-         elem.setAttribute('aria-disabled', false);
-       }); 
-
-       for(var i = 0; i < allProductVariants.length; i++) {
-         if(allProductVariants[i].available == false) {
-           sizeOptions.forEach((elem) => {
-
-             if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
-               elem.parentElement.classList.add('is-sold-out'); 
-               elem.disabled = true;
-               elem.setAttribute('aria-disabled', true);
-             }
-           })
-         }
-       }
-
-     
-       if(!this.currentVariant.available) {
-         if(this.querySelectorAll("input[type='radio']:not([disabled])").length === 0) {
-              let quickAddButton = document.querySelector(`quick-add-button[data-section="${this.dataset.section}"]`);
-              quickAddButton.toggleAddButton('sold-out', true);
-         } 
-
-         if(this.querySelectorAll("input[type='radio']:not([disabled])").length > 0) {
-            let quickAddButton = document.querySelector(`quick-add-button[data-section="${this.dataset.section}"]`);
-            quickAddButton.toggleAddButton('variant-sold-out', true);
-         }
-       } else {
-        if(this.dataset.isQuickAdd == 'true') {
-            let quickAddButton = document.querySelector(`quick-add-button[data-section='${this.dataset.section}']`);
-            quickAddButton.toggleAddButton(false, false);
-       }
-  }
-  
   getCurrentColor() { 
       let that = this; 
       this.querySelectorAll('[data-color-option]').forEach((elem) => {
@@ -198,6 +151,10 @@ class QuickAddButton extends HTMLElement {
   constructor() {
     super();
     this.querySelector('button').addEventListener('click', this.addToCart.bind(this));
+    this.variantRadios =  document.querySelector(`variant-radios[data-section="${this.dataset.section}"]`); 
+    this.variantRadios.addEventListener('change', () => {
+      console.log('hello');
+    })
   }
 
   addToCart() {

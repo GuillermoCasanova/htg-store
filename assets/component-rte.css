@@ -4,11 +4,11 @@
   display: block;
 }
 
-.rte > p:first-child {
+.rte>p:first-child {
   margin-top: 0;
 }
 
-.rte > p:last-child {
+.rte>p:last-child {
   margin-bottom: 0;
 }
 
@@ -60,6 +60,19 @@
   display: inline-flex;
 }
 
-.rte blockquote > * {
+.rte blockquote>* {
   margin: -0.5rem 0 -0.5rem 0;
+}
+
+.rte h2 {
+  font-size: var(--h3);
+  margin-bottom: var(--level5);
+}
+
+.rte h3 {
+  font-size: var(--h4);
+}
+
+.rte p+h3 {
+  margin-top: var(--level7);
 }
