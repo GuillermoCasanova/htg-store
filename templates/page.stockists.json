@@ -70,7 +70,15 @@
           "type": "stockist-list",
           "settings": {
             "country_region": "United States",
-            "store_list": "<li>Union, CA<\/li>\n<li>Proper, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li> Webster, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>\n<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Next, OH<\/li>\n<li>1032 Space, OK<\/li>\n<li>Commonwealth, VA<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>Fred Segal, NV<\/li>\n<li>Proper, TX<\/li>"
+            "store_list": "<li>Union, CA<\/li>\n<li>Proper, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li> Webster, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>\n<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Next, OH<\/li>\n<li>1032 Space, OK<\/li>\n<li>Commonwealth, VA<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>Fred Segal, NV<\/li>\n<li>Proper, TX<\/li>\n<li>Guestlist, AZ (Kids)<\/li>\n<li>Carbon 38, CA (Womens)<\/li>\n<li>Eggy, CA (Kids)<\/li>\n<li>Elfin, CA (Kids)<\/li>\n<li>Flicka, CA (Kids)<\/li>\n<li>Foot Express, CA (Kids)<\/li>\n<li>Heat, CA (Kids)<\/li>\n<li>Paliskates, CA (Kids)<\/li>\n<li>Ragg Tattoo, CA (Kids)<\/li>\n<li>Kings, CA (Kids)<\/li>\n<li>Red Balloon, CA (Kids)<\/li>\n<li>Unseen Littles, CA (Kids)<\/li>\n<li>Casp Baby, FL (Kids)<\/li>\n<li>Cheeky Chic Boutique, FL (Kids)<\/li>\n<li>Clay Luxury Kids, GA (Kids)<\/li>\n<li>Clay Luxury Kids, IL (Kids)<\/li>\n<li>Wns Apparel, IN<\/li>\n<li>Zen, KY (Kids)<\/li>\n<li>Politics, LA (Kids)<\/li>\n<li>Reflections, LA (Kids)<\/li>\n<li>Rebnd, MA (Kids)<\/li>\n<li>The Restaurant Bistro, MI (Kids)<\/li>\n<li>Cityman, MI (Kids)<\/li>\n<li>Privei, NC (Kids)<\/li>\n<li>Feature, NV (Kids)<\/li>\n<li>Marcias Attic, NJ (Kids)<\/li>\n<li>Reform Kids, NJ (Kids)<\/li>\n<li>Shop Lovebug Baby, NV (Kids)<\/li>\n<li>Clay Luxury Kids, OH (Kids)<\/li>\n<li>Double Rainbow, OH (Kids)<\/li>\n<li>Kicks Lounge, OH (Kids)<\/li>\n<li>My Little Peanut, OR (Kids)<\/li>\n<li>Politics, TX (Kids)<\/li>\n<li>Premium Goods, TX (Kids)<\/li>\n<li>Status Boutique<\/li>"
+          }
+        },
+        "cadb69b1-9e94-4987-a166-9f84638223ff": {
+          "type": "stockist-list",
+          "disabled": true,
+          "settings": {
+            "country_region": "",
+            "store_list": ""
           }
         }
       },
@@ -83,7 +91,8 @@
         "82909324-575c-4e42-a3f4-686fff95663f",
         "13d2bca3-e9b2-4d86-ac0f-9e44a071b891",
         "ac060ff3-43f4-4a1d-ae47-89dcd51be56a",
-        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3"
+        "d2518a07-17dc-4ffc-a70e-cba0f29ce1a3",
+        "cadb69b1-9e94-4987-a166-9f84638223ff"
       ],
       "settings": {
         "page": ""
