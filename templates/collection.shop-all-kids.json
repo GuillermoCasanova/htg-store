@@ -19,7 +19,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection_url": "shopify:\/\/collections\/concrete-jungle-kids-market",
+        "collection_url": "\/collections\/kids\/concrete-jungle",
         "product_list": [
           "kids-cinema-t-shirt-black",
           "kids-compton-short-hickory",
@@ -37,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
-        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii",
+        "collection_url": "\/collections\/kids\/inner-city-love-vol-2",
         "product_list": [
           "kids-inner-city-love-t-shirt-long-beach-navy",
           "kids-smokey-stripe-t-shirt-navy",
