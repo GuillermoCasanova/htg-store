@@ -18,6 +18,14 @@
         "cta-url": ""
       }
     },
+    "1654837725a768e8f4": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Inner City Love Vol. II",
+        "body": "<p>Inner City Love Volume II represents the heart of Russell Westbrook’s childhood nostalgia. Inspired by the soundtrack that shaped his household growing up from soulful records playing in the background to style spanning from the 60's to 70's – this collection is a story about family and love. Celebrating the fond memories, the Inner City Love Volume II lookbook is a recreation of cherished family Holiday portraits, a tradition growing up.<\/p>",
+        "bg_color": "background-1"
+      }
+    },
     "1654824418fc9b5b00": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -181,6 +189,7 @@
   },
   "order": [
     "header",
+    "1654837725a768e8f4",
     "1654824418fc9b5b00",
     "165482651724db58c9",
     "1654826807d275b950"
