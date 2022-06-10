@@ -852,8 +852,6 @@ class VariantSelects extends HTMLElement {
       }
 
       if(!this.currentVariant.available) {
-        console.log('HELO')
-
         if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
           this.toggleAddButton('sold-out', true);
           this.setChosenOption(false); 
@@ -934,18 +932,43 @@ class VariantSelects extends HTMLElement {
     } 
   }
 
+  toggleQuickAddButton (pSoldOutStatus, pDisableButton, pButton, pButtonText){
+
+    if (pDisableButton) {
+      pButton.setAttribute('disabled', true);
+      if(pSoldOutStatus === 'sold-out') {
+        pButtonText.textContent = window.variantStrings.soldOut;
+      }
+      if(pSoldOutStatus === 'variant-sold-out') {
+        pButtonText.textContent = window.variantStrings.currentOptionSoldOut;
+      }
+    } else {
+      pButton.removeAttribute('disabled');
+      pButtonText.textContent = 'Quick Add+';
+    }
+  }
+
+  
   toggleAddButton(pSoldOutStatus, pDisableButton, pQuickAddButton) {
 
-    const productForm = document.getElementById(`product-form-${this.dataset.section}`);
-    
+    let productForm = false; 
+
+    if(pQuickAddButton) {
+       productForm = document.querySelector(`product-form[data-section="${this.dataset.section}"]`);
+       let quickAddButton = document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`).querySelector('quick-add-button').querySelector('button');
+       let quickAddButtonText = document.querySelector(`[data-product-card][data-section="${this.dataset.section}"]`).querySelector('quick-add-button').querySelector('span');
+       this.toggleQuickAddButton(pSoldOutStatus, pDisableButton, quickAddButton, quickAddButtonText);
+       return
+    }
+    else {
+      productForm = document.getElementById(`product-form-${this.dataset.section}`);
+    }
+
     let disable = pDisableButton; 
     if (!productForm) return;
         
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
-
-    console.log(addButton);
-    console.log(addButtonText);
 
     if (!addButton) return;
 
@@ -1059,7 +1082,6 @@ class VariantRadios extends VariantSelects {
          } 
 
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length > 0) {
-           console.log('variant sold out')
            if(this.dataset.isQuickAdd ==  'true') {
             this.toggleAddButton('variant-sold-out', true, true);
           }
@@ -1067,9 +1089,9 @@ class VariantRadios extends VariantSelects {
          }
        } else {
           if(this.dataset.isQuickAdd == 'true') {
-            this.toggleAddButton('variant-sold-out', false, false);
+            this.toggleAddButton(false, false, true);
           }
-         this.toggleAddButton(false, false);
+         this.toggleAddButton(false, false, true);
        }
   }
 

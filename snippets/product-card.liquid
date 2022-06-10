@@ -33,7 +33,9 @@
               <div class="quick-add-button-container">
                 <quick-add-button data-section="{{ section.id }}-{{ card_product.id }}">
                   <button type="submit" class="button  quick-add-button" tabindex="-1" aria-hidden="true">
-                    Quick Add +
+                    <span >
+                      Quick Add
+                   </span>
                   </button>
                 </quick-add-button>
               </div>
@@ -122,7 +124,7 @@
 `              {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
               <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" 
                      id="active-product-id-{{ section.id }}-{{ card_product.id }}" disabled >
-              <div class="quick-add-form__buttons">
+              <div class="quick-add-form__buttons visually-hidden">
                 <button
                   type="submit"
                   name="add"
@@ -256,7 +258,7 @@
               </div>
             </noscript>
 
-            <product-form class="quick-add-form__to-submit "  data-section="{{ section.id }}-{{ card_product.id }}" data-cart-type="{{ settings.cart_type }}">
+            <product-form class="quick-add-form__to-submit visually-hidden"  data-section="{{ section.id }}-{{ card_product.id }}" data-cart-type="{{ settings.cart_type }}">
               <div class="quick-add-form__error-message-wrapper" data-error-message-wrapper role="alert" hidden>
                 <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
                   <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>

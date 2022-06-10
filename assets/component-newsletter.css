@@ -47,7 +47,11 @@
   flex-direction: row;
 }
 
-.newsletter-form__input {
+.newsletter-form__field .custom-field {
+  margin-bottom: 0;
+}
+
+input.newsletter-form__input {
   padding: var(--level3);
 }
 
