@@ -70,6 +70,14 @@
   transition: all .2s ease;
 }
 
+
+.quick-add-button[disabled="true"] {
+  border: 1px solid rgb(var(--color-base-link));
+  color: rgb(var(--color-base-link));
+  pointer-events: none;
+}
+
+
 @media (hover: hover) {
 
   .quick-add-button:hover,
