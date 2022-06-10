@@ -55,7 +55,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love, Vol I",
-        "collection_url": "\/collections\/shop-all-kids\/inner-city-love-kids",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-kids",
         "product_list": [
           "kids-higher-power-t-shirt-smoke",
           "kids-spiritual-warefare-t-shirt-white",
