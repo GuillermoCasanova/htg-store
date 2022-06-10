@@ -9,7 +9,7 @@ class QuickAddColorPicker extends HTMLElement {
     }
 
     onVariantChange() {
-        
+
         this.updateActiveColorLabel(this.getSelectedColor().dataset.colorName); 
         this.updateURL(); 
         this.updateImages();
@@ -44,12 +44,6 @@ class QuickAddColorPicker extends HTMLElement {
         }); 
 
         return this.currentColor; 
-        
-        // .find((variant) => {
-        //     return !variant.options.map((option, index) => {
-        //       return this.options[index] === option;
-        //     }).includes(false);
-        //   });
     }; 
 
     updateProductId() {

@@ -38,9 +38,10 @@ class CustomColorPicker extends HTMLElement {
     getCurrentColor() { 
         let that = this; 
         this.querySelectorAll('[data-color-option]').forEach((elem) => {
+            console.dir(elem)
             if(elem.checked) {
-                console.log(elem)
                 this.currentColor = elem; 
+                console.log(this.currentColor); 
             }
         }); 
 

@@ -30,8 +30,6 @@ if (!customElements.get('product-form')) {
       submitButton.setAttribute('disabled', true);
       submitButton.classList.add('loading');
       
-      console.log(this.form); 
-      
       const body = JSON.stringify({
         ...JSON.parse(serializeForm(this.form))
         // sections: this.cartNotification.getSectionsToRender().map((section) => section.id),
@@ -41,7 +39,6 @@ if (!customElements.get('product-form')) {
       fetch(`${routes.cart_add_url}`, { ...fetchConfig('javascript'), body })
         .then((response) => response.json())
         .then((parsedState) => {
-          console.log(parsedState);
         })
         .catch((e) => {
           console.error(e);
