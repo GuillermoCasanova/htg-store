@@ -97,9 +97,52 @@
         "3b722572-40f8-48cb-aacb-bd9a74e83758": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_14_e53523d9-df81-4f7b-8858-cb60306b936e.jpg"
           }
         },
         "7a55cc20-187a-493d-9da1-87a8c8151391": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_15_d4267c00-f0d3-4147-89ae-3f9d8d66cd15.jpg"
+          }
+        },
+        "646f704e-3879-4e7d-9fb6-da3c533c5314": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_S21_16_ea93ba3b-ae7d-488d-b2a8-9a534132bcd3.jpg"
+          }
+        },
+        "1d943b08-7af7-434e-b98d-9c43c0514b50": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "04408106-e6c1-40cf-a176-65b7c0a6f8bf": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "dd16c7e5-3ac4-4fdf-8eab-dca6c2af8269": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "77be07ec-4829-4a1c-abe8-7ddd924f7ada": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "de71d83f-4fa6-42ea-a2ef-35077ea9396a": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "9d3c0af9-8a23-4164-9a56-775307f1c9a4": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "84546f45-e8fa-47af-a68b-ee5d47ec8af5": {
           "type": "slideshow_slide",
           "settings": {
           }
@@ -118,7 +161,15 @@
         "92b1f9bf-e99c-4e23-914e-fdf88471d36a",
         "99fbe693-e754-4402-84f6-27674b6fbaa9",
         "3b722572-40f8-48cb-aacb-bd9a74e83758",
-        "7a55cc20-187a-493d-9da1-87a8c8151391"
+        "7a55cc20-187a-493d-9da1-87a8c8151391",
+        "646f704e-3879-4e7d-9fb6-da3c533c5314",
+        "1d943b08-7af7-434e-b98d-9c43c0514b50",
+        "04408106-e6c1-40cf-a176-65b7c0a6f8bf",
+        "dd16c7e5-3ac4-4fdf-8eab-dca6c2af8269",
+        "77be07ec-4829-4a1c-abe8-7ddd924f7ada",
+        "de71d83f-4fa6-42ea-a2ef-35077ea9396a",
+        "9d3c0af9-8a23-4164-9a56-775307f1c9a4",
+        "84546f45-e8fa-47af-a68b-ee5d47ec8af5"
       ],
       "settings": {
         "name": ""
