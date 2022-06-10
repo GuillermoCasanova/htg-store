@@ -22,7 +22,7 @@
       "type": "blurb-section",
       "settings": {
         "heading": "Jordan x HTG®",
-        "body": "<p>Los Angeles native Russell Westbrook’s Honor the Gift clothing brand is an expression of strength, focus and leadership. Similar to the Jordan Brand, it was founded on self-belief and dedication to never stop working toward greatness, no matter the hardship.<br\/><br\/><br\/>Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where Russell came from and where anyone can take themselves. This year, the two Brands have collaborated to launch Russell’s signature colorway of the Why Not.5 shoe and apparel line. Details such as patches, labels and embroidery of the “Inner City” collection capture the style and essence of Russell’s experience.<br\/><br\/><\/p>",
+        "body": "<p>Los Angeles native Russell Westbrook’s Honor the Gift clothing brand is an expression of strength, focus and leadership. Similar to the Jordan Brand, it was founded on self-belief and dedication to never stop working toward greatness, no matter the hardship.<br\/><br\/>Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where Russell came from and where anyone can take themselves. This year, the two Brands have collaborated to launch Russell’s signature colorway of the Why Not.5 shoe and apparel line. Details such as patches, labels and embroidery of the “Inner City” collection capture the style and essence of Russell’s experience.<br\/><br\/><\/p>",
         "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.58.51_PM.png",
         "section-alignment": "flipped",
         "copy-bg-color": "background-3"
@@ -46,6 +46,13 @@
         "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
         "video": "",
         "cta-url": ""
+      }
+    },
+    "1654796652c1f897d9": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Collection Preview",
+        "collection": "jordan-x-htg"
       }
     },
     "16547967139d0d9446": {
@@ -141,20 +148,13 @@
       "settings": {
         "name": ""
       }
-    },
-    "1654796652c1f897d9": {
-      "type": "lookbook-collection-display",
-      "settings": {
-        "heading": "Collection Preview",
-        "collection": "jordan-x-htg"
-      }
     }
   },
   "order": [
     "165479687868697dbe",
     "1654811846108992c8",
     "header",
-    "16547967139d0d9446",
-    "1654796652c1f897d9"
+    "1654796652c1f897d9",
+    "16547967139d0d9446"
   ]
 }

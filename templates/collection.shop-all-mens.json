@@ -37,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
+        "collection_url": "\/collections\/mens\/concrete-jungle",
         "product_list": [
           "baldwin-long-short-cream",
           "century-camp-button-up-green-polkadot",
@@ -55,7 +55,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love Vol. II",
-        "collection_url": "\/collections\/shop-all-mens\/inner-city-love-vol-ii-men",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-men",
         "product_list": [
           "inner-city-love-t-shirt-terra-cotta",
           "htg-weathered-t-shirt-cream",
@@ -73,7 +73,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love Vol. I",
-        "collection_url": "\/collection\/mens\/inner-city-love-vol-2",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-mens-1",
         "product_list": [
           "jazz-checkered-short-melon",
           "jazz-checkered-short-black",
