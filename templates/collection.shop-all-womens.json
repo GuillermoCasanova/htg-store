@@ -37,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection_url": "\/collections\/shop-all-womens\/concrete-jungle",
+        "collection_url": "\/collections\/womens\/concrete-jungle",
         "product_list": [
           "womens-hollywood-jacket-black",
           "womens-hollywood-pant-black",
@@ -55,7 +55,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
-        "collection_url": "\/collections\/shop-all-womens\/inner-city-love-vol-2",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-womens",
         "product_list": [
           "htg-womens-knit-top-terra-cotta",
           "htg-womens-knit-pant-terra-cotta",
@@ -73,7 +73,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Inner City Love Vol. I",
-        "collection_url": "\/collections\/shop-all-womens\/inner-city-love-vol-i-womens",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-i-womens",
         "product_list": [
           "womens-inner-city-ringer-top-athletic-grey",
           "womens-inner-city-ringer-top-black",
@@ -91,7 +91,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Free-Fall",
-        "collection_url": "\/collections\/shop-all-womens\/freefall-womens",
+        "collection_url": "shopify:\/\/collections\/freefall-womens",
         "product_list": [
           "womens-command-top-orange",
           "womens-command-short-orange",
