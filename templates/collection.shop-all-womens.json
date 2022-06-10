@@ -91,7 +91,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Free-Fall",
-        "collection_url": "\/collections\/shop-all-womens\/freefall-womens",
+        "collection_url": "shopify:\/\/collections\/freefall-womens",
         "product_list": [
           "womens-command-top-orange",
           "womens-command-short-orange",
