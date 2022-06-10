@@ -119,7 +119,6 @@ class CollectionFilters extends HTMLElement {
     collectionGrid.querySelectorAll(productContainerId).forEach((element)=> {
       this.totalProducts.push(JSON.parse(element.textContent))
     });
-    console.log(this.totalProducts);
   }
 
   pullColorFilters() {
@@ -378,10 +377,6 @@ class CollectionGrid extends HTMLElement {
     } else {
 
       let productsToHide = this.querySelectorAll(`.grid__item:nth-child(${indexToStartFrom}) ~ *`);
-
-      console.log(indexToStartFrom);
-      console.log(productsToHide); 
-      console.log(this.totalProducts.length)
 
       this.querySelectorAll('.grid__item').forEach(elem => {
         elem.style.display = 'block';

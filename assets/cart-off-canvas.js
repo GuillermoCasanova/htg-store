@@ -10,7 +10,7 @@ class CartOffCanvas extends HTMLElement {
       this.productsContainer = this.querySelector('.cart-notification-product');
       this.totals = this.querySelector('[data-cart-notification-totals]');
       this.overlay = this.querySelector('[data-cart-nofication-overlay]');
-      this.cartToggle = document.querySelector('cart-toggle'); 
+      this.cartToggle = document.querySelectorAll('cart-toggle'); 
       this.cartFooter = this.querySelector('[data-cart-footer]'); 
       this.cartOrderDetails = this.querySelector('[data-cart-order-details]');
   
@@ -108,7 +108,7 @@ class CartOffCanvas extends HTMLElement {
       })
       .then((state) => {
         const parsedState = JSON.parse(state);
-        this.cartToggle.updateToggleQty(parsedState); 
+        this.cartToggle.forEach((elem) => elem.updateToggleQty(parsedState)); 
         this.renderContents(parsedState);
       })
       .catch((err) => {
@@ -137,7 +137,7 @@ class CartOffCanvas extends HTMLElement {
             // this.classList.toggle('is-empty', parsedState.item_count === 0);
             // document.getElementById('main-cart-footer')?.classList.toggle('is-empty', parsedState.item_count === 0);
             this.renderContents(parsedState);
-            this.cartToggle.updateToggleQty(parsedState); 
+            this.cartToggle.forEach((elem) => elem.updateToggleQty(parsedState)); 
             //this.disableLoading();
   
         }).catch((err) => {

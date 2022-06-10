@@ -295,7 +295,7 @@ cart-toggle.hide-for-large-up {
     opacity: .5;
 }
 
-@media screen and (min-width: 975px) {
+@media screen and (min-width: 930px) {
     .header__icon--cart.is-open {
         opacity: 1;
     }
@@ -308,33 +308,47 @@ cart-toggle.hide-for-large-up {
 }
 
 
+
+/* component-cart-count-bubble */
+.cart-count-bubble:empty {
+    display: none;
+}
+
 .cart-count-bubble {
     position: absolute;
     margin: auto;
-    height: 1.05rem;
-    width: 1.05rem;
+    height: 1rem;
+    width: 1rem;
     bottom: 15%;
     right: 25%;
-    padding-top: 2px;
+    padding-top: 1px;
     margin: auto;
+    border-radius: 100%;
     background-color: black;
     color: #fff;
     font-size: var(--primary-font-family);
     font-size: var(--mini);
 }
 
+.cart-count-bubble.is-hidden {
+    opacity: 0;
+}
 
-@media screen and (min-width: 975px) {
-    .cart-count-bubble {
-        top: .5rem;
-    }
+.header__icon--cart--text {
+    display: flex;
+    align-items: center;
 }
 
 
 .header__icon--cart--text .cart-count-bubble {
-    right: -.25rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    font-size: var(--micro);
+    line-height: 1;
+    right: -.5rem;
+    padding-top: .2rem;
     bottom: 0;
-    top: .25rem;
+    top: 0;
     margin-right: 0;
 }
 

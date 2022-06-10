@@ -15,6 +15,7 @@
     width: 100%;
     border-bottom: 1px solid rgb(var(--color-base-text));
     overflow: hidden;
+    background-color: rgb(var(--color-base-background-2));
 }
 
 

@@ -91,13 +91,20 @@ class CartToggle extends HTMLElement {
     this.cartNotification = document.querySelector('cart-off-canvas');
     this.cartCount = this.querySelector('[data-cart-count]');
     this.cartCountAria = this.querySelector('[data-cart-count-aria]');
+    this.cartCountBubble = this.querySelector('[data-cart-count-bubble]'); 
     this.setUpEvents(); 
     this.setUpToggleType();
   }
   
   updateToggleQty(pCart) {
-   this.cartCount.textContent = pCart.item_count; 
-   this.cartCountAria.textContent = pCart.item_count > 1 ? `${pCart.item_count} Items` : `${pCart.item_count} Item`;
+    this.cartCount.textContent = pCart.item_count; 
+    this.cartCountAria.textContent = pCart.item_count > 1 ? `${pCart.item_count} Items` : `${pCart.item_count} Item`
+
+   if(pCart.item_count > 0) {
+    this.cartCountBubble.classList.remove('is-hidden') 
+   } else {
+    this.cartCountBubble.classList.add('is-hidden') 
+   }
   } 
 
   setUpToggleType() {
