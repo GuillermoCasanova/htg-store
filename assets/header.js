@@ -118,9 +118,9 @@ setUpToggleType() {
     text.classList.remove('visually-hidden');
     button.classList.add('header__icon--cart--text');
     document.addEventListener('click', (event) => {
-      var isClickInside = this.cartNotification.contains(event.target);
+      var isClickInside = this.cartNotification.querySelector('[data-cart]').contains(event.target);
       var isToggleButton = this.contains(event.target); 
-      if (isClickInside && !isToggleButton) {
+      if (!isClickInside && !isToggleButton) {
         this.cartNotification.close(); 
       }
     });
