@@ -2,6 +2,11 @@
     #Collection Filter
 \*------------------------------------*/
 
+collection-filters {
+    width: 100%;
+    display: block;
+}
+
 .collection-filters {
     background-color: #fff;
     position: relative;
