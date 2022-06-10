@@ -141,11 +141,36 @@
         "heading": "Inner City Love Vol. II",
         "collection": "inner-city-love-vol-ii-1"
       }
+    },
+    "1654826807d275b950": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "3cc80787-e28e-44c1-acaa-c88d64eaebf5": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.07.17_PM.png"
+          }
+        },
+        "98c1d0a1-e789-45ba-84a8-6387d31a274b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.07.48_PM.png"
+          }
+        }
+      },
+      "block_order": [
+        "3cc80787-e28e-44c1-acaa-c88d64eaebf5",
+        "98c1d0a1-e789-45ba-84a8-6387d31a274b"
+      ],
+      "settings": {
+        "name": ""
+      }
     }
   },
   "order": [
     "header",
     "1654824418fc9b5b00",
-    "165482651724db58c9"
+    "165482651724db58c9",
+    "1654826807d275b950"
   ]
 }
