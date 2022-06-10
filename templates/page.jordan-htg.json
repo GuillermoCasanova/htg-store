@@ -48,6 +48,13 @@
         "cta-url": ""
       }
     },
+    "1654796652c1f897d9": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Collection Preview",
+        "collection": "jordan-x-htg"
+      }
+    },
     "16547967139d0d9446": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -141,20 +148,13 @@
       "settings": {
         "name": ""
       }
-    },
-    "1654796652c1f897d9": {
-      "type": "lookbook-collection-display",
-      "settings": {
-        "heading": "Collection Preview",
-        "collection": "jordan-x-htg"
-      }
     }
   },
   "order": [
     "165479687868697dbe",
     "1654811846108992c8",
     "header",
-    "16547967139d0d9446",
-    "1654796652c1f897d9"
+    "1654796652c1f897d9",
+    "16547967139d0d9446"
   ]
 }
