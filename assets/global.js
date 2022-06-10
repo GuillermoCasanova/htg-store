@@ -852,6 +852,8 @@ class VariantSelects extends HTMLElement {
       }
 
       if(!this.currentVariant.available) {
+        console.log('HELO')
+
         if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
           this.toggleAddButton('sold-out', true);
           this.setChosenOption(false); 
@@ -932,13 +934,18 @@ class VariantSelects extends HTMLElement {
     } 
   }
 
-  toggleAddButton(pSoldOutStatus, pDisableButton) {
+  toggleAddButton(pSoldOutStatus, pDisableButton, pQuickAddButton) {
+
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
+    
     let disable = pDisableButton; 
     if (!productForm) return;
         
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
+
+    console.log(addButton);
+    console.log(addButtonText);
 
     if (!addButton) return;
 
@@ -1045,23 +1052,23 @@ class VariantRadios extends VariantSelects {
      
        if(!this.currentVariant.available) {
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length === 0) {
-           if(this.dataset.isQuickAdd) {
-             console.log('QUICK ADD CHANGE')
+           if(this.dataset.isQuickAdd == 'true') {
+            this.toggleAddButton('sold-out', true, true);
            }
            this.toggleAddButton('sold-out', true);
          } 
 
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length > 0) {
            console.log('variant sold out')
-           if(this.dataset.isQuickAdd) {
-            console.log('QUICK ADD CHANGE')
+           if(this.dataset.isQuickAdd ==  'true') {
+            this.toggleAddButton('variant-sold-out', true, true);
           }
            this.toggleAddButton('variant-sold-out', true);
          }
        } else {
-        if(this.dataset.isQuickAdd) {
-          console.log('QUICK ADD CHANGE')
-        }
+          if(this.dataset.isQuickAdd == 'true') {
+            this.toggleAddButton('variant-sold-out', false, false);
+          }
          this.toggleAddButton(false, false);
        }
   }

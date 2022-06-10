@@ -256,7 +256,7 @@
               </div>
             </noscript>
 
-            <product-form class="quick-add-form__to-submit  visually-hidden" data-cart-type="{{ settings.cart_type }}">
+            <product-form class="quick-add-form__to-submit "  data-section="{{ section.id }}-{{ card_product.id }}" data-cart-type="{{ settings.cart_type }}">
               <div class="quick-add-form__error-message-wrapper" data-error-message-wrapper role="alert" hidden>
                 <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
                   <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -273,25 +273,17 @@
                   <button
                     type="submit"
                     name="add"
-                    class="quick-add-form__submit button button--full-width"
-                    {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                    class="product-form__submit button button--full-width 
+                            button--secondary 
+                      {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                  {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                   >
-                      <span>
-                        {%- if card_product.selected_or_first_available_variant.available -%}
-                          {{ 'products.product.add_to_cart' | t }}
-                        {%- else -%}
-                          {{ 'products.product.sold_out' | t }}
-                        {%- endif -%}
-                      </span>
-                      <div class="loading-overlay__spinner hidden">
-                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                      </div>
+                    <span class="product-form__submit__text">
+                       Add to Cart
+                    </span>
+
                   </button>
-                  {%- if block.settings.show_dynamic_checkout -%}
-                    {{ form | payment_button }}
-                  {%- endif -%}
+                 
                 </div>
               {%- endform -%}
             </product-form>

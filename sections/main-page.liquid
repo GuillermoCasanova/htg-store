@@ -44,10 +44,13 @@
       {{ page.title | escape }}
     </h1>
   </div>
-  {% if page.content != blank and section.settings.hide_body != 'false' %}
-  <div class="rte text-page__body">
-    {{ page.content }}
-  </div>
+
+  {% if section.settings.hide_body == 'true' %}
+    {% if page.content != blank %}
+    <div class="rte text-page__body">
+      {{ page.content }}
+    </div>
+    {% endif %}
   {% endif %}
 </div>
 
@@ -87,11 +90,11 @@
       "label": "Hide main page body?",
       "options": [
         {
-          "value": "true",
+          "value": "false",
           "label": "Yes"
         },
         {
-          "value": "false",
+          "value": "true",
           "label": "No"
         }
       ]
