@@ -60,6 +60,7 @@
         },
         "a123aa05-84cb-4dfa-97bb-7d77f717782b": {
           "type": "slideshow_slide",
+          "disabled": true,
           "settings": {
           }
         }
