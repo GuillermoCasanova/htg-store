@@ -73,7 +73,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Free-Fall",
-        "collection_url": "\/collections\/shop-all-kids\/freefall-kids",
+        "collection_url": "shopify:\/\/collections\/freefall-kids",
         "product_list": [
           "kids-worldwide-t-shirt-orange",
           "kids-iron-peace-t-shirt-bone",
