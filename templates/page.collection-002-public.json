@@ -62,11 +62,20 @@
       "settings": {
         "name": ""
       }
+    },
+    "16548353131427c892": {
+      "type": "lookbook-collection-display",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "collection": ""
+      }
     }
   },
   "order": [
     "header",
     "16548351875f9bede1",
-    "165483524473bfeb31"
+    "165483524473bfeb31",
+    "16548353131427c892"
   ]
 }
