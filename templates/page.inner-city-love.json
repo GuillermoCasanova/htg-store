@@ -17,10 +17,19 @@
         "section-alignment": "flipped",
         "copy-bg-color": "background-1"
       }
+    },
+    "1654827303c344d63e": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Inner City Love",
+        "body": "",
+        "cta-url": "shopify:\/\/collections\/inner-city-love"
+      }
     }
   },
   "order": [
     "header",
-    "1654827301b006b537"
+    "1654827301b006b537",
+    "1654827303c344d63e"
   ]
 }
