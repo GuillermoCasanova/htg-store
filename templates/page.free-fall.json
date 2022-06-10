@@ -18,6 +18,13 @@
         "copy-bg-color": "background-1"
       }
     },
+    "1654833231ba506109": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Free-Fall",
+        "collection": "freefall"
+      }
+    },
     "165483328369ba04c4": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -62,19 +69,12 @@
       "settings": {
         "name": ""
       }
-    },
-    "1654833231ba506109": {
-      "type": "lookbook-collection-display",
-      "settings": {
-        "heading": "Free-Fall",
-        "collection": ""
-      }
     }
   },
   "order": [
     "header",
     "1654833095c6b3b32a",
-    "165483328369ba04c4",
-    "1654833231ba506109"
+    "1654833231ba506109",
+    "165483328369ba04c4"
   ]
 }
