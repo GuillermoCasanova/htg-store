@@ -255,9 +255,9 @@ main {
 
 
 /*MEDIUM-UP*/
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   :root {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
