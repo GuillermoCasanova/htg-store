@@ -18,6 +18,13 @@
         "copy-bg-color": "background-1"
       }
     },
+    "1654827586937e2c77": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Inner City Love",
+        "collection": "inner-city-love"
+      }
+    },
     "1654827638dfcac03e": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -167,19 +174,12 @@
       "settings": {
         "name": ""
       }
-    },
-    "1654827586937e2c77": {
-      "type": "lookbook-collection-display",
-      "settings": {
-        "heading": "Inner City Love",
-        "collection": "inner-city-love"
-      }
     }
   },
   "order": [
     "header",
     "1654827301b006b537",
-    "1654827638dfcac03e",
-    "1654827586937e2c77"
+    "1654827586937e2c77",
+    "1654827638dfcac03e"
   ]
 }
