@@ -17,10 +17,89 @@
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
+    },
+    "1654831675f9d857be": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "City of Angels",
+        "collection": "city-of-angels"
+      }
+    },
+    "1654831691f837e11a": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "2f0e2cd7-c1cc-4399-a288-d15be32dbfa9": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "a84fd1e9-20c1-4244-8258-13a1a6a9c724": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "e84da736-82b5-4274-a579-a786872a710f": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "33223de3-9c0c-48b4-b91c-5f0c3110869c": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "1999e54c-c896-4c7f-a13a-b295dc7f0ba3": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "12e910fe-6ddf-44c8-b7bd-691f0d4fb7c2": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "f6d46cea-daa7-4da6-82cf-d65e682660f1": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "03f1b904-de63-4ce2-903c-d2f82391a521": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "92b1f9bf-e99c-4e23-914e-fdf88471d36a": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "c78ac321-a9ea-4772-90d9-9e9a32aadaad": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "2f0e2cd7-c1cc-4399-a288-d15be32dbfa9",
+        "a84fd1e9-20c1-4244-8258-13a1a6a9c724",
+        "e84da736-82b5-4274-a579-a786872a710f",
+        "33223de3-9c0c-48b4-b91c-5f0c3110869c",
+        "1999e54c-c896-4c7f-a13a-b295dc7f0ba3",
+        "12e910fe-6ddf-44c8-b7bd-691f0d4fb7c2",
+        "f6d46cea-daa7-4da6-82cf-d65e682660f1",
+        "03f1b904-de63-4ce2-903c-d2f82391a521",
+        "92b1f9bf-e99c-4e23-914e-fdf88471d36a",
+        "c78ac321-a9ea-4772-90d9-9e9a32aadaad"
+      ],
+      "settings": {
+        "name": ""
+      }
     }
   },
   "order": [
     "main",
-    "16548304317ba76720"
+    "16548304317ba76720",
+    "1654831675f9d857be",
+    "1654831691f837e11a"
   ]
 }
