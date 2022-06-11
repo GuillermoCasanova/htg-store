@@ -84,6 +84,14 @@ input.newsletter-form__input {
   line-height: 1;
   padding-top: var(--level3);
   padding-bottom: var(--level2);
+  color: rgb(var(--color-base-text));
+  font-size: var(--micro);
+}
+
+@media only screen and (min-width: 600px) {
+  .newsletter-form__button {
+    font-size: var(--normal);
+  }
 }
 
 .newsletter-form__button:focus-visible {

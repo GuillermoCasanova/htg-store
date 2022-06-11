@@ -81,7 +81,7 @@
 .search__input-container {
   position: relative;
   width: 100%;
-  display: grid;
+  display: flex;
   align-items: center;
 }
 
@@ -155,6 +155,8 @@
 .search__button svg {
   width: 55%;
   height: 55%;
+  fill: black;
+  color: black;
 }
 
 .predictive-search {
