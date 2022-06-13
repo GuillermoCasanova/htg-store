@@ -52,7 +52,9 @@
 
 
 @media screen and (min-width: 930px) {
-  .breadcrumbs__inner a {}
+  .breadcrumbs__inner a {
+    font-size: var(--h6);
+  }
 }
 
 .breadcrumbs__inner a:after {

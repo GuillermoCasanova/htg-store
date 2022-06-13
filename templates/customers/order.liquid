@@ -1,17 +1,26 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'base-forms.css' | asset_url | stylesheet_tag }}
+{{ 'component-breadcrumbs.css' | asset_url | stylesheet_tag }}
 
-<div class="customer order">
-  <svg style="display:none">
-    <symbol id="icon-discount" viewBox="0 0 12 12">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0h3a2 2 0 012 2v3a1 1 0 01-.3.7l-6 6a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l6-6A1 1 0 017 0zm2 2a1 1 0 102 0 1 1 0 00-2 0z" fill="currentColor">
-    </symbol>
-  </svg>
-  <div>
+<div class="page-width master-padding-top account-breadcrumbs">
+  {% render 'breadcrumbs' %}
+
+  <div class="account-breadcrumbs__link">
+    <a class="logout-link"  href="{{ routes.account_logout_url }}">
+      {{ 'customer.log_out' | t }}
+    </a>
+  </div>
+</div>
+ 
+
+<section class="customer order">
+
+  <div class="account-header page-width">
     <h1>{{ 'customer.account.title' | t }}</h1>
     <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
   </div>
 
-  <div>
+  <div class="page-width main-content">
     <div>
       <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
       {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
@@ -281,4 +290,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
