@@ -53,28 +53,31 @@
 @media screen and (min-width: 930px) {
   .product__media-wrapper {
     padding-right: var(--level4);
+    width: 50vw; 
   }
 }
 
-
-@media screen and (min-width: 1100px) {
-  .product__media-wrapper {
-    width: 100%; 
-  }
-}
 
 @media screen and (min-width: 1400px) {
   .product__media-wrapper {
-    width: 45vw;
+    width: 52vw;
   }
 }
 
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1600px) {
   .product__media-wrapper {
-    width: 42vw;
+    width: 50vw;
   }
 }
+
+
+@media screen and (min-width: 2000px) {
+  .product__media-wrapper {
+    width: 44vw;
+  }
+}
+
 
 
 
@@ -1222,9 +1225,9 @@ variant-selects {
                  data-thumb-sizes="(min-width: 930px) calc(45vw / 4), 25vw"
                 data-thumb-src="{{ image | image_url: width: 533 }}"
               data-thumb-srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if image.width >= 200 -%}{{ image | image_url: width: 200 }} 200w,{%- endif -%}
               {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
-              {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
-              {{ image | image_url }} {{ image.width }}w"
+              {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w {%- endif -%}"
             data-thumb-width="{{ image.width }}"
             data-thumb-height="{{ image.height }}"
             data-thumb-alt="{{ image.alt | escape }}" >

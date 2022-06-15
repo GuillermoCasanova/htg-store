@@ -33,12 +33,12 @@ class ProductImagesSlideshow extends HTMLElement {
     appendThumbImages() {
         this.querySelectorAll('[data-thumb]').forEach((elem)=> {
             let img = document.createElement('img'); 
-            img.srcset = elem.dataset.thumbSrcset; 
             img.src = elem.dataset.thumbSrc;
+            img.sizes = elem.dataset.thumbSizes;
+            img.srcset = elem.dataset.thumbSrcset; 
             img.height = elem.dataset.thumbHeight;
             img.width = elem.dataset.thumbWidth;
             img.alt = elem.dataset.thumbAlt;
-            img.sizes = elem.dataset.thumbSizes;
             img.loading = 'lazy';
             elem.appendChild(img); 
         }); 
