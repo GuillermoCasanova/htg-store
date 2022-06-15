@@ -12,7 +12,7 @@
                 {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | image_url: width: 1066 }} 1066w,{%- endif -%}
                 {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
                 src="{{ section.settings.image | image_url: width: 533 }}"
-                sizes="(min-width: 600px) 50vw, 100vw"
+                sizes="(min-width: 600px) 50vw, 95vw"
                 alt="{{ section.settings.image.alt | escape }}"
                 class="motion-reduce"
                 loading="lazy"
