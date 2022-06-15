@@ -47,13 +47,13 @@
 .lookbook-slideshow__inner.swiper-wrapper {
     overflow: visible;
     display: flex;
-    height: 92%;
+    height: 96%;
     margin-left: -3rem;
 }
 
 @media screen and (min-width: 600px) {
     .lookbook-slideshow__inner.swiper-wrapper {
-        height: 94%;
+        height: 98%;
         margin-left: -4rem;
     }
 }

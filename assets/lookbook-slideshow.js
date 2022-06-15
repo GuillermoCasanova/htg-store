@@ -46,6 +46,9 @@ class LookbookSlideshow extends HTMLElement {
                 600: {
                     slidesPerView: 2,
                     grabCursor: true
+                },
+                930: {
+                    slidesPerView: 3
                 }
             }
         }
