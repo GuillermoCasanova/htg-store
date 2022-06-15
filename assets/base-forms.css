@@ -340,6 +340,7 @@ button {
     text-align: center;
     position: relative;
     width: 100%;
+    font-family: var(--primary-font-family);
 }
 
 button:hover {
