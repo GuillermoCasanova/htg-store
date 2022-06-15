@@ -68,7 +68,7 @@
 @media only screen and (min-width: 930px) {
   .product-card__heading {
     font-size: var(--normal);
-    max-width: 9.5rem;
+    max-width: 10.5rem;
   }
 }
 

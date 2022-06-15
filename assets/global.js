@@ -1111,12 +1111,9 @@ class VariantRadios extends VariantSelects {
          }
        }  
 
-       console.log(this.currentVariant)
-
        if(!this.currentVariant.available) {
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length === 0) {
 
-          console.log('SOLD OUT')
            if(this.dataset.isQuickAdd == 'true') {
             this.toggleAddButton('sold-out', true, true);
            }
@@ -1124,7 +1121,6 @@ class VariantRadios extends VariantSelects {
          } 
 
          if(this.querySelectorAll("input[type='radio']:not([disabled])").length > 0) {
-          console.log('VARIANT OUT')
            if(this.dataset.isQuickAdd ==  'true') {
             this.toggleAddButton('variant-sold-out', true, true);
           }

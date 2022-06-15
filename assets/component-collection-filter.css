@@ -47,6 +47,10 @@ collection-filters {
     color: rgb(var(--color-base-text));
 }
 
+.collection-filters__options.collection-filters__options button:first-child {
+    border-right: 0;
+}
+
 .collection-filters__options button:hover,
 .collection-filters__options button:focus,
 .collection-filters__options button[aria-expanded="true"] {

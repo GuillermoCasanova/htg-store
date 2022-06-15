@@ -121,6 +121,10 @@ main {
 }
 
 
+body {
+  overflow-x: hidden;
+  position: relative;
+}
 
 
 
@@ -527,6 +531,16 @@ h6:empty {
     #Grid
 \*------------------------------------*/
 
+main {
+  margin-top: 55px;
+}
+
+@media screen and (min-width: 930px) {
+  main {
+    margin-top: 90px
+  }
+}
+
 .master-padding-top {
   padding-top: var(--level6);
 }
@@ -562,44 +576,6 @@ h6:empty {
   .page-width {
     padding-left: var(--level8);
     padding-right: var(--level8);
-  }
-}
-
-
-
-
-
-
-/*------------------------------------*\
-    #Product Grid
-\*------------------------------------*/
-
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
-  column-gap: var(--level4);
-  width: 100%;
-}
-
-@media screen and (min-width: 700px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-    column-gap: var(--level3);
-  }
-}
-
-
-@media screen and (min-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media screen and (min-width: 1681px) {
-  .product-grid {
-    column-gap: var(--level4);
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

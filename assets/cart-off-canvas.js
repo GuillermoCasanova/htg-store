@@ -293,10 +293,9 @@ class CartOffCanvas extends HTMLElement {
   
         
         function variantTemplate(pItem) {
-  
+          
           let product_contents = pItem; 
-          let template = ''; 
-  
+
             if(product_contents.originalObject.product_has_only_default_variant == false) {
               
               
@@ -371,6 +370,7 @@ class CartOffCanvas extends HTMLElement {
               return getOptionHtml(); 
       
             } else {
+              return ''
             }
           }
         
@@ -399,6 +399,7 @@ class CartOffCanvas extends HTMLElement {
                     </h3>
                    
                       ${variantTemplate(prod_contents)}
+
                       <p class="cart-notification__product__info__price">
                          ${pProduct.subtotal}
                       </p>

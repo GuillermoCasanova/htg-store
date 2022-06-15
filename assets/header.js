@@ -1,4 +1,5 @@
 
+
 class HeaderDrawer  extends MenuDrawer {
   constructor() {
     super();
@@ -10,7 +11,7 @@ class HeaderDrawer  extends MenuDrawer {
       this.header = this.header || document.getElementById('shopify-section-header');
       document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
       document.querySelector('header').classList.remove('menu-is-open'); 
-      document.documentElement.style.removeProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
+     // document.documentElement.style.removeProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
   }
 
   changeToggleText(pWhatIsOpened, pState) {
@@ -36,11 +37,14 @@ class HeaderDrawer  extends MenuDrawer {
       
       this.header = this.header || document.getElementById('shopify-section-header');
       this.borderOffset = this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
-      document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
-      
+
+      console.log(this.querySelector('aside')); 
+      console.dir(document.querySelector('sticky-header'));
       this.changeToggleText('menu');
-      trapFocus(this, this.headerDrawerToggle);
       document.querySelector('header').classList.add('menu-is-open'); 
+      this.querySelector('aside').style.height = `calc(101vh - ${document.querySelector('sticky-header').clientHeight + 'px'})`
+      trapFocus(this, this.headerDrawerToggle);
+
   }
 
   toggleHeaderMenus() {
@@ -213,60 +217,72 @@ customElements.define('search-toggle', SearchToggle);
 
 
 class MenuDropdown extends HTMLElement {
-constructor() {
-  super(); 
+  constructor() {
+    super(); 
 
-  this.dropDownToggle = this.querySelector('button');
-  this.dropDownContent = this.querySelector('.header__submenu');
+    this.dropDownToggle = this.querySelector('button');
+    this.dropDownContent = this.querySelector('.header__submenu');
 
-  this.addEventListener('keyup', this.onKeyUp);
-  this.addEventListener('focusout', this.onFocusOut.bind(this));  
-  this.addEventListener('click', (e) => {
-    if(e.target.hasAttribute('href')) {
-      this.close(); 
-    }
-  }); 
-
-  this.setUpEvents(); 
-}
-
-onKeyUp(event) {
-  if(event.code.toUpperCase() !== 'ESCAPE') return;
-  const toggleElement = this.querySelector("button[aria-expanded='true']");
-  if (!toggleElement) return;
-
-  // const summaryElement = toggleElement.querySelector('summary');
-  // toggleElement.removeAttribute('open');
-
-  this.close(); 
-  toggleElement.focus();
-}
-
-onFocusOut() {
-  setTimeout(() => {
-    if (!this.contains(document.activeElement)) this.close();
-  })
-}
-
-close() {
-  this.dropDownContent.setAttribute('aria-hidden', true); 
-  this.dropDownToggle.setAttribute('aria-expanded', false); 
-}
-
-setUpEvents() {
-  if(this.dropDownToggle) {
-    this.dropDownToggle.addEventListener('click', () => {
-  
-        if(this.dropDownContent.getAttribute('aria-hidden') == 'false') {
-          this.dropDownContent.setAttribute('aria-hidden', true); 
-          this.dropDownToggle.setAttribute('aria-expanded', false); 
-        } else {
-          this.dropDownContent.setAttribute('aria-hidden', false); 
-          this.dropDownToggle.setAttribute('aria-expanded', true); 
-        }
+    this.addEventListener('keyup', this.onKeyUp);
+    this.addEventListener('focusout', this.onFocusOut.bind(this));  
+    this.addEventListener('click', (e) => {
+      if(e.target.hasAttribute('href')) {
+        this.close(); 
+      }
     }); 
+
+    this.setUpEvents(); 
+
+    document.addEventListener('DOMContentLoaded', (event)=> {
+      this.removePreloadClasses(); 
+      console.log('remove preload classes!');
+    }); 
+
   }
-}
+
+  removePreloadClasses() {
+      this.querySelectorAll('.preload').forEach((elem)=> {
+        elem.classList.remove('preload'); 
+    });
+  }
+
+  onKeyUp(event) {
+    if(event.code.toUpperCase() !== 'ESCAPE') return;
+    const toggleElement = this.querySelector("button[aria-expanded='true']");
+    if (!toggleElement) return;
+
+    // const summaryElement = toggleElement.querySelector('summary');
+    // toggleElement.removeAttribute('open');
+
+    this.close(); 
+    toggleElement.focus();
+  }
+
+  onFocusOut() {
+    setTimeout(() => {
+      if (!this.contains(document.activeElement)) this.close();
+    })
+  }
+
+  close() {
+    this.dropDownContent.setAttribute('aria-hidden', true); 
+    this.dropDownToggle.setAttribute('aria-expanded', false); 
+  }
+
+  setUpEvents() {
+    if(this.dropDownToggle) {
+      this.dropDownToggle.addEventListener('click', () => {
+    
+          if(this.dropDownContent.getAttribute('aria-hidden') == 'false') {
+            this.dropDownContent.setAttribute('aria-hidden', true); 
+            this.dropDownToggle.setAttribute('aria-expanded', false); 
+          } else {
+            this.dropDownContent.setAttribute('aria-hidden', false); 
+            this.dropDownToggle.setAttribute('aria-expanded', true); 
+          }
+      }); 
+    }
+  }
 }
 
 customElements.define('menu-dropdown', MenuDropdown);

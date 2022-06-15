@@ -2,37 +2,37 @@
 
 
 class QuickAddColorPicker extends HTMLElement {
-  constructor() {
-      super();
-      this.addEventListener('change', this.onVariantChange);
-  }
+constructor() {
+    super();
+    this.addEventListener('change', this.onVariantChange);
+}
 
-  onVariantChange() {
-      this.updateVariantData();
-      this.updateImages(); 
-  }
+onVariantChange() {
+    this.updateVariantData();
+    this.updateImages(); 
+}
 
-  setCurrentColor() {
-      let currentColor = this.getCurrentColor(); 
-      this.querySelectorAll('[data-color-option]').forEach((elem) => {
-          if(elem.dataset.colorName.toLocaleLowerCase() === currentColorName ) {
-              elem.checked = true; 
-          }
-      });  
-  }
+setCurrentColor() {
+    let currentColor = this.getCurrentColor(); 
+    this.querySelectorAll('[data-color-option]').forEach((elem) => {
+        if(elem.dataset.colorName.toLocaleLowerCase() === currentColorName ) {
+            elem.checked = true; 
+        }
+    });  
+}
 
-  getCurrentColor() { 
-      let that = this; 
-      this.querySelectorAll('[data-color-option]').forEach((elem) => {
-          if(elem.checked) {
-              this.currentColor = elem; 
-          }
-      }); 
+getCurrentColor() { 
+    let that = this; 
+    this.querySelectorAll('[data-color-option]').forEach((elem) => {
+        if(elem.checked) {
+            this.currentColor = elem; 
+        }
+    }); 
 
-      return this.currentColor; 
-  }; 
+    return this.currentColor; 
+}; 
 
-  updateVariantData() {
+updateVariantData() {
     const currentColor = this.getCurrentColor(); 
     let sectionId = this.dataset.section; 
     let productContainer = document.querySelector(`[data-product-card-wrapper][data-section="${sectionId}"]`); 
@@ -48,27 +48,27 @@ class QuickAddColorPicker extends HTMLElement {
         elem.appendChild(newScript); 
         elem.dispatchEvent(new Event('change'));
     }); 
-  }
+}
 
-  updateImages() {
-      let currentColor = this.getCurrentColor(); 
-      let productObj = JSON.parse(currentColor.dataset.product); 
-      let images = productObj.media.splice(0, 2); 
-      let imagesContainer =  document.querySelector(`[data-product-images][data-section="${this.dataset.section}"]`); 
+updateImages() {
+    let currentColor = this.getCurrentColor(); 
+    let productObj = JSON.parse(currentColor.dataset.product); 
+    let images = productObj.media.splice(0, 2); 
+    let imagesContainer =  document.querySelector(`[data-product-images][data-section="${this.dataset.section}"]`); 
 
-      function createImageObj(pSource, pAlt, pWidth, pIndex) {
-          let imageTemplate = ``; 
-          let index = pIndex + 1;
+    function createImageObj(pSource, pAlt, pWidth, pIndex) {
+        let imageTemplate = ``; 
+        let index = pIndex + 1;
 
-          function processImageSrc(pImageSrc, pSize) {
-              let imageSrc = '';
-              imageSrc = pImageSrc.replace(/(\.[^.]*)$/, `_${pSize}$1`)
-              .replace('http:', '');
-              return imageSrc;
-          }
+        function processImageSrc(pImageSrc, pSize) {
+            let imageSrc = '';
+            imageSrc = pImageSrc.replace(/(\.[^.]*)$/, `_${pSize}$1`)
+            .replace('http:', '');
+            return imageSrc;
+        }
 
 
-          imageTemplate = `
+        imageTemplate = `
                 <img
                 srcset="${processImageSrc(pSource, '165x')} 165w,
                         ${processImageSrc(pSource, '360x')} 360w,
@@ -83,53 +83,51 @@ class QuickAddColorPicker extends HTMLElement {
                 aria-hidden="true"
                 width="1000"
                 height="1000"
-              >
-          `; 
+            >
+        `; 
 
-          imagesContainer.innerHTML +=(imageTemplate);
+        imagesContainer.innerHTML +=(imageTemplate);
 
-       }
-              
-      function clearImages() {
+    }
+            
+    function clearImages() {
         imagesContainer.innerHTML = ""; 
-      }
+    }
 
-      clearImages() 
+    clearImages() 
 
-      images.forEach((image, index)=> {
-          if(image.alt === null || image.alt.indexOf('swatch_') == -1) {
-              createImageObj(image.src, '', index);
-          }
-      });
+    images.forEach((image, index)=> {
+        if(image.alt === null || image.alt.indexOf('swatch_') == -1) {
+            createImageObj(image.src, '', index);
+        }
+    });
 
-  }
-
-  setUpEvents() {
-      if(this.querySelectorAll("[data-color-container]").length > 0) {
-          let colorContainer = this.querySelector('[data-color-container]');
-          let currentColor = this.querySelector("[data-color-container]").textContent; 
-  
-          function showColor(pColor) {
-              colorContainer.textContent = pColor; 
-          }
-      
-          this.querySelectorAll('[data-color-label]').forEach((element) => {
-              element.addEventListener('mouseenter', function(event) {
-                  let name = this.dataset.colorName; 
-                  showColor(name)
-              })
-              element.addEventListener('mouseleave', (event) => {
-                  showColor(this.getSelectedColor().dataset.colorName)
-              })
-          }); 
-      
-      }
-  }
 }
 
-if (!customElements.get('quick-add-color-picker')) {
+setUpEvents() {
+    if(this.querySelectorAll("[data-color-container]").length > 0) {
+        let colorContainer = this.querySelector('[data-color-container]');
+        let currentColor = this.querySelector("[data-color-container]").textContent; 
+
+        function showColor(pColor) {
+            colorContainer.textContent = pColor; 
+        }
+    
+        this.querySelectorAll('[data-color-label]').forEach((element) => {
+            element.addEventListener('mouseenter', function(event) {
+                let name = this.dataset.colorName; 
+                showColor(name)
+            })
+            element.addEventListener('mouseleave', (event) => {
+                showColor(this.getSelectedColor().dataset.colorName)
+            })
+        }); 
+    
+    }
+}
+}
+
   customElements.define('quick-add-color-picker', QuickAddColorPicker)
-}
 
 
 class QuickAddButton extends HTMLElement {

@@ -44,11 +44,13 @@
 
 
 
+
 .collection-preview__products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
     column-gap: var(--level4);
     width: 100%;
+    margin-bottom: var(--level3)
 }
 
 @media screen and (min-width: 700px) {
@@ -99,7 +101,7 @@
 
 
 .collection-preview__footer__cta {
-    font-size: var(--normal);
+    font-size: var(--h6);
 }
 
 @media only screen and (min-width: 600px) {
