@@ -93,6 +93,7 @@
     position: relative;
     overflow: hidden;
     transition: all .8s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: rgb(var(--color-base-background-3));
 }
 
 
