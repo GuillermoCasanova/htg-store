@@ -201,10 +201,12 @@ setUpEvents() {
 
     if(document.querySelector('[data-search-modal]').getAttribute('aria-hidden') == 'false') {
       document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+      removeTrapFocus(); 
     }
     else {
       this.setUpCloseEvents();
       document.querySelector('[data-search-modal]').setAttribute('aria-hidden', false);
+      trapFocus(document.querySelector('[data-search-modal]'), document.querySelector('[data-search-modal] input[type="search"]'));
     }
   }); 
 }
