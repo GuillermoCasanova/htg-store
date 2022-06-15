@@ -15,6 +15,17 @@
         "child_collection": true
       }
     },
+    "165533293947ac239b": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "The Coast",
+        "collection_url": "\/collections\/kids\/the-coast-kids",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1653675322c6e1e849": {
       "type": "collection-preview",
       "settings": {
@@ -91,6 +102,7 @@
   "order": [
     "banner",
     "product-grid",
+    "165533293947ac239b",
     "1653675322c6e1e849",
     "1654616390eb010a1b",
     "165461637915913a64",
