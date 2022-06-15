@@ -384,7 +384,6 @@
     <div>
       
       {{ 'component-collection-filter.css' | asset_url | stylesheet_tag }}
-      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
 
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
         {% render 'facets', results: collection.products %}
@@ -398,7 +397,7 @@
       
               <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
                 grid product-grid">
-                {% paginate collection.products by 1000 %}
+                {% paginate collection.products by 600 %}
                   {%- for product in collection.products -%}
                     <li class="grid__item" data-product-id="{{ product.id }}">
                       {% render 'product-card',
@@ -432,8 +431,6 @@
 
 {% endif %}
 
-<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 
 

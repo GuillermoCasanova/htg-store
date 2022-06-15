@@ -53,6 +53,7 @@
 
 input.newsletter-form__input {
   padding: var(--level3);
+  border-right: 0;
 }
 
 @media only screen and (min-width: 930px) {

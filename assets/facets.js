@@ -18,7 +18,10 @@ class CollectionFilters extends HTMLElement {
     }; 
 
     if(this.querySelector('[data-activate-filters]')) {
-      this.querySelector('[data-activate-filters]').addEventListener('click', this.filterProducts.bind(this)); 
+      this.querySelector('[data-activate-filters]').addEventListener('click', (event)=> {
+        this.setActiveButton('filter-by'); 
+        this.filterProducts(); 
+      }); 
     }
   
     if(this.querySelector('[data-clear-filters]')) {
@@ -48,6 +51,14 @@ class CollectionFilters extends HTMLElement {
     });
 
 
+  }
+
+  clearActiveButton(buttonId) {
+    this.querySelector(`[data-filter-toggle]#` + `${buttonId}`).classList.remove('is-active'); 
+  }
+  
+  setActiveButton(buttonId) {
+    this.querySelector(`[data-filter-toggle]#` + `${buttonId}`).classList.add('is-active'); 
   }
 
   toggleFilterOption(pFilterToOpen) {
@@ -85,6 +96,8 @@ class CollectionFilters extends HTMLElement {
   }
 
   sortproducts(pProductsArray, pSortBy) {
+
+    this.setActiveButton('sort-by');
 
     let sortingType = event.target.value
     const url = `${window.location.pathname}?sort_by=${sortingType}&?section_id=main-collection-product-grid`;
@@ -307,6 +320,7 @@ class CollectionFilters extends HTMLElement {
 
   clearFilters() {
     this.closeFilterOptions(); 
+    this.clearActiveButton('filter-by'); 
 
     this.filterBy = {
       color: [], 

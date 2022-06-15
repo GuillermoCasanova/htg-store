@@ -47,8 +47,15 @@ collection-filters {
     color: rgb(var(--color-base-text));
 }
 
+
 .collection-filters__options.collection-filters__options button:first-child {
     border-right: 0;
+}
+
+
+.collection-filters__options button.is-active {
+    color: #fff;
+    background-color: black;
 }
 
 .collection-filters__options button:hover,
@@ -58,7 +65,6 @@ collection-filters {
     color: #fff;
     background-color: black;
 }
-
 
 .collection-filters__filtering-forms__forms {
     position: relative;
@@ -119,9 +125,11 @@ collection-filters {
 }
 
 
-.filtering-forms__actions button:hover {
-    text-decoration: underline;
+.filtering-forms__actions button:hover,
+.filtering-forms__actions button:focus {
     cursor: pointer;
+    color: #fff;
+    background-color: black;
 }
 
 

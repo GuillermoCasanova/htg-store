@@ -13,7 +13,7 @@
   .product {
     flex-direction: row;
     margin-bottom: 10rem;
-    max-width: 85rem;
+    max-width: 102rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -497,7 +497,7 @@ variant-selects {
 }
 
 .product-form__input--dropdown label .dropdown-label-current-option {
-  margin-left: .25rem;
+  margin-left: 10%;
 }
 
 .product-form__input--dropdown select {
@@ -519,7 +519,7 @@ variant-selects {
   top: 0;
   bottom: 0;
   margin: auto;
-  right: 1.5rem;
+  right: 1rem;
   padding-bottom: .25rem;
   pointer-events: none;
 }
@@ -555,7 +555,6 @@ variant-selects {
   margin-right: .25rem;
 }
 
-.product-form__variant-options__label__text {}
 
 .product-form__variant-options__option label {
   padding-left: 0;
@@ -675,6 +674,8 @@ variant-selects {
   padding-top: var(--level4);
   padding-bottom: var(--level4);
   font-size: var(--h5);
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media only screen and (min-width: 930px) {
@@ -700,6 +701,7 @@ variant-selects {
 .product-form__submit:hover .product-form__submit__text,
 .product-form__submit:focus .product-form__submit__text {
   color: #fff;
+  width: 100%;
 }
 
 
@@ -848,6 +850,10 @@ variant-selects {
   width: 100%;
 }
 
+.size-chart tr:last-child {
+  border-bottom: 0;
+}
+
 /* .size-chart tr td:first-child {
   width: 100px;
 } */
@@ -876,7 +882,14 @@ variant-selects {
   padding-bottom: var(--level1);
   color: rgba(var(--color-text-foreground), 1) !important;
   font-size: var(--mini);
+  white-space: wrap;
 }
+
+.size-chart tbody tr td:not(:first-child),
+.size-chart tbody tr td:not(:first-child) p {
+  white-space: nowrap;
+}
+
 
 .size-chart tbody tr:first-child {
   text-transform: uppercase;
