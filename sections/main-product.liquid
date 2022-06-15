@@ -1,8 +1,14 @@
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 {% comment %} {{ 'section-main-product.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 
 
 {%style%}
+
+.breadcrumbs--product-page {
+  margin-bottom: var(--level5);
+  display: none;
+}
 
 /*------------------------------------*\
     #Product Page
@@ -1118,6 +1124,7 @@ variant-selects {
         <li class="slide"  data-product-images-slideshow-slide  data-product-images-modal-open data-id="{{ forloop.index }}">
           <div class="product-images-slideshow__image-container">
 
+            {%if forloop.index == 1%}
             <img
               srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -1127,13 +1134,32 @@ variant-selects {
                 {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
                 {{ image | image_url }} {{ image.width }}w"
               src="{{ image | image_url: width: 533 }}"
-              sizes="(min-width: 1200px) 45vw, (min-width: 930px) 100vw-60vw, 100vw"
+              sizes="(min-width: 1200px) 45vw, (min-width: 930px) 100vw-60vw, 90vw"
               alt="{{ image.alt | escape }}"
               class="motion-reduce"
               aria-hidden="true"
               width="{{ image.width }}"
               height="{{ image.height }}"
             >
+              {%else%}
+              <img
+                srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ image | image_url }} {{ image.width }}w"
+                src="{{ image | image_url: width: 533 }}"
+                sizes="(min-width: 1200px) 45vw, (min-width: 930px) 100vw-60vw, 90vw"
+                alt="{{ image.alt | escape }}"
+                class="motion-reduce"
+                aria-hidden="true"
+                loading="lazy"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+              >
+              {%endif%}
           </div>
         </li>
         {% endunless %}
@@ -1146,26 +1172,21 @@ variant-selects {
     <div data-product-images-slideshow-thumbs class="product-images-slideshow-thumbs  show-for-large-up" >
       <ul  class="slides" data-product-images-slideshow-thumbs-wrapper>
         {% for image in product.images %}
-          {% unless image.alt contains 'swatch' %}
           <li class="slide product-images-slideshow-thumbs__thumbnail-container"  data-product-images-slideshow-thumb   data-id="{{ forloop.index }}">
-            <div class="product-images-slideshow-thumbs__thumbnail" role="button"  aria-label="Go to image {{ forloop.index }}" >
-              <img
-                srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
-                  {{ image | image_url }} {{ image.width }}w"
-                src="{{ image | image_url: width: 533 }}"
-                sizes="(min-width: 930px) 15vw, 25vw"
-                alt="{{ image.alt | escape }}"
-                class="motion-reduce"
-                aria-hidden="true"
-                loading="lazy"
-                width="{{ image.width }}"
-                height="{{ image.height }}"
-              >
+            <div class="product-images-slideshow-thumbs__thumbnail" role="button"  aria-label="Go to image {{ forloop.index }}"
+              data-thumb
+                 data-thumb-sizes="(min-width: 930px) 15vw, 25vw"
+                data-thumb-src="{{ image | image_url: width: 533 }}"
+              data-thumb-srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w"
+            data-thumb-width="{{ image.width }}"
+            data-thumb-height="{{ image.height }}"
+            data-thumb-alt="{{ image.alt | escape }}" >
+             
             </div>
           </li>
-          {% endunless %}
         {% endfor %}
       </ul>
     </div>

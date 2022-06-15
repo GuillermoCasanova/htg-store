@@ -30,11 +30,25 @@ class ProductImagesSlideshow extends HTMLElement {
         this.handleLargeUp(this.mediaQueries.largeUp); 
     } 
     
+    appendThumbImages() {
+        this.querySelectorAll('[data-thumb]').forEach((elem)=> {
+            let img = document.createElement('img'); 
+            img.srcset = elem.dataset.thumbSrcset; 
+            img.src = elem.dataset.thumbSrc;
+            img.height = elem.dataset.thumbHeight;
+            img.width = elem.dataset.thumbWidth;
+            img.alt = elem.dataset.thumbAlt;
+            img.sizes = elem.dataset.thumbSizes;
+            img.loading = 'lazy';
+            elem.appendChild(img); 
+        }); 
+    }
+    
     handleLargeUp(pEvent) {
         let slideshowProps = {}; 
 
         if(pEvent.matches) {
-            console.log('RE INIT');
+            this.appendThumbImages();
             document.querySelector(this.selectors.thumbnails).classList.add('swiper'); 
             document.querySelector(this.selectors.thumbnails).querySelector(this.selectors.thumbnailsWrapper).classList.add('swiper-wrapper');
             document.querySelector(this.selectors.thumbnails).querySelectorAll(this.selectors.thumbnailSlides).forEach(element => {
