@@ -13,9 +13,11 @@
   .product {
     flex-direction: row;
     margin-bottom: 10rem;
-    max-width: 102rem;
+    max-width: 107rem;
     margin-left: auto;
     margin-right: auto;
+    padding-left: var(--level5);
+    padding-right: var(--level5);
   }
 }
 
@@ -149,6 +151,16 @@
   .product-images-slideshow-thumbs {
     position: relative;
     overflow: hidden;
+    width: 100%;
+  }
+
+  .product-images-slideshow-thumbs ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 14px;
+    overflow: hidden;
+    grid-auto-flow: column;
   }
 
   .product-images-slideshow-thumbs__thumbnail {

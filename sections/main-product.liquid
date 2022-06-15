@@ -25,9 +25,11 @@
   .product {
     flex-direction: row;
     margin-bottom: 10rem;
-    max-width: 102rem;
+    max-width: 107rem;
     margin-left: auto;
     margin-right: auto;
+    padding-left: var(--level7);
+    padding-right: var(--level7);
   }
 }
 
@@ -42,9 +44,14 @@
     #Product Media 
 \*------------------------------------*/
 
+@media screen and (min-width: 600px) {
+  .product__media-wrapper {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 930px) {
   .product__media-wrapper {
-    width: 60vw;
     padding-right: var(--level4);
   }
 }
@@ -52,7 +59,7 @@
 
 @media screen and (min-width: 1100px) {
   .product__media-wrapper {
-    width: 55vw;
+    width: 100%; 
   }
 }
 
@@ -114,7 +121,6 @@
   object-fit: cover;
 }
 
-@media only screen and (min-width:930px) {}
 
 .product-images-slideshow__image-container {
   position: relative;
@@ -161,6 +167,37 @@
   .product-images-slideshow-thumbs {
     position: relative;
     overflow: hidden;
+    width: 100%; 
+  }
+
+  .product-images-slideshow-thumbs ul .product-images-slideshow-thumbs__thumbnail-container {
+    position: relative;
+    white-space: nowrap; 
+  }
+  
+  .product-images-slideshow-thumbs ul .product-images-slideshow-thumbs__thumbnail-container:nth-child(4n + 1):before {
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:1px; /* a small height */
+    width:calc(400% + 3*10px); /* we consider 3 gaps here */
+    pointer-events: none; /* avoid any interaction */
+  }
+
+  .product-images-slideshow-thumbs ul {
+    display: grid;
+    width: 100%;
+    grid-auto-columns: calc((100% - 3*14px)/4); /* we remove 3 gaps here */
+    column-gap: 14px;
+    overflow: hidden;
+    grid-auto-flow: column;
+  }
+
+  .product-images-slideshow-thumbs ul.swiper-wrapper {
+    overflow: visible; 
+    column-gap: 0;
+    grid-auto-columns: unset; 
   }
 
   .product-images-slideshow-thumbs__thumbnail {
@@ -202,12 +239,19 @@
   width: 100%;
 }
 
+@media screen and (min-width: 600px) {
+  .product__info-wrapper {
+    width: 83%;
+  }
+}
+
 
 
 @media screen and (min-width: 930px) {
   .product__info-wrapper {
     margin-top: 2.5vw;
     padding-left: 0;
+    width: 83%;
   }
 }
 
@@ -1175,7 +1219,7 @@ variant-selects {
           <li class="slide product-images-slideshow-thumbs__thumbnail-container"  data-product-images-slideshow-thumb   data-id="{{ forloop.index }}">
             <div class="product-images-slideshow-thumbs__thumbnail" role="button"  aria-label="Go to image {{ forloop.index }}"
               data-thumb
-                 data-thumb-sizes="(min-width: 930px) 15vw, 25vw"
+                 data-thumb-sizes="(min-width: 930px) calc(45vw / 4), 25vw"
                 data-thumb-src="{{ image | image_url: width: 533 }}"
               data-thumb-srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
               {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -1579,9 +1623,9 @@ variant-selects {
 </div>
 
 
-<script type="module" src="{{ 'product-images.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'custom-color-picker.js' | asset_url }}" defer="defer"></script>
+<script type="module" src="{{ 'product-images.js' | asset_url }}" defer="defer"></script> 
 
 {% schema %}
 {
