@@ -762,6 +762,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: black !important;
 }
 
+
 textarea {
   width: 100%;
   padding: 1.5rem;
@@ -1009,6 +1010,7 @@ button {
   position: relative;
   width: 100%;
   font-family: var(--primary-font-family);
+  margin: 0;
 }
 
 button:hover {
