@@ -276,7 +276,7 @@ margin-bottom: rem-calc($level7 + $level2);
     position: relative;
     display: block;
     width: 100%;
-    margin-bottom: var(--level3)
+    margin-bottom: var(--level4)
 }
 
 .custom-field label {
@@ -286,6 +286,7 @@ margin-bottom: rem-calc($level7 + $level2);
     transition: all .4s cubic-bezier(0.22, 1, 0.36, 1);
     margin-bottom: 0;
     font-size: var(--h6);
+    transform: translateY(.05rem);
 }
 
 .custom-field.is-active label {
@@ -294,8 +295,8 @@ margin-bottom: rem-calc($level7 + $level2);
 }
 
 .custom-field input {
-    padding-top: var(--level2);
-    padding-bottom: var(--level2);
+    padding-top: var(--level3);
+    padding-bottom: var(--level3);
     padding-left: var(--level2);
     font-size: var(--h6);
 }

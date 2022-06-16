@@ -1,15 +1,18 @@
 /*------------------------------------*\
-    #Customer Pages
+    #Global Customer Styles 
 \*------------------------------------*/
 
 
-h1,
-h2 {
+.customer h1,
+.customer h2 {
   font-family: var(--tertiary-font-family);
 }
 
+.customer .headline {
+  margin-bottom: var(--level10);
+}
 
-a {
+.customer a {
   text-transform: uppercase;
   text-decoration: underline;
   color: var(--color-base-text)
@@ -25,28 +28,65 @@ a:focus {
 }
 
 
+.form-headline {
+  margin-bottom: var(--level6);
+  font-size: var(--h2);
+}
+
+
+.form__message {
+  margin-bottom: var(--level6);
+}
+
+.form__message *,
+.form__message h2 {
+  font-size: var(--normal);
+  font-family: var(--primary-font-family);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.form__message--error * {
+  color: #FF3D00;
+}
+
+.errors ul {
+  margin-bottom: 0;
+}
+
+
 
 
 
 /*------------------------------------*\
-    #Login, Password 
+    #Login, Password, Register
 \*------------------------------------*/
 
 .customer:not(.account):not(.order) {
-  max-width: 33.4rem;
+  max-width: 33rem;
   text-align: center;
   padding-left: var(--level5);
   padding-right: var(--level5);
 }
 
+@media screen and (min-width: 750px) {
+  .customer:not(.account):not(.order) {
+    max-width: 40rem;
+  }
+}
 
-.login {
+
+.login,
+.register {
   margin-left: auto;
   margin-right: auto;
 }
 
 
+/*-------*/
 /* Login */
+/*-------*/
+
 .login .field+a {
   margin-top: 1rem;
 }
@@ -67,17 +107,10 @@ a:focus {
 
 .login-footer {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-
-@media screen and (min-width: 600px) {
-  .login-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
 
 .login-footer a {
   font-size: var(--micro);
@@ -85,8 +118,15 @@ a:focus {
   margin-bottom: var(--level2);
 }
 
-#recover,
-#recover+div {
+
+
+
+
+/*----------*/
+/* Recover */
+/*---------*/
+
+#recover {
   display: none;
 }
 
@@ -94,7 +134,7 @@ a:focus {
   display: block;
 }
 
-#recover:target+div {
+#recover:target~div {
   display: block;
 }
 
@@ -114,17 +154,10 @@ a:focus {
 
 
 
+/* 
 
 
-@media screen and (min-width: 750px) {
-  .customer:not(.account):not(.order) {
-    max-width: 47.8rem;
-  }
-}
 
-.customer form {
-  margin-top: 4rem;
-}
 
 
 .customer ul {
@@ -160,10 +193,21 @@ a:focus {
 .customer .field:first-of-type {
   margin-top: 0;
 }
+ */
+
+
+/*------------------------------------*\
+    #Registration
+\*------------------------------------*/
 
 
 
-/* Pagination */
+
+
+/*------------------------------------*\
+    #Pagination
+\*------------------------------------*/
+
 .customer .pagination {
   margin-top: 5rem;
   margin-bottom: 7rem;
