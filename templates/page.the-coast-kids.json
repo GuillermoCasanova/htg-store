@@ -26,6 +26,154 @@
     },
     "1655413788446467d9": {
       "type": "lookbook-slideshow",
+      "blocks": {
+        "4f35292c-c56e-4aab-a164-5b8243112971": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "c077ba15-3648-4c32-97fe-d77bd163abc7": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "3ae0a152-3bbd-43d7-8636-86c4ecf31937": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "f725c55e-141e-4a54-8742-cc88f9b55db2": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "bfc9f3df-f597-47bb-adae-bf871633d849": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "45405eb2-9d24-46cf-b44c-344a794f7344": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "a9d40767-cd83-45f2-9e29-89b7d8a1f693": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "bea7cef2-9b5e-4df5-a4ba-19a3d7978e24": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "d926db05-8adb-47bf-a171-231aa3125eda": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "6292a5db-588e-4de9-ac80-94f66938eb07": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "7c75afaa-a2b6-407d-90fc-8658102b081c": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "5009fd4f-243d-4474-98ce-0589c7e2b296": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "457ef2ff-a9d0-41ca-a04f-f4139fcd6b26": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "37573c8d-e225-4b4c-9dc2-f2d4ec46e33f": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "1f72b02b-1186-4e92-8526-5d08cff5ab40": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "8b005984-afb5-43aa-b0c3-961a5a07aef3": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "65153181-f259-48f2-a82b-a0627f3df511": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "b8122a89-1b7d-43e6-97b2-7089c74f9c7e": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "4851c209-adeb-4b07-a62a-3ed677673d86": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "2663ffb1-0889-461c-a590-2354c07bfeac": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "26d06a95-6328-4b91-a95c-1b922c9685f6": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "08191ccb-da80-4945-b147-2bc87b2d8dc8": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "e7247eac-a15c-4a45-934e-346f2e1a96be": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "5765f832-c9d7-4c58-96ba-d166d9538866": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "4f35292c-c56e-4aab-a164-5b8243112971",
+        "c077ba15-3648-4c32-97fe-d77bd163abc7",
+        "3ae0a152-3bbd-43d7-8636-86c4ecf31937",
+        "f725c55e-141e-4a54-8742-cc88f9b55db2",
+        "bfc9f3df-f597-47bb-adae-bf871633d849",
+        "45405eb2-9d24-46cf-b44c-344a794f7344",
+        "a9d40767-cd83-45f2-9e29-89b7d8a1f693",
+        "bea7cef2-9b5e-4df5-a4ba-19a3d7978e24",
+        "d926db05-8adb-47bf-a171-231aa3125eda",
+        "6292a5db-588e-4de9-ac80-94f66938eb07",
+        "7c75afaa-a2b6-407d-90fc-8658102b081c",
+        "5009fd4f-243d-4474-98ce-0589c7e2b296",
+        "457ef2ff-a9d0-41ca-a04f-f4139fcd6b26",
+        "37573c8d-e225-4b4c-9dc2-f2d4ec46e33f",
+        "1f72b02b-1186-4e92-8526-5d08cff5ab40",
+        "8b005984-afb5-43aa-b0c3-961a5a07aef3",
+        "65153181-f259-48f2-a82b-a0627f3df511",
+        "b8122a89-1b7d-43e6-97b2-7089c74f9c7e",
+        "4851c209-adeb-4b07-a62a-3ed677673d86",
+        "2663ffb1-0889-461c-a590-2354c07bfeac",
+        "26d06a95-6328-4b91-a95c-1b922c9685f6",
+        "08191ccb-da80-4945-b147-2bc87b2d8dc8",
+        "e7247eac-a15c-4a45-934e-346f2e1a96be",
+        "5765f832-c9d7-4c58-96ba-d166d9538866"
+      ],
       "settings": {
         "name": ""
       }
