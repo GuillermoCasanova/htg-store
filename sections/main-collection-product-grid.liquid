@@ -631,13 +631,13 @@ opacity: 1;
       
               <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
                 grid product-grid">
-                {% paginate collection.products by 25 %}
+                {% paginate collection.products by 600 %}
                   {%- for product in collection.products -%}
                     <li class="grid__item" data-product-id="{{ product.id }}">
                       {% render 'product-card',
                         heading_level: 'h3',
                         card_product: product,
-                        show_quick_add: 'true',
+                        show_quick_add: 'false',
                         section_id: section.id
                         product_collection: collection
                       %}
