@@ -9,8 +9,7 @@ class loadMoreProductsButton extends HTMLElement {
         }
 
         this.collectionTotal = 0; 
-        this.totalProducts = []; 
-        this.setCollectionTotal(); 
+    
     }
 
     hide() {
@@ -36,7 +35,13 @@ class loadMoreProductsButton extends HTMLElement {
             }
         }
     }
-    
+
+    updateButton() {
+        if(CollectionProducs.getProductsRendered().length >=  CollectionProducs.totalProducts.length) {
+            this.style.display = 'none';
+        }
+    }
+
     loadMoreProducts() {
         let collectionHandle = this.dataset.collectionHandle;
         let collectionCount = this.dataset.collectionCount;
@@ -44,14 +49,14 @@ class loadMoreProductsButton extends HTMLElement {
 
         let CollectionProducs = document.querySelector('collection-grid'); 
         CollectionProducs.renderMoreProducts(parseInt(this.dataset.paginateBy));
-        
-        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
-            this.style.display = 'none';
-        }
 
-        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
-            this.style.display = 'none';
-        }
+            // console.log(CollectionProducs.getProductsRendered().length); 
+            // console.log(CollectionProducs.totalProducts.length); 
+
+     
+        // if(CollectionProducs.getProductsRendered().length <=  CollectionProducs.totalProducts) {
+        //     this.style.display = 'block';
+        // }
     }
 
 }

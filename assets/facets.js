@@ -7,9 +7,7 @@ class CollectionFilters extends HTMLElement {
     this.totalProducts = []; 
     this.totalSortedProducts = []; 
     this.getProductsFromJson(); 
-    this.pullColorFilters(); 
-    this.pullSizeFilters(); 
-    this.renderFilters(); 
+
     this.tags = []; 
     this.filterBy = {
       color: [], 
@@ -137,12 +135,11 @@ class CollectionFilters extends HTMLElement {
   }
   
   getProductsFromJson() {
-    const productContainerId = '[data-product-json]';
-    let collectionGrid = document.querySelector('collection-grid'); 
+    this.totalProducts = JSON.parse(document.querySelector('#product-data').textContent.trim()).products;
 
-    collectionGrid.querySelectorAll(productContainerId).forEach((element)=> {
-      this.totalProducts.push(JSON.parse(element.textContent))
-    });
+    this.pullColorFilters(); 
+    this.pullSizeFilters(); 
+    this.renderFilters(); 
   }
 
   pullColorFilters() {
@@ -363,6 +360,10 @@ class CollectionGrid extends HTMLElement {
       window.history.replaceState(null, null, null);
   }
 
+  returnTemplateForProduct(pJson) {
+    return template; 
+  }
+
   getProductsFromJson(pNumToStartFrom) {
 
     const productContainerId = '[data-product-json]';
@@ -377,11 +378,11 @@ class CollectionGrid extends HTMLElement {
         productsToShow = this.dataset.paginateBy * urlParams.get('section')
       }
     }
+    
+    this.totalProducts = JSON.parse(document.querySelector('#product-data').textContent.trim()).products;
+    this.totalProductsShowing = this.totalProducts.slice(0, productsToShow);
 
-    this.querySelectorAll(productContainerId).forEach((element)=> {
-      this.totalProducts.push(JSON.parse(element.textContent))
-      this.totalProductsShowing = this.totalProducts.slice(0, productsToShow);
-    });
+    console.log(this.totalProducts); 
 
   }
 
@@ -423,13 +424,58 @@ class CollectionGrid extends HTMLElement {
 
 
   renderMoreProducts(pNumToShowMore) {
-     let productsToAdd = this.totalProducts.slice(this.totalProductsShowing.length, this.totalProductsShowing.length + pNumToShowMore);
-     this.totalProductsShowing = [...this.totalProductsShowing, ...productsToAdd]
-     this.totalProductsShowing.forEach((productJSON)=> {
-        this.querySelector(`.grid__item[data-product-id="${productJSON.id}"]`).style.display = 'block';
-     });
 
-     window.history.replaceState({page: this.section}, '', '?section=' + (this.section += 1));
+    window.history.replaceState({page: this.section}, '', '?section=' + (this.section += 1));
+    const url = `${window.location.pathname}?page=${this.section}&?section_id=main-collection-product-grid`;
+    // const queryUrl = new URL(window.location.href); 
+
+    // params.delete('section');
+    // // queryUrl.search = `?sort_by=${sortingType}`; 
+
+    console.log(url); 
+
+    const collectionProductsContainer = this.querySelector('ul'); 
+
+    fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        var error = new Error(response.status);
+        this.close();
+        throw error;
+      }
+      return response.text();
+    })
+    .then((text) => {
+       const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
+
+       console.log(resultsMarkup); 
+       
+      // let orderedArray  = []; 
+      
+      resultsMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
+        collectionProductsContainer.appendChild(element); 
+      });
+
+      this.totalProductsShowing = this.totalProducts.slice(0, this.section * this.paginateBy); 
+
+      document.querySelector('load-more-products').updateButton(); 
+      
+      // document.querySelector('collection-grid').renderFilteredProducts([], orderedArray, true);
+      // this.closeFilterOptions();
+    })
+    .catch((error) => {
+      console.log(error); 
+      throw error;
+    });
+
+
+    
+    //  let productsToAdd = this.totalProducts.slice(this.totalProductsShowing.length, this.totalProductsShowing.length + pNumToShowMore);
+    //  this.totalProductsShowing = [...this.totalProductsShowing, ...productsToAdd]
+    //  this.totalProductsShowing.forEach((productJSON)=> {
+    //     this.querySelector(`.grid__item[data-product-id="${productJSON.id}"]`).style.display = 'block';
+    //  });
+
   }
 
 

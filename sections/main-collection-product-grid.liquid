@@ -4,6 +4,31 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
 
+{% assign show = true %}
+
+{% if section.settings.child_collection == true %}
+    {% if current_tags[0] == null %}
+      {% assign show = false %}
+    {% endif %}
+{% endif %}
+
+{% if show %}
+
+
+<script type="text/template" id="product-data">
+  {
+    "products":  [
+      {% paginate collection.products by 1000 %}
+        {%- for product in collection.products -%}
+            {{ product | json }} 
+            {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+    {% endpaginate %}
+    ]
+  }
+</script>
+
+
 {% style %}
 /*------------------------------------*\
     #Collection Template
@@ -604,15 +629,6 @@ opacity: 1;
 }
   {% endstyle %}
 
-{% assign show = true %}
-
-{% if section.settings.child_collection == true %}
-    {% if current_tags[0] == null %}
-      {% assign show = false %}
-    {% endif %}
-{% endif %}
-
-{% if show %}
 
   <div class="section-{{ section.id }}-padding"   data-collection-id="{{ collection.handle }}">
     <div>
@@ -623,7 +639,7 @@ opacity: 1;
         {% render 'facets', results: collection.products %}
       </aside>
 
-      {% assign paginationNum = 12 %}
+      {% assign paginationNum = 16 %}
       <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}">
         <div class="product-grid-container" id="ProductGridContainer">
             <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
@@ -631,7 +647,7 @@ opacity: 1;
       
               <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
                 grid product-grid">
-                {% paginate collection.products by 600 %}
+                {% paginate collection.products by 16 %}
                   {%- for product in collection.products -%}
                     <li class="grid__item" data-product-id="{{ product.id }}">
                       {% render 'product-card',

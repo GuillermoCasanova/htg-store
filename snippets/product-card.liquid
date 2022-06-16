@@ -13,9 +13,6 @@
 
 
 <div class="product-card-wrapper underline-links-hover" data-product-card-wrapper data-section="{{ section.id }}-{{ card_product.id }}">
-    <script type="text/json" data-product-json>
-      {{ card_product | json }}
-    </script> 
 
     <div data-product-card  data-section="{{ section.id }}-{{ card_product.id }}" class="product-card  {% if card_product.available == false %} product-card--sold-out {% endif %}">
       <div class="product-card__inner">
