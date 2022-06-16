@@ -3,7 +3,7 @@
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .archival-collections {
     padding-top: var(--level8);
   }
@@ -17,7 +17,7 @@
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .archival-collections__inner {
     padding-left: var(--level7);
     padding-right: var(--level7);
@@ -30,7 +30,7 @@
   column-gap: var(--level6);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .archival-collections__inner {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--level7);

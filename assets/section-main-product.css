@@ -37,7 +37,7 @@
     #Product Media 
 \*------------------------------------*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .product__media-wrapper {
     width: 100%;
   }
@@ -239,7 +239,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .product__info-wrapper {
     width: 83%;
   }
@@ -296,7 +296,7 @@
   margin-bottom: var(--level2);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .product__title {
     font-size: var(--h4);
   }
@@ -324,7 +324,7 @@
   margin-bottom: var(--level5);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .product .price {
     font-size: var(--h5);
     margin-bottom: var(--level5);
@@ -461,7 +461,7 @@
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .product__description {}
 }
 

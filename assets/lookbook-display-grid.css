@@ -19,7 +19,7 @@
     margin-bottom: var(--level3);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .lookbook-display-grid__heading {
         font-family: var(--tertiary-font-family);
         opacity: 1;
@@ -53,7 +53,7 @@
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .lookbook-collection-grid__products {
         grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
         column-gap: var(--level3);

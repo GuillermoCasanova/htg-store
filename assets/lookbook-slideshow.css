@@ -13,7 +13,7 @@
     position: relative;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .lookbook-slideshow {
         padding-bottom: 80%;
     }
@@ -38,7 +38,7 @@
     grid-template-rows: 1fr;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .lookbook-slideshow__inner {
         grid-template-columns: 1fr 1fr;
     }
@@ -51,7 +51,7 @@
     margin-left: -3rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .lookbook-slideshow__inner.swiper-wrapper {
         height: 98%;
         margin-left: -4rem;

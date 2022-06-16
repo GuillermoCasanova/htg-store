@@ -394,7 +394,7 @@ a:focus {
   margin-bottom: var(--level4);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .account-details__address {
     font-size: var(--h4);
   }
@@ -414,7 +414,7 @@ a:focus {
   color: rgb(var(--color-link));
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .activate button[name='decline'] {
     margin-top: inherit;
     margin-left: 1rem;
@@ -480,7 +480,7 @@ a:focus {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .customer tr td {
     font-size: var(--h4);
   }

@@ -18,7 +18,7 @@
                   {%- if block.settings.image.width >= 1600 -%}{{ block.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
                   {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
                   src="{{ block.settings.image | image_url: width: 533 }}"
-                  sizes="(min-width: 600px) 50vw, 100vw"
+                  sizes="(min-width: 700px) 50vw, 100vw"
                   alt="{{ block.settings.image.alt | escape }}"
                   loading="lazy"
                   width="{{ block.settings.image.width }}"

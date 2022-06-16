@@ -67,7 +67,7 @@
     margin-bottom: var(--level7);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .about-pillars__pillar__copy__heading {
         font-size: var(--h4);
         margin-bottom: calc(var(--level10) + var(--level1));

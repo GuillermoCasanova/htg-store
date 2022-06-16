@@ -88,7 +88,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .quick-add-button {
     height: auto;
     padding-top: var(--level2);

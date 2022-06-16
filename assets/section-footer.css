@@ -14,7 +14,7 @@
   padding-bottom: var(--level8);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .footer__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -39,7 +39,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .footer__blocks {
     grid-area: links;
     display: flex;
@@ -132,7 +132,7 @@
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .footer__newsletter {
     grid-area: newsletter;
   }
@@ -144,7 +144,7 @@
   margin-bottom: var(--level7);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .footer__emblem {
     grid-area: badge;
   }

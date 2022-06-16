@@ -1,47 +1,59 @@
-{{ 'section-featured-collection-cta.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-collection-alt.css' | asset_url | stylesheet_tag }}
 
-<div class="featured-collection-cta-section__inner">
+<div class="featured-collection-alt-section__inner">
+    
+    <div class="featured-collection-alt-section__copy">
+        <h2 class="featured-collection-alt-section__copy__heading">
+            {{ section.settings.heading }}
+        </h2>
 
-    <div class="featured-collection-alt__info">
-
-        <h1>    
-            {{ section.settings.collection_heading }}
-        </h1>
-        <div>
-            {{ section.settings.collection_description }}
-        </div>
-
-        <div>
-            <img
-                srcset="{%- if section.settings.collection_hero_image.width >= 165 -%}{{ section.settings.collection_hero_image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if section.settings.collection_hero_image.width >= 360 -%}{{ section.settings.collection_hero_image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if section.settings.collection_hero_image.width >= 533 -%}{{ section.settings.collection_hero_image | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if section.settings.collection_hero_image.width >= 720 -%}{{ section.settings.collection_hero_image | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if section.settings.collection_hero_image.width >= 940 -%}{{ section.settings.collection_hero_image | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if section.settings.collection_hero_image.width >= 1066 -%}{{ section.settings.collection_hero_image | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ section.settings.collection_hero_image | image_url }} {{ section.settings.collection_hero_image.width }}w"
-                src="{{ section.settings.collection_hero_image | image_url: width: 533 }}"
-                sizes="(min-width: 600px) 50vw, 50vw"
-                alt="{{ section.settings.collection_hero_image.alt | escape }}"
-                class="motion-reduce"
-                loading="lazy"
-                width="{{ section.settings.collection_hero_image.width }}"
-                height="{{ section.settings.collection_hero_image.height }}"
-              >
+        <div class="featured-collection-alt-section__copy__body">
+            {{ section.settings.body }}
         </div>
 
         {% if section.settings.lookbook_url != blank and  section.settings.lookbook_url_text != blank %}
-        <div>
-            <a href="{{ section.settings.lookbook_url }}" rel="internal" title="Shop the {{ section.settings.collection_heading }}">
+        <div class="featured-collection-alt-section__copy__cta  hide-for-large-up">
+            <a href="{{ section.settings.lookbook_url }}" rel="internal" title="Shop the {{ section.settings.collection_heading }}" class="styled-link">
                 {{ section.settings.lookbook_url_text }}
             </a>
         </div>
         {% endif %}
+
+        <div class="featured-collection-alt-section__image-container">
+            <div class="featured-collection-alt-section__image-container__image">
+                <img
+                    srcset="{%- if section.settings.collection_hero_image.width >= 165 -%}{{ section.settings.collection_hero_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if section.settings.collection_hero_image.width >= 360 -%}{{ section.settings.collection_hero_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if section.settings.collection_hero_image.width >= 533 -%}{{ section.settings.collection_hero_image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if section.settings.collection_hero_image.width >= 720 -%}{{ section.settings.collection_hero_image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if section.settings.collection_hero_image.width >= 940 -%}{{ section.settings.collection_hero_image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if section.settings.collection_hero_image.width >= 1066 -%}{{ section.settings.collection_hero_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ section.settings.collection_hero_image | image_url }} {{ section.settings.collection_hero_image.width }}w"
+                    src="{{ section.settings.collection_hero_image | image_url: width: 533 }}"
+                    sizes="(min-width: 700px) 50vw, 50vw"
+                    alt="{{ section.settings.collection_hero_image.alt | escape }}"
+                    class="motion-reduce"
+                    loading="lazy"
+                    width="{{ section.settings.collection_hero_image.width }}"
+                    height="{{ section.settings.collection_hero_image.height }}"
+                >
+            </div>
+        </div>
+
+        {% if section.settings.lookbook_url != blank and  section.settings.lookbook_url_text != blank %}
+            <div class="featured-collection-alt-section__copy__cta  show-for-large-up">
+                <a href="{{ section.settings.lookbook_url }}" rel="internal" title="Shop the {{ section.settings.collection_heading }}" class="styled-link">
+                    {{ section.settings.lookbook_url_text }}
+                </a>
+            </div>
+        {% endif %}
+
     </div>
-    
-    <a href="{{ section.settings.right_cta_url }}" rel="internal" title="{{ section.settings.right_cta_text }} {{ section.settings.collection-name }}" class="featured-collection-cta-section__collection">
-        <div class="featured-collection-cta-section__collection__image-container">
-          <div class="featured-collection-cta-section__collection__image">
+
+      
+    <a href="{{ section.settings.right_cta_url }}" rel="internal" title="{{ section.settings.right_cta_text }} {{ section.settings.collection-name }}" class="featured-collection-alt-section__collection">
+        <div class="featured-collection-alt-section__collection__image-container">
+          <div class="featured-collection-alt-section__collection__image">
             <img
               srcset="{%- if section.settings.right_image.width >= 165 -%}{{ section.settings.right_image | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if section.settings.right_image.width >= 360 -%}{{ section.settings.right_image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -51,7 +63,7 @@
                 {%- if section.settings.right_image.width >= 1066 -%}{{ section.settings.right_image | image_url: width: 1066 }} 1066w,{%- endif -%}
                 {{ section.settings.right_image | image_url }} {{ section.settings.right_image.width }}w"
               src="{{ section.settings.right_image | image_url: width: 533 }}"
-              sizes="(min-width: 600px) 50vw, 50vw"
+              sizes="(min-width: 930px) 30vw, (min-width: 700px) 40vw, 80vw"
               alt="{{ section.settings.right_image.alt | escape }}"
               class="motion-reduce"
               loading="lazy"
@@ -60,7 +72,7 @@
             >
           </div>
         </div>
-        <div  class="featured-collection-cta-section__collection__text">
+        <div  class="featured-collection-alt-section__collection__text">
             <span>{{ section.settings.right_cta_text }}</span>
         </div>
     </a>  
@@ -82,12 +94,12 @@
     },
     {
       "type": "text",
-      "id": "collection_heading",
+      "id": "heading",
       "label": "Lookbook collection heading"
     },
     {
       "type": "richtext",
-      "id": "collection_description",
+      "id": "body",
       "label": "Short description for the collection/lookbook"
     },
     {

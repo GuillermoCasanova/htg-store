@@ -15,7 +15,7 @@ collection-filters {
     width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .collection-filters {
         max-width: 22rem;
         margin-right: 0;
@@ -86,7 +86,7 @@ collection-filters {
     padding: var(--level4);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .collection-filters__filtering-forms__form__inner {
         padding: var(--level6);
     }
@@ -117,7 +117,7 @@ collection-filters {
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .filtering-forms__actions button {
         padding-top: var(--level2);
         padding-bottom: var(--level2);
@@ -141,7 +141,7 @@ collection-filters {
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .filter-field-set__legend {
         font-size: var(--h4);
     }
@@ -166,7 +166,7 @@ collection-filters {
     margin-right: var(--level2);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .filter-size {
         width: 2.75rem;
         height: 2.75rem;
@@ -182,7 +182,7 @@ collection-filters {
     line-height: 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .filter-size__label {
         font-size: var(--normal);
     }
