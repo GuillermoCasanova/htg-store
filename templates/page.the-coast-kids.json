@@ -23,11 +23,18 @@
         "heading": "The Coast Kids",
         "collection": "the-coast-kids"
       }
+    },
+    "1655413788446467d9": {
+      "type": "lookbook-slideshow",
+      "settings": {
+        "name": ""
+      }
     }
   },
   "order": [
     "header",
     "16554136121f48d433",
-    "1655413729f4b2ed72"
+    "1655413729f4b2ed72",
+    "1655413788446467d9"
   ]
 }
