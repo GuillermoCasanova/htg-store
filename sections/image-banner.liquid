@@ -51,6 +51,7 @@
         document.querySelector('#hero-video').load(); 
         
         setTimeout(function() {
+        document.querySelector('#hero-video').classList.add('is-loaded');
         document.querySelector('#hero-video').play(); 
         }, 500); 
     }
