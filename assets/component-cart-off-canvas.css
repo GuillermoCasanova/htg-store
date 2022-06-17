@@ -463,26 +463,13 @@
     text-decoration: underline;
 }
 
-.cart-notification__links .button--primary {
-    width: 100%;
-    border: 1px solid rgb(var(--color-base-text));
-    background: white;
-    padding: 1rem;
-    color: black;
-    text-transform: uppercase;
-    outline: none;
-    text-align: center;
-    font-size: var(--h6);
-    display: block;
-}
-
 
 
 
 
 /*------------------------------------*\
       #Cart Footer
-  \*------------------------------------*/
+\*------------------------------------*/
 
 .cart-notification__footer {
     position: absolute;
