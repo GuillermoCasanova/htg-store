@@ -289,8 +289,6 @@ class CartOffCanvas extends HTMLElement {
         trapFocus(this);
         this.notification.querySelector('button').focus();
   
-        this.header.reveal();
-  
         
         function variantTemplate(pItem) {
           

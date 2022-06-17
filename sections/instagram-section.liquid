@@ -1,6 +1,7 @@
 
 
 
+
 <div class="instagram-section__inner">
     <h2>
         {{ section.settings.heading }}    
@@ -12,10 +13,23 @@
     </ul>
 </div>
 
+<script src="{{ 'instafeed.min.js' | asset_url }}" defer="defer"></script>
+
+
 {% javascript %}
-
-
-
+    document.addEventListener('DOMContentLoaded', ()=> {
+        fetch('https://ig.instant-tokens.com/users/XXXXXX/instagram/XXXXXX/token?userSecret=XXXXX')
+        .then(resp => resp.json())
+        .then(data => {
+            // const feed = new Instafeed({
+            // accessToken: data.Token, // Access token from json response
+            // });
+            // feed.run();
+        })
+        .catch((error) => {
+        console.log(error)
+        });        
+    });
 {% endjavascript %}
 
 

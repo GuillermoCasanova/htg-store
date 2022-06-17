@@ -90,69 +90,43 @@ customElements.define('header-drawer', HeaderDrawer);
 
 
 class CartToggle extends HTMLElement {
-constructor() {
-  super(); 
-  this.cartNotification = document.querySelector('cart-off-canvas');
-  this.cartCount = this.querySelector('[data-cart-count]');
-  this.cartCountAria = this.querySelector('[data-cart-count-aria]');
-  this.cartCountBubble = this.querySelector('[data-cart-count-bubble]'); 
-  this.setUpEvents(); 
-  this.setUpToggleType();
-}
-
-updateToggleQty(pCart) {
-  this.cartCount.textContent = pCart.item_count; 
-  this.cartCountAria.textContent = pCart.item_count > 1 ? `${pCart.item_count} Items` : `${pCart.item_count} Item`
-
- if(pCart.item_count > 0) {
-  this.cartCountBubble.classList.remove('is-hidden') 
- } else {
-  this.cartCountBubble.classList.add('is-hidden') 
- }
-} 
-
-setUpToggleType() {
-  let type = this.dataset.toggleType; 
-  let icon = this.querySelector('svg');
-  let text = this.querySelector('[data-cart-toggle-text]');
-  let button = this.querySelector('button'); 
-
-  if(type === 'text') {
-    icon.style.display = 'none';
-    text.classList.remove('visually-hidden');
-    button.classList.add('header__icon--cart--text');
-    
-    // document.addEventListener('click', (event) => {
-    //   var isClickInside = this.cartNotification.querySelector('[data-cart]').contains(event.target);
-    //   var isToggleButton = this.contains(event.target); 
-    //   if (!isClickInside && !isToggleButton) {
-    //     this.cartNotification.close(); 
-    //   }
-    // });
+  constructor() {
+    super(); 
+    this.cartNotification = document.querySelector('cart-off-canvas');
+    this.cartCount = this.querySelector('[data-cart-count]');
+    this.cartCountAria = this.querySelector('[data-cart-count-aria]');
+    this.cartCountBubble = this.querySelector('[data-cart-count-bubble]'); 
+    this.setUpEvents(); 
   }
 
-  if(type === 'icon') {
-    text.style.display = 'none';
+  updateToggleQty(pCart) {
+    this.cartCount.textContent = pCart.item_count; 
+    this.cartCountAria.textContent = pCart.item_count > 1 ? `${pCart.item_count} Items` : `${pCart.item_count} Item`
+
+  if(pCart.item_count > 0) {
+    this.cartCountBubble.classList.remove('is-hidden') 
+  } else {
+    this.cartCountBubble.classList.add('is-hidden') 
   }
-}
+  } 
 
-setUpEvents() {
+  setUpEvents() {
 
-  this.querySelector('[data-cart-toggle]').addEventListener('click', (event) => {
-    event.preventDefault();
+    this.querySelector('[data-cart-toggle]').addEventListener('click', (event) => {
+      event.preventDefault();
 
-    if(this.getAttribute('aria-expanded') == 'false') {
-      this.setAttribute('aria-expanded', true); 
-    } else {
-      this.setAttribute('aria-expanded', false); 
-    }
+      if(this.getAttribute('aria-expanded') == 'false') {
+        this.setAttribute('aria-expanded', true); 
+      } else {
+        this.setAttribute('aria-expanded', false); 
+      }
 
-    event.currentTarget.classList.add('is-open');
-    
-      this.cartNotification.open(); 
-      document.querySelector('header-drawer').switchToCartToggle(); 
-  })
-}
+      event.currentTarget.classList.add('is-open');
+      
+        this.cartNotification.open(); 
+        document.querySelector('header-drawer').switchToCartToggle(); 
+    })
+  }
 }
 
 customElements.define('cart-toggle', CartToggle);

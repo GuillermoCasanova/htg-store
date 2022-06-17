@@ -102,6 +102,7 @@ class CartItems extends HTMLElement {
         errors.textContent = window.cartStrings.error;
         this.disableLoading();
       });
+
   }
 
   updateLiveRegions(line, itemCount) {
