@@ -13,7 +13,7 @@
       "settings": {
         "heading": "The Coast Kids",
         "body": "<p>Honor The Gift® Summer 2022 delivery continues the story of Russell Westbrook’s homage to Los Angeles. The Pacific Ocean acts as the lead inspiration defining this summer collection. A blue color palette and carefree California influence, breezes through this stripped back simple, yet refined range of raw edged knits, graphic tees and a cut and sew linen summer kit. Neighborhoods that surround the waters are reminiscent of driving down the coast.<\/p>",
-        "image": "shopify:\/\/shop_images\/01_a4e3a6d6-8a81-4939-93aa-e2aae816505f.jpg",
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-17_at_8.55.33_AM.png",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
@@ -127,31 +127,37 @@
         "65153181-f259-48f2-a82b-a0627f3df511": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/18_8d38a3b1-ef84-4833-a4fe-2756aa564e5e.jpg"
           }
         },
         "b8122a89-1b7d-43e6-97b2-7089c74f9c7e": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/19_450dfd0b-8f13-48a7-8101-f65ed4764dd5.jpg"
           }
         },
         "4851c209-adeb-4b07-a62a-3ed677673d86": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/20_706e08ca-00ae-41d3-82d6-99b58a53830a.jpg"
           }
         },
         "2663ffb1-0889-461c-a590-2354c07bfeac": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/22_9fb462bb-f383-46c2-8870-bcb99964dfac.jpg"
           }
         },
         "26d06a95-6328-4b91-a95c-1b922c9685f6": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/23_6484d15e-53c1-4f56-8d16-64db7963923f.jpg"
           }
         },
         "08191ccb-da80-4945-b147-2bc87b2d8dc8": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/24_aafbe5ec-5f6b-4b2b-9eca-101edc693e47.jpg"
           }
         },
         "e7247eac-a15c-4a45-934e-346f2e1a96be": {
@@ -192,7 +198,7 @@
         "5765f832-c9d7-4c58-96ba-d166d9538866"
       ],
       "settings": {
-        "name": ""
+        "name": "The Coast Kids"
       }
     }
   },

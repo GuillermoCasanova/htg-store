@@ -72,12 +72,26 @@
         "section-alignment": "flipped",
         "copy-bg-color": "background-1"
       }
+    },
+    "16554195319ec4aeed": {
+      "type": "featured-collection-alt",
+      "settings": {
+        "heading": "The Coast – Kids",
+        "body": "",
+        "collection_hero_image": "shopify:\/\/shop_images\/Look-1_111.jpg",
+        "lookbook_url_text": "View Lookbook",
+        "lookbook_url": "shopify:\/\/pages\/the-coast-kids",
+        "right_image": "shopify:\/\/shop_images\/Look-1_002.jpg",
+        "right_cta_text": "Shop Kids",
+        "right_cta_url": "shopify:\/\/collections\/the-coast-kids"
+      }
     }
   },
   "order": [
     "image_banner",
     "1654645496c068b051",
     "165464550697d6e482",
-    "1654659992853b6cdb"
+    "1654659992853b6cdb",
+    "16554195319ec4aeed"
   ]
 }
