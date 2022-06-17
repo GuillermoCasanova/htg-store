@@ -83,7 +83,7 @@
         "lookbook_url": "shopify:\/\/pages\/the-coast-kids",
         "right_image": "shopify:\/\/shop_images\/Look-1_002.jpg",
         "right_cta_text": "Shop Kids",
-        "right_cta_url": "\/collections\/kids\/the-coast"
+        "right_cta_url": "shopify:\/\/collections\/the-coast-kids"
       }
     }
   },
