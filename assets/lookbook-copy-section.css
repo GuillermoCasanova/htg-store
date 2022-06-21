@@ -18,6 +18,7 @@
 
 @media only screen and (min-width: 930px) {
     .lookbook-copy-section__inner {
+        padding-top: var(--level10);
         padding-bottom: calc(var(--level7) * 2);
     }
 }
