@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    #Section Lookbook Images
+\*------------------------------------*/
+
+.lookbook-images-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.lookbook-images-section__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--level7);
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: var(--level7);
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 930px) {
+    .lookbook-images-section__inner {
+        padding-top: var(--level9);
+        column-gap: var(--level9);
+    }
+}
+
+
+.lookbook-images-section__image-container {
+    width: 100%;
+    margin-bottom: var(--level7);
+}
+
+@media screen and (min-width: 930px) {
+    .lookbook-images-section__image-container {
+        margin-bottom: var(--level9);
+    }
+}
+
+.lookbook-images-section__image {
+    position: relative;
+    padding-bottom: 130%;
+}
+
+@media screen and (min-width: 700px) {
+    .lookbook-images-section__image {}
+}
+
+@media screen and (min-width: 930px) {
+    .lookbook-images-section__image {}
+}
+
+.lookbook-images-section__image img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

@@ -1,20 +1,26 @@
-.lookbook-copy-section {}
+/*------------------------------------*\
+    #Section Lookbook Copy
+\*------------------------------------*/
+
+
+.lookbook-copy-section {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 
 .lookbook-copy-section__inner {
     padding: var(--level6);
     padding-top: var(--level9);
-    padding-bottom: var(--level5);
+    padding-bottom: var(--level7);
 }
 
-@media screen and (min-width:930px) {
+
+@media only screen and (min-width: 930px) {
     .lookbook-copy-section__inner {
-        padding-top: var(--level10);
-        padding-bottom: 0;
+        padding-bottom: calc(var(--level7) * 2);
     }
 }
-
-
-
 
 .lookbook-copy-section__heading {
     text-align: center;
@@ -42,6 +48,7 @@
     max-width: 30rem;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: var(--level5);
 }
 
 @media screen and (min-width:600px) {

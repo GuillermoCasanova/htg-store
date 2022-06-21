@@ -1,15 +1,16 @@
 
-{{ 'lookbook-copy-section.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'lookbook-copy-section.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <div class="lookbook-copy-section__inner" style="
-    {% if section.settings.copy_bg_color == 'background-1' %}
-        background-color: rgb(var(--color-base-background-1))
+    {% if section.settings.bg_color == 'background-1' %}
+        background-color: rgb(var(--color-base-background-1));
     {% endif %}
-    {% if section.settings.copy_bg_color == 'background-2' %}
-        background-color: rgb(var(--color-base-background-2))
+    {% if section.settings.bg_color == 'background-2' %}
+        background-color: rgb(var(--color-base-background-2));
     {% endif %}
-    {% if section.settings.copy_bg_color == 'background-3' %}
-        background-color: rgb(var(--color-base-background-2))
+    {% if section.settings.bg_color == 'background-3' %}
+        background-color: rgb(var(--color-base-background-3));
     {% endif %}
     ">
     <div class="page-width">
@@ -61,7 +62,7 @@
           "label": "Bakground 3"
         }
       ],
-      "default": "background-1"
+      "default": "background-2"
     }
   ],
   "presets": [
