@@ -393,9 +393,6 @@
             collection-preview__products">
             {%- for product in section.settings.product_list -%}
               
-              {%- if forloop.index > 2 -%}
-                
-              {%- endif -%}
               <li class="grid__item">
                 {% render 'product-card',
                   heading_level: 'h3',
