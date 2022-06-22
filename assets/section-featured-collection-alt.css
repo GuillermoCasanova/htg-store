@@ -7,6 +7,7 @@
     border-top: 1px solid rgb(var(--color-base-text));
     padding-bottom: 0;
     background-color: rgb(var(--color-base-background-2));
+    border-bottom: 1px solid rgb(var(--color-base-text));
 }
 
 .featured-collection-alt-section__inner {
@@ -175,12 +176,14 @@
     width: 100%;
     text-decoration: none;
     overflow: hidden;
+    border-top: 1px solid rgb(var(--color-base-text));
 }
 
 @media screen and (min-width: 700px) {
     .featured-collection-alt-section__collection {
         width: 50%;
         border-left: 1px solid rgb(var(--color-base-text));
+        border-top: 0;
     }
 }
 
