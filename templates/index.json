@@ -85,6 +85,12 @@
         "right_cta_text": "Shop Kids",
         "right_cta_url": "shopify:\/\/collections\/the-coast-kids"
       }
+    },
+    "1655920347d426af19": {
+      "type": "instagram-feed",
+      "settings": {
+        "heading": "Follow Us"
+      }
     }
   },
   "order": [
@@ -92,6 +98,7 @@
     "1654645496c068b051",
     "165464550697d6e482",
     "1654659992853b6cdb",
-    "16554195319ec4aeed"
+    "16554195319ec4aeed",
+    "1655920347d426af19"
   ]
 }
