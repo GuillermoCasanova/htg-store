@@ -6,9 +6,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "dotbanners": {
+      "type": "main-dotbanners-for-pages",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "dotbanners"
   ]
 }
