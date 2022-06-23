@@ -647,6 +647,29 @@ a:focus {
 \*------------------------------------*/
 
 
+.page-width.addresses-main-page {
+  max-width: 45rem;
+  margin-left: 0;
+  margin-bottom: var(--level10);
+}
+
+@media only screen and (min-width: 930px) {
+  .page-width.addresses-main-page {
+    display: grid;
+    max-width: 107rem;
+    margin-left: auto;
+    column-gap: calc(var(--level10) + var(--level10));
+    grid-template-columns: 30rem minmax(0, calc(100vw - 45rem));
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .page-width.addresses-main-page {
+    grid-template-columns: 25rem minmax(0, calc(100vw - 45rem));
+  }
+}
+
+
 .addresses li>button+button,
 .addresses form button+button {
   margin-top: 0rem;
@@ -700,6 +723,10 @@ label[for='AddressProvinceNew'] {
 
 .addresses button[aria-controls="AddAddress"] {
   margin-bottom: var(--level10);
+}
+
+.addresses button[aria-controls="AddAddress"] {
+  max-width: 25rem;
 }
 
 .default-address-label {
