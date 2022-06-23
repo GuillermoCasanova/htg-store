@@ -702,11 +702,6 @@ label[for='AddressProvinceNew'] {
   margin-bottom: var(--level10);
 }
 
-.addresses input[type='checkbox'] {
-  margin-top: 2rem;
-  margin-left: 0;
-}
-
 .default-address-label {
   text-transform: uppercase;
   font-size: var(--h4);
