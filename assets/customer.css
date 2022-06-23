@@ -70,7 +70,7 @@ a:focus {
 }
 
 @media screen and (min-width: 750px) {
-  .customer:not(.account):not(.order) {
+  .customer:not(.account):not(.order):not(.addresses) {
     max-width: 40rem;
   }
 }
@@ -243,19 +243,20 @@ a:focus {
 @media only screen and (min-width: 930px) {
   .customer-main-page {
     display: grid;
-    grid-template-columns: minmax(0, calc(100vw - 26rem)) 1fr;
+    grid-template-columns: minmax(0, calc(100vw - 30rem)) 1fr;
   }
 }
 
 @media only screen and (min-width: 1300px) {
   .customer-main-page {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: minmax(53rem, 52vw) 25rem;
   }
 }
 
 .logout-link {
   font-size: var(--h6);
+  text-transform: uppercase;
 }
 
 .logout-link:hover,
@@ -364,21 +365,6 @@ a:focus {
 @media screen and (min-width: 930px) {
   .account-details__address p {
     line-height: 1.5;
-  }
-}
-
-
-.activate button[name='decline'],
-.addresses li>button,
-.addresses form button[type] {
-  background-color: rgba(var(--color-background), var(--alpha-button-background));
-  color: rgb(var(--color-link));
-}
-
-@media only screen and (min-width: 700px) {
-  .activate button[name='decline'] {
-    margin-top: inherit;
-    margin-left: 1rem;
   }
 }
 
@@ -650,10 +636,39 @@ a:focus {
   font-size: 1.3rem;
 }
 
-/* Addresses */
-.addresses li>button {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+
+
+
+
+/*------------------------------------*\
+    #Addresses Page
+\*------------------------------------*/
+
+.current-address-header,
+.new-address-header {
+  font-size: var(--h6);
+  margin-bottom: var(--level6);
+  border-bottom: 1px solid black;
+  text-align: left;
+}
+
+@media screen and (min-width: 930px) {
+
+  .current-address-header,
+  .new-address-header {
+    font-size: var(--h4);
+    margin-bottom: var(--level7);
+  }
+}
+
+
+.new-address-form {
+  margin-bottom: calc(var(--level9) *2);
+  max-width: 47rem;
+}
+
+.new-address-form__actions button {
+  margin-bottom: var(--level4);
 }
 
 .addresses li>button+button,
@@ -694,9 +709,6 @@ label[for='AddressProvinceNew'] {
   text-align: center;
 }
 
-li[data-address] {
-  margin-top: 5rem;
-}
 
 .addresses [aria-expanded='false']~div[id] {
   display: none;
@@ -706,48 +718,27 @@ li[data-address] {
   display: block;
 }
 
-.addresses h2 {
-  text-align: left;
-}
-
-li[data-address]>h2 {
-  text-align: center;
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 750px) {
-  li[data-address]>h2 {
-    font-size: calc(var(--font-heading-scale) * 2.2rem);
-  }
-}
-
-.addresses ul p {
-  margin-bottom: 0;
-}
 
 .addresses input[type='checkbox'] {
   margin-top: 2rem;
   margin-left: 0;
 }
 
-@media only screen and (min-width: 750px) {
-  .addresses form>div:nth-of-type(1) {
-    margin-right: 2rem;
-  }
-
-  .addresses form>div:nth-of-type(2) {
-    margin-top: 0;
-  }
-
-  .addresses form>div:nth-of-type(1),
-  .addresses form>div:nth-of-type(2) {
-    box-sizing: border-box;
-    flex-basis: calc(50% - 1rem);
-  }
+.addresses-item {
+  margin-bottom: var(--level7);
 }
 
-.addresses form>div:nth-of-type(7),
-.addresses form>div:nth-of-type(7)+div[id] {
-  margin-top: 1.5rem;
+.addresses-item__address {
+  font-size: var(--h5);
+  text-align: left;
+}
+
+.addresses-item__actions button {
+  max-width: 8rem;
+  margin-bottom: var(--level5);
+  margin-right: var(--level2);
+}
+
+.addresses-item__actions {
+  text-align: left;
 }

@@ -24,7 +24,7 @@
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-      <div class="custom-field">
+      <custom-input-wrapper class="custom-field">
         <input type="email"
           value=""
           name="email"
@@ -41,7 +41,7 @@
         <label for="RecoverEmail">
           {{ 'customer.login_page.email' | t }}
         </label>
-      </div>
+      </custom-input-wrapper>
 
       {%- if form.errors -%}
         <div  class="form__message form__message--error">
