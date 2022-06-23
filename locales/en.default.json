@@ -318,7 +318,7 @@
     },
     "addresses": {
       "title": "Account Details",
-      "default": "Current Address",
+      "default": "Default Address",
       "add_new": "Add a new address",
       "edit_address": "Edit address",
       "first_name": "First name",
