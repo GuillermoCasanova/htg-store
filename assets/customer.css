@@ -304,6 +304,7 @@ a:focus {
   font-size: var(--h6);
   margin-bottom: var(--level4);
   border-bottom: 1px solid black;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 930px) {
@@ -342,6 +343,7 @@ a:focus {
   font-size: var(--h6);
   margin-bottom: var(--level6);
   border-bottom: 1px solid black;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 930px) {
@@ -644,32 +646,6 @@ a:focus {
     #Addresses Page
 \*------------------------------------*/
 
-.current-address-header,
-.new-address-header {
-  font-size: var(--h6);
-  margin-bottom: var(--level6);
-  border-bottom: 1px solid black;
-  text-align: left;
-}
-
-@media screen and (min-width: 930px) {
-
-  .current-address-header,
-  .new-address-header {
-    font-size: var(--h4);
-    margin-bottom: var(--level7);
-  }
-}
-
-
-.new-address-form {
-  margin-bottom: calc(var(--level9) *2);
-  max-width: 47rem;
-}
-
-.new-address-form__actions button {
-  margin-bottom: var(--level4);
-}
 
 .addresses li>button+button,
 .addresses form button+button {
@@ -718,10 +694,23 @@ label[for='AddressProvinceNew'] {
   display: block;
 }
 
+.addresses button[aria-expanded="true"] {
+  display: none;
+}
+
+.addresses button[aria-controls="AddAddress"] {
+  margin-bottom: var(--level10);
+}
 
 .addresses input[type='checkbox'] {
   margin-top: 2rem;
   margin-left: 0;
+}
+
+.default-address-label {
+  text-transform: uppercase;
+  font-size: var(--h4);
+  text-align: left;
 }
 
 .addresses-item {
@@ -729,16 +718,50 @@ label[for='AddressProvinceNew'] {
 }
 
 .addresses-item__address {
-  font-size: var(--h5);
+  font-size: var(--h4);
   text-align: left;
 }
 
 .addresses-item__actions button {
-  max-width: 8rem;
+  max-width: 10rem;
   margin-bottom: var(--level5);
   margin-right: var(--level2);
 }
 
 .addresses-item__actions {
   text-align: left;
+}
+
+
+.current-address-header,
+.new-address-header,
+.edit-address-header {
+  font-size: var(--h6);
+  margin-bottom: var(--level6);
+  border-bottom: 1px solid black;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 930px) {
+
+  .current-address-header,
+  .new-address-header,
+  .edit-address-header {
+    font-size: var(--h4);
+    margin-bottom: var(--level7);
+  }
+}
+
+.edit-address-header {
+  margin-top: var(--level5);
+}
+
+.address-form {
+  margin-bottom: calc(var(--level9) *2);
+  max-width: 47rem;
+}
+
+.address-form__actions button {
+  margin-bottom: var(--level4);
 }

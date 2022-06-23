@@ -320,12 +320,41 @@ margin-bottom: rem-calc($level7 + $level2);
     left: var(--level4);
     font-family: var(--primary-font-family);
     top: 0;
-    bottom: 0;
+    bottom: -.15rem;
     display: flex;
     align-items: center;
     text-transform: capitalize;
 
 }
+
+.custom-select {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: var(--level4)
+}
+
+
+.custom-select select {
+    padding-top: var(--level3);
+    padding-bottom: var(--level3);
+    padding-left: var(--level2);
+    font-size: var(--h6);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+}
+
+.custom-select svg {
+    position: absolute;
+    right: var(--level4);
+    top: 1rem;
+    bottom: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 
 
 
