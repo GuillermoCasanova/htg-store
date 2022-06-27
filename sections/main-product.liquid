@@ -1671,36 +1671,30 @@ variant-selects {
       Close
     </button>
     <div class="product-zoom-modal__pagination-container">
-      <div class="product-zoom-modal__pagination" data-product-images-modal-slideshow-pagination>
-        <ul  class="product-images-slideshow__pagination__wrapper  product-zoom-modal__pagination" data-product-images-modal-slideshow-pagination-wrapper>
-         
+      <div class="product-zoom-modal__pagination">
+        <ul  class="product-images-slideshow__pagination__wrapper  product-zoom-modal__pagination" data-product-images-modal-slideshow-pagination>
             {% for image in product.images %}
-                  {%unless image.alt contains 'swatch'%}
-                  <li class="slide product-images-slideshow__pagination__thumb" 
-                    data-images-scroller-thumb role="button" tabindex="0" 
-                     data-id="{{forloop.index}}"
-                     data-img-url="{{ image.src | img_url: '80x80' }}" alt="{{ image.alt | escape }}">
-               
+                <li class="slide product-images-slideshow__pagination__thumb" 
+                  data-images-scroller-thumb role="button" tabindex="0" 
+                    data-id="{{forloop.index}}"
+                    data-img-url="{{ image.src | img_url: '80x80' }}" alt="{{ image.alt | escape }}">
+              
 
-                  </li>
-                {%endunless%}
+                </li>
             {% endfor %}
-
         </ul>
       </div>
     </div>
    
-    <div class="product-zoom-modal__slideshow" data-product-images-modal-slideshow>
-      <ul class="slides  product-zoom-modal__wrapper" data-product-images-modal-slideshow-wrapper>
+    <div class="product-zoom-modal__slideshow">
+      <ul class="slides  product-zoom-modal__wrapper"  data-product-images-modal-slideshow>
       {% for image in product.images %}
-        {%unless image.alt contains 'swatch'%}
         <li class="slide" data-id="{{ forloop.index }}" 
             data-product-images-modal-slideshow-slide  
             data-id="{{forloop.index}}"
             data-img-url="{{ image.src | img_url: '2000x2000' }}" alt="{{ image.alt | escape }}">
           
         </li>
-        {%endunless%}
       {% endfor %}
       </ul> 
     </div>

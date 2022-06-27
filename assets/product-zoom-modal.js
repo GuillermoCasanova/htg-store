@@ -8,7 +8,6 @@ class ProductZoomModal extends HTMLElement {
             slideshowWrapper: '[data-product-images-modal-slideshow-wrapper]',
             images: '[data-product-images-modal-slideshow-slide]',
             pagination: '[data-product-images-modal-slideshow-pagination]',
-            paginationWrapper: '[data-product-images-modal-slideshow-pagination-wrapper]',
             thumbnails: '[data-images-scroller-thumb]',
             close: '[data-product-images-modal-close]',
             modal: '[data-product-images-modal]',
@@ -35,6 +34,56 @@ class ProductZoomModal extends HTMLElement {
 
         this.closeZoom(); 
     } 
+
+    updateImageUrls(pImages) {
+
+        let images = pImages; 
+
+        let slideshow = this.querySelector(this.selectors.slideshow); 
+        let pagination = this.querySelector(this.selectors.pagination); 
+
+        slideshow.innerHTML = ""; 
+        pagination.innerHTML = ""; 
+
+        function createImageObj(pSource, pAlt, pIndex, pImageType) {
+            let imageTemplate = ``; 
+            let index = pIndex + 1;
+
+            function processImageSrc(pImageSrc, pSize) {
+                let imageSrc = '';
+                imageSrc = pImageSrc.replace(/(\.[^.]*)$/, `_${pSize}$1`)
+                .replace('http:', '');
+                return imageSrc;
+            }
+
+            if(pImageType === 'slide') {
+                imageTemplate = `
+                     <li class="slide" data-id="${index}" 
+                     data-product-images-modal-slideshow-slide  
+                     data-id="${index}"
+                     data-img-url="${processImageSrc(pSource, '2000x')}" alt="${pAlt}"></li>`; 
+            } 
+            
+            if(pImageType === 'thumbnail'){
+                imageTemplate = `
+                     <li class="slide product-images-slideshow__pagination__thumb" 
+                     data-images-scroller-thumb role="button" tabindex="0" 
+                     data-id="${index}"
+                     data-img-url="${processImageSrc(pSource, '80x')}" alt="Thumbnail for image ${index}" aria-label="Go to image ${index}"></li>`;     
+            }
+
+            return imageTemplate; 
+         }
+
+
+        images.forEach((image, index)=> {
+         pagination.insertAdjacentHTML("beforeend", createImageObj(image.src, '', index, 'thumbnail')); 
+         slideshow.insertAdjacentHTML("beforeend", createImageObj(image.src, '', index, 'slide')); 
+        });
+
+    }
+
+
     goToImage(pThis, pEvent, pForceId) {
 
         pThis.closeZoom(); 
@@ -118,24 +167,36 @@ class ProductZoomModal extends HTMLElement {
 
             trapFocus(this, this.querySelector(this.selectors.close));
             
-            this.querySelectorAll(this.selectors.images).forEach(element => {
+            this.querySelectorAll(this.selectors.images).forEach((element, index) => {
+
+                
                 element.classList.add('scroller-slide');
                 let image = new Image(); 
+                image.loading = 'lazy';
                 image.src = element.dataset.imgUrl;
-                element.innerHTML = `
+
+                if(index === 0) {
+                    element.innerHTML = `
                     <div class="image-container">
-                        <img role="presentation" src="${element.dataset.imgUrl}" data-zoom-image/>
-                    </div>
-                `; 
+                        <img role="presentation" src="${element.dataset.imgUrl}" data-zoom-image loading="eager"/>
+                    </div>`; 
+                } else {
+                    element.innerHTML = `
+                    <div class="image-container">
+                        <img role="presentation" src="${element.dataset.imgUrl}" data-zoom-image loading="lazy"/>
+                    </div>`; 
+                }
+
 
             });
 
               
-            this.querySelectorAll(this.selectors.thumbnails).forEach(element => {
+            this.querySelectorAll(this.selectors.thumbnails).forEach((element, index) => {
                 let image = new Image(); 
                 image.src = element.dataset.imgUrl;
+                image.loading = 'lazy';
                 element.innerHTML = `
-                    <img role="presentation" src="${element.dataset.imgUrl}" alt="${element.dataset.alt}"/>
+                    <img role="presentation" src="${element.dataset.imgUrl}" alt="Thumbnail for image ${index}" loading="lazy"/>
                 `; 
 
             });
