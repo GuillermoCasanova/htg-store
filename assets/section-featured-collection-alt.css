@@ -38,6 +38,9 @@
     padding-top: var(--level8);
     padding-bottom: var(--level8);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -52,6 +55,10 @@
     .featured-collection-alt-section__copy {
         padding-top: calc(var(--level10) + var(--level4));
     }
+}
+
+.featured-collection-alt-section__copy__inner {
+    width: 100%;
 }
 
 
@@ -142,6 +149,12 @@
     .featured-collection-alt-section__image-container {
         max-width: 22rem;
         margin-bottom: var(--level9);
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .featured-collection-alt-section__image-container {
+        max-width: 26rem;
     }
 }
 
@@ -259,6 +272,14 @@
     .featured-collection-alt-section__collection__image-container {
         position: relative;
         height: 91%;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .featured-collection-alt-section__collection__image-container {
+        height: 100%;
+        padding-bottom: 100%;
+        margin-bottom: 7%;
     }
 }
 
