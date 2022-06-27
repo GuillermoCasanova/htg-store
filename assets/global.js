@@ -1,7 +1,7 @@
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(
-      "summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
+      "summary, a[href], button:enabled, [role='button'], [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
     )
   );
 }
@@ -37,8 +37,10 @@ function trapFocus(container, elementToFocus = container) {
       event.target !== container &&
       event.target !== last &&
       event.target !== first
-    )
+    ) {
+      console.log('denied');
       return;
+    }
 
     document.addEventListener('keydown', trapFocusHandlers.keydown);
   };
@@ -846,7 +848,6 @@ class VariantRadios extends VariantSelects {
   updateVariantInput() {
     const productForms = document.querySelectorAll(`#quick-add-form-${this.dataset.section}, #product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
     productForms.forEach((productForm) => {
-      console.log('CHANGE');
       if(productForm.querySelector('input[name="id"][data-desktop]')) {
         const input = productForm.querySelector('input[name="id"][data-desktop]');
         input.value = this.currentVariant.id;
@@ -993,14 +994,12 @@ class CustomInputWrapper extends HTMLElement {
 
     let textFieldWrapper = this; 
 
-    console.log(this);
     
     if(this.querySelector('input') !== null) {
 
       this.querySelector('input').addEventListener('change', function(event) {
           let input = event.currentTarget; 
 
-          console.log('change');
           if(input.value.length > 0) {
               textFieldWrapper.classList.add('is-active'); 
           } else {

@@ -73,6 +73,7 @@ class ProductImagesSlideshow extends HTMLElement {
                 direction: 'horizontal', 
                 loop: true,
                 loopedSlides: 6,
+                grabCursor: false, 
                 preventInteractionOnTransition: true,
                 pagination: {
                     el: this.selectors.pagination,
@@ -90,6 +91,7 @@ class ProductImagesSlideshow extends HTMLElement {
                 direction: 'horizontal', 
                 loop: true,
                 loopedSlides: 6,
+                grabCursor: false, 
                 preventInteractionOnTransition: true,
                 pagination: {
                     el: this.selectors.pagination,

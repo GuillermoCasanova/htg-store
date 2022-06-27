@@ -5,6 +5,28 @@
 
 {%style%}
 
+.product-zoom-modal {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media only screen and (min-width: 769px) {
+    .product-zoom-modal.is-visible {
+        pointer-events: all;
+        opacity: 1;
+    }
+}
+
+
 .breadcrumbs--product-page {
   margin-bottom: var(--level5);
   display: none;
@@ -86,13 +108,10 @@
     #Product Images Slideshow
 \*------------------------------------*/
 
-.product-images-slideshow.swiper .slide:hover {
-  cursor: grab;
+.product-images-slideshow .slide:hover {
+  cursor: zoom-in;
 }
 
-.product-images-slideshow.swiper .slide:active {
-  cursor: grabbing;
-}
 
 .product-images--mobile {
   display: block;
@@ -1160,6 +1179,7 @@ variant-selects {
   {% render 'breadcrumbs' %}
 </div>
 
+
 <div class="product" data-product-container data-section="{{ section.id }}">
 
 
@@ -1169,6 +1189,9 @@ variant-selects {
       {% for image in product.images %}
         {% unless image.alt contains 'swatch' %}
         <li class="slide"  data-product-images-slideshow-slide  data-product-images-modal-open data-id="{{ forloop.index }}">
+          <button class="zoom-image-indicator" data-id="{{forloop.index}}" aria-label="Image can be zoomed in" data-product-images-modal-open >
+            {%render 'icon-zoom-in'%}
+          </button>
           <div class="product-images-slideshow__image-container">
 
             {%if forloop.index == 1%}
@@ -1626,9 +1649,58 @@ variant-selects {
 </div>
 
 
+
+<product-zoom-modal  data-zoom-script-url="{{ 'panzoom.min.js' | asset_url }}"  role="dialog" class="product-zoom-modal  is-hidden show-for-large-up" data-product-images-modal>
+  <div class="product-zoom-modal__inner">
+    <button class="product-zoom-modal__close" data-product-images-modal-close aria-label="Close product images modal">
+      Close
+    </button>
+    <div class="product-zoom-modal__pagination-container">
+      <div class="product-zoom-modal__pagination" data-product-images-modal-slideshow-pagination>
+        <ul  class="product-images-slideshow__pagination__wrapper  product-zoom-modal__pagination" data-product-images-modal-slideshow-pagination-wrapper>
+         
+            {% for image in product.images %}
+                  {%unless image.alt contains 'swatch'%}
+                  <li class="slide product-images-slideshow__pagination__thumb" 
+                    data-images-scroller-thumb role="button" tabindex="0" 
+                     data-id="{{forloop.index}}"
+                     data-img-url="{{ image.src | img_url: '80x80' }}" alt="{{ image.alt | escape }}">
+               
+
+                  </li>
+                {%endunless%}
+            {% endfor %}
+
+        </ul>
+      </div>
+    </div>
+   
+    <div class="product-zoom-modal__slideshow" data-product-images-modal-slideshow>
+      <ul class="slides  product-zoom-modal__wrapper" data-product-images-modal-slideshow-wrapper>
+      {% for image in product.images %}
+        {%unless image.alt contains 'swatch'%}
+        <li class="slide" data-id="{{ forloop.index }}" 
+            data-product-images-modal-slideshow-slide  
+            data-id="{{forloop.index}}"
+            data-img-url="{{ image.src | img_url: '2000x2000' }}" alt="{{ image.alt | escape }}">
+          
+        </li>
+        {%endunless%}
+      {% endfor %}
+      </ul> 
+    </div>
+  </div>
+</product-zoom-modal>
+
+
+
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'custom-color-picker.js' | asset_url }}" defer="defer"></script>
 <script type="module" src="{{ 'product-images.js' | asset_url }}" defer="defer"></script> 
+<script src="{{'product-zoom-modal.js' | asset_url}}" defer="defer"></script>
+
+<link rel="stylesheet" href="{{ 'product-zoom-modal.css' | asset_url }}" media="print" onload="this.media='all'">
+
 
 {% schema %}
 {

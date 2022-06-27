@@ -176,6 +176,7 @@
         min-height: 100vh; 
         min-height: -webkit-fill-available; 
       }
+      
 /* 
       .js img {
         opacity: 0;
@@ -304,6 +305,11 @@ label{font-family:var(--primary-font-family);letter-spacing:1px}input:-webkit-au
         cart_get_url: 'cart.js',
         predictive_search_url: '{{ routes.predictive_search_url }}'
       };
+
+      window.mediaQueries = {
+        mediumUp: window.matchMedia('(min-width: 600px)'),
+        largeUp: window.matchMedia('(min-width: 930px)')
+      }
 
       window.cartStrings = {
         error: `{{ 'sections.cart.cart_error' | t }}`,
