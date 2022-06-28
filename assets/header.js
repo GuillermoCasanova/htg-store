@@ -150,6 +150,7 @@ constructor() {
   });
 }
 
+
 setUpCloseEvents() {    
   document.addEventListener('keyup', (evt) => {
     evt.code === 'Escape' && this.closeSearch()
@@ -191,7 +192,6 @@ customElements.define('search-toggle', SearchToggle);
 
 
 
-
 class MenuDropdown extends HTMLElement {
   constructor() {
     super(); 
@@ -211,15 +211,16 @@ class MenuDropdown extends HTMLElement {
 
     document.addEventListener('DOMContentLoaded', (event)=> {
       this.removePreloadClasses(); 
-      console.log('remove preload classes!');
     }); 
 
   }
 
   removePreloadClasses() {
+    setTimeout(()=> {
       this.querySelectorAll('.preload').forEach((elem)=> {
         elem.classList.remove('preload'); 
-    });
+      });
+    }, 300); 
   }
 
   onKeyUp(event) {

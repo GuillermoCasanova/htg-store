@@ -221,7 +221,7 @@ body {
 /*LARGE-UP*/
 @media screen and (min-width: 1000px) {
   :root {
-    font-size: .85em;
+    font-size: .8em;
   }
 }
 

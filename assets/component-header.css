@@ -1066,6 +1066,7 @@ header-drawer .menu-drawer__utility-links {
 
     .header__submenu[aria-hidden="true"].preload {
         visibility: hidden;
+        opacity: 0;
     }
 
     .header__submenu[aria-hidden="false"] {

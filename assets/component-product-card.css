@@ -31,6 +31,8 @@
   width: 100%;
   position: relative;
   margin-bottom: var(--level2);
+  overflow: hidden;
+  position: relative;
 }
 
 .product-card__media .media img:first-child {
