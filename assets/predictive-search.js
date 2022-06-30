@@ -9,6 +9,11 @@ class PredictiveSearch extends HTMLElement {
     this.isOpen = false;
 
     this.setupEventListeners();
+    
+    this.mediaQueries = {
+      largeUp: window.matchMedia('(min-width: 930px)')
+    }
+
   }
 
  
@@ -17,7 +22,11 @@ class PredictiveSearch extends HTMLElement {
     form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('input', debounce((event) => {
-      this.onChange(event);
+
+      if(this.mediaQueries.largeUp.matches) {
+        this.onChange(event);
+      }
+
     }, 300).bind(this));
 
     this.input.addEventListener('focus', this.onFocus.bind(this));
