@@ -9,7 +9,6 @@ class loadMoreProductsButton extends HTMLElement {
         }
 
         this.collectionTotal = 0; 
-    
     }
 
     hide() {
@@ -29,15 +28,17 @@ class loadMoreProductsButton extends HTMLElement {
 
         // IF NO MORE PRODUCTS, HIDE BUTTON
         if(document.querySelector('collection-grid')) {
-            let CollectionProducs = document.querySelector('collection-grid'); 
-            if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
+            console.log('COLLECTION GRID FOUND');
+            let CollectionProducts = document.querySelector('collection-grid'); 
+            if(CollectionProducts.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
                 this.style.display = 'none';
             }
         }
     }
 
     updateButton() {
-        if(CollectionProducs.getProductsRendered().length >=  CollectionProducs.totalProducts.length) {
+        let CollectionProducts = document.querySelector('collection-grid'); 
+        if(CollectionProducts.getProductsRendered().length >=  CollectionProducts.getTotalProducts().length) {
             this.style.display = 'none';
         }
     }
@@ -47,14 +48,14 @@ class loadMoreProductsButton extends HTMLElement {
         let collectionCount = this.dataset.collectionCount;
         let collectionTag = this.dataset.filteredByTag; 
 
-        let CollectionProducs = document.querySelector('collection-grid'); 
-        CollectionProducs.renderMoreProducts(parseInt(this.dataset.paginateBy));
+        let CollectionProducts = document.querySelector('collection-grid'); 
+        CollectionProducts.renderMoreProducts(parseInt(this.dataset.paginateBy));
 
-            // console.log(CollectionProducs.getProductsRendered().length); 
-            // console.log(CollectionProducs.totalProducts.length); 
+            // console.log(CollectionProducts.getProductsRendered().length); 
+            // console.log(CollectionProducts.totalProducts.length); 
 
      
-        // if(CollectionProducs.getProductsRendered().length <=  CollectionProducs.totalProducts) {
+        // if(CollectionProducts.getProductsRendered().length <=  CollectionProducts.totalProducts) {
         //     this.style.display = 'block';
         // }
     }

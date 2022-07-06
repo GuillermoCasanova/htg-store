@@ -103,7 +103,7 @@ class CollectionFilters extends HTMLElement {
     let params = new URLSearchParams(url.search); 
 
 
-    params.delete('section');
+    params.delete('page_num');
     queryUrl.search = `?sort_by=${sortingType}` + params; 
 
     window.history.replaceState(null, null, queryUrl); 
@@ -246,7 +246,7 @@ class CollectionFilters extends HTMLElement {
       const url = new URL(window.location.href); 
       let params = new URLSearchParams(url.search); 
       params.delete('color'); 
-      params.delete('section');
+      params.delete('page_num');
 
       this.filterBy.color.forEach(color => {
         params.append('color', color.replace('filter-color:', ""));
@@ -366,30 +366,38 @@ class CollectionGrid extends HTMLElement {
 
   getProductsFromJson(pNumToStartFrom) {
 
+    console.log(pNumToStartFrom); 
+
     const productContainerId = '[data-product-json]';
     const queryString = window.location.search; 
     let startFromProduct = pNumToStartFrom;
-    let productsToShow = this.paginateBy; 
+    let productsToShow = this.paginateBy;
+    let pageNum = 1;  
     
     if(queryString) {
       let urlParams = new URLSearchParams(queryString);
-      if(parseInt(urlParams.get('section')) > 1) {
-        this.section = parseInt(urlParams.get('section'));
-        productsToShow = this.dataset.paginateBy * urlParams.get('section')
+      if(parseInt(urlParams.get('page_num')) > 1) {
+        pageNum = parseInt(urlParams.get('page_num'));
+        this.section = pageNum;
+        productsToShow = this.dataset.paginateBy * pageNum;
       }
     }
     
     this.totalProducts = JSON.parse(document.querySelector('#product-data').textContent.trim()).products;
     this.totalProductsShowing = this.totalProducts.slice(0, productsToShow);
-
     console.log(this.totalProducts); 
+    console.log(this.totalProductsShowing); 
+
+    if(this.totalProducts.length > this.totalProductsShowing.length) {
+      this.preRenderProducts(pageNum); 
+    }
 
   }
 
   setUpPagination(pNumToStartFrom, pFiltered) {
     // const url = new URL(window.location.href); 
     // let params = new URLSearchParams(url.search); 
-    // params.delete('section');
+    // params.delete('page_num');
     // url.search = params; 
 
     let indexToStartFrom = parseInt(pNumToStartFrom); 
@@ -422,20 +430,12 @@ class CollectionGrid extends HTMLElement {
     }
   } 
 
-
-  renderMoreProducts(pNumToShowMore) {
-
-    window.history.replaceState({page: this.section}, '', '?section=' + (this.section += 1));
-    const url = `${window.location.pathname}?page=${this.section}&?section_id=main-collection-product-grid`;
-    // const queryUrl = new URL(window.location.href); 
-
-    // params.delete('section');
-    // // queryUrl.search = `?sort_by=${sortingType}`; 
-
-    console.log(url); 
-
-    const collectionProductsContainer = this.querySelector('ul'); 
-
+  preRenderProducts(pPage_num) {
+    console.log(pPage_num); 
+    let pageNumToPrerender = pPage_num + 1;
+    console.log(pageNumToPrerender); 
+    const url = `${window.location.pathname}?page=${pageNumToPrerender}&?section_id=main-collection-product-grid`;
+    
     fetch(url)
     .then((response) => {
       if (!response.ok) {
@@ -446,30 +446,77 @@ class CollectionGrid extends HTMLElement {
       return response.text();
     })
     .then((text) => {
-       const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
-
-       console.log(resultsMarkup); 
-       
-      // let orderedArray  = []; 
-      
-      resultsMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
-        collectionProductsContainer.appendChild(element); 
-      });
-
-      this.totalProductsShowing = this.totalProducts.slice(0, this.section * this.paginateBy); 
-
-      document.querySelector('load-more-products').updateButton(); 
-      
-      // document.querySelector('collection-grid').renderFilteredProducts([], orderedArray, true);
-      // this.closeFilterOptions();
+      const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
+      this.nextPageMarkup = resultsMarkup; 
+      console.log(this.nextPageMarkup); 
+      console.log('pRERENDERRR');
     })
     .catch((error) => {
       console.log(error); 
       throw error;
     });
 
+  }
 
-    
+
+  renderMoreProducts(pNumToShowMore) {
+
+    window.history.replaceState({page: this.section}, '', '?page_num=' + (this.section += 1));
+    const url = `${window.location.pathname}?page=${this.section}&?section_id=main-collection-product-grid`;
+    // const queryUrl = new URL(window.location.href); 
+
+    // params.delete('page_num');
+    // // queryUrl.search = `?sort_by=${sortingType}`; 
+
+    console.log(url); 
+
+    const collectionProductsContainer = this.querySelector('ul'); 
+
+    if(!this.nextPageMarkup) {
+
+      fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
+
+        console.log(resultsMarkup); 
+        
+        // let orderedArray  = []; 
+        
+        resultsMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
+          collectionProductsContainer.appendChild(element); 
+        });
+
+        document.querySelector('load-more-products').updateButton(); 
+        
+        // document.querySelector('collection-grid').renderFilteredProducts([], orderedArray, true);
+        // this.closeFilterOptions();
+      })
+      .catch((error) => {
+        console.log(error); 
+        throw error;
+      });
+
+    } else {
+      this.nextPageMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
+        collectionProductsContainer.appendChild(element); 
+      });
+
+      this.preRenderProducts(this.section + 1);
+    }
+
+    this.totalProductsShowing = this.totalProducts.slice(0, this.section * this.paginateBy); 
+    document.querySelector('load-more-products-button').updateButton(); 
+
+    console.log(this.totalProductsShowing); 
+
     //  let productsToAdd = this.totalProducts.slice(this.totalProductsShowing.length, this.totalProductsShowing.length + pNumToShowMore);
     //  this.totalProductsShowing = [...this.totalProductsShowing, ...productsToAdd]
     //  this.totalProductsShowing.forEach((productJSON)=> {
@@ -545,7 +592,9 @@ class CollectionGrid extends HTMLElement {
 
   }
 
-
+  getTotalProducts() {
+    return this.totalProducts; 
+  } 
   getProductsRendered() {
     return this.totalProductsShowing; 
   } 
