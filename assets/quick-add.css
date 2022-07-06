@@ -133,6 +133,29 @@
   }
 }
 
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(n+5) {
+  display: none;
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(5) {
+  display: block;
+  position: static;
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(5):after {
+  position: absolute;
+  left: 0;
+  bottom: -1.15rem;
+  font-size: var(--mini);
+  color: rgb(var(--color-base-link));
+  content: attr(data-more-text);
+  text-transform: uppercase;
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(5) * {
+  display: none;
+}
+
 .quick-add-color-picker__color label {
   position: absolute;
   width: 100%;
@@ -142,6 +165,10 @@
 
 .quick-add-color-picker__color label:hover {
   cursor: pointer;
+}
+
+.quick-add-color-picker__color label:hover .quick-add-color-picker__label__swatch {
+  border: 2px solid black;
 }
 
 .quick-add-color-picker__label__swatch {
@@ -187,6 +214,12 @@
   color: rgb(var(--color-base-link));
   text-decoration: line-through;
   opacity: .6;
+  pointer-events: none;
+}
+
+.quick-add-variants__option.is-sold-out input:checked+label:after {
+  opacity: .6;
+  color: rgb(var(--color-base-link));
 }
 
 .quick-add-variants__option {
@@ -199,7 +232,7 @@
 @media only screen and (min-width: 930px) {
   .quick-add-variants__option {
     font-size: var(--normal);
-    margin-right: .75rem;
+    margin-right: .7rem;
   }
 }
 

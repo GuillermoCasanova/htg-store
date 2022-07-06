@@ -6,8 +6,8 @@
   {% render 'breadcrumbs' %}
 
   <div class="account-breadcrumbs__link">
-    <a class="logout-link"  href="{{ routes.account_logout_url }}">
-      {{ 'customer.log_out' | t }}
+    <a class="logout-link"  href="{{ routes.account_url }}" title="Retutn to account home">
+      {{ 'customer.account.return' | t }}
     </a>
   </div>
 </div>
@@ -17,14 +17,21 @@
 
   <div class="account-header page-width">
     <h1>{{ 'customer.account.title' | t }}</h1>
-    <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
+    <a href="{{ routes.account_url }}" title="Return to account home" rel="internal" class="logout-link  show-for-large-up">{{ 'customer.account.return' | t }}</a>
   </div>
 
   <div class="page-width main-content">
     <div>
-      <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
+
+      <div class="order-header">
+        <h2 class="order-header__heading">{{ 'customer.order.title' | t: name: order.name }}</h2>
+      </div>
+
       {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
-      <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
+      
+      <p class="order-date">{{ 'customer.order.date_html' | t: date: order_date }}</p>
+
+
       {%- if order.cancelled -%}
         {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
         <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
@@ -54,7 +61,7 @@
               >
                 <div>
                   {%- if line_item.url != blank -%}
-                    <a href="{{ line_item.url }}">{{ line_item.title }}</a>
+                    <a href="{{ line_item.url }}" title="View {{ line_item.title }}" target="_blank">{{ line_item.title }}</a>
                   {%- else -%}
                     <p>{{ line_item.title }}</p>
                   {%- endif -%}
@@ -108,7 +115,7 @@
                       <span>{{ 'customer.order.fulfilled_at_html' | t: date: created_at }}</span>
 
                         {%- if line_item.fulfillment.tracking_url -%}
-                          <a href="{{ line_item.fulfillment.tracking_url }}">
+                          <a href="{{ line_item.fulfillment.tracking_url }}" title="Track your shipment" target="_blank">
                             {{ 'customer.order.track_shipment' | t }}
                           </a>
                         {%- endif -%}
@@ -249,30 +256,30 @@
           {%- for shipping_method in order.shipping_methods -%}
             <tr role="row">
               <td id="RowShipping" role="rowheader" scope="row" colspan="4">{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</td>
-              <td headers="RowShipping" role="cell" data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money }}</td>
+              <td headers="RowShipping" role="cell"   data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})">{{ shipping_method.price | money }}</td>
             </tr>
           {%- endfor -%}
           {%- for tax_line in order.tax_lines -%}
             <tr role="row">
               <td id="RowTax" role="rowheader" scope="row" colspan="4">{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</td>
-              <td headers="RowTax" role="cell" data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</td>
+              <td headers="RowTax" role="cell"   data-label="{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)">{{ tax_line.price | money }}</td>
             </tr>
           {%- endfor -%}
           {%- if order.total_duties -%}
             <tr role="row">
               <td id="RowDuties" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total_duties' | t }}</td>
-              <td headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ order.total_duties | money }}</td>
+              <td headers="RowDuties" role="cell"   data-label="{{ 'customer.order.total_duties' | t }}">{{ order.total_duties | money }}</td>
             </tr>
           {%- endif -%}
           <tr role="row">
-            <td id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</td>
+            <td id="RowTotal" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total' | t }}</td>
             <td headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</td>
           </tr>
         </tfoot>
       </table>
     </div>
-    <div>
-      <div>
+    <div class="order-addresses">
+      <div class="order-addresses_item">
         <h2>{{ 'customer.order.billing_address' | t }}</h2>
         <p>
           <strong>{{ 'customer.order.payment_status' | t }}:</strong>
@@ -280,7 +287,8 @@
         </p>
         {{ order.billing_address | format_address }}
       </div>
-      <div>
+
+      <div class="order-addresses_item">
         <h2>{{ 'customer.order.shipping_address' | t }}</h2>
         <p>
           <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>

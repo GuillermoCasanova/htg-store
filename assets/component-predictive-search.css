@@ -36,6 +36,11 @@
   transform: translateY(-100%);
 }
 
+.search-modal[aria-hidden="true"].preload {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .search-modal[aria-hidden="false"] {
   transform: translateY(0);
 }

@@ -1,0 +1,239 @@
+/*------------------------------------*\
+    #Section Lookbook Slideshow
+\*------------------------------------*/
+
+.lookbook-shop-slideshow {
+    padding-bottom: 0;
+}
+
+.lookbook-shop-slideshow__inner {
+    padding-bottom: 125%;
+    background-color: rgb(var(--color-base-background-2));
+    position: relative;
+}
+
+/*Media query   Specific to this plugin*/
+@media screen and (min-width: 816px) {
+    .lookbook-shop-slideshow__inner {
+        padding-bottom: 40%;
+    }
+}
+
+
+.lookbook-shop-slideshow__inner>.lSSlideOuter {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.lSSlideOuter {
+    float: none !important;
+
+}
+
+.lightSlider {
+    margin-bottom: -1.25rem !important;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(var(--color-base-background-2));
+}
+
+.lSSlideWrapper {
+    padding-top: 0 !important;
+}
+
+.evm_tagged_img {
+    padding-top: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+.hotspot {
+    border-radius: 100% !important;
+    height: 1.15rem !important;
+    width: 1.15rem !important;
+}
+
+.slider_caption {
+    display: none !important;
+}
+
+@media (hover: hover) {
+
+    /* .hotspot:hover:after,
+    .hotspot:focus:after {
+        animation: pulse-aninmation 3s ease-in-out infinite both !important;
+    }
+
+    .hotspot:hover:before,
+    .hotspot:focus:before {
+        animation: pulse-aninmation 3s ease-in-out infinite both !important;
+        animation-delay: 2.5s !important;
+    } */
+}
+
+
+.hotspot:after {
+    animation: none !important;
+}
+
+.hotspot:before {
+    animation: none !important;
+}
+
+.plus_icon_container {
+    display: none !important;
+}
+
+.evm_look_book_title {
+    font-family: var(--primary-font-family) !important;
+    padding: 0 !important;
+    font-size: var(--normal) !important;
+    margin-bottom: var(--level1) !important;
+    margin-top: var(--level2) !important;
+    padding-left: var(--level1) !important;
+    padding-right: var(--level1) !important;
+    line-height: 1.15 !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 930px) {
+    .evm_look_book_title {
+        font-size: var(--micro) !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.evm_lookbook_detail {
+    border: 1px solid black;
+    padding: 0 !important;
+    padding-bottom: var(--level2) !important;
+    animation-duration: .3s !important;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.evm_product_price {
+    display: none !important;
+}
+
+.evm_lookbook_detail {
+    border-radius: 0 !important;
+}
+
+.evm_shop_now_container a {
+    background-color: transparent !important;
+    text-transform: uppercase !important;
+    color: rgb(var(--base-color-text)) !important;
+    font-size: var(--micro) !important;
+    text-decoration: underline !important;
+    font-family: var(--primary-font-family) !important;
+}
+
+@media screen and (min-width: 930px) {
+    .evm_shop_now_container a {
+        font-size: var(--mini) !important;
+    }
+}
+
+
+.evm_shop_now_container a:hover,
+.evm_shop_now_container a:focus {
+    text-decoration: none !important;
+    color: rgb(var(--base-color-text)) !important;
+    opacity: 1 !important;
+}
+
+
+.evm_lookbook_detail_content a .evm_lookbook_img {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    border-bottom: 1px solid black;
+    background-size: cover !important;
+    padding-bottom: 100% !important;
+    display: block !important;
+}
+
+.lSAction {
+    z-index: 1;
+    position: absolute !important;
+    bottom: 6rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    padding-left: var(--level3);
+    padding-right: var(--level3);
+}
+
+
+/*Media query   Specific to this plugin*/
+@media screen and (min-width: 816px) {
+    .lSAction {
+        bottom: 8rem;
+    }
+}
+
+
+
+.lSPrev {
+    left: var(--level6) !important;
+    right: auto !important;
+    background: none !important;
+}
+
+.lSNext {
+    right: var(--level4) !important;
+    left: auto !important;
+    position: relative;
+    background: none !important;
+}
+
+.lSNext:after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lSPrev:after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    transform: rotate(180deg);
+    margin-top: 1rem;
+}
+
+
+/*Media query   Specific to this plugin*/
+@media screen and (min-width: 816px) {
+
+    .lSPrev:after,
+    .lSNext:after {
+        font-size: 4rem !important;
+    }
+
+    .lSPrev:after {
+        margin-top: .75rem !important;
+    }
+
+    .lSPrev {
+        left: var(--level7) !important;
+    }
+
+    .lSNext {
+        right: var(--level6) !important;
+    }
+}

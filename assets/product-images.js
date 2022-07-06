@@ -1,7 +1,5 @@
 
 
-import Swiper from './swiper.module.js'
-
 
 class ProductImagesSlideshow extends HTMLElement {
     constructor() {
@@ -26,8 +24,10 @@ class ProductImagesSlideshow extends HTMLElement {
     }
   
     init() {
-        this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
-        this.handleLargeUp(this.mediaQueries.largeUp); 
+        import('./swiper.module.js').then((Swiper) => {
+            this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
+            this.handleLargeUp(this.mediaQueries.largeUp, Swiper); 
+        }); 
     } 
     
     appendThumbImages() {
@@ -44,7 +44,8 @@ class ProductImagesSlideshow extends HTMLElement {
         }); 
     }
     
-    handleLargeUp(pEvent) {
+    handleLargeUp(pEvent, Swiper) {
+
         let slideshowProps = {}; 
 
         if(pEvent.matches) {
@@ -55,7 +56,7 @@ class ProductImagesSlideshow extends HTMLElement {
                 element.classList.add('swiper-slide');
             });
 
-            this.slideshowThumbs = new Swiper(this.querySelector(this.selectors.thumbnails), {
+            this.slideshowThumbs = new Swiper.default(this.querySelector(this.selectors.thumbnails), {
                 spaceBetween: 14,
                 slidesPerView: 4,
                 direction: 'horizontal',
@@ -72,6 +73,7 @@ class ProductImagesSlideshow extends HTMLElement {
                 direction: 'horizontal', 
                 loop: true,
                 loopedSlides: 6,
+                grabCursor: false, 
                 preventInteractionOnTransition: true,
                 pagination: {
                     el: this.selectors.pagination,
@@ -89,6 +91,7 @@ class ProductImagesSlideshow extends HTMLElement {
                 direction: 'horizontal', 
                 loop: true,
                 loopedSlides: 6,
+                grabCursor: false, 
                 preventInteractionOnTransition: true,
                 pagination: {
                     el: this.selectors.pagination,
@@ -112,7 +115,7 @@ class ProductImagesSlideshow extends HTMLElement {
             element.classList.add('swiper-slide');
         });
 
-        this.slideshow = new Swiper(this.querySelector(this.selectors.slideshow), slideshowProps);
+        this.slideshow = new Swiper.default(this.querySelector(this.selectors.slideshow), slideshowProps);
     }
 
     appendSlide(pSlide) {

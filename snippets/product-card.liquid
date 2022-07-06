@@ -47,7 +47,7 @@
                   {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940, format: 'pjpg' }} 940w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066, format: 'pjpg' }} 1066w,{%- endif -%}
-                  {{ card_product.featured_media | image_url: width:  card_product.featured_media.width, format: 'pjpg' }} {{ card_product.featured_media.width }}w"
+                  {{ card_product.featured_media | image_url: width: card_product.featured_media.width, format: 'pjpg' }} {{ card_product.featured_media.width }}w"
                 src="{{ card_product.featured_media | image_url: width: 533, format: 'pjpg' }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                 alt="{{ card_product.featured_media.alt | escape }}"
@@ -164,9 +164,44 @@
                         <span class="quick-add-color-picker__current-color__label">Available colors for {{ productName[0] }}:</span>
                       </legend>
                       <span class="quick-add-color-picker__colors">
-                        {% for product in activeCollection.products %}
-                          {% if product.metafields.color_swatch.name != blank and product.metafields.color_swatch.hex_color != blank %}
-                            <span class="quick-add-color-picker__color {% if product.handle == card_product.handle %}is-selected{% endif %}">
+
+                        {% assign swatches = activeCollection.products | sort: 'published_at' | reverse %}
+                        
+                        {% for product in  swatches %}
+                          {% if forloop.first %}
+                          {% if card_product.metafields.color_swatch.name != blank and card_product.metafields.color_swatch.hex_color != blank %}
+                            <span class="quick-add-color-picker__color {% if card_product.handle == card_product.handle %}is-selected{% endif %}" data-more-text="+{{ activeCollection.products.size | minus: 4 }} more color{%if activeCollection.products.size >= 6%}s{%endif%}">
+                                  <input type="radio" 
+                                    checked
+                                    id="{{ section.id }}-{{ card_product.id }}-{{ card_product.metafields.color_swatch.name }}"
+                                    name="color" 
+                                    form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                                    value="{{ card_product.metafields.color_swatch.name | escape }}"
+                                    title="Shop {{ card_product.title }} in {{ card_product.metafields.color_swatch.name }}" 
+                                    data-color-option
+                                    data-product="{{ card_product | json | escape }}"
+                                    data-product-title="{{ card_product.title }}" 
+                                    data-handle="{{ card_product.handle }}"
+                                    data-product-url="{{ card_product.url }}"
+                                    data-product-id="{{ card_product.id }}"
+                                    data-product-first-variant="{{ card_product.selected_variant.id }}"
+                                    data-swatch="{{ card_product.metafields.color_swatch.name }}"
+                                    class="quick-add-color-picker__input"
+                                    >
+                                <label class="quick-add-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ card_product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ card_product.metafields.color_swatch.name }}">
+                                  <span class="quick-add-color-picker__label__swatch" style="background-color: {{ card_product.metafields.color_swatch.hex_color }};">
+
+                                  </span>
+                                  <span class="quick-add-color-picker__label__ring">
+                                  </span>
+                                </label>
+                            </span>
+
+                          {%     endif     %}
+                          {%endif%}
+
+                          {% if product.metafields.color_swatch.name != blank and product.metafields.color_swatch.hex_color != blank and product.handle != card_product.handle%}
+                            <span class="quick-add-color-picker__color {% if product.handle == card_product.handle %}is-selected{% endif %}" data-more-text="+{{ activeCollection.products.size | minus: 4 }} more color{%if activeCollection.products.size >= 6%}s{%endif%}">
                                   <input type="radio" 
                                     {% if card_product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
                                     id="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}"
@@ -176,7 +211,6 @@
                                     title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
                                     data-color-option
                                     data-product="{{ product | json | escape }}"
-                                    data-color-name="{{ image.alt | remove: 'swatch_' | replace: '-', ' ' | capitalize }}" 
                                     data-product-title="{{ product.title }}" 
                                     data-handle="{{ product.handle }}"
                                     data-product-url="{{ product.url }}"
@@ -193,7 +227,10 @@
                                   </span>
                                 </label>
                             </span>
-                          {%    endif    %}
+
+                          {% endif %}
+
+
                         {% endfor %}
                       </span>
                     </fieldset>

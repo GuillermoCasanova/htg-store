@@ -6,7 +6,7 @@
   {% render 'breadcrumbs' %}
 
   <div class="account-breadcrumbs__link">
-    <a class="logout-link"  href="{{ routes.account_logout_url }}">
+    <a class="logout-link"  href="{{ routes.account_logout_url }}" title="Logout of your account">
       {{ 'customer.log_out' | t }}
     </a>
   </div>
@@ -17,7 +17,7 @@
 
   <div class="account-header page-width">
     <h1 class="account-header__heading">{{ 'customer.account.title' | t }}</h1>
-    <a class="logout-link"  href="{{ routes.account_logout_url }}">
+    <a class="logout-link  show-for-large-up"  href="{{ routes.account_logout_url }}" title="Logout of your account">
       {{ 'customer.log_out' | t }}
     </a>
   </div>
@@ -132,8 +132,12 @@
         {{ customer.default_address | format_address }}
       </div>
 
-      <a href="{{ routes.account_addresses_url }}"  class="account-details__edit-cta" aria-label="Edit account addresses">
-        Edit
+      <a href="{{ routes.account_addresses_url }}"  class="account-details__edit-cta  button  button--secondary  button--large" aria-label="Edit account addresses">
+        {% if customer.default_address != blank %}
+          Edit
+        {%else%}
+          Add Address
+        {% endif %}
       </a>
     </div>
 

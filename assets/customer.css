@@ -12,9 +12,8 @@
   margin-bottom: var(--level10);
 }
 
-.customer a {
+.customer a:not(.button) {
   text-transform: uppercase;
-  text-decoration: underline;
   color: var(--color-base-text)
 }
 
@@ -62,15 +61,15 @@ a:focus {
     #Login, Password, Register
 \*------------------------------------*/
 
-.customer:not(.account):not(.order) {
+.customer:not(.account):not(.order):not(.addresses) {
   max-width: 33rem;
   text-align: center;
   padding-left: var(--level5);
   padding-right: var(--level5);
 }
 
-@media screen and (min-width: 750px) {
-  .customer:not(.account):not(.order) {
+@media screen and (min-width: 600px) {
+  .customer:not(.account):not(.order):not(.addresses) {
     max-width: 40rem;
   }
 }
@@ -153,47 +152,6 @@ a:focus {
 }
 
 
-
-/* 
-
-
-
-
-
-.customer ul {
-  line-height: calc(1 + 0.6 / var(--font-body-scale));
-  padding-left: 4.4rem;
-  text-align: left;
-  margin-bottom: 4rem;
-}
-
-.customer ul a {
-  display: inline;
-}
-
-.customer strong {
-  font-weight: normal;
-  color: rgb(var(--color-foreground));
-}
-
-.customer h2.form__message {
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
-}
-
-@media only screen and (min-width: 750px) {
-  .customer h2.form__message {
-    font-size: calc(var(--font-heading-scale) * 2.2rem);
-  }
-}
-
-.customer .field {
-  margin: 2rem 0 0 0;
-}
-
-.customer .field:first-of-type {
-  margin-top: 0;
-}
- */
 
 
 /*------------------------------------*\
@@ -284,19 +242,20 @@ a:focus {
 @media only screen and (min-width: 930px) {
   .customer-main-page {
     display: grid;
-    grid-template-columns: minmax(0, calc(100vw - 26rem)) 1fr;
+    grid-template-columns: minmax(0, calc(100vw - 30rem)) 1fr;
   }
 }
 
 @media only screen and (min-width: 1300px) {
   .customer-main-page {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: minmax(53rem, 52vw) 25rem;
   }
 }
 
 .logout-link {
   font-size: var(--h6);
+  text-transform: uppercase;
 }
 
 .logout-link:hover,
@@ -343,6 +302,8 @@ a:focus {
 .order-history__header {
   font-size: var(--h6);
   margin-bottom: var(--level4);
+  border-bottom: 1px solid black;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 930px) {
@@ -368,8 +329,8 @@ a:focus {
 
 .account-details {
   margin-bottom: var(--level6);
-  padding-left: var(--level6);
 }
+
 
 @media screen and (min-width: 930px) {
   .account-details {
@@ -380,6 +341,8 @@ a:focus {
 .account-details__header {
   font-size: var(--h6);
   margin-bottom: var(--level6);
+  border-bottom: 1px solid black;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 930px) {
@@ -407,23 +370,12 @@ a:focus {
 }
 
 
-.activate button[name='decline'],
-.addresses li>button,
-.addresses form button[type] {
-  background-color: rgba(var(--color-background), var(--alpha-button-background));
-  color: rgb(var(--color-link));
-}
-
-@media only screen and (min-width: 700px) {
-  .activate button[name='decline'] {
-    margin-top: inherit;
-    margin-left: 1rem;
-  }
-}
-
-
 .account-details__edit-cta {
   font-size: var(--h5);
+  display: block;
+  max-width: 12rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 930px) {
@@ -507,233 +459,59 @@ a:focus {
 }
 
 .customer table a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .customer table a:hover,
 .customer table a:focus {
-  text-decoration: underline;
-}
-
-/* 
-
-@media screen and (min-width: 750px) {
-  .customer td {
-    padding-right: 2.2rem;
-  }
-}
-
-.customer tbody td {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-
-.customer thead th {
-  font-size: 1.2rem;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-}
-
-.customer tbody td:first-of-type {
-  padding-top: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-
-  .customer th,
-  .customer td:first-of-type {
-    text-align: left;
-    padding-left: 0;
-    padding-right: 2.2rem;
-  }
-
-  .customer thead th,
-  .customer tbody td {
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
-  }
-
-  .customer th:first-of-type,
-  .customer td:first-of-type {
-    padding-left: 2.2rem;
-  }
-
-  .customer tbody td {
-    vertical-align: top;
-  }
-
-  .customer tbody td:first-of-type {
-    padding-top: 2.4rem;
-  }
-}
-
-.customer tbody td:last-of-type {
-  padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-  .customer tbody td:last-of-type {
-    padding-bottom: 0;
-  }
-}
-
-.customer tbody tr {
-  border-top: 0.01rem solid rgba(var(--color-foreground), 0.08);
-}
-
-@media screen and (min-width: 750px) {
-  .customer tbody tr:first-of-type {
-    border-top: none;
-  }
-}
-
-@media screen and (forced-colors: active) {
-  .customer tbody tr {
-    border-top: 0.1rem solid transparent;
-  }
-}
-
-.customer tfoot td:first-of-type,
-.customer tfoot td {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-}
-
-.customer tfoot td:first-of-type {
-  text-align: left;
-}
-
-.customer tfoot tr:first-of-type td {
-  padding-top: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-
-  .customer tfoot tr:first-of-type td,
-  .customer tfoot tr:first-of-type th {
-    padding-top: 2.4rem;
-  }
-}
-
-.customer tfoot tr:last-of-type td {
-  padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-
-  .customer tfoot tr:last-of-type td,
-  .customer tfoot tr:last-of-type th {
-    padding-bottom: 2.4rem;
-  }
-}
-
-/* works around colspan phantom border issues */
-/* .customer thead::after,
-.customer tfoot::before {
-  content: ' ';
-  height: 0.1rem;
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  background: rgba(var(--color-foreground), 0.08);
-} */
-
-/* @media screen and (forced-colors: active) {
-
-  .customer thead::after,
-  .customer tfoot::before {
-    background: CanvasText;
-  }
-} */
-
-/* mobile table overrides */
-/* @media screen and (max-width: 749px) {
-
-  .customer thead,
-  .customer th,
-  .customer tfoot td:first-of-type {
-    display: none;
-  }
-
-  .customer td {
-    display: flex;
-    text-align: right;
-  }
-
-  .customer td::before {
-    color: rgba(var(--color-foreground), 0.75);
-    content: attr(data-label);
-    font-size: 1.4rem;
-    padding-right: 2rem;
-    text-transform: uppercase;
-    flex-grow: 1;
-    text-align: left;
-  }
-
-  .customer td:first-of-type {
-    display: flex;
-    align-items: center;
-  }
-
-  .customer tr {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-  }
-}
-
- */
-
-
-/* 
-
-.account h1+a {
-  display: inline-flex;
-  align-items: center;
-}
-
-.account a svg {
-  width: 1.5rem;
-  margin-bottom: -0.03rem;
-  margin-right: 1rem;
-}
-
-@media screen and (min-width: 750px) {
-
-  .account thead th:last-child,
-  .account td:last-child {
-    text-align: right;
-  }
-
-  .account table td:first-of-type {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-  }
-}
-
-.account table td:first-of-type a {
-  padding: 1.1rem 1.5rem;
   text-decoration: none;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
-  border: 0.1rem solid transparent;
-  font-size: 1.2rem;
-}
-
-.account table td:first-of-type a:hover {
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-link), 0.2);
 }
 
 
- */
+
+
+
+/*------------------------------------*\
+    #Order Page
+\*------------------------------------*/
+
+
+
+
+.order-header {
+  font-size: var(--h6);
+  margin-bottom: var(--level6);
+  border-bottom: 1px solid black;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 930px) {
+  .order-header {
+    font-size: var(--h4);
+    margin-bottom: var(--level7);
+  }
+}
+
+.order-date {
+  font-size: var(--h5);
+}
+
 
 .order td:first-of-type {
   align-items: initial;
 }
 
-@media screen and (min-width: 750px) {
+.order tfoot tr:first-child td {
+  padding-top: var(--level5);
+  padding-bottom: var(--level3);
+}
+
+.order tbody tr {
+  border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 600px) {
 
   .order thead th:nth-last-child(-n + 3),
   .order td:nth-last-child(-n + 3) {
@@ -741,24 +519,17 @@ a:focus {
   }
 }
 
-.order tfoot tr:last-of-type td,
-.order tfoot tr:last-of-type th {
-  font-size: 2.2rem;
-  padding-top: 1.5rem;
-  padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-
-  .order tfoot tr:last-of-type td,
-  .order tfoot tr:last-of-type th {
-    padding-bottom: 2.4rem;
-  }
+.order tfoot tr td,
+.order tfoot tr th {
+  font-size: var(--h4);
+  padding-bottom: var(--level2);
+  text-align: right;
 }
 
 .order tfoot tr:last-of-type td:before {
-  font-size: 2.2rem;
+  font-size: var(--h4);
 }
+
 
 .order table p,
 .order>div:nth-of-type(2)>div:first-of-type h2,
@@ -776,7 +547,7 @@ a:focus {
 }
 
 .order .item-props {
-  font-size: 1.4rem;
+  font-size: var(--h4);
   margin-top: 0.05px;
   display: flex;
   flex-direction: column;
@@ -790,15 +561,13 @@ a:focus {
 .order .fulfillment {
   width: fit-content;
   border: 0.01rem solid rgba(var(--color-foreground), 0.2);
-  padding: 1rem;
-  margin-top: 1rem;
-  font-size: 1.4rem;
+  margin-top: var(--level3);
+  font-size: var(--h4);
+  padding: var(--level3);
+  padding-left: 0;
   text-align: left;
 }
 
-.order .fulfillment a {
-  margin: 0.7rem 0;
-}
 
 .order .fulfillment span {
   display: block;
@@ -811,7 +580,7 @@ a:focus {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .order td .cart-discount {
     display: none;
   }
@@ -819,22 +588,19 @@ a:focus {
 
 .order tbody ul {
   list-style: none;
-  font-size: 1.2rem;
+  font-size: var(--h4);
   text-align: right;
   padding-left: 0;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .order tbody ul {
     text-align: left;
   }
 }
 
-.order table a {
-  line-height: calc(1 + 0.3 / var(--font-body-scale));
-}
 
 .order tbody tr:first-of-type td:first-of-type>div {
   display: flex;
@@ -842,7 +608,7 @@ a:focus {
   align-items: flex-end;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .order tbody tr:first-of-type td:first-of-type>div {
     align-items: flex-start;
   }
@@ -878,10 +644,8 @@ a:focus {
 }
 
 .order .unit-price {
-  font-size: 1.1rem;
-  letter-spacing: 0.07rem;
+  font-family: var(--h5);
   line-height: calc(1 + 0.2 / var(--font-body-scale));
-  margin-top: 0.2rem;
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
@@ -890,18 +654,69 @@ a:focus {
   font-size: 1.3rem;
 }
 
-/* Addresses */
-.addresses li>button {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.order-addresses {
+  max-width: 20rem;
 }
+
+.order-addresses_item * {
+  font-size: var(--h5);
+}
+
+.order-addresses_item {
+  margin-bottom: var(--level7);
+}
+
+.order-addresses_item h2 {
+  font-size: var(--h4);
+  margin-bottom: var(--level2);
+}
+
+.order td[data-label="Quantity"] {
+  padding-right: var(--level4);
+}
+
+.order tr td[data-label="Total"] {
+  text-align: right;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Addresses Page
+\*------------------------------------*/
+
+
+.page-width.addresses-main-page {
+  max-width: 45rem;
+  margin-left: 0;
+  margin-bottom: var(--level10);
+}
+
+@media only screen and (min-width: 930px) {
+  .page-width.addresses-main-page {
+    display: grid;
+    max-width: 107rem;
+    margin-left: auto;
+    column-gap: calc(var(--level10) + var(--level10));
+    grid-template-columns: 30rem minmax(0, calc(100vw - 45rem));
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .page-width.addresses-main-page {
+    grid-template-columns: 25rem minmax(0, calc(100vw - 45rem));
+  }
+}
+
 
 .addresses li>button+button,
 .addresses form button+button {
   margin-top: 0rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
   .addresses li>button:first-of-type {
     margin-top: 3rem;
   }
@@ -934,9 +749,6 @@ label[for='AddressProvinceNew'] {
   text-align: center;
 }
 
-li[data-address] {
-  margin-top: 5rem;
-}
 
 .addresses [aria-expanded='false']~div[id] {
   display: none;
@@ -946,48 +758,73 @@ li[data-address] {
   display: block;
 }
 
-.addresses h2 {
+.addresses button[aria-expanded="true"] {
+  display: none;
+}
+
+.addresses button[aria-controls="AddAddress"] {
+  margin-bottom: var(--level10);
+}
+
+.addresses button[aria-controls="AddAddress"] {
+  max-width: 25rem;
+}
+
+.default-address-label {
+  text-transform: uppercase;
+  font-size: var(--h4);
   text-align: left;
 }
 
-li[data-address]>h2 {
-  text-align: center;
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
-  margin-bottom: 0;
+.addresses-item {
+  margin-bottom: var(--level7);
 }
 
-@media only screen and (min-width: 750px) {
-  li[data-address]>h2 {
-    font-size: calc(var(--font-heading-scale) * 2.2rem);
+.addresses-item__address {
+  font-size: var(--h4);
+  text-align: left;
+}
+
+.addresses-item__actions button {
+  max-width: 10rem;
+  margin-bottom: var(--level5);
+  margin-right: var(--level2);
+}
+
+.addresses-item__actions {
+  text-align: left;
+}
+
+
+.current-address-header,
+.new-address-header,
+.edit-address-header {
+  font-size: var(--h6);
+  margin-bottom: var(--level6);
+  border-bottom: 1px solid black;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 930px) {
+
+  .current-address-header,
+  .new-address-header,
+  .edit-address-header {
+    font-size: var(--h4);
+    margin-bottom: var(--level7);
   }
 }
 
-.addresses ul p {
-  margin-bottom: 0;
+.edit-address-header {
+  margin-top: var(--level5);
 }
 
-.addresses input[type='checkbox'] {
-  margin-top: 2rem;
-  margin-left: 0;
+.address-form {
+  margin-bottom: calc(var(--level9) *2);
+  max-width: 47rem;
 }
 
-@media only screen and (min-width: 750px) {
-  .addresses form>div:nth-of-type(1) {
-    margin-right: 2rem;
-  }
-
-  .addresses form>div:nth-of-type(2) {
-    margin-top: 0;
-  }
-
-  .addresses form>div:nth-of-type(1),
-  .addresses form>div:nth-of-type(2) {
-    box-sizing: border-box;
-    flex-basis: calc(50% - 1rem);
-  }
-}
-
-.addresses form>div:nth-of-type(7),
-.addresses form>div:nth-of-type(7)+div[id] {
-  margin-top: 1.5rem;
+.address-form__actions button {
+  margin-bottom: var(--level4);
 }

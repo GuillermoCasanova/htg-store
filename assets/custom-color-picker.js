@@ -80,28 +80,6 @@ class CustomColorPicker extends HTMLElement {
                 elem.appendChild(newScript); 
             elem.dispatchEvent(new Event('change'));
             });
-
-            // productContainer.querySelector('[data-active-product-id]').value = JSON.parse(this.currentColor.dataset.product).variants[0].id; 
-
-        // console.log(productContainer.querySelector('[data-active-product-id]').value); 
-
-        // if(productContainer.querySelectorAll('variant-radios').length > 0) {
-            
-        //     productContainer.querySelectorAll('variant-radios').forEach((elem) => {
-        //         elem.dataset.url = this.getCurrentColor().dataset.productUrl;
-
-        //             if( elem.querySelector('[type="application/json"]')) {
-        //                 let e = elem.querySelector('[type="application/json"]');
-        //                 e.parentElement.removeChild(e); 
-        //             }
-
-        //         let newScript = document.createElement('script');
-        //         newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(this.currentColor.dataset.product).variants);  
-        //         newScript.type = "application/json";
-        //         elem.appendChild(newScript); 
-        //         elem.onVariantChange(true);
-        //     }); 
-        // }
     }
 
     updateImages() {
@@ -109,6 +87,10 @@ class CustomColorPicker extends HTMLElement {
         let images = productObj.media; 
         let imagesTemplate = ``;
 
+
+        if(document.querySelector('[data-product-images-slideshow]').length <= 0) { 
+            return
+        } 
         
         function createImageObj(pSource, pAlt, pIndex, pImageType) {
             let imageTemplate = ``; 
@@ -124,6 +106,9 @@ class CustomColorPicker extends HTMLElement {
             if(pImageType === 'slide') {
                 imageTemplate = `
                 <li class="slide swiper-slide"  data-product-images-slideshow-slide  data-product-images-modal-open data-id="${index}">
+                <button class="zoom-image-indicator" data-id="{{forloop.index}}" aria-label="Image can be zoomed in" data-product-images-modal-open >
+                    <svg  fill="none" viewBox="0 0 24 25"><title>Zoom In</title><path stroke="#8A8A8A" d="m22.7608 1-6.9776 6.97755M15.3398 2.03809v6.23525h6.2353M.99999 23.8018l6.97755-6.9776M8.4209 22.7637v-6.2353H2.18564"/></svg>
+                </button>
                 <div class="product-images-slideshow__image-container">
                             <img
                             srcset="${processImageSrc(pSource, '155x')} 165w,
@@ -135,6 +120,7 @@ class CustomColorPicker extends HTMLElement {
                                     ${processImageSrc(pSource, '2000x')} 2000w"
                             src="${processImageSrc(pSource, '533x')}"
                             sizes="(min-width: 1200px) 50vw, (min-width: 930px) 40vw, 100vw"
+                            loading="lazy"
                             alt="${pAlt}"
                             aria-hidden="true"
                             width="1000"
@@ -157,6 +143,7 @@ class CustomColorPicker extends HTMLElement {
                             sizes="(min-width: 930px) 15vw, 25vw"
                             alt="${pAlt}"
                             aria-hidden="true"
+                            loading="lazy"
                             width="500"
                             height="500"
                         >
@@ -183,6 +170,13 @@ class CustomColorPicker extends HTMLElement {
         images.forEach((image, index)=> {
             document.querySelector('product-images-slideshow').appendSlide(createImageObj(image.src, '', index, 'slide')); 
         });
+        
+
+        if(document.querySelector('product-zoom-modal ')) {
+            document.querySelector('product-zoom-modal').destroy(); 
+            document.querySelector('product-zoom-modal').updateImageUrls(images); 
+            document.querySelector('product-zoom-modal').init(); 
+        }
 
 
         let updateEvent = new Event("images-updated", {

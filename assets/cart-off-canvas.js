@@ -269,7 +269,7 @@ class CartOffCanvas extends HTMLElement {
         let cartFooterTemplate = `
           <div class="cart-notification__links">
             <form action="${formAction}" method="post" id="cart">
-              <button class="button button--primary button--full-width" name="checkout" form="cart">
+              <button class="button button--secondary  button--large button--full-width" name="checkout" form="cart">
                 ${checkoutText}
               </button>
             </form>
@@ -288,8 +288,6 @@ class CartOffCanvas extends HTMLElement {
   
         trapFocus(this);
         this.notification.querySelector('button').focus();
-  
-        this.header.reveal();
   
         
         function variantTemplate(pItem) {

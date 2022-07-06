@@ -79,14 +79,6 @@
     #Product Images Slideshow
 \*------------------------------------*/
 
-.product-images-slideshow.swiper .slide:hover {
-  cursor: grab;
-}
-
-.product-images-slideshow.swiper .slide:active {
-  cursor: grabbing;
-}
-
 .product-images--mobile {
   display: block;
 }

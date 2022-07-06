@@ -33,7 +33,7 @@
 @media screen and (min-width: 930px) {
     .lookbook-display-grid__heading {
         font-size: var(--h3);
-        padding-top: calc(var(--level10) + var(--level10));
+        padding-top: calc(var(--level10) + var(--level7));
         margin-bottom: var(--level7);
     }
 }
@@ -50,7 +50,6 @@
     padding-top: var(--level4);
     padding-bottom: var(--level10);
 }
-
 
 
 @media screen and (min-width: 700px) {

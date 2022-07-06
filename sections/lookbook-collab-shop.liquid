@@ -1,3 +1,14 @@
+{% comment %} {{ 'template-collection.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-product-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'lookbook-collab-shop.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{% comment %}These are important inline styles to load above the fold perfectly without having to load CSS files.{% endcomment %}
+
+{% style %}
+
 /*------------------------------------*\
     #Product Card
 \*------------------------------------*/
@@ -31,8 +42,6 @@
   width: 100%;
   position: relative;
   margin-bottom: var(--level2);
-  overflow: hidden;
-  position: relative;
 }
 
 .product-card__media .media img:first-child {
@@ -115,9 +124,6 @@
 .product-card__badge__text--sold-out {
   color: #fa0000;
 }
-
-
-
 
 
 .card__badge {
@@ -204,3 +210,108 @@
   box-shadow: none;
   outline: 0;
 }
+
+
+{% endstyle %}
+
+
+
+{% assign collection = section.settings.collection %}
+
+<section class="lookbook-collab-shop" style="
+    {% if section.settings.bg_color == 'background-1' %}
+        background-color: rgb(var(--color-base-background-1));
+    {% endif %}
+    {% if section.settings.bg_color == 'background-2' %}
+        background-color: rgb(var(--color-base-background-2));
+    {% endif %}
+    {% if section.settings.bg_color == 'background-3' %}
+        background-color: rgb(var(--color-base-background-3));
+    {% endif %}
+    ">
+
+    <div class="lookbook-collab-shop__inner page-width"> 
+        <div class="lookbook-collab-shop__header">
+            <h2 class="lookbook-collab-shop__heading">
+                {{ section.settings.heading }}
+            </h2>
+        </div>
+
+        {% assign products = collection.products %}
+        <div class="lookbook-collab-shop__products-container">
+        
+            <ul class="lookbook-collab-shop__products">
+                {% for product in products  limit: 16 %}
+                    <li class="grid__item">
+                        {% render 'product-card',
+                        heading_level: 'h3',
+                        card_product: product,
+                        show_quick_add: true,
+                        section_id: section.id,
+                        product_collection: collection
+                        %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        <div class="lookbook-collab-shop__cta">
+        
+            <a href="{{ collection.url }}" rel="internal" class="styled-link">
+                Shop Full Collection
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Lookbook Collab Shop",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Heading",
+      "id": "heading"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "The collection products will pull from"
+    },
+    {
+      "type": "select",
+      "id": "bg_color",
+      "label": "Copy Background Color",
+      "info": "Pulled from Theme Settings > Background Colors",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Bakground 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Bakground 2"
+        },
+        {
+          "value": "background-3",
+          "label": "Bakground 3"
+        }
+      ],
+      "default": "background-2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Collab Shop"
+    }
+  ]
+}
+{% endschema %}

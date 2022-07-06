@@ -187,6 +187,8 @@
   text-align: left;
   text-decoration: none;
   color: rgb(var(--color-base-text));
+  overflow: hidden; 
+  position: relative; 
 }
 
 .product-card:hover .media img:first-child,
@@ -393,9 +395,6 @@
             collection-preview__products">
             {%- for product in section.settings.product_list -%}
               
-              {%- if forloop.index > 2 -%}
-                
-              {%- endif -%}
               <li class="grid__item">
                 {% render 'product-card',
                   heading_level: 'h3',

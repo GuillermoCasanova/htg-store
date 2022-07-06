@@ -1,0 +1,30 @@
+
+<link rel="stylesheet" href="{{ 'lookbook-shop-slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="lookbook-shop-slideshow__inner">
+    {{ section.settings.embed }}
+</div>
+
+{% schema %}
+{
+  "name": "Lookbook Shop Slideshow",
+  "tag": "section",
+  "class": "lookbook-shop-slideshow",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "html",
+      "id": "embed",
+      "label": "Slideshow Embed",
+      "info": "Pasted HTML embed for the slideshow/gallery from the Lookbooks app."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Shop Slideshow"
+    }
+  ]
+}
+{% endschema %}

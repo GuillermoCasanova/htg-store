@@ -9,14 +9,24 @@ class PredictiveSearch extends HTMLElement {
     this.isOpen = false;
 
     this.setupEventListeners();
+    
+    this.mediaQueries = {
+      largeUp: window.matchMedia('(min-width: 930px)')
+    }
+
   }
 
+ 
   setupEventListeners() {
     const form = this.querySelector('form.search');
     form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('input', debounce((event) => {
-      this.onChange(event);
+
+      if(this.mediaQueries.largeUp.matches) {
+        this.onChange(event);
+      }
+
     }, 300).bind(this));
 
     this.input.addEventListener('focus', this.onFocus.bind(this));
@@ -142,7 +152,7 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=10&section_id=predictive-search`)
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=10&${encodeURIComponent('resources[fields]')}=title,product_type,variants.title,tag&section_id=predictive-search`)
       .then((response) => {
         if (!response.ok) {
           var error = new Error(response.status);
