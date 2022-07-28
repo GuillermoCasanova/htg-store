@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "1659025745e9d39846": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "The District",
+        "collection_url": "\/collections\/womens\/the-district",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "165461434128f6b9a3": {
       "type": "collection-preview",
       "settings": {
@@ -109,6 +121,7 @@
   "order": [
     "banner",
     "product-grid",
+    "1659025745e9d39846",
     "165461434128f6b9a3",
     "1653675322c6e1e849",
     "1654616107f8647e02",
