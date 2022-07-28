@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "16590256583d5a0a0f": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "The District",
+        "collection_url": "\/collections\/mens\/the-district",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1654614072e4a2b52f": {
       "type": "collection-preview",
       "settings": {
@@ -127,6 +139,7 @@
   "order": [
     "banner",
     "product-grid",
+    "16590256583d5a0a0f",
     "1654614072e4a2b52f",
     "16540387627dd6a3af",
     "1654614390e8e5413f",
