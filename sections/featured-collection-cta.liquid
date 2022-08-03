@@ -1,6 +1,7 @@
 
 <link rel="stylesheet" href="{{ 'section-featured-collection-cta.css' | asset_url }}" media="print" onload="this.media='all'">
 
+<section class="featured-collection-cta-section {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
   <div class="featured-collection-cta-section__inner">
     <a href=" {{ section.settings.left-cta-url }}" rel="internal" title="{{ section.settings.left-cta-text }} {{ section.settings.collection-name }}" class="featured-collection-cta-section__collection">
         <div class="featured-collection-cta-section__collection__image-container">
@@ -54,12 +55,11 @@
         </div>
     </div>
     </a>  
+</section>
 
 {% schema %}
 {
   "name": "Featured Collection CTA",
-  "tag": "section",
-  "class": "featured-collection-cta-section",
   "templates": [
     "index",
     "page"
@@ -113,6 +113,42 @@
       "id": "right-cta-url",
       "label": "CTA URL",
       "info": "The url the cta goes to, these should be written by hand if we're wanting to take customers to a filtered version of a collection. Example: /collections/concrete-jungle/mens or /collections/inner-city-love/womens/"
+    },
+    {
+      "type": "header",
+      "content": "Border Elements"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
     }
   ],
   "presets": [

@@ -4,8 +4,6 @@
 
 
 .featured-collection-cta-section {
-    border-top: 1px solid rgb(var(--color-base-text));
-    border-bottom: 1px solid rgb(var(--color-base-text));
     padding-bottom: 0;
 }
 

@@ -170,6 +170,7 @@
 }
 {% endstyle %}
 
+<section class="featured-collection-section {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
   <div class="featured-collection-section__inner page-width">
 
     <div class="featured-collection-section__copy">
@@ -214,13 +215,12 @@
       {% endfor %}
     </div>
 
-  </div>  
+  </div>
+</section>
 
 {% schema %}
 {
   "name": "Featured Collection",
-  "tag": "section",
-  "class": "featured-collection-section",
   "templates": [
     "index",
     "page"
@@ -241,6 +241,42 @@
       "type": "url",
       "id": "cta-url",
       "label": "Collection Page"
+    },
+    {
+      "type": "header",
+      "content": "Border Elements"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
     }
   ],
   "blocks": [

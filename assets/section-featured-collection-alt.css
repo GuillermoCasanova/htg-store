@@ -4,10 +4,8 @@
 
 
 .featured-collection-alt-section {
-    border-top: 1px solid rgb(var(--color-base-text));
     padding-bottom: 0;
     background-color: rgb(var(--color-base-background-2));
-    border-bottom: 1px solid rgb(var(--color-base-text));
 }
 
 .featured-collection-alt-section__inner {
