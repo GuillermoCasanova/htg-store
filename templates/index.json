@@ -94,6 +94,18 @@
         "bottom_border": "yes"
       }
     },
+    "165954546289929c5f": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Honor The Gift® Store",
+        "body": "<p>The first Honor The Gift store is opening soon in the heart of Los Angeles.<\/p>",
+        "image": "shopify:\/\/shop_images\/IG_3.jpg",
+        "section-alignment": "flipped",
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
     "1655920347d426af19": {
       "type": "instagram-feed",
       "settings": {
@@ -109,6 +121,7 @@
     "165464550697d6e482",
     "1654659992853b6cdb",
     "16554195319ec4aeed",
+    "165954546289929c5f",
     "1655920347d426af19"
   ]
 }
