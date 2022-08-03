@@ -19,6 +19,14 @@ class loadMoreProductsButton extends HTMLElement {
         this.style.display = 'block';
     }
 
+    showLoadState() {
+        this.querySelector('button').classList.add('is-loading'); 
+    }
+
+    hideLoadState() {
+        this.querySelector('button').classList.remove('is-loading'); 
+    }
+
     setCollectionTotal() {
         const productContainerId = '[data-product-json]';
 

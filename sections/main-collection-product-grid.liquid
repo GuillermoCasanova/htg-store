@@ -20,8 +20,8 @@
     "products":  [
       {% paginate collection.products by 1000 %}
         {%- for product in collection.products -%}
-            {{ product | json }} 
-            {% unless forloop.last %},{% endunless %}
+          {{ product | json }}
+          {% unless forloop.last %},{% endunless %}
         {%- endfor -%}
     {% endpaginate %}
     ]
@@ -34,8 +34,45 @@
     #Collection Template
 \*------------------------------------*/
 
+
+@keyframes products-are-loading {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .3;
+  }
+}
+
+.product-grid-container.is-loading .loading-overlay {
+  display: flex;
+}
 .product-grid-container {
+  position: relative; 
   margin-bottom: calc(var(--level10) + var(--level10));
+}
+
+.loading-overlay {
+  display: none;
+  background: white;
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  opacity: 1;
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100vh; 
+  height: 100%; 
+}
+
+.loading-overlay div {
+  width: 4rem;
+  height: 4rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -644,7 +681,9 @@ opacity: 1;
       <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}">
         <div class="product-grid-container" id="ProductGridContainer">
             <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
-              <div class="loading-overlay gradient"></div>
+              <div class="loading-overlay gradient">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+              </div>
       
               <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
                 grid product-grid">
@@ -668,7 +707,16 @@ opacity: 1;
               <script src="{{ 'load-more-products-button.js' | asset_url }}" defer="defer"></script>
               <load-more-products-button data-paginate-by="{{ paginationNum }}"  data-collection-total="{{ collection.products.length }}">
                 <div class="load-more-products-button-container">
-                  <button class="button button--primary  button--medium load-more-products-button" aria-label="Load more products in collection">Load More</button>
+                  <button class="button button--primary  button--medium load-more-products-button" 
+                    aria-label="Load more products in collection">
+                    <span class="inner-text">
+                      Load More <span class="visually-hidden">Products</span>
+                    </span>
+                    <span class="loader">
+                     <span class="visually-hidden">Loading More Products</span>
+                      <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    </span>
+                  </button>
                 </div>
               <load-more-products-button>
             {% endif %}

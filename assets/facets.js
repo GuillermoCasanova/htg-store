@@ -1,4 +1,5 @@
 
+
 class CollectionFilters extends HTMLElement {
   constructor() {
     super();
@@ -7,6 +8,7 @@ class CollectionFilters extends HTMLElement {
     this.totalProducts = []; 
     this.totalSortedProducts = []; 
     this.getProductsFromJson(); 
+
 
     this.tags = []; 
     this.filterBy = {
@@ -355,6 +357,7 @@ class CollectionGrid extends HTMLElement {
       this.totalProductsShowing = [];
       this.section = 1; 
       this.paginateBy = this.dataset.paginateBy;
+      this.pagesLoadedCache = []; 
       this.getProductsFromJson(this.dataset.paginateBy); 
       this.setUpPagination(this.totalProductsShowing.length); 
       window.history.replaceState(null, null, null);
@@ -362,6 +365,10 @@ class CollectionGrid extends HTMLElement {
 
   returnTemplateForProduct(pJson) {
     return template; 
+  }
+
+  getTotalPages() {
+    return  Math.round(this.totalProducts.length / this.paginateBy); 
   }
 
   getProductsFromJson(pNumToStartFrom) {
@@ -377,20 +384,24 @@ class CollectionGrid extends HTMLElement {
     if(queryString) {
       let urlParams = new URLSearchParams(queryString);
       if(parseInt(urlParams.get('page_num')) > 1) {
+        this.querySelector('.product-grid-container').classList.add('is-loading'); 
         pageNum = parseInt(urlParams.get('page_num'));
         this.section = pageNum;
         productsToShow = this.dataset.paginateBy * pageNum;
+        this.loadAndRenderProducts(2);
       }
+
     }
     
     this.totalProducts = JSON.parse(document.querySelector('#product-data').textContent.trim()).products;
     this.totalProductsShowing = this.totalProducts.slice(0, productsToShow);
-    console.log(this.totalProducts); 
-    console.log(this.totalProductsShowing); 
+        
 
     if(this.totalProducts.length > this.totalProductsShowing.length) {
-      this.preRenderProducts(pageNum); 
+      this.preLoadProducts(2); 
     }
+
+    this.cachePageLoaded(1, document.querySelector('collection-grid')); 
 
   }
 
@@ -430,11 +441,101 @@ class CollectionGrid extends HTMLElement {
     }
   } 
 
-  preRenderProducts(pPage_num) {
-    console.log(pPage_num); 
-    let pageNumToPrerender = pPage_num + 1;
-    console.log(pageNumToPrerender); 
+
+  loadAndRenderProducts(pPage_num) {
+      let pageNumToPrerender = pPage_num;
+      let urlParams = new URLSearchParams(window.location.search);
+  
+      if(pageNumToPrerender === 1) {
+        return
+      }
+      const url = `${window.location.pathname}?page=${pageNumToPrerender}&?section_id=main-collection-product-grid`;
+  
+      this.nextPageMarkup = null; 
+      
+      if(this.getPageFromCache(pPage_num)) {
+
+        let collectionProductsContainer = this.querySelector('ul'); 
+
+
+        this.getPageFromCache(pPage_num).markUp.querySelectorAll('.grid__item[data-product-id]').forEach((element, index)=> {
+          collectionProductsContainer.appendChild(element); 
+          
+          if(index === 1) {
+            console.log('SCROLL NOW');
+              const offsetTop = element.offsetTop - 200;
+              scroll({
+                top: offsetTop,
+                behavior: "smooth"
+              });
+          }
+        });
+
+
+        if(pageNumToPrerender ===  parseInt(urlParams.get('page_num'))) {
+            this.querySelector('.product-grid-container').classList.remove('is-loading'); 
+            return
+        }
+
+        this.loadAndRenderProducts(pageNumToPrerender + 1)
+      }
+
+      fetch(url).then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
+        //this.cachePageLoaded(pageNumToPrerender, resultsMarkup); 
+
+        let collectionProductsContainer = this.querySelector('ul'); 
+
+        console.log(pPage_num); 
+
+        resultsMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element, index)=> {
+          collectionProductsContainer.appendChild(element); 
+          
+          if(index === 1) {
+            console.log('SCROLL NOW');
+              const offsetTop = element.offsetTop - 200;
+              scroll({
+                top: offsetTop,
+                behavior: "smooth"
+              });
+          }
+        });
+
+
+        if(pageNumToPrerender ===  parseInt(urlParams.get('page_num'))) {
+            this.querySelector('.product-grid-container').classList.remove('is-loading'); 
+            return
+        }
+
+        this.loadAndRenderProducts(pageNumToPrerender + 1)
+
+      })
+      .catch((error) => {
+        console.log(error); 
+        throw error;
+      });
+
+  }
+
+
+  preLoadProducts(pPage_num, pSkipInitPage) {
+    let pageNumToPrerender = pPage_num;
+
+    if(pageNumToPrerender === 1) {
+      pageNumToPrerender += 1
+    }
+
     const url = `${window.location.pathname}?page=${pageNumToPrerender}&?section_id=main-collection-product-grid`;
+
+    this.nextPageMarkup = null; 
     
     fetch(url)
     .then((response) => {
@@ -447,9 +548,14 @@ class CollectionGrid extends HTMLElement {
     })
     .then((text) => {
       const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
+      this.cachePageLoaded(pageNumToPrerender, resultsMarkup); 
+
       this.nextPageMarkup = resultsMarkup; 
-      console.log(this.nextPageMarkup); 
-      console.log('pRERENDERRR');
+
+      if(pageNumToPrerender < this.getTotalPages()) {
+        this.preLoadProducts(pageNumToPrerender + 1); 
+      }
+
     })
     .catch((error) => {
       console.log(error); 
@@ -458,6 +564,24 @@ class CollectionGrid extends HTMLElement {
 
   }
 
+  cachePageLoaded(pPage_num, pMarkup) {
+
+    let page = {
+      pageNum: pPage_num, 
+      markUp: pMarkup
+    }; 
+
+    this.pagesLoadedCache.push(page); 
+    this.pagesLoadedCache = _.uniq(this.pagesLoadedCache); 
+    console.log('CACHED PAGES ARE:')
+    console.log(this.pagesLoadedCache); 
+  }
+
+  getPageFromCache(pPage_num) {
+    let page = undefined; 
+    page = _.filter(this.pagesLoadedCache, {'pageNum': pPage_num})
+    return page.length > 0 ? page : false;
+  }
 
   renderMoreProducts(pNumToShowMore) {
 
@@ -468,11 +592,14 @@ class CollectionGrid extends HTMLElement {
     // params.delete('page_num');
     // // queryUrl.search = `?sort_by=${sortingType}`; 
 
-    console.log(url); 
+    let collectionProductsContainer = this.querySelector('ul'); 
 
-    const collectionProductsContainer = this.querySelector('ul'); 
+    console.log('getting page returns: ');
+    console.log(this.getPageFromCache(this.section));
+    
+    if(!this.getPageFromCache(this.section)) {
 
-    if(!this.nextPageMarkup) {
+      document.querySelector('load-more-products-button').showLoadState(); 
 
       fetch(url)
       .then((response) => {
@@ -486,16 +613,14 @@ class CollectionGrid extends HTMLElement {
       .then((text) => {
         const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('collection-grid');
 
-        console.log(resultsMarkup); 
-        
-        // let orderedArray  = []; 
-        
+        this.cachePageLoaded(this.section, resultsMarkup); 
+
         resultsMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
           collectionProductsContainer.appendChild(element); 
         });
 
-        document.querySelector('load-more-products').updateButton(); 
-        
+        document.querySelector('load-more-products-button').updateButton(); 
+        document.querySelector('load-more-products-button').hideLoadState(); 
         // document.querySelector('collection-grid').renderFilteredProducts([], orderedArray, true);
         // this.closeFilterOptions();
       })
@@ -505,11 +630,19 @@ class CollectionGrid extends HTMLElement {
       });
 
     } else {
-      this.nextPageMarkup.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
-        collectionProductsContainer.appendChild(element); 
-      });
+      
+      document.querySelector('load-more-products-button').showLoadState(); 
 
-      this.preRenderProducts(this.section + 1);
+      let sectionToLoad = this.getPageFromCache(this.section);
+
+      setTimeout(()=> {
+        document.querySelector('load-more-products-button').hideLoadState(); 
+        sectionToLoad[0].markUp.querySelectorAll('.grid__item[data-product-id]').forEach((element)=> {
+          collectionProductsContainer.appendChild(element); 
+        });
+      }, 200); 
+
+      // this.preLoadProducts(this.section + 1);  
     }
 
     this.totalProductsShowing = this.totalProducts.slice(0, this.section * this.paginateBy); 
