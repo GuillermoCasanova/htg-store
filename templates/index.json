@@ -100,7 +100,7 @@
         "heading": "Honor The Gift® Store",
         "body": "<p>The first Honor The Gift store is opening soon in the heart of Los Angeles.<\/p>",
         "image": "shopify:\/\/shop_images\/IG_3.jpg",
-        "section-alignment": "flipped",
+        "section-alignment": "normal",
         "copy-bg-color": "background-1",
         "top_border": "no",
         "bottom_border": "yes"
