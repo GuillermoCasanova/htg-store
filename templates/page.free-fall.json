@@ -15,14 +15,19 @@
         "body": "<p>Introducing Honor The Gift® 2021 Collection: Free-Fall. “What does it feel like when gravity can’t hold us back?” This question was the driving force of Free-fall development. Inspired by the legendary Tuskegee Airmen who served as the first African-American military aviators in the U.S. Army Air Corps. <\/p><p><\/p><p>Some will tell you that you can’t fly. <\/p><p>We ask, why not?<\/p>",
         "image": "shopify:\/\/shop_images\/HTG_Freefall_0000_1_71a46615-b3e2-407e-a8a5-f4e0ff5e0437.jpg",
         "section-alignment": "normal",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654833231ba506109": {
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Free-Fall",
-        "collection": "freefall"
+        "collection": "freefall",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "165483328369ba04c4": {
@@ -67,7 +72,9 @@
         "99d13d68-67e8-4876-84d9-f824ec7f57b6"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },

@@ -15,14 +15,19 @@
         "body": "<p>Honor The Gift® Summer 2022 delivery continues the story of Russell Westbrook’s homage to Los Angeles. The Pacific Ocean acts as the lead inspiration defining this summer collection. A blue color palette and carefree California influence, breezes through this stripped back simple, yet refined range of raw edged knits, graphic tees and a cut and sew linen summer kit. Neighborhoods that surround the waters are reminiscent of driving down the coast.<\/p>",
         "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-17_at_8.55.33_AM.png",
         "section-alignment": "normal",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1655413729f4b2ed72": {
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "The Coast Kids",
-        "collection": "the-coast-kids"
+        "collection": "the-coast-kids",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1655413788446467d9": {
@@ -198,7 +203,9 @@
         "5765f832-c9d7-4c58-96ba-d166d9538866"
       ],
       "settings": {
-        "name": "The Coast Kids"
+        "name": "The Coast Kids",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },

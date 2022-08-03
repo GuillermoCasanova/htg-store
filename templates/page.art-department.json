@@ -15,7 +15,9 @@
         "body": "",
         "image": "shopify:\/\/shop_images\/01HTG_ArtDept_Web_16ac6a8c-ca51-412a-bfb9-18e2d56082ef.jpg",
         "section-alignment": "normal",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "165483660394afd58b": {
@@ -23,7 +25,10 @@
       "disabled": true,
       "settings": {
         "heading": "Art Department",
-        "collection": "art-department"
+        "collection": "art-department",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654836647e10da06e": {
@@ -89,7 +94,9 @@
         "94e95b1a-29b0-41b7-9cd7-c2ae5fa158d5"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },

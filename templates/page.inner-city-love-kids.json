@@ -15,14 +15,19 @@
         "body": "<p>Introducing Honor The Gift® Fall 2021 Collection: Inner City Love. This collection marks a pivotal and meaningful milestone as Russell Westbrook heads back to Los Angeles, where he calls his first Home: The Inner City.<\/p>",
         "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.52.56_PM_76ea1e4b-3716-4f4b-af76-1ecbb92244f7.png",
         "section-alignment": "normal",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654829774a526c9a8": {
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Inner City Love Kids",
-        "collection": "inner-city-love-kids"
+        "collection": "inner-city-love-kids",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654829817392f0748": {
@@ -235,7 +240,9 @@
         "6a877ee3-f213-497b-b7ff-0b9f18939df5"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },

@@ -15,14 +15,19 @@
         "body": "<p>Inspired by the fearless themes of airspace, “What does it feel like when gravity can’t hold us back?” – Honor The Gift® is setting new bounds for women’s. Resonating with Russell’s personal message representing self-belief, overcoming hardship and defying all odds, this collection is a tribute to the strength and tenacity that all women have faced. It is a turn-page in this new chapter for the brand: The New Ambition.<\/p>",
         "image": "shopify:\/\/shop_images\/01_429ba3e2-960c-4118-9fc1-4bf6e949c22d.jpg",
         "section-alignment": "normal",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "16548336508d87d347": {
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Free-Fall Women",
-        "collection": "freefall-womens"
+        "collection": "freefall-womens",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654833686fc0b582e": {
@@ -74,7 +79,9 @@
         "a123aa05-84cb-4dfa-97bb-7d77f717782b"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },
