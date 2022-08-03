@@ -21,7 +21,9 @@
     }
 }
 
-
+.about-pillars__inner .about-pillars__pillar:first-child {
+    border-top: 0;
+}
 
 .about-pillars__pillar {
     border-top: 1px solid rgb(var(--color-base-text));
@@ -30,8 +32,10 @@
     width: 100%;
 }
 
+
 @media only screen and (min-width: 930px) {
     .about-pillars__pillar {
+        border-top: 0;
         padding-top: calc(var(--level9) + var(--level10));
         padding-bottom: calc(var(--level9) + var(--level10));
         border-right: 1px rgb(var(--color-base-text)) solid;
