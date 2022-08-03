@@ -2,7 +2,8 @@
 
 <link rel="stylesheet" href="{{ 'lookbook-image-copy.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<section class="lookbook-image-copy" style="
+
+<section class="lookbook-image-copy {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}" style="
     {% if section.settings.bg_color == 'background-1' %}
         background-color: rgb(var(--color-base-background-1));
     {% endif %}

@@ -1,4 +1,4 @@
-{{ 'section-featured-collection-alt.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'section-featured-collection-alt.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <section class="featured-collection-alt-section {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
   <div class="featured-collection-alt-section__inner">

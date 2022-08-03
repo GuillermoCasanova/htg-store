@@ -1,15 +1,16 @@
 
 <link rel="stylesheet" href="{{ 'lookbook-shop-slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<div class="lookbook-shop-slideshow__inner">
-    {{ section.settings.embed }}
-</div>
+
+<section class="lookbook-shop-slideshow {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
+  <div class="lookbook-shop-slideshow__inner">
+      {{ section.settings.embed }}
+  </div>
+</section>
 
 {% schema %}
 {
   "name": "Lookbook Shop Slideshow",
-  "tag": "section",
-  "class": "lookbook-shop-slideshow",
   "templates": [
     "page"
   ],
@@ -19,6 +20,38 @@
       "id": "embed",
       "label": "Slideshow Embed",
       "info": "Pasted HTML embed for the slideshow/gallery from the Lookbooks app."
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
     }
   ],
   "presets": [

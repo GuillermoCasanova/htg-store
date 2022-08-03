@@ -218,7 +218,7 @@
 
 {% assign collection = section.settings.collection %}
 
-<section class="lookbook-collab-shop" style="
+<section class="lookbook-collab-shop {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}" style="
     {% if section.settings.bg_color == 'background-1' %}
         background-color: rgb(var(--color-base-background-1));
     {% endif %}
@@ -306,6 +306,38 @@
         }
       ],
       "default": "background-2"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
     }
   ],
   "presets": [

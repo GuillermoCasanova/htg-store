@@ -4,7 +4,6 @@
 
 .lookbook-display-grid {
     background-color: #eceae5;
-    border-top: 1px solid rgb(var(--color-base-text));
 }
 
 .lookbook-display-grid__header {
