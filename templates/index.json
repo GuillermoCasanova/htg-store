@@ -48,7 +48,9 @@
       "settings": {
         "heading": "The Coast – Summer 2022 Collection",
         "body": "<p>Honor The Gift® Summer 2022 delivery continues the story of Russell Westbrook’s homage to Los Angeles. The Pacific Ocean acts as the lead inspiration defining this summer collection. A blue color palette and carefree California influence, breezes through this stripped back simple, yet refined range of raw edged knits, graphic tees and a cut and sew linen summer kit. Neighborhoods that surround the waters are reminiscent of driving down the coast.<\/p>",
-        "cta-url": "https:\/\/honorthegift.co\/collections\/the-coast"
+        "cta-url": "https:\/\/honorthegift.co\/collections\/the-coast",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "165464550697d6e482": {
@@ -60,7 +62,9 @@
         "left-cta-url": "\/collections\/mens\/",
         "right-image": "shopify:\/\/shop_images\/HTG__8_crop.jpg",
         "right-cta-text": "Shop Womens",
-        "right-cta-url": "\/collections\/womens\/"
+        "right-cta-url": "\/collections\/womens\/",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654659992853b6cdb": {
@@ -70,7 +74,9 @@
         "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
         "image": "shopify:\/\/shop_images\/First_Choice_Image.jpg",
         "section-alignment": "flipped",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "16554195319ec4aeed": {
@@ -83,13 +89,17 @@
         "lookbook_url": "shopify:\/\/pages\/the-coast-kids",
         "right_image": "shopify:\/\/shop_images\/Look-1_002.jpg",
         "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/the-coast-kids"
+        "right_cta_url": "shopify:\/\/collections\/the-coast-kids",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1655920347d426af19": {
       "type": "instagram-feed",
       "settings": {
-        "heading": "Follow Us"
+        "heading": "Follow Us",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },
