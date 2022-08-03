@@ -15,7 +15,9 @@
         "body": "",
         "image": "shopify:\/\/shop_images\/01_a23f7bca-c3c5-4138-856e-366244fa9c0b.jpg",
         "section-alignment": "normal",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654835550c052674d": {
@@ -88,7 +90,9 @@
         "6d02a780-b05f-4a14-a411-866cb5ce891b"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },
