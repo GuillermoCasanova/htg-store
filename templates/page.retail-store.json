@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "165904122769e46837": {
+      "type": "about-header",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "section-alignment": "normal"
+      }
+    },
+    "165904134235260f79": {
+      "type": "about-pillars",
+      "settings": {
+        "heading_1": "",
+        "body_1": "",
+        "heading_2": "",
+        "body_2": "",
+        "heading_3": "",
+        "body_3": ""
+      }
+    }
+  },
+  "order": [
+    "165904122769e46837",
+    "165904134235260f79"
+  ]
+}
