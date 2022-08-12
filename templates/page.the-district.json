@@ -144,12 +144,23 @@
         "top_border": "no",
         "bottom_border": "no"
       }
+    },
+    "166032351608e576f2": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Collection Preview",
+        "collection": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
     "1660322903ea08fed8",
     "165483660394afd58b",
-    "1654836647e10da06e"
+    "1654836647e10da06e",
+    "166032351608e576f2"
   ]
 }
