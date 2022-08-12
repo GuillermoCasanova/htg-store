@@ -154,6 +154,25 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "166032499195fe5df1": {
+      "type": "image-banner",
+      "blocks": {
+        "1660324991c23b61b6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1660324991c23b61b6-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1-Footer.jpg",
+        "video": "",
+        "cta-url": ""
+      }
     }
   },
   "order": [
@@ -161,6 +180,7 @@
     "1660322903ea08fed8",
     "165483660394afd58b",
     "1654836647e10da06e",
-    "166032351608e576f2"
+    "166032351608e576f2",
+    "166032499195fe5df1"
   ]
 }
