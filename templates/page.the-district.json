@@ -2,16 +2,15 @@
   "sections": {
     "header": {
       "type": "image-banner",
-      "disabled": true,
       "settings": {
-        "video": "",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9bedcba5b4f846d0932190e2e7151a05.mp4",
         "cta-url": ""
       }
     },
     "1654836472effa8de8": {
       "type": "blurb-section",
       "settings": {
-        "heading": "Art Department",
+        "heading": "The District",
         "body": "",
         "image": "shopify:\/\/shop_images\/01HTG_ArtDept_Web_16ac6a8c-ca51-412a-bfb9-18e2d56082ef.jpg",
         "section-alignment": "normal",
