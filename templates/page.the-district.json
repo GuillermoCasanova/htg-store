@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "header": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "1654836472effa8de8": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Art Department",
+        "body": "",
+        "image": "shopify:\/\/shop_images\/01HTG_ArtDept_Web_16ac6a8c-ca51-412a-bfb9-18e2d56082ef.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "165483660394afd58b": {
+      "type": "lookbook-collection-display",
+      "disabled": true,
+      "settings": {
+        "heading": "Art Department",
+        "collection": "art-department",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "1654836647e10da06e": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "bcf0d3ce-c063-4e8d-b3b0-bc6cb6700890": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/02HTG_ArtDept_Web_d7c70580-29f9-4f49-bdb5-d92d8197b885.jpg"
+          }
+        },
+        "c37699d8-da14-4879-b9b4-21e7d4a8daa2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/03HTG_ArtDept_Web_9a903fa6-ef61-46fd-acc6-e30ad7146c29.jpg"
+          }
+        },
+        "6700c718-d6ae-44ce-a057-365948c3275a": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04HTG_ArtDept_Web_fb2bcfbe-bcca-45b2-9895-e1f4eb19ebbe.jpg"
+          }
+        },
+        "803923f8-f07b-4c93-8ab1-224ede9c0d39": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/05HTG_ArtDept_Web_7904f5ff-0a19-46ff-8700-f2ef5ddb084d.jpg"
+          }
+        },
+        "387e4cf3-374e-4810-9200-0c2c6c4ba442": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/07HTG_ArtDept_Web_81bd70cf-7d64-457c-81ad-674c15a21b5c.jpg"
+          }
+        },
+        "4cc8579f-711e-4625-8f6d-f89eec103201": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/08HTG_ArtDept_Web_d722470e-fbbd-4a47-85d0-35c027f2a21c.jpg"
+          }
+        },
+        "ee50709d-acd5-43cb-ac95-063c2ec647aa": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/09HTG_ArtDept_Web_05160c75-98be-4324-81a5-9dd010ddd590.jpg"
+          }
+        },
+        "94e95b1a-29b0-41b7-9cd7-c2ae5fa158d5": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/10HTG_ArtDept_Web_a8a2cb19-2709-45b1-ae88-1fc50129ef22.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "bcf0d3ce-c063-4e8d-b3b0-bc6cb6700890",
+        "c37699d8-da14-4879-b9b4-21e7d4a8daa2",
+        "6700c718-d6ae-44ce-a057-365948c3275a",
+        "803923f8-f07b-4c93-8ab1-224ede9c0d39",
+        "387e4cf3-374e-4810-9200-0c2c6c4ba442",
+        "4cc8579f-711e-4625-8f6d-f89eec103201",
+        "ee50709d-acd5-43cb-ac95-063c2ec647aa",
+        "94e95b1a-29b0-41b7-9cd7-c2ae5fa158d5"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "1654836472effa8de8",
+    "165483660394afd58b",
+    "1654836647e10da06e"
+  ]
+}
