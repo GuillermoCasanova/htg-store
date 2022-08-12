@@ -149,7 +149,7 @@
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Collection Preview",
-        "collection": "",
+        "collection": "the-district",
         "bg_color": "background-2",
         "top_border": "no",
         "bottom_border": "yes"
