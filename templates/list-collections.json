@@ -14,6 +14,13 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "c9091d87-03fc-45bf-baf1-2cc729fbc903": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "District",
+            "lookbook_url": "shopify:\/\/pages\/the-district"
+          }
+        },
         "bc93111e-60fa-44a1-ab46-55ab68a6cc63": {
           "type": "archival-collection",
           "settings": {
@@ -136,6 +143,7 @@
         }
       },
       "block_order": [
+        "c9091d87-03fc-45bf-baf1-2cc729fbc903",
         "bc93111e-60fa-44a1-ab46-55ab68a6cc63",
         "d16da307-5df6-49f0-9814-e0f8eba8b9b0",
         "26d62055-b885-478c-83f6-90a390c47e5c",
