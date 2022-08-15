@@ -14,7 +14,7 @@
         "heading"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0013\/1111\/3328\/files\/Honor_The_Gift_Coast.mp4?v=1654813291",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9bedcba5b4f846d0932190e2e7151a05.mp4",
         "cta-url": "shopify:\/\/collections\/the-coast"
       }
     },
@@ -24,19 +24,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01.jpg"
+            "image": "shopify:\/\/shop_images\/1-Mens_1b4a2012-c199-4126-8453-204d7211f58a.jpg"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/02.jpg"
+            "image": "shopify:\/\/shop_images\/2-Mens-Womens_750feba4-70cc-47de-b7dc-ac374e5ab747.jpg"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/03.jpg"
+            "image": "shopify:\/\/shop_images\/3-Womens_c3c43141-6c7d-43ec-9cfb-a614b1ec10f0.jpg"
           }
         }
       },
@@ -46,9 +46,9 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "The Coast – Summer 2022 Collection",
-        "body": "<p>Honor The Gift® Summer 2022 delivery continues the story of Russell Westbrook’s homage to Los Angeles. The Pacific Ocean acts as the lead inspiration defining this summer collection. A blue color palette and carefree California influence, breezes through this stripped back simple, yet refined range of raw edged knits, graphic tees and a cut and sew linen summer kit. Neighborhoods that surround the waters are reminiscent of driving down the coast.<\/p>",
-        "cta-url": "https:\/\/honorthegift.co\/collections\/the-coast",
+        "heading": "District – Fall 2022 Collection",
+        "body": "<p>Honor The Gift introduces Fall 2022 “District” inspired by the Unified School Districts of the city of Angels. Commemorating Russell Westbrook’s first two collections Private & Public we revive his ideation of the Inner City Student. Introducing vegan leathers, varsity jackets and heavy weight cable knits for Men’s Women’s and Kid’s. A rich seven collegiate color story as a presage to their future.  <\/p>",
+        "cta-url": "shopify:\/\/collections\/the-district",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -81,6 +81,7 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
+      "disabled": true,
       "settings": {
         "heading": "The Coast – Kids",
         "body": "",
@@ -94,6 +95,14 @@
         "bottom_border": "yes"
       }
     },
+    "1655920347d426af19": {
+      "type": "instagram-feed",
+      "settings": {
+        "heading": "Follow Us",
+        "top_border": "no",
+        "bottom_border": "no"
+      }
+    },
     "165954546289929c5f": {
       "type": "blurb-section",
       "settings": {
@@ -105,14 +114,6 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
-    },
-    "1655920347d426af19": {
-      "type": "instagram-feed",
-      "settings": {
-        "heading": "Follow Us",
-        "top_border": "no",
-        "bottom_border": "no"
-      }
     }
   },
   "order": [
@@ -121,7 +122,7 @@
     "165464550697d6e482",
     "1654659992853b6cdb",
     "16554195319ec4aeed",
-    "165954546289929c5f",
-    "1655920347d426af19"
+    "1655920347d426af19",
+    "165954546289929c5f"
   ]
 }
