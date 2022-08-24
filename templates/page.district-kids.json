@@ -29,11 +29,20 @@
         "top_border": "no",
         "bottom_border": "no"
       }
+    },
+    "16613620088da938c3": {
+      "type": "lookbook-slideshow",
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "main",
     "166136194336485513",
-    "16613619675e096e47"
+    "16613619675e096e47",
+    "16613620088da938c3"
   ]
 }
