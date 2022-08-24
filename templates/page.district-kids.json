@@ -2,13 +2,38 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "hide_body": "false"
+      }
+    },
+    "166136194336485513": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "16613619675e096e47": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "District Kids",
+        "collection": "district-kids",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "no"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "166136194336485513",
+    "16613619675e096e47"
   ]
 }
