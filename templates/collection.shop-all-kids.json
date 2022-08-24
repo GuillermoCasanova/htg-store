@@ -104,6 +104,17 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "1661366277478615b4": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -113,6 +124,7 @@
     "1653675322c6e1e849",
     "1654616390eb010a1b",
     "165461637915913a64",
-    "16546165111365823c"
+    "16546165111365823c",
+    "1661366277478615b4"
   ]
 }
