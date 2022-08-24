@@ -33,6 +33,66 @@
     },
     "16613620088da938c3": {
       "type": "lookbook-slideshow",
+      "blocks": {
+        "b082c043-8263-44b4-ae12-91dcf932d119": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_1.jpg"
+          }
+        },
+        "3039d62f-97a4-4ebd-9483-4361e5d4f430": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_2.jpg"
+          }
+        },
+        "f1b7452a-41b0-4d7f-8054-9906fbf4e7ba": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_3.jpg"
+          }
+        },
+        "70dc9412-e143-4d93-8835-a91893cf6715": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_4.jpg"
+          }
+        },
+        "e38bc4bb-2f52-466e-949a-594a36610d04": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_5.jpg"
+          }
+        },
+        "32f3449b-78c8-47d4-9bb5-af697a670480": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_6.jpg"
+          }
+        },
+        "799dfcda-ee2d-4cd1-8383-21eff090f85c": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_7.jpg"
+          }
+        },
+        "bf3fc673-99f0-419f-bb0d-0ab6e2c84630": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_District_Kids_8.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b082c043-8263-44b4-ae12-91dcf932d119",
+        "3039d62f-97a4-4ebd-9483-4361e5d4f430",
+        "f1b7452a-41b0-4d7f-8054-9906fbf4e7ba",
+        "70dc9412-e143-4d93-8835-a91893cf6715",
+        "e38bc4bb-2f52-466e-949a-594a36610d04",
+        "32f3449b-78c8-47d4-9bb5-af697a670480",
+        "799dfcda-ee2d-4cd1-8383-21eff090f85c",
+        "bf3fc673-99f0-419f-bb0d-0ab6e2c84630"
+      ],
       "settings": {
         "name": "",
         "top_border": "no",
