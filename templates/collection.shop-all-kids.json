@@ -107,18 +107,19 @@
     },
     "1661366277478615b4": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "District",
         "collection_url": "",
         "product_list": [
-          "kids-mascot-sweater-grey",
-          "kids-mascot-hoodie-grey",
-          "kids-htg-cable-knit-jumper-tan",
-          "kids-prep-school-henley-olive",
-          "kids-our-block-t-shirt-brown",
           "kids-iron-peace-mock-neck-sweater-black",
+          "kids-work-jacket-black",
+          "kids-mascot-sweater-grey",
           "kids-private-stripe-pant-navy",
-          "kids-work-jacket-black"
+          "kids-our-block-t-shirt-brown",
+          "kids-prep-school-henley-olive",
+          "kids-htg-cable-knit-jumper-tan",
+          "kids-mascot-hoodie-grey"
         ],
         "enable_quick_add": true
       }
