@@ -95,8 +95,8 @@
       ],
       "settings": {
         "name": "",
-        "top_border": "no",
-        "bottom_border": "yes"
+        "top_border": "yes",
+        "bottom_border": "no"
       }
     }
   },
