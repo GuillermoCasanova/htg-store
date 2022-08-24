@@ -112,7 +112,7 @@
         "section-alignment": "normal",
         "copy-bg-color": "background-1",
         "top_border": "no",
-        "bottom_border": "yes"
+        "bottom_border": "no"
       }
     }
   },
