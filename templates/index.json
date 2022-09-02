@@ -81,16 +81,15 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
-      "disabled": true,
       "settings": {
-        "heading": "The Coast – Kids",
+        "heading": "District – Kids",
         "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/Look-1_111.jpg",
+        "collection_hero_image": "shopify:\/\/shop_images\/Kids-1_ab848ac1-693a-45da-8d94-cc1bc4d3a1ff.gif",
         "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "shopify:\/\/pages\/the-coast-kids",
-        "right_image": "shopify:\/\/shop_images\/Look-1_002.jpg",
+        "lookbook_url": "https:\/\/honorthegift.co\/pages\/district-kids",
+        "right_image": "shopify:\/\/shop_images\/Shop-Kids_c75f9b67-0f30-428a-a120-647b67bc6770.jpg",
         "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/the-coast-kids",
+        "right_cta_url": "shopify:\/\/collections\/district-kids",
         "top_border": "no",
         "bottom_border": "yes"
       }
