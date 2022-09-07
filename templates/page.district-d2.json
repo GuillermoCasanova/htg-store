@@ -2,13 +2,84 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "hide_body": "false"
+      }
+    },
+    "1662582161f73beb29": {
+      "type": "image-banner",
+      "blocks": {
+        "16625821610d163313-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "16625821610d163313-0"
+      ],
+      "settings": {
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "166258218502979f4f": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "166258219998d1af9f": {
+      "type": "lookbook-slideshow",
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "1662582206185a9513": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "",
+        "collection": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "1662582214a70fce7e": {
+      "type": "image-banner",
+      "blocks": {
+        "1662582214d35394de-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1662582214d35394de-0"
+      ],
+      "settings": {
+        "video": "",
+        "cta-url": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1662582161f73beb29",
+    "166258218502979f4f",
+    "166258219998d1af9f",
+    "1662582206185a9513",
+    "1662582214a70fce7e"
   ]
 }
