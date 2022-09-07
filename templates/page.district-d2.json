@@ -48,8 +48,8 @@
     "1662582206185a9513": {
       "type": "lookbook-collection-display",
       "settings": {
-        "heading": "",
-        "collection": "",
+        "heading": "Collection Preview",
+        "collection": "the-district",
         "bg_color": "background-2",
         "top_border": "no",
         "bottom_border": "yes"
