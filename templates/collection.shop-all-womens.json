@@ -111,14 +111,8 @@
         "collection_name": "Free-Fall",
         "collection_url": "\/collections\/womens\/freefall",
         "product_list": [
-          "womens-command-top-orange",
-          "womens-command-short-orange",
-          "womens-command-body-suit-orange",
-          "womens-command-pant-orange",
-          "womens-command-top-cinnamon",
-          "womens-command-short-cinnamon",
-          "womens-command-body-suit-cinnamon",
-          "womens-command-pant-cinnamon"
+          "base-tote-bag-black",
+          "base-tote-bag-desert"
         ],
         "enable_quick_add": true
       }
