@@ -117,6 +117,17 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "16630187024a9c32e7": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "City Of Angels",
+        "collection_url": "",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -127,6 +138,7 @@
     "16540387627dd6a3af",
     "1654614390e8e5413f",
     "165403876742214c90",
-    "1654615044eadf777e"
+    "1654615044eadf777e",
+    "16630187024a9c32e7"
   ]
 }
