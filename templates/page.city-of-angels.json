@@ -22,6 +22,7 @@
     },
     "1654831675f9d857be": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "City of Angels",
         "collection": "city-of-angels",
