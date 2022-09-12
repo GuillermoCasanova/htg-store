@@ -122,9 +122,16 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "City Of Angels",
-        "collection_url": "",
+        "collection_url": "shopify:\/\/collections\/city-of-angels",
         "product_list": [
-
+          "greetings-t-shirt-brick",
+          "greetings-t-shirt-electric-white",
+          "greetings-t-shirt-rust",
+          "city-of-angels-cap-black",
+          "city-of-angels-cap-rust",
+          "htg-retro-t-shirt-black",
+          "htg-retro-t-shirt-brick",
+          "greetings-t-shirt-electric-white-1"
         ],
         "enable_quick_add": true
       }
