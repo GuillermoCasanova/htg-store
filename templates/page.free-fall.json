@@ -22,6 +22,7 @@
     },
     "1654833231ba506109": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Free-Fall",
         "collection": "freefall",
