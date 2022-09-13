@@ -87,6 +87,121 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/HTG-_FALL_LOOKBOOK_-_WEB8.jpg"
           }
+        },
+        "181c0487-d071-4f79-849b-d8a35d606712": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "2d8bd618-d82f-4495-8f25-c57237766071": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "51475df1-e216-4eb4-88a5-460e04f914e1": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "e245dd4a-09fe-4402-bc3e-320bcf45ce1e": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "4e65bd0d-5e83-4b8d-bdb8-72a07604f87f": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "d4ba55f2-0f07-4e30-8e07-8215ddf40a4e": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "6706f94b-f6c8-48fb-832d-b5fdc557d27f": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "8d118af7-f2e5-4941-b6a5-6bd993e8a679": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "f822152a-4b12-4d06-8e9e-308abb30662a": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "bee36bac-8020-4e29-9ae9-6d89dc631b6c": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "e0e59531-5dba-43af-943b-32913bf7a0c6": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "168a5be2-685a-4e64-805a-212ad555f9fa": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "647c709b-2311-4e24-b960-d8c4aeaa9dc9": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "b35e8057-2827-400e-8fcc-d33d81a9977c": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "12b14488-6cf2-44f9-852c-07ff6427b584": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "7243519d-23c4-4f9c-a030-116e9159ef70": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "9c2bddba-fa3b-4967-956f-853b7ad1bdd3": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "92697be4-09ab-43c3-9704-5754e325f8ca": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "b72f432c-bc85-475d-979e-965b8f4eeb88": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "8f9ffcc7-59c3-4ac9-b859-c55da6e88caa": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "a3c24f90-15a8-4934-8ff9-0e5728aa737d": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "beca1f83-9da5-4bc6-ab15-9094592d9b3e": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        },
+        "ea9eeabc-9116-441b-8876-f2b58b75e149": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -97,7 +212,30 @@
         "34f1bee5-f98e-4111-b34d-081992f6645d",
         "9720d7aa-bcbb-4b86-a1bf-a863cc605775",
         "47cc4874-b011-4ba3-88b2-7b391d4d5e18",
-        "f03054ea-f35b-4dbd-b7c3-478eef8471b6"
+        "f03054ea-f35b-4dbd-b7c3-478eef8471b6",
+        "181c0487-d071-4f79-849b-d8a35d606712",
+        "2d8bd618-d82f-4495-8f25-c57237766071",
+        "51475df1-e216-4eb4-88a5-460e04f914e1",
+        "e245dd4a-09fe-4402-bc3e-320bcf45ce1e",
+        "4e65bd0d-5e83-4b8d-bdb8-72a07604f87f",
+        "d4ba55f2-0f07-4e30-8e07-8215ddf40a4e",
+        "6706f94b-f6c8-48fb-832d-b5fdc557d27f",
+        "8d118af7-f2e5-4941-b6a5-6bd993e8a679",
+        "f822152a-4b12-4d06-8e9e-308abb30662a",
+        "bee36bac-8020-4e29-9ae9-6d89dc631b6c",
+        "e0e59531-5dba-43af-943b-32913bf7a0c6",
+        "168a5be2-685a-4e64-805a-212ad555f9fa",
+        "647c709b-2311-4e24-b960-d8c4aeaa9dc9",
+        "b35e8057-2827-400e-8fcc-d33d81a9977c",
+        "12b14488-6cf2-44f9-852c-07ff6427b584",
+        "7243519d-23c4-4f9c-a030-116e9159ef70",
+        "9c2bddba-fa3b-4967-956f-853b7ad1bdd3",
+        "92697be4-09ab-43c3-9704-5754e325f8ca",
+        "b72f432c-bc85-475d-979e-965b8f4eeb88",
+        "8f9ffcc7-59c3-4ac9-b859-c55da6e88caa",
+        "a3c24f90-15a8-4934-8ff9-0e5728aa737d",
+        "beca1f83-9da5-4bc6-ab15-9094592d9b3e",
+        "ea9eeabc-9116-441b-8876-f2b58b75e149"
       ],
       "settings": {
         "name": "",
