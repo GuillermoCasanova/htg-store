@@ -3,10 +3,10 @@
     "header": {
       "type": "main-list-collections-header",
       "settings": {
-        "heading": "District Kids",
+        "heading": "District",
         "body": "<p>Honor The Gift introduces Fall 2022 “District” inspired by the Unified School Districts of the city of Angels. Commemorating Russell Westbrook’s first two collections Private & Public we revive his ideation of the Inner City Student. Introducing vegan leathers, varsity jackets and heavy weight cable knits for Men’s Women’s and Kid’s. A rich seven collegiate color story as a presage to their future.  <\/p>",
-        "collection_lookbook_url": "https:\/\/honorthegift.co\/pages\/district-kids",
-        "image": "shopify:\/\/shop_images\/Collection_List_Hero_Cover_b609fa70-164b-46f4-9b84-6309967d8f88.jpg",
+        "collection_lookbook_url": "https:\/\/honorthegift.co\/pages\/district-2",
+        "image": "shopify:\/\/shop_images\/1-Title_b1ffec8e-b1d3-4818-9a5b-cbc21dc3130f.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
@@ -16,6 +16,7 @@
       "blocks": {
         "df298214-7371-4125-b692-df7e80aa7e1b": {
           "type": "archival-collection",
+          "disabled": true,
           "settings": {
             "collection_name": "District Kids",
             "thumbnail": "shopify:\/\/shop_images\/Collection-Lookbook-Cover_324c4ecf-a8b4-416e-9f77-f5f664c512e6.jpg",
@@ -24,6 +25,7 @@
         },
         "c9091d87-03fc-45bf-baf1-2cc729fbc903": {
           "type": "archival-collection",
+          "disabled": true,
           "settings": {
             "collection_name": "District",
             "thumbnail": "shopify:\/\/shop_images\/1-Title_b1ffec8e-b1d3-4818-9a5b-cbc21dc3130f.jpg",
