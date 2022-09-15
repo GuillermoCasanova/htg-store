@@ -5,6 +5,34 @@
       "settings": {
       }
     },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
+    "1663258313b437f94a": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "\/collections\/accessories",
+        "product_list": [
+          "htg-hat-maroon",
+          "panther-hat-tan",
+          "los-angeles-hat-olive",
+          "signature-bucket-hat-black",
+          "honor-sock-mustard",
+          "htg®-loose-knit-sock-green",
+          "htg-iron-peace-sock-black",
+          "htg-heavy-knit-sock-mustard"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1654840710199c5d75": {
       "type": "collection-preview",
       "settings": {
@@ -16,16 +44,6 @@
           "city-bucket-hat-long-beach-blue"
         ],
         "enable_quick_add": true
-      }
-    },
-    "product-grid": {
-      "type": "main-collection-product-grid",
-      "settings": {
-        "enable_quick_add": true,
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "child_collection": true
       }
     },
     "16540387627dd6a3af": {
@@ -85,8 +103,9 @@
   },
   "order": [
     "banner",
-    "1654840710199c5d75",
     "product-grid",
+    "1663258313b437f94a",
+    "1654840710199c5d75",
     "16540387627dd6a3af",
     "165403876742214c90",
     "1654618029729ec813"
