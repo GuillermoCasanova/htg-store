@@ -14,7 +14,7 @@
         "heading"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9bedcba5b4f846d0932190e2e7151a05.mp4",
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b44d32e224104a65a77c4d12d0cb5285.mp4",
         "cta-url": "shopify:\/\/collections\/the-district"
       }
     },
@@ -24,19 +24,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-Mens_1b4a2012-c199-4126-8453-204d7211f58a.jpg"
+            "image": "shopify:\/\/shop_images\/1-Mens_b2ddd962-eb4a-4fd4-a357-079c54745885.jpg"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2-Mens-Womens_750feba4-70cc-47de-b7dc-ac374e5ab747.jpg"
+            "image": "shopify:\/\/shop_images\/2-Middle_335471aa-a56f-464e-9c39-d7491fbaae83.jpg"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3-Womens_c3c43141-6c7d-43ec-9cfb-a614b1ec10f0.jpg"
+            "image": "shopify:\/\/shop_images\/3-Womens_82693e44-8984-4982-b310-963a66b9dc7f.jpg"
           }
         }
       },
@@ -57,10 +57,10 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Concrete Jungle",
-        "left-image": "shopify:\/\/shop_images\/1-Mens_d324caae-3a7e-4028-b9a2-ee94fbea81f8.jpg",
+        "left-image": "shopify:\/\/shop_images\/1-Mens_acd3fa1f-669a-443d-b74b-6aebed728bce.jpg",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "\/collections\/mens\/",
-        "right-image": "shopify:\/\/shop_images\/2-Womens_8d5f0edf-cc00-40ec-9157-e8e8d5b47024.jpg",
+        "right-image": "shopify:\/\/shop_images\/2-Womens_e5e59d28-393e-47ed-8c33-b2779471e7f1.jpg",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "\/collections\/womens\/",
         "top_border": "no",
