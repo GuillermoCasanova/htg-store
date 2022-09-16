@@ -11,8 +11,21 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
+
+<script type="text/template" id="product-data">
+  {
+    "products":  [
+      {% paginate search.results by 1000 %}
+        {%- for product in search.results -%}
+          {{ product | json }}
+          {% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+    {% endpaginate %}
+    ]
+  }
+</script>
+
 
 
 {%- liquid
@@ -75,7 +88,7 @@
           
           <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
             grid product-grid">
-            {% paginate search.results by 1000 %}
+            {% paginate search.results by 16 %}
               {%- for product in search.results -%}
                 {% if product.object_type == 'product' %}
                 <li class="grid__item" data-product-id="{{ product.id }}">
@@ -92,11 +105,20 @@
             {% endpaginate %}
           </ul>
         </div>
-        {% if search.results_count > paginationNum %}
+        {% if search.results.length > 16 %}
           <script src="{{ 'load-more-products-button.js' | asset_url }}" defer="defer"></script>
           <load-more-products-button data-paginate-by="{{ paginationNum }}"  data-collection-total="{{ collection.products.length }}">
             <div class="load-more-products-button-container">
-              <button class="button button--primary  button--medium load-more-products-button" aria-label="Load more products in collection">Load More</button>
+              <button class="button button--primary  button--medium load-more-products-button" 
+                aria-label="Load more products in collection">
+                <span class="inner-text">
+                  Load More <span class="visually-hidden">Products</span>
+                </span>
+                <span class="loader">
+                 <span class="visually-hidden">Loading More Products</span>
+                  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                </span>
+              </button>
             </div>
           <load-more-products-button>
         {% endif %}
@@ -105,6 +127,10 @@
   {%- endif -%}
 {%- endif -%}
 </div>
+
+<script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
 
 
 {% schema %}

@@ -57,7 +57,7 @@ class loadMoreProductsButton extends HTMLElement {
         let collectionTag = this.dataset.filteredByTag; 
 
         let CollectionProducts = document.querySelector('collection-grid'); 
-        CollectionProducts.renderMoreProducts(parseInt(this.dataset.paginateBy));
+        CollectionProducts.renderMoreProducts();
 
             // console.log(CollectionProducts.getProductsRendered().length); 
             // console.log(CollectionProducts.totalProducts.length); 

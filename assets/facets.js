@@ -583,7 +583,7 @@ class CollectionGrid extends HTMLElement {
     return page.length > 0 ? page : false;
   }
 
-  renderMoreProducts(pNumToShowMore) {
+  renderMoreProducts() {
 
     window.history.replaceState({page: this.section}, '', '?page_num=' + (this.section += 1));
     const url = `${window.location.pathname}?page=${this.section}&?section_id=main-collection-product-grid`;
