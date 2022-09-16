@@ -20,7 +20,10 @@
     "products":  [
       {% paginate collection.products by 1000 %}
         {%- for product in collection.products -%}
-          {{ product | json }}
+          {
+           "product": {{ product | json }},
+           "options_with_values": {{ product.options_with_values | json }}
+          }
           {% unless forloop.last %},{% endunless %}
         {%- endfor -%}
     {% endpaginate %}
@@ -678,7 +681,7 @@ opacity: 1;
       </aside>
 
       {% assign paginationNum = 16 %}
-      <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}">
+      <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}"  data-collection-url="{{ collection.url }}" data-section-id="{{ section.id }}">
         <div class="product-grid-container" id="ProductGridContainer">
             <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
               <div class="loading-overlay gradient">
@@ -729,6 +732,7 @@ opacity: 1;
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
 {% endif %}
+
 
 
 

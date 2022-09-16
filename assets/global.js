@@ -38,7 +38,6 @@ function trapFocus(container, elementToFocus = container) {
       event.target !== last &&
       event.target !== first
     ) {
-      console.log('denied');
       return;
     }
 
@@ -835,19 +834,18 @@ class VariantRadios extends VariantSelects {
 
 
   updateMasterVariantId() {
-    
     this.currentVariant = this.getVariantData().find((variant) => {
         return !variant.options.map((option, index) => {
           return this.options[index] === option;
         }).includes(false);
     });
-
-
   }
 
   updateVariantInput() {
     const productForms = document.querySelectorAll(`#quick-add-form-${this.dataset.section}, #product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
+
     productForms.forEach((productForm) => {
+      
       if(productForm.querySelector('input[name="id"][data-desktop]')) {
         const input = productForm.querySelector('input[name="id"][data-desktop]');
         input.value = this.currentVariant.id;

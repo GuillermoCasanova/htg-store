@@ -475,13 +475,6 @@ class CartOffCanvas extends HTMLElement {
                   </div>
                 </div>
   
-                <div class="loading-overlay  hidden">
-                  <div class="loading-overlay__spinner">
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                    </svg>
-                  </div>
-                </div>
               
               </div>
           </li>
@@ -492,6 +485,14 @@ class CartOffCanvas extends HTMLElement {
   
     }
   
+  
+  //   <div class="loading-overlay  hidden" hidden>
+  //   <div class="loading-overlay__spinner">
+  //     <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+  //       <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+  //     </svg>
+  //   </div>
+  // </div>
   
     enableLoading(line) {
       //document.getElementById('main-cart-items').classList.add('cart__items--disabled');
