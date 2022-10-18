@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "d4bfeba6-f2ce-4682-b71f-43b3c227d173": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Define",
+        "collection_url": "\/collection\/define-accessories",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1663258313b437f94a": {
       "type": "collection-preview",
       "settings": {
@@ -104,6 +116,7 @@
   "order": [
     "banner",
     "product-grid",
+    "d4bfeba6-f2ce-4682-b71f-43b3c227d173",
     "1663258313b437f94a",
     "1654840710199c5d75",
     "16540387627dd6a3af",
