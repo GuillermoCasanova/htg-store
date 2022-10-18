@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "f728d6ac-59f9-4340-be1b-c2aaff780bac": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/womens\/defined",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1659025745e9d39846": {
       "type": "collection-preview",
       "settings": {
@@ -121,6 +133,7 @@
   "order": [
     "banner",
     "product-grid",
+    "f728d6ac-59f9-4340-be1b-c2aaff780bac",
     "1659025745e9d39846",
     "165461434128f6b9a3",
     "1653675322c6e1e849",
