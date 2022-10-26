@@ -79,6 +79,19 @@
         "bottom_border": "yes"
       }
     },
+    "b396d892-7d6e-44a7-abaa-8f288b626bc9": {
+      "type": "blurb-section",
+      "disabled": true,
+      "settings": {
+        "heading": "Honor The Gift x Union",
+        "body": "<p>Neighborhoods are a sense of pride. Honor the Gift ® and Union join forces to pay homage to the La Brea neighborhood, known in Los Angeles as the destination for being a trailblazer in fashion as well as a social hub for community. The collection is infused with Honor the Gift and Union’s love and respect for the Inner City, humility, and passion. As we continue to serve our commitment towards the inner city, a portion of all proceeds will be donated directly to the WHY NOT? foundation. Never forget where you came from.<\/p><p><\/p><p>LAUNCHING EXCLUSIVELY IN OUR FLAGSHIP STORE<br\/>130 N. La Brea Ave. Los Angeles, CA 90036<br\/>Saturday 10.29.22<br\/>Doors Open @ 12:00PM<\/p>",
+        "image": "shopify:\/\/shop_images\/1-Union-Product.gif",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
       "settings": {
@@ -120,6 +133,7 @@
     "1654645496c068b051",
     "165464550697d6e482",
     "1654659992853b6cdb",
+    "b396d892-7d6e-44a7-abaa-8f288b626bc9",
     "16554195319ec4aeed",
     "1655920347d426af19",
     "165954546289929c5f"
