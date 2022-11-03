@@ -2,7 +2,6 @@
   "sections": {
     "header": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "427fb301-5f8d-4afc-b9ac-d59462abfc03": {
           "type": "heading",
