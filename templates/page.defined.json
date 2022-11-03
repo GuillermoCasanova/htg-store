@@ -2,13 +2,36 @@
   "sections": {
     "header": {
       "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "427fb301-5f8d-4afc-b9ac-d59462abfc03": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "427fb301-5f8d-4afc-b9ac-d59462abfc03"
+      ],
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/39cc28a3fa31475a9c431ab24c3eb9f4.mp4",
         "cta-url": ""
       }
+    },
+    "d75ff1f0-0ded-4302-85f4-305101cccf59": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Honor The Gift® Defined – Holiday 2022",
+        "body": "<p>Honor The Gift closes out their year with a 145-piece Holiday collection titled “Defined” narrowing in on a palette of three color ways offering black, white and grey. We are keeping the collection literal and focusing on the message as we offer the meaning behind the brand's true identity. Focusing on graphic tees, classic silhouettes, quality materials and full fashion knits. Carried over from seasons before, our nature is to solely conceptualize that it is not what we wear, it is what we stand for. <\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "d75ff1f0-0ded-4302-85f4-305101cccf59"
   ]
 }
