@@ -14,8 +14,8 @@
         "heading"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b44d32e224104a65a77c4d12d0cb5285.mp4",
-        "cta-url": "shopify:\/\/collections\/the-district"
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/39cc28a3fa31475a9c431ab24c3eb9f4.mp4",
+        "cta-url": ""
       }
     },
     "1654645496c068b051": {
@@ -24,19 +24,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-Mens_b2ddd962-eb4a-4fd4-a357-079c54745885.jpg"
+            "image": "shopify:\/\/shop_images\/1-Mens_f334ae0c-b3a0-4a98-bd90-ad0c0ba3f4ef.jpg"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2-Middle_335471aa-a56f-464e-9c39-d7491fbaae83.jpg"
+            "image": "shopify:\/\/shop_images\/2-Middle_453db4e6-49b5-4e02-bbc8-a7de8935c34e.jpg"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3-Womens_82693e44-8984-4982-b310-963a66b9dc7f.jpg"
+            "image": "shopify:\/\/shop_images\/3-Womens_79d85a06-51b4-492b-ab0b-3991b9c6cc15.jpg"
           }
         }
       },
@@ -46,9 +46,9 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "District – Fall 2022 Collection",
-        "body": "<p>Honor The Gift introduces Fall 2022 “District” inspired by the Unified School Districts of the city of Angels. Commemorating Russell Westbrook’s first two collections Private & Public we revive his ideation of the Inner City Student. Introducing vegan leathers, varsity jackets and heavy weight cable knits for Men’s Women’s and Kid’s. A rich seven collegiate color story as a presage to their future.  <\/p>",
-        "cta-url": "shopify:\/\/collections\/the-district",
+        "heading": "Defined – Holiday 2022 Collection",
+        "body": "<p>Honor The Gift closes out their year with a 145-piece Holiday collection titled “Defined” narrowing in on a palette of three color ways offering black, white and grey. We are keeping the collection literal and focusing on the message as we offer the meaning behind the brand's true identity. Focusing on graphic tees, classic silhouettes, quality materials and full fashion knits. Carried over from seasons before, our nature is to solely conceptualize that it is not what we wear, it is what we stand for.  <\/p>",
+        "cta-url": "shopify:\/\/pages\/defined",
         "top_border": "yes",
         "bottom_border": "yes"
       }
@@ -56,11 +56,11 @@
     "165464550697d6e482": {
       "type": "featured-collection-cta",
       "settings": {
-        "collection-name": "Concrete Jungle",
-        "left-image": "shopify:\/\/shop_images\/1-Mens_acd3fa1f-669a-443d-b74b-6aebed728bce.jpg",
+        "collection-name": "Defined",
+        "left-image": "shopify:\/\/shop_images\/1-Mens_0646ee29-209a-47ca-b671-dc4c1922bad3.jpg",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "\/collections\/mens\/",
-        "right-image": "shopify:\/\/shop_images\/2-Womens_e5e59d28-393e-47ed-8c33-b2779471e7f1.jpg",
+        "right-image": "shopify:\/\/shop_images\/2-Womens_cec365f2-6d7c-4f4e-9fef-d6d77e889991.jpg",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "\/collections\/womens\/",
         "top_border": "no",
@@ -69,6 +69,7 @@
     },
     "b396d892-7d6e-44a7-abaa-8f288b626bc9": {
       "type": "blurb-section",
+      "disabled": true,
       "settings": {
         "heading": "Honor The Gift x Union",
         "body": "<p>Neighborhoods are a sense of pride. Honor the Gift ® and Union join forces to pay homage to the La Brea neighborhood, known in Los Angeles as the destination for being a trailblazer in fashion as well as a social hub for community. The collection is infused with Honor the Gift and Union’s love and respect for the Inner City, humility, and passion. As we continue to serve our commitment towards the inner city, a portion of all proceeds will be donated directly to the WHY NOT? foundation. Never forget where you came from.<\/p><p><\/p><p>LAUNCHING EXCLUSIVELY IN OUR FLAGSHIP STORE<br\/>130 N. La Brea Ave. Los Angeles, CA 90036<br\/>Saturday 10.29.22<br\/>Doors Open @ 12:00PM<\/p>",
@@ -79,29 +80,29 @@
         "bottom_border": "yes"
       }
     },
-    "16554195319ec4aeed": {
-      "type": "featured-collection-alt",
-      "settings": {
-        "heading": "District – Kids",
-        "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/Kids-1_ab848ac1-693a-45da-8d94-cc1bc4d3a1ff.gif",
-        "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "https:\/\/honorthegift.co\/pages\/district-kids",
-        "right_image": "shopify:\/\/shop_images\/Shop-Kids_c75f9b67-0f30-428a-a120-647b67bc6770.jpg",
-        "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/district-kids",
-        "top_border": "no",
-        "bottom_border": "yes"
-      }
-    },
     "1654659992853b6cdb": {
       "type": "blurb-section",
       "settings": {
         "heading": "For The Inner City",
         "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
-        "image": "shopify:\/\/shop_images\/1-Russ_a3f851d7-bef8-48e7-9a00-9f2780e45fa4.jpg",
+        "image": "shopify:\/\/shop_images\/1-Russell_344070b5-80bd-4ace-8fa4-dabb9f134bc6.jpg",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "16554195319ec4aeed": {
+      "type": "featured-collection-alt",
+      "settings": {
+        "heading": "Defined – Kids",
+        "body": "",
+        "collection_hero_image": "shopify:\/\/shop_images\/3-Kids_Left_c9f108f5-72fc-4c17-ab87-c95512a2b749.jpg",
+        "lookbook_url_text": "View Lookbook",
+        "lookbook_url": "shopify:\/\/pages\/defined",
+        "right_image": "shopify:\/\/shop_images\/4-Kids_Right_9e040cb8-7e2f-4aed-a2d3-64ba27a8a2cc.jpg",
+        "right_cta_text": "Shop Kids",
+        "right_cta_url": "shopify:\/\/collections\/defined-kids",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -132,8 +133,8 @@
     "1654645496c068b051",
     "165464550697d6e482",
     "b396d892-7d6e-44a7-abaa-8f288b626bc9",
-    "16554195319ec4aeed",
     "1654659992853b6cdb",
+    "16554195319ec4aeed",
     "1655920347d426af19",
     "165954546289929c5f"
   ]
