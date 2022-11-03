@@ -32,7 +32,7 @@
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Defined Collection",
-        "collection": "",
+        "collection": "defined",
         "bg_color": "background-2",
         "top_border": "no",
         "bottom_border": "yes"
