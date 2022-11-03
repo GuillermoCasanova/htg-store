@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "7dd4b3a3-868a-4b44-85b0-2551b997f367": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Defined",
+            "thumbnail": "shopify:\/\/shop_images\/2-Collection-Cover_785146a5-c9bb-48de-9bf1-f249b92866bc.jpg",
+            "lookbook_url": "shopify:\/\/pages\/defined"
+          }
+        },
         "df298214-7371-4125-b692-df7e80aa7e1b": {
           "type": "archival-collection",
           "settings": {
@@ -153,6 +161,7 @@
         }
       },
       "block_order": [
+        "7dd4b3a3-868a-4b44-85b0-2551b997f367",
         "df298214-7371-4125-b692-df7e80aa7e1b",
         "c9091d87-03fc-45bf-baf1-2cc729fbc903",
         "bc93111e-60fa-44a1-ab46-55ab68a6cc63",
