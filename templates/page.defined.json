@@ -57,12 +57,23 @@
         "video": "",
         "cta-url": ""
       }
+    },
+    "a2a194f1-f42e-48d6-8975-30d30de51747": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Defined Kids Collection",
+        "collection": "defined-kids",
+        "bg_color": "background-2",
+        "top_border": "yes",
+        "bottom_border": "no"
+      }
     }
   },
   "order": [
     "header",
     "d75ff1f0-0ded-4302-85f4-305101cccf59",
     "f48c4c16-31a2-4926-85c5-65bdc46546ca",
-    "a5d05c3f-62bf-46b8-bc8c-cdf2f2567bc7"
+    "a5d05c3f-62bf-46b8-bc8c-cdf2f2567bc7",
+    "a2a194f1-f42e-48d6-8975-30d30de51747"
   ]
 }
