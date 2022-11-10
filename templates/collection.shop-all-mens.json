@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "3bdfc525-5e97-4abd-92ad-54b133728112": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "HTG® x Union",
+        "collection_url": "\/collections\/mens\/htg-x-union",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "fa9e520c-204d-4293-896c-f12e8904bb85": {
       "type": "collection-preview",
       "settings": {
@@ -154,6 +166,7 @@
   "order": [
     "banner",
     "product-grid",
+    "3bdfc525-5e97-4abd-92ad-54b133728112",
     "fa9e520c-204d-4293-896c-f12e8904bb85",
     "16590256583d5a0a0f",
     "1654614072e4a2b52f",
