@@ -123,7 +123,7 @@
           "menu": "main-menu-2-0",
           "featured-collections": [
             "defined",
-            "jordan-x-htg"
+            "htg-x-union"
           ],
           "footer-menu": "footer",
           "general_email": "info@honorthegift.co",
@@ -324,16 +324,8 @@
             "footer-0"
           ],
           "settings": {
-            "color_scheme": "background-1",
             "newsletter_enable": true,
-            "newsletter_heading": "Subscribe to our emails",
-            "show_social": true,
-            "enable_country_selector": false,
-            "enable_language_selector": false,
-            "payment_enable": true,
-            "margin_top": 48,
-            "padding_top": 36,
-            "padding_bottom": 36
+            "newsletter_heading": "Subscribe to our emails"
           }
         },
         "main-password-header": {
