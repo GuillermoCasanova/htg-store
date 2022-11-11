@@ -15,6 +15,23 @@
         "child_collection": true
       }
     },
+    "3bdfc525-5e97-4abd-92ad-54b133728112": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "HTG® x Union",
+        "collection_url": "\/collections\/htg-x-union",
+        "product_list": [
+          "htg-x-union-t-shirt-white",
+          "htg-x-union-t-shirt-black",
+          "htg-x-union-hoodie-white",
+          "htg-x-union-hoodie-black",
+          "htg-x-union-shorts-white",
+          "htg-x-union-hat-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "fa9e520c-204d-4293-896c-f12e8904bb85": {
       "type": "collection-preview",
       "settings": {
@@ -149,27 +166,12 @@
         ],
         "enable_quick_add": true
       }
-    },
-    "3bdfc525-5e97-4abd-92ad-54b133728112": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "HTG® x Union",
-        "collection_url": "\/collections\/htg-x-union",
-        "product_list": [
-          "htg-x-union-t-shirt-white",
-          "htg-x-union-t-shirt-black",
-          "htg-x-union-hoodie-white",
-          "htg-x-union-hoodie-black",
-          "htg-x-union-shorts-white",
-          "htg-x-union-hat-white"
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
+    "3bdfc525-5e97-4abd-92ad-54b133728112",
     "fa9e520c-204d-4293-896c-f12e8904bb85",
     "16590256583d5a0a0f",
     "1654614072e4a2b52f",
@@ -177,7 +179,6 @@
     "1654614390e8e5413f",
     "165403876742214c90",
     "16630187024a9c32e7",
-    "1654615044eadf777e",
-    "3bdfc525-5e97-4abd-92ad-54b133728112"
+    "1654615044eadf777e"
   ]
 }
