@@ -15,14 +15,38 @@
         "child_collection": true
       }
     },
+    "f728d6ac-59f9-4340-be1b-c2aaff780bac": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/womens\/defined",
+        "product_list": [
+          "womens-prep-school-bomber-grey",
+          "womens-doctorate-v-neck-sweater-black",
+          "womens-freshman-turtle-neck-dress-white",
+          "womens-reversed-honoree-full-zip-white",
+          "womens-private-school-skirt-black",
+          "womens-honoree-camp-button-up-white",
+          "womens-advisor-cardigan-black",
+          "womens-reversed-honoree-pant-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1659025745e9d39846": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "The District",
         "collection_url": "\/collections\/womens\/the-district",
         "product_list": [
-
+          "womens-bonded-vegan-leather-vest-sand",
+          "womens-turtle-neck-tan",
+          "womens-vegan-trench-ruby",
+          "womens-velvet-pj-shirt-champagne",
+          "womens-vegan-leather-pant-mustard",
+          "womens-bell-trouser-olive",
+          "womens-our-block-t-shirt-mustard",
+          "womens-velvet-pj-pant-champagne"
         ],
         "enable_quick_add": true
       }
@@ -105,14 +129,8 @@
         "collection_name": "Free-Fall",
         "collection_url": "\/collections\/womens\/freefall",
         "product_list": [
-          "womens-command-top-orange",
-          "womens-command-short-orange",
-          "womens-command-body-suit-orange",
-          "womens-command-pant-orange",
-          "womens-command-top-cinnamon",
-          "womens-command-short-cinnamon",
-          "womens-command-body-suit-cinnamon",
-          "womens-command-pant-cinnamon"
+          "base-tote-bag-black",
+          "base-tote-bag-desert"
         ],
         "enable_quick_add": true
       }
@@ -121,6 +139,7 @@
   "order": [
     "banner",
     "product-grid",
+    "f728d6ac-59f9-4340-be1b-c2aaff780bac",
     "1659025745e9d39846",
     "165461434128f6b9a3",
     "1653675322c6e1e849",

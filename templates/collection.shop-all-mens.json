@@ -15,14 +15,54 @@
         "child_collection": true
       }
     },
+    "3bdfc525-5e97-4abd-92ad-54b133728112": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "HTG® x Union",
+        "collection_url": "\/collections\/htg-x-union",
+        "product_list": [
+          "htg-x-union-t-shirt-white",
+          "htg-x-union-t-shirt-black",
+          "htg-x-union-hoodie-white",
+          "htg-x-union-hoodie-black",
+          "htg-x-union-shorts-white",
+          "htg-x-union-hat-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "fa9e520c-204d-4293-896c-f12e8904bb85": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/mens\/defined",
+        "product_list": [
+          "sueded-band-jacket-grey",
+          "private-school-polo-black",
+          "mascot-hoodie-white",
+          "htg-dedication-t-shirt-black",
+          "school-boy-trouser-grey",
+          "campus-carpenter-pant-white",
+          "code-of-honor-bucket-hat-white",
+          "code-of-honor-scarf-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "16590256583d5a0a0f": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "The District",
         "collection_url": "\/collections\/mens\/the-district",
         "product_list": [
-
+          "htg-mascot-vest-brown",
+          "prep-school-henley-grey",
+          "vegan-leather-cardigan-tan",
+          "letterman-jacket-black",
+          "cable-knit-pant-tan",
+          "prep-school-pant-grey",
+          "signature-bucket-hat-ruby",
+          "ls-floral-woven-gold"
         ],
         "enable_quick_add": true
       }
@@ -99,20 +139,16 @@
         "enable_quick_add": true
       }
     },
-    "1654614804d002ed47": {
+    "16630187024a9c32e7": {
       "type": "collection-preview",
       "settings": {
         "collection_name": "City Of Angels",
-        "collection_url": "\/collections\/mens\/city-of-angels",
+        "collection_url": "shopify:\/\/collections\/city-of-angels",
         "product_list": [
-          "greetings-t-shirt-brick",
-          "swap-meet-t-shirt-rust",
-          "htg-retro-t-shirt-black",
-          "city-of-angels-t-shirt-electric-yellow",
-          "city-of-angels-hoodie-brick",
-          "city-of-angels-hoodie-rust",
-          "city-of-angels-hoodie-black",
-          "copy-of-city-of-angels-hoodie-black"
+          "city-of-angels-cap-black",
+          "city-of-angels-cap-rust",
+          "city-of-angels-cap-brick",
+          "city-of-angels-cap-sun-yellow"
         ],
         "enable_quick_add": true
       }
@@ -123,14 +159,9 @@
         "collection_name": "Free-fall",
         "collection_url": "\/collections\/mens\/freefall",
         "product_list": [
-          "squadron-camp-button-up-army",
-          "pocket-aces-t-shirt-ath-grey",
-          "iron-peace-t-shirt-sky",
-          "worldwide-t-shirt-orange",
-          "airborne-bomber-jacket-desert",
-          "base-l-s-thermal-stealth",
-          "zero-gravity-pant-grey",
-          "squadron-cargo-pant-army"
+          "airborne-sock-army",
+          "airborne-sock-black",
+          "airborne-sock-haze"
         ],
         "enable_quick_add": true
       }
@@ -139,12 +170,14 @@
   "order": [
     "banner",
     "product-grid",
+    "3bdfc525-5e97-4abd-92ad-54b133728112",
+    "fa9e520c-204d-4293-896c-f12e8904bb85",
     "16590256583d5a0a0f",
     "1654614072e4a2b52f",
     "16540387627dd6a3af",
     "1654614390e8e5413f",
     "165403876742214c90",
-    "1654614804d002ed47",
+    "16630187024a9c32e7",
     "1654615044eadf777e"
   ]
 }

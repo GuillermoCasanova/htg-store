@@ -3,10 +3,10 @@
     "header": {
       "type": "main-list-collections-header",
       "settings": {
-        "heading": "The Coast",
-        "body": "<p>Honor The Gift® Summer 2022 delivery continues the story of Russell Westbrook’s homage to Los Angeles. The Pacific Ocean acts as the lead inspiration defining this summer collection. A blue color palette and carefree California influence, breezes through this stripped back simple, yet refined range of raw edged knits, graphic tees and a cut and sew linen summer kit. Neighborhoods that surround the waters are reminiscent of driving down the coast.<\/p>",
-        "collection_lookbook_url": "shopify:\/\/pages\/the-coast-collection",
-        "image": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_dragged.jpg",
+        "heading": "Defined",
+        "body": "<p>Honor The Gift closes out their year with a 145-piece Holiday collection titled “Defined” narrowing in on a palette of three color ways offering black, white and grey. We are keeping the collection literal and focusing on the message as we offer the meaning behind the brand's true identity. Focusing on graphic tees, classic silhouettes, quality materials and full fashion knits. Carried over from seasons before, our nature is to solely conceptualize that it is not what we wear, it is what we stand for. <\/p>",
+        "collection_lookbook_url": "shopify:\/\/pages\/defined",
+        "image": "shopify:\/\/shop_images\/1-Title_478cc0f7-af4a-4747-9101-28f8b888cb5e.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
@@ -14,6 +14,30 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "7dd4b3a3-868a-4b44-85b0-2551b997f367": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Defined",
+            "thumbnail": "shopify:\/\/shop_images\/2-Collection-Cover_785146a5-c9bb-48de-9bf1-f249b92866bc.jpg",
+            "lookbook_url": "shopify:\/\/pages\/defined"
+          }
+        },
+        "c9091d87-03fc-45bf-baf1-2cc729fbc903": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "District",
+            "thumbnail": "shopify:\/\/shop_images\/1-Title_b1ffec8e-b1d3-4818-9a5b-cbc21dc3130f.jpg",
+            "lookbook_url": "shopify:\/\/pages\/the-district"
+          }
+        },
+        "df298214-7371-4125-b692-df7e80aa7e1b": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "District Kids",
+            "thumbnail": "shopify:\/\/shop_images\/Collection-Lookbook-Cover_324c4ecf-a8b4-416e-9f77-f5f664c512e6.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/district-kids"
+          }
+        },
         "bc93111e-60fa-44a1-ab46-55ab68a6cc63": {
           "type": "archival-collection",
           "settings": {
@@ -136,6 +160,9 @@
         }
       },
       "block_order": [
+        "7dd4b3a3-868a-4b44-85b0-2551b997f367",
+        "c9091d87-03fc-45bf-baf1-2cc729fbc903",
+        "df298214-7371-4125-b692-df7e80aa7e1b",
         "bc93111e-60fa-44a1-ab46-55ab68a6cc63",
         "d16da307-5df6-49f0-9814-e0f8eba8b9b0",
         "26d62055-b885-478c-83f6-90a390c47e5c",

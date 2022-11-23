@@ -5,6 +5,52 @@
       "settings": {
       }
     },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
+    "d4bfeba6-f2ce-4682-b71f-43b3c227d173": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/defined-accessories",
+        "product_list": [
+          "los-angeles-leather-cap-black",
+          "los-angeles-suede-cap-white",
+          "code-of-honor-bucket-hat-black",
+          "honor-bucket-hat-white",
+          "los-angeles-knitted-cap-dark-grey",
+          "code-of-honor-scarf-black",
+          "htg-project-sock-black",
+          "honor-crew-sock-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1663258313b437f94a": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "\/collections\/district-accessories",
+        "product_list": [
+          "htg-hat-maroon",
+          "panther-hat-tan",
+          "los-angeles-hat-olive",
+          "signature-bucket-hat-black",
+          "honor-sock-mustard",
+          "htg®-loose-knit-sock-green",
+          "htg-iron-peace-sock-black",
+          "htg-heavy-knit-sock-mustard"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1654840710199c5d75": {
       "type": "collection-preview",
       "settings": {
@@ -16,16 +62,6 @@
           "city-bucket-hat-long-beach-blue"
         ],
         "enable_quick_add": true
-      }
-    },
-    "product-grid": {
-      "type": "main-collection-product-grid",
-      "settings": {
-        "enable_quick_add": true,
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "child_collection": true
       }
     },
     "16540387627dd6a3af": {
@@ -85,8 +121,10 @@
   },
   "order": [
     "banner",
-    "1654840710199c5d75",
     "product-grid",
+    "d4bfeba6-f2ce-4682-b71f-43b3c227d173",
+    "1663258313b437f94a",
+    "1654840710199c5d75",
     "16540387627dd6a3af",
     "165403876742214c90",
     "1654618029729ec813"

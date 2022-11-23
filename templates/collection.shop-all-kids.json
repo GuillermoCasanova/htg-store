@@ -15,6 +15,42 @@
         "child_collection": true
       }
     },
+    "ad1da559-6638-4283-9b50-b5593c44ec3a": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/kids\/defined",
+        "product_list": [
+          "kids-belief-l-s-t-shirt-black",
+          "kids-dedication-t-shirt-lt-heather",
+          "kids-honor-code-l-s-t-shirt-white",
+          "kids-mascot-henley-black",
+          "kids-belief-sweatpants-black",
+          "kids-sueded-band-jacket-black",
+          "kids-private-school-polo-white",
+          "kids-school-boy-trouser-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1661366277478615b4": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "\/collections\/district-kids",
+        "product_list": [
+          "kids-iron-peace-mock-neck-sweater-black",
+          "kids-work-jacket-black",
+          "kids-mascot-sweater-grey",
+          "kids-private-stripe-pant-navy",
+          "kids-mascot-hoodie-grey",
+          "kids-our-block-t-shirt-brown",
+          "kids-prep-school-henley-olive",
+          "kids-htg-cable-knit-jumper-tan"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "165533293947ac239b": {
       "type": "collection-preview",
       "settings": {
@@ -86,33 +122,16 @@
         ],
         "enable_quick_add": true
       }
-    },
-    "16546165111365823c": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Free-Fall",
-        "collection_url": "shopify:\/\/collections\/freefall-kids",
-        "product_list": [
-          "kids-worldwide-t-shirt-orange",
-          "kids-iron-peace-t-shirt-bone",
-          "kids-squadron-camp-button-up-sky",
-          "kids-squadron-camp-button-up-army",
-          "kids-airborne-jacket-desert",
-          "kids-airborne-pullover-hoodie-ath-grey",
-          "kids-airborne-sweatpant-ath-grey",
-          "kids-zero-gravity-pant-black"
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
+    "ad1da559-6638-4283-9b50-b5593c44ec3a",
+    "1661366277478615b4",
     "165533293947ac239b",
     "1653675322c6e1e849",
     "1654616390eb010a1b",
-    "165461637915913a64",
-    "16546165111365823c"
+    "165461637915913a64"
   ]
 }
