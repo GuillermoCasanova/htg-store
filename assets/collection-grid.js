@@ -161,85 +161,54 @@ class CollectionGrid extends HTMLElement {
             let mainProduct = pProductData;
             
             if(!mainProduct.metafields ||  !mainProduct.metafields.color_swatch.related_swatches) {
-                return
+                return ''
             }
 
             function getColorValues(pProductData) {
                 let colorInputsHtml = ``; 
                 let swatches = pProductData.metafields.color_swatch.related_swatches;
-                console.log(swatches);
+
+                let firstSwatch = swatches.filter(swatch => swatch.product.handle === mainProduct.handle);
+                let filteredSwatches = swatches.filter(swatch => swatch.product.handle !== mainProduct.handle);
+
+                swatches = [...firstSwatch, ...filteredSwatches];
+
+                console.log(firstSwatch); 
+                console.log(swatches); 
 
                 swatches.forEach((swatch, index) => {
                     let valueHTML = '';
 
-                    console.log(swatch.product); 
+                    valueHTML = `
+                    <span class="quick-add-color-picker__color"
+                          data-more-text="+${swatches.length} more color${swatches.length >= 5 ? 's' : ''}" >
+                            <input type="radio" 
+                            id="${sectionId}-${mainProduct.id}-${swatch.metafields.color_swatch.name}"
+                            name="color" 
+                            form="quick-add-form-${sectionId}-${mainProduct.id}"
+                            value="${swatch.metafields.color_swatch.name.toLowerCase()}"
+                            title="Shop ${mainProduct.title} in ${swatch.metafields.color_swatch.name}" 
+                            data-color-option
+                            data-product='${JSON.stringify(swatch.product)}'
+                            data-product-title="${swatch.product.title}" 
+                            data-handle="${swatch.product.title}"
+                            data-product-url="${swatch.product.url}"
+                            data-product-id="${swatch.product.id}"
+                            data-swatch="${swatch.metafields.color_swatch.name}"
+                            class="quick-add-color-picker__input"
+                            >
+                        <label class="quick-add-color-picker__label" for="${sectionId}-${mainProduct.id}-${swatch.metafields.color_swatch.name}" 
+                            data-color-label 
+                            data-color-name="${swatch.metafields.color_swatch.name}">
+                            <span class="quick-add-color-picker__label__swatch" 
+                            style="background-color: ${swatch.metafields.color_swatch.hex_color};">
 
-                    if(index == 0) {
-                      valueHTML = `
-                        <span class="quick-add-color-picker__color" 
-                        data-more-text="+${swatches.length} more color${swatches.length >= 6 ? 's' : ''}">
-                                <input type="radio" 
-                                id="${sectionId}-${mainProduct.id}-${mainProduct.metafields.color_swatch.name}"
-                                name="color" 
-                                form="quick-add-form-${sectionId}-${mainProduct.id}"
-                                value="${mainProduct.metafields.color_swatch.name.toLowerCase()}"
-                                title="Shop ${mainProduct.title} in ${mainProduct.metafields.color_swatch.name}" 
-                                data-color-option
-                                data-product='${JSON.stringify(swatch.product)}'
-                                data-product-title="${mainProduct.title}" 
-                                data-handle="${mainProduct.title}"
-                                data-product-url="${mainProduct.url}"
-                                data-product-id="${mainProduct.id}"
-                                data-swatch="${mainProduct.metafields.color_swatch.name}"
-                                class="quick-add-color-picker__input"
-                                >
-                            <label class="quick-add-color-picker__label" for="${sectionId}-${mainProduct.id}-${mainProduct.metafields.color_swatch.name}" 
-                                data-color-label 
-                                data-color-name="${mainProduct.metafields.color_swatch.name}">
-                                <span class="quick-add-color-picker__label__swatch" 
-                                style="background-color: ${mainProduct.metafields.color_swatch.hex_color};">
-
-                                </span>
-                                <span class="quick-add-color-picker__label__ring">
-                                </span>
-                            </label>
-                        </span>
-                    `;
-                         
-                    } else {
-                      valueHTML = `
-                            <span class="quick-add-color-picker__color"
-                                  data-more-text="+${swatches.length} more color${swatches.length >= 6 ? 's' : ''}" >
-                                    <input type="radio" 
-                                    id="${sectionId}-${mainProduct.id}-${swatch.metafields.color_swatch.name}"
-                                    name="color" 
-                                    form="quick-add-form-${sectionId}-${mainProduct.id}"
-                                    value="${swatch.metafields.color_swatch.name.toLowerCase()}"
-                                    title="Shop ${mainProduct.title} in ${swatch.metafields.color_swatch.name}" 
-                                    data-color-option
-                                    data-product='${JSON.stringify(swatch.product)}'
-                                    data-product-title="${swatch.product.title}" 
-                                    data-handle="${swatch.product.title}"
-                                    data-product-url="${swatch.product.url}"
-                                    data-product-id="${swatch.product.id}"
-                                    data-swatch="${swatch.metafields.color_swatch.name}"
-                                    class="quick-add-color-picker__input"
-                                    >
-                                <label class="quick-add-color-picker__label" for="${sectionId}-${mainProduct.id}-${swatch.metafields.color_swatch.name}" 
-                                    data-color-label 
-                                    data-color-name="${swatch.metafields.color_swatch.name}">
-                                    <span class="quick-add-color-picker__label__swatch" 
-                                    style="background-color: ${swatch.metafields.color_swatch.hex_color};">
-
-                                    </span>
-                                    <span class="quick-add-color-picker__label__ring">
-                                    </span>
-                                </label>
                             </span>
-                        `;
-
-                    }
-
+                            <span class="quick-add-color-picker__label__ring">
+                            </span>
+                        </label>
+                    </span>
+                `;
 
                     colorInputsHtml = colorInputsHtml + valueHTML; 
 
