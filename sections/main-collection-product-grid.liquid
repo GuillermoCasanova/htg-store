@@ -671,10 +671,10 @@
                      , "related_swatches": [
                      {%- assign activeCollection = collectionz -%}
                      {%- assign productz = activeCollection.products -%}
-                     
                       {%- for producti in productz -%}
                         {
-                          "product":   {{ producti | json }},
+                          "product":   "{{ producti.handle }}",
+                          "title":   "{{ producti.title }}",
                           "metafields": {
                             "color_swatch":  {
                               "name": "{{ producti.metafields.color_swatch.name }}", 
