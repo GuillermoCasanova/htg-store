@@ -228,7 +228,7 @@ body {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1300px) {
   :root {
-    font-size: 1.1rem;
+    font-size: .9rem;
   }
 }
 
@@ -236,7 +236,7 @@ body {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-    font-size: 1.05rem;
+    font-size: .95rem;
   }
 }
 
@@ -244,7 +244,7 @@ body {
 /*WIDESCREEN-UP*/
 @media screen and (min-width: 2000px) {
   :root {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 }
 

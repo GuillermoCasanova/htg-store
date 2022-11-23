@@ -21,8 +21,39 @@
       {% paginate collection.products by 1000 %}
         {%- for product in collection.products -%}
           {
-           "product": {{ product | json }},
-           "options_with_values": {{ product.options_with_values | json }}
+           "options_with_values": {{ product.options_with_values | json }},
+           "product": {{ product | json }}{%- unless product.metafields.color_swatch == empty -%},{%- endunless -%}
+           {%- unless product.metafields.color_swatch == empty -%} 
+           "metafields": {
+            "color_swatch":  {
+              "name": "{{ product.metafields.color_swatch.name }}", 
+              "hex_color": "{{ product.metafields.color_swatch.hex_color }}"
+              {%- for collectionz in product.collections -%}
+                  {%- assign collectionName = collectionz.title | downcase | handleize -%}
+                  {%- assign productName = product.title | downcase | split: " - " -%}
+                  {%- assign productNameHandle = productName[0] | handleize -%}
+                  {%- if productNameHandle == collectionName -%}
+                     , "related_swatches": [
+                     {%- assign activeCollection = collectionz -%}
+                     {%- assign productz = activeCollection.products -%}
+                     
+                      {%- for producti in productz -%}
+                        {
+                          "product":   {{ producti | json }},
+                          "metafields": {
+                            "color_swatch":  {
+                              "name": "{{ producti.metafields.color_swatch.name }}", 
+                              "hex_color": "{{ producti.metafields.color_swatch.hex_color }}"
+                            }
+                          }
+                        }{%- unless forloop.last -%},{%- endunless -%}
+                      {%- endfor -%}
+                    ]
+                   {%- endif -%} 
+                {%- endfor -%}
+            }
+           }
+           {%- endunless -%}
           }
           {% unless forloop.last %},{% endunless %}
         {%- endfor -%}
@@ -684,11 +715,12 @@ opacity: 1;
       <collection-grid data-paginate-by="{{ paginationNum }}"  data-collection-count="{{ collection.products.length }}"  data-collection-url="{{ collection.url }}" data-section-id="{{ section.id }}">
         <div class="product-grid-container" id="ProductGridContainer">
             <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+
               <div class="loading-overlay gradient">
                 <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
               </div>
       
-              <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
+              <ul data-id="{{ section.id }}" class="
                 grid product-grid">
                 {% paginate collection.products by 16 %}
                   {%- for product in collection.products -%}
@@ -729,6 +761,7 @@ opacity: 1;
   </div>
 
   <script src="{{ 'lodash.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'collection-grid.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
 {% endif %}

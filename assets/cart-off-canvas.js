@@ -496,7 +496,7 @@ class CartOffCanvas extends HTMLElement {
   
     enableLoading(line) {
       //document.getElementById('main-cart-items').classList.add('cart__items--disabled');
-      this.querySelectorAll('.loading-overlay')[line - 1].classList.remove('hidden');
+     ///this.querySelectorAll('.loading-overlay')[line - 1].classList.remove('hidden');
       document.activeElement.blur();
      // this.lineItemStatusElement.setAttribute('aria-hidden', false);
     }

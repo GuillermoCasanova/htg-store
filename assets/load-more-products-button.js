@@ -27,26 +27,10 @@ class loadMoreProductsButton extends HTMLElement {
         this.querySelector('button').classList.remove('is-loading'); 
     }
 
-    setCollectionTotal() {
-        const productContainerId = '[data-product-json]';
-
-        document.querySelectorAll(productContainerId).forEach((element)=> {
-          this.totalProducts.push(JSON.parse(element.textContent))
-        });
-
-        // IF NO MORE PRODUCTS, HIDE BUTTON
-        if(document.querySelector('collection-grid')) {
-            console.log('COLLECTION GRID FOUND');
-            let CollectionProducts = document.querySelector('collection-grid'); 
-            if(CollectionProducts.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
-                this.style.display = 'none';
-            }
-        }
-    }
 
     updateButton() {
         let CollectionProducts = document.querySelector('collection-grid'); 
-        if(CollectionProducts.getProductsRendered().length >=  CollectionProducts.getTotalProducts().length) {
+        if(CollectionProducts.getProductsRendered() >=  CollectionProducts.getTotalProducts()) {
             this.style.display = 'none';
         }
     }
