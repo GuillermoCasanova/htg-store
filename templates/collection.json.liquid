@@ -1,5 +1,5 @@
 {% layout none %}
-{% paginate collection.products by 1000 %}
+{%- paginate collection.products by 1000 -%}
 {
   "products": [
   {% for product in collection.products %}
@@ -64,4 +64,4 @@
 	}{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }
-{% endpaginate %}
+{%- endpaginate -%}

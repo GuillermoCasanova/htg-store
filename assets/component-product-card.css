@@ -116,7 +116,9 @@
   color: #fa0000;
 }
 
-
+.product-card__badge.is-hidden {
+  display: none;
+}
 
 
 

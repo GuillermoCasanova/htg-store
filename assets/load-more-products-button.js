@@ -9,8 +9,6 @@ class loadMoreProductsButton extends HTMLElement {
         }
 
         this.collectionTotal = 0; 
-        this.totalProducts = []; 
-        this.setCollectionTotal(); 
     }
 
     hide() {
@@ -21,37 +19,37 @@ class loadMoreProductsButton extends HTMLElement {
         this.style.display = 'block';
     }
 
-    setCollectionTotal() {
-        const productContainerId = '[data-product-json]';
+    showLoadState() {
+        this.querySelector('button').classList.add('is-loading'); 
+    }
 
-        document.querySelectorAll(productContainerId).forEach((element)=> {
-          this.totalProducts.push(JSON.parse(element.textContent))
-        });
+    hideLoadState() {
+        this.querySelector('button').classList.remove('is-loading'); 
+    }
 
-        // IF NO MORE PRODUCTS, HIDE BUTTON
-        if(document.querySelector('collection-grid')) {
-            let CollectionProducs = document.querySelector('collection-grid'); 
-            if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
-                this.style.display = 'none';
-            }
+
+    updateButton() {
+        let CollectionProducts = document.querySelector('collection-grid'); 
+        if(CollectionProducts.getProductsRendered() >=  CollectionProducts.getTotalProducts()) {
+            this.style.display = 'none';
         }
     }
-    
+
     loadMoreProducts() {
         let collectionHandle = this.dataset.collectionHandle;
         let collectionCount = this.dataset.collectionCount;
         let collectionTag = this.dataset.filteredByTag; 
 
-        let CollectionProducs = document.querySelector('collection-grid'); 
-        CollectionProducs.renderMoreProducts(parseInt(this.dataset.paginateBy));
-        
-        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
-            this.style.display = 'none';
-        }
+        let CollectionProducts = document.querySelector('collection-grid'); 
+        CollectionProducts.renderMoreProducts();
 
-        if(CollectionProducs.getProductsRendered().length >=  parseInt(this.totalProducts.length)) {
-            this.style.display = 'none';
-        }
+            // console.log(CollectionProducts.getProductsRendered().length); 
+            // console.log(CollectionProducts.totalProducts.length); 
+
+     
+        // if(CollectionProducts.getProductsRendered().length <=  CollectionProducts.totalProducts) {
+        //     this.style.display = 'block';
+        // }
     }
 
 }

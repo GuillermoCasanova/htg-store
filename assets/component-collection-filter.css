@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 collection-filters {
+    opacity: 0;
     width: 100%;
-    display: block;
 }
 
 .collection-filters {
@@ -13,6 +13,7 @@ collection-filters {
     z-index: 1;
     margin-bottom: var(--level8);
     width: 100%;
+    z-index: 2;
 }
 
 @media only screen and (min-width: 700px) {
