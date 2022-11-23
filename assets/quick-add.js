@@ -43,7 +43,7 @@ updateVariantData() {
             e.parentElement.removeChild(e); 
         }
         let newScript = document.createElement('script');
-        newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants);  
+        newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants || JSON.parse(currentColor.dataset.product) );  
         newScript.type = "application/json";
         elem.appendChild(newScript); 
         elem.dispatchEvent(new Event('change'));
@@ -52,8 +52,8 @@ updateVariantData() {
 
 updateImages() {
     let currentColor = this.getCurrentColor(); 
-    let productObj = JSON.parse(currentColor.dataset.product); 
-    let images = productObj.media.splice(0, 2); 
+    let productObj = JSON.parse(currentColor.dataset.productMedia); 
+    let images = productObj.splice(0, 2); 
     let imagesContainer =  document.querySelector(`[data-product-images][data-section="${this.dataset.section}"]`); 
 
     function createImageObj(pSource, pAlt, pWidth, pIndex) {

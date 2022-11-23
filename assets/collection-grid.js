@@ -168,8 +168,8 @@ class CollectionGrid extends HTMLElement {
                 let colorInputsHtml = ``; 
                 let swatches = pProductData.metafields.color_swatch.related_swatches;
 
-                let firstSwatch = swatches.filter(swatch => swatch.product.handle === mainProduct.handle);
-                let filteredSwatches = swatches.filter(swatch => swatch.product.handle !== mainProduct.handle);
+                let firstSwatch = swatches.filter(swatch => swatch.handle === mainProduct.handle);
+                let filteredSwatches = swatches.filter(swatch => swatch.handle !== mainProduct.handle);
 
                 swatches = [...firstSwatch, ...filteredSwatches];
 
@@ -189,11 +189,12 @@ class CollectionGrid extends HTMLElement {
                             value="${swatch.metafields.color_swatch.name.toLowerCase()}"
                             title="Shop ${mainProduct.title} in ${swatch.metafields.color_swatch.name}" 
                             data-color-option
-                            data-product='${JSON.stringify(swatch.product)}'
-                            data-product-title="${swatch.product.title}" 
-                            data-handle="${swatch.product.title}"
-                            data-product-url="${swatch.product.url}"
-                            data-product-id="${swatch.product.id}"
+                            data-product-media='${JSON.stringify(swatch.media)}'
+                            data-product='${JSON.stringify(swatch.variants)}'
+                            data-product-title="${swatch.title}" 
+                            data-handle="${swatch.title}"
+                            data-product-url="${swatch.url}"
+                            data-product-id="${swatch.id}"
                             data-swatch="${swatch.metafields.color_swatch.name}"
                             class="quick-add-color-picker__input"
                             >

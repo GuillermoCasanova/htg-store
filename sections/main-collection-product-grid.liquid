@@ -673,8 +673,12 @@
                      {%- assign productz = activeCollection.products -%}
                       {%- for producti in productz -%}
                         {
-                          "product":   "{{ producti.handle }}",
+                          "handle":   "{{ producti.handle }}",
+                          "url":   "{{ producti.url }}",
+                          "id":   "{{ producti.id }}",
                           "title":   "{{ producti.title }}",
+                          "media" : {{ producti.media | json }},
+                          "variants":   {{ producti.variants | json }},
                           "metafields": {
                             "color_swatch":  {
                               "name": "{{ producti.metafields.color_swatch.name }}", 
