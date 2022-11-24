@@ -426,8 +426,6 @@ class CollectionGrid extends HTMLElement {
         this.totalCollectionProducts = pProductsToShow; 
         this.totalProductsShowing = this.paginateBy;
         
-        console.log(this.totalProductsShowing); 
-
         pProductsToShow.slice(0, this.paginateBy).forEach((element)=> {
           let productThumb = this.getproductThumbTemplate(element); 
           collectionProductsContainer.insertAdjacentHTML('beforeend', productThumb); 
@@ -439,14 +437,12 @@ class CollectionGrid extends HTMLElement {
     }
   
     checkIfPaginationNeeded(pProductsRendered, pTotalProducts) {
-
-        console.log('total products on screen is ' + pProductsRendered);
-        console.log('total products in collection is ' + pTotalProducts)
-
-      if(pProductsRendered >= pTotalProducts) {
-        document.querySelector('load-more-products-button').hide(); 
-      } else {
-        document.querySelector('load-more-products-button').reset(); 
+      if(document.querySelector('load-more-products-button')) {
+        if(pProductsRendered >= pTotalProducts) {
+          document.querySelector('load-more-products-button').hide(); 
+        } else {
+          document.querySelector('load-more-products-button').reset(); 
+        }
       }
 
     }
