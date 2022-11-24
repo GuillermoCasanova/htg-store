@@ -173,8 +173,6 @@ class CollectionGrid extends HTMLElement {
 
                 swatches = [...firstSwatch, ...filteredSwatches];
 
-                console.log(firstSwatch); 
-                console.log(swatches); 
 
                 swatches.forEach((swatch, index) => {
                     let valueHTML = '';
@@ -385,9 +383,11 @@ class CollectionGrid extends HTMLElement {
         this.totalCollectionProducts = document.querySelector('collection-filters').getTotalProducts(); 
         this.totalProductsShowing = this.totalCollectionProducts.length < 16 ? this.totalCollectionProducts.length : this.paginateBy 
       }
-  
-      window.history.replaceState({page: this.section}, '', '?page_num=' + (this.section += 1));
-      const url = `${window.location.pathname}?page=${this.section}&?section_id=main-collection-product-grid`;
+      
+      this.section += 1
+
+      // window.history.replaceState({page: this.section}, '', '?page_num=' + (this.section += 1));
+      // const url = `${window.location.pathname}?page=${this.section}&?section_id=main-collection-product-grid`;
       // const queryUrl = new URL(window.location.href); 
   
       // params.delete('page_num');
@@ -397,10 +397,6 @@ class CollectionGrid extends HTMLElement {
       let productsToShow = []; 
   
       document.querySelector('load-more-products-button').showLoadState(); 
-
-      console.log(this.totalCollectionProducts); 
-      console.log(this.totalProductsShowing)
-
 
       productsToShow = this.totalCollectionProducts.slice(this.totalProductsShowing, this.section * this.getPagination()); 
 
@@ -418,8 +414,6 @@ class CollectionGrid extends HTMLElement {
         this.checkIfPaginationNeeded(this.totalProductsShowing,  this.totalCollectionProducts.length); 
 
       }, 200); 
-
-
       
     }
   

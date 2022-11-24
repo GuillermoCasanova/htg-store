@@ -21,7 +21,6 @@ class LookbookSlideshow extends HTMLElement {
     }
   
     init() {
-        console.log(this);
         this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
         this.handleLargeUp(this.mediaQueries.largeUp); 
     } 

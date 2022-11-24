@@ -650,61 +650,66 @@
 {% if show %}
 
 
-<script type="text/template" id="product-data">
-  {
-    "products":  [
-      {% paginate collection.products by 1000 %}
-        {%- for product in collection.products -%}
-          {
-           "options_with_values": {{ product.options_with_values | json }},
-           "product": {{ product | json }}{%- unless product.metafields.color_swatch == empty -%},{%- endunless -%}
-           {%- unless product.metafields.color_swatch == empty -%} 
-           "metafields": {
-            "color_swatch":  {
-              "name": "{{ product.metafields.color_swatch.name }}", 
-              "hex_color": "{{ product.metafields.color_swatch.hex_color }}"
-              {%- for collectionz in product.collections -%}
-                  {%- assign collectionName = collectionz.title | downcase | handleize -%}
-                  {%- assign productName = product.title | downcase | split: " - " -%}
-                  {%- assign productNameHandle = productName[0] | handleize -%}
-                  {%- if productNameHandle == collectionName -%}
-                     , "related_swatches": [
-                     {%- assign activeCollection = collectionz -%}
-                     {%- assign productz = activeCollection.products -%}
-                      {%- for producti in productz -%}
-                        {
-                          "handle":   "{{ producti.handle }}",
-                          "url":   "{{ producti.url }}",
-                          "id":   "{{ producti.id }}",
-                          "title":   "{{ producti.title }}",
-                          "media" : {{ producti.media | json }},
-                          "variants":   {{ producti.variants | json }},
-                          "metafields": {
-                            "color_swatch":  {
-                              "name": "{{ producti.metafields.color_swatch.name }}", 
-                              "hex_color": "{{ producti.metafields.color_swatch.hex_color }}"
-                            }
-                          }
-                        }{%- unless forloop.last -%},{%- endunless -%}
-                      {%- endfor -%}
-                    ]
-                   {%- endif -%} 
-                {%- endfor -%}
-            }
-           }
-           {%- endunless -%}
-          }
-          {% unless forloop.last %},{% endunless %}
-        {%- endfor -%}
-    {% endpaginate %}
-    ]
-  }
-</script>
+  <script type="text/template" id="product-data">
+    {
+      "products":  [
+        {% paginate collection.products by 1000 %}
+          {%- for product in collection.products -%}
+                  {
+                  "collections": {{ product.collections | json }},
+                  "handle":   "{{ product.handle }}",
+                  "url":   "{{ product.url }}",
+                  "id":   "{{ product.id }}",
+                  "title":   "{{ product.title }}",
+                  "media" : {{ product.media | json }},
+                  "variants":   {{ product.variants | json }},
+                  "available":   {{ product.available | json }},
+                  "price": {{ product.price | json }},
+                  "tags":   {{ product.tags | json }},
+                  "options_with_values": {{ product.options_with_values | json }}{%- unless product.metafields.color_swatch == empty -%},{%- endunless -%}
+                  {%- unless product.metafields.color_swatch == empty -%} 
+                  "metafields": {
+                    "color_swatch":  {
+                      "name": "{{ product.metafields.color_swatch.name }}", 
+                      "hex_color": "{{ product.metafields.color_swatch.hex_color }}"
+                      {%- for collectionz in product.collections -%}
+                          {%- assign collectionName = collectionz.title | downcase | handleize -%}
+                          {%- assign productName = product.title | downcase | split: " - " -%}
+                          {%- assign productNameHandle = productName[0] | handleize -%}
+                          {%- if productNameHandle == collectionName -%}
+                            , "related_swatches": [
+                            {%- assign activeCollection = collectionz -%}
+                            {%- assign productz = activeCollection.products -%}
+                              {%- for producti in productz -%}
+                                {
+                                  "handle":   "{{ producti.handle }}",
+                                  "url":   "{{ producti.url }}",
+                                  "id":   "{{ producti.id }}",
+                                  "title":   "{{ producti.title }}",
+                                  "media" : {{ producti.media | json }},
+                                  "variants":   {{ producti.variants | json }},
+                                  "metafields": {
+                                    "color_swatch":  {
+                                      "name": "{{ producti.metafields.color_swatch.name }}", 
+                                      "hex_color": "{{ producti.metafields.color_swatch.hex_color }}"
+                                    }
+                                  }
+                                }{%- unless forloop.last -%},{%- endunless -%}
+                              {%- endfor -%}
+                            ]
+                          {%- endif -%} 
+                        {%- endfor -%}
+                    }
+                  }
+                  {%- endunless -%}
+                  } {%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+      {% endpaginate %}
+      ]
+    }
+  </script>
 
 
-{% style %}
-
-  {% endstyle %}
 
 
   <div class="section-{{ section.id }}-padding"   data-collection-id="{{ collection.handle }}">

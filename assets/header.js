@@ -38,8 +38,6 @@ class HeaderDrawer  extends MenuDrawer {
       this.header = this.header || document.getElementById('shopify-section-header');
       this.borderOffset = this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
 
-      console.log(this.querySelector('aside')); 
-      console.dir(document.querySelector('sticky-header'));
       this.changeToggleText('menu');
       document.querySelector('header').classList.add('menu-is-open'); 
       this.querySelector('aside').style.height = `calc(101vh - ${document.querySelector('sticky-header').clientHeight + 'px'})`

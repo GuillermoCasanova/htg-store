@@ -29,7 +29,6 @@ class CollectionFilters extends HTMLElement {
         this.setActiveButton('filter-by'); 
 
         this.getFilteredProducts(productsToFilter).then((result) => {
-          console.log(result); 
           this.hideLoadingScreen(); 
           document.querySelector('collection-grid').renderProducts(result);
         }); 
@@ -167,7 +166,12 @@ class CollectionFilters extends HTMLElement {
     let rawData = JSON.parse(pJSON).products;
 
     rawData.forEach((element)=> {
-      let productObject  = element.product; 
+
+      if(element.collections == null || element.tags == undefined) {
+        return
+      }
+      
+      let productObject  = element.product || element; 
       productObject.collections = element.collections;
       productObject.options_with_values = element.options_with_values; 
       productObject.metafields = element.metafields; 
