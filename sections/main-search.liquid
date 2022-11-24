@@ -28,12 +28,13 @@
 
   @media screen and (min-width: 600px) {
     .pagination {
-      font-size: var(--h5);
+      font-size: var(--h4);
     }
   }
 
   @media screen and (min-width: 990px) {
     .pagination {
+      font-size: var(--h4);
       margin-top: calc(var(--level7) + var(--level3));
     }
   }
@@ -66,6 +67,12 @@
     font-size: var(--h6); 
   }
 
+  @media screen and (min-width: 990px) {
+    .pagination__direction {
+      font-size: var(--h4); 
+    }
+  }
+
   .pagination__direction__label {
     opacity: 0; 
     pointer-events: none; 
@@ -82,6 +89,18 @@
   }
 
 
+  .template-search__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--level2);
+    margin-bottom: var(--level2);
+    align-items: center; 
+  }
+
+  .template-search__header__terms {
+    font-size: var(--h4);
+    margin-bottom: var(--level2);
+  }
 {% endstyle %}
 
 
@@ -101,16 +120,9 @@
     {%- else -%}
       <h1 class="h2">{{ 'general.search.search' | t }}</h1>
     {%- endif -%}
-    {%- if search.performed -%}
-      {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
-        {%- if search.results_count > 0 -%}
-          <p role="status">{{ 'templates.search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}</p>
-        {%- endif -%}
-      {%- endunless -%}
-      {%- if search.results_count == 0 and search.filters == empty -%}
-        <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
-      {%- endif -%}
-    {%- endif -%}
+    <p class="template-search__header__terms">
+      Search Term: "{{ search.terms }}"
+    </p>
   </div>
 
 
