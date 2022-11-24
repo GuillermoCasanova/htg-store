@@ -36,20 +36,8 @@ class loadMoreProductsButton extends HTMLElement {
     }
 
     loadMoreProducts() {
-        let collectionHandle = this.dataset.collectionHandle;
-        let collectionCount = this.dataset.collectionCount;
-        let collectionTag = this.dataset.filteredByTag; 
-
         let CollectionProducts = document.querySelector('collection-grid'); 
         CollectionProducts.renderMoreProducts();
-
-            // console.log(CollectionProducts.getProductsRendered().length); 
-            // console.log(CollectionProducts.totalProducts.length); 
-
-     
-        // if(CollectionProducts.getProductsRendered().length <=  CollectionProducts.totalProducts) {
-        //     this.style.display = 'block';
-        // }
     }
 
 }

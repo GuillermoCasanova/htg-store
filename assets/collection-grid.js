@@ -5,7 +5,7 @@ class CollectionGrid extends HTMLElement {
         this.totalCollectionProducts = [];
         this.section = 1; 
         this.paginateBy = parseInt(this.dataset.paginateBy);
-        window.history.replaceState(null, null, null);
+        //window.history.replaceState(null, null, null);
     }
 
   
@@ -17,7 +17,7 @@ class CollectionGrid extends HTMLElement {
   
       let indexToStartFrom = parseInt(pNumToStartFrom); 
   
-      window.history.replaceState(null, null, null); 
+     // window.history.replaceState(null, null, null); 
   
       // if(pFiltered) {
       //   if(this.totalCollectionProducts.length>= parseInt(this.dataset.paginateBy)) {
@@ -401,6 +401,8 @@ class CollectionGrid extends HTMLElement {
       productsToShow = this.totalCollectionProducts.slice(this.totalProductsShowing, this.section * this.getPagination()); 
 
 
+      console.log('render more products!');
+      
       setTimeout(()=> {
         document.querySelector('load-more-products-button').hideLoadState(); 
         
