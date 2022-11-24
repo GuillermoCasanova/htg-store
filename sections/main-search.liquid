@@ -10,9 +10,79 @@
 <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-{{ 'component-facets.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+  .pagination-container {
+    width: 100%; 
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    font-size: var(--h6);
+  }
+
+  @media screen and (min-width: 600px) {
+    .pagination {
+      font-size: var(--h5);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .pagination {
+      margin-top: calc(var(--level7) + var(--level3));
+    }
+  }
+  
+
+  
+  .pagination a {
+    padding: var(--level2);
+    text-decoration: none;
+  }
 
 
+  @media screen and (min-width: 600px) {
+    .pagination a {
+     padding: 1rem;
+    }
+  }
+
+  .pagination a:hover,
+  .pagination a:focus {
+    text-decoration: underline;
+  }
+
+  [aria-current="page"]  {
+    padding: 1rem;
+    text-decoration: underline; 
+  }
+
+  .pagination__direction {
+    font-size: var(--h6); 
+  }
+
+  .pagination__direction__label {
+    opacity: 0; 
+    pointer-events: none; 
+    position: fixed;
+  }
+
+
+  @media screen and (min-width: 600px) {
+    .pagination__direction__label {
+      opacity: 1; 
+      pointer-events: all; 
+      position: relative;
+    }
+  }
+
+
+{% endstyle %}
 
 
 
@@ -65,37 +135,39 @@
 
         
           
-          <ul id="AjaxinateContainer" data-id="{{ section.id }}" class="
-            grid product-grid">
+          <ul id="AjaxinateContainer" data-id="{{ section.id }}" >
             {% paginate search.results by paginationNum %}
-              {%- for product in search.results -%}
-                {% if product.object_type == 'product' %}
-                <li class="grid__item" data-product-id="{{ product.id }}">
-                  {% render 'product-card',
-                    heading_level: 'h3',
-                    card_product: product,
-                    show_quick_add: true,
-                    section_id: section.id
-                    product_collection: collection
-                  %}
-                </li>
-                {% endif %}
-              {%- endfor -%}
+           
+            <div class=" grid product-grid">
+                {%- for product in search.results -%}
+                  {% if product.object_type == 'product' %}
+                  <li class="grid__item" data-product-id="{{ product.id }}">
+                    {% render 'product-card',
+                      heading_level: 'h3',
+                      card_product: product,
+                      show_quick_add: true,
+                      section_id: section.id
+                      product_collection: collection
+                    %}
+                  </li>
+                  {% endif %}
+                {%- endfor -%}
+            </div>
 
               {%- if paginate.pages > 1 -%}
-                <nav role="navigation">
+                <nav role="navigation" class="pagination-container" aria-label="pagination ">
                   <ol class="pagination">
                     {%- if paginate.previous -%}
-                      <li>
+                      <li class="pagination__direction">
                         <a href="{{ paginate.previous.url }}">
                           <span aria-hidden="true">&laquo;</span>
-                          Previous <span class="visuallyhidden">page</span>
+                          <span class="pagination__direction__label">Previous</span> <span class="visually-hidden">page</span>
                         </a>
                       </li>
                     {%- else -%}
-                      <li class="disabled">
+                      <li class="disabled" class="pagination__direction">
                         <span aria-hidden="true">&laquo;</span>
-                        Previous <span class="visuallyhidden">page</span>
+                        <span class="pagination__direction__label">Previous</span> <span class="visually-hidden">page</span>
                       </li>
                     {%- endif -%}
             
@@ -103,32 +175,32 @@
                       {%- if part.is_link -%}
                         <li>
                           <a href="{{ part.url }}">
-                            <span class="visuallyhidden">page</span> {{ part.title }}
+                            <span class="visually-hidden">page</span> {{ part.title }}
                           </a>
                         </li>
                       {%- else -%}
                         {%- if part.title == paginate.current_page -%}
                           <li class="active" aria-current="page">
-                            <span class="visuallyhidden">page</span> {{ part.title }}
+                            <span class="visually-hidden">page</span> {{ part.title }}
                           </li>
                         {%- else -%}
                           <li>
-                            <span class="visuallyhidden">page</span> {{ part.title }}
+                            <span class="visually-hidden">page</span> {{ part.title }}
                           </li>
                         {%- endif -%}
                       {%- endif -%}
                     {%- endfor -%}
             
                     {%- if paginate.next -%}
-                      <li>
+                      <li class="pagination__direction">
                         <a href="{{ paginate.next.url }}">
-                          Next <span class="visuallyhidden">page</span>
+                          <span class="pagination__direction__label">Next</span> <span class="visually-hidden">page</span>
                           <span aria-hidden="true">&raquo;</span>
                         </a>
                       </li>
                     {%- else -%}
-                      <li class="disabled">
-                        Next <span class="visuallyhidden">page</span>
+                      <li class="disabled" class="pagination__direction">
+                        <span class="pagination__direction__label">Next</span> <span class="visually-hidden">page</span>
                         <span aria-hidden="true">&raquo;</span>
                       </li>
                     {%- endif -%}
