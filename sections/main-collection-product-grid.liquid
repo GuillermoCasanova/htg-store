@@ -385,9 +385,8 @@
 }
 
   {
-  % comment %
 }
-
+% comment %
 <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'"> {
   % endcomment %
 }
@@ -406,11 +405,13 @@
   .product-card-wrapper:hover .quick-add-button {
     opacity: 1;
     transform: translateY(0);
+    display: block; 
+    position: relative; 
+    z-index: 0;  
   }
 }
 
 .quick-add-form {
-  position: relative;
   grid-row-start: 4;
   margin: 0 0 1rem;
   z-index: 1;
@@ -421,6 +422,9 @@
   margin-bottom: var(--level9);
   margin-top: -.5rem;
   opacity: 0;
+  display: none; 
+  position: fixed; 
+  z-index: -1; 
 }
 
 @media (hover: hover) {
