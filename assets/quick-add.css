@@ -25,10 +25,13 @@
   opacity: 0;
 }
 
+
+
 @media (hover: hover) {
   .quick-add-form {
     visibility: visible;
     z-index: 0;
+    display: block;
     position: relative;
   }
 }

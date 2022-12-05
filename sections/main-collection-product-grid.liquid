@@ -192,9 +192,12 @@
   color: rgb(var(--color-base-text));
 }
 
-.product-card:hover .media img:first-child,
-.product-card:focus .media img:first-child {
-  opacity: 0;
+
+@media (hover: hover) {
+  .product-card:hover .media img:first-child,
+  .product-card:focus .media img:first-child {
+    opacity: 0;
+  }
 }
 
 .product-card:hover *,
