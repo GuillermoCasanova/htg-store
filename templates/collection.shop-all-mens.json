@@ -5,6 +5,24 @@
       "settings": {
       }
     },
+    "fa9e520c-204d-4293-896c-f12e8904bb85": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/mens\/defined",
+        "product_list": [
+          "sueded-band-jacket-grey",
+          "private-school-polo-black",
+          "mascot-hoodie-white",
+          "htg-dedication-t-shirt-black",
+          "school-boy-trouser-grey",
+          "campus-carpenter-pant-white",
+          "code-of-honor-bucket-hat-white",
+          "code-of-honor-scarf-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -27,24 +45,6 @@
           "htg-x-union-hoodie-black",
           "htg-x-union-shorts-white",
           "htg-x-union-hat-white"
-        ],
-        "enable_quick_add": true
-      }
-    },
-    "fa9e520c-204d-4293-896c-f12e8904bb85": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Defined",
-        "collection_url": "\/collections\/mens\/defined",
-        "product_list": [
-          "sueded-band-jacket-grey",
-          "private-school-polo-black",
-          "mascot-hoodie-white",
-          "htg-dedication-t-shirt-black",
-          "school-boy-trouser-grey",
-          "campus-carpenter-pant-white",
-          "code-of-honor-bucket-hat-white",
-          "code-of-honor-scarf-black"
         ],
         "enable_quick_add": true
       }
@@ -173,9 +173,9 @@
   },
   "order": [
     "banner",
+    "fa9e520c-204d-4293-896c-f12e8904bb85",
     "product-grid",
     "3bdfc525-5e97-4abd-92ad-54b133728112",
-    "fa9e520c-204d-4293-896c-f12e8904bb85",
     "16590256583d5a0a0f",
     "1654614072e4a2b52f",
     "16540387627dd6a3af",
