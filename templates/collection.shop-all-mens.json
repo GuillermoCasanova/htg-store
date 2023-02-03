@@ -5,6 +5,28 @@
       "settings": {
       }
     },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
+    "c16f385c-3fd5-401c-a208-e1813744bdac": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "HTG® x Jordan",
+        "collection_url": "",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "fa9e520c-204d-4293-896c-f12e8904bb85": {
       "type": "collection-preview",
       "settings": {
@@ -21,16 +43,6 @@
           "code-of-honor-scarf-black"
         ],
         "enable_quick_add": true
-      }
-    },
-    "product-grid": {
-      "type": "main-collection-product-grid",
-      "settings": {
-        "enable_quick_add": true,
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "child_collection": true
       }
     },
     "3bdfc525-5e97-4abd-92ad-54b133728112": {
@@ -173,8 +185,9 @@
   },
   "order": [
     "banner",
-    "fa9e520c-204d-4293-896c-f12e8904bb85",
     "product-grid",
+    "c16f385c-3fd5-401c-a208-e1813744bdac",
+    "fa9e520c-204d-4293-896c-f12e8904bb85",
     "3bdfc525-5e97-4abd-92ad-54b133728112",
     "16590256583d5a0a0f",
     "1654614072e4a2b52f",
