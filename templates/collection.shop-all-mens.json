@@ -15,6 +15,24 @@
         "child_collection": true
       }
     },
+    "c16f385c-3fd5-401c-a208-e1813744bdac": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Jordan x HTG®",
+        "collection_url": "\/collections\/mens\/jordan-x-htg-2023",
+        "product_list": [
+          "jordan-why-not-6-htg-stone",
+          "jam-westbrook-x-htg-backpack-pecan",
+          "jordan-x-rw-x-htg-bucket-phantom",
+          "jordan-x-htg-varsity-jacket-pecan-moon-fossil",
+          "jordan-x-htg-t-shirt-phantom",
+          "jordan-x-htg-crewneck-stone",
+          "jordan-x-htg-pant-stone"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "fa9e520c-204d-4293-896c-f12e8904bb85": {
       "type": "collection-preview",
       "settings": {
@@ -169,28 +187,12 @@
         ],
         "enable_quick_add": true
       }
-    },
-    "c16f385c-3fd5-401c-a208-e1813744bdac": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Jordan x HTG®",
-        "collection_url": "\/collections\/mens\/jordan-x-htg-2023",
-        "product_list": [
-          "jordan-why-not-6-htg-stone",
-          "jordan-x-htg-varsity-jacket-pecan-moon-fossil",
-          "jordan-x-htg-t-shirt-phantom",
-          "jam-westbrook-x-htg-backpack-pecan",
-          "jordan-x-htg-crewneck-stone",
-          "jordan-x-rw-x-htg-bucket-phantom",
-          "jordan-x-htg-pant-stone"
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
+    "c16f385c-3fd5-401c-a208-e1813744bdac",
     "fa9e520c-204d-4293-896c-f12e8904bb85",
     "3bdfc525-5e97-4abd-92ad-54b133728112",
     "16590256583d5a0a0f",
@@ -199,7 +201,6 @@
     "1654614390e8e5413f",
     "165403876742214c90",
     "16630187024a9c32e7",
-    "1654615044eadf777e",
-    "c16f385c-3fd5-401c-a208-e1813744bdac"
+    "1654615044eadf777e"
   ]
 }
