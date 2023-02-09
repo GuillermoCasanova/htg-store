@@ -1,5 +1,7 @@
  {% comment %} {{ 'template-collection.css' | asset_url | stylesheet_tag }}  {% endcomment %}
 {% comment %} {{ 'component-product-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'"> { {% endcomment %}
+
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -383,130 +385,114 @@
   outline: 0;
 }
 
-  {
-  % endstyle %
-}
-
-  {
-}
-% comment %
-<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'"> {
-  % endcomment %
-}
-
-  {
-  % style %
-}
-
+ 
 /*------------------------------------*\
     #Quick Add
 \*------------------------------------*/
 
 @media (hover: hover) {
 
-  .product-card-wrapper:hover .quick-add-form,
-  .product-card-wrapper:hover .quick-add-button {
-    opacity: 1;
-    transform: translateY(0);
-    display: block; 
-    position: relative; 
-    z-index: 0;  
-  }
+.product-card-wrapper:hover .quick-add-form,
+.product-card-wrapper:hover .quick-add-button {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
 
 .quick-add-form {
-  grid-row-start: 4;
-  margin: 0 0 1rem;
-  z-index: 1;
-  bottom: 0;
-  visibility: hidden;
-  z-index: -1;
-  position: fixed;
-  margin-bottom: var(--level9);
-  margin-top: -.5rem;
-  opacity: 0;
-  display: none; 
-  position: fixed; 
-  z-index: -1; 
+position: relative;
+grid-row-start: 4;
+margin: 0 0 1rem;
+z-index: 1;
+bottom: 0;
+visibility: hidden;
+z-index: -1;
+position: fixed;
+margin-bottom: var(--level9);
+margin-top: -.5rem;
+opacity: 0;
 }
 
+
+
 @media (hover: hover) {
-  .quick-add-form {
-    visibility: visible;
-    z-index: 0;
-    position: relative;
-  }
+.quick-add-form {
+  visibility: visible;
+  z-index: 0;
+  display: block;
+  position: relative;
+}
 }
 
 .quick-add-form__inner {
-  display: flex;
-  justify-content: space-between;
+display: flex;
+justify-content: space-between;
 }
 
 .card--card .quick-add {
-  margin: 0 1.3rem 1rem;
+margin: 0 1.3rem 1rem;
 }
 
 .product-card .quick-add-button-container {
-  position: absolute;
-  z-index: 3;
-  width: 94%;
-  left: 0;
-  right: 0;
-  margin-right: auto;
-  margin-left: auto;
-  top: auto;
-  bottom: var(--level1);
+position: absolute;
+z-index: 3;
+width: 94%;
+left: 0;
+right: 0;
+margin-right: auto;
+margin-left: auto;
+top: auto;
+bottom: var(--level1);
 }
 
 .quick-add-button {
-  background-color: #fff;
-  border: 1px solid rgb(var(--color-base-text));
-  height: 1.50rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  width: 100%;
-  color: rgb(var(--color-base-text));
-  font-size: var(--normal);
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all .2s ease;
+background-color: #fff;
+border: 1px solid rgb(var(--color-base-text));
+height: 1.50rem;
+display: flex;
+align-items: center;
+justify-content: center;
+line-height: 1;
+width: 100%;
+color: rgb(var(--color-base-text));
+font-size: var(--normal);
+opacity: 0;
+transform: translateY(100%);
+transition: all .2s ease;
 }
 
 
 .quick-add-button[disabled="true"] {
-  border: 1px solid rgb(var(--color-base-link));
-  color: rgb(var(--color-base-link));
-  pointer-events: none;
+border: 1px solid rgb(var(--color-base-link));
+color: rgb(var(--color-base-link));
+pointer-events: none;
 }
 
 
 @media (hover: hover) {
 
-  .quick-add-button:hover,
-  .quick-add-button:focus {
-    background-color: black;
-    color: #fff;
-    cursor: pointer;
-  }
+.quick-add-button:hover,
+.quick-add-button:focus {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
 }
 
 @media only screen and (min-width: 700px) {
-  .quick-add-button {
-    height: auto;
-    padding-top: var(--level2);
-    padding-bottom: var(--level1);
-  }
+.quick-add-button {
+  height: auto;
+  padding-top: var(--level2);
+  padding-bottom: var(--level1);
+}
 }
 
 @media only screen and (min-width: 930px) {
-  .quick-add-button {
-    height: auto;
-    padding-top: var(--level2);
-    padding-bottom: var(--level1);
-  }
+.quick-add-button {
+  height: auto;
+  padding-top: var(--level2);
+  padding-bottom: var(--level1);
+}
 }
 
 
@@ -519,52 +505,79 @@
 \*------------------------------------*/
 
 .quick-add-color-picker__colors {
-  display: flex;
+display: flex;
 }
 
 .quick-add-color-picker__color {
-  position: relative;
-  display: block;
-  width: 1.05rem;
-  height: 1.05rem;
-  margin-right: .25rem;
+position: relative;
+display: block;
+width: 1.05rem;
+height: 1.05rem;
+margin-right: .25rem;
 }
 
 @media only screen and (min-width: 930px) {
-  .quick-add-color-picker__color {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: .35rem;
-  }
+.quick-add-color-picker__color {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: .35rem;
+}
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(n+5) {
+display: none;
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(5) {
+display: block;
+position: static;
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(5):after {
+position: absolute;
+left: 0;
+bottom: -1.15rem;
+font-size: var(--mini);
+color: rgb(var(--color-base-link));
+content: attr(data-more-text);
+text-transform: uppercase;
+}
+
+.quick-add-color-picker__colors .quick-add-color-picker__color:nth-child(5) * {
+display: none;
 }
 
 .quick-add-color-picker__color label {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+display: block;
 }
 
 .quick-add-color-picker__color label:hover {
-  cursor: pointer;
+cursor: pointer;
+}
+
+.quick-add-color-picker__color label:hover .quick-add-color-picker__label__swatch {
+border: 2px solid black;
 }
 
 .quick-add-color-picker__label__swatch {
-  height: 100%;
-  width: 100%;
-  display: block;
-  border-radius: 100%;
+height: 100%;
+width: 100%;
+display: block;
+border-radius: 100%;
 }
 
 .quick-add-color-picker__color input {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
+opacity: 0;
+pointer-events: none;
+position: absolute;
+z-index: 0;
 }
 
 .quick-add-color-picker__color input:checked+label .quick-add-color-picker__label__swatch {
-  border: 1.5px solid rgb(var(--color-base-text));
+border: 1.5px solid rgb(var(--color-base-text));
 }
 
 
@@ -576,74 +589,79 @@
 \*------------------------------------*/
 
 .quick-add-variants__options {
-  display: flex;
+display: flex;
 }
 
 
 .quick-add-variants__options .quick-add-variants__option:last-child {
-  margin-right: 0;
+margin-right: 0;
 }
 
 .quick-add-variants__option.is-sold-out label:hover {
-  cursor: default;
+cursor: default;
 }
 
 .quick-add-variants__option.is-sold-out label {
-  color: rgb(var(--color-base-link));
-  text-decoration: line-through;
-  opacity: .6;
+color: rgb(var(--color-base-link));
+text-decoration: line-through;
+opacity: .6;
+pointer-events: none;
+}
+
+.quick-add-variants__option.is-sold-out input:checked+label:after {
+opacity: .6;
+color: rgb(var(--color-base-link));
 }
 
 .quick-add-variants__option {
-  position: relative;
-  margin-right: .5rem;
-  font-family: var(--primary-font-family);
+position: relative;
+margin-right: .5rem;
+font-family: var(--primary-font-family);
 }
 
 
 @media only screen and (min-width: 930px) {
-  .quick-add-variants__option {
-    font-size: var(--normal);
-    margin-right: .75rem;
-  }
+.quick-add-variants__option {
+  font-size: var(--normal);
+  margin-right: .7rem;
+}
 }
 
 .quick-add-variants label {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
+position: relative;
+width: 100%;
+height: 100%;
+display: block;
 }
 
 .quick-add-variants__option label:after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  bottom: .12rem;
-  left: 0;
-  height: 1px;
-  background-color: rgb(var(--color-base-text));
-  opacity: 0;
+content: "";
+width: 100%;
+position: absolute;
+bottom: .12rem;
+left: 0;
+height: 1px;
+background-color: rgb(var(--color-base-text));
+opacity: 0;
 }
 
 
 .quick-add-variants__option label:hover,
 .quick-add-variants__option label:hover:after {
-  cursor: pointer;
-  opacity: 1;
+cursor: pointer;
+opacity: 1;
 }
 
 .quick-add-variants__option input {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
+opacity: 0;
+pointer-events: none;
+position: absolute;
+z-index: 0;
 }
 
 .quick-add-variants__option input:checked+label:after {
-  opacity: 1;
+opacity: 1;
 }
-
 
 {% endstyle %}
 
