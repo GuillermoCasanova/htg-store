@@ -202,6 +202,7 @@
 
 .quick-add-variants__options {
   display: flex;
+  flex-wrap: wrap;
 }
 
 
