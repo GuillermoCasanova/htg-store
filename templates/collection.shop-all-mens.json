@@ -189,11 +189,19 @@
     },
     "6fb45919-52f9-480d-bf1e-37784463a9de": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Imprint",
         "collection_url": "\/collections\/mens\/imprint",
         "product_list": [
-
+          "work-horse-t-shirt-black",
+          "htg-branded-qtr-zip-grey",
+          "h-quilted-vest-khaki",
+          "h-quilted-jacket-black",
+          "cotton-h-hoodie-heather",
+          "full-zip-truth-hoodie-bone",
+          "h-quilted-pant-khaki",
+          "h-quilted-pant-black"
         ],
         "enable_quick_add": true
       }
