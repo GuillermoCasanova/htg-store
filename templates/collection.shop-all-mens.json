@@ -186,6 +186,18 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "6fb45919-52f9-480d-bf1e-37784463a9de": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "\/collections\/mens\/imprint",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -200,6 +212,7 @@
     "1654614390e8e5413f",
     "165403876742214c90",
     "16630187024a9c32e7",
-    "1654615044eadf777e"
+    "1654615044eadf777e",
+    "6fb45919-52f9-480d-bf1e-37784463a9de"
   ]
 }
