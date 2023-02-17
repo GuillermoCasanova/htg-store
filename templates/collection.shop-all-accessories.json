@@ -17,11 +17,19 @@
     },
     "c705520a-5f7b-48b5-adde-2690dd50f918": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Imprint",
         "collection_url": "\/collections\/imprint-accessories",
         "product_list": [
-
+          "h-quilted-bucket-hat-black",
+          "h-quilted-bucket-hat-slate",
+          "slouch-htg-sock-cream",
+          "slouch-htg-sock-brown",
+          "crest-rib-sock-black",
+          "crest-rib-sock-white",
+          "inner-city-rib-sock-black",
+          "inner-city-rib-sock-olive"
         ],
         "enable_quick_add": true
       }
