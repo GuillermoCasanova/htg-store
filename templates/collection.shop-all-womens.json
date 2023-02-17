@@ -140,11 +140,19 @@
     },
     "c47108af-e80e-40a8-b335-6d5ea64c6292": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Imprint",
         "collection_url": "\/collections\/womens\/imprint",
         "product_list": [
-
+          "womens-cadet-top-khaki",
+          "womens-sewing-room-t-shirt-white",
+          "womens-riding-top-black",
+          "womens-service-jump-suit-indigo",
+          "womens-mining-pant-khaki",
+          "womens-h-quilted-cargo-pant-grey",
+          "womens-bike-short-black",
+          "womens-service-dress-cream"
         ],
         "enable_quick_add": true
       }
