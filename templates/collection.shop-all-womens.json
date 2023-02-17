@@ -137,6 +137,17 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "c47108af-e80e-40a8-b335-6d5ea64c6292": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "\/collections\/womens\/imprint",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -148,6 +159,7 @@
     "1653675322c6e1e849",
     "1654616107f8647e02",
     "1653675292ee58c106",
-    "16546162643d494cbe"
+    "16546162643d494cbe",
+    "c47108af-e80e-40a8-b335-6d5ea64c6292"
   ]
 }
