@@ -80,6 +80,13 @@
             "country_region": "Japan",
             "store_list": "<li>Nubian, Ibaraki<\/li>"
           }
+        },
+        "8a7f9cba-303e-4b16-9d6f-eddd9a8eb1ba": {
+          "type": "stockist-list",
+          "settings": {
+            "country_region": "Singapore",
+            "store_list": "<li>Evolve Clothing Gallery<\/li>"
+          }
         }
       },
       "block_order": [
@@ -92,7 +99,8 @@
         "82909324-575c-4e42-a3f4-686fff95663f",
         "13d2bca3-e9b2-4d86-ac0f-9e44a071b891",
         "cadb69b1-9e94-4987-a166-9f84638223ff",
-        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a"
+        "ac060ff3-43f4-4a1d-ae47-89dcd51be56a",
+        "8a7f9cba-303e-4b16-9d6f-eddd9a8eb1ba"
       ],
       "settings": {
         "page": ""
