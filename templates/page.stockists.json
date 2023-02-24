@@ -4,7 +4,8 @@
       "type": "main-page",
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "hide_body": "false"
       }
     },
     "main": {
@@ -14,7 +15,7 @@
           "type": "stockist-list",
           "settings": {
             "country_region": "United States",
-            "store_list": "<li>Union, CA<\/li>\n<li>Proper, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li> Webster, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>\n<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Next, OH<\/li>\n<li>1032 Space, OK<\/li>\n<li>Commonwealth, VA<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>Fred Segal, NV<\/li>\n<li>Proper, TX<\/li>\n<li>Guestlist, AZ (Kids)<\/li>\n<li>Carbon 38, CA (Womens)<\/li>\n<li>Eggy, CA (Kids)<\/li>\n<li>Elfin, CA (Kids)<\/li>\n<li>Flicka, CA (Kids)<\/li>\n<li>Foot Express, CA (Kids)<\/li>\n<li>Heat, CA (Kids)<\/li>\n<li>Paliskates, CA (Kids)<\/li>\n<li>Ragg Tattoo, CA (Kids)<\/li>\n<li>Kings, CA (Kids)<\/li>\n<li>Red Balloon, CA (Kids)<\/li>\n<li>Unseen Littles, CA (Kids)<\/li>\n<li>Casp Baby, FL (Kids)<\/li>\n<li>Cheeky Chic Boutique, FL (Kids)<\/li>\n<li>Clay Luxury Kids, GA (Kids)<\/li>\n<li>Clay Luxury Kids, IL (Kids)<\/li>\n<li>Wns Apparel, IN<\/li>\n<li>Zen, KY (Kids)<\/li>\n<li>Politics, LA (Kids)<\/li>\n<li>Reflections, LA (Kids)<\/li>\n<li>Rebnd, MA (Kids)<\/li>\n<li>The Restaurant Bistro, MI (Kids)<\/li>\n<li>Cityman, MI (Kids)<\/li>\n<li>Privei, NC (Kids)<\/li>\n<li>Feature, NV (Kids)<\/li>\n<li>Marcias Attic, NJ (Kids)<\/li>\n<li>Reform Kids, NJ (Kids)<\/li>\n<li>Shop Lovebug Baby, NV (Kids)<\/li>\n<li>Clay Luxury Kids, OH (Kids)<\/li>\n<li>Double Rainbow, OH (Kids)<\/li>\n<li>Kicks Lounge, OH (Kids)<\/li>\n<li>My Little Peanut, OR (Kids)<\/li>\n<li>Politics, TX (Kids)<\/li>\n<li>Premium Goods, TX (Kids)<\/li>\n<li>Status Boutique<\/li>"
+            "store_list": "<li>Union, CA<\/li>\n<li>Proper, CA<\/li>\n<li>Heir LLC, FL<\/li>\n<li>Unknwn, FL<\/li>\n<li> Webster, FL<\/li>\n<li>Wish Atl, GA<\/li>\n<li>Corporate\/Status II LLC, IN<\/li>\n<li>Bodega, MA<\/li>\n<li>The Whitaker Group, NC<\/li>\n<li>Stadium Goods, NJ<\/li>\n<li>Alumni, NY<\/li>\n<li>Evolve Clothing Gallery, NJ<\/li>\n<li>Next, OH<\/li>\n<li>1032 Space, OK<\/li>\n<li>Commonwealth, VA<\/li>\n<li>Sneakersnstuff, NY<\/li>\n<li>Fred Segal, NV<\/li>\n<li>Proper, TX<\/li>\n<li>Guestlist, AZ (Kids)<\/li>\n<li>Carbon 38, CA (Womens)<\/li>\n<li>Eggy, CA (Kids)<\/li>\n<li>Elfin, CA (Kids)<\/li>\n<li>Flicka, CA (Kids)<\/li>\n<li>Foot Express, CA (Kids)<\/li>\n<li>Heat, CA (Kids)<\/li>\n<li>Paliskates, CA (Kids)<\/li>\n<li>Ragg Tattoo, CA (Kids)<\/li>\n<li>Kings, CA (Kids)<\/li>\n<li>Red Balloon, CA (Kids)<\/li>\n<li>Unseen Littles, CA (Kids)<\/li>\n<li>Casp Baby, FL (Kids)<\/li>\n<li>Cheeky Chic Boutique, FL (Kids)<\/li>\n<li>Clay Luxury Kids, GA (Kids)<\/li>\n<li>Clay Luxury Kids, IL (Kids)<\/li>\n<li>Wns Apparel, IN<\/li>\n<li>Zen, KY (Kids)<\/li>\n<li>Politics, LA (Kids)<\/li>\n<li>Reflections, LA (Kids)<\/li>\n<li>Rebnd, MA (Kids)<\/li>\n<li>The Restaurant Bistro, MI (Kids)<\/li>\n<li>Cityman, MI (Kids)<\/li>\n<li>Privei, NC (Kids)<\/li>\n<li>Feature, NV (Kids)<\/li>\n<li>Marcias Attic, NJ (Kids)<\/li>\n<li>Reform Kids, NJ (Kids)<\/li>\n<li>Shop Lovebug Baby, NV (Kids)<\/li>\n<li>Clay Luxury Kids, OH (Kids)<\/li>\n<li>Double Rainbow, OH (Kids)<\/li>\n<li>Kicks Lounge, OH (Kids)<\/li>\n<li>My Little Peanut, OR (Kids)<\/li>\n<li>Politics, TX (Kids)<\/li>\n<li>Premium Goods, TX (Kids)<\/li>\n<li>Status Boutique<\/li>"
           }
         },
         "3c87f196-d4b9-48e8-8412-3931ffbc5431": {
