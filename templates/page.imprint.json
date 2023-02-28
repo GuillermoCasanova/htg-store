@@ -16,10 +16,29 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "79d385c6-284f-48fa-be4a-828b71b98cde": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca": {
+          "type": "slideshow_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
-    "fb7e97ae-dcf7-48cc-9e88-a3b22ea461fe"
+    "fb7e97ae-dcf7-48cc-9e88-a3b22ea461fe",
+    "79d385c6-284f-48fa-be4a-828b71b98cde"
   ]
 }
