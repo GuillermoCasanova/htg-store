@@ -31,11 +31,18 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_2.jpg"
           }
+        },
+        "2f473b45-a452-408b-9e36-2014eb41a357": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_3.jpg"
+          }
         }
       },
       "block_order": [
         "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca",
-        "011a6844-9b0e-4aae-9eb7-01c663d515af"
+        "011a6844-9b0e-4aae-9eb7-01c663d515af",
+        "2f473b45-a452-408b-9e36-2014eb41a357"
       ],
       "settings": {
         "name": "",
