@@ -196,11 +196,22 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "b3d675d9-b002-49df-b124-919b5b96909e": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Imprint Collection",
+        "collection": "imprint",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
     "fb7e97ae-dcf7-48cc-9e88-a3b22ea461fe",
-    "79d385c6-284f-48fa-be4a-828b71b98cde"
+    "79d385c6-284f-48fa-be4a-828b71b98cde",
+    "b3d675d9-b002-49df-b124-919b5b96909e"
   ]
 }
