@@ -23,11 +23,18 @@
         "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca": {
           "type": "slideshow_slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_2c6f8a6f-1232-4c17-a344-f2f855fbefbe.jpg"
+          }
+        },
+        "011a6844-9b0e-4aae-9eb7-01c663d515af": {
+          "type": "slideshow_slide",
+          "settings": {
           }
         }
       },
       "block_order": [
-        "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca"
+        "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca",
+        "011a6844-9b0e-4aae-9eb7-01c663d515af"
       ],
       "settings": {
         "name": "",
