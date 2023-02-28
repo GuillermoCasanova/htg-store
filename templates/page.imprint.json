@@ -67,6 +67,54 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_8.jpg"
           }
+        },
+        "847cba47-a298-4fe9-8e96-24e79f8d5f33": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_9.jpg"
+          }
+        },
+        "e1692a4b-1c6f-4140-a61f-d0b79be11d68": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_10.jpg"
+          }
+        },
+        "35072e57-2565-4961-85cb-127996e18f6e": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_11.jpg"
+          }
+        },
+        "a4210a5d-3d8f-4734-94f1-641ba063b50b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_12.jpg"
+          }
+        },
+        "12e4d629-88cb-40d6-9ea9-79441fa46503": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_13.jpg"
+          }
+        },
+        "8d4dac44-e98b-4f39-854b-e02963d2d1ef": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_14.jpg"
+          }
+        },
+        "cc2febea-9094-4af0-8d4e-6b7bbd1eb3d2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_15.jpg"
+          }
+        },
+        "fb8665d7-9c43-46a4-a76c-1eed5d74a3dd": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_16.jpg"
+          }
         }
       },
       "block_order": [
@@ -77,7 +125,15 @@
         "3f2bf6b7-675e-43c2-82a0-4ffebc84244f",
         "2484d30b-5461-4097-9cb8-f6f2ebcf8bb4",
         "35b5dea1-d9e1-4467-94a1-ec65b0449bf9",
-        "a6d2b752-a48f-4fe9-8327-aa8cfac9392a"
+        "a6d2b752-a48f-4fe9-8327-aa8cfac9392a",
+        "847cba47-a298-4fe9-8e96-24e79f8d5f33",
+        "e1692a4b-1c6f-4140-a61f-d0b79be11d68",
+        "35072e57-2565-4961-85cb-127996e18f6e",
+        "a4210a5d-3d8f-4734-94f1-641ba063b50b",
+        "12e4d629-88cb-40d6-9ea9-79441fa46503",
+        "8d4dac44-e98b-4f39-854b-e02963d2d1ef",
+        "cc2febea-9094-4af0-8d4e-6b7bbd1eb3d2",
+        "fb8665d7-9c43-46a4-a76c-1eed5d74a3dd"
       ],
       "settings": {
         "name": "",
