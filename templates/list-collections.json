@@ -3,10 +3,10 @@
     "header": {
       "type": "main-list-collections-header",
       "settings": {
-        "heading": "Defined",
-        "body": "<p>Honor The Gift closes out their year with a 145-piece Holiday collection titled “Defined” narrowing in on a palette of three color ways offering black, white and grey. We are keeping the collection literal and focusing on the message as we offer the meaning behind the brand's true identity. Focusing on graphic tees, classic silhouettes, quality materials and full fashion knits. Carried over from seasons before, our nature is to solely conceptualize that it is not what we wear, it is what we stand for. <\/p>",
-        "collection_lookbook_url": "shopify:\/\/pages\/defined",
-        "image": "shopify:\/\/shop_images\/1-Title_478cc0f7-af4a-4747-9101-28f8b888cb5e.jpg",
+        "heading": "Imprint",
+        "body": "<p>Honor The Gift’s Spring Summer 23 Collection redefines workwear inspired by the imprint of overlooked Black Labor of the 1800s. From emancipation to now, Black culture has left its print on every fabric through space and time. The workwear of African American culture has led to the threads that lace our very community. <br\/><br\/><strong>The contributions of Black Americans still go unseen but they do not go unfelt. We wear our contributions on our sleeves.<\/strong><\/p>",
+        "collection_lookbook_url": "shopify:\/\/pages\/imprint",
+        "image": "shopify:\/\/shop_images\/CCV003_1.33.2_ba837422-e4d4-43ba-a42e-c0615d84214b.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "7354b537-7f63-4b4d-b1a8-268bc484525f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Imprint",
+            "thumbnail": "shopify:\/\/shop_images\/01_fc44e768-5916-4222-99b6-ebd1f7a0bb3d.jpg",
+            "lookbook_url": "shopify:\/\/pages\/imprint"
+          }
+        },
         "7dd4b3a3-868a-4b44-85b0-2551b997f367": {
           "type": "archival-collection",
           "settings": {
@@ -160,6 +168,7 @@
         }
       },
       "block_order": [
+        "7354b537-7f63-4b4d-b1a8-268bc484525f",
         "7dd4b3a3-868a-4b44-85b0-2551b997f367",
         "c9091d87-03fc-45bf-baf1-2cc729fbc903",
         "df298214-7371-4125-b692-df7e80aa7e1b",
