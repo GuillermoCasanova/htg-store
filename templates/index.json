@@ -63,7 +63,7 @@
         "right-image": "shopify:\/\/shop_images\/02_Women_fc894043-1bed-4466-8d58-1f938f1e14e8.jpg",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "shopify:\/\/collections\/womens",
-        "top_border": "no",
+        "top_border": "yes",
         "bottom_border": "yes"
       }
     },
