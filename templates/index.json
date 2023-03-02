@@ -14,8 +14,8 @@
         "heading"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/39cc28a3fa31475a9c431ab24c3eb9f4.mp4",
-        "cta-url": ""
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5b977c1cf348429592253767d4856464.mp4",
+        "cta-url": "shopify:\/\/collections\/imprint"
       }
     },
     "1654645496c068b051": {
@@ -24,19 +24,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1-Mens_f334ae0c-b3a0-4a98-bd90-ad0c0ba3f4ef.jpg"
+            "image": "shopify:\/\/shop_images\/01_fa96e5bf-4fd7-485b-babe-e03f8bf7dd18.jpg"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2-Middle_453db4e6-49b5-4e02-bbc8-a7de8935c34e.jpg"
+            "image": "shopify:\/\/shop_images\/02_364f4187-408b-447c-8ba2-330ec9588953.jpg"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3-Womens_79d85a06-51b4-492b-ab0b-3991b9c6cc15.jpg"
+            "image": "shopify:\/\/shop_images\/03_4a512dd4-2b82-4abb-91d9-cb35ab97fb72.jpg"
           }
         }
       },
@@ -46,9 +46,9 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "Defined – Holiday 2022 Collection",
-        "body": "<p>Honor The Gift closes out their year with a 145-piece Holiday collection titled “Defined” narrowing in on a palette of three color ways offering black, white and grey. We are keeping the collection literal and focusing on the message as we offer the meaning behind the brand's true identity. Focusing on graphic tees, classic silhouettes, quality materials and full fashion knits. Carried over from seasons before, our nature is to solely conceptualize that it is not what we wear, it is what we stand for.  <\/p>",
-        "cta-url": "shopify:\/\/pages\/defined",
+        "heading": "Imprint – Spring 2023 Collection",
+        "body": "<p>Honor The Gift announces <em>Imprint<\/em>, a collection inspired by the threads of Black Labor of the 1800s featuring the Compton Cowboys, the notorious modern-day black equestrians from Compton California.<\/p>",
+        "cta-url": "shopify:\/\/collections\/imprint",
         "top_border": "yes",
         "bottom_border": "yes"
       }
@@ -57,12 +57,12 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/1-Mens_0646ee29-209a-47ca-b671-dc4c1922bad3.jpg",
+        "left-image": "shopify:\/\/shop_images\/01_Men_2562bba5-4681-47ae-8661-2164739de67c.jpg",
         "left-cta-text": "Shop Mens",
-        "left-cta-url": "\/collections\/mens\/",
-        "right-image": "shopify:\/\/shop_images\/2-Womens_cec365f2-6d7c-4f4e-9fef-d6d77e889991.jpg",
+        "left-cta-url": "shopify:\/\/collections\/mens",
+        "right-image": "shopify:\/\/shop_images\/02_Women_fc894043-1bed-4466-8d58-1f938f1e14e8.jpg",
         "right-cta-text": "Shop Womens",
-        "right-cta-url": "\/collections\/womens\/",
+        "right-cta-url": "shopify:\/\/collections\/womens",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -81,6 +81,7 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
+      "disabled": true,
       "settings": {
         "heading": "Defined – Kids",
         "body": "",
@@ -99,7 +100,7 @@
       "settings": {
         "heading": "For The Inner City",
         "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
-        "image": "shopify:\/\/shop_images\/1-Russell_344070b5-80bd-4ace-8fa4-dabb9f134bc6.jpg",
+        "image": "shopify:\/\/shop_images\/Sized_RW_Image_for_Web.jpg",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
         "top_border": "no",
