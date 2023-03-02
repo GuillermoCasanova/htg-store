@@ -103,7 +103,7 @@
         "image": "shopify:\/\/shop_images\/Sized_RW_Image_for_Web.jpg",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
-        "top_border": "no",
+        "top_border": "yes",
         "bottom_border": "yes"
       }
     },
