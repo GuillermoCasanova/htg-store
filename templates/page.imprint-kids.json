@@ -16,10 +16,79 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "da05740f-653e-414f-85af-ee1aee6adb7c": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "2a0e38e9-fd0d-4bfc-aac5-8212446f61a3": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy_b54d76ab-05b0-4d67-becc-7bc7d50d03db.jpg"
+          }
+        },
+        "8ea5394c-6457-451a-bd76-c7b794283203": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy3.jpg"
+          }
+        },
+        "50d097d0-a9a5-41e5-85e4-581ba8e56a07": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy4.jpg"
+          }
+        },
+        "4466ea0c-1fb7-4f26-af6a-836fd9e6a8cb": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy6.jpg"
+          }
+        },
+        "85b68167-acd7-473a-8eeb-7cd5e3a90408": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy7.jpg"
+          }
+        },
+        "abef6fda-b8f3-4a2f-94b4-e6bcf74a2cdf": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy8.jpg"
+          }
+        },
+        "1816fce7-8a54-468e-a4ee-fcffaef003e2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy9.jpg"
+          }
+        },
+        "a67cabb8-0fc4-4d10-b8d5-ad3b8feb544b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy10.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "2a0e38e9-fd0d-4bfc-aac5-8212446f61a3",
+        "8ea5394c-6457-451a-bd76-c7b794283203",
+        "50d097d0-a9a5-41e5-85e4-581ba8e56a07",
+        "4466ea0c-1fb7-4f26-af6a-836fd9e6a8cb",
+        "85b68167-acd7-473a-8eeb-7cd5e3a90408",
+        "abef6fda-b8f3-4a2f-94b4-e6bcf74a2cdf",
+        "1816fce7-8a54-468e-a4ee-fcffaef003e2",
+        "a67cabb8-0fc4-4d10-b8d5-ad3b8feb544b"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
-    "5e0dec79-eff7-4488-ab8a-6301a675ab15"
+    "5e0dec79-eff7-4488-ab8a-6301a675ab15",
+    "da05740f-653e-414f-85af-ee1aee6adb7c"
   ]
 }
