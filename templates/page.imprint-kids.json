@@ -150,12 +150,32 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "a251b7b2-28ff-45a0-8800-d86d82373e07": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14958116012111__a251b7b2-28ff-45a0-8800-d86d82373e07-1678230732efc200ce-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "template--14958116012111__a251b7b2-28ff-45a0-8800-d86d82373e07-1678230732efc200ce-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/CCV003_1.33.2_c499d62e-a7d5-47d9-90c5-dfd2551f93cf.jpg",
+        "video": "",
+        "cta-url": ""
+      }
     }
   },
   "order": [
     "header",
     "5e0dec79-eff7-4488-ab8a-6301a675ab15",
     "da05740f-653e-414f-85af-ee1aee6adb7c",
-    "c514a036-e7e0-4f10-8977-a21cf576b3ad"
+    "c514a036-e7e0-4f10-8977-a21cf576b3ad",
+    "a251b7b2-28ff-45a0-8800-d86d82373e07"
   ]
 }
