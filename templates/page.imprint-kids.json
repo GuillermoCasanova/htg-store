@@ -6,9 +6,20 @@
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5b977c1cf348429592253767d4856464.mp4",
         "cta-url": ""
       }
+    },
+    "5e0dec79-eff7-4488-ab8a-6301a675ab15": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Imprint Kids – Spring 2023 Collection",
+        "body": "<p>Honor The Gift announces <em>Imprint<\/em>, a collection inspired by the threads of Black Labor of the 1800s featuring the Compton Cowboys, the notorious modern-day black equestrians from Compton California.<\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "5e0dec79-eff7-4488-ab8a-6301a675ab15"
   ]
 }
