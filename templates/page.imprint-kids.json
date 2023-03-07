@@ -67,6 +67,54 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy10.jpg"
           }
+        },
+        "56645d83-298f-4b89-8979-9cbf7bb04206": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy11.jpg"
+          }
+        },
+        "4ca8e566-ad82-4ef5-8d8f-4dc7a40d85c0": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy12.jpg"
+          }
+        },
+        "c30cfa44-d0d2-4594-80f5-133f8d5b5ee7": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy13.jpg"
+          }
+        },
+        "f54ccd14-1486-4c15-a142-90f20ab04de9": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy14.jpg"
+          }
+        },
+        "24bbd70a-3d46-4a39-b20a-94d84c0f081e": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy15.jpg"
+          }
+        },
+        "e06de22a-0e2e-426c-b497-9c9bb8f95aac": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy16.jpg"
+          }
+        },
+        "f2195141-b27b-458b-9627-e774a5770191": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy17.jpg"
+          }
+        },
+        "7917f1fb-edd9-4a5c-8aa9-041a4e6f5925": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy18.jpg"
+          }
         }
       },
       "block_order": [
@@ -77,7 +125,15 @@
         "85b68167-acd7-473a-8eeb-7cd5e3a90408",
         "abef6fda-b8f3-4a2f-94b4-e6bcf74a2cdf",
         "1816fce7-8a54-468e-a4ee-fcffaef003e2",
-        "a67cabb8-0fc4-4d10-b8d5-ad3b8feb544b"
+        "a67cabb8-0fc4-4d10-b8d5-ad3b8feb544b",
+        "56645d83-298f-4b89-8979-9cbf7bb04206",
+        "4ca8e566-ad82-4ef5-8d8f-4dc7a40d85c0",
+        "c30cfa44-d0d2-4594-80f5-133f8d5b5ee7",
+        "f54ccd14-1486-4c15-a142-90f20ab04de9",
+        "24bbd70a-3d46-4a39-b20a-94d84c0f081e",
+        "e06de22a-0e2e-426c-b497-9c9bb8f95aac",
+        "f2195141-b27b-458b-9627-e774a5770191",
+        "7917f1fb-edd9-4a5c-8aa9-041a4e6f5925"
       ],
       "settings": {
         "name": "",
