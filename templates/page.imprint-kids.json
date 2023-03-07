@@ -140,11 +140,22 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "c514a036-e7e0-4f10-8977-a21cf576b3ad": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Imprint Kids Collection",
+        "collection": "imprint-kids",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
     "5e0dec79-eff7-4488-ab8a-6301a675ab15",
-    "da05740f-653e-414f-85af-ee1aee6adb7c"
+    "da05740f-653e-414f-85af-ee1aee6adb7c",
+    "c514a036-e7e0-4f10-8977-a21cf576b3ad"
   ]
 }
