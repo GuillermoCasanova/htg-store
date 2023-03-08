@@ -124,6 +124,17 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "d8a82659-1ec8-415c-a9af-0312a79616ad": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "shopify:\/\/collections\/imprint-kids",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -134,6 +145,7 @@
     "165533293947ac239b",
     "1653675322c6e1e849",
     "1654616390eb010a1b",
-    "165461637915913a64"
+    "165461637915913a64",
+    "d8a82659-1ec8-415c-a9af-0312a79616ad"
   ]
 }
