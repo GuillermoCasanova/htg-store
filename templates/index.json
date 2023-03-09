@@ -67,6 +67,21 @@
         "bottom_border": "yes"
       }
     },
+    "16554195319ec4aeed": {
+      "type": "featured-collection-alt",
+      "settings": {
+        "heading": "Imprint – Kids",
+        "body": "",
+        "collection_hero_image": "shopify:\/\/shop_images\/01_Left_eb9c94b4-65fc-456c-a91f-478849c61c57.jpg",
+        "lookbook_url_text": "View Lookbook",
+        "lookbook_url": "shopify:\/\/pages\/imprint-kids",
+        "right_image": "shopify:\/\/shop_images\/02_Right_a80958b9-e4db-4cfe-92d0-09ee36950774.jpg",
+        "right_cta_text": "Shop Kids",
+        "right_cta_url": "shopify:\/\/collections\/imprint-kids",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
     "b396d892-7d6e-44a7-abaa-8f288b626bc9": {
       "type": "blurb-section",
       "settings": {
@@ -75,22 +90,6 @@
         "image": "shopify:\/\/shop_images\/Shoe_HP.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1",
-        "top_border": "no",
-        "bottom_border": "yes"
-      }
-    },
-    "16554195319ec4aeed": {
-      "type": "featured-collection-alt",
-      "disabled": true,
-      "settings": {
-        "heading": "Defined – Kids",
-        "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/3-Kids_Left_c9f108f5-72fc-4c17-ab87-c95512a2b749.jpg",
-        "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "shopify:\/\/pages\/defined",
-        "right_image": "shopify:\/\/shop_images\/4-Kids_Right_9e040cb8-7e2f-4aed-a2d3-64ba27a8a2cc.jpg",
-        "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/defined-kids",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -132,8 +131,8 @@
     "image_banner",
     "1654645496c068b051",
     "165464550697d6e482",
-    "b396d892-7d6e-44a7-abaa-8f288b626bc9",
     "16554195319ec4aeed",
+    "b396d892-7d6e-44a7-abaa-8f288b626bc9",
     "1654659992853b6cdb",
     "1655920347d426af19",
     "165954546289929c5f"
