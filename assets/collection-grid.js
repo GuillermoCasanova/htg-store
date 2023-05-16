@@ -401,7 +401,6 @@ class CollectionGrid extends HTMLElement {
       productsToShow = this.totalCollectionProducts.slice(this.totalProductsShowing, this.section * this.getPagination()); 
 
 
-      console.log('render more products!');
       
       setTimeout(()=> {
         document.querySelector('load-more-products-button').hideLoadState(); 

@@ -971,7 +971,7 @@ opacity: 1;
                 {% endpaginate %}
               </ul>
             </div>
-            {% if collection.products.length > paginationNum %}
+            {% if collection.products.length >= paginationNum %}
               <script src="{{ 'load-more-products-button.js' | asset_url }}" defer="defer"></script>
               <load-more-products-button data-paginate-by="{{ paginationNum }}"  data-collection-total="{{ collection.products.length }}">
                 <div class="load-more-products-button-container">
