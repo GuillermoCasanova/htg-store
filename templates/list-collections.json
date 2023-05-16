@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Imprint Kids",
+            "thumbnail": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy_d747b6c9-f334-4497-abc8-bf408d12b8db.jpg",
+            "lookbook_url": "shopify:\/\/pages\/imprint-kids"
+          }
+        },
         "7354b537-7f63-4b4d-b1a8-268bc484525f": {
           "type": "archival-collection",
           "settings": {
@@ -168,6 +176,7 @@
         }
       },
       "block_order": [
+        "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed",
         "7354b537-7f63-4b4d-b1a8-268bc484525f",
         "7dd4b3a3-868a-4b44-85b0-2551b997f367",
         "c9091d87-03fc-45bf-baf1-2cc729fbc903",

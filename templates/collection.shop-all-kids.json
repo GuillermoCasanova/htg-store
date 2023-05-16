@@ -15,6 +15,24 @@
         "child_collection": true
       }
     },
+    "d8a82659-1ec8-415c-a9af-0312a79616ad": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "shopify:\/\/collections\/imprint-kids",
+        "product_list": [
+          "kids-arched-htg-t-shirt-bone",
+          "kids-crest-logo-hoodie-tan",
+          "kids-uniform-l-s-shirt-olive",
+          "kids-uniform-s-s-button-up-slate",
+          "kids-uniform-pant-bone",
+          "kids-crest-logo-short-tan",
+          "kids-uniform-short-olive",
+          "kids-field-cargo-pant-slate"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "ad1da559-6638-4283-9b50-b5593c44ec3a": {
       "type": "collection-preview",
       "settings": {
@@ -129,6 +147,7 @@
   "order": [
     "banner",
     "product-grid",
+    "d8a82659-1ec8-415c-a9af-0312a79616ad",
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "1661366277478615b4",
     "165533293947ac239b",

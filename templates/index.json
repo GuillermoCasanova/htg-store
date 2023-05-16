@@ -57,13 +57,28 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/01_Men_2562bba5-4681-47ae-8661-2164739de67c.jpg",
+        "left-image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_17_4a3b3223-fc02-4315-8312-f23bfeb59869.jpg",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "shopify:\/\/collections\/mens",
-        "right-image": "shopify:\/\/shop_images\/02_Women_fc894043-1bed-4466-8d58-1f938f1e14e8.jpg",
+        "right-image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_16_152495dc-606f-4f11-ae35-02612284dbb9.jpg",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "shopify:\/\/collections\/womens",
-        "top_border": "yes",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "16554195319ec4aeed": {
+      "type": "featured-collection-alt",
+      "settings": {
+        "heading": "Imprint – Kids",
+        "body": "",
+        "collection_hero_image": "shopify:\/\/shop_images\/01_Left_eb9c94b4-65fc-456c-a91f-478849c61c57.jpg",
+        "lookbook_url_text": "View Lookbook",
+        "lookbook_url": "shopify:\/\/pages\/imprint-kids",
+        "right_image": "shopify:\/\/shop_images\/02_Right_a80958b9-e4db-4cfe-92d0-09ee36950774.jpg",
+        "right_cta_text": "Shop Kids",
+        "right_cta_url": "shopify:\/\/collections\/imprint-kids",
+        "top_border": "no",
         "bottom_border": "yes"
       }
     },
@@ -79,22 +94,6 @@
         "bottom_border": "yes"
       }
     },
-    "16554195319ec4aeed": {
-      "type": "featured-collection-alt",
-      "disabled": true,
-      "settings": {
-        "heading": "Defined – Kids",
-        "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/3-Kids_Left_c9f108f5-72fc-4c17-ab87-c95512a2b749.jpg",
-        "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "shopify:\/\/pages\/defined",
-        "right_image": "shopify:\/\/shop_images\/4-Kids_Right_9e040cb8-7e2f-4aed-a2d3-64ba27a8a2cc.jpg",
-        "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/defined-kids",
-        "top_border": "no",
-        "bottom_border": "yes"
-      }
-    },
     "1654659992853b6cdb": {
       "type": "blurb-section",
       "settings": {
@@ -103,7 +102,7 @@
         "image": "shopify:\/\/shop_images\/Sized_RW_Image_for_Web.jpg",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
-        "top_border": "yes",
+        "top_border": "no",
         "bottom_border": "yes"
       }
     },
@@ -132,8 +131,8 @@
     "image_banner",
     "1654645496c068b051",
     "165464550697d6e482",
-    "b396d892-7d6e-44a7-abaa-8f288b626bc9",
     "16554195319ec4aeed",
+    "b396d892-7d6e-44a7-abaa-8f288b626bc9",
     "1654659992853b6cdb",
     "1655920347d426af19",
     "165954546289929c5f"

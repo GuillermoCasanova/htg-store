@@ -1,0 +1,181 @@
+{
+  "sections": {
+    "header": {
+      "type": "image-banner",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5b977c1cf348429592253767d4856464.mp4",
+        "cta-url": ""
+      }
+    },
+    "5e0dec79-eff7-4488-ab8a-6301a675ab15": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Imprint Kids – Spring 2023 Collection",
+        "body": "<p>Honor The Gift announces <em>Imprint<\/em>, a collection inspired by the threads of Black Labor of the 1800s featuring the Compton Cowboys, the notorious modern-day black equestrians from Compton California.<\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "da05740f-653e-414f-85af-ee1aee6adb7c": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "2a0e38e9-fd0d-4bfc-aac5-8212446f61a3": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy_b54d76ab-05b0-4d67-becc-7bc7d50d03db.jpg"
+          }
+        },
+        "8ea5394c-6457-451a-bd76-c7b794283203": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy3.jpg"
+          }
+        },
+        "50d097d0-a9a5-41e5-85e4-581ba8e56a07": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy4.jpg"
+          }
+        },
+        "4466ea0c-1fb7-4f26-af6a-836fd9e6a8cb": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy6.jpg"
+          }
+        },
+        "85b68167-acd7-473a-8eeb-7cd5e3a90408": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy7.jpg"
+          }
+        },
+        "abef6fda-b8f3-4a2f-94b4-e6bcf74a2cdf": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy8.jpg"
+          }
+        },
+        "1816fce7-8a54-468e-a4ee-fcffaef003e2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy9.jpg"
+          }
+        },
+        "a67cabb8-0fc4-4d10-b8d5-ad3b8feb544b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy10.jpg"
+          }
+        },
+        "56645d83-298f-4b89-8979-9cbf7bb04206": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy11.jpg"
+          }
+        },
+        "4ca8e566-ad82-4ef5-8d8f-4dc7a40d85c0": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy12.jpg"
+          }
+        },
+        "c30cfa44-d0d2-4594-80f5-133f8d5b5ee7": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy13.jpg"
+          }
+        },
+        "f54ccd14-1486-4c15-a142-90f20ab04de9": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy14.jpg"
+          }
+        },
+        "24bbd70a-3d46-4a39-b20a-94d84c0f081e": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy15.jpg"
+          }
+        },
+        "e06de22a-0e2e-426c-b497-9c9bb8f95aac": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy16.jpg"
+          }
+        },
+        "f2195141-b27b-458b-9627-e774a5770191": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy17.jpg"
+          }
+        },
+        "7917f1fb-edd9-4a5c-8aa9-041a4e6f5925": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy18.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "2a0e38e9-fd0d-4bfc-aac5-8212446f61a3",
+        "8ea5394c-6457-451a-bd76-c7b794283203",
+        "50d097d0-a9a5-41e5-85e4-581ba8e56a07",
+        "4466ea0c-1fb7-4f26-af6a-836fd9e6a8cb",
+        "85b68167-acd7-473a-8eeb-7cd5e3a90408",
+        "abef6fda-b8f3-4a2f-94b4-e6bcf74a2cdf",
+        "1816fce7-8a54-468e-a4ee-fcffaef003e2",
+        "a67cabb8-0fc4-4d10-b8d5-ad3b8feb544b",
+        "56645d83-298f-4b89-8979-9cbf7bb04206",
+        "4ca8e566-ad82-4ef5-8d8f-4dc7a40d85c0",
+        "c30cfa44-d0d2-4594-80f5-133f8d5b5ee7",
+        "f54ccd14-1486-4c15-a142-90f20ab04de9",
+        "24bbd70a-3d46-4a39-b20a-94d84c0f081e",
+        "e06de22a-0e2e-426c-b497-9c9bb8f95aac",
+        "f2195141-b27b-458b-9627-e774a5770191",
+        "7917f1fb-edd9-4a5c-8aa9-041a4e6f5925"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "c514a036-e7e0-4f10-8977-a21cf576b3ad": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Imprint Kids Collection",
+        "collection": "imprint-kids",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "a251b7b2-28ff-45a0-8800-d86d82373e07": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14958116012111__a251b7b2-28ff-45a0-8800-d86d82373e07-1678230732efc200ce-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "template--14958116012111__a251b7b2-28ff-45a0-8800-d86d82373e07-1678230732efc200ce-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/CCV003_1.33.2_c499d62e-a7d5-47d9-90c5-dfd2551f93cf.jpg",
+        "video": "",
+        "cta-url": ""
+      }
+    }
+  },
+  "order": [
+    "header",
+    "5e0dec79-eff7-4488-ab8a-6301a675ab15",
+    "da05740f-653e-414f-85af-ee1aee6adb7c",
+    "c514a036-e7e0-4f10-8977-a21cf576b3ad",
+    "a251b7b2-28ff-45a0-8800-d86d82373e07"
+  ]
+}
