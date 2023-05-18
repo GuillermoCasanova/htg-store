@@ -89,6 +89,7 @@
     },
     "1653675322c6e1e849": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/womens\/concrete-jungle",
