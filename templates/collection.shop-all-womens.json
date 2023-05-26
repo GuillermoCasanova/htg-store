@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "8ab7bcd2-8778-4a5e-b963-658bc18bc61c": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Summer 23",
+        "collection_url": "\/collections\/womens\/summer-23",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "c47108af-e80e-40a8-b335-6d5ea64c6292": {
       "type": "collection-preview",
       "settings": {
@@ -161,6 +173,7 @@
   "order": [
     "banner",
     "product-grid",
+    "8ab7bcd2-8778-4a5e-b963-658bc18bc61c",
     "c47108af-e80e-40a8-b335-6d5ea64c6292",
     "f728d6ac-59f9-4340-be1b-c2aaff780bac",
     "1659025745e9d39846",
