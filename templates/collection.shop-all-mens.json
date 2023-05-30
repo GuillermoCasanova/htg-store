@@ -17,6 +17,7 @@
     },
     "ef27d716-e142-4b57-af2d-190bee5f2692": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Summer 23",
         "collection_url": "\/collections\/mens\/summer-23",
