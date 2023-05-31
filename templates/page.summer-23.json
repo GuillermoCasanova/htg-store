@@ -154,11 +154,22 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "c8a8a051-5b57-41c2-b021-99e30f3e71f5": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Summer 2023",
+        "collection": "summer-23",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
     "369ce215-ff9f-4ab3-88a4-01718c202dda",
-    "9e9ed774-1432-4b4e-a87f-d97dde04d61a"
+    "9e9ed774-1432-4b4e-a87f-d97dde04d61a",
+    "c8a8a051-5b57-41c2-b021-99e30f3e71f5"
   ]
 }
