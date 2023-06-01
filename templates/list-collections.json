@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "f99d453a-07f9-485a-ac9a-e20b38ef2090": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Summer 23",
+            "thumbnail": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_9b4b887a-41b7-4645-94c8-d0df9b9817d4.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-23"
+          }
+        },
         "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed": {
           "type": "archival-collection",
           "settings": {
@@ -176,6 +184,7 @@
         }
       },
       "block_order": [
+        "f99d453a-07f9-485a-ac9a-e20b38ef2090",
         "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed",
         "7354b537-7f63-4b4d-b1a8-268bc484525f",
         "7dd4b3a3-868a-4b44-85b0-2551b997f367",
