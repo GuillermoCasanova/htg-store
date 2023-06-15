@@ -146,12 +146,18 @@
     },
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Summer 23",
         "collection_url": "\/collections\/kids\/summ",
         "product_list": [
-
+          "kids-blooming-flower-full-zip-hoodie-ath-heather",
+          "kids-floral-ss-crewneck-teal",
+          "kids-1988-stamp-shirt-mustard",
+          "kids-fast-cars-t-shirt-white",
+          "kids-raw-edge-terry-short-ath-heather",
+          "kids-raw-edge-terry-short-teal",
+          "kids-1988-t-rex-t-shirt-ath-heather",
+          "kids-rise-tank-cream"
         ],
         "enable_quick_add": true
       }
