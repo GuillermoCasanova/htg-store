@@ -126,6 +126,12 @@
             "image": "shopify:\/\/shop_images\/HTG_324Artboard_1.jpg"
           }
         },
+        "cd07229a-fdae-4cf6-a8bd-d99e97a5bec9": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_324Artboard_1_copy.jpg"
+          }
+        },
         "2f42c83a-1307-4086-9999-4166582fbcf3": {
           "type": "slideshow_slide",
           "settings": {
@@ -156,6 +162,7 @@
         "bcaac01f-3588-427f-b809-cad140a40453",
         "e0645274-9bef-4377-aac6-09d1f69c1b66",
         "39814e1d-6eb1-447a-af05-ff3707c8ab44",
+        "cd07229a-fdae-4cf6-a8bd-d99e97a5bec9",
         "2f42c83a-1307-4086-9999-4166582fbcf3",
         "bf5418f3-dd16-45dc-a826-08f68e69394f"
       ],
