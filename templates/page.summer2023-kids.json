@@ -21,7 +21,7 @@
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Summer 2023 Kids",
-        "collection": "",
+        "collection": "summer-23-kids",
         "bg_color": "background-2",
         "top_border": "no",
         "bottom_border": "yes"
