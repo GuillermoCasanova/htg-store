@@ -65,6 +65,30 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/20230521-HonorTheGift2772.jpg"
           }
+        },
+        "a4a44090-3c08-453f-ad38-48cdd62bb5da": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_177.jpg"
+          }
+        },
+        "35b871fb-0cb1-4b8f-abd2-e4d075796eb7": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_188.jpg"
+          }
+        },
+        "81117894-d64f-490f-acb2-7a1d29bd805b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_256.jpg"
+          }
+        },
+        "d122a8c3-57e5-4321-bf69-89f58d198838": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_291.jpg"
+          }
         }
       },
       "block_order": [
@@ -73,7 +97,11 @@
         "95ee7237-0137-4ad8-8f03-8339e5c8b3c6",
         "aeac13db-8611-44a1-8dbc-1916324e40f4",
         "698733da-1d2f-444e-a56d-3b6926cdd58c",
-        "e5194d6b-e136-4fa1-9708-d1afb4dded67"
+        "e5194d6b-e136-4fa1-9708-d1afb4dded67",
+        "a4a44090-3c08-453f-ad38-48cdd62bb5da",
+        "35b871fb-0cb1-4b8f-abd2-e4d075796eb7",
+        "81117894-d64f-490f-acb2-7a1d29bd805b",
+        "d122a8c3-57e5-4321-bf69-89f58d198838"
       ],
       "settings": {
         "name": "",
