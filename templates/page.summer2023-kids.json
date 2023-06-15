@@ -16,10 +16,21 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "7e15ddbb-2549-427d-bb1e-e3972b490085": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Summer 2023 Kids",
+        "collection": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
-    "e18c2b96-d3aa-41b9-a0cf-f5b7a0d1dedb"
+    "e18c2b96-d3aa-41b9-a0cf-f5b7a0d1dedb",
+    "7e15ddbb-2549-427d-bb1e-e3972b490085"
   ]
 }
