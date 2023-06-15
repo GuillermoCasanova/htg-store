@@ -143,6 +143,18 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Summer 23",
+        "collection_url": "\/collections\/kids\/summ",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -154,6 +166,7 @@
     "165533293947ac239b",
     "1653675322c6e1e849",
     "1654616390eb010a1b",
-    "165461637915913a64"
+    "165461637915913a64",
+    "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f"
   ]
 }
