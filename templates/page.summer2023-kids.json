@@ -89,6 +89,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/HTG_291.jpg"
           }
+        },
+        "bcaac01f-3588-427f-b809-cad140a40453": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_308.jpg"
+          }
         }
       },
       "block_order": [
@@ -101,7 +107,8 @@
         "a4a44090-3c08-453f-ad38-48cdd62bb5da",
         "35b871fb-0cb1-4b8f-abd2-e4d075796eb7",
         "81117894-d64f-490f-acb2-7a1d29bd805b",
-        "d122a8c3-57e5-4321-bf69-89f58d198838"
+        "d122a8c3-57e5-4321-bf69-89f58d198838",
+        "bcaac01f-3588-427f-b809-cad140a40453"
       ],
       "settings": {
         "name": "",
