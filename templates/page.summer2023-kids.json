@@ -102,10 +102,16 @@
             "image": "shopify:\/\/shop_images\/20230521-HonorTheGift2772.jpg"
           }
         },
+        "af70a677-abfa-470a-81b8-b33a29da72a4": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_308Artboard_1.jpg"
+          }
+        },
         "bcaac01f-3588-427f-b809-cad140a40453": {
           "type": "slideshow_slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HTG_308.jpg"
+            "image": "shopify:\/\/shop_images\/HTG_308Artboard_1_copy.jpg"
           }
         },
         "e0645274-9bef-4377-aac6-09d1f69c1b66": {
@@ -146,6 +152,7 @@
         "ee564e1c-a4b2-4898-ac79-8f50c01c6b2f",
         "81117894-d64f-490f-acb2-7a1d29bd805b",
         "e5194d6b-e136-4fa1-9708-d1afb4dded67",
+        "af70a677-abfa-470a-81b8-b33a29da72a4",
         "bcaac01f-3588-427f-b809-cad140a40453",
         "e0645274-9bef-4377-aac6-09d1f69c1b66",
         "39814e1d-6eb1-447a-af05-ff3707c8ab44",
