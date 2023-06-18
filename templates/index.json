@@ -69,16 +69,15 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
-      "disabled": true,
       "settings": {
-        "heading": "Imprint – Kids",
+        "heading": "Summer 2023 – Kids",
         "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/01_Left_eb9c94b4-65fc-456c-a91f-478849c61c57.jpg",
+        "collection_hero_image": "shopify:\/\/shop_images\/HP_Kid_Left_5e2deeb7-c58a-40c1-b74b-7e67957492f7.jpg",
         "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "shopify:\/\/pages\/imprint-kids",
-        "right_image": "shopify:\/\/shop_images\/02_Right_a80958b9-e4db-4cfe-92d0-09ee36950774.jpg",
+        "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-2023-kids",
+        "right_image": "shopify:\/\/shop_images\/HP-Kid-Right_7fe9bf78-b8c2-47d0-bf64-ea13f97fdebf.jpg",
         "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/imprint-kids",
+        "right_cta_url": "shopify:\/\/collections\/summer-23-kids",
         "top_border": "no",
         "bottom_border": "yes"
       }
