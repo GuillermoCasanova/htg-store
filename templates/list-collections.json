@@ -181,6 +181,14 @@
             "thumbnail": "shopify:\/\/shop_images\/ezgif.com-gif-maker.jpg",
             "lookbook_url": "shopify:\/\/pages\/collection-002-private"
           }
+        },
+        "120757bf-18ab-45f4-8269-8f6a96a5af9f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Summer 23 Kids",
+            "thumbnail": "shopify:\/\/shop_images\/Collection-List_66658728-900c-45ac-a222-a659ae332d55.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-2023-kids"
+          }
         }
       },
       "block_order": [
@@ -204,7 +212,8 @@
         "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd",
         "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e",
         "6edc349f-1fba-48c2-8215-7d31487b9dd9",
-        "9ec38332-cc04-42de-81ac-c0f9a716759f"
+        "9ec38332-cc04-42de-81ac-c0f9a716759f",
+        "120757bf-18ab-45f4-8269-8f6a96a5af9f"
       ],
       "settings": {
         "heading": "Collections"
