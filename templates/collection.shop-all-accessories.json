@@ -71,6 +71,7 @@
     },
     "1654840710199c5d75": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "shopify:\/\/collections\/accessories-the-coast",

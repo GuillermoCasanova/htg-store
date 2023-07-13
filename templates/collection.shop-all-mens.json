@@ -122,6 +122,7 @@
     },
     "1654614072e4a2b52f": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "\/collections\/mens\/the-coast",
