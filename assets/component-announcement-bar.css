@@ -14,8 +14,8 @@
 }
 
 .announcement-bar--dark {
-    background-color: rgb(var(--color-base-text));
-    color: rgb(var(--color-base-background-1));
+    background-color: rgb(var(--color-base-background-2));
+    color: rgb(var(--color-base-text));
 }
 
 .announcement-bar__link {
