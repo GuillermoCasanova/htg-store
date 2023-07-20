@@ -21,14 +21,32 @@
         "collection_name": "Summer 40% Sale",
         "collection_url": "shopify:\/\/collections\/summer-sale-40",
         "product_list": [
-          "kids-blooming-flower-full-zip-hoodie-ath-heather",
-          "kids-floral-ss-crewneck-teal",
-          "kids-1988-stamp-shirt-mustard",
-          "kids-fast-cars-t-shirt-white",
-          "kids-raw-edge-terry-short-ath-heather",
-          "kids-raw-edge-terry-short-teal",
-          "kids-1988-t-rex-t-shirt-ath-heather",
-          "kids-rise-tank-cream"
+          "honor-peace-t-shirt-cream",
+          "hardship-t-shirt-white",
+          "htg-pack-tee-black",
+          "century-camp-button-up-pacific-blue",
+          "womens-jungle-camp-button-up-crimson",
+          "womens-monogram-polo-oatmeal",
+          "kids-private-school-polo-white",
+          "kids-wisdom-t-shirt-lt-heather"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "e9d28303-6ae1-43d7-8064-ddf83e7aa688": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Summer Sale 30%",
+        "collection_url": "shopify:\/\/collections\/summer-sale-30",
+        "product_list": [
+          "honor-muscle-tee-white",
+          "h-quilted-vest-khaki",
+          "past-and-future-t-shirt-black",
+          "overall-short-indigo",
+          "womens-1988-stamp-t-shirt-mustard",
+          "womens-floral-ribbed-tank-cream",
+          "kids-uniform-s-s-button-up-olive",
+          "kids-work-horse-t-shirt-bone"
         ],
         "enable_quick_add": true
       }
@@ -171,6 +189,7 @@
     "banner",
     "product-grid",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
+    "e9d28303-6ae1-43d7-8064-ddf83e7aa688",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "1661366277478615b4",
