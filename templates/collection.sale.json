@@ -18,8 +18,8 @@
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Summer 23",
-        "collection_url": "shopify:\/\/collections\/summer-23-kids",
+        "collection_name": "Summer 40% Sale",
+        "collection_url": "shopify:\/\/collections\/summer-sale-40",
         "product_list": [
           "kids-blooming-flower-full-zip-hoodie-ath-heather",
           "kids-floral-ss-crewneck-teal",
@@ -35,6 +35,7 @@
     },
     "d8a82659-1ec8-415c-a9af-0312a79616ad": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Imprint",
         "collection_url": "shopify:\/\/collections\/imprint-kids",
@@ -53,6 +54,7 @@
     },
     "ad1da559-6638-4283-9b50-b5593c44ec3a": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Defined",
         "collection_url": "\/collections\/kids\/defined",
@@ -71,6 +73,7 @@
     },
     "1661366277478615b4": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "District",
         "collection_url": "\/collections\/district-kids",
@@ -89,6 +92,7 @@
     },
     "165533293947ac239b": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "\/collections\/kids\/the-coast",
