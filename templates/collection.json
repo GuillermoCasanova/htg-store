@@ -18,6 +18,7 @@
     },
     "1f6618f9-2c4b-43b4-95af-4cf5976cba81": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "30% Off",
         "collection_url": "\/collections\/summer-sale-30",
@@ -36,6 +37,7 @@
     },
     "96879700-7159-4a34-b790-b584d011f44a": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "40% Off",
         "collection_url": "\/collections\/summer-sale-40",
