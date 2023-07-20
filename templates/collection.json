@@ -7,6 +7,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "enable_quick_add": true,
         "enable_filtering": true,
