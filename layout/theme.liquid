@@ -259,12 +259,12 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
    {% endstyle %}
 
 
-      {%if settings.show_announcement_bar%}
-       {{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}  
-      {%endif%}
+  {%if settings.show_announcement_bar%}
+    {{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}  
+  {%endif%}
 
     
-  {{ 'base.css' | asset_url | stylesheet_tag }}  
+   {{ 'base.css' | asset_url | stylesheet_tag }}  
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
