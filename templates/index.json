@@ -2,7 +2,6 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -17,25 +16,6 @@
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e584f58b5e96469c8d6d25e18bff535e.mp4",
         "cta-url": "shopify:\/\/pages\/summer-23"
-      }
-    },
-    "1290af07-91cc-4294-8c04-06427e2b8854": {
-      "type": "image-banner",
-      "blocks": {
-        "template--14543977513039__1290af07-91cc-4294-8c04-06427e2b8854-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner"
-          }
-        }
-      },
-      "block_order": [
-        "template--14543977513039__1290af07-91cc-4294-8c04-06427e2b8854-heading-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/8_f15106ed-0ab4-4bbb-b107-fe8e0297c6e2.jpg",
-        "video": "",
-        "cta-url": ""
       }
     },
     "1654645496c068b051": {
@@ -150,7 +130,6 @@
   },
   "order": [
     "image_banner",
-    "1290af07-91cc-4294-8c04-06427e2b8854",
     "1654645496c068b051",
     "165464550697d6e482",
     "16554195319ec4aeed",

@@ -7,7 +7,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
       "settings": {
         "enable_quick_add": true,
         "enable_filtering": true,
@@ -15,50 +14,10 @@
         "enable_sorting": true,
         "child_collection": false
       }
-    },
-    "1f6618f9-2c4b-43b4-95af-4cf5976cba81": {
-      "type": "collection-preview",
-      "disabled": true,
-      "settings": {
-        "collection_name": "30% Off",
-        "collection_url": "\/collections\/summer-sale-30",
-        "product_list": [
-          "pave-the-way-t-shirt-black",
-          "truth-t-shirt-white",
-          "concrete-jungle-t-shirt-cream",
-          "honor-muscle-tee-mustard",
-          "womens-floral-camp-ss-button-up-cream",
-          "womens-cadet-top-cream",
-          "womens-monogram-polo-slate",
-          "womens-1988-stamp-t-shirt-black"
-        ],
-        "enable_quick_add": true
-      }
-    },
-    "96879700-7159-4a34-b790-b584d011f44a": {
-      "type": "collection-preview",
-      "disabled": true,
-      "settings": {
-        "collection_name": "40% Off",
-        "collection_url": "\/collections\/summer-sale-40",
-        "product_list": [
-          "rosecrans-knit-hickory",
-          "htg®-pack-t-shirt-black",
-          "palms-t-shirt-cream",
-          "hawthorne-jacket-cream",
-          "womens-htg-mascot-sweater-vest-mustard",
-          "womens-monogram-polo-oatmeal",
-          "womens-neighborhood-pocket-tee-long-beach-blue",
-          "womens-private-school-skirt-black"
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
     "banner",
-    "product-grid",
-    "1f6618f9-2c4b-43b4-95af-4cf5976cba81",
-    "96879700-7159-4a34-b790-b584d011f44a"
+    "product-grid"
   ]
 }

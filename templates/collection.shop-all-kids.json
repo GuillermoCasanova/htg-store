@@ -15,29 +15,11 @@
         "child_collection": true
       }
     },
-    "ad1da559-6638-4283-9b50-b5593c44ec3a": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Defined",
-        "collection_url": "\/collections\/kids\/the-district",
-        "product_list": [
-          "kids-belief-l-s-t-shirt-black",
-          "kids-dedication-t-shirt-lt-heather",
-          "kids-honor-code-l-s-t-shirt-white",
-          "kids-mascot-henley-black",
-          "kids-belief-sweatpants-black",
-          "kids-sueded-band-jacket-black",
-          "kids-private-school-polo-white",
-          "kids-school-boy-trouser-black"
-        ],
-        "enable_quick_add": true
-      }
-    },
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
         "collection_name": "Summer 23",
-        "collection_url": "\/collections\/kids\/summer-23",
+        "collection_url": "shopify:\/\/collections\/summer-23-kids",
         "product_list": [
           "kids-blooming-flower-full-zip-hoodie-ath-heather",
           "kids-floral-ss-crewneck-teal",
@@ -55,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Imprint",
-        "collection_url": "\/collections\/kids\/imprint",
+        "collection_url": "shopify:\/\/collections\/imprint-kids",
         "product_list": [
           "kids-arched-htg-t-shirt-bone",
           "kids-crest-logo-hoodie-tan",
@@ -69,11 +51,29 @@
         "enable_quick_add": true
       }
     },
+    "ad1da559-6638-4283-9b50-b5593c44ec3a": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/kids\/defined",
+        "product_list": [
+          "kids-belief-l-s-t-shirt-black",
+          "kids-dedication-t-shirt-lt-heather",
+          "kids-honor-code-l-s-t-shirt-white",
+          "kids-mascot-henley-black",
+          "kids-belief-sweatpants-black",
+          "kids-sueded-band-jacket-black",
+          "kids-private-school-polo-white",
+          "kids-school-boy-trouser-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "1661366277478615b4": {
       "type": "collection-preview",
       "settings": {
         "collection_name": "District",
-        "collection_url": "\/collections\/kids\/the-district",
+        "collection_url": "\/collections\/district-kids",
         "product_list": [
           "kids-our-block-t-shirt-brown",
           "kids-mascot-hoodie-grey",
@@ -166,9 +166,9 @@
   "order": [
     "banner",
     "product-grid",
-    "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
+    "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "1661366277478615b4",
     "165533293947ac239b",
     "1653675322c6e1e849",
