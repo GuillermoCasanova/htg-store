@@ -1,0 +1,192 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
+    "8ab7bcd2-8778-4a5e-b963-658bc18bc61c": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Summer 23",
+        "collection_url": "\/collections\/womens\/summer-23",
+        "product_list": [
+          "womens-floral-ribbed-tank-cream",
+          "womens-denim-camp-ss-button-up-light-indigo",
+          "womens-htg-jacquard-full-zip-hoodie-brick",
+          "womens-1988-stamp-t-shirt-black",
+          "womens-floral-print-trouser-cream",
+          "womens-denim-fringe-short-blue",
+          "womens-htg-jacquard-short-brick",
+          "womens-floral-knit-dress-blue"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "c47108af-e80e-40a8-b335-6d5ea64c6292": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "\/collections\/womens\/imprint",
+        "product_list": [
+          "womens-shop-vest-khaki",
+          "womens-monogram-polo-oatmeal",
+          "womens-tobacco-flower-t-shirt-black",
+          "womens-labor-oversized-hoodie-grey",
+          "womens-shop-short-khaki",
+          "womens-knit-short-bone",
+          "womens-service-pant-cream",
+          "womens-labor-overall-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "f728d6ac-59f9-4340-be1b-c2aaff780bac": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/womens\/defined",
+        "product_list": [
+          "womens-prep-school-bomber-grey",
+          "womens-doctorate-v-neck-sweater-black",
+          "womens-freshman-turtle-neck-dress-white",
+          "womens-reversed-honoree-full-zip-white",
+          "womens-private-school-skirt-black",
+          "womens-honoree-camp-button-up-white",
+          "womens-advisor-cardigan-black",
+          "womens-reversed-honoree-pant-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1659025745e9d39846": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "\/collections\/womens\/the-district",
+        "product_list": [
+          "womens-bonded-vegan-leather-vest-sand",
+          "womens-turtle-neck-tan",
+          "womens-vegan-trench-ruby",
+          "womens-velvet-pj-shirt-champagne",
+          "womens-vegan-leather-pant-mustard",
+          "womens-bell-trouser-olive",
+          "womens-our-block-t-shirt-mustard",
+          "womens-velvet-pj-pant-champagne"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "165461434128f6b9a3": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "The Coast",
+        "collection_url": "\/collections\/womens\/the-coast",
+        "product_list": [
+          "womens-gridlock-pant-black",
+          "womens-jungle-camp-button-up-black",
+          "womens-jungle-short-bone",
+          "womens-neighborhood-pocket-tee-bone",
+          "womens-pack-tee-grey",
+          "womens-jungle-camp-button-up-bone",
+          "womens-pack-tee-long-beach-blue",
+          "womens-gridlock-pant-long-beach-blue"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1653675322c6e1e849": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Concrete Jungle",
+        "collection_url": "\/collections\/womens\/concrete-jungle",
+        "product_list": [
+          "womens-hollywood-jacket-black",
+          "womens-hollywood-pant-black",
+          "womens-jungle-camp-button-up-blonde",
+          "womens-jungle-camp-button-up-sage",
+          "womens-jungle-short-blonde",
+          "womens-jungle-camp-button-up-crimson",
+          "womens-hollywood-pant-hickory",
+          "womens-htg-pack-t-shirt-hickory"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654616107f8647e02": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Inner City Love, Vol. II",
+        "collection_url": "\/collections\/womens\/inner-city-love-vol-2",
+        "product_list": [
+          "htg-womens-knit-top-terra-cotta",
+          "htg-womens-knit-pant-terra-cotta",
+          "htg-unisex-cardigan-terra-cotta",
+          "womens-pattern-sweater-terra-cotta",
+          "htg-womens-knit-top-long-beach-navy",
+          "htg-womens-knit-pant-long-beach-navy",
+          "htg-unisex-cardigan-long-beach-navy",
+          "womens-pattern-sweater-long-beach-navy"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1653675292ee58c106": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Inner City Love Vol. I",
+        "collection_url": "\/collections\/womens\/inner-city-love",
+        "product_list": [
+          "womens-inner-city-ringer-top-athletic-grey",
+          "womens-inner-city-ringer-top-black",
+          "womens-sinners-saints-ringer-top-mustard",
+          "womens-sinners-saints-ringer-top-brown",
+          "womens-nomad-hoodie-green",
+          "womens-nomad-pant-green",
+          "womens-nostalgia-flannel-top-blue",
+          "womens-nostalgia-pant-blue"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16546162643d494cbe": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Free-Fall",
+        "collection_url": "\/collections\/womens\/freefall",
+        "product_list": [
+          "base-tote-bag-black",
+          "base-tote-bag-desert"
+        ],
+        "enable_quick_add": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "8ab7bcd2-8778-4a5e-b963-658bc18bc61c",
+    "c47108af-e80e-40a8-b335-6d5ea64c6292",
+    "f728d6ac-59f9-4340-be1b-c2aaff780bac",
+    "1659025745e9d39846",
+    "165461434128f6b9a3",
+    "1653675322c6e1e849",
+    "1654616107f8647e02",
+    "1653675292ee58c106",
+    "16546162643d494cbe"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
+    "c705520a-5f7b-48b5-adde-2690dd50f918": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "\/collections\/imprint-accessories",
+        "product_list": [
+          "h-quilted-bucket-hat-black",
+          "h-quilted-bucket-hat-slate",
+          "slouch-htg-sock-cream",
+          "slouch-htg-sock-brown",
+          "crest-rib-sock-black",
+          "crest-rib-sock-white",
+          "inner-city-rib-sock-black",
+          "inner-city-rib-sock-olive"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "d4bfeba6-f2ce-4682-b71f-43b3c227d173": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/defined-accessories",
+        "product_list": [
+          "los-angeles-leather-cap-black",
+          "los-angeles-suede-cap-white",
+          "code-of-honor-bucket-hat-black",
+          "honor-bucket-hat-white",
+          "los-angeles-knitted-cap-dark-grey",
+          "code-of-honor-scarf-black",
+          "htg-project-sock-black",
+          "honor-crew-sock-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1663258313b437f94a": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "\/collections\/district-accessories",
+        "product_list": [
+          "htg-hat-maroon",
+          "panther-hat-tan",
+          "los-angeles-hat-olive",
+          "signature-bucket-hat-black",
+          "honor-sock-mustard",
+          "htg®-loose-knit-sock-green",
+          "htg-iron-peace-sock-black",
+          "htg-heavy-knit-sock-mustard"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654840710199c5d75": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "The Coast",
+        "collection_url": "shopify:\/\/collections\/accessories-the-coast",
+        "product_list": [
+          "city-bucket-hat-bone",
+          "city-bucket-hat-grey",
+          "city-bucket-hat-long-beach-blue"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16540387627dd6a3af": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Concrete Jungle",
+        "collection_url": "shopify:\/\/collections\/concrete-jungle-accessories",
+        "product_list": [
+          "htg-inner-city-necklace",
+          "htg-sport-necklace",
+          "htg-crest-necklace",
+          "iron-peace-cap-stone",
+          "htg®-pack-cap-cream",
+          "noble-sock-cream-1",
+          "noble-sock-hickory",
+          "noble-sock-stone"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "165403876742214c90": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Inner City Love",
+        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii-accessories",
+        "product_list": [
+          "htg-weathered-cap-black",
+          "inner-city-love-cap-cream",
+          "houndstooth-cap-cream",
+          "htg-marvin-beanie-terra-cotta",
+          "htg®-weathered-sock-cream",
+          "htg-weathered-sock-terra-cotta",
+          "htg-select-heavyweight-sock-black",
+          "htg-select-heavyweight-sock-cream"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654618029729ec813": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Free-Fall",
+        "collection_url": "shopify:\/\/collections\/free-fall-accessories",
+        "product_list": [
+          "base-tote-bag-black",
+          "base-tote-bag-desert",
+          "airborne-cap-camo",
+          "airborne-cap-army",
+          "airborne-sock-black",
+          "airborne-sock-army",
+          "uniform-sock-bone",
+          "uniform-sock-camo"
+        ],
+        "enable_quick_add": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "c705520a-5f7b-48b5-adde-2690dd50f918",
+    "d4bfeba6-f2ce-4682-b71f-43b3c227d173",
+    "1663258313b437f94a",
+    "1654840710199c5d75",
+    "16540387627dd6a3af",
+    "165403876742214c90",
+    "1654618029729ec813"
+  ]
+}

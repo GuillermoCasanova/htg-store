@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #Accordions
+\*------------------------------------*/
+
+.product__content__information .product__accordion {
+  border-top: 1px solid rgb(var(--color-base-text));
+}
+
+.accordion .summary__title {
+  display: flex;
+  flex: 1;
+  border-bottom: 1px solid rgb(var(--color-base-text));
+}
+
+
+details[open] .summary__title {
+  border-bottom: 0;
+}
+
+.accordion .summary__title+.icon-caret {
+  height: calc(var(--font-heading-scale) * 0.6rem);
+}
+
+.accordion+.accordion {
+  margin-top: 0;
+  border-top: none;
+}
+
+.accordion {
+  margin-bottom: 0;
+}
+
+.accordion__title {
+  display: inline-block;
+  max-width: calc(100% - 6rem);
+  margin: 0;
+  word-break: break-word;
+  padding-top: var(--level4);
+  padding-bottom: var(--level4);
+  text-transform: uppercase;
+  font-size: var(--h6);
+  padding-left: var(--level3);
+}
+
+@media only screen and (min-width: 930px) {
+  .accordion__title {
+    font-size: var(--normal);
+    padding-top: var(--level2);
+    padding-bottom: var(--level2);
+  }
+}
+
+.accordion .icon-accordion {
+  align-self: center;
+  fill: rgb(var(--color-foreground));
+  height: calc(var(--font-heading-scale) * 2rem);
+  margin-right: calc(var(--font-heading-scale) * 1rem);
+  width: calc(var(--font-heading-scale) * 2rem);
+}
+
+.accordion details[open]>summary .icon-caret {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  word-break: break-word;
+  overflow-x: auto;
+  padding: var(--level3);
+  padding-top: 0;
+  border-bottom: 1px solid rgb(var(--color-base-text));
+}
+
+.accordion__content img {
+  max-width: 100%;
+}

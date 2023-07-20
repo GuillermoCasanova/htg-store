@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "header": {
+      "type": "image-banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

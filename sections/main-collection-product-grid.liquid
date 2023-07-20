@@ -888,6 +888,7 @@ opacity: 1;
                   "variants":   {{ product.variants | json }},
                   "available":   {{ product.available | json }},
                   "price": {{ product.price | json }},
+                  "compare_at_price": {{product.compare_at_price | json}},
                   "tags":   {{ product.tags | json }},
                   "options_with_values": {{ product.options_with_values | json }}{%- unless product.metafields.color_swatch == empty -%},{%- endunless -%}
                   {%- unless product.metafields.color_swatch == empty -%} 

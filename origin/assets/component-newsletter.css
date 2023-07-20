@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    #Newsletter Form
+\*------------------------------------*/
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  margin-bottom: var(--level4);
+  max-width: 29rem;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .newsletter-form {
+    margin-right: 0;
+    right: 0;
+    left: auto;
+    margin-left: auto;
+  }
+}
+
+.newsletter-form__heading {
+  margin-bottom: var(--level2);
+}
+
+.newsletter-form__field-wrapper {
+  width: 100%;
+}
+
+
+.newsletter-form__message {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.newsletter-form__message--success {
+  margin-top: 2rem;
+}
+
+.newsletter-form__field {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsletter-form__field .custom-field {
+  margin-bottom: 0;
+}
+
+input.newsletter-form__input {
+  padding: var(--level3);
+  border-right: 0;
+}
+
+@media only screen and (min-width: 930px) {
+  .newsletter-form__input {
+    padding: var(--level3);
+    font-size: var(--h4);
+  }
+}
+
+.newsletter-form__label {
+  font-size: var(--h6);
+  color: rgb(var(--color-base-link));
+}
+
+@media only screen and (min-width: 930px) {
+  .newsletter-form__label {
+    font-size: var(--h4);
+    top: .35rem !important;
+  }
+}
+
+
+.newsletter-form__button {
+  border: 1px solid rgb(var(--color-base-text));
+  min-width: 6rem;
+  max-width: 7rem;
+  width: 100%;
+  font-size: var(--h6);
+  line-height: 1;
+  padding-top: var(--level3);
+  padding-bottom: var(--level2);
+  color: rgb(var(--color-base-text));
+  font-size: var(--micro);
+}
+
+@media only screen and (min-width: 700px) {
+  .newsletter-form__button {
+    font-size: var(--normal);
+  }
+}
+
+.newsletter-form__button:focus-visible {
+  background-color: rgb(var(--color-background));
+}
+
+.newsletter-form__button:focus {
+  background-color: rgb(var(--color-base-text));
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .newsletter-form__button:focus {
+    background-color: rgb(var(--color-base-text));
+    color: #fff;
+  }
+}
+
+.newsletter-form__button:not(:focus-visible):not(.focused) {
+  box-shadow: inherit;
+  background-color: inherit;
+}

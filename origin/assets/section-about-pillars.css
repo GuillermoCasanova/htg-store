@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    #Section About Pillars
+\*------------------------------------*/
+
+.about-pillars {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgb(var(--color-base-background-3));
+}
+
+.about-pillars__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 930px) {
+    .about-pillars__inner {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+.about-pillars__inner .about-pillars__pillar:first-child {
+    border-top: 0;
+}
+
+.about-pillars__pillar {
+    border-top: 1px solid rgb(var(--color-base-text));
+    padding-top: var(--level9);
+    padding-bottom: var(--level9);
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 930px) {
+    .about-pillars__pillar {
+        border-top: 0;
+        padding-top: calc(var(--level9) + var(--level10));
+        padding-bottom: calc(var(--level9) + var(--level10));
+        border-right: 1px rgb(var(--color-base-text)) solid;
+    }
+}
+
+.about-pillars__inner .about-pillars__pillar:last-child {
+    border-right: 0;
+}
+
+.about-pillars__pillar__copy {
+    font-size: var(--normal);
+    max-width: 30rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-right: var(--level7);
+    padding-left: var(--level7);
+}
+
+@media only screen and (min-width: 930px) {
+    .about-pillars__pillar__copy {
+        font-size: var(--h4);
+        padding-right: var(--level8);
+        padding-left: var(--level8);
+        max-width: 27rem;
+    }
+}
+
+.about-pillars__pillar__copy__heading {
+    font-size: var(--h5);
+    font-family: var(--tertiary-font-family);
+    margin-bottom: var(--level7);
+}
+
+@media only screen and (min-width: 700px) {
+    .about-pillars__pillar__copy__heading {
+        font-size: var(--h4);
+        margin-bottom: calc(var(--level10) + var(--level1));
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .about-pillars__pillar__copy__heading {
+        font-size: var(--h2);
+    }
+}

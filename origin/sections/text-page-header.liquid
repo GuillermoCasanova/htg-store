@@ -1,0 +1,25 @@
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+    <h1 class="main-page-title page-title h0">
+        {{ page.title | escape }}
+    </h1>
+</div>
+
+{% schema %}
+{
+  "name": "Stockists Lists",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.page.settings.page.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stockists Lists"
+    }
+  ]
+}
+{% endschema %}

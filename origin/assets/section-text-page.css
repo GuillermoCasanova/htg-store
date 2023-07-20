@@ -1,0 +1,31 @@
+.text-page__header {
+    width: 100%;
+    text-align: center;
+    padding-top: var(--level7);
+    padding-bottom: var(--level9);
+}
+
+.text-page__header__heading {
+    font-family: var(--tertiary-font-family);
+    font-size: var(--h2)
+}
+
+@media only screen and (min-width: 930px) {
+    .text-page__header__heading {
+        font-size: var(--h1)
+    }
+}
+
+.text-page__body {
+    max-width: 50rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: var(--level10);
+}
+
+
+@media only screen and (min-width: 930px) {
+    .text-page__body {
+        font-size: var(--normal);
+    }
+}

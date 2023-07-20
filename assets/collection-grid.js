@@ -47,6 +47,8 @@ class CollectionGrid extends HTMLElement {
   
   
     getproductThumbTemplate(pProductData) {
+
+      console.log(pProductData);
   
       let collectionUrl = this.getCollectionURL(); 
       let sectionId = this.getSectionId(); 
@@ -95,10 +97,19 @@ class CollectionGrid extends HTMLElement {
 
       function checkSoldOut(pThumbProductData) {
             if(pThumbProductData.available === true) {
-                return 'is-hidden'
+                return false
             } else {
-                return 'is-visible'
+                return true
             }
+      }
+
+      function checkOnSale(pThumbProductData) {
+        console.log(pProductData);
+        if(pThumbProductData.compare_at_price > pThumbProductData.price) {
+          return true
+      } else {
+          return false
+      }
       }
   
       function getOptionsPickerHTML(pProductData) {
@@ -282,9 +293,12 @@ class CollectionGrid extends HTMLElement {
           <div data-product-card="" data-section="${sectionId}-${pProductData.id}" class="product-card  ">
             <div class="product-card__inner">
                 <div class="product-card__media">
+
+
                 
-                  <div class="product-card__badge ${checkSoldOut(pProductData)}">
-                    <span class="product-card__badge__text--sold-out">Sold out</span>
+                  <div class="product-card__badge">
+                    <span class="product-card__badge-text product-card__badge__text--sold-out  ${checkSoldOut(pProductData) ? ' is-visible': ' is-hidden' }">Sold out</span>
+                    <span class="product-card__badge-text product-card__badge__text--on-sale  ${checkOnSale(pProductData) ? ' is-visible' : ' is-hidden' }">On Sale</span>
                   </div>
                   
                   <div class="quick-add-button-container">
@@ -311,8 +325,10 @@ class CollectionGrid extends HTMLElement {
                 
                 <div class="product-card__price-info">
                   
-                  <div class="price product-card__price">
-                    <div class="price__container"><div class="price__regular">
+                  <div class="price product-card__price ${pProductData.price < pProductData.compare_at_price ? ' price--on-sale' : ''}">
+                    <div class="price__container">
+                    
+                     <div class="price__regular">
                         <span class="visually-hidden visually-hidden--inline">Regular price</span>
                         <span class="price-item price-item--regular">
                           ${new Shopify.currency().formatMoney(pProductData.price)}
@@ -321,8 +337,10 @@ class CollectionGrid extends HTMLElement {
                       <div class="price__sale">
                           <span class="visually-hidden visually-hidden--inline">Regular price</span>
                             <span class="price-item price-item--regular">
-                              
-                            </span><span class="visually-hidden visually-hidden--inline">Sale price</span>
+                          ${new Shopify.currency().formatMoney(pProductData.compare_at_price)}
+                            </span>
+                            
+                            <span class="visually-hidden visually-hidden--inline">Sale price</span>
                         <span class="price-item price-item--sale price-item--last">
                           ${new Shopify.currency().formatMoney(pProductData.price)}
                         </span>

@@ -1,0 +1,230 @@
+{
+  "sections": {
+    "header": {
+      "type": "image-banner",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5b977c1cf348429592253767d4856464.mp4",
+        "cta-url": ""
+      }
+    },
+    "fb7e97ae-dcf7-48cc-9e88-a3b22ea461fe": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Imprint – Spring 2023 Collection",
+        "body": "<p>Honor The Gift announces <em>Imprint<\/em>, a collection inspired by the threads of Black Labor of the 1800s featuring the Compton Cowboys, the notorious modern-day black equestrians from Compton California.<\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "79d385c6-284f-48fa-be4a-828b71b98cde": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_af1253b8-c269-4693-a97a-79a70eeeb923.jpg"
+          }
+        },
+        "2f473b45-a452-408b-9e36-2014eb41a357": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_3.jpg"
+          }
+        },
+        "a91b6f56-5c4d-4ffd-ba26-dc8ad705b841": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_4.jpg"
+          }
+        },
+        "3f2bf6b7-675e-43c2-82a0-4ffebc84244f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_5.jpg"
+          }
+        },
+        "2484d30b-5461-4097-9cb8-f6f2ebcf8bb4": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_6.jpg"
+          }
+        },
+        "35b5dea1-d9e1-4467-94a1-ec65b0449bf9": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_7.jpg"
+          }
+        },
+        "a6d2b752-a48f-4fe9-8327-aa8cfac9392a": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_8.jpg"
+          }
+        },
+        "847cba47-a298-4fe9-8e96-24e79f8d5f33": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_9.jpg"
+          }
+        },
+        "e1692a4b-1c6f-4140-a61f-d0b79be11d68": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_10.jpg"
+          }
+        },
+        "35072e57-2565-4961-85cb-127996e18f6e": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_11.jpg"
+          }
+        },
+        "a4210a5d-3d8f-4734-94f1-641ba063b50b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_12.jpg"
+          }
+        },
+        "12e4d629-88cb-40d6-9ea9-79441fa46503": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_13.jpg"
+          }
+        },
+        "8d4dac44-e98b-4f39-854b-e02963d2d1ef": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_14.jpg"
+          }
+        },
+        "cc2febea-9094-4af0-8d4e-6b7bbd1eb3d2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_15.jpg"
+          }
+        },
+        "fb8665d7-9c43-46a4-a76c-1eed5d74a3dd": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_16.jpg"
+          }
+        },
+        "5151cdd9-aa58-4b9e-987b-3039bbb9db1b": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_17.jpg"
+          }
+        },
+        "bbbc2d29-7254-4be1-8328-cdf3fcee2454": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_18.jpg"
+          }
+        },
+        "6bce9433-32a3-4305-90d7-20710875465c": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_19.jpg"
+          }
+        },
+        "8febd2bb-e013-4971-85e9-7aa7d3577670": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_20.jpg"
+          }
+        },
+        "89bccd1e-d048-4b46-8dd6-dc0de42feaa5": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_21.jpg"
+          }
+        },
+        "00a71ed1-d64d-4986-823f-3ea11259ead2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_22.jpg"
+          }
+        },
+        "535f0db2-fd03-4c26-8871-254476d67832": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_23.jpg"
+          }
+        },
+        "d12c73f8-b8a5-4893-8720-03345e401721": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_-_IMPRINT_24_50555f16-b51f-4764-ab05-387de5f57ba0.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7897ca5e-24e7-4ffb-b7e2-1bee9495d7ca",
+        "2f473b45-a452-408b-9e36-2014eb41a357",
+        "a91b6f56-5c4d-4ffd-ba26-dc8ad705b841",
+        "3f2bf6b7-675e-43c2-82a0-4ffebc84244f",
+        "2484d30b-5461-4097-9cb8-f6f2ebcf8bb4",
+        "35b5dea1-d9e1-4467-94a1-ec65b0449bf9",
+        "a6d2b752-a48f-4fe9-8327-aa8cfac9392a",
+        "847cba47-a298-4fe9-8e96-24e79f8d5f33",
+        "e1692a4b-1c6f-4140-a61f-d0b79be11d68",
+        "35072e57-2565-4961-85cb-127996e18f6e",
+        "a4210a5d-3d8f-4734-94f1-641ba063b50b",
+        "12e4d629-88cb-40d6-9ea9-79441fa46503",
+        "8d4dac44-e98b-4f39-854b-e02963d2d1ef",
+        "cc2febea-9094-4af0-8d4e-6b7bbd1eb3d2",
+        "fb8665d7-9c43-46a4-a76c-1eed5d74a3dd",
+        "5151cdd9-aa58-4b9e-987b-3039bbb9db1b",
+        "bbbc2d29-7254-4be1-8328-cdf3fcee2454",
+        "6bce9433-32a3-4305-90d7-20710875465c",
+        "8febd2bb-e013-4971-85e9-7aa7d3577670",
+        "89bccd1e-d048-4b46-8dd6-dc0de42feaa5",
+        "00a71ed1-d64d-4986-823f-3ea11259ead2",
+        "535f0db2-fd03-4c26-8871-254476d67832",
+        "d12c73f8-b8a5-4893-8720-03345e401721"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "b3d675d9-b002-49df-b124-919b5b96909e": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Imprint Collection",
+        "collection": "imprint",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "12af152a-6c98-4a4f-9072-5cda3dc0dbcc": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14954243031119__12af152a-6c98-4a4f-9072-5cda3dc0dbcc-167762400665feed65-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "template--14954243031119__12af152a-6c98-4a4f-9072-5cda3dc0dbcc-167762400665feed65-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/CCV003_1.33.2_c499d62e-a7d5-47d9-90c5-dfd2551f93cf.jpg",
+        "video": "",
+        "cta-url": ""
+      }
+    }
+  },
+  "order": [
+    "header",
+    "fb7e97ae-dcf7-48cc-9e88-a3b22ea461fe",
+    "79d385c6-284f-48fa-be4a-828b71b98cde",
+    "b3d675d9-b002-49df-b124-919b5b96909e",
+    "12af152a-6c98-4a4f-9072-5cda3dc0dbcc"
+  ]
+}

@@ -1,0 +1,334 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - heading_level: {String} The heading level for this product card, depends if nested. 
+    - card_product: {Object} Product Liquid object (optional)
+    - show_quick_add: {Boolean} Show the quick add button.
+    - section_id: {String} The ID of the section that contains this card.
+
+    Usage:
+    {% render 'product-card', show_quick_add: section.settings.enable_quick_add %}
+{% endcomment %}
+
+
+<div class="product-card-wrapper underline-links-hover" data-product-card-wrapper data-section="{{ section.id }}-{{ card_product.id }}">
+
+    <div data-product-card  data-section="{{ section.id }}-{{ card_product.id }}" class="product-card  {% if card_product.available == false %} product-card--sold-out {% endif %}">
+      <div class="product-card__inner">
+          <div class="product-card__media">
+
+            <div class="product-card__badge">
+              {%- if card_product.available == false -%}
+                <span class="product-card__badge__text--sold-out">{{ 'products.product.sold_out' | t }}</span>
+              {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+                <span class="product-card__badge__text--on-sale">{{ 'products.product.on_sale' | t }}</span>
+              {%- endif -%}
+            </div>
+
+            {%- if show_quick_add -%}
+              <div class="quick-add-button-container">
+                <quick-add-button data-section="{{ section.id }}-{{ card_product.id }}">
+                  <button type="submit" class="button  quick-add-button" tabindex="-1" aria-hidden="true">
+                    <span >
+                      Quick Add
+                   </span>
+                  </button>
+                </quick-add-button>
+              </div>
+            {%- endif -%}
+
+            <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ product_collection.url }}/products/{{ card_product.handle }}" class="media media--square" data-product-images  data-section="{{ section.id }}-{{ card_product.id }}"> 
+              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+              <img
+                srcset="{%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165, format: 'pjpg' }} 165w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940, format: 'pjpg' }} 940w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066, format: 'pjpg' }} 1066w,{%- endif -%}
+                  {{ card_product.featured_media | image_url: width: card_product.featured_media.width, format: 'pjpg' }} {{ card_product.featured_media.width }}w"
+                src="{{ card_product.featured_media | image_url: width: 533, format: 'pjpg' }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ card_product.featured_media.alt | escape }}"
+                class="motion-reduce"
+                aria-hidden="true"
+                loading="lazy"
+                width="{{ card_product.featured_media.width }}"
+                height="{{ card_product.featured_media.height }}"
+              >
+              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+  
+              {%- if card_product.media[1] != nil -%}
+                <img
+                  srcset="{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165, format: 'pjpg' }} 165w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940, format: 'pjpg' }} 940w,{%- endif -%}
+                    {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066, format: 'pjpg' }} 1066w,{%- endif -%}
+                    {{ card_product.media[1] | image_url: width: card_product.media[1].width, format: 'pjpg' }} {{ card_product.media[1].width }}w"
+                  src="{{ card_product.media[1] | image_url: width: 533, format: 'pjpg' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ card_product.media[1].alt | escape }}"
+                  aria-hidden="true"
+                  class="motion-reduce"
+                  loading="lazy"
+                  width="{{ card_product.media[1].width }}"
+                  height="{{ card_product.media[1].height }}"
+                >
+              {%- endif -%}
+            </a>
+          </div>
+      </div>
+  
+      <div class="product-card__content">
+        <a title="Shop {{ card_product.title | escape }}" rel="internal" href="{{ product_collection.url }}/products/{{ card_product.handle }}" tabindex="-1" class="product-card__information">
+            {% if heading_level == 'h2' %}
+          <h2 class="product-card__heading" id="title-{{ section_id }}-{{ card_product.id }}">
+              {{ card_product.title | escape }}
+          </h2>
+          {% endif %}
+          
+          {% if heading_level == 'h3' %}
+          <h3 class="product-card__heading" id="title-{{ section_id }}-{{ card_product.id }}">
+              {{ card_product.title | escape }}
+          </h3>
+          {% endif %}
+
+          <div class="product-card__price-info">
+            {% render 'price', product: card_product, price_class: 'product-card__price' %}
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    {%- if show_quick_add -%}
+     <div class="quick-add-form no-js-hidden" tabindex="-1" aria-hidden="true">
+      {%- assign product_form_id =  "quick-add-form-" | append: section.id | append: "-" | append: card_product.id -%}
+      <div class="quick-add-form__inner">
+        {%- if card_product.has_only_default_variant -%}
+          <product-form class="quick-add-form" data-cart-type="{{ settings.cart_type }}">
+            <div class="quick-add-form__error-message-wrapper" data-error-message-wrapper role="alert" hidden>
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+              </svg>
+              <span class="quick-add-form__error-message" data-error-message></span>
+            </div>
+`              {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+              <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" 
+                     id="active-product-id-{{ section.id }}-{{ card_product.id }}" disabled >
+              <div class="quick-add-form__buttons visually-hidden">
+                <button
+                  type="submit"
+                  name="add"
+                  aria-hidden="true"
+                  tabindex="-1"
+                  class="quick-add-form__submit button button--full-width"
+                  {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
+                    <span>
+                      {%- if card_product.selected_or_first_available_variant.available -%}
+                        {{ 'products.product.add_to_cart' | t }}
+                      {%- else -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <div class="loading-overlay__spinner hidden">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                </button>
+                {%- if block.settings.show_dynamic_checkout -%}
+                  {{ form | payment_button }}
+                {%- endif -%}
+              </div>
+            {%- endform -%}
+          </product-form>
+        {%else%}
+            <quick-add-color-picker data-section="{{ section.id }}-{{ card_product.id }}">
+              {% for collection in card_product.collections %}
+
+                {% assign collectionName = collection.title | downcase | handleize -%}
+                {% assign productName = card_product.title | downcase | split: " - " -%}
+                {% assign productNameHandle = productName[0] | handleize %}
+
+                {%- if productNameHandle == collectionName and card_product.metafields.color_swatch.name -%}
+                  {% assign activeCollection = collection %}
+                  <div class="quick-add-color-picker  x-product-form__input">
+                    <fieldset>
+                      <legend  class="quick-add-color-picker__current-color visually-hidden" >
+                        <span class="quick-add-color-picker__current-color__label">Available colors for {{ productName[0] }}:</span>
+                      </legend>
+                      <span class="quick-add-color-picker__colors">
+
+                        {% assign swatches = activeCollection.products | sort: 'published_at' | reverse %}
+                        
+                        {% for product in  swatches %}
+                          {% if forloop.first %}
+                          {% if card_product.metafields.color_swatch.name != blank and card_product.metafields.color_swatch.hex_color != blank %}
+                            <span class="quick-add-color-picker__color {% if card_product.handle == card_product.handle %}is-selected{% endif %}" data-more-text="+{{ activeCollection.products.size | minus: 4 }} more color{%if activeCollection.products.size >= 6%}s{%endif%}">
+                                  <input type="radio" 
+                                    checked
+                                    id="{{ section.id }}-{{ card_product.id }}-{{ card_product.metafields.color_swatch.name }}"
+                                    name="color" 
+                                    form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                                    value="{{ card_product.metafields.color_swatch.name | escape }}"
+                                    title="Shop {{ card_product.title }} in {{ card_product.metafields.color_swatch.name }}" 
+                                    data-color-option
+                                    data-product-media="{{ card_product.media | json | escape }}"
+                                    data-product="{{ card_product.variants | json | escape }}"
+                                    data-product-title="{{ card_product.title }}" 
+                                    data-handle="{{ card_product.handle }}"
+                                    data-product-url="{{ card_product.url }}"
+                                    data-product-id="{{ card_product.id }}"
+                                    data-product-first-variant="{{ card_product.selected_variant.id }}"
+                                    data-swatch="{{ card_product.metafields.color_swatch.name }}"
+                                    class="quick-add-color-picker__input"
+                                    >
+                                <label class="quick-add-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ card_product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ card_product.metafields.color_swatch.name }}">
+                                  <span class="quick-add-color-picker__label__swatch" style="background-color: {{ card_product.metafields.color_swatch.hex_color }};">
+
+                                  </span>
+                                  <span class="quick-add-color-picker__label__ring">
+                                  </span>
+                                </label>
+                            </span>
+
+                          {%     endif     %}
+                          {%endif%}
+
+                          {% if product.metafields.color_swatch.name != blank and product.metafields.color_swatch.hex_color != blank and product.handle != card_product.handle%}
+                            <span class="quick-add-color-picker__color {% if product.handle == card_product.handle %}is-selected{% endif %}" data-more-text="+{{ activeCollection.products.size | minus: 4 }} more color{%if activeCollection.products.size >= 6%}s{%endif%}">
+                                  <input type="radio" 
+                                    {% if card_product.metafields.color_swatch.name == product.metafields.color_swatch.name %}checked{% endif %}
+                                    id="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}"
+                                    name="color" 
+                                    form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                                    value="{{ product.metafields.color_swatch.name | escape }}"
+                                    title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}" 
+                                    data-color-option
+                                    data-product-media="{{ product.media | json | escape }}"
+                                    data-product="{{ product.variants | json | escape }}"
+                                    data-product-title="{{ product.title }}" 
+                                    data-handle="{{ product.handle }}"
+                                    data-product-url="{{ product.url }}"
+                                    data-product-id="{{ product.id }}"
+                                    data-product-first-variant="{{ product.selected_variant.id }}"
+                                    data-swatch="{{ product.metafields.color_swatch.name }}"
+                                    class="quick-add-color-picker__input"
+                                    >
+                                <label class="quick-add-color-picker__label" for="{{ section.id }}-{{ card_product.id }}-{{ product.metafields.color_swatch.name }}" data-color-label data-color-name="{{ product.metafields.color_swatch.name }}">
+                                  <span class="quick-add-color-picker__label__swatch" style="background-color: {{ product.metafields.color_swatch.hex_color }};">
+
+                                  </span>
+                                  <span class="quick-add-color-picker__label__ring">
+                                  </span>
+                                </label>
+                            </span>
+
+                          {% endif %}
+
+
+                        {% endfor %}
+                      </span>
+                    </fieldset>
+                  </div> 
+                {%- endif -%}
+ 
+              {% endfor %}
+            </quick-add-color-picker>
+
+            <variant-radios data-update-url="false" data-is-quick-add="true" class="no-js-hidden" data-section="{{ section.id }}-{{ card_product.id }}" data-url="{{ card_product.url }}">
+              {%- for option in card_product.options_with_values -%}
+                <div class="quick-add-variants">
+                  <fieldset >
+                    <legend class="quick-add-variants__label  visually-hidden">
+                      <span class="quick-add-variants__label__text">
+                        Item {{ option.name }} 
+                      </span>
+                    </legend>
+                    <div class="quick-add-variants__options">
+                      {%- for value in option.values -%}
+                        <div class="quick-add-variants__option">
+                          <input type="radio" id="{{ section.id }}-{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                                name="{{ option.name }}"
+                                value="{{ value | escape }}"
+                                form="quick-add-form-{{ section.id }}-{{ card_product.id }}"
+                                {% if option.selected_value == value %}checked{% endif %}
+                          >
+                          <label for="{{ section.id }}-{{ card_product.id }}-{{ option.name }}-{{ forloop.index0 }}" data-option-label data-option-name="{{ value | escape }}">
+                            {{ value }}
+                          </label>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  </fieldset>
+                </div>
+              {%- endfor -%}
+              <script type="application/json">
+                {{ card_product.variants | json }}
+              </script>
+            </variant-radios>
+            <noscript>
+              <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                <label class="form__label" for="Variants-{{ section.id }}-{{ card_product.id }}">{{ 'products.product.product_variants' | t }}</label>
+                <div class="select">
+                  <select name="id" id="Variants-{{ section.id }}-{{ card_product.id }}" class="select__select" form="quick-add-form-{{ section.id }}-{{ card_product.id }}">
+                    {%- for variant in card_product.variants -%}
+                      <option
+                        {% if variant == card_product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                        {% if variant.available == false %}disabled{% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
+              </div>
+            </noscript>
+
+            <product-form class="quick-add-form__to-submit visually-hidden"  data-section="{{ section.id }}-{{ card_product.id }}" data-cart-type="{{ settings.cart_type }}">
+              <div class="quick-add-form__error-message-wrapper" data-error-message-wrapper role="alert" hidden>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                  <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                  <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                  <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                  <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                </svg>
+                <span class="quick-add-form__error-message" data-error-message></span>
+              </div>
+`              {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" 
+                       id="active-product-id-{{ section.id }}-{{ card_product.id }}" disabled data-desktop>
+                <div class="quick-add-form__buttons">
+                  <button
+                    type="submit"
+                    name="add"
+                    class="product-form__submit button button--full-width 
+                            button--secondary 
+                      {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                  {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                  >
+                    <span class="product-form__submit__text">
+                       Add to Cart
+                    </span>
+
+                  </button>
+                 
+                </div>
+              {%- endform -%}
+            </product-form>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- endif -%}
+
+  </div>
+  

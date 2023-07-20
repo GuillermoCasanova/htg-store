@@ -259,10 +259,10 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
    {% endstyle %}
 
 
-{%if settings.show_announcement_bar%}
-      {{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}  
+      {%if settings.show_announcement_bar%}
+       {{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}  
       {%endif%}
-      
+
     
   {{ 'base.css' | asset_url | stylesheet_tag }}  
 

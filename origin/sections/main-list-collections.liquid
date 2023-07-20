@@ -1,0 +1,83 @@
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+<ul class="page-width archival-collections__inner" role="list" aria-label="Collection lookbooks">
+  {% for block in section.blocks %}
+    <li>
+      <div class="archival-collection-thumb">
+        <a href="{{ block.settings.lookbook_url }}" class="archival-collection-thumb__image-container" tabindex="-1">
+          <div class="archival-collection-thumb__image">
+            <img
+              srcset="{%- if block.settings.thumbnail.width >= 165 -%}{{ block.settings.thumbnail | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if block.settings.thumbnail.width >= 360 -%}{{ block.settings.thumbnail | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if block.settings.thumbnail.width >= 533 -%}{{ block.settings.thumbnail | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if block.settings.thumbnail.width >= 720 -%}{{ block.settings.thumbnail | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if block.settings.thumbnail.width >= 940 -%}{{ block.settings.thumbnail | image_url: width: 940 }} 940w,{%- endif -%}
+                {{ block.settings.thumbnail | image_url }} {{ block.settings.thumbnail.width }}w"
+              src="{{ block.settings.thumbnail | image_url: width: 533 }}"
+              sizes="(min-width: 930px) 30vw, 50vw"
+              alt="{{ block.settings.thumbnail.alt | escape }}"
+              class="motion-reduce"
+              aria-hidden="true"
+              loading="lazy"
+              width="{{ block.settings.thumbnail.width }}"
+              height="{{ block.settings.thumbnail.height }}"
+            >
+          </div>
+        </a>
+        <div class="archival-collection-thumb__info">
+          <h2 class="archival-collection-thumb__info__name">
+            {{ block.settings.collection_name }}
+          </h2>
+          <div class="archival-collection-thumb__cta">
+            <a href="{{ block.settings.lookbook_url }}" rel="internal" class="styled-link">
+              View Collection
+              </a>
+          </div>
+      </div>
+    </div>
+    </li>
+  {% endfor %}
+</ul>
+
+{% schema %}
+{
+  "name": "t:sections.main-list-collections.name",
+  "class": "section archival-collections",
+  "tag": "section",
+  "templates": [
+    "list-collections"
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.main-list-collections.settings.title.label",
+      "default": "Collections"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "archival-collection",
+      "name": "Archival Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collection_name",
+          "label": "Collection Name",
+          "info": "The customer facing name for this collection."
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Thumbnail"
+        },
+        {
+          "type": "url",
+          "id": "lookbook_url",
+          "label": "Lookbook URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

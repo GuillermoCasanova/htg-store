@@ -1,0 +1,227 @@
+{
+  "sections": {
+    "header": {
+      "type": "main-list-collections-header",
+      "settings": {
+        "heading": "Summer 2023",
+        "body": "<p>Following our Spring 23 Collection <em>Imprint<\/em> we continue to leave our print on every fabric through space and time for our Summer 23 Collection. Offering a 28 piece collection for Men’s and Women’s this collection is a reminder that the workwear of our culture has led to the threads that lace our very community and remain through the lens of our youth.<\/p>",
+        "collection_lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-23",
+        "image": "shopify:\/\/shop_images\/Header_Image.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1"
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "120757bf-18ab-45f4-8269-8f6a96a5af9f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Summer 23 Kids",
+            "thumbnail": "shopify:\/\/shop_images\/Collection-List_66658728-900c-45ac-a222-a659ae332d55.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-2023-kids"
+          }
+        },
+        "f99d453a-07f9-485a-ac9a-e20b38ef2090": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Summer 23",
+            "thumbnail": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_9b4b887a-41b7-4645-94c8-d0df9b9817d4.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-23"
+          }
+        },
+        "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Imprint Kids",
+            "thumbnail": "shopify:\/\/shop_images\/HTG_PFW_-_KIDS_-_lookbook_-Final_copy_d747b6c9-f334-4497-abc8-bf408d12b8db.jpg",
+            "lookbook_url": "shopify:\/\/pages\/imprint-kids"
+          }
+        },
+        "7354b537-7f63-4b4d-b1a8-268bc484525f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Imprint",
+            "thumbnail": "shopify:\/\/shop_images\/01_fc44e768-5916-4222-99b6-ebd1f7a0bb3d.jpg",
+            "lookbook_url": "shopify:\/\/pages\/imprint"
+          }
+        },
+        "7dd4b3a3-868a-4b44-85b0-2551b997f367": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Defined",
+            "thumbnail": "shopify:\/\/shop_images\/2-Collection-Cover_785146a5-c9bb-48de-9bf1-f249b92866bc.jpg",
+            "lookbook_url": "shopify:\/\/pages\/defined"
+          }
+        },
+        "c9091d87-03fc-45bf-baf1-2cc729fbc903": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "District",
+            "thumbnail": "shopify:\/\/shop_images\/1-Title_b1ffec8e-b1d3-4818-9a5b-cbc21dc3130f.jpg",
+            "lookbook_url": "shopify:\/\/pages\/the-district"
+          }
+        },
+        "df298214-7371-4125-b692-df7e80aa7e1b": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "District Kids",
+            "thumbnail": "shopify:\/\/shop_images\/Collection-Lookbook-Cover_324c4ecf-a8b4-416e-9f77-f5f664c512e6.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/district-kids"
+          }
+        },
+        "bc93111e-60fa-44a1-ab46-55ab68a6cc63": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "The Coast Kids",
+            "thumbnail": "shopify:\/\/shop_images\/01_a4e3a6d6-8a81-4939-93aa-e2aae816505f.jpg",
+            "lookbook_url": "shopify:\/\/pages\/the-coast-kids"
+          }
+        },
+        "d16da307-5df6-49f0-9814-e0f8eba8b9b0": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "The Coast",
+            "thumbnail": "shopify:\/\/shop_images\/S22_-_The_Coast_-_Lookbook_dragged.jpg",
+            "lookbook_url": "shopify:\/\/pages\/the-coast-collection"
+          }
+        },
+        "26d62055-b885-478c-83f6-90a390c47e5c": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "The Concrete Jungle",
+            "thumbnail": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
+            "lookbook_url": "shopify:\/\/pages\/concrete-jungle-collection"
+          }
+        },
+        "7d15d527-5092-4c5e-ba9d-6bc32d4044fc": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Jordan x HTG®",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.12.26_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/jordan-x-htg-collection"
+          }
+        },
+        "7b09a8ed-db9b-4714-8e5f-8032711d05d6": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Inner City Love Vol. II",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.12.21_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/inner-city-love-vol-2"
+          }
+        },
+        "83f6043e-d579-4d4b-b5ed-47f55c201fd3": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Inner City Love",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.16.13_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/inner-city-love"
+          }
+        },
+        "91af92db-e317-40cb-bc57-c83ff68cdf68": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Inner City Love Kids",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.12.09_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/inner-city-love-kids"
+          }
+        },
+        "9168c99b-4b47-4bd3-8717-623789b118cf": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "City of Angels",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.12.02_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/city-of-angels-collection"
+          }
+        },
+        "9b56abc0-1fe4-4fcf-af95-41e13047531f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Free-Fall",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.11.56_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/free-fall-collection"
+          }
+        },
+        "221788e1-17ca-4b5c-96a6-3d24e340e360": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Free-Fall Women",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.11.48_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/free-fall-women"
+          }
+        },
+        "4b75fef8-d4a4-44b9-bd49-142246ba6f9e": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Free-Fall Kids",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.11.19_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/free-fall-kids-collection"
+          }
+        },
+        "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Gasoline",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.11.04_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/gasoline"
+          }
+        },
+        "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Art Department",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.10.23_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/art-department"
+          }
+        },
+        "6edc349f-1fba-48c2-8215-7d31487b9dd9": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Collection 002 Public",
+            "thumbnail": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.09.47_PM.png",
+            "lookbook_url": "shopify:\/\/pages\/collection-002-public"
+          }
+        },
+        "9ec38332-cc04-42de-81ac-c0f9a716759f": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Collection 002 Private",
+            "thumbnail": "shopify:\/\/shop_images\/ezgif.com-gif-maker.jpg",
+            "lookbook_url": "shopify:\/\/pages\/collection-002-private"
+          }
+        }
+      },
+      "block_order": [
+        "120757bf-18ab-45f4-8269-8f6a96a5af9f",
+        "f99d453a-07f9-485a-ac9a-e20b38ef2090",
+        "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed",
+        "7354b537-7f63-4b4d-b1a8-268bc484525f",
+        "7dd4b3a3-868a-4b44-85b0-2551b997f367",
+        "c9091d87-03fc-45bf-baf1-2cc729fbc903",
+        "df298214-7371-4125-b692-df7e80aa7e1b",
+        "bc93111e-60fa-44a1-ab46-55ab68a6cc63",
+        "d16da307-5df6-49f0-9814-e0f8eba8b9b0",
+        "26d62055-b885-478c-83f6-90a390c47e5c",
+        "7d15d527-5092-4c5e-ba9d-6bc32d4044fc",
+        "7b09a8ed-db9b-4714-8e5f-8032711d05d6",
+        "83f6043e-d579-4d4b-b5ed-47f55c201fd3",
+        "91af92db-e317-40cb-bc57-c83ff68cdf68",
+        "9168c99b-4b47-4bd3-8717-623789b118cf",
+        "9b56abc0-1fe4-4fcf-af95-41e13047531f",
+        "221788e1-17ca-4b5c-96a6-3d24e340e360",
+        "4b75fef8-d4a4-44b9-bd49-142246ba6f9e",
+        "70b8fdb1-5ede-4a89-9ba3-cbbd6a7d24fd",
+        "890f5e7a-29b2-4aa9-a1ac-0393ece54d7e",
+        "6edc349f-1fba-48c2-8215-7d31487b9dd9",
+        "9ec38332-cc04-42de-81ac-c0f9a716759f"
+      ],
+      "settings": {
+        "heading": "Collections"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
+}

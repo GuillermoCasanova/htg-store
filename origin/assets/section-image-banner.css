@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #Image Banner  
+\*------------------------------------*/
+
+
+.image-banner-container {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background-color: rgb(var(--color-base-background-2));
+}
+
+.image-banner {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.8%;
+}
+
+
+@media screen and (min-width: 930px) {
+  .image-banner {
+    min-width: 42rem;
+    padding-bottom: 50%;
+  }
+}
+
+
+.image-banner a:hover .image-banner__cta,
+.image-banner a:focus .image-banner__cta {
+  opacity: 1;
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.image-banner__media {
+  width: 100%;
+  height: 100%;
+}
+
+.image-banner video {
+  opacity: 0;
+}
+
+.image-banner video.is-loaded {
+  animation: fade-in .8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.image-banner__media__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-banner__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}

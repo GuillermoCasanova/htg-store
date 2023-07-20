@@ -1,0 +1,25 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+
+<div class="collection-header master-padding-top">
+  <div class="collection-header__inner page-width">
+    {% render 'breadcrumbs' %}
+    <div class="collection-header__text-wrapper">
+      <h1 class="collection-header__title  visually-hidden ">
+        <span >{{ 'sections.collection_template.title' | t }}: </span>
+        {{ collection.title | escape }} {{ current_tags[0] }}
+      </h1>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+
+  ]
+}
+{% endschema %}

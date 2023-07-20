@@ -1,0 +1,245 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
+    "ef27d716-e142-4b57-af2d-190bee5f2692": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Summer 23",
+        "collection_url": "\/collections\/mens\/summer-23",
+        "product_list": [
+          "ss-denim-woven-indigo",
+          "ss-tobacco-woven-mustard",
+          "tank-rust",
+          "honor-muscle-tee-white",
+          "denim-short-indigo",
+          "tobacco-short-mustard",
+          "herringbone-long-short-cream",
+          "overall-short-tan"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "6fb45919-52f9-480d-bf1e-37784463a9de": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Imprint",
+        "collection_url": "\/collections\/mens\/imprint",
+        "product_list": [
+          "truth-t-shirt-khaki",
+          "ready-for-action-t-shirt-bone",
+          "s-s-shop-shirt-black",
+          "knit-h-button-up-slate",
+          "workman-overall-lt-indigo",
+          "htg-shop-pant-olive",
+          "htg-brand-poly-short-black",
+          "htg®-chore-jacket-lt-indigo"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "c16f385c-3fd5-401c-a208-e1813744bdac": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Jordan x HTG®",
+        "collection_url": "\/collections\/mens\/jordan-x-htg-2023",
+        "product_list": [
+          "jordan-why-not-6-htg-stone",
+          "jam-westbrook-x-htg-backpack-pecan",
+          "jordan-x-rw-x-htg-bucket-phantom",
+          "jordan-x-htg-varsity-jacket-pecan-moon-fossil",
+          "jordan-x-htg-t-shirt-phantom",
+          "jordan-x-htg-crewneck-stone",
+          "jordan-x-htg-pant-stone"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "fa9e520c-204d-4293-896c-f12e8904bb85": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Defined",
+        "collection_url": "\/collections\/mens\/defined",
+        "product_list": [
+          "sueded-band-jacket-grey",
+          "private-school-polo-black",
+          "mascot-hoodie-white",
+          "htg-dedication-t-shirt-black",
+          "school-boy-trouser-grey",
+          "campus-carpenter-pant-white",
+          "code-of-honor-bucket-hat-white",
+          "code-of-honor-scarf-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "3bdfc525-5e97-4abd-92ad-54b133728112": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "HTG® x Union",
+        "collection_url": "\/collections\/htg-x-union",
+        "product_list": [
+          "htg-x-union-t-shirt-white",
+          "htg-x-union-t-shirt-black",
+          "htg-x-union-hoodie-white",
+          "htg-x-union-hoodie-black",
+          "htg-x-union-shorts-white",
+          "htg-x-union-hat-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16590256583d5a0a0f": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "District",
+        "collection_url": "\/collections\/mens\/the-district",
+        "product_list": [
+          "htg-mascot-vest-brown",
+          "prep-school-henley-grey",
+          "vegan-leather-cardigan-tan",
+          "letterman-jacket-black",
+          "cable-knit-pant-tan",
+          "prep-school-pant-grey",
+          "signature-bucket-hat-ruby",
+          "ls-floral-woven-gold"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654614072e4a2b52f": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "The Coast",
+        "collection_url": "\/collections\/mens\/the-coast",
+        "product_list": [
+          "rosecrans-knit-bone",
+          "century-camp-button-up-pacific-blue",
+          "honor-peace-t-shirt-black",
+          "la-tank-black",
+          "neighborhood-pocket-tee-long-beach-blue",
+          "outside-t-shirt-black",
+          "studio-crewneck-bone",
+          "studio-short-grey"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16540387627dd6a3af": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Concrete Jungle",
+        "collection_url": "\/collections\/mens\/concrete-jungle",
+        "product_list": [
+          "baldwin-long-short-cream",
+          "century-camp-button-up-green-polkadot",
+          "century-camp-button-up-peach",
+          "inner-city-cinema-t-shirt-blonde",
+          "compton-short-black",
+          "concrete-jungle-t-shirt-black",
+          "century-camp-button-up-cream-polkadot",
+          "fairfax-twill-pant-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654614390e8e5413f": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Inner City Love Vol. II",
+        "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
+        "product_list": [
+          "inner-city-love-t-shirt-terra-cotta",
+          "htg-weathered-t-shirt-cream",
+          "sundown-t-shirt-sunset",
+          "smokey-striped-t-shirt-long-beach-navy",
+          "cobalt-puff-hoodie-stone",
+          "htg-unisex-cardigan-charcoal",
+          "coltrane-cargo-pant-coyote",
+          "1988-icon-denim-pant-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "165403876742214c90": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Inner City Love Vol. I",
+        "collection_url": "\/collections\/mens\/inner-city-love",
+        "product_list": [
+          "jazz-checkered-short-melon",
+          "jazz-checkered-short-black",
+          "inner-city-love-t-shirt-black-1",
+          "inner-city-love-cap-sage",
+          "1988-icon-denim-pant-black",
+          "1988-icon-denim-pant-indigo",
+          "luther-cargo-pant-clay",
+          "inner-city-love-t-shirt-terra-cotta"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "16630187024a9c32e7": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "City Of Angels",
+        "collection_url": "shopify:\/\/collections\/city-of-angels",
+        "product_list": [
+          "city-of-angels-cap-black",
+          "city-of-angels-cap-rust",
+          "city-of-angels-cap-brick",
+          "city-of-angels-cap-sun-yellow"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "1654615044eadf777e": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Free-fall",
+        "collection_url": "\/collections\/mens\/freefall",
+        "product_list": [
+          "airborne-sock-army",
+          "airborne-sock-black",
+          "airborne-sock-haze"
+        ],
+        "enable_quick_add": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "ef27d716-e142-4b57-af2d-190bee5f2692",
+    "6fb45919-52f9-480d-bf1e-37784463a9de",
+    "c16f385c-3fd5-401c-a208-e1813744bdac",
+    "fa9e520c-204d-4293-896c-f12e8904bb85",
+    "3bdfc525-5e97-4abd-92ad-54b133728112",
+    "16590256583d5a0a0f",
+    "1654614072e4a2b52f",
+    "16540387627dd6a3af",
+    "1654614390e8e5413f",
+    "165403876742214c90",
+    "16630187024a9c32e7",
+    "1654615044eadf777e"
+  ]
+}

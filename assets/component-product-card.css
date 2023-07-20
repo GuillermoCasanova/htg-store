@@ -121,6 +121,11 @@
 }
 
 
+.product-card__badge-text.is-hidden {
+  display: none;
+}
+
+
 
 .card__badge {
   align-self: flex-end;

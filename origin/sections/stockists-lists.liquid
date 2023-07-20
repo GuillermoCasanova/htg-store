@@ -1,0 +1,138 @@
+
+{% style %}
+    .stockists-lists {
+      text-align: center;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 80rem;
+    }
+
+    @media only screen and (min-width: 700px) {
+      .stockists-lists {
+        text-align: left;
+        column-gap: var(--level3);
+      }
+    }
+
+    @media only screen and (min-width: 930px) {
+      .stockists-lists {
+        /* grid-template-columns: 1fr 1fr; */
+        column-gap: var(--level10);
+        transform: translateX(6rem);
+        -webkit-column-count: 3;
+        -webkit-column-gap: 10px;
+        -webkit-column-fill: auto;
+        -moz-column-count: 3;
+        -moz-column-gap: 10px;
+        -moz-column-fill: auto;
+        column-count: 2;
+        column-gap: 15px;
+        column-fill: auto;
+        width: 100%;
+        /* display: flex; */
+      }
+    }
+
+
+    .stockist-list {
+      display: inline-block;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+      min-width: 36vw;
+    }
+
+    .stockist-list h2 {
+      font-family: var(--tertiary-font-family);
+      font-size: var(--h4);
+      margin-bottom: var(--level6);
+    }
+
+
+    @media only screen and (min-width: 700px) {
+      .stockist-list h2 {
+        font-size: var(--h3);
+      }
+    }
+
+
+    .stockist-list ul {
+      margin-bottom: var(--level10);
+      grid-template-columns: 1fr 1fr;
+      column-gap: var(--level8);
+      display: grid;
+    }
+
+    .stockist-list:nth-child(2) ~ * ul{
+      display: block;
+    }
+
+    .stockist-list li {
+      margin-bottom: var(--level2);
+      font-size: var(--normal);
+    }
+
+    @media only screen and (min-width: 700px) {
+      .stockist-list li {
+        font-size: var(--h6);
+      }
+    }
+
+{% endstyle %}
+
+<div class="stockists-lists">
+  {% for block in section.blocks %}
+  <div class="stockist-list">
+    <h2>
+      {{ block.settings.country_region }}
+    </h2>
+    <ul>
+        {{ block.settings.store_list }}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Stockists Lists",
+  "tag": "section",
+  "class": "stockists-list page-width",
+  "settings": [
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.page.settings.page.label"
+    }
+  ],
+  "templates": [
+    "page"
+  ],
+  "blocks": [
+    {
+      "type": "stockist-list",
+      "name": "Stockist List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "country_region",
+          "label": "Countru or region"
+        },
+        {
+          "type": "html",
+          "id": "store_list",
+          "label": "List of stores",
+          "info": "List of stores, eachs store must be wrapped in a <li></li> tags to represent a list."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stockists Lists"
+    }
+  ]
+}
+{% endschema %}

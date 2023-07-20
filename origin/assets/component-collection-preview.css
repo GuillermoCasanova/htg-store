@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    #Collection Preview 
+\*------------------------------------*/
+
+.collection-preview__header {
+    border-bottom: 1px solid rgb(var(--color-base-text));
+    margin-bottom: var(--level4);
+}
+
+
+
+@media only screen and (min-width: 700px) {
+    .collection-preview__header {
+        margin-bottom: var(--level6);
+    }
+}
+
+
+@media only screen and (min-width: 930px) {
+    .collection-preview__header {
+        margin-bottom: var(--level6);
+    }
+}
+
+
+.collection-preview__header__headline {
+    font-family: var(--tertiary-font-family);
+    font-size: var(--h3);
+}
+
+@media only screen and (min-width: 930px) {
+    .collection-preview__header__headline {
+        margin-bottom: var(--level4);
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+    .collection-preview__header__headline {
+        margin-bottom: var(--level4);
+        font-size: var(--h3);
+    }
+}
+
+
+
+
+.collection-preview__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
+    column-gap: var(--level4);
+    width: 100%;
+    margin-bottom: var(--level3)
+}
+
+@media screen and (min-width: 700px) {
+    .collection-preview__products {
+        grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+        column-gap: var(--level3);
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .collection-preview__products {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 1681px) {
+    .collection-preview__products {
+        column-gap: var(--level4);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+
+.collection-preview__footer {
+    text-align: center;
+    padding-top: var(--level1);
+    width: 100%;
+    margin-bottom: var(--level3);
+}
+
+@media only screen and (min-width: 700px) {
+    .collection-preview__footer {
+        padding-top: var(--level2);
+        margin-bottom: var(--level6);
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .collection-preview__footer {
+        padding-top: 0;
+        margin-bottom: var(--level6);
+        margin-top: calc(var(--level4) * -1);
+    }
+}
+
+
+
+.collection-preview__footer__cta {
+    font-size: var(--h6);
+}
+
+@media only screen and (min-width: 700px) {
+    .collection-preview__footer__cta {
+        font-size: var(--h4);
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .collection-preview__footer__cta {
+        font-size: var(--h3);
+    }
+}

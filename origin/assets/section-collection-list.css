@@ -1,0 +1,110 @@
+.archival-collections {
+  padding-top: var(--level6);
+
+}
+
+@media only screen and (min-width: 700px) {
+  .archival-collections {
+    padding-top: var(--level8);
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .archival-collections {
+    padding-top: var(--level10);
+  }
+}
+
+
+
+@media only screen and (min-width: 700px) {
+  .archival-collections__inner {
+    padding-left: var(--level7);
+    padding-right: var(--level7);
+  }
+}
+
+.archival-collections__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--level6);
+}
+
+@media only screen and (min-width: 700px) {
+  .archival-collections__inner {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--level7);
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .archival-collections__inner {
+    column-gap: var(--level9);
+    max-width: 80rem;
+  }
+}
+
+.archival-collection-thumb {
+  margin-bottom: var(--level8);
+}
+
+@media only screen and (min-width: 930px) {
+  .archival-collection-thumb {
+    margin-bottom: var(--level10);
+  }
+}
+
+
+.archival-collection-thumb__image-container {
+  width: 100%;
+  margin-bottom: var(--level5);
+  overflow: hidden;
+  position: relative;
+  display: block;
+  background-color: rgb(var(--color-base-background-2));
+}
+
+.archival-collection-thumb__image-container:hover .archival-collection-thumb__image img,
+.archival-collection-thumb__image-container:focus .archival-collection-thumb__image img {
+  transform: scale(1.1);
+}
+
+.archival-collection-thumb__image {
+  position: relative;
+  padding-bottom: 130%;
+  width: 100%;
+}
+
+.archival-collection-thumb__image img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.archival-collection-thumb__info__name {
+  font-family: var(--tertiary-font-family);
+  margin-bottom: var(--level1);
+}
+
+@media only screen and (min-width: 930px) {
+  .archival-collection-thumb__info__name {
+    font-size: var(--h4);
+    margin-bottom: var(--level1);
+  }
+}
+
+.archival-collection-thumb__cta .styled-link {
+  color: rgb(var(--color-base-link));
+  text-decoration: none;
+}
+
+.archival-collection-thumb__cta .styled-link:hover {
+  color: rgb(var(--color-base-text));
+  text-decoration: underline;
+}

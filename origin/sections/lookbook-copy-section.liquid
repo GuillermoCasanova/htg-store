@@ -1,0 +1,182 @@
+
+
+{% comment %} <link rel="stylesheet" href="{{ 'lookbook-copy-section.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+
+
+{% style %}
+/*------------------------------------*\
+    #Section Lookbook Copy
+\*------------------------------------*/
+
+
+.lookbook-copy-section {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.lookbook-copy-section__inner {
+    padding: var(--level6);
+    padding-top: var(--level9);
+    padding-bottom: var(--level7);
+}
+
+
+@media only screen and (min-width: 930px) {
+    .lookbook-copy-section__inner {
+        padding-top: var(--level10);
+        padding-bottom: calc(var(--level7) * 2);
+    }
+}
+
+.lookbook-copy-section__heading {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-family: var(--tertiary-font-family);
+    font-size: var(--h3);
+    margin-bottom: var(--level7);
+}
+
+@media screen and (min-width:930px) {
+    .lookbook-copy-section__heading {
+        font-size: var(--h2);
+        margin-bottom: var(--level8);
+        margin-top: var(--level3);
+    }
+}
+
+
+
+.lookbook-copy-section__body {
+    text-align: center;
+    font-size: var(--normal);
+    max-width: 30rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: var(--level5);
+}
+
+@media screen and (min-width:600px) {
+    .lookbook-copy-section__body {
+        max-width: 38rem;
+    }
+}
+
+
+@media screen and (min-width:930px) {
+    .lookbook-copy-section__body {
+        font-size: var(--h4);
+        max-width: 68rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .lookbook-copy-section__body {}
+}
+{% endstyle %}
+
+<section class="lookbook-copy-section  {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}
+  {% if section.settings.bg_color == 'background-1' %}
+    background-color: rgb(var(--color-base-background-1));
+{% endif %}
+{% if section.settings.bg_color == 'background-2' %}
+    background-color: rgb(var(--color-base-background-2));
+{% endif %}
+{% if section.settings.bg_color == 'background-3' %}
+    background-color: rgb(var(--color-base-background-3));
+{% endif %}">
+  <div class="lookbook-copy-section__inner">
+      <div class="page-width">
+          <h2 class="lookbook-copy-section__heading">
+              {{ section.settings.heading }}
+          </h2>
+          <div class="lookbook-copy-section__body">
+              {{ section.settings.body }}
+          </div>
+      </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Lookbook Copy Section",
+  "tag": "section",
+  "class": "lookbook-copy-section",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Heading",
+      "id": "heading"
+    },
+    {
+      "type": "richtext",
+      "label": "Section Body",
+      "id": "body"
+    },
+    {
+      "type": "select",
+      "id": "bg_color",
+      "label": "Copy Background Color",
+      "info": "Pulled from Theme Settings > Background Colors",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Bakground 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Bakground 2"
+        },
+        {
+          "value": "background-3",
+          "label": "Bakground 3"
+        }
+      ],
+      "default": "background-2"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Copy Section"
+    }
+  ]
+}
+{% endschema %}

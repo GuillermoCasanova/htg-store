@@ -1,0 +1,102 @@
+<script type="module" src="{{ 'lookbook-slideshow.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="{{ 'lookbook-slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'vendor-swiper.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+<section class="lookbook-slideshow-container  {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
+  <lookbook-slideshow> 
+    <div class="lookbook-slideshow" data-lookbook-images-slideshow>
+        <ul  class="lookbook-slideshow__inner" data-lookbook-images-slideshow-wrapper>
+        {% for block in section.blocks %}
+            <li class="lookbook-slideshow__slide" data-lookbook-images-slideshow-slide>
+                <div class="lookbook-slideshow__slide__inner">
+                <img
+                    srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1600 -%}{{ block.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
+                    {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                    src="{{ block.settings.image | image_url: width: 533 }}"
+                    sizes="(min-width: 700px) 50vw, 100vw"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}">
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+        <div  data-lookbook-images-slideshow-pagination class="lookbook-slideshow__pagination">
+        </div>
+    </div>
+  </lookbook-slideshow>
+</section>
+
+{% schema %}
+{
+  "name": "Lookbook Slideshow",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Collection Name"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slideshow_slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Slideshow"
+    }
+  ]
+}
+{% endschema %}

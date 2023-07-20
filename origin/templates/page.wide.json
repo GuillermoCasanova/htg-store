@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "header": {
+      "type": "about-header",
+      "settings": {
+        "heading": "Honor The Gift",
+        "body": "<p>Honoring the gifts and talents given to you. <br\/>Pursuit of self belief.<br\/><br\/>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you.<br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
+        "image": "shopify:\/\/shop_images\/About-page.jpg",
+        "section-alignment": "normal",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "pillars": {
+      "type": "about-pillars",
+      "settings": {
+        "heading_1": "For The Inner City",
+        "body_1": "<p>Proper representation of the Inner City community. Giving back and making the Inner City heard and proud.<\/p>",
+        "heading_2": "Overcome",
+        "body_2": "<p>Overcoming hardship and adversity, <br\/>Why not?<\/p>",
+        "heading_3": "Raw",
+        "body_3": "<p>HTG portays these values through a raw and real lens. Confident, aggressive, no fakes.<\/p>",
+        "top_border": "no",
+        "bottom_border": "no"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "pillars"
+  ]
+}

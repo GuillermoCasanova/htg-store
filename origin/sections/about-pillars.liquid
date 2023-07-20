@@ -1,0 +1,119 @@
+{{ 'section-about-pillars.css' | asset_url | stylesheet_tag }}
+
+<section class="about-pillars {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
+  <div class="about-pillars__inner">
+      <div class="about-pillars__pillar">
+          <div class="about-pillars__pillar__copy">
+              <h2 class="about-pillars__pillar__copy__heading">
+              {{ section.settings.heading_1 }}
+              </h2>
+              <div class="about-pillars__pillar__copy__body">
+                  {{ section.settings.body_1 }}
+              </div>
+          </div>
+      </div>
+      <div class="about-pillars__pillar">
+          <div class="about-pillars__pillar__copy">
+              <h2 class="about-pillars__pillar__copy__heading">
+              {{ section.settings.heading_2 }}
+              </h2>
+              <div class="about-pillars__pillar__copy__body">
+                  {{ section.settings.body_2 }}
+              </div>
+          </div>
+      </div>
+      <div class="about-pillars__pillar">
+          <div class="about-pillars__pillar__copy">
+              <h2 class="about-pillars__pillar__copy__heading">
+              {{ section.settings.heading_3 }}
+              </h2>
+              <div class="about-pillars__pillar__copy__body">
+                  {{ section.settings.body_3 }}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "About Pillars",
+  "templates": [
+    "page"
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pillars"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Pillar 1 Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "body_1",
+      "label": "Pillar 1 Body"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Pillar 2 Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "body_2",
+      "label": "Pillar 2 Body"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Pillar 3 Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "body_3",
+      "label": "Pillar 3 Body"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Pillars"
+    }
+  ]
+}
+{% endschema %}

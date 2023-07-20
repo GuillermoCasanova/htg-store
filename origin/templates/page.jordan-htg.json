@@ -1,0 +1,167 @@
+{
+  "sections": {
+    "165479687868697dbe": {
+      "type": "image-banner",
+      "blocks": {
+        "1654796878b5552f42-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "1654796878b5552f42-0"
+      ],
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0013\/1111\/3328\/files\/HO21_JD_BB_Revolution_LTCC_RWestbrook_TCooper_WN5_Hero_AV_60sec_3648x1800.mp4?v=1654813185",
+        "cta-url": ""
+      }
+    },
+    "1654811846108992c8": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Jordan x HTG®",
+        "body": "<p>Los Angeles native Russell Westbrook’s Honor the Gift clothing brand is an expression of strength, focus and leadership. Similar to the Jordan Brand, it was founded on self-belief and dedication to never stop working toward greatness, no matter the hardship.<br\/><br\/>Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where Russell came from and where anyone can take themselves. This year, the two Brands have collaborated to launch Russell’s signature colorway of the Why Not.5 shoe and apparel line. Details such as patches, labels and embroidery of the “Inner City” collection capture the style and essence of Russell’s experience.<br\/><br\/><\/p>",
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_2.58.51_PM.png",
+        "section-alignment": "flipped",
+        "copy-bg-color": "background-3",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "header": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "a1ec63f7-c01a-4f29-b741-a0b5debf7ba0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "a1ec63f7-c01a-4f29-b741-a0b5debf7ba0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook_9d4baf95-e54c-4534-8f17-bff42bc96c84.jpg",
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "1654796652c1f897d9": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Collection Preview",
+        "collection": "jordan-x-htg",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "16547967139d0d9446": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "bc18d259-3065-420b-a241-572194cd7f59": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.07_PM.png"
+          }
+        },
+        "7e46cf5b-95fe-4e04-b1ca-c8987472303f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.12_PM.png"
+          }
+        },
+        "c71dcb3a-0095-47ea-adcd-f12aa46615fd": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.18_PM_51a0424c-c119-4ecc-b2cf-17e54a1a258d.png"
+          }
+        },
+        "38abe9cd-0ffc-4b11-99bf-329118e07093": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.24_PM.png"
+          }
+        },
+        "e009326d-d5d2-4e32-bafe-b9dd8080d569": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.32_PM.png"
+          }
+        },
+        "b14b79c7-4336-40f2-8365-1b112d88860f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.39_PM.png"
+          }
+        },
+        "ecd3be55-eff5-4a58-a77d-733c13f1a10d": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.45_PM.png"
+          }
+        },
+        "aba391c1-1198-46b6-91ca-0418015b827f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.53_PM.png"
+          }
+        },
+        "05e8fb0a-49d4-4c28-ba7f-1ed7fc4d68b8": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.01.59_PM.png"
+          }
+        },
+        "27c25819-52fe-4afc-9685-0103fb556208": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.02.05_PM.png"
+          }
+        },
+        "7d03965e-8498-4af9-a8e5-36a197ff6f68": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.02.10_PM.png"
+          }
+        },
+        "da80fdc1-9f93-474e-a4d5-96f006d11b42": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_3.02.16_PM.png"
+          }
+        }
+      },
+      "block_order": [
+        "bc18d259-3065-420b-a241-572194cd7f59",
+        "7e46cf5b-95fe-4e04-b1ca-c8987472303f",
+        "c71dcb3a-0095-47ea-adcd-f12aa46615fd",
+        "38abe9cd-0ffc-4b11-99bf-329118e07093",
+        "e009326d-d5d2-4e32-bafe-b9dd8080d569",
+        "b14b79c7-4336-40f2-8365-1b112d88860f",
+        "ecd3be55-eff5-4a58-a77d-733c13f1a10d",
+        "aba391c1-1198-46b6-91ca-0418015b827f",
+        "05e8fb0a-49d4-4c28-ba7f-1ed7fc4d68b8",
+        "27c25819-52fe-4afc-9685-0103fb556208",
+        "7d03965e-8498-4af9-a8e5-36a197ff6f68",
+        "da80fdc1-9f93-474e-a4d5-96f006d11b42"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
+      }
+    }
+  },
+  "order": [
+    "165479687868697dbe",
+    "1654811846108992c8",
+    "header",
+    "1654796652c1f897d9",
+    "16547967139d0d9446"
+  ]
+}

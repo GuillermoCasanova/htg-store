@@ -1,0 +1,448 @@
+/*------------------------------------*\
+    #Forms 
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    #Inputs 
+\*------------------------------------*/
+
+:root {
+    --input-border-width: 1.5px
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+input,
+textarea {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border: 1px solid rgb(var(--color-base-text));
+    border-radius: 0;
+    font-family: var(--primary-font-family);
+    transition: all .4s ease-in-out;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+input:focus,
+textarea:focus {
+    outline: 0;
+    background-color: transparent
+}
+
+
+input[type="text"]:active,
+input[type="password"]:active,
+input[type="date"]:active,
+input[type="datetime"]:active,
+input[type="datetime-local"]:active,
+input[type="month"]:active,
+input[type="week"]:active,
+input[type="email"]:active,
+input[type="number"]:active,
+input[type="search"]:active,
+input[type="tel"]:active,
+input[type="time"]:active,
+input[type="url"]:active,
+input[type="color"]:active,
+input:active,
+textarea:active {
+    outline: 0;
+    background-color: transparent
+}
+
+label {
+    font-family: var(--primary-font-family);
+    letter-spacing: .25px;
+    /*ransition: all .2s cubic-bezier(0.22, 1, 0.36, 1);*/
+    /* @include h5(); */
+}
+
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: black !important;
+}
+
+textarea {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+
+textarea:active,
+textarea:focus {
+    border-color: #fff;
+    background-color: #fff
+}
+
+textarea:active+label,
+textarea:focus+label {
+    color: #fff;
+}
+
+
+
+.form-section {
+    margin-bottom: 1.5rem;
+}
+
+
+.input-label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+
+legend {
+    padding: 0;
+    display: table;
+}
+
+fieldset {
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+    display: table-cell;
+}
+
+.input-required {
+    color: red;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Default Fields
+\*------------------------------------*/
+
+.field textarea {
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.field textarea:active,
+.field textarea:focus {
+    background-color: transparent;
+}
+
+
+.field label {
+    margin-bottom: var(--level3);
+    display: flex;
+    font-size: var(--h5);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Custom Fields
+\*------------------------------------*/
+
+
+.custom-field {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: var(--level4)
+}
+
+.custom-field label {
+    line-height: 1.5;
+    padding-bottom: 0;
+    pointer-events: none;
+    transition: all .4s cubic-bezier(0.22, 1, 0.36, 1);
+    margin-bottom: 0;
+    font-size: var(--h6);
+    transform: translateY(.05rem);
+}
+
+.custom-field.is-active label {
+    opacity: 0;
+    transform: translateY(-3px);
+}
+
+.custom-field input {
+    padding-top: var(--level3);
+    padding-bottom: var(--level3);
+    padding-left: var(--level2);
+    font-size: var(--h6);
+}
+
+.custom-field input:active,
+.custom-field input:focus {
+    background-color: transparent
+}
+
+
+.custom-field label {
+    font-family: var(--primary-font-family);
+    color: rgb(var(--color-base-link));
+}
+
+/* .custom-field input:active+label,
+.custom-field input:focus+label {} */
+
+.custom-field label {
+    position: absolute;
+    left: var(--level4);
+    font-family: var(--primary-font-family);
+    top: 0;
+    bottom: -.15rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+
+}
+
+.custom-select {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: var(--level4)
+}
+
+
+.custom-select select {
+    padding-top: var(--level3);
+    padding-bottom: var(--level3);
+    padding-left: var(--level2);
+    font-size: var(--h6);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+}
+
+.custom-select select:hover {
+    cursor: pointer;
+}
+
+.custom-select svg {
+    position: absolute;
+    right: var(--level4);
+    top: 1rem;
+    bottom: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Buttons 
+\*------------------------------------*/
+
+
+button {
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    font-family: var(--primary-font-family);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button,
+.styled-link {
+    text-transform: uppercase;
+    color: rgb(var(--color-base-text));
+}
+
+.button--primary {
+    background-color: rgb(var(--color-base-background-2));
+    border: 1px solid rgb(var(--color-base-text));
+    border-radius: 0;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+    background-color: black;
+    color: #fff;
+}
+
+.button--secondary {
+    background-color: #fff;
+    border: 1px solid rgb(var(--color-base-text));
+    border-radius: 0;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+    background-color: black;
+    color: #fff;
+}
+
+
+
+.load-more-products-button-container {
+    max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: var(--level8);
+}
+
+.load-more-products-button button {
+    max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(var(--color-base-text));
+}
+
+.button--medium {
+    padding-top: var(--level2);
+    padding-bottom: var(--level1);
+}
+
+.button--large {
+    padding-top: var(--level3);
+    padding-bottom: var(--level2);
+    font-size: var(--normal);
+}
+
+.styled-link:hover,
+.styled-link:focus {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #Disclaimer Checkbox
+\*------------------------------------*/
+
+.disclaimer-checkbox {
+    display: flex;
+    margin-top: calc(var(--level1) / 2);
+    margin-bottom: var(--level5);
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: var(--h5);
+}
+
+.custom-checkbox:hover {
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+
+.custom-checkbox .checkbox span,
+.custom-checkbox .checkbox span {
+    display: none;
+}
+
+.custom-checkbox .checkbox input:checked+span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-checkbox .checkbox input:focus+span {
+    display: block;
+    opacity: .5;
+}
+
+.custom-checkbox .checkbox span:after,
+.custom-checkbox .checkbox span:before {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.custom-checkbox .checkbox span:after {
+    transform: rotate(45deg);
+}
+
+.custom-checkbox .checkbox span:before {
+    transform: rotate(-45deg);
+}
+
+.custom-checkbox input:checked span {
+    display: block;
+}
+
+
+.custom-checkbox .checkbox {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid black;
+    display: block;
+    margin-right: var(--level2);
+    position: relative;
+}

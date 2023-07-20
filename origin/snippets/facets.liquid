@@ -1,0 +1,134 @@
+{% comment %}
+    Renders facets (filtering and sorting)
+
+    Accepts:
+    - results: {Object} Collection or Search object
+    - enable_filtering: {Boolean} Show filtering when true
+    - enable_sorting: {Boolean} Show sorting when true
+    - filter_type: {String} Type of filter
+
+    Usage:
+    {% render 'facets', results: collection.products %}
+{% endcomment %}
+
+
+{%- liquid
+  assign sort_by = results.sort_by | default: results.default_sort_by
+  if results.url
+  else
+  endif
+-%}
+
+
+<collection-filters data-section-id="{{ section.id }}">
+    <h2 class="visually-hidden">
+      Sort and Filter Products
+    </h2>
+    <div class="collection-filters">
+    <div class="collection-filters__options">
+      <button  type="button" aria-expanded="false" id="sort-by" data-filter-toggle>
+        Sort By
+      </button>
+
+      <button  type="button" aria-expanded="false" id="filter-by" data-filter-toggle>
+        Filter By
+      </button>
+      
+    </div>
+    <div class="collection-filters__filtering-forms">
+      <div role="region" data-filter-form aria-hidden="true" aria-labelledby="sort-by" class="collection-filters__filtering-forms__form">
+        <div class="collection-filters__filtering-forms__form__inner">
+          <fieldset class="filter-field-set">
+            <legend class="filter-field-set__legend visually-hidden">
+              Sorting Options
+            </legend>
+            <div  class="sort-options" data-sort-options>
+              <div class="sort-option">
+                  <input type="radio"
+                    name="sort_by"
+                    id="price-descending"
+                    value="price-descending" >
+                  <label for="price-descending" data-option-label data-option-name="{{ value | escape }}">
+                    High to Low, Price
+                  </label>
+              </div>
+              <div class="sort-option">
+                  <input type="radio"
+                    name="sort_by"
+                    id="price-ascending"
+                    value="price-ascending" >
+                  <label for="price-ascending">
+                    Low to High, Price
+                  </label>
+              </div>
+              <div class="sort-option">
+                  <input type="radio"
+                    name="sort_by"
+                    id="best-seller"
+                    value="best-seller" >
+                  <label for="best-seller">
+                    Best Sellers
+                  </label>
+              </div>
+              <div class="sort-option">
+                  <input type="radio"
+                    name="sort_by"
+                    id="created-descending"
+                    value="created-descending" >
+                  <label for="created-descending">
+                    Newest
+                  </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      
+      <div role="region" data-filter-form aria-hidden="true" aria-labelledby="filter-by"  class="collection-filters__filtering-forms__form">
+
+        <div class="collection-filters__filtering-forms__form__inner">
+        
+          <fieldset class="filter-field-set">
+            <legend class="filter-field-set__legend"  data-filter-id="size">
+              Size
+            </legend>
+            <div  class="filter-sizes" data-size-filters >
+            </div>
+          </fieldset>
+
+          <fieldset class="filter-field-set" data-filter-id="color">
+            <legend class="filter-field-set__legend">
+              Color
+            </legend>
+            <div  class="filter-colors" data-color-filters>
+            </div>
+          
+          </fieldset>
+        </div>
+
+        {% comment %} <fieldset data-color-filters>
+          <legend class="visually-hidden">
+            Toggle Availability
+          </legend>
+        
+          <label for="availability-filter">
+            Hide Sold Out Items
+          </label>
+          <input type="checkbox" value="hide-sold-out-products" name="Hide sold out items" id="availability-filter" data-filter data-availability-filter>
+        </fieldset> {% endcomment %}
+        
+        <div class="filtering-forms__actions">
+        
+          <button type="button" aria-label="Filter products by selected filters" data-activate-filters>
+            See Results
+          </button>
+
+          <button type="button" aria-label="Clear selected filters and view all products" data-clear-filters>
+            Clear All Filter
+          </button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</collection-filters>

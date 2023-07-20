@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "header": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "1654833095c6b3b32a": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Free-Fall",
+        "body": "<p>Introducing Honor The Gift® 2021 Collection: Free-Fall. “What does it feel like when gravity can’t hold us back?” This question was the driving force of Free-fall development. Inspired by the legendary Tuskegee Airmen who served as the first African-American military aviators in the U.S. Army Air Corps. <\/p><p><\/p><p>Some will tell you that you can’t fly. <\/p><p>We ask, why not?<\/p>",
+        "image": "shopify:\/\/shop_images\/HTG_Freefall_0000_1_71a46615-b3e2-407e-a8a5-f4e0ff5e0437.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "1654833231ba506109": {
+      "type": "lookbook-collection-display",
+      "disabled": true,
+      "settings": {
+        "heading": "Free-Fall",
+        "collection": "freefall",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "165483328369ba04c4": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "59d23e32-6e61-481b-8f19-84f784e96e47": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_Freefall_0001_2_705162a2-93cd-486f-9075-4d22603cfac8.jpg"
+          }
+        },
+        "655bbd05-9641-4142-a87a-62ed6314d8cf": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_Freefall_0002_3_a61c2d02-c3e9-41b8-a1fb-610820e28afc.jpg"
+          }
+        },
+        "2ec7b1a6-1e03-48fb-b965-07cd9fed5228": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_Freefall_0003_4_e82346de-9ad5-42fb-87a0-e46b4b405015.jpg"
+          }
+        },
+        "c9ce4c7f-f098-4850-aa1b-07a710585365": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_Freefall_0005_6_6c14ea80-3b3d-457a-a3d8-0e4dd1cd8053.jpg"
+          }
+        },
+        "99d13d68-67e8-4876-84d9-f824ec7f57b6": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_Freefall_0006_7_681c424b-6264-4cf6-9adc-7bf1ba8f9699.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "59d23e32-6e61-481b-8f19-84f784e96e47",
+        "655bbd05-9641-4142-a87a-62ed6314d8cf",
+        "2ec7b1a6-1e03-48fb-b965-07cd9fed5228",
+        "c9ce4c7f-f098-4850-aa1b-07a710585365",
+        "99d13d68-67e8-4876-84d9-f824ec7f57b6"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "no"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "1654833095c6b3b32a",
+    "1654833231ba506109",
+    "165483328369ba04c4"
+  ]
+}

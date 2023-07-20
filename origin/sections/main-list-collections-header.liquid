@@ -1,0 +1,125 @@
+{{ 'section-header-list-collections.css' | asset_url | stylesheet_tag }}
+
+<div class="header-list-collections__inner">
+    <div class="header-list-collections__image-container">
+        <div class="header-list-collections__image">
+            <img
+                srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                src="{{ section.settings.image | image_url: width: 533 }}"
+                sizes="(min-width: 700px) 50vw, 100vw"
+                alt="{{ section.settings.image.alt | escape }}"
+                class="motion-reduce"
+                loading="lazy"
+                width="{{ section.settings.image.width }}"
+                height="{{ section.settings.image.height }}"
+            >
+        </div>
+    </div>
+    <div class="header-list-collections__copy">
+        <div class="header-list-collections__copy__inner">
+            <h2 class="header-list-collections__copy__heading">
+                {{ section.settings.heading }}
+            </h2>
+            
+            <div class="header-list-collections__copy__body">
+                {{ section.settings.body }}
+            </div>
+
+            {% if section.settings.collection_lookbook_url != blank %}
+            <div  class="header-list-collections__copy__body__cta">
+                <a href="{{ section.settings.collection_lookbook_url }}" class="styled-link" rel="internal">
+                    View Collection
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header List Collections",
+  "tag": "section",
+  "class": "header-list-collections",
+  "templates": [
+    "list-collections"
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Copy"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Section Body"
+    },
+    {
+      "type": "url",
+      "id": "collection_lookbook_url",
+      "label": "Featured Collection Lookbook Url"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Featured Collection Image"
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "radio",
+      "id": "section-alignment",
+      "label": "Section Order on Desktop",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Image on Left"
+        },
+        {
+          "value": "flipped",
+          "label": "Image on Right"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "select",
+      "id": "copy-bg-color",
+      "label": "Copy Background Color",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Bakground 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Bakground 2"
+        },
+        {
+          "value": "background-3",
+          "label": "Bakground 3"
+        }
+      ],
+      "default": "background-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header List Collections"
+    }
+  ]
+}
+{% endschema %}
