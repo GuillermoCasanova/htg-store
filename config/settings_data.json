@@ -7,6 +7,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
+    "show_announcement_bar": true,
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "left",
@@ -103,9 +104,8 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Complimentary domestic shipping for orders over $200.",
+              "text": "Up to 50% Off End of Summer Sale | Complimentary domestic shipping for orders over $200.",
               "color_scheme": "background-1",
               "link": ""
             }
@@ -115,6 +115,7 @@
           "announcement-bar-0"
         ],
         "settings": {
+          "color_mode": "light"
         }
       },
       "header": {
