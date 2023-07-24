@@ -294,11 +294,16 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
     </a>
 
 
+    <div class="sticky-content" style="position: fixed; top: 0; width: 100%; z-index: 10;">
+    
       {%if settings.show_announcement_bar%}
         {% section 'announcement-bar' %}
       {%endif%}
       
     {% section 'header' %}
+
+    </div>
+
 
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" >

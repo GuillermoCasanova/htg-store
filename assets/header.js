@@ -262,3 +262,19 @@ class MenuDropdown extends HTMLElement {
 
 customElements.define('menu-dropdown', MenuDropdown);
 
+
+class AnnouncementBar extends HTMLElement {
+  constructor() {
+    super(); 
+    this.init();
+  }
+  init() {
+    //Gives main and the off canvas cart a margin top to make up for the header covering the page when the announcement bar is active
+    let marginTop =  this.offsetHeight + document.querySelector('header').offsetHeight; 
+    document.querySelector('main').style.marginTop = marginTop + "px";
+    document.querySelector('.cart-notification').style.marginTop = marginTop / 2.5  + "px"; 
+  }
+
+}
+
+customElements.define('announcement-bar', AnnouncementBar);

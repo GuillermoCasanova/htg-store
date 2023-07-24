@@ -34,24 +34,13 @@
     #Header
 \*------------------------------------*/
 
-sticky-header {
-    z-index: 20;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-
-@media only screen and (min-width: 930px) {
-    sticky-header {
-        z-index: 2;
-    }
-}
-
 .header-wrapper {
     width: 100%;
+    z-index: 20;
+    top: 0;
+    width: 100%;
+    position: relative;
 }
-
 
 .header {
     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -63,7 +52,7 @@ sticky-header {
     padding-top: var(--level1);
     padding-bottom: var(--level1);
     display: grid;
-    grid-template-areas: 'menu  heading cart-drawer';
+    grid-template-areas: 'menu heading cart-drawer';
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-between;
     align-items: center;
@@ -370,8 +359,6 @@ cart-toggle.hide-for-large-up {
 /*------------------------------------*\
     #Menu Drawer  Icon
 \*------------------------------------*/
-
-
 .header__icon--menu {
     background: transparent;
     position: relative;
@@ -401,7 +388,7 @@ cart-toggle.hide-for-large-up {
     width: 100%;
 }
 
-a .header__icon--menu:after,
+.header__icon--menu:after,
 .header__icon--menu .header__icon__inner:after,
 .header__icon--menu .header__icon__inner:before {
     content: " ";
@@ -425,7 +412,6 @@ a .header__icon--menu:after,
 .header__icon--menu .header__icon__inner:before {
     top: 17px;
 }
-
 
 .header-menu-drawer-container.menu-opening .header__icon--menu:after {
     transform: translateX(-2px);
