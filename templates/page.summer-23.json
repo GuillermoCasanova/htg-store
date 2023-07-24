@@ -3,6 +3,7 @@
     "header": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/10_13ddeaaf-afdf-4471-8970-d6be64ed17bd.jpg",
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e584f58b5e96469c8d6d25e18bff535e.mp4",
         "cta-url": ""
       }
