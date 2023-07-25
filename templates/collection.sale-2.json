@@ -36,17 +36,17 @@
     "e9d28303-6ae1-43d7-8064-ddf83e7aa688": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Womens 30% Off",
-        "collection_url": "\/collections\/womens\/SALE720_30",
+        "collection_name": "Womens 40% Off",
+        "collection_url": "\/collections\/womens\/\/collections\/mens\/SALE720_40",
         "product_list": [
-          "womens-1988-stamp-t-shirt-mustard",
-          "womens-floral-ribbed-tank-cream",
-          "womens-cadet-top-khaki",
-          "womens-1988-stamp-t-shirt-black",
-          "womens-denim-camp-ss-button-up-light-indigo",
-          "womens-floral-camp-ss-button-up-cream",
-          "womens-floral-knit-dress-blue",
-          "womens-htg-jacquard-full-zip-hoodie-cream"
+          "htg-unisex-cardigan-long-beach-navy",
+          "htg-womens-knit-top-long-beach-navy",
+          "htg-womens-knit-pant-charcoal",
+          "htg-womens-knit-pant-terra-cotta",
+          "womens-hollywood-pant-black",
+          "womens-hollywood-jacket-cream",
+          "womens-jungle-camp-button-up-blonde",
+          "womens-monogram-lounge-pant-peach"
         ],
         "enable_quick_add": true
       }
