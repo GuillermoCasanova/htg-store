@@ -36,17 +36,17 @@
     "e9d28303-6ae1-43d7-8064-ddf83e7aa688": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Summer Sale 30%",
-        "collection_url": "shopify:\/\/collections\/summer-sale-30",
+        "collection_name": "Womens 30% Off",
+        "collection_url": "\/collections\/womens\/SALE720_30",
         "product_list": [
-          "honor-muscle-tee-white",
-          "h-quilted-vest-khaki",
-          "past-and-future-t-shirt-black",
-          "overall-short-indigo",
           "womens-1988-stamp-t-shirt-mustard",
           "womens-floral-ribbed-tank-cream",
-          "kids-uniform-s-s-button-up-olive",
-          "kids-work-horse-t-shirt-bone"
+          "womens-cadet-top-khaki",
+          "womens-1988-stamp-t-shirt-black",
+          "womens-denim-camp-ss-button-up-light-indigo",
+          "womens-floral-camp-ss-button-up-cream",
+          "womens-floral-knit-dress-blue",
+          "womens-htg-jacquard-full-zip-hoodie-cream"
         ],
         "enable_quick_add": true
       }
