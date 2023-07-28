@@ -5,6 +5,16 @@
       "settings": {
       }
     },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
     "ef27d716-e142-4b57-af2d-190bee5f2692": {
       "type": "collection-preview",
       "settings": {
@@ -130,7 +140,6 @@
     },
     "16540387627dd6a3af": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/mens\/concrete-jungle",
@@ -149,7 +158,6 @@
     },
     "1654614390e8e5413f": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. II",
         "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
@@ -168,7 +176,6 @@
     },
     "165403876742214c90": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. I",
         "collection_url": "\/collections\/mens\/inner-city-love",
@@ -187,7 +194,6 @@
     },
     "16630187024a9c32e7": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "City Of Angels",
         "collection_url": "shopify:\/\/collections\/city-of-angels",
@@ -217,6 +223,7 @@
   },
   "order": [
     "banner",
+    "product-grid",
     "ef27d716-e142-4b57-af2d-190bee5f2692",
     "6fb45919-52f9-480d-bf1e-37784463a9de",
     "c16f385c-3fd5-401c-a208-e1813744bdac",
