@@ -140,6 +140,7 @@
     },
     "16540387627dd6a3af": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/mens\/concrete-jungle",
