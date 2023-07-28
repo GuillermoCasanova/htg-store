@@ -390,13 +390,19 @@
     #Quick Add
 \*------------------------------------*/
 
-@media (hover: hover) {
-
 .product-card-wrapper:hover .quick-add-form,
 .product-card-wrapper:hover .quick-add-button {
-  opacity: 1;
-  transform: translateY(0);
+  display: none;
 }
+
+@media (hover: hover) {
+
+  .product-card-wrapper:hover .quick-add-form,
+  .product-card-wrapper:hover .quick-add-button {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .quick-add-form {
