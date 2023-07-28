@@ -369,6 +369,10 @@
   display: none;
 }
 
+product-form {
+  display: none; 
+}
+
 @media (hover: hover) {
 
   .product-card-wrapper:hover .quick-add-form,
@@ -377,7 +381,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  product-form {
+  display: block; 
 }
+} 
     .quick-add-form {
       position: relative;
       grid-row-start: 4;
@@ -629,6 +637,8 @@
     .quick-add-variants__option input:checked + label:after {
       opacity: 1;
     }
+
+    
   {% endstyle %}
 
   <section class="collection-preview">
