@@ -176,6 +176,7 @@
     },
     "165403876742214c90": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. I",
         "collection_url": "\/collections\/mens\/inner-city-love",
