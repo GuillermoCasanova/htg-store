@@ -107,6 +107,7 @@
     },
     "03ceb736-43d7-4fc7-bded-d907104e6c8c": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/kids\/concrete-jungle-kids",
@@ -125,6 +126,7 @@
     },
     "d3137710-8558-4714-917a-a912e5adc340": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
         "collection_url": "\/collections\/kids\/inner-city-love-vol-2-kids",
@@ -143,6 +145,7 @@
     },
     "a8d97c7a-f715-4718-83ac-0239cc51a960": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love, Vol. I",
         "collection_url": "\/collections\/kids\/inner-city-love-vol-2-kids",
