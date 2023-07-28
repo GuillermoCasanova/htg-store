@@ -141,6 +141,7 @@
     },
     "16540387627dd6a3af": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/mens\/concrete-jungle",
@@ -159,6 +160,7 @@
     },
     "1654614390e8e5413f": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. II",
         "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
