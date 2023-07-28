@@ -105,56 +105,59 @@
         "enable_quick_add": true
       }
     },
-    "1653675322c6e1e849": {
+    "03ceb736-43d7-4fc7-bded-d907104e6c8c": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection_url": "shopify:\/\/collections\/concrete-jungle-kids-market",
+        "collection_url": "\/collections\/kids\/concrete-jungle-kids",
         "product_list": [
-          "kids-cinema-t-shirt-black",
-          "kids-compton-short-hickory",
-          "kids-concrete-jungle-t-shirt-black",
+          "kids-cinema-t-shirt-blonde",
+          "kids-concrete-jungle-t-shirt-cream",
           "kids-hawthorne-jacket-cream",
           "kids-hawthorne-pant-cream",
-          "kids-htg-pack-t-shirt-peach",
-          "kids-concrete-jungle-t-shirt-peach",
-          "kids-inglewood-trouser-pant-hickory"
+          "kids-inglewood-trouser-pant-hickory",
+          "kids-compton-short-hickory",
+          "kids-rosecrans-knit-brown",
+          "kids-quilt-t-shirt-crimson"
         ],
         "enable_quick_add": true
       }
     },
-    "1654616390eb010a1b": {
+    "d3137710-8558-4714-917a-a912e5adc340": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
-        "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii",
+        "collection_url": "\/collections\/kids\/inner-city-love-vol-2-kids",
         "product_list": [
           "kids-inner-city-love-t-shirt-long-beach-navy",
           "kids-smokey-stripe-t-shirt-navy",
-          "kids-alive-l-s-cream",
-          "kids-stereo-l-s-sunset",
+          "kids-alive-l-s-terra-cotta",
+          "kids-stereo-l-s-cream",
           "kids-howard-hoodie-terra-cotta",
-          "kids-weathered-crewneck-coyote",
-          "kids-weathered-sweatpant-coyote",
-          "kids-houndstooth-pant-tobacco"
+          "kids-weathered-crewneck-cream",
+          "kids-weathered-sweatpant-cream",
+          "kids-houndstooth-pant-stone"
         ],
         "enable_quick_add": true
       }
     },
-    "165461637915913a64": {
+    "a8d97c7a-f715-4718-83ac-0239cc51a960": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
-        "collection_name": "Inner City Love, Vol I",
-        "collection_url": "shopify:\/\/collections\/inner-city-love-kids",
+        "collection_name": "Inner City Love, Vol. I",
+        "collection_url": "\/collections\/kids\/inner-city-love-vol-2-kids",
         "product_list": [
           "kids-higher-power-t-shirt-smoke",
-          "kids-spiritual-warefare-t-shirt-white",
+          "kids-spiritual-warefare-t-shirt-hickory",
           "kids-icon-1988-denim-l-s-white",
           "kids-icon-1988-denim-pant-white",
           "kids-alive-t-shirt-mustard",
-          "kids-higher-power-hoodie-mustard",
-          "kids-jazz-jacquard-s-s-melon",
-          "kids-jazz-jacquard-shorts-melon"
+          "kids-higher-power-hoodie-black",
+          "kids-jazz-jacquard-s-s-green",
+          "kids-jazz-jacquard-shorts-green"
         ],
         "enable_quick_add": true
       }
@@ -168,8 +171,8 @@
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "1661366277478615b4",
     "165533293947ac239b",
-    "1653675322c6e1e849",
-    "1654616390eb010a1b",
-    "165461637915913a64"
+    "03ceb736-43d7-4fc7-bded-d907104e6c8c",
+    "d3137710-8558-4714-917a-a912e5adc340",
+    "a8d97c7a-f715-4718-83ac-0239cc51a960"
   ]
 }

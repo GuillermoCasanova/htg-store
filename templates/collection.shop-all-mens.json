@@ -122,6 +122,7 @@
     },
     "1654614072e4a2b52f": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "\/collections\/mens\/the-coast",
@@ -140,7 +141,6 @@
     },
     "16540387627dd6a3af": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/mens\/concrete-jungle",
@@ -159,7 +159,6 @@
     },
     "1654614390e8e5413f": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. II",
         "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
@@ -209,20 +208,6 @@
         ],
         "enable_quick_add": true
       }
-    },
-    "1654615044eadf777e": {
-      "type": "collection-preview",
-      "disabled": true,
-      "settings": {
-        "collection_name": "Free-fall",
-        "collection_url": "\/collections\/mens\/freefall",
-        "product_list": [
-          "airborne-sock-army",
-          "airborne-sock-black",
-          "airborne-sock-haze"
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
@@ -238,7 +223,6 @@
     "16540387627dd6a3af",
     "1654614390e8e5413f",
     "165403876742214c90",
-    "16630187024a9c32e7",
-    "1654615044eadf777e"
+    "16630187024a9c32e7"
   ]
 }
