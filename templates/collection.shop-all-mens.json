@@ -5,16 +5,6 @@
       "settings": {
       }
     },
-    "product-grid": {
-      "type": "main-collection-product-grid",
-      "settings": {
-        "enable_quick_add": true,
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "child_collection": true
-      }
-    },
     "ef27d716-e142-4b57-af2d-190bee5f2692": {
       "type": "collection-preview",
       "settings": {
@@ -227,7 +217,6 @@
   },
   "order": [
     "banner",
-    "product-grid",
     "ef27d716-e142-4b57-af2d-190bee5f2692",
     "6fb45919-52f9-480d-bf1e-37784463a9de",
     "c16f385c-3fd5-401c-a208-e1813744bdac",
