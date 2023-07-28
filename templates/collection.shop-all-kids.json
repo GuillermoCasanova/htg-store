@@ -5,6 +5,16 @@
       "settings": {
       }
     },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "child_collection": true
+      }
+    },
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
@@ -61,7 +71,6 @@
     },
     "1661366277478615b4": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "District",
         "collection_url": "\/collections\/district-kids",
@@ -80,7 +89,6 @@
     },
     "165533293947ac239b": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "\/collections\/kids\/the-coast",
@@ -99,7 +107,6 @@
     },
     "1653675322c6e1e849": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "shopify:\/\/collections\/concrete-jungle-kids-market",
@@ -118,7 +125,6 @@
     },
     "1654616390eb010a1b": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love, Vol. II",
         "collection_url": "shopify:\/\/collections\/inner-city-love-vol-ii",
@@ -137,7 +143,6 @@
     },
     "165461637915913a64": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love, Vol I",
         "collection_url": "shopify:\/\/collections\/inner-city-love-kids",
@@ -157,6 +162,7 @@
   },
   "order": [
     "banner",
+    "product-grid",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
