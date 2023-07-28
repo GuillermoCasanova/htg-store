@@ -194,6 +194,7 @@
     },
     "16630187024a9c32e7": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "City Of Angels",
         "collection_url": "shopify:\/\/collections\/city-of-angels",
