@@ -27,8 +27,8 @@
     min-height: 100vh;
     min-height: -webkit-fill-available;
     width: 100vw;
-    top: 0;
     right: 0;
+    bottom: 0;
     border: none;
     background-color: white;
     pointer-events: none;
