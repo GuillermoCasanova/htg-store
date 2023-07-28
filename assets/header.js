@@ -294,7 +294,7 @@ class AnnouncementBar extends HTMLElement {
   }
   applyMargin() {
       //Gives main and the off canvas cart a margin top to make up for the header covering the page when the announcement bar is active
-    let marginTop =  this.offsetHeight + document.querySelector('header').offsetHeight; 
+    let paddingTop =  this.offsetHeight + document.querySelector('header').offsetHeight; 
     document.querySelector('main').style.paddingTop = paddingTop + "px";
     document.querySelector('.cart-notification').style.paddingTop = paddingTop / 2.5  + "px"; 
   }
