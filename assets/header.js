@@ -40,7 +40,7 @@ class HeaderDrawer  extends MenuDrawer {
 
       this.changeToggleText('menu');
       document.querySelector('header').classList.add('menu-is-open'); 
-      this.querySelector('aside').style.height = `calc(101vh - ${document.querySelector('sticky-header').clientHeight + 'px'})`
+      this.querySelector('aside').style.height = `calc(101vh - ${document.querySelector('[data-header-wrapper]').clientHeight + 'px'})`
       trapFocus(this, this.headerDrawerToggle);
 
   }
@@ -266,37 +266,40 @@ customElements.define('menu-dropdown', MenuDropdown);
 class AnnouncementBar extends HTMLElement {
   constructor() {
     super(); 
-    this.init();
+     this.init();
   }
   init() {
+    let that  = this; 
     this.applyMargin(); 
 
-    // // Throttle function to limit the rate at which the function to apply margin is called
-    // function throttle(func, delay) {
-    //   let timeoutId;
-    //   return function() {
-    //     const context = this;
-    //     const args = arguments;
-    //     if (!timeoutId) {
-    //       timeoutId = setTimeout(function() {
-    //         func.apply(context, args);
-    //         timeoutId = null;
-    //       }, delay);
-    //     }
-    //   };
-    // }
+    // Throttle function to limit the rate at which the function to apply margin is called
+    function throttle(func, delay) {
+      let timeoutId;
+      return function() {
+        const context = this;
+        const args = arguments;
+        if (!timeoutId) {
+          timeoutId = setTimeout(function() {
+            func.apply(context, args);
+            timeoutId = null;
+          }, delay);
+        }
+      };
+    }
 
-    // // Throttle the onResize function with a delay of 250ms
-    // const throttledResize = throttle(this.applyMargin, 250);
+    // Throttle the onResize function with a delay of 250ms
+    const throttledResize = throttle(this.applyMargin.bind(this), 250);
 
-    // // Attach the throttled function to the window resize event
-    // window.addEventListener('resize', throttledResize);
+    // Attach the throttled function to the window resize event
+    window.addEventListener('resize', ()=>{
+      throttledResize()
+    });
   }
   applyMargin() {
       //Gives main and the off canvas cart a margin top to make up for the header covering the page when the announcement bar is active
     let paddingTop =  this.offsetHeight + document.querySelector('header').offsetHeight; 
-    document.querySelector('main').style.paddingTop = paddingTop + "px";
-    document.querySelector('.cart-notification').style.paddingTop = paddingTop / 2.5  + "px"; 
+    document.querySelector('main').style.paddingTop = paddingTop / 3 + "px";
+    document.querySelector('.cart-notification').style.paddingTop = paddingTop   + "px"; 
   }
 
 

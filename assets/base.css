@@ -477,6 +477,7 @@ h6:empty {
 
 main {
   margin-top: 54px;
+  transition: all .4s ease-in-out;
 }
 
 @media screen and (min-width: 700px) {
@@ -487,9 +488,11 @@ main {
 
 @media screen and (min-width: 930px) {
   main {
-    margin-top: 5rem;
+    margin-top: 4.5rem;
   }
 }
+
+
 
 
 
@@ -502,8 +505,10 @@ main {
 }
 
 @media screen and (min-width: 930px) {
-  .master-padding-top {
-    padding-top: var(--level7);
+
+  .master-padding-top,
+  .master-padding-top--product-page {
+    padding-top: var(--level10);
   }
 }
 

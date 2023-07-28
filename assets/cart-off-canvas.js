@@ -74,6 +74,7 @@ class CartOffCanvas extends HTMLElement {
       document.body.classList.add('overflow-hidden-tablet');
       //document.querySelector('header').classList.add('menu-is-open'); 
       this.overlay.classList.add('is-visible');
+      this.querySelector('[ data-cart]').style.height = `calc(101vh - ${document.querySelector('[data-header-wrapper]').clientHeight + 'px'})`
       this.showLatestCart();
     }
   
