@@ -53,6 +53,7 @@
     },
     "f728d6ac-59f9-4340-be1b-c2aaff780bac": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Defined",
         "collection_url": "\/collections\/womens\/defined",
@@ -71,6 +72,7 @@
     },
     "1659025745e9d39846": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "District",
         "collection_url": "\/collections\/womens\/the-district",
@@ -89,6 +91,7 @@
     },
     "165461434128f6b9a3": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "\/collections\/womens\/the-coast",
