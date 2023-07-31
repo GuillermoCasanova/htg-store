@@ -7,7 +7,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "show_announcement_bar": true,
+    "show_announcement_bar": false,
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "left",
