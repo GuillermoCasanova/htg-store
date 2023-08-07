@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "0d1e752e-0f0e-4d8e-a7a9-2a54309c6758": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Tone-Deaf",
+        "collection_url": "\/collections\/accessories\/tone-deaf",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
@@ -169,6 +181,7 @@
   "order": [
     "banner",
     "product-grid",
+    "0d1e752e-0f0e-4d8e-a7a9-2a54309c6758",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
