@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "93eb3c28-377a-4997-92cd-7f0af7800157": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Tone-Deaf",
+        "collection_url": "\/collections\/mens\/tone-deaf",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "ef27d716-e142-4b57-af2d-190bee5f2692": {
       "type": "collection-preview",
       "settings": {
@@ -219,6 +231,7 @@
   "order": [
     "banner",
     "product-grid",
+    "93eb3c28-377a-4997-92cd-7f0af7800157",
     "ef27d716-e142-4b57-af2d-190bee5f2692",
     "6fb45919-52f9-480d-bf1e-37784463a9de",
     "c16f385c-3fd5-401c-a208-e1813744bdac",
