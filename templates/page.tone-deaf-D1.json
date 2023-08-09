@@ -155,6 +155,18 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/11-2.jpg"
           }
+        },
+        "90d3c920-c4c8-4fdb-b266-a5d026374d1f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lookbook_Slice_Working1.jpg"
+          }
+        },
+        "2acfef47-694f-4097-8cc6-f6e1f20f401f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lookbook_Slice_Working2.jpg"
+          }
         }
       },
       "block_order": [
@@ -178,7 +190,9 @@
         "64b4220e-4ce4-4669-b458-d8b287b2c3f1",
         "f3cd091d-edf1-493d-a8c8-eafa969c4751",
         "0723a0aa-d8a9-484d-942b-72886c3bb1d3",
-        "0d518517-f882-4b56-bf10-e019b58b1412"
+        "0d518517-f882-4b56-bf10-e019b58b1412",
+        "90d3c920-c4c8-4fdb-b266-a5d026374d1f",
+        "2acfef47-694f-4097-8cc6-f6e1f20f401f"
       ],
       "settings": {
         "name": "",
