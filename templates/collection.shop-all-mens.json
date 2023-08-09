@@ -19,10 +19,17 @@
       "type": "collection-preview",
       "disabled": true,
       "settings": {
-        "collection_name": "Tone-Deaf",
+        "collection_name": "Fall 23",
         "collection_url": "\/collections\/mens\/tone-deaf",
         "product_list": [
-
+          "stamp-inner-city-t-shirt-black",
+          "dominos-t-shirt-brown",
+          "embroidered-pocket-t-shirt-bone",
+          "h-wire-knit-t-shirt-brown",
+          "script-carpenter-jacket-brown",
+          "script-embroidered-hoodie-lt-brown",
+          "script-sherpa-pullover-bone",
+          "script-bucket-hat-brown"
         ],
         "enable_quick_add": true
       }
