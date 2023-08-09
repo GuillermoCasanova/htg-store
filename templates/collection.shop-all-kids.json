@@ -17,12 +17,18 @@
     },
     "0d1e752e-0f0e-4d8e-a7a9-2a54309c6758": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
-        "collection_name": "Tone-Deaf",
+        "collection_name": "Fall 23",
         "collection_url": "\/collections\/kids\/tone-deaf",
         "product_list": [
-
+          "kids-bubble-hoodie-clay",
+          "kids-stripe-uniform-shirt-bone",
+          "kids-nylon-bubble-vest-black",
+          "kids-hop-scotch-t-shirt-bone",
+          "kids-fleece-sweatpant-clay",
+          "kids-logo-stripe-pant-bone",
+          "kids-herringbone-pant-black",
+          "kids-ice-cream-truck-t-shirt-lt-brown"
         ],
         "enable_quick_add": true
       }
