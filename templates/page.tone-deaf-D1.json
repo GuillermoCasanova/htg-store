@@ -167,6 +167,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Lookbook_Slice_Working2.jpg"
           }
+        },
+        "234c6c4d-e97d-4ec2-a735-56d0325e7083": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13_eb6f0240-a869-48fe-9f8d-035cb599645e.jpg"
+          }
         }
       },
       "block_order": [
@@ -192,7 +198,8 @@
         "0723a0aa-d8a9-484d-942b-72886c3bb1d3",
         "0d518517-f882-4b56-bf10-e019b58b1412",
         "90d3c920-c4c8-4fdb-b266-a5d026374d1f",
-        "2acfef47-694f-4097-8cc6-f6e1f20f401f"
+        "2acfef47-694f-4097-8cc6-f6e1f20f401f",
+        "234c6c4d-e97d-4ec2-a735-56d0325e7083"
       ],
       "settings": {
         "name": "",
