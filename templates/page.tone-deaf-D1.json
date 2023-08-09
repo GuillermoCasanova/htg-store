@@ -16,10 +16,21 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "3d8eabf2-387c-4808-a373-8a56b3201d0a": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Tone Deaf – Fall 23 Collection",
+        "collection": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
-    "c3029df7-fabd-477d-a731-91b539cc9a73"
+    "c3029df7-fabd-477d-a731-91b539cc9a73",
+    "3d8eabf2-387c-4808-a373-8a56b3201d0a"
   ]
 }
