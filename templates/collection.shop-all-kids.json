@@ -17,6 +17,7 @@
     },
     "0d1e752e-0f0e-4d8e-a7a9-2a54309c6758": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Fall 23",
         "collection_url": "\/collections\/kids\/tone-deaf",
