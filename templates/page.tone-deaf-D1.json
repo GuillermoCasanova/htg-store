@@ -6,9 +6,20 @@
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/aecfd7e5dca84c6db28ee73bd7634632.mp4",
         "cta-url": ""
       }
+    },
+    "c3029df7-fabd-477d-a731-91b539cc9a73": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Tone Deaf – Fall 2023 Collection",
+        "body": "<p>Honor The Gift's Fall 2023 collection introduces a 2-part collection called \"Tone-Deaf.\" The Inner City has perpetually been overlooked as a melting pot of minorities – a realm upheld by a diverse range of people of color and voices that deserve to be heard.<\/p><p>The two-part collection, available in men’s, women’s, and kid’s styles, draws inspiration from monochromatic looks, graphics, a spectrum of skin tones serving as a color reference, and palettes that define the sidewalks of the Inner City.<\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "c3029df7-fabd-477d-a731-91b539cc9a73"
   ]
 }
