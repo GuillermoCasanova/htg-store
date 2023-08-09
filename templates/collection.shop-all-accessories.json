@@ -54,6 +54,7 @@
     },
     "d4bfeba6-f2ce-4682-b71f-43b3c227d173": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Defined",
         "collection_url": "\/collections\/defined-accessories",
@@ -72,6 +73,7 @@
     },
     "1663258313b437f94a": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "District",
         "collection_url": "\/collections\/district-accessories",
