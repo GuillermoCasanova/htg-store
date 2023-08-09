@@ -22,7 +22,14 @@
         "collection_name": "Tone-Deaf",
         "collection_url": "\/collections\/accessories\/tone-deaf",
         "product_list": [
-
+          "h-patch-hat-brown",
+          "h-patch-hat-cream",
+          "h-script-hat-cream",
+          "h-script-hat-white",
+          "script-bucket-hat-black",
+          "script-bucket-hat-brown",
+          "stamp-ribbed-sock-black",
+          "h-wire-ribbed-sock-black"
         ],
         "enable_quick_add": true
       }
