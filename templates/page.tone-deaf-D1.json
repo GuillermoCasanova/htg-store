@@ -222,6 +222,12 @@
             "image": "shopify:\/\/shop_images\/19-2.jpg"
           }
         },
+        "78d8df8c-3732-4d51-82dd-af5906b3706a": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20_f4b93f8b-9544-49f9-aac3-ca22738618c5.jpg"
+          }
+        },
         "a9764f43-0c2d-4fff-ab2e-0451fa0da9b1": {
           "type": "slideshow_slide",
           "settings": {
@@ -268,6 +274,7 @@
         "6d1e187e-09b1-43c2-99f6-5a93d6ab994e",
         "ae901cfe-ca7a-4798-a1b6-7e0424ff305b",
         "d26bc4d6-ba75-4836-8739-13b564af609d",
+        "78d8df8c-3732-4d51-82dd-af5906b3706a",
         "a9764f43-0c2d-4fff-ab2e-0451fa0da9b1",
         "09d20bb6-f578-4b8f-ac2a-dccc21ff00ce"
       ],
