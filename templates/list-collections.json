@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "011653ef-0486-4791-baa2-2927a89253e7": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Tones of the Inner City",
+            "thumbnail": "shopify:\/\/shop_images\/Collection-List_1ecd8bab-91e3-478d-b3e6-08049c72f62d.jpg",
+            "lookbook_url": "shopify:\/\/pages\/tones-of-the-inner-city"
+          }
+        },
         "120757bf-18ab-45f4-8269-8f6a96a5af9f": {
           "type": "archival-collection",
           "settings": {
@@ -192,6 +200,7 @@
         }
       },
       "block_order": [
+        "011653ef-0486-4791-baa2-2927a89253e7",
         "120757bf-18ab-45f4-8269-8f6a96a5af9f",
         "f99d453a-07f9-485a-ac9a-e20b38ef2090",
         "3d0d72c3-c7b9-454d-8d84-4eb6f33840ed",
