@@ -70,14 +70,14 @@
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
       "settings": {
-        "heading": "Summer 2023 – Kids",
+        "heading": "Fall 2023 – Kids",
         "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/HP_Kid_Left_5e2deeb7-c58a-40c1-b74b-7e67957492f7.jpg",
+        "collection_hero_image": "shopify:\/\/shop_images\/Kid-Left_cb0b44c7-bd55-40a4-8b0d-8239f4cf429b.jpg",
         "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-2023-kids",
-        "right_image": "shopify:\/\/shop_images\/HP-Kid-Right_7fe9bf78-b8c2-47d0-bf64-ea13f97fdebf.jpg",
+        "lookbook_url": "shopify:\/\/pages\/tones-of-the-inner-city",
+        "right_image": "shopify:\/\/shop_images\/Kid-Right_df758b42-04d0-4ccb-83a8-2b81254f04af.jpg",
         "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/summer-23-kids",
+        "right_cta_url": "shopify:\/\/collections\/kids",
         "top_border": "no",
         "bottom_border": "yes"
       }
