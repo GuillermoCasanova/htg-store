@@ -21,7 +21,7 @@
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Tones of the Inner City – Fall 2023 Collection",
-        "collection": "",
+        "collection": "tone-deaf",
         "bg_color": "background-2",
         "top_border": "no",
         "bottom_border": "yes"
