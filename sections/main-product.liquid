@@ -108,10 +108,6 @@
     #Product Images Slideshow
 \*------------------------------------*/
 
-.product-images-slideshow .slide:hover {
-  cursor: zoom-in;
-}
-
 
 .product-images--mobile {
   display: block;
@@ -1211,10 +1207,14 @@ variant-selects {
       {% for image in product.images %}
         {% unless image.alt contains 'swatch' %}
         <li class="slide"  data-product-images-slideshow-slide  data-product-images-modal-open data-id="{{ forloop.index }}">
-          <button class="zoom-image-indicator" data-id="{{forloop.index}}" aria-label="Image can be zoomed in" data-product-images-modal-open >
+
+          <button class="zoom-image-indicator  zoom-image-modal-trigger" data-id="{{forloop.index}}" aria-label="Click to open modal for zooming into the images." data-product-images-modal-open >
             {%render 'icon-zoom-in'%}
           </button>
-          <div class="product-images-slideshow__image-container">
+          <div class="zoom-image-indicator" aria-label="Image can be zoomed in">
+            {%render 'icon-zoom-in'%}
+          </div>
+          <div class="product-images-slideshow__image-container" >
 
             {%if forloop.index == 1%}
             <img

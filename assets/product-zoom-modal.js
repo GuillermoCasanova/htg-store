@@ -162,10 +162,6 @@ class ProductZoomModal extends HTMLElement {
 
         script.onload = (elem) => {
 
-            console.log(elem); 
-            
-            console.log(this); 
-
             this.classList.remove('is-hidden'); 
             this.classList.add('is-visible'); 
 
@@ -218,7 +214,7 @@ class ProductZoomModal extends HTMLElement {
         };
 
     }
-    handleLargeUp(pEvent) {
+    setUpZooMModal(pEvent) {
         let that = this; 
 
         this.querySelector(this.selectors.close).addEventListener('click', (event)=> {
@@ -241,7 +237,7 @@ class ProductZoomModal extends HTMLElement {
 
     } 
     closeZoom() {
-        if(this.panzoom) {
+        if(this.panzoom) { 
             this.panzoom.destroy();
         }
 
@@ -296,8 +292,10 @@ class ProductZoomModal extends HTMLElement {
         
     }
     init() {
-        mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
-        this.handleLargeUp(mediaQueries.largeUp); 
+        mediaQueries.largeUp.addEventListener("change", this.setUpZooMModal.bind(this)); 
+        if(mediaQueries.largeUp.matches) {
+            this.setUpZooMModal(mediaQueries.largeUp); 
+        }
     } 
     destroy() {
         let that = this; 

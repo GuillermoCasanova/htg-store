@@ -100,7 +100,6 @@
     width: 80%;
     position: relative;
     padding-bottom: 80%;
-    cursor: zoom-in;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(var(--color-base-background-2));
@@ -164,6 +163,7 @@
     border: none;
     height: 3.5rem;
     transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
 }
 
 .zoom-image-indicator svg {
@@ -173,4 +173,24 @@
 .zoom-image-indicator:hover,
 .zoom-image-indicator:focus {
     transform: scale(.9)
+}
+
+.zoom-image-modal-trigger {
+    display: none;
+}
+
+@media only screen and (min-width: 769px) {
+    .zoom-image-indicator {
+        display: none;
+    }
+
+    .zoom-image-modal-trigger {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .product-images-slideshow .slide:hover {
+        cursor: zoom-in;
+    }
 }
