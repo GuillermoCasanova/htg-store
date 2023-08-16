@@ -32,7 +32,7 @@ class ProductZoomModal extends HTMLElement {
             document.querySelector(this.selectors.modal).classList.add('is-hidden'); 
         }   
 
-        this.closeZoom(); 
+        this.closeZoomModal(); 
     } 
 
     updateImageUrls(pImages) {
@@ -86,7 +86,7 @@ class ProductZoomModal extends HTMLElement {
 
     goToImage(pThis, pEvent, pForceId) {
 
-        pThis.closeZoom(); 
+        pThis.closeZoomModal(); 
 
         let that = pThis; 
         let pImageId = pForceId ? pForceId : pEvent.target.closest('[data-images-scroller-thumb]').dataset.id; 
@@ -150,7 +150,7 @@ class ProductZoomModal extends HTMLElement {
             that.observer.observe(target); 
        }); 
     }
-    open(pEvent) {
+    openZoomModal(pEvent) {
 
          document.body.classList.add('overflow-hidden-tablet');
 
@@ -230,13 +230,13 @@ class ProductZoomModal extends HTMLElement {
         if(pEvent.matches) {
             document.querySelectorAll(this.selectors.open).forEach((element)=> {
                 element.addEventListener('click', (event)=> {
-                    that.open(event);  
+                    that.openZoomModal(event);  
                 }); 
             }); 
         }
 
     } 
-    closeZoom() {
+    closeZoomModal() {
         if(this.panzoom) { 
             this.panzoom.destroy();
         }
@@ -282,7 +282,7 @@ class ProductZoomModal extends HTMLElement {
 
         elem.addEventListener('panzoomend', (event) => {
             if(drag == false) {
-                that.closeZoom(that.zoomTemplate, that.panzoom); 
+                that.closeZoomModal(that.zoomTemplate, that.panzoom); 
             }
         })
 

@@ -1693,8 +1693,8 @@ variant-selects {
       </div>
     </div>
    
-    <div class="product-zoom-modal__slideshow">
-      <ul class="slides  product-zoom-modal__wrapper"  data-product-images-modal-slideshow>
+    <div class="product-zoom-modal__slideshow" data-product-images-modal-slideshow>
+      <ul class="slides  product-zoom-modal__wrapper"  >
       {% for image in product.images %}
         <li class="slide" data-id="{{ forloop.index }}" 
             data-product-images-modal-slideshow-slide  

@@ -156,12 +156,12 @@
     position: absolute;
     z-index: 1;
     background: transparent;
-    width: 3.5rem;
-    top: var(--level2);
-    right: var(--level1);
+    width: 3.25rem;
+    top: var(--level3);
+    right: var(--level2);
     outline: none;
     border: none;
-    height: 3.5rem;
+    height: 3.25rem;
     transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
     pointer-events: none;
 }
