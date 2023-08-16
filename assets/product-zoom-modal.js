@@ -161,7 +161,11 @@ class ProductZoomModal extends HTMLElement {
         document.querySelector('footer').appendChild(script); 
 
         script.onload = (elem) => {
+
+            console.log(elem); 
             
+            console.log(this); 
+
             this.classList.remove('is-hidden'); 
             this.classList.add('is-visible'); 
 
@@ -214,24 +218,27 @@ class ProductZoomModal extends HTMLElement {
         };
 
     }
-    handleLargeUp() {
+    handleLargeUp(pEvent) {
         let that = this; 
 
-            this.querySelector(this.selectors.close).addEventListener('click', function(event) {
-             that.close(event.target);  
-            });     
+        this.querySelector(this.selectors.close).addEventListener('click', (event)=> {
+            that.close(event.target);  
+        });     
 
-            document.onkeydown = function(event) {
-                if(event.key === "Escape" || event.key === "Esc") {
-                    that.close();  
-                }
-            };
+        document.onkeydown = (event)=> {
+            if(event.key === "Escape" || event.key === "Esc") {
+                that.close();  
+            }
+        };
 
-            document.querySelectorAll(this.selectors.open).forEach(function(element) {
-                element.addEventListener('click', function(event) {
+        if(pEvent.matches) {
+            document.querySelectorAll(this.selectors.open).forEach((element)=> {
+                element.addEventListener('click', (event)=> {
                     that.open(event);  
                 }); 
-        }); 
+            }); 
+        }
+
     } 
     closeZoom() {
         if(this.panzoom) {
