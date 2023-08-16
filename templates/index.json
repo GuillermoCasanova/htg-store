@@ -14,8 +14,8 @@
         "heading"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e584f58b5e96469c8d6d25e18bff535e.mp4",
-        "cta-url": "shopify:\/\/collections\/summer-23"
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/aecfd7e5dca84c6db28ee73bd7634632.mp4",
+        "cta-url": "shopify:\/\/collections\/tone-deaf"
       }
     },
     "1654645496c068b051": {
@@ -24,19 +24,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_4bfaf1f3-837b-4ef4-8495-9ddf9f93317a.jpg"
+            "image": "shopify:\/\/shop_images\/1_fd07b09d-cde2-4fb4-b0f0-8b78872b74db.jpg"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_4_f433fe80-a21b-410f-9b96-ad6adf31d351.jpg"
+            "image": "shopify:\/\/shop_images\/2_7c838f02-2a8b-4058-96d8-11d51ccb6920.jpg"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_17_698829f2-ba0c-46be-8c05-d1fa56b56fab.jpg"
+            "image": "shopify:\/\/shop_images\/3A_92d9b01f-ffe6-4fd4-bfd5-0d1df7cacc69.jpg"
           }
         }
       },
@@ -46,9 +46,9 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "Summer 2023 Collection",
-        "body": "<p>Following our Spring 23 Collection <em>Imprint<\/em> we continue to leave our print on every fabric through space and time for our Summer 23 Collection. Offering a 28 piece collection as a reminder that the workwear of our culture has led to the threads that lace our very community and remain through the lens of our youth.<\/p>",
-        "cta-url": "shopify:\/\/collections\/summer-23",
+        "heading": "Tones of the Inner City – Fall 2023 Collection",
+        "body": "<p>Honor the gift fall 2023 delivers a 2-delivery Collection called Tones of the Inner City. The inner city has always been forgotten about as a melting pot of minorities. A land that has been upheld amongst a range of people of color and voices that deserve to be heard. <br\/><br\/>Defining a two-part drop in men’s, women’s and kids with an inspiration behind monochromatic looks, both Graphics and range of skin tones reference color, palettes, defining the sidewalks of the inner city.<\/p>",
+        "cta-url": "shopify:\/\/collections\/tone-deaf",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -57,10 +57,10 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_6_80699df5-77f2-4ce9-9c7e-ec2a4b45c19c.jpg",
+        "left-image": "shopify:\/\/shop_images\/Mens_53b6a93d-88c6-4e01-b063-b8afa937803f.jpg",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "shopify:\/\/collections\/mens",
-        "right-image": "shopify:\/\/shop_images\/SU23_-_LOOKBOOK_10_10b3ef7e-c7d4-4d58-b87a-8b951a2c8da4.jpg",
+        "right-image": "shopify:\/\/shop_images\/Womens_2c33cc6f-5bdf-43f5-8333-ba208e5abc0e.jpg",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "shopify:\/\/collections\/womens",
         "top_border": "no",
@@ -70,14 +70,14 @@
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
       "settings": {
-        "heading": "Summer 2023 – Kids",
+        "heading": "Fall 2023 – Kids",
         "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/HP_Kid_Left_5e2deeb7-c58a-40c1-b74b-7e67957492f7.jpg",
+        "collection_hero_image": "shopify:\/\/shop_images\/Kid-Left_cb0b44c7-bd55-40a4-8b0d-8239f4cf429b.jpg",
         "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "https:\/\/honorthegift.co\/pages\/summer-2023-kids",
-        "right_image": "shopify:\/\/shop_images\/HP-Kid-Right_7fe9bf78-b8c2-47d0-bf64-ea13f97fdebf.jpg",
+        "lookbook_url": "shopify:\/\/pages\/tones-of-the-inner-city",
+        "right_image": "shopify:\/\/shop_images\/Kid-Right_df758b42-04d0-4ccb-83a8-2b81254f04af.jpg",
         "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/summer-23-kids",
+        "right_cta_url": "shopify:\/\/collections\/kids",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -100,7 +100,7 @@
       "settings": {
         "heading": "For The Inner City",
         "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
-        "image": "shopify:\/\/shop_images\/HP_RW_77f14c77-ea74-46b1-b8cb-e4a2270c367d.jpg",
+        "image": "shopify:\/\/shop_images\/RW_15cc3ac7-35a3-4304-a279-b8f97473f5ba.jpg",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
         "top_border": "no",

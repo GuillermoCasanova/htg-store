@@ -15,6 +15,24 @@
         "child_collection": true
       }
     },
+    "7ba1193a-a290-4a0e-a41b-363b9e8bcba8": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Fall 23",
+        "collection_url": "\/collections\/accessories\/tone-deaf",
+        "product_list": [
+          "h-patch-hat-brown",
+          "h-patch-hat-cream",
+          "h-script-hat-cream",
+          "h-script-hat-white",
+          "script-bucket-hat-black",
+          "script-bucket-hat-brown",
+          "stamp-ribbed-sock-black",
+          "h-wire-ribbed-sock-black"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "c705520a-5f7b-48b5-adde-2690dd50f918": {
       "type": "collection-preview",
       "settings": {
@@ -146,6 +164,7 @@
   "order": [
     "banner",
     "product-grid",
+    "7ba1193a-a290-4a0e-a41b-363b9e8bcba8",
     "c705520a-5f7b-48b5-adde-2690dd50f918",
     "d4bfeba6-f2ce-4682-b71f-43b3c227d173",
     "1663258313b437f94a",

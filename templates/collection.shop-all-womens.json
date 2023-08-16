@@ -15,6 +15,24 @@
         "child_collection": true
       }
     },
+    "347cf7d2-43a1-4b8f-80ea-86de0750cbd9": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Fall 23",
+        "collection_url": "\/collections\/womens\/tone-deaf",
+        "product_list": [
+          "womens-city-ampd-up-t-shirt-light-brown",
+          "womens-cropped-quarter-zip-bone",
+          "womens-ls-mesh-top-brown",
+          "womens-denim-tube-dress-bone",
+          "womens-city-frames-t-shirt-black",
+          "womens-boyfriend-blazer-brown",
+          "womens-carpenter-jacket-bone",
+          "womens-silk-slip-dress-sand"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "8ab7bcd2-8778-4a5e-b963-658bc18bc61c": {
       "type": "collection-preview",
       "settings": {
@@ -182,6 +200,7 @@
   "order": [
     "banner",
     "product-grid",
+    "347cf7d2-43a1-4b8f-80ea-86de0750cbd9",
     "8ab7bcd2-8778-4a5e-b963-658bc18bc61c",
     "c47108af-e80e-40a8-b335-6d5ea64c6292",
     "f728d6ac-59f9-4340-be1b-c2aaff780bac",
