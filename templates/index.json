@@ -111,6 +111,7 @@
       "type": "instagram-feed",
       "settings": {
         "heading": "Follow Us",
+        "instagram_token": "https:\/\/ig.instant-tokens.com\/users\/88352ce5-9a6e-4f98-9171-c08b585aa65c\/instagram\/5330092847079415\/token?userSecret=vj9zz4p0q7l1ixc1ag0j33",
         "top_border": "no",
         "bottom_border": "yes"
       }
