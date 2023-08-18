@@ -1,37 +1,31 @@
-
-<link rel="stylesheet" href="{{ 'instagram-feed.css' | asset_url }}" media="print" onload="this.media='all'"> 
-<script type="module" src="{{ 'instagram-feed.js' | asset_url }}" defer="defer"></script> 
+<link rel="stylesheet" href="{{ 'instagram-feed.css' | asset_url }}" media="print" onload="this.media='all'">
+<script type="module" src="{{ 'instagram-feed.js' | asset_url }}" defer="defer"></script>
 
 <section class="instagram-feed  {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
-  <instagram-feed class="instagram-feed__inner" >
-      <div class="instagram-feed__header">
-          <h2 class="instagram-feed__heading">
-              {{ section.settings.heading }}    
-          </h2>
-      </div>
+  <instagram-feed class="instagram-feed__inner" data-token="{{ section.settings.instagram_token }}">
+    <div class="instagram-feed__header">
+      <h2 class="instagram-feed__heading">
+        {{ section.settings.heading }}
+      </h2>
+    </div>
 
-      <ul id="instafeed" data-script-url="{{ 'instafeed.min.js' | asset_url }}"  class="instagram-feed__posts">
-          <li class="instagram-feed__post">
-              <span class="instagram-feed__post__inner">
-              </span>
-          </li>
-          <li class="instagram-feed__post">
-              <span class="instagram-feed__post__inner">
-              </span>
-          </li>
-          <li class="instagram-feed__post">
-              <span class="instagram-feed__post__inner">
-              </span>
-          </li>
-          <li class="instagram-feed__post">
-              <span class="instagram-feed__post__inner">
-              </span>
-          </li>
-          <li class="instagram-feed__post">
-              <span class="instagram-feed__post__inner">
-              </span>
-          </li>
-      </ul>
+    <ul id="instafeed" data-script-url="{{ 'instafeed.min.js' | asset_url }}" class="instagram-feed__posts">
+      <li class="instagram-feed__post">
+        <span class="instagram-feed__post__inner"> </span>
+      </li>
+      <li class="instagram-feed__post">
+        <span class="instagram-feed__post__inner"> </span>
+      </li>
+      <li class="instagram-feed__post">
+        <span class="instagram-feed__post__inner"> </span>
+      </li>
+      <li class="instagram-feed__post">
+        <span class="instagram-feed__post__inner"> </span>
+      </li>
+      <li class="instagram-feed__post">
+        <span class="instagram-feed__post__inner"> </span>
+      </li>
+    </ul>
   </instagram-feed>
 </section>
 
@@ -43,6 +37,11 @@
       "type": "text",
       "id": "heading",
       "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "instagram_token",
+      "label": "Instagram Token URL"
     },
     {
       "type": "header",
@@ -81,10 +80,7 @@
       "default": "yes"
     }
   ],
-  "templates": [
-    "index",
-    "page"
-  ],
+  "templates": ["index", "page"],
   "presets": [
     {
       "name": "Instagram Feed"

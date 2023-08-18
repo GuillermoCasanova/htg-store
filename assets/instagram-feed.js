@@ -29,14 +29,12 @@ class instagramFeed extends HTMLElement {
         this.observer = new IntersectionObserver(callback, options);
         this.observer.observe(this.instaFeed); 
 
-        //this.mediaQueries.largeUp.addEventListener("change", this.handleLargeUp.bind(this)); 
-
     }
 
     initFeed(pMediaQueries) {
-        
-        console.log('hit!');
-        
+        let token = this.dataset.token; 
+
+    
         if(this.feed) {
             return 
         }
@@ -61,9 +59,10 @@ class instagramFeed extends HTMLElement {
         if(pMediaQueries.largeUp.matches) {
             feedOptions.limit = 5; 
         } 
+        
 
         script.onload = () => {
-            fetch('https://ig.instant-tokens.com/users/88352ce5-9a6e-4f98-9171-c08b585aa65c/instagram/17841406217784312/token?userSecret=mdowgpka9xcke3cngny8')
+            fetch(token)
             .then(resp => resp.json())
             .then(data => {
                 feedOptions.accessToken = data.Token;
