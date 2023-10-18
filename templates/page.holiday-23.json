@@ -37,11 +37,31 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "4ea06274-d6cd-420a-b507-f9d817aef643": {
+      "type": "lookbook-slideshow",
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
+    "8cc3b7c2-f928-4f8b-a505-d17a0348cd86": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "An Ode To An Inner City Home – Holiday 2023 Collection",
+        "collection": "holiday-23",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "main",
     "127aa490-8af1-4205-a4be-e8dc0a44d0c8",
-    "cb25293a-bc5d-4403-baf0-81e6e46b96bc"
+    "cb25293a-bc5d-4403-baf0-81e6e46b96bc",
+    "4ea06274-d6cd-420a-b507-f9d817aef643",
+    "8cc3b7c2-f928-4f8b-a505-d17a0348cd86"
   ]
 }
