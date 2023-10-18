@@ -38,14 +38,6 @@
         "bottom_border": "yes"
       }
     },
-    "4ea06274-d6cd-420a-b507-f9d817aef643": {
-      "type": "lookbook-slideshow",
-      "settings": {
-        "name": "",
-        "top_border": "no",
-        "bottom_border": "yes"
-      }
-    },
     "8cc3b7c2-f928-4f8b-a505-d17a0348cd86": {
       "type": "lookbook-collection-display",
       "settings": {
@@ -55,13 +47,151 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "4ea06274-d6cd-420a-b507-f9d817aef643": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "f91ec5f8-c97b-4c83-90a1-e63d00bfba26": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK.jpg"
+          }
+        },
+        "1d8e34ea-712c-4f09-bf91-56051ef45482": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK3.jpg"
+          }
+        },
+        "f0dc18e9-e41e-4a44-b389-6230ee92777f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK4.jpg"
+          }
+        },
+        "e82657ac-c64f-42b6-bbad-1c28932bee88": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK5.jpg"
+          }
+        },
+        "527ea0cb-3965-4dd0-8ba6-621d3d701d92": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK6.jpg"
+          }
+        },
+        "424fc5a2-a98f-49f8-9b7c-0da58f3afa6a": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK7.jpg"
+          }
+        },
+        "53986247-ebba-4e04-93a6-a563c0bc3dbe": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK8.jpg"
+          }
+        },
+        "6ca1e07d-2fb4-4b20-b030-ca8656a82570": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK9.jpg"
+          }
+        },
+        "ca8457be-52cb-455d-aaa8-123a6e64c2fa": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK10.jpg"
+          }
+        },
+        "05efe334-1c23-4c2f-a523-a40ac254f0f2": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK11.jpg"
+          }
+        },
+        "e62d4e7b-28af-4c64-877e-a1926e069e38": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK12.jpg"
+          }
+        },
+        "6ab681bc-49ff-49db-9ca2-cc96478f7cf4": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK13.jpg"
+          }
+        },
+        "704fe6bb-a20b-4e7a-b2c2-eac287a57753": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK14.jpg"
+          }
+        },
+        "3f89011f-c14e-4083-9169-68b536a4ef53": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK15.jpg"
+          }
+        },
+        "5264e164-b03e-488a-b3c4-fc77d69b6758": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK16.jpg"
+          }
+        },
+        "d9dd59c3-53f8-49ea-b5e5-d93761bd4567": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK17.jpg"
+          }
+        },
+        "cfdcf4b4-acf7-49f4-821e-c4ac4f2dde81": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK18.jpg"
+          }
+        },
+        "1e82fdc4-5b05-4270-81f9-294320a2e24f": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HTG_HOL23_-_LOOKBOOK19.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "f91ec5f8-c97b-4c83-90a1-e63d00bfba26",
+        "1d8e34ea-712c-4f09-bf91-56051ef45482",
+        "f0dc18e9-e41e-4a44-b389-6230ee92777f",
+        "e82657ac-c64f-42b6-bbad-1c28932bee88",
+        "527ea0cb-3965-4dd0-8ba6-621d3d701d92",
+        "424fc5a2-a98f-49f8-9b7c-0da58f3afa6a",
+        "53986247-ebba-4e04-93a6-a563c0bc3dbe",
+        "6ca1e07d-2fb4-4b20-b030-ca8656a82570",
+        "ca8457be-52cb-455d-aaa8-123a6e64c2fa",
+        "05efe334-1c23-4c2f-a523-a40ac254f0f2",
+        "e62d4e7b-28af-4c64-877e-a1926e069e38",
+        "6ab681bc-49ff-49db-9ca2-cc96478f7cf4",
+        "704fe6bb-a20b-4e7a-b2c2-eac287a57753",
+        "3f89011f-c14e-4083-9169-68b536a4ef53",
+        "5264e164-b03e-488a-b3c4-fc77d69b6758",
+        "d9dd59c3-53f8-49ea-b5e5-d93761bd4567",
+        "cfdcf4b4-acf7-49f4-821e-c4ac4f2dde81",
+        "1e82fdc4-5b05-4270-81f9-294320a2e24f"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "main",
     "127aa490-8af1-4205-a4be-e8dc0a44d0c8",
     "cb25293a-bc5d-4403-baf0-81e6e46b96bc",
-    "4ea06274-d6cd-420a-b507-f9d817aef643",
-    "8cc3b7c2-f928-4f8b-a505-d17a0348cd86"
+    "8cc3b7c2-f928-4f8b-a505-d17a0348cd86",
+    "4ea06274-d6cd-420a-b507-f9d817aef643"
   ]
 }
