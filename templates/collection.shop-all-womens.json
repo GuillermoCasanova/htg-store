@@ -195,6 +195,17 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "0dc779de-9ea6-42e8-bc9b-7ed11e258f35": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -209,6 +220,7 @@
     "1653675322c6e1e849",
     "1654616107f8647e02",
     "1653675292ee58c106",
-    "16546162643d494cbe"
+    "16546162643d494cbe",
+    "0dc779de-9ea6-42e8-bc9b-7ed11e258f35"
   ]
 }
