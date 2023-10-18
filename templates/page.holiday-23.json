@@ -1,12 +1,47 @@
 {
   "sections": {
-    "header": {
-      "type": "image-banner",
+    "main": {
+      "type": "main-page",
+      "disabled": true,
       "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "hide_body": "false"
+      }
+    },
+    "127aa490-8af1-4205-a4be-e8dc0a44d0c8": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15086832779343__127aa490-8af1-4205-a4be-e8dc0a44d0c8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "template--15086832779343__127aa490-8af1-4205-a4be-e8dc0a44d0c8-heading-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/H23-HP_97f9f1ef-a40a-462e-8c6f-a39a17543cf5.jpg",
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "cb25293a-bc5d-4403-baf0-81e6e46b96bc": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "An Ode To An Inner City Home – Holiday 2023 Collection",
+        "body": "<p>Honor the Gift's 2023 Holiday Collection knows that home is where we weave the first threads of our stories, and pays homage to that foundation. With an inner city home - and all of its character and style - as a guide, the holiday collection calls on essential elements like memorable furniture prints, unmistakable plastic couch covers and distinct drapes.<br\/><br\/>The collection is more than its pieces: It's an invitation to a community of like-minded souls to honor home.<\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     }
   },
   "order": [
-    "header"
+    "main",
+    "127aa490-8af1-4205-a4be-e8dc0a44d0c8",
+    "cb25293a-bc5d-4403-baf0-81e6e46b96bc"
   ]
 }
