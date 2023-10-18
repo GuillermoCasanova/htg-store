@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "0dc779de-9ea6-42e8-bc9b-7ed11e258f35": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "\/collections\/womens\/holiday-23",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "347cf7d2-43a1-4b8f-80ea-86de0750cbd9": {
       "type": "collection-preview",
       "settings": {
@@ -195,22 +207,12 @@
         ],
         "enable_quick_add": true
       }
-    },
-    "0dc779de-9ea6-42e8-bc9b-7ed11e258f35": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Holiday 23",
-        "collection_url": "\/collections\/womens\/holiday-23",
-        "product_list": [
-
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
+    "0dc779de-9ea6-42e8-bc9b-7ed11e258f35",
     "347cf7d2-43a1-4b8f-80ea-86de0750cbd9",
     "8ab7bcd2-8778-4a5e-b963-658bc18bc61c",
     "c47108af-e80e-40a8-b335-6d5ea64c6292",
@@ -220,7 +222,6 @@
     "1653675322c6e1e849",
     "1654616107f8647e02",
     "1653675292ee58c106",
-    "16546162643d494cbe",
-    "0dc779de-9ea6-42e8-bc9b-7ed11e258f35"
+    "16546162643d494cbe"
   ]
 }

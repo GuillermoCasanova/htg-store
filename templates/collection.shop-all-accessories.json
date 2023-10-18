@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "227cbd4f-cee7-4f03-b1ef-2ff28fcd83c8": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "\/collections\/accessories\/holiday-23",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "7ba1193a-a290-4a0e-a41b-363b9e8bcba8": {
       "type": "collection-preview",
       "settings": {
@@ -164,6 +176,7 @@
   "order": [
     "banner",
     "product-grid",
+    "227cbd4f-cee7-4f03-b1ef-2ff28fcd83c8",
     "7ba1193a-a290-4a0e-a41b-363b9e8bcba8",
     "c705520a-5f7b-48b5-adde-2690dd50f918",
     "d4bfeba6-f2ce-4682-b71f-43b3c227d173",
