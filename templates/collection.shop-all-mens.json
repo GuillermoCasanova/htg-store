@@ -15,24 +15,6 @@
         "child_collection": true
       }
     },
-    "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Holiday 23",
-        "collection_url": "\/collections\/mens\/holiday-23",
-        "product_list": [
-          "diamonds-t-shirt-bone",
-          "htg-h-box-t-shirt-grey",
-          "gas-station-jacket-brown",
-          "htg-ls-work-shirt-indigo",
-          "htg-baggy-sweats-bone",
-          "htg-carpenter-belt-pant-grey",
-          "htg-cardigan-bone",
-          "htg-letterman-jacket-grey"
-        ],
-        "enable_quick_add": true
-      }
-    },
     "93eb3c28-377a-4997-92cd-7f0af7800157": {
       "type": "collection-preview",
       "settings": {
@@ -250,12 +232,29 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "\/collections\/mens\/holiday-23",
+        "product_list": [
+          "diamonds-t-shirt-bone",
+          "htg-h-box-t-shirt-grey",
+          "gas-station-jacket-brown",
+          "htg-ls-work-shirt-indigo",
+          "htg-baggy-sweats-bone",
+          "htg-carpenter-belt-pant-grey",
+          "htg-cardigan-bone",
+          "htg-letterman-jacket-grey"
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5",
     "93eb3c28-377a-4997-92cd-7f0af7800157",
     "ef27d716-e142-4b57-af2d-190bee5f2692",
     "6fb45919-52f9-480d-bf1e-37784463a9de",
@@ -267,6 +266,7 @@
     "16540387627dd6a3af",
     "1654614390e8e5413f",
     "165403876742214c90",
-    "16630187024a9c32e7"
+    "16630187024a9c32e7",
+    "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5"
   ]
 }
