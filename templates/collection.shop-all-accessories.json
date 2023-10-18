@@ -17,12 +17,18 @@
     },
     "227cbd4f-cee7-4f03-b1ef-2ff28fcd83c8": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Holiday 23",
         "collection_url": "\/collections\/accessories\/holiday-23",
         "product_list": [
-
+          "heritage-crest-logo-hat-copper",
+          "heritage-crest-logo-hat-grey",
+          "htg-rose-wire-sock-black",
+          "htg-rose-wire-sock-white",
+          "htg®-script-beanie-black",
+          "htg-script-beanie-copper",
+          "htg®-script-beanie-mauve",
+          "htg-script-sock-white"
         ],
         "enable_quick_add": true
       }
