@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "\/collections\/mens\/holiday-23",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "93eb3c28-377a-4997-92cd-7f0af7800157": {
       "type": "collection-preview",
       "settings": {
@@ -237,6 +249,7 @@
   "order": [
     "banner",
     "product-grid",
+    "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5",
     "93eb3c28-377a-4997-92cd-7f0af7800157",
     "ef27d716-e142-4b57-af2d-190bee5f2692",
     "6fb45919-52f9-480d-bf1e-37784463a9de",
