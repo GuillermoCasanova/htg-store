@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "6fba15de-4ea9-4141-adfd-c8a11cfa7fb0": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "An Ode To An Inner City Home",
+            "thumbnail": "shopify:\/\/shop_images\/HTG_HOL23_LB_1d2e0a3a-7b49-4888-b896-62173b1abdcf.jpg",
+            "lookbook_url": "shopify:\/\/pages\/holiday-23"
+          }
+        },
         "011653ef-0486-4791-baa2-2927a89253e7": {
           "type": "archival-collection",
           "settings": {
@@ -200,6 +208,7 @@
         }
       },
       "block_order": [
+        "6fba15de-4ea9-4141-adfd-c8a11cfa7fb0",
         "011653ef-0486-4791-baa2-2927a89253e7",
         "120757bf-18ab-45f4-8269-8f6a96a5af9f",
         "f99d453a-07f9-485a-ac9a-e20b38ef2090",
