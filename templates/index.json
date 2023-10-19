@@ -14,7 +14,8 @@
         "heading"
       ],
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/aecfd7e5dca84c6db28ee73bd7634632.mp4",
+        "image": "shopify:\/\/shop_images\/H23-HP.jpg",
+        "video": "",
         "cta-url": "shopify:\/\/collections\/tone-deaf"
       }
     },
@@ -24,19 +25,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_fd07b09d-cde2-4fb4-b0f0-8b78872b74db.jpg"
+            "image": "shopify:\/\/shop_images\/1_0320105d-8f98-42bb-b99c-d29656a88dd3.jpg"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_7c838f02-2a8b-4058-96d8-11d51ccb6920.jpg"
+            "image": "shopify:\/\/shop_images\/2_26e933a9-0c28-4d4c-90e8-dc3e5272a36b.jpg"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3A_92d9b01f-ffe6-4fd4-bfd5-0d1df7cacc69.jpg"
+            "image": "shopify:\/\/shop_images\/3_994f9bb7-be5a-460a-ba80-1d7674acd6c5.jpg"
           }
         }
       },
@@ -46,9 +47,9 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "Tones of the Inner City – Fall 2023 Collection",
-        "body": "<p>Honor the gift fall 2023 delivers a 2-delivery Collection called Tones of the Inner City. The inner city has always been forgotten about as a melting pot of minorities. A land that has been upheld amongst a range of people of color and voices that deserve to be heard. <br\/><br\/>Defining a two-part drop in men’s, women’s and kids with an inspiration behind monochromatic looks, both Graphics and range of skin tones reference color, palettes, defining the sidewalks of the inner city.<\/p>",
-        "cta-url": "shopify:\/\/collections\/tone-deaf",
+        "heading": "An Ode To An Inner City Home – Holiday 2023 Collection",
+        "body": "<p>Honor the Gift's 2023 Holiday Collection knows that home is where we weave the first threads of our stories, and pays homage to that foundation. With an inner city home - and all of its character and style - as a guide, the holiday collection calls on essential elements like memorable furniture prints, unmistakable plastic couch covers and distinct drapes. <br\/><br\/>The collection is more than its pieces: It's an invitation to a community of like-minded souls to honor home.<\/p>",
+        "cta-url": "shopify:\/\/collections\/holiday-23",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -57,10 +58,10 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/Mens_53b6a93d-88c6-4e01-b063-b8afa937803f.jpg",
+        "left-image": "shopify:\/\/shop_images\/Mens_opt1_67a4f83e-a045-4361-abec-fd0c5c5354d7.png",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "shopify:\/\/collections\/mens",
-        "right-image": "shopify:\/\/shop_images\/Womens_2c33cc6f-5bdf-43f5-8333-ba208e5abc0e.jpg",
+        "right-image": "shopify:\/\/shop_images\/Womens_opt2_552dca93-e424-49c1-8ba2-bb0585bfd1b4.png",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "shopify:\/\/collections\/womens",
         "top_border": "no",
