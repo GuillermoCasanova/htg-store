@@ -69,6 +69,7 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
+      "disabled": true,
       "settings": {
         "heading": "Fall 2023 – Kids",
         "body": "",
@@ -100,7 +101,7 @@
       "settings": {
         "heading": "For The Inner City",
         "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
-        "image": "shopify:\/\/shop_images\/RW_15cc3ac7-35a3-4304-a279-b8f97473f5ba.jpg",
+        "image": "shopify:\/\/shop_images\/Brand_Image3_7d1adfe7-572a-4088-a6a2-adede2f633dd.png",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
         "top_border": "no",
