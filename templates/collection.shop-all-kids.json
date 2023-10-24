@@ -185,9 +185,10 @@
     },
     "c3c9b4a8-d983-4a26-8a1a-148d946887bb": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Holiday 23",
-        "collection_url": "\/collections\/kids\/holiday-23-kids",
+        "collection_url": "\/collections\/kids\/kids-holiday-23",
         "product_list": [
           "kids-stuffed-panther-t-shirt-bone",
           "kids-fruits-ls-t-shirt-black",
