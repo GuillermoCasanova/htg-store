@@ -15,6 +15,25 @@
         "child_collection": true
       }
     },
+    "c3c9b4a8-d983-4a26-8a1a-148d946887bb": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "\/collections\/kids\/kids-holiday-23",
+        "product_list": [
+          "kids-stuffed-panther-t-shirt-bone",
+          "kids-fruits-ls-t-shirt-black",
+          "kids-work-jacket-brown",
+          "kids-hoodie-mauve",
+          "kids-front-seam-pant-black",
+          "kids-home-is-where-t-shirt-brown",
+          "kids-work-pant-brown",
+          "kids-sweatpant-mauve"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "0d1e752e-0f0e-4d8e-a7a9-2a54309c6758": {
       "type": "collection-preview",
       "settings": {
@@ -182,29 +201,12 @@
         ],
         "enable_quick_add": true
       }
-    },
-    "c3c9b4a8-d983-4a26-8a1a-148d946887bb": {
-      "type": "collection-preview",
-      "settings": {
-        "collection_name": "Holiday 23",
-        "collection_url": "\/collections\/kids\/kids-holiday-23",
-        "product_list": [
-          "kids-stuffed-panther-t-shirt-bone",
-          "kids-fruits-ls-t-shirt-black",
-          "kids-work-jacket-brown",
-          "kids-hoodie-mauve",
-          "kids-front-seam-pant-black",
-          "kids-home-is-where-t-shirt-brown",
-          "kids-work-pant-brown",
-          "kids-sweatpant-mauve"
-        ],
-        "enable_quick_add": true
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
+    "c3c9b4a8-d983-4a26-8a1a-148d946887bb",
     "0d1e752e-0f0e-4d8e-a7a9-2a54309c6758",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
@@ -213,7 +215,6 @@
     "165533293947ac239b",
     "03ceb736-43d7-4fc7-bded-d907104e6c8c",
     "d3137710-8558-4714-917a-a912e5adc340",
-    "a8d97c7a-f715-4718-83ac-0239cc51a960",
-    "c3c9b4a8-d983-4a26-8a1a-148d946887bb"
+    "a8d97c7a-f715-4718-83ac-0239cc51a960"
   ]
 }
