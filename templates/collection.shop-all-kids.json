@@ -182,6 +182,17 @@
         ],
         "enable_quick_add": true
       }
+    },
+    "c3c9b4a8-d983-4a26-8a1a-148d946887bb": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Holiday 23",
+        "collection_url": "\/collections\/kids\/kids-holiday-23",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
@@ -195,6 +206,7 @@
     "165533293947ac239b",
     "03ceb736-43d7-4fc7-bded-d907104e6c8c",
     "d3137710-8558-4714-917a-a912e5adc340",
-    "a8d97c7a-f715-4718-83ac-0239cc51a960"
+    "a8d97c7a-f715-4718-83ac-0239cc51a960",
+    "c3c9b4a8-d983-4a26-8a1a-148d946887bb"
   ]
 }
