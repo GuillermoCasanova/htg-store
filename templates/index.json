@@ -70,14 +70,13 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
-      "disabled": true,
       "settings": {
-        "heading": "Fall 2023 – Kids",
+        "heading": "Holiday 2023 – Kids",
         "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/Kid-Left_cb0b44c7-bd55-40a4-8b0d-8239f4cf429b.jpg",
+        "collection_hero_image": "shopify:\/\/shop_images\/kids_view_lookbook8.11.jpg",
         "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "shopify:\/\/pages\/tones-of-the-inner-city",
-        "right_image": "shopify:\/\/shop_images\/Kid-Right_df758b42-04d0-4ccb-83a8-2b81254f04af.jpg",
+        "lookbook_url": "shopify:\/\/pages\/holiday-23",
+        "right_image": "shopify:\/\/shop_images\/Shop_Kids.png",
         "right_cta_text": "Shop Kids",
         "right_cta_url": "shopify:\/\/collections\/kids",
         "top_border": "no",
