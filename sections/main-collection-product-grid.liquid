@@ -150,6 +150,13 @@
   grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
   column-gap: var(--level4);
   width: 100%;
+  margin-bottom: var(--level7); 
+}
+
+@media (hover: hover) {
+  .product-grid {
+      margin-bottom: 0; 
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -902,7 +909,7 @@ opacity: 1;
                   "variants":   {{ product.variants | json }},
                   "available":   {{ product.available | json }},
                   "price": {{ product.price | json }},
-                  "compare_at_price": {{product.compare_at_price | json}},
+                  "compare_at_price": {{ product.compare_at_price | json }},
                   "tags":   {{ product.tags | json }},
                   "options_with_values": {{ product.options_with_values | json }}{%- unless product.metafields.color_swatch == empty -%},{%- endunless -%}
                   {%- unless product.metafields.color_swatch == empty -%} 
