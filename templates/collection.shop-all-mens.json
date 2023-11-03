@@ -124,6 +124,7 @@
     },
     "3bdfc525-5e97-4abd-92ad-54b133728112": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "HTG® x Union",
         "collection_url": "\/collections\/htg-x-union",
