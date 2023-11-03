@@ -48,8 +48,6 @@ class CollectionGrid extends HTMLElement {
   
     getproductThumbTemplate(pProductData) {
 
-      console.log(pProductData);
-  
       let collectionUrl = this.getCollectionURL(); 
       let sectionId = this.getSectionId(); 
   
@@ -104,7 +102,6 @@ class CollectionGrid extends HTMLElement {
       }
 
       function checkOnSale(pThumbProductData) {
-        console.log(pProductData);
         if(pThumbProductData.compare_at_price > pThumbProductData.price) {
           return true
       } else {
@@ -437,7 +434,6 @@ class CollectionGrid extends HTMLElement {
     }
   
     renderProducts(pProductsToShow, pSorting) {
-        console.log(pProductsToShow); 
          let collectionProductsContainer = this.querySelector('ul'); 
   
         collectionProductsContainer.innerHTML = '';
