@@ -89,6 +89,7 @@
     },
     "c16f385c-3fd5-401c-a208-e1813744bdac": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Jordan x HTG®",
         "collection_url": "\/collections\/mens\/jordan-x-htg-2023",
@@ -106,6 +107,7 @@
     },
     "fa9e520c-204d-4293-896c-f12e8904bb85": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Defined",
         "collection_url": "\/collections\/mens\/defined",
@@ -141,6 +143,7 @@
     },
     "16590256583d5a0a0f": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "District",
         "collection_url": "\/collections\/mens\/the-district",
@@ -159,6 +162,7 @@
     },
     "1654614072e4a2b52f": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
         "collection_url": "\/collections\/mens\/the-coast",
