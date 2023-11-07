@@ -22,6 +22,7 @@
     },
     "1654829774a526c9a8": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Inner City Love Kids",
         "collection": "inner-city-love-kids",
