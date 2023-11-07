@@ -15,14 +15,20 @@
         "body": "<p>Inner City Love represents the soul of Russell Westbrook’s upbringing. Inspired by the soundtrack that shaped his household growing up from soulful records playing in the background to style spanning from the 60's to 80's – this collection is a love-story about sacrifice, commitment, hardship and most of all, heart.<\/p>",
         "image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-09_at_7.17.06_PM.png",
         "section-alignment": "flipped",
-        "copy-bg-color": "background-1"
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654827586937e2c77": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Inner City Love",
-        "collection": "inner-city-love"
+        "collection": "inner-city-love",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654827638dfcac03e": {
@@ -172,7 +178,9 @@
         "93f06eb8-7eed-4cd9-8fa6-5072edd41522"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     }
   },
