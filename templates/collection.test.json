@@ -2,7 +2,8 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "settings": {}
+      "settings": {
+      }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
@@ -18,7 +19,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Holiday 23",
-        "collection_url": "/collections/mens/holiday-23",
+        "collection_url": "\/collections\/mens\/holiday-23",
         "product_list": [
           "diamonds-t-shirt-bone",
           "htg-h-box-t-shirt-grey",
@@ -36,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Fall 23",
-        "collection_url": "/collections/mens/tone-deaf",
+        "collection_url": "\/collections\/mens\/tone-deaf",
         "product_list": [
           "htg-vest-bone",
           "stamp-patch-turtle-neck-bone",
@@ -54,7 +55,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Summer 23",
-        "collection_url": "/collections/mens/summer-23",
+        "collection_url": "\/collections\/mens\/summer-23",
         "product_list": [
           "ss-denim-woven-indigo",
           "ss-tobacco-woven-mustard",
@@ -72,7 +73,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Imprint",
-        "collection_url": "/collections/mens/imprint",
+        "collection_url": "\/collections\/mens\/imprint",
         "product_list": [
           "truth-t-shirt-khaki",
           "ready-for-action-t-shirt-bone",
@@ -88,10 +89,9 @@
     },
     "c16f385c-3fd5-401c-a208-e1813744bdac": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Jordan x HTG®",
-        "collection_url": "/collections/mens/jordan-x-htg-2023",
+        "collection_url": "\/collections\/mens\/jordan-x-htg-2023",
         "product_list": [
           "jordan-why-not-6-htg-stone",
           "jam-westbrook-x-htg-backpack-pecan",
@@ -106,10 +106,9 @@
     },
     "fa9e520c-204d-4293-896c-f12e8904bb85": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "Defined",
-        "collection_url": "/collections/mens/defined",
+        "collection_url": "\/collections\/mens\/defined",
         "product_list": [
           "sueded-band-jacket-grey",
           "private-school-polo-black",
@@ -128,7 +127,7 @@
       "disabled": true,
       "settings": {
         "collection_name": "HTG® x Union",
-        "collection_url": "/collections/htg-x-union",
+        "collection_url": "\/collections\/htg-x-union",
         "product_list": [
           "htg-x-union-t-shirt-white",
           "htg-x-union-t-shirt-black",
@@ -142,10 +141,9 @@
     },
     "16590256583d5a0a0f": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "District",
-        "collection_url": "/collections/mens/the-district",
+        "collection_url": "\/collections\/mens\/the-district",
         "product_list": [
           "htg-mascot-vest-brown",
           "prep-school-henley-grey",
@@ -161,10 +159,9 @@
     },
     "1654614072e4a2b52f": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
         "collection_name": "The Coast",
-        "collection_url": "/collections/mens/the-coast",
+        "collection_url": "\/collections\/mens\/the-coast",
         "product_list": [
           "rosecrans-knit-bone",
           "century-camp-button-up-pacific-blue",
@@ -183,7 +180,7 @@
       "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
-        "collection_url": "/collections/mens/concrete-jungle",
+        "collection_url": "\/collections\/mens\/concrete-jungle",
         "product_list": [
           "baldwin-long-short-cream",
           "century-camp-button-up-green-polkadot",
@@ -202,7 +199,7 @@
       "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. II",
-        "collection_url": "/collections/mens/inner-city-love-vol-2",
+        "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
         "product_list": [
           "inner-city-love-t-shirt-terra-cotta",
           "htg-weathered-t-shirt-cream",
@@ -221,7 +218,7 @@
       "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. I",
-        "collection_url": "/collections/mens/inner-city-love",
+        "collection_url": "\/collections\/mens\/inner-city-love",
         "product_list": [
           "jazz-checkered-short-melon",
           "jazz-checkered-short-black",
@@ -240,7 +237,7 @@
       "disabled": true,
       "settings": {
         "collection_name": "City Of Angels",
-        "collection_url": "shopify://collections/city-of-angels",
+        "collection_url": "shopify:\/\/collections\/city-of-angels",
         "product_list": [
           "city-of-angels-cap-black",
           "city-of-angels-cap-rust",
