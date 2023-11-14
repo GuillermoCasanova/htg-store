@@ -227,7 +227,7 @@
                                 value="{{ card_product.metafields.color_swatch.name | escape }}"
                                 title="Shop {{ card_product.title }} in {{ card_product.metafields.color_swatch.name }}"
                                 data-color-option
-                                data-product-media="{{ card_product.media | json | escape }}"
+                                data-product-media="{{ card_product.media | slice: 0, 2 | json | escape }}"
                                 data-product="{{ card_product.variants | json | escape }}"
                                 data-product-title="{{ card_product.title }}"
                                 data-handle="{{ card_product.handle }}"
@@ -273,7 +273,7 @@
                               value="{{ product.metafields.color_swatch.name | escape }}"
                               title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}"
                               data-color-option
-                              data-product-media="{{ product.media | json | escape }}"
+                              data-product-media="{{ product.media | slice: 0, 2 | json | escape }}"
                               data-product="{{ product.variants | json | escape }}"
                               data-product-title="{{ product.title }}"
                               data-handle="{{ product.handle }}"

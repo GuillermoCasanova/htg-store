@@ -51,7 +51,10 @@
 
     updateImages() {
         let currentColor = this.getCurrentColor(); 
+        console.log(currentColor.dataset.productMedia); 
         let productObj = JSON.parse(currentColor.dataset.productMedia); 
+        console.log(JSON.parse(currentColor.dataset.productMedia)); 
+        console.log(JSON.parse(currentColor.dataset.product));
         let images = productObj.splice(0, 2); 
         let imagesContainer =  document.querySelector(`[data-product-images][data-section="${this.dataset.section}"]`); 
 
