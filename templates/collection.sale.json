@@ -21,14 +21,14 @@
         "collection_name": "Mens Sale",
         "collection_url": "\/collections\/mens\/BFCM23",
         "product_list": [
-          "branded-shop-suit-bone",
-          "h-quilted-jacket-khaki",
-          "2016-t-shirt-bone",
-          "crest-tank-bone",
-          "honor-canvas-trench-olive",
-          "honor-muscle-tee-mustard",
-          "womens-cadet-top-khaki",
-          "womens-mining-pant-khaki"
+          "2016-private-vest-bone",
+          "stamp-inner-city-t-shirt-bone",
+          "script-carpenter-jacket-lt-brown",
+          "script-sherpa-pullover-brown",
+          "h-quilted-pant-black",
+          "script-carpenter-pant-lt-brown",
+          "overall-short-indigo",
+          "htg-letterman-jacket-grey"
         ],
         "enable_quick_add": true
       }
@@ -39,14 +39,14 @@
         "collection_name": "Womens Sale",
         "collection_url": "\/collections\/womens\/BFCM23",
         "product_list": [
-          "1988-icon-denim-button-up-indigo",
-          "1988-icon-denim-pant-indigo",
-          "2016-private-vest-bone",
-          "city-bucket-hat-bone",
-          "htg-unisex-cardigan-terra-cotta",
-          "htg-womens-knit-top-cream",
-          "htg-womens-knit-pant-cream",
-          "htg®-pack-t-shirt-black"
+          "womens-cropped-quarter-zip-sand",
+          "womens-carpenter-jacket-lt-indigo",
+          "womens-sweater-vest-black",
+          "womens-satin-vest-bone-stripe",
+          "womens-sweatpant-sand",
+          "womens-carpenter-pant-lt-indigo",
+          "womens-silk-slip-dress-black",
+          "womens-satin-skirt-brown"
         ],
         "enable_quick_add": true
       }
@@ -72,10 +72,17 @@
     "91653440-302d-4276-a3b5-b93d3c93d4b8": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Accessories",
+        "collection_name": "Accessories Sale",
         "collection_url": "\/collections\/accessories\/BFCM23",
         "product_list": [
-
+          "script-bucket-hat-brown",
+          "script-bucket-hat-black",
+          "los-angeles-knitted-cap-black",
+          "los-angeles-knitted-cap-dark-grey",
+          "crest-rib-sock-black",
+          "crest-rib-sock-white",
+          "inner-city-rib-sock-olive",
+          "inner-city-rib-sock-black"
         ],
         "enable_quick_add": true
       }
