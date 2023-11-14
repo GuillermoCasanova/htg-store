@@ -271,8 +271,6 @@
                               value="{{ product.metafields.color_swatch.name | escape }}"
                               title="Shop {{ product.title }} in {{ product.metafields.color_swatch.name }}"
                               data-color-option
-                              data-product-media="{{ product.media | slice: 0, 2 | json | escape }}"
-                              data-product="{{ product.variants | json | escape }}"
                               data-product-title="{{ product.title }}"
                               data-handle="{{ product.handle }}"
                               data-product-url="{{ product.url }}"
