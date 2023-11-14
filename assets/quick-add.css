@@ -2,18 +2,26 @@
     #Quick Add
 \*------------------------------------*/
 
-.product-card-wrapper:hover .quick-add-form,
-.product-card-wrapper:hover .quick-add-button {
+.quick-add-form,
+.quick-add-button {
   display: none;
+  z-index: -1;
+  pointer-events: none;
 }
 
-@media (hover: hover) {
+/* .product-card-wrapper:hover .quick-add-form,
+.product-card-wrapper:hover .quick-add-button {
+  display: none;
+} */
 
+@media (hover: hover) {
   .product-card-wrapper:hover .quick-add-form,
   .product-card-wrapper:hover .quick-add-button {
     display: block;
     opacity: 1;
     transform: translateY(0);
+    pointer-events: all;
+    z-index: 0;
   }
 }
 
