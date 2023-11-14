@@ -15,25 +15,6 @@
         "child_collection": true
       }
     },
-    "91653440-302d-4276-a3b5-b93d3c93d4b8": {
-      "type": "collection-preview",
-      "disabled": true,
-      "settings": {
-        "collection_name": "Summer Sale 50%",
-        "collection_url": "shopify:\/\/collections\/summer-sale-50",
-        "product_list": [
-          "private-school-polo-white",
-          "htg-pack-tee-black",
-          "htg-stripe-rugby-olive",
-          "htg-mascot-vest-grey",
-          "womens-bonded-vegan-leather-vest-sand",
-          "womens-stadium-jacket-black",
-          "kids-smokey-stripe-t-shirt-terra-cotta",
-          "kids-inner-city-love-t-shirt-terra-cotta"
-        ],
-        "enable_quick_add": true
-      }
-    },
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
@@ -73,7 +54,7 @@
     "d8a82659-1ec8-415c-a9af-0312a79616ad": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Kids SAle",
+        "collection_name": "Kids Sale",
         "collection_url": "shopify:\/\/collections\/imprint-kids",
         "product_list": [
           "kids-arched-htg-t-shirt-bone",
@@ -84,6 +65,25 @@
           "kids-crest-logo-short-tan",
           "kids-uniform-short-olive",
           "kids-field-cargo-pant-slate"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "91653440-302d-4276-a3b5-b93d3c93d4b8": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Summer Sale 50%",
+        "collection_url": "shopify:\/\/collections\/summer-sale-50",
+        "product_list": [
+          "private-school-polo-white",
+          "htg-pack-tee-black",
+          "htg-stripe-rugby-olive",
+          "htg-mascot-vest-grey",
+          "womens-bonded-vegan-leather-vest-sand",
+          "womens-stadium-jacket-black",
+          "kids-smokey-stripe-t-shirt-terra-cotta",
+          "kids-inner-city-love-t-shirt-terra-cotta"
         ],
         "enable_quick_add": true
       }
@@ -206,10 +206,10 @@
   "order": [
     "banner",
     "product-grid",
-    "91653440-302d-4276-a3b5-b93d3c93d4b8",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
     "e9d28303-6ae1-43d7-8064-ddf83e7aa688",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
+    "91653440-302d-4276-a3b5-b93d3c93d4b8",
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "1661366277478615b4",
     "165533293947ac239b",
