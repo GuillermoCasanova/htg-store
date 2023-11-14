@@ -22,6 +22,7 @@
     },
     "16548336508d87d347": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Free-Fall Women",
         "collection": "freefall-womens",

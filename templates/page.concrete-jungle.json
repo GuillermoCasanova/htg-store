@@ -23,7 +23,9 @@
       "settings": {
         "heading": "Concrete Jungle",
         "body": "<p>Honor The Gift introduces Spring 2022 “The Concrete Jungle.” A contemporary homage to Los Angeles, the city built on dreams and concrete. This collection is told from the perspective of a kid who comes from nothing and dedicates their life to making their dreams come to fruition. Russell Westbrook’s story is imprinted on the pavement. <\/p><p>Never forget the city you came from. <\/p>",
-        "bg_color": "background-1"
+        "bg_color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "16547967139d0d9446": {
@@ -250,14 +252,20 @@
         "31b6d9ab-54f6-4fbd-bf13-8eebd466c4ed"
       ],
       "settings": {
-        "name": ""
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "1654796652c1f897d9": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Collection Preview",
-        "collection": "concrete-jungle"
+        "collection": "concrete-jungle",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     },
     "165479687868697dbe": {
@@ -273,6 +281,7 @@
       "block_order": [
         "1654796878b5552f42-0"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/HTG-SS22---CONCRETE-JUNGLE-Lookbook15_70fc1475-d375-4c86-85a9-fdcad2141e6f_1.png",
         "video": "",
