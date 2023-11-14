@@ -71,19 +71,11 @@
     },
     "91653440-302d-4276-a3b5-b93d3c93d4b8": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
-        "collection_name": "Summer Sale 50%",
-        "collection_url": "shopify:\/\/collections\/summer-sale-50",
+        "collection_name": "Accessories",
+        "collection_url": "\/collections\/accessories\/BFCM23",
         "product_list": [
-          "private-school-polo-white",
-          "htg-pack-tee-black",
-          "htg-stripe-rugby-olive",
-          "htg-mascot-vest-grey",
-          "womens-bonded-vegan-leather-vest-sand",
-          "womens-stadium-jacket-black",
-          "kids-smokey-stripe-t-shirt-terra-cotta",
-          "kids-inner-city-love-t-shirt-terra-cotta"
+
         ],
         "enable_quick_add": true
       }
