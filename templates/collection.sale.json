@@ -19,7 +19,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Mens Sale",
-        "collection_url": "shopify:\/\/collections\/summer-sale-40",
+        "collection_url": "\/collections\/mens\/BFCM23",
         "product_list": [
           "branded-shop-suit-bone",
           "h-quilted-jacket-khaki",
@@ -37,7 +37,7 @@
       "type": "collection-preview",
       "settings": {
         "collection_name": "Womens Sale",
-        "collection_url": "shopify:\/\/collections\/summer-sale-50",
+        "collection_url": "\/collections\/womens\/BFCM23",
         "product_list": [
           "1988-icon-denim-button-up-indigo",
           "1988-icon-denim-pant-indigo",
