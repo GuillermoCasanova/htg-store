@@ -37,7 +37,7 @@
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Summer Sale 40%",
+        "collection_name": "Mens Sale",
         "collection_url": "shopify:\/\/collections\/summer-sale-40",
         "product_list": [
           "branded-shop-suit-bone",
@@ -55,7 +55,7 @@
     "e9d28303-6ae1-43d7-8064-ddf83e7aa688": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Summer Sale 50%",
+        "collection_name": "Womens Sale",
         "collection_url": "shopify:\/\/collections\/summer-sale-50",
         "product_list": [
           "1988-icon-denim-button-up-indigo",
@@ -72,9 +72,8 @@
     },
     "d8a82659-1ec8-415c-a9af-0312a79616ad": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
-        "collection_name": "Imprint",
+        "collection_name": "Kids SAle",
         "collection_url": "shopify:\/\/collections\/imprint-kids",
         "product_list": [
           "kids-arched-htg-t-shirt-bone",
