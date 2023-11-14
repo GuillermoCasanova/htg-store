@@ -124,6 +124,7 @@
     },
     "3bdfc525-5e97-4abd-92ad-54b133728112": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "HTG® x Union",
         "collection_url": "\/collections\/htg-x-union",
@@ -176,6 +177,7 @@
     },
     "16540387627dd6a3af": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Concrete Jungle",
         "collection_url": "\/collections\/mens\/concrete-jungle",
@@ -194,6 +196,7 @@
     },
     "1654614390e8e5413f": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. II",
         "collection_url": "\/collections\/mens\/inner-city-love-vol-2",
@@ -212,6 +215,7 @@
     },
     "165403876742214c90": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Inner City Love Vol. I",
         "collection_url": "\/collections\/mens\/inner-city-love",
@@ -230,6 +234,7 @@
     },
     "16630187024a9c32e7": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "City Of Angels",
         "collection_url": "shopify:\/\/collections\/city-of-angels",
