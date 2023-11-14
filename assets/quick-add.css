@@ -7,7 +7,6 @@
   display: none;
   z-index: -1;
   pointer-events: none;
-  background-color: red;
 }
 
 /* .product-card-wrapper:hover .quick-add-form,
