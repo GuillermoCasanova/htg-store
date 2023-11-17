@@ -15,39 +15,20 @@
         "child_collection": true
       }
     },
-    "91653440-302d-4276-a3b5-b93d3c93d4b8": {
-      "type": "collection-preview",
-      "disabled": true,
-      "settings": {
-        "collection_name": "Summer Sale 50%",
-        "collection_url": "shopify:\/\/collections\/summer-sale-50",
-        "product_list": [
-          "private-school-polo-white",
-          "htg-pack-tee-black",
-          "htg-stripe-rugby-olive",
-          "htg-mascot-vest-grey",
-          "womens-bonded-vegan-leather-vest-sand",
-          "womens-stadium-jacket-black",
-          "kids-smokey-stripe-t-shirt-terra-cotta",
-          "kids-inner-city-love-t-shirt-terra-cotta"
-        ],
-        "enable_quick_add": true
-      }
-    },
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Summer Sale 40%",
-        "collection_url": "shopify:\/\/collections\/summer-sale-40",
+        "collection_name": "Mens Sale",
+        "collection_url": "\/collections\/mens\/BFCM23",
         "product_list": [
-          "branded-shop-suit-bone",
-          "h-quilted-jacket-khaki",
-          "2016-t-shirt-bone",
-          "crest-tank-bone",
-          "honor-canvas-trench-olive",
-          "honor-muscle-tee-mustard",
-          "womens-cadet-top-khaki",
-          "womens-mining-pant-khaki"
+          "2016-private-vest-bone",
+          "stamp-inner-city-t-shirt-bone",
+          "script-sherpa-pullover-brown",
+          "script-carpenter-jacket-lt-brown",
+          "h-quilted-pant-black",
+          "script-carpenter-pant-lt-brown",
+          "workman-overall-khaki",
+          "overall-short-indigo"
         ],
         "enable_quick_add": true
       }
@@ -55,27 +36,26 @@
     "e9d28303-6ae1-43d7-8064-ddf83e7aa688": {
       "type": "collection-preview",
       "settings": {
-        "collection_name": "Summer Sale 50%",
-        "collection_url": "shopify:\/\/collections\/summer-sale-50",
+        "collection_name": "Womens Sale",
+        "collection_url": "\/collections\/womens\/BFCM23",
         "product_list": [
-          "1988-icon-denim-button-up-indigo",
-          "1988-icon-denim-pant-indigo",
-          "2016-private-vest-bone",
-          "city-bucket-hat-bone",
-          "htg-unisex-cardigan-terra-cotta",
-          "htg-womens-knit-top-cream",
-          "htg-womens-knit-pant-cream",
-          "htg®-pack-t-shirt-black"
+          "womens-cropped-quarter-zip-sand",
+          "womens-carpenter-jacket-lt-indigo",
+          "womens-sweater-vest-black",
+          "womens-satin-vest-bone-stripe",
+          "womens-sweatpant-sand",
+          "womens-carpenter-pant-lt-indigo",
+          "womens-silk-slip-dress-black",
+          "womens-satin-skirt-brown"
         ],
         "enable_quick_add": true
       }
     },
     "d8a82659-1ec8-415c-a9af-0312a79616ad": {
       "type": "collection-preview",
-      "disabled": true,
       "settings": {
-        "collection_name": "Imprint",
-        "collection_url": "shopify:\/\/collections\/imprint-kids",
+        "collection_name": "Kids Sale",
+        "collection_url": "\/collections\/kids\/BFCM23",
         "product_list": [
           "kids-arched-htg-t-shirt-bone",
           "kids-crest-logo-hoodie-tan",
@@ -85,6 +65,24 @@
           "kids-crest-logo-short-tan",
           "kids-uniform-short-olive",
           "kids-field-cargo-pant-slate"
+        ],
+        "enable_quick_add": true
+      }
+    },
+    "91653440-302d-4276-a3b5-b93d3c93d4b8": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "Accessories Sale",
+        "collection_url": "\/collections\/accessories\/BFCM23",
+        "product_list": [
+          "script-bucket-hat-brown",
+          "script-bucket-hat-black",
+          "los-angeles-knitted-cap-black",
+          "los-angeles-knitted-cap-dark-grey",
+          "crest-rib-sock-black",
+          "crest-rib-sock-white",
+          "inner-city-rib-sock-olive",
+          "inner-city-rib-sock-black"
         ],
         "enable_quick_add": true
       }
@@ -207,10 +205,10 @@
   "order": [
     "banner",
     "product-grid",
-    "91653440-302d-4276-a3b5-b93d3c93d4b8",
     "14c23dd4-df0e-4bc6-9f15-1f5e64a8e96f",
     "e9d28303-6ae1-43d7-8064-ddf83e7aa688",
     "d8a82659-1ec8-415c-a9af-0312a79616ad",
+    "91653440-302d-4276-a3b5-b93d3c93d4b8",
     "ad1da559-6638-4283-9b50-b5593c44ec3a",
     "1661366277478615b4",
     "165533293947ac239b",
