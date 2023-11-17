@@ -258,9 +258,9 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
    {% endstyle %}
 
 
-  {%if settings.show_announcement_bar%}
+  {% if settings.show_announcement_bar %}
     {{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}  
-  {%endif%}
+  {% endif %}
 
       
    {% comment %}
@@ -283,11 +283,11 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
       });
     </script>
     
-  {% include 'stack-discounts-script' %}
+  {% comment %} {% render 'stack-discounts-script' %} {% endcomment %}
 
-<script>(() => {const installerKey = 'docapp-discount-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
+  <script defer>(() => {const installerKey = 'docapp-discount-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
 
-<script>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
+  <script defer>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
 </head>
 
   <body class="gradient">
@@ -298,9 +298,9 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
 
     <div class="sticky-content" data-header-wrapper style="position: fixed; top: 0; width: 100%; z-index: 10;">
     
-      {%if settings.show_announcement_bar%}
+      {% if settings.show_announcement_bar %}
         {% section 'announcement-bar' %}
-      {%endif%}
+      {% endif %}
       
     {% section 'header' %}
 
