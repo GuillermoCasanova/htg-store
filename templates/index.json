@@ -61,12 +61,12 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/Mens_opt1_67a4f83e-a045-4361-abec-fd0c5c5354d7.png",
-        "left-cta-text": "Shop Mens",
-        "left-cta-url": "shopify:\/\/collections\/mens",
-        "right-image": "shopify:\/\/shop_images\/Womens_opt2_552dca93-e424-49c1-8ba2-bb0585bfd1b4.png",
-        "right-cta-text": "Shop Womens",
-        "right-cta-url": "shopify:\/\/collections\/womens",
+        "left-image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_3.52.28_PM.png",
+        "left-cta-text": "Mens Sale",
+        "left-cta-url": "https:\/\/honorthegift.co\/collections\/mens\/BFCM23",
+        "right-image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_3.52.21_PM.png",
+        "right-cta-text": "Womens Sale",
+        "right-cta-url": "https:\/\/honorthegift.co\/collections\/womens\/BFCM23",
         "top_border": "no",
         "bottom_border": "yes"
       }
