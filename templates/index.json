@@ -74,14 +74,14 @@
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
       "settings": {
-        "heading": "Holiday 2023 – Kids",
+        "heading": "Accessories Sale",
         "body": "",
-        "collection_hero_image": "shopify:\/\/shop_images\/kids_view_lookbook8.11.jpg",
-        "lookbook_url_text": "View Lookbook",
-        "lookbook_url": "shopify:\/\/pages\/holiday-23",
-        "right_image": "shopify:\/\/shop_images\/Shop_Kids.png",
-        "right_cta_text": "Shop Kids",
-        "right_cta_url": "shopify:\/\/collections\/kids",
+        "collection_hero_image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_4.00.48_PM.png",
+        "lookbook_url_text": "Shop Accessories Sale",
+        "lookbook_url": "https:\/\/honorthegift.co\/collections\/accessories\/BFCM23",
+        "right_image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_3.58.31_PM.png",
+        "right_cta_text": "Kids Sale",
+        "right_cta_url": "https:\/\/honorthegift.co\/collections\/kids\/BFCM23",
         "top_border": "no",
         "bottom_border": "yes"
       }
