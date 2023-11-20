@@ -52,7 +52,7 @@
       "settings": {
         "heading": "Black Friday Sale",
         "body": "<h2>Up to 50% Off! Enjoy Black Friday sale from now through Sunday November 26th.<\/h2><h2><\/h2><h4><em>*All Sales are final.<\/em><\/h4>",
-        "cta-url": "shopify:\/\/collections\/holiday-23",
+        "cta-url": "https:\/\/honorthegift.co\/collections\/sale",
         "top_border": "no",
         "bottom_border": "yes"
       }
