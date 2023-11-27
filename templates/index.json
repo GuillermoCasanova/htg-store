@@ -14,7 +14,7 @@
         "heading"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/BF-HP.jpg",
+        "image": "shopify:\/\/shop_images\/Screenshot_2023-11-26_at_11.53.23_PM.png",
         "video": "",
         "cta-url": "https:\/\/honorthegift.co\/collections\/sale"
       }
@@ -61,10 +61,10 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_3.52.28_PM.png",
+        "left-image": "shopify:\/\/shop_images\/M.png",
         "left-cta-text": "Mens Sale",
         "left-cta-url": "https:\/\/honorthegift.co\/collections\/mens\/BFCM23",
-        "right-image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_3.52.21_PM.png",
+        "right-image": "shopify:\/\/shop_images\/W.png",
         "right-cta-text": "Womens Sale",
         "right-cta-url": "https:\/\/honorthegift.co\/collections\/womens\/BFCM23",
         "top_border": "no",
@@ -79,7 +79,7 @@
         "collection_hero_image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_4.00.48_PM.png",
         "lookbook_url_text": "Shop Accessories Sale",
         "lookbook_url": "https:\/\/honorthegift.co\/collections\/accessories\/BFCM23",
-        "right_image": "shopify:\/\/shop_images\/Screen_Shot_2023-11-17_at_3.58.31_PM.png",
+        "right_image": "shopify:\/\/shop_images\/K.png",
         "right_cta_text": "Kids Sale",
         "right_cta_url": "https:\/\/honorthegift.co\/collections\/kids\/BFCM23",
         "top_border": "no",
