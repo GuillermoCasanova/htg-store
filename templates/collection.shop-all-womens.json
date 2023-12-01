@@ -75,14 +75,14 @@
         "collection_name": "Imprint",
         "collection_url": "\/collections\/womens\/imprint",
         "product_list": [
-          "womens-shop-vest-khaki",
           "womens-monogram-polo-oatmeal",
           "womens-tobacco-flower-t-shirt-black",
           "womens-labor-oversized-hoodie-grey",
           "womens-shop-short-khaki",
           "womens-knit-short-bone",
           "womens-service-pant-cream",
-          "womens-labor-overall-black"
+          "womens-labor-overall-black",
+          "womens-service-dress-cream"
         ],
         "enable_quick_add": true
       }

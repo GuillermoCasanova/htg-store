@@ -15,6 +15,19 @@
         "child_collection": true
       }
     },
+    "8b0abea7-a76b-48c1-8cb2-760d2153fdb2": {
+      "type": "collection-preview",
+      "settings": {
+        "collection_name": "ComplexCon 2023",
+        "collection_url": "\/collections\/mens\/complexcon-2023",
+        "product_list": [
+          "htg-complex-con-tv-t-shirt-black",
+          "htg-complex-con-vhs-t-shirt-black",
+          "htg-complex-con-vhs-t-shirt-off-white"
+        ],
+        "enable_quick_add": true
+      }
+    },
     "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5": {
       "type": "collection-preview",
       "settings": {
@@ -255,6 +268,7 @@
   "order": [
     "banner",
     "product-grid",
+    "8b0abea7-a76b-48c1-8cb2-760d2153fdb2",
     "285a27f3-6c50-4f3d-9112-d5f70d6cf7d5",
     "93eb3c28-377a-4997-92cd-7f0af7800157",
     "ef27d716-e142-4b57-af2d-190bee5f2692",
