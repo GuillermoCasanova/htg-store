@@ -475,6 +475,23 @@
 
 
 
+/*------------------------------------*\
+    #Sale Alert
+\*------------------------------------*/
+
+
+.product__sale-alert {
+  text-transform: uppercase;
+  font-size: var(--h5); 
+  background-color: black; 
+  color: white;
+  text-align: center;
+  max-width: 12rem;
+padding: var(--level1);
+}
+
+
+
 
 
 /*------------------------------------*\
