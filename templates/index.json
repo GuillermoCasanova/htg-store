@@ -54,6 +54,18 @@
         "bottom_border": "yes"
       }
     },
+    "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "Archive 23 Collection",
+        "body": "<p>Experience the classics all over again. <br\/>A celebration of our most iconic designs from over the years.<br\/><br\/><a href=\"https:\/\/honorthegift.co\/collections\/archive-23\" title=\"https:\/\/honorthegift.co\/collections\/archive-23\">Shop Now<\/a><\/p>",
+        "image": "shopify:\/\/shop_images\/HTG-SQUARE-WEBSITE.jpg",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
     "165464550697d6e482": {
       "type": "featured-collection-cta",
       "settings": {
@@ -128,29 +140,17 @@
         "top_border": "no",
         "bottom_border": "no"
       }
-    },
-    "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7": {
-      "type": "blurb-section",
-      "settings": {
-        "heading": "Archive 23 Collection",
-        "body": "<p>Experience the classics all over again. <br\/>A celebration of our most iconic designs from over the years.<br\/><br\/>Shop Now<\/p>",
-        "image": "shopify:\/\/shop_images\/HTG-SQUARE-WEBSITE.jpg",
-        "section-alignment": "normal",
-        "copy-bg-color": "background-1",
-        "top_border": "no",
-        "bottom_border": "yes"
-      }
     }
   },
   "order": [
     "image_banner",
     "1654645496c068b051",
+    "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7",
     "165464550697d6e482",
     "16554195319ec4aeed",
     "b396d892-7d6e-44a7-abaa-8f288b626bc9",
     "1654659992853b6cdb",
     "1655920347d426af19",
-    "165954546289929c5f",
-    "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7"
+    "165954546289929c5f"
   ]
 }
