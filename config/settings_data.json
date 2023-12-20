@@ -104,6 +104,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "LAST DAY TO ORDER FOR CHRISTMAS DELIVERY IS 12\/18 EXPRESS SHIPPING",
               "color_scheme": "background-1",
