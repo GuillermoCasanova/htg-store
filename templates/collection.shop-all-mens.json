@@ -102,6 +102,7 @@
     },
     "6fb45919-52f9-480d-bf1e-37784463a9de": {
       "type": "collection-preview",
+      "disabled": true,
       "settings": {
         "collection_name": "Imprint",
         "collection_url": "\/collections\/mens\/imprint",
