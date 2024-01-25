@@ -143,6 +143,7 @@
     },
     "c514a036-e7e0-4f10-8977-a21cf576b3ad": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Imprint Kids Collection",
         "collection": "imprint-kids",
