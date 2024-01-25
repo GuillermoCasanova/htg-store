@@ -192,6 +192,7 @@
     },
     "b3d675d9-b002-49df-b124-919b5b96909e": {
       "type": "lookbook-collection-display",
+      "disabled": true,
       "settings": {
         "heading": "Imprint Collection",
         "collection": "imprint",
