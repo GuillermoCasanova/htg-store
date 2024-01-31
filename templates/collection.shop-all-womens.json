@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "collection_preview_9J8Gnj": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Heritage X Legacy",
+        "collection_url": "\/collections\/womens\/SP24",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "0dc779de-9ea6-42e8-bc9b-7ed11e258f35": {
       "type": "collection-preview",
       "settings": {
@@ -219,6 +231,7 @@
   "order": [
     "banner",
     "product-grid",
+    "collection_preview_9J8Gnj",
     "0dc779de-9ea6-42e8-bc9b-7ed11e258f35",
     "347cf7d2-43a1-4b8f-80ea-86de0750cbd9",
     "8ab7bcd2-8778-4a5e-b963-658bc18bc61c",
