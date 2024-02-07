@@ -17,10 +17,21 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "lookbook_collection_display_bgNrt8": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Heritage x Legacy – Spring 2024 Collection",
+        "collection": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
-    "lookbook_copy_section_nthe4K"
+    "lookbook_copy_section_nthe4K",
+    "lookbook_collection_display_bgNrt8"
   ]
 }
