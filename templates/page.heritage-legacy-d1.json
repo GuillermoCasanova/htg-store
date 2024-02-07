@@ -3,10 +3,24 @@
     "header": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/HP-resize_06dada51-4029-48fb-948b-e7b8b4742c13.jpg",
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "lookbook_copy_section_nthe4K": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Heritage x Legacy – Spring 2024 Collection",
+        "body": "<h3>Honor The Gift’s Spring 2024 Collection is a celebration of our roots as the cornerstone for the future. This carefully curated selection features an array of vivid hues, expertly crafted to embody the essence of our culture.<\/h3>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     }
   },
   "order": [
-    "header"
+    "header",
+    "lookbook_copy_section_nthe4K"
   ]
 }
