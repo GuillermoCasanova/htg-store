@@ -27,11 +27,73 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "lookbook_slideshow_HAxzqP": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "slideshow_slide_qyyjyw": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_a5a173ed-bf8e-43a8-8232-ce6a11723e2d.png"
+          }
+        },
+        "slideshow_slide_dnVVaw": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_af650837-b277-4cb5-b075-dbe723d05e38.png"
+          }
+        },
+        "slideshow_slide_cbxyk8": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_50cecffa-a963-4dc0-adff-cc6768a5ff39.png"
+          }
+        },
+        "slideshow_slide_BDbKnq": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_fb2a0468-8283-4f97-b2af-2b826abb6261.png"
+          }
+        },
+        "slideshow_slide_TU4YgR": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_f4dc920c-7fa3-47cd-ac36-4b008ac7e305.png"
+          }
+        },
+        "slideshow_slide_ErDwQj": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6_90579938-1917-4855-a8ba-450ae41bfc87.png"
+          }
+        },
+        "slideshow_slide_ekFpVX": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7_6ed54e8f-77d2-41b6-9d0f-2566f92bc6c9.png"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_slide_qyyjyw",
+        "slideshow_slide_dnVVaw",
+        "slideshow_slide_cbxyk8",
+        "slideshow_slide_BDbKnq",
+        "slideshow_slide_TU4YgR",
+        "slideshow_slide_ErDwQj",
+        "slideshow_slide_ekFpVX"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
     "lookbook_copy_section_nthe4K",
-    "lookbook_collection_display_bgNrt8"
+    "lookbook_collection_display_bgNrt8",
+    "lookbook_slideshow_HAxzqP"
   ]
 }
