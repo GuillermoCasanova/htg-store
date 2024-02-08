@@ -14,9 +14,9 @@
         "heading"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/H23-HP_97f9f1ef-a40a-462e-8c6f-a39a17543cf5.jpg",
+        "image": "shopify:\/\/shop_images\/HP-resize_0713af50-6cc6-4095-aaa5-03b0d34fcdf7.jpg",
         "video": "",
-        "cta-url": "shopify:\/\/collections\/holiday-23"
+        "cta-url": "https:\/\/honorthegift.co\/collections\/spring-2024"
       }
     },
     "1654645496c068b051": {
@@ -25,19 +25,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_0320105d-8f98-42bb-b99c-d29656a88dd3.jpg"
+            "image": "shopify:\/\/shop_images\/5_36dab467-bb80-40ce-9646-1bbaadb29a7a.png"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_26e933a9-0c28-4d4c-90e8-dc3e5272a36b.jpg"
+            "image": "shopify:\/\/shop_images\/1_a5a173ed-bf8e-43a8-8232-ce6a11723e2d.png"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3_994f9bb7-be5a-460a-ba80-1d7674acd6c5.jpg"
+            "image": "shopify:\/\/shop_images\/2_af650837-b277-4cb5-b075-dbe723d05e38.png"
           }
         }
       },
@@ -47,15 +47,16 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "An Ode to An Inner City Home – Holiday 2023 Collection",
-        "body": "<p>Honor the Gift's 2023 Holiday Collection knows that home is where we weave the first threads of our stories, and pays homage to that foundation. With an inner city home - and all of its character and style - as a guide, the holiday collection calls on essential elements like memorable furniture prints, unmistakable plastic couch covers and distinct drapes.<br\/><\/p><p>The collection is more than its pieces: It's an invitation to a community of like-minded souls to honor home. What home means to them.<\/p>",
-        "cta-url": "shopify:\/\/collections\/holiday-23",
+        "heading": "Heritage x Legacy – Spring 2024 Collection",
+        "body": "<p>We are only here because they came first.<br\/><br\/>Because of the traditions, work, joy and commitments of our ancestors.<br\/><br\/>Honor the Gift’s Heritage x Legacy collection is an acknowledgement of that responsibility and interconnectedness.<br\/><br\/>For this Fall drop, we revitalized classic silhouettes, infusing them with contemporary elements like premium denim, bespoke crochet knits, robust French terry, and delicate mohair. This blend brings a taste of bygone days, now flavored with the flair of today's aesthetics. Highlights include an oversized rugby and crochet button up, alongside the plush mohair set and cutting-edge vegan leather set.<br\/><br\/>The Heritage x Legacy collection draws inspiration from those before us who became a force of change in the community. It is an acknowledgment of the movements that honor our past as we pave new paths for the future.<br\/><br\/>The roots run deep.<\/p>",
+        "cta-url": "shopify:\/\/collections\/spring-2024",
         "top_border": "no",
         "bottom_border": "yes"
       }
     },
     "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7": {
       "type": "blurb-section",
+      "disabled": true,
       "settings": {
         "heading": "Archive 23 Collection",
         "body": "<p>Experience the classics all over again. <br\/>A celebration of our most iconic designs from over the years.<br\/><br\/><a href=\"https:\/\/honorthegift.co\/collections\/archive-23\" title=\"https:\/\/honorthegift.co\/collections\/archive-23\">Shop Now<\/a><\/p>",
@@ -70,10 +71,10 @@
       "type": "featured-collection-cta",
       "settings": {
         "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/Mens_opt1_67a4f83e-a045-4361-abec-fd0c5c5354d7.png",
+        "left-image": "shopify:\/\/shop_images\/Mens.png",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "shopify:\/\/collections\/mens",
-        "right-image": "shopify:\/\/shop_images\/Womens_opt2_552dca93-e424-49c1-8ba2-bb0585bfd1b4.png",
+        "right-image": "shopify:\/\/shop_images\/Womens.png",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "shopify:\/\/collections\/womens",
         "top_border": "no",
@@ -82,6 +83,7 @@
     },
     "16554195319ec4aeed": {
       "type": "featured-collection-alt",
+      "disabled": true,
       "settings": {
         "heading": "Holiday 2023 – Kids",
         "body": "",
@@ -113,7 +115,7 @@
       "settings": {
         "heading": "For The Inner City",
         "body": "<p>Created by a kid from the Inner City of Los Angeles. A brand founded on self-belief and dedication to never stop working towards your greatness no matter the hardship. Representing a personal promise to Honor the Gift He has given you. <br\/><br\/>A body of work with a focus on quality, purpose, and storytelling. These core concepts are applied to the construction of the product all the way to the physical spaces they live in. Inspired by Russell Westbrook’s youth, Honor the Gift is built out of respect for where he came from and where anyone can take themselves.<\/p>",
-        "image": "shopify:\/\/shop_images\/Brand_Image3_7d1adfe7-572a-4088-a6a2-adede2f633dd.png",
+        "image": "shopify:\/\/shop_images\/Russ.png",
         "section-alignment": "flipped",
         "copy-bg-color": "background-1",
         "top_border": "no",
