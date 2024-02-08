@@ -309,7 +309,9 @@ fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;d
 
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" >
-      {{ content_for_layout }}
+      <div class="main__inner">
+        {{ content_for_layout }}
+      </div>
     </main>
 
     {% section 'footer' %}

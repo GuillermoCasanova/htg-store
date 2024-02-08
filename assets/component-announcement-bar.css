@@ -49,7 +49,7 @@
     font-family: var(--primary-font-family);
 }
 
-main {
+.main__inner {
     opacity: 0;
     animation: fade-in .2s ease-in-out forwards .3s
 }
