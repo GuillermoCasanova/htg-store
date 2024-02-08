@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "archival_collection_YjPdAN": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Heritage x Legacy",
+            "thumbnail": "shopify:\/\/shop_images\/Sp24_Collection_Cover_20dc5553-5753-4124-b880-042c0ced4762.jpg",
+            "lookbook_url": "shopify:\/\/pages\/heritage-x-legacy"
+          }
+        },
         "6fba15de-4ea9-4141-adfd-c8a11cfa7fb0": {
           "type": "archival-collection",
           "settings": {
@@ -208,6 +216,7 @@
         }
       },
       "block_order": [
+        "archival_collection_YjPdAN",
         "6fba15de-4ea9-4141-adfd-c8a11cfa7fb0",
         "011653ef-0486-4791-baa2-2927a89253e7",
         "120757bf-18ab-45f4-8269-8f6a96a5af9f",
