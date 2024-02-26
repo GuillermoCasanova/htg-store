@@ -58,7 +58,7 @@
       "type": "blurb-section",
       "settings": {
         "heading": "Black History Month Collection",
-        "body": "<p><a href=\"https:\/\/honorthegift.co\/collections\/archive-23\" title=\"https:\/\/honorthegift.co\/collections\/bhm-2024\">Shop Now<\/a><\/p>",
+        "body": "<p><a href=\"\/collections\/bhm-2024\" title=\"Black History Month\">Shop Now<\/a><\/p>",
         "image": "shopify:\/\/shop_images\/BHM-3.gif",
         "section-alignment": "normal",
         "copy-bg-color": "background-1",
