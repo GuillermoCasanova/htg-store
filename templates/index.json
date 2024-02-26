@@ -56,11 +56,10 @@
     },
     "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7": {
       "type": "blurb-section",
-      "disabled": true,
       "settings": {
-        "heading": "Archive 23 Collection",
-        "body": "<p>Experience the classics all over again. <br\/>A celebration of our most iconic designs from over the years.<br\/><br\/><a href=\"https:\/\/honorthegift.co\/collections\/archive-23\" title=\"https:\/\/honorthegift.co\/collections\/archive-23\">Shop Now<\/a><\/p>",
-        "image": "shopify:\/\/shop_images\/HTG-SQUARE-WEBSITE.jpg",
+        "heading": "Black History Month Collection",
+        "body": "<p><a href=\"https:\/\/honorthegift.co\/collections\/archive-23\" title=\"https:\/\/honorthegift.co\/collections\/bhm-2024\">Shop Now<\/a><\/p>",
+        "image": "shopify:\/\/shop_images\/BHM-3.gif",
         "section-alignment": "normal",
         "copy-bg-color": "background-1",
         "top_border": "no",
