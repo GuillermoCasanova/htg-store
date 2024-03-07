@@ -114,6 +114,54 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/14.png"
           }
+        },
+        "slideshow_slide_Lrt89F": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_39846742-33c4-479b-92bf-31de9cd72d4b.png"
+          }
+        },
+        "slideshow_slide_CYiPz3": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_6bca32f8-e96c-4ce3-a236-35b97dcaade0.jpg"
+          }
+        },
+        "slideshow_slide_YnX46y": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_adcb4c8f-86de-4ba5-bf51-25bdcd8507a4.jpg"
+          }
+        },
+        "slideshow_slide_6ey4PA": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_2c89fa9c-0e52-40d4-bdc2-e7f8d2d10f93.jpg"
+          }
+        },
+        "slideshow_slide_iUJyz3": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6_2bd44e89-264a-47f5-aba7-3bd1b2cc6e39.jpg"
+          }
+        },
+        "slideshow_slide_YKULXt": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7_2b570ea8-a53e-42fd-afa4-89ff100c01f0.jpg"
+          }
+        },
+        "slideshow_slide_Bzree3": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8_7a7bdf28-b92f-4a16-b5b9-a6b1dbdf40bd.jpg"
+          }
+        },
+        "slideshow_slide_QENFKX": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9_ae6d318b-0976-441d-84b0-1a736d223a4b.jpg"
+          }
         }
       },
       "block_order": [
@@ -130,7 +178,15 @@
         "slideshow_slide_jGEaqV",
         "slideshow_slide_JLq6UJ",
         "slideshow_slide_Qi3F8H",
-        "slideshow_slide_VEW6pP"
+        "slideshow_slide_VEW6pP",
+        "slideshow_slide_Lrt89F",
+        "slideshow_slide_CYiPz3",
+        "slideshow_slide_YnX46y",
+        "slideshow_slide_6ey4PA",
+        "slideshow_slide_iUJyz3",
+        "slideshow_slide_YKULXt",
+        "slideshow_slide_Bzree3",
+        "slideshow_slide_QENFKX"
       ],
       "settings": {
         "name": "",
