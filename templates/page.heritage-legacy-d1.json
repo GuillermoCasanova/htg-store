@@ -194,6 +194,16 @@
         "bottom_border": "yes"
       }
     },
+    "lookbook_collection_display_MBDkpY": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Heritage x Legacy – Spring 2024 Drop 2",
+        "collection": "spring-2-drop-2",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
     "lookbook_slideshow_wnkKyj": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -339,6 +349,7 @@
     "lookbook_copy_section_nthe4K",
     "lookbook_collection_display_bgNrt8",
     "lookbook_slideshow_HAxzqP",
+    "lookbook_collection_display_MBDkpY",
     "lookbook_slideshow_wnkKyj"
   ]
 }
