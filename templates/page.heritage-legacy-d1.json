@@ -193,12 +193,152 @@
         "top_border": "no",
         "bottom_border": "yes"
       }
+    },
+    "lookbook_slideshow_wnkKyj": {
+      "type": "lookbook-slideshow",
+      "blocks": {
+        "slideshow_slide_hBVdMq": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_01.jpg"
+          }
+        },
+        "slideshow_slide_8YyzNV": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_02.jpg"
+          }
+        },
+        "slideshow_slide_yYLhxP": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_03.jpg"
+          }
+        },
+        "slideshow_slide_KtQ9Nn": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_04.jpg"
+          }
+        },
+        "slideshow_slide_N6HHLF": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_05.jpg"
+          }
+        },
+        "slideshow_slide_9GrVn8": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_06.jpg"
+          }
+        },
+        "slideshow_slide_BerVNr": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_07.jpg"
+          }
+        },
+        "slideshow_slide_qbwdRn": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_08.jpg"
+          }
+        },
+        "slideshow_slide_dKWHUy": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_09.jpg"
+          }
+        },
+        "slideshow_slide_iNtH37": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_10.jpg"
+          }
+        },
+        "slideshow_slide_MUGP4C": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_11.jpg"
+          }
+        },
+        "slideshow_slide_dRdRUb": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_12.jpg"
+          }
+        },
+        "slideshow_slide_7by8gB": {
+          "type": "slideshow_slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_13.jpg"
+          }
+        },
+        "slideshow_slide_JfY6BG": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_14.jpg"
+          }
+        },
+        "slideshow_slide_GJB4dY": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_16.jpg"
+          }
+        },
+        "slideshow_slide_bzgxG7": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_18.jpg"
+          }
+        },
+        "slideshow_slide_tnzqRG": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_19.jpg"
+          }
+        },
+        "slideshow_slide_j4APBK": {
+          "type": "slideshow_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SP24_D2_EXTRA_RELESE_20.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_slide_hBVdMq",
+        "slideshow_slide_8YyzNV",
+        "slideshow_slide_yYLhxP",
+        "slideshow_slide_KtQ9Nn",
+        "slideshow_slide_N6HHLF",
+        "slideshow_slide_9GrVn8",
+        "slideshow_slide_BerVNr",
+        "slideshow_slide_qbwdRn",
+        "slideshow_slide_dKWHUy",
+        "slideshow_slide_iNtH37",
+        "slideshow_slide_MUGP4C",
+        "slideshow_slide_dRdRUb",
+        "slideshow_slide_7by8gB",
+        "slideshow_slide_JfY6BG",
+        "slideshow_slide_GJB4dY",
+        "slideshow_slide_bzgxG7",
+        "slideshow_slide_tnzqRG",
+        "slideshow_slide_j4APBK"
+      ],
+      "settings": {
+        "name": "",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
     "header",
     "lookbook_copy_section_nthe4K",
     "lookbook_collection_display_bgNrt8",
-    "lookbook_slideshow_HAxzqP"
+    "lookbook_slideshow_HAxzqP",
+    "lookbook_slideshow_wnkKyj"
   ]
 }
