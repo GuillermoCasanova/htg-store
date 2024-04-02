@@ -56,6 +56,7 @@
     },
     "1fbba51d-5cfe-4c50-8858-1e55a2bec6b7": {
       "type": "blurb-section",
+      "disabled": true,
       "settings": {
         "heading": "Black History Month Collection",
         "body": "<p><a href=\"\/collections\/bhm-2024\" title=\"Black History Month\">Shop Now<\/a><\/p>",
