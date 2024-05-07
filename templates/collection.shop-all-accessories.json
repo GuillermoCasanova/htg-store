@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "collection_preview_df7VLE": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Pride in Tradition",
+        "collection_url": "\/collections\/accessories\/SU24",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "227cbd4f-cee7-4f03-b1ef-2ff28fcd83c8": {
       "type": "collection-preview",
       "settings": {
@@ -183,6 +195,7 @@
   "order": [
     "banner",
     "product-grid",
+    "collection_preview_df7VLE",
     "227cbd4f-cee7-4f03-b1ef-2ff28fcd83c8",
     "7ba1193a-a290-4a0e-a41b-363b9e8bcba8",
     "c705520a-5f7b-48b5-adde-2690dd50f918",
