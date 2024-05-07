@@ -15,6 +15,18 @@
         "child_collection": true
       }
     },
+    "collection_preview_j88zee": {
+      "type": "collection-preview",
+      "disabled": true,
+      "settings": {
+        "collection_name": "Pride in Tradition",
+        "collection_url": "\/collections\/mens\/SU24",
+        "product_list": [
+
+        ],
+        "enable_quick_add": true
+      }
+    },
     "collection_preview_3nDpJx": {
       "type": "collection-preview",
       "settings": {
@@ -305,6 +317,7 @@
   "order": [
     "banner",
     "product-grid",
+    "collection_preview_j88zee",
     "collection_preview_3nDpJx",
     "5c0d29a6-17f4-4bc8-8a15-4032481ae27e",
     "8b0abea7-a76b-48c1-8cb2-760d2153fdb2",
