@@ -3,10 +3,24 @@
     "header": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/HP-resize_ac35f598-051d-482e-9176-21e63d8b9443.jpg",
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "lookbook_copy_section_TiYCBP": {
+      "type": "lookbook-copy-section",
+      "settings": {
+        "heading": "Pride In Tradition – Summer 2024 Collection",
+        "body": "<p>Sidewalks worn by footsteps, each one a story. Stoops aged by generations, each one a chapter. Street corners illuminated by lights, each one a scene. Together, these tell the tales of the diverse cultures that converge and thrive in the heart of Los Angeles. <br\/><br\/>Our Summer 2024 collection, “Pride in Tradition: Embracing Heritage of the Inner City,” is an homage to the heritage that pulses through the veins of the inner city. With its vibrant, rich colors and intricate, loose thread embroideries, the collection is a celebration of the roots that ground us and the traditions that shape us. <\/p><p>Honor the Gift not only embraces Los Angeles's heritage, but also dedicates itself to celebrating and preserving the stories that infuse the city with its soul. Join us on this journey as we continue to weave together the threads of pride, creativity, and unity. <br\/><br\/>Wear your tradition. Embody your heritage. <\/p>",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
       }
     }
   },
   "order": [
-    "header"
+    "header",
+    "lookbook_copy_section_TiYCBP"
   ]
 }
