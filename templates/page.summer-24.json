@@ -18,6 +18,16 @@
         "bottom_border": "yes"
       }
     },
+    "lookbook_collection_display_AiRjBY": {
+      "type": "lookbook-collection-display",
+      "settings": {
+        "heading": "Pride In Tradition – Summer 2024 Collection",
+        "collection": "",
+        "bg_color": "background-2",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
+    },
     "lookbook_slideshow_Q4L8zg": {
       "type": "lookbook-slideshow",
       "blocks": {
@@ -167,6 +177,7 @@
   "order": [
     "header",
     "lookbook_copy_section_TiYCBP",
+    "lookbook_collection_display_AiRjBY",
     "lookbook_slideshow_Q4L8zg"
   ]
 }
