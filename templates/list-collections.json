@@ -14,6 +14,14 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "archival_collection_MfKPMW": {
+          "type": "archival-collection",
+          "settings": {
+            "collection_name": "Pride In Tradition",
+            "thumbnail": "shopify:\/\/shop_images\/Collection-Cover-Resize_ea0ccc34-5308-45d7-87be-a78566e40143.jpg",
+            "lookbook_url": "https:\/\/honorthegift.co\/pages\/pride-in-tradition"
+          }
+        },
         "archival_collection_YjPdAN": {
           "type": "archival-collection",
           "settings": {
@@ -216,6 +224,7 @@
         }
       },
       "block_order": [
+        "archival_collection_MfKPMW",
         "archival_collection_YjPdAN",
         "6fba15de-4ea9-4141-adfd-c8a11cfa7fb0",
         "011653ef-0486-4791-baa2-2927a89253e7",
