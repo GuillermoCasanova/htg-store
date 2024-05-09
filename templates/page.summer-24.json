@@ -22,7 +22,7 @@
       "type": "lookbook-collection-display",
       "settings": {
         "heading": "Pride In Tradition – Summer 2024 Collection",
-        "collection": "",
+        "collection": "summer-2024",
         "bg_color": "background-2",
         "top_border": "no",
         "bottom_border": "yes"
