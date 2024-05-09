@@ -14,9 +14,9 @@
         "heading"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/HP-resize_0713af50-6cc6-4095-aaa5-03b0d34fcdf7.jpg",
+        "image": "shopify:\/\/shop_images\/HP-resize_5e6b0faa-566e-4339-8ee4-e0a7621865d9.jpg",
         "video": "",
-        "cta-url": "https:\/\/honorthegift.co\/collections\/spring-2024"
+        "cta-url": "shopify:\/\/collections\/summer-2024"
       }
     },
     "1654645496c068b051": {
@@ -25,19 +25,19 @@
         "b1fdfaba-4310-4665-86e8-ecc41592a16e": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/5_36dab467-bb80-40ce-9646-1bbaadb29a7a.png"
+            "image": "shopify:\/\/shop_images\/1_dac5aa22-fc14-49a3-8902-06b494f38ee8.png"
           }
         },
         "121024ea-b182-4533-a61e-42f1675396ae": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HP-2.jpg"
+            "image": "shopify:\/\/shop_images\/2_bb0f2e9c-b548-4cc4-b596-106fff428745.png"
           }
         },
         "605a9d86-4767-43aa-9955-7230fbc1c293": {
           "type": "collection_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HP-3.jpg"
+            "image": "shopify:\/\/shop_images\/3_9c7a8e7f-25df-4439-9000-6a07d1010af8.png"
           }
         }
       },
@@ -47,9 +47,9 @@
         "605a9d86-4767-43aa-9955-7230fbc1c293"
       ],
       "settings": {
-        "heading": "Heritage x Legacy – Spring 2024 Collection",
-        "body": "<p>We are only here because they came first.<br\/><br\/>Because of the traditions, work, joy and commitments of our ancestors.<br\/><br\/>Honor the Gift’s Heritage x Legacy collection is an acknowledgement of that responsibility and interconnectedness.<br\/><br\/>For this Spring drop, we revitalized classic silhouettes, infusing them with contemporary elements like premium denim, bespoke crochet knits, robust French terry, and delicate mohair. This blend brings a taste of bygone days, now flavored with the flair of today's aesthetics. Highlights include an oversized rugby and crochet button up, alongside the plush mohair set and cutting-edge vegan leather set.<br\/><br\/>The Heritage x Legacy collection draws inspiration from those before us who became a force of change in the community. It is an acknowledgment of the movements that honor our past as we pave new paths for the future.<br\/><br\/>The roots run deep.<\/p>",
-        "cta-url": "shopify:\/\/collections\/spring-2024",
+        "heading": "Pride In Tradition – Summer 2024 Collection",
+        "body": "<p>Sidewalks worn by footsteps, each one a story. Stoops aged by generations, each one a chapter. Street corners illuminated by lights, each one a scene. Together, these tell the tales of the diverse cultures that converge and thrive in the heart of Los Angeles. <br\/><br\/>Our Summer 2024 collection, “Pride in Tradition: Embracing Heritage of the Inner City,” is an homage to the heritage that pulses through the veins of the inner city. With its vibrant, rich colors and intricate, loose thread embroideries, the collection is a celebration of the roots that ground us and the traditions that shape us. <\/p><p>Honor the Gift not only embraces Los Angeles's heritage, but also dedicates itself to celebrating and preserving the stories that infuse the city with its soul. Join us on this journey as we continue to weave together the threads of pride, creativity, and unity. <br\/><br\/>Wear your tradition. Embody your heritage. <\/p>",
+        "cta-url": "shopify:\/\/collections\/summer-2024",
         "top_border": "no",
         "bottom_border": "yes"
       }
@@ -70,11 +70,11 @@
     "165464550697d6e482": {
       "type": "featured-collection-cta",
       "settings": {
-        "collection-name": "Defined",
-        "left-image": "shopify:\/\/shop_images\/Mens.png",
+        "collection-name": "Pride In Tradition",
+        "left-image": "shopify:\/\/shop_images\/11_6f1f8a16-e092-4e99-b59f-0906fdcc5155.png",
         "left-cta-text": "Shop Mens",
         "left-cta-url": "shopify:\/\/collections\/mens",
-        "right-image": "shopify:\/\/shop_images\/Womens.png",
+        "right-image": "shopify:\/\/shop_images\/14_6299c7ee-8d2e-4d2c-8cb3-c47a33b563e4.png",
         "right-cta-text": "Shop Womens",
         "right-cta-url": "shopify:\/\/collections\/womens",
         "top_border": "no",
