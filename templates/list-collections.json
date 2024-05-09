@@ -3,10 +3,10 @@
     "header": {
       "type": "main-list-collections-header",
       "settings": {
-        "heading": "Heritage x Legacy",
-        "body": "<h3>Honor The Gift’s Spring 2024 Collection is a celebration of our roots as the cornerstone for the future. This carefully curated selection features an array of vivid hues, expertly crafted to embody the essence of our culture.<\/h3>",
+        "heading": "Pride In Tradition",
+        "body": "<p>Our Summer 2024 collection, “Pride in Tradition: Embracing Heritage of the Inner City,” is an homage to the heritage that pulses through the veins of the inner city. <\/p><p>Wear your tradition. Embody your heritage. <\/p>",
         "collection_lookbook_url": "shopify:\/\/pages\/heritage-x-legacy",
-        "image": "shopify:\/\/shop_images\/Sp24_Collection_Cover_8ddf2588-d5d7-4a92-9a6b-fcf6e488427c.jpg",
+        "image": "shopify:\/\/shop_images\/Collection-Hero-Resize_1d6e6cdc-9c6b-461f-bd27-c55a8ffbe0f7.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
